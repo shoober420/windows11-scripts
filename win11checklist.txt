@@ -1,0 +1,736 @@
+Run windows update
+
+Download
+ - BIOS for motherboard
+ - Nvidia vulkan beta driver
+ - AMD Adrenalin Software
+ - Intel Driver & support assistant (Intel DSA) / Intel Wireless Bluetooth - Intel PROSet/Wireless WiFi
+ - Audio drivers
+ - WiFi drivers (or disable if on wired connection)
+ - Notepad++ (text editor)
+ - IrfanView (picture viewer)
+ - ShareX (screenshot tool)
+ - HxD (hex editor)
+ - MarkC mouse acceleration fix (Windows 10 Fixes/MouseFix_ItemsSize=100%)
+ - DirectX End-User Runtime Web Installer (dxwebupdate.exe)
+ - OpenAL software
+ - dsoal (http://vaporeon.io/hosted/dsoal-builds/)
+ - IMGtoISO (http://www.imgtoiso.com/)
+ - WinBin2ISO (https://www.softwareok.com/?seite=Freeware/WinBin2Iso)
+ - NRGtoISO (http://www.nrgtoiso.com/)
+ - MDFtoISO (http://www.mdftoiso.com/)
+ - Rufus (https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewiso) (ISOtoUSB)
+ - ImgBurn (https://www.majorgeeks.com/mg/getmirror/imgburn,1.html)
+ - mpv (video player) (https://sourceforge.net/projects/mpv-player-windows/files)
+ - FileTypesMan (https://www.nirsoft.net/utils/file_types_manager.html) (change default icons)
+ - 7zip
+ - PowerToys (https://github.com/microsoft/PowerToys) (WARNING! constantly runs in background after installed)
+ - pcgamingwiki.com (source for patches and tweaks)
+
+
+
+Windows 98 Icons: Original (https://win98icons.alexmeub.com) / HQ (https://github.com/nestoris/Win98SE)
+ +++ use Original icons for a faithful and pixelated icon, HQ for a smoothed icon (original recommended)
+ +++ use Windows 98 icons over Windows 95 icons
+ +++ NEVER make icons bigger than 48x48
+  - ICO Converter (https://www.icoconverter.com)
+  - Personalization > Themes > Desktop icon settings
+  - Enable and checkmark Computer, User's Files, and Recycle Bin
+  - go to Change icon
+   + Computer: Original (https://win98icons.alexmeub.com/icons/png/computer_explorer-5.png) / HQ (https://github.com/nestoris/Win98SE/blob/main/SE98/devices/48/computer.png)
+   + User's Files: Original (https://win98icons.alexmeub.com/icons/png/directory_open_file_mydocs-4.png) / HQ (https://github.com/nestoris/Win98SE/blob/main/SE98/places/48/user-home.png)
+   + Network: Original (https://win98icons.alexmeub.com/icons/png/network_normal_two_pcs-4.png) / HQ (https://github.com/nestoris/Win98SE/blob/main/SE98/places/48/network-workgroup.png)
+   + Recycle Bin (full): Original (%SystemRoot%\System32\SHELL32.dll,102) / Original2 (https://win98icons.alexmeub.com/icons/png/recycle_bin_full-4.png) / HQ (https://github.com/nestoris/Win98SE/blob/main/SE98/places/48/user-trash-full.png)
+   + Recycle Bin (empty): Original (%SystemRoot%\System32\SHELL32.dll,101) / Original2 (https://win98icons.alexmeub.com/icons/png/recycle_bin_empty-4.png) / HQ (https://github.com/nestoris/Win98SE/blob/main/SE98/places/48/user-trash.png)
+ - Rename "This PC" desktop icon to "My Computer"
+
+Windows 95 Icon Pack (https://www.deviantart.com/vovan29/art/Windows-95-ALL-ICONS-805656804)
+ +++ NEVER make icons bigger than native dimensions (probably 48x48)
+ - ICO Converter (https://www.icoconverter.com)
+ - Personalization > Themes > Desktop icon settings
+ - Enable and checkmark Computer, User's Files, and Recycle Bin
+ - go to Change icon
+ - Computer (This PC): (\windows_95_all_icons_by_vovan29_ddbo0ro\Windows 95 ALL ICONS v1.1\Sort by Category [Without duplicates]\Computers\My Computer.ico)
+ - User's Files: (windows_95_all_icons_by_vovan29_ddbo0ro\Windows 95 ALL ICONS v1.1\Sort by Category [Without duplicates]\Folders\Folder (hi-res).ico)
+ - Network: (windows_95_all_icons_by_vovan29_ddbo0ro\Windows 95 ALL ICONS v1.1\Sort by Category [Without duplicates]\Network\Network Neighborhood (48x48px).ico)
+ - Recycle Bin (full): (windows_95_all_icons_by_vovan29_ddbo0ro\Windows 95 ALL ICONS v1.1\Sort by Category [Without duplicates]\Recycle Bins\Recycle Bin with paper.ico)
+ - Recycle Bin (empty): (windows_95_all_icons_by_vovan29_ddbo0ro\Windows 95 ALL ICONS v1.1\Sort by Category [Without duplicates]\Recycle Bins\Empty Recycle Bin.ico)
+ - Rename "This PC" desktop icon to "My Computer"
+
+Change Default Folder Icon
+ - ICO Converter (https://www.icoconverter.com)
+ - regedit
+ - HKEY_LOCAL_MACHINE/SOFTWARE/Microsoft/Windows/CurrentVersion/Explorer
+ - right click and New > Key
+ - create Shell Icons
+ - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Icons\3 (reg_sz)
+ - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Icons\4 (reg_sz)
+ - Original (https://win98icons.alexmeub.com/icons/png/directory_closed-4.png) / HQ (https://github.com/nestoris/Win98SE/blob/main/SE98/places/48/folder.png)
+ - make both registry key values the path to the new icon ("C:\Users\shoober420\Downloads\FolderIcon.ico")
+
+Change Default Hard Drive Icon
+ - ICO Converter (https://www.icoconverter.com)
+ - regedit
+ - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\DriveIcons
+ - right click "DriveIcons" and New > Key
+ - name "C"
+ - right click "C" and New > Key
+ - name "DefaultIcon"
+ - double click (Default) in "Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\DriveIcons\C\DefaultIcon"
+ - Original (https://win98icons.alexmeub.com/icons/png/hard_disk_drive-4.png) / HQ (https://github.com/nestoris/Win98SE/blob/main/SE98/devices/48/drive-harddisk.png)
+ - enter value "C:\Users\Raven\Downloads\HardDiskIcon.ico"
+
+Change .txt, .cfg, .ini, and .log icons
+ - open FileTypesMan
+ - Original (https://win98icons.alexmeub.com/icons/png/notepad_file-2.png) / HQ (https://github.com/nestoris/Win98SE/blob/main/SE98/mimes/48/text-x-generic.png)
+ - double click each file extension (txt cfg ini) and put "C:\Users\Raven\Downloads\TextIcon.ico"
+
+
+
+- Harden internet settings
+ + Open Control Panel / Network and Sharing Center
+ + change adapter settings, right click device and properties, uncheck unneeded protocols, click on IPv4 and go to properties, advanced, WINS tab, disable LMHOSTS lookup and disable NetBIOS over TCP/IP
+ + go back and change advanced sharing settings, disable network discovery and file and printer sharing
+
+- Tweak System Properties
+ + System then advanced system settings
+ + remote tab then advanced, uncheck allow this computer to be controlled remotely and set the maximum amount of invitations to "1 Minutes", uncheck allow Remote Assistance
+ + advanced tab then performance settings, use adjust for best performance, advanced tab then select programs for processor scheduling, then click virtual memory change button, uncheck automatically manage paging file, then check system managed size
+
+- Windows Firewall
+ + open Control Panel / Windows defender firewall
+ + advanced settings then action menu, properties
+ + domain profile tab then inbound connections - block all connections and click customize under settings, allow unicast response - no. do the same thing under the private profile tab and the public profile tab
+ + go back then inbound rules and delete all rules
+
+- Open Windows security
+ + Virus & threat protection, virus & threat protection settings then manage settings, turn off real-time protection, turn off cloud-delivered protection, turn off automatic sample submission, turn off tamper protection, click manage controlled folder access and make sure it's off
+ + app & browser control then click smart app control settings and turn off, go back then reputation-based protection turn off then reputation-based settings, turn off check apps and files, turn off smart screen for Microsoft edge, turn off phishing protection, turn off potentially unwanted app blocking, turn off smart screen for Microsoft store apps, go back then exploit protection settings, control flow guard (CFG): off by default, Data Execution Prevention (DEP): off by default, Force randomization for images (Mandatory ASLR): off by default, Randomize memory allocations (Bottom-up ASLR): off  by default, High-entropy ASLR: off by default, validate exception chains (SEHOP): off by default, validate heap integrity: off by default
+ + device security then core isolation details, Local Security Authority Protection: turn off, Microsoft Vulnerable Driver Blocklist: turn off, memory integrity off for gaming performance and disable all other settings
+
+- Open Settings
+ + system then display, (use show only on 2 if external monitor is used on laptop), multiple displays and uncheck remember window locations, minimize Windows, ease cursor movement. then brightness and save power by optimizing OFF. then graphics and turn on optimizations for windows games and hardware-accelerated GPU scheduling, turn off variable refresh rate
+ + system then sound, scroll down to more sound settings, disable any unused sound devices under playback tab, tweak used devices to 44100 and uncheck enable audio enhancements, disable unused devices under recording tab, tweak used devices to 44100 and uncheck enable audio enhancements, disable sounds under sounds tab, enable do nothing under communicatios tab
+ + system then notifications, turn off notifications and scroll down, additional settings then disable all
+ + system then power & battery, power mode best performance, battery saver then turn battery saver on NEVER, lower screen brightness OFF
+ + system then storage and click temporary files and remove
+ + system then nearby sharing, turn off
+ + system then multitasking, turn off snap windows, show tabs from apps: don't show tabs, title bar window shake off
+ + system then troubleshoot, recommended troubleshooter: don't run any
+ + system then remote desktop, turn off remote desktop
+ + system then clipboard, clipboard history off, suggested actions off
+ + system then about, Rename this PC (remember to include a minus - symbol)
+ + Bluetooth & devices and turn off Bluetooth, then mouse and additional mouse settings then pointers tab, select (None) scheme (Windows standard), then pointer options tab, 6/11 and uncheck enhance pointer precision 
+ + network & internet then click wifi then "your device name", random hardware addresses - changes daily, edit DNS server assignment, manual and turn on IPv4 on using 1.1.1.1 and DNS over HTTPS on (automatic template), go back and turn on random hardware addresses, go back again and turn off mobile hotspot, turn off airplane mode, then advanced network settings, turn off network discovery, turn off file and printer sharing, then all networks, turn off public folder sharing and turn on password protected sharing (off is less secure)
+ + personalization then background, use solid color and seafoam teal, back then colors, choose your mode: dark, turn off transparency effects, accent color: manual and seafoam teal, turn off show accent color options, back then themes, save current theme as "Fucking Windows 98", back then dynamic lighting, turn off "use dynamic lighting" and "compatible apps in the foreground always control lighting, brightness: 100%, back then lock screen, uncheck get fun facts, uncheck show the lock screen background, back then start and select "More pins", turn off show recently added apps, turn off show most used apps, turn off show recently opened, turn off show recommendations, folders and turn off all options, go back then taskbar, search: hide, turn off task view, widgets, and chat
+ + apps then advanced app settings, choose where to get apps: anywhere, share across devices off, archive apps off, go back and default apps, click Google chrome canary and click set default, go back and optional features, delete unused features, back then apps for websites, turn off any programs, back then video playback, battery options select optimize for video quality (may freeze settings app if ultimate performance plan is active), back then startup, turn off any bloat startup apps
+ + accounts then your info, sign in with local account, make sure user name include "_-" at the end, 15+ character password, troll password hint, back and sign-in options, disable facial recognition, fingerprint recognition, PIN (required for Windows hello / Microsoft account sign in), and security key. disable only allow Windows hello sign in for Microsoft accounts. turn off automatically save my restartable apps and restart them when I sign back in, turn off show account details such as email address
+ + time & language then date & time, turn off set time automatically, adjust for daylight savings, and set time automatically. set the date and time manually: change, go back then typing, uncheck everything under touch keyboard, turn off all options, turn off typing insights, turn off inking & typing
+ + gaming then game mode, turn on game mode, Xbox game bar then turn off open Xbox game bar using button, captures then turn off record what happened, max recording length 30 minutes, turn off capture audio, turn off capture mouse cursor
+ + accessibility then turn off transparency and animation effects
+ + privacy & security, find my device then turn off, back then general and disable all options, back then speech and disable all, back then inking & typing personalization and ldisable all, back then diagnostics & feedback and disable all except send optional diagnostic data (needed for insider builds), feedback frequency: never, back then activity history and turn off and clear history, back then search permissions and safesearch off, cloud search content: Microsoft account off and work or school account off, history: search history on this device off, more settings: show search highlights off, go back and scroll down then location: off, camera: off, microphone: off, voice activation: off, notification: off, account info: off, contacts: off, calendar: off, phone calls: off, call history: off, email: off, tasks: off, messaging: off, radios: off, other devices: off, app diagnostics: off, documents: off, downloads folder: off, music library: off, pictures: off, videos: off, file system: off, screenshot borders: off, screenshots and apps: off
+ + Windows update then  advanced options, turn on recieve updates for other Microsoft products, turn on get me up to date, turn on download updates over metered connections, turn on notify me when a restart is required, go to delivery optimization and turn off allow downloads from other PCs. go back then Windows Insider program, choose your insider settings: canary
+
+- Enable Ultimate Performance Power Plan
+ + open cmdprompt
+ + powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
+ + powercfg.exe /hibernate off
+ + open Control Panel / Power Options
+ + select ultimate performance power plan
+
+- disable bloat Windows features
+ + open Programs and Features
+ + turn Windows features on or off, uncheck unneeded features (uncheck .NET 3.5 and 4.5/4.8)
+
+- configure Internet Properties
+ - run and inetcpl.cpl
+ - general tab, browsing history then settings, Check for newer versions of stored pages: Never, Disk space to use: 8MB, history tab then Days to keep pages in history: 0, caches and databases tab then uncheck Allow website caches and databases
+ - security tab then set Internet, Local intranet, trusted sites, and restricted sites to High
+ - advanced tab then uncheck Enable third-party browser extensions, Show friendly HTTP error messages, Use Passive FTP, Use HTTP 1.1, Use HTTP 1.1 through proxy connections, Enable DOM Storage, Enable insecure TLS server compatibility, Enable Integrated Windows Authentication, Enable native XMLHTTP support, Enable Windows Defender Smartscreen, and Use TLS 1.2
+ - checkmark Use HTTP2, Block unsecured images with other mixed content, Do not save encrypted pages to disk, Empty Temporary Internet Files folder when browser is closed, Send Do Not Track requests to sites you visit in Internet Explore, Use TLS 1.3
+
+- Open File Explorer
+ + three dots then options, view tab and uncheck show sync provider notifications
+ + right click on C: and go to properties, under general tab uncheck allow files on this drive to have contents indexed
+
+- Open PowerShell
+ + Disable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol
+ + Set-SmbServerConfiguration -EnableSMB1Protocol $false
+ + Set-SmbServerConfiguration -EnableSMB2Protocol $false
+ + winget uninstall onedrive (Microsoft.OneDrive)
+ + winget uninstall "windows web experience pack" (removes widgets, needs done again after big updates) (MicrosoftWindows.Client.WebExperience)
+
+- Open Microsoft Store
+ + go to library
+ + look at all store apps
+ + open add and remove programs
+ + remove all possible apps from Microsoft store list
+
+- Open Disk Cleanup
+ + clean all old files
+ + Windowskey+R then %temp%, delete everything in folder 
+ + Windowskey+R then temp, delete everything in folder
+
+- Open Registry Editor (HKLM = HKEY_LOCAL_MACHINE / HKCU = HKEY_CURRENT_USER)
+
+ + HKLM\System\CurrentControlSet\Control, WaitToKillServiceTimeout 25000 (reg_sz)
+ + HKLM\SYSTEM\CurrentControlSet\Control\DeviceGuard, EnableVirtualizationBasedSecurity 0 (dword)
+ + HKLM\SYSTEM\CurrentControlSet\Control\Power, HibernateEnabled 0 (dword), HibernateEnabledDefault 0 (dword)
+ + HKLM\SYSTEM\CurrentControlSet\Control\Power\PowerThrottling, PowerThrottlingOff 1 (dword)
+ + HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management, LargeSystemCache 0 (dword)
+ + HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power, HiberbootEnabled 1 (dword)
+ 
+ + HKLM\Software\Microsoft\FTH, Enabled 0 (dword)
+ + HKLM\Software\Microsoft\Dfrg\BootOptimizeFunction, Enable n (reg_sz)
+ + HKLM\Software\Microsoft\PCHealth\ErrorReporting, DoReport 0 (dword)
+ 
+ + HKLM\Software\Microsoft\Windows\Windows Error Reporting, Disabled 1 (dword)
+ 
+ + HKLM\Software\Microsoft\Windows\ScheduledDiagnostics, EnabledExecution 0 (dword)
+ 
+ + HKLM\Software\Microsoft\Windows NT\CurrentVersion\AeDebug, Auto 0 (reg_sz)
+ 
+ + HKLM\Software\Microsoft\Windows NT\CurrentVersion\Schedule\Maintenance, MaintenanceDisabled 1 (dword)
+ 
+ + HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile, NetworkThrottlingIndex FFFFFFF (dword/hexadecimal), SystemResponsiveness 0 (dword/hexadecimal)
+ 
+ + HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Games, Affinity 0 (dword), Background Only "False" (reg_sz), Clock Rate 2710 (dword), GPU Priority 8 (dword), Priority 6 (dword), Scheduling Category "High" (reg_sz), SFIO Priority "High" (reg_sz)
+ 
+ + HKLM\Software\Microsoft\Windows\CurrentVersion\OptimalLayout, EnableAutoLayout 0 (dword)
+ + HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp\DisableWpad 0 (dword)
+ + HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\SmartScreenEnabled Off (reg_sz), AlwaysUnloadDLL 1 (dword)
+ 
+ + HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Search, AllowCortana 0 (dword)
+ + HKLM\Software\Policies\Microsoft\Windows\System, EnableSmartScreen 0 (dword)
+ + HKLM\Software\Policies\Microsoft\Windows\ScheduledDiagnostics, EnabledExecution 0 (dword)
+ + HKLM\Software\Policies\Microsoft\Windows\Windows Error Reporting, Disabled 1 (dword), DontSendAdditionalData 1 (dword), LoggingDisabled 1 (dword)
+ 
+ + HKLM\Software\Policies\Microsoft\Windows\ScriptedDiagnosticsProvider\Policy, DisableQueryRemoteServer 0 (dword), EnableQueryRemoteServer 0 (dword)
+ 
+ + HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters, SMB1 0 (dword), SMB2 0 (dword)
+ 
+ + HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\GameDVR\AppCaptureEnabled 0 (dword), AudioCaptureEnable 0 (dword), CursorCaptureEnabled 0 (dword), EchoCancellationEnabled 0 (dword), HistoricalCaptureEnabled 0 (dword), HistoricalCaptureOnBatteryAllowed 0 (dword), HistoricalCaptureOnWirelessDisplayAllowed 0 (dword), MicrophoneCaptureEnabled 0 (dword)
+ 
+ + HKCU\SOFTWARE\Microsoft\OneDrive, DisableFileSyncNGSC 1 (dword)
+ 
+ + HKCU\Software\Policies\Microsoft\Windows\DisableSearchBoxSuggestions 1 (dword)
+ 
+ + HKCU\Software\Microsoft\Windows\Windows Error Reporting, Disabled 1 (dword), DontSendAdditionalData 1 (dword), LoggingDisabled 1 (dword)
+ 
+ + HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced, SharingWizardOn 0 (dword)
+ + HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Serialize, StartupDelayInMSec 0 (dword)
+ 
+ + HKCU\Control Panel\Desktop, AutoEndTasks 1 (reg_sz), ForegroundFlashCount 0 (reg_sz), ForegroundLockTimeout 0 (dword), HungAppTimeout 25000 (reg_sz), WaitToKillAppTimeout 25000 (reg_sz), MenuShowDelay 0 (reg_sz)
+ 
+ + HKCU\Control Panel\Mouse, MouseHoverTime 0 (reg_sz)
+
+- Disable GameBar/GameDVR via registry
+ + HKLM\SOFTWARE\Policies\Microsoft\Windows\GameDVR\AllowGameDVR 0 (dword)
+ + HKCU\SYSTEM\GameConfigStore\GameDVR_Enabled 0 (dword)
+ + HKLM\SOFTWARE\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Gaming.GameBar.PresenceServer.Internal.PresenceWriter\ActivationType 0 (***) (dword)
+
+- Disable Widgets/Windows Input Experience via registry
+ + HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced, TaskbarDa 0 (dword) (disable widgets on taskbar)
+ + HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Dsh, IsPrelaunchEnabled 0 (dword)
+ + HKCU\SOFTWARE\Microsoft\Input, IsInputAppPreloadEnabled 0 (dword)
+ + HKCU\SOFTWARE\Microsoft\Input\Settings, VoiceTypingEnabled 0 (dword)
+ + HKCU\SOFTWARE\Microsoft\Input\TICP, Enabled 0 (dword)
+
+
+
+- Services to disable via registry
+ + HKLM\SYSTEM\CurrentControlSet\Services, WinHttpAutoProxySrc 4, WpnUserService/WpnUserService_xxxxx 4 (Windows push notifications user service_xxxxx), cbdhsvc/cbdhsvc_xxxxx 4 (clipboard user service_xxxxx), NPSMSvc/NPSMSvc_xxxxx 4 (NPSMSvc_xxxxx/now playing session manager), OneSyncSvc/OneSyncSvc_xxxxx 4 (Sync Host_xxxxx), CDPUserSvc/CDPUserSvc_xxxxx 4 (connected devices Platform user service_xxxxx), DevicesFlowUserSvc/DevicesFlowUserSvc_xxxxx 4 (DevicesFlow_xxxxx), DevicePickerUserSvc/DevicePickerUserSvc_xxxxx 4 (DevicePicker_xxxxx), BcastDVRUserService/BcastDVRUserService_xxxxx 4 (GameDVR and Broadcast User Service_xxxxx), ClipSVC 4 (client license service (ClipSVC), PimIndexMaintenanceSvc/PimIndexMaintenanceSvc_xxxxx 4 (Contact Data_xxxxx), UserDataSvc/UserDataSvc_xxxxx 4 (User Data Access_xxxxx), UnistoreSvc/UnistoreSvc_xxxxx 4 (User Data Storage_xxxxx), GamingServices/GamingServicesNet 4 (Gaming Services), StateRepository 2 (state repository service) (blackscreens login), MessagingService/MessagingService_xxxxx 4, P9Rdr/P9RdrService/P9RdrService_xxxxc 4, PrintWorkflowUserSvc/PrintWorkflowUserSvc_xxxxx 4 (PrintWorkflow_xxxxx), PenService/PenService_xxxxx 4, EntAppSvc 4 (Enterprise App Management Service), UdkUserSvc/UdkUserSvc_xxxxx 4, webthreatdefusersvc/webthreatdefusersvc_xxxxx 4 (Web Threat Defense User Service_xxxxx), NetBIOS 4, NetBT 4, AppIDSvc 4 (Application Identity), SecurityHealthService 4 (Windows Security service) (***), wscsvc 4 (security center) (***), WdNisSvc/WdNisDrv 4 (Microsoft defender antivirus network inspection service) (SS), WinDefend/WdFilter/WdBoot/Sense 4 (Microsoft defender antivirus service) (SS)           
+
+0 boot, 1 system, 2 automatic, 3 manual, 4 disabled
+
+
+
+- Run services.msc and disable unneeded services (blackviper. com)
+ + disable tcp/ip netbios helper
+ + disable SSDP discovery
+ + disable ip helper
+ + disable geolocation
+ + disable internet connection sharing (ics)
+ + disable IPsec policy agent
+ + disable IKE and AuthIP IPsec Keying Modules
+ + disable ip translation configuration service
+ + disable ktmrm for distributed transaction coordinator 
+ + disable link layer topology discovery mapper
+ + disable secure socket tunneling protocol service
+ + disable function discovery provider Host
+ + disable function discovery resource publication 
+ + disable distributed link tracking client
+ + disable distributed transaction coordinator 
+ + disable net.tcp port sharing service
+ + disable application layer gateway service
+ + disable DevQuery Background Discovery Broker
+ + disable secondary login
+ + disable routing and remote access
+ + disable remote registry
+ + disable remote procedure call (rpc) locator
+ + disable remote desktop services usermode port redirector
+ + disable remote desktop services
+ + disable remote desktop configuration
+ + disable remote access connection manager
+ + disable remote access auto connection manager
+ + disable Windows remote management (ws-management)
+ + disable peer name resolution protocol
+ + disable peer network grouping
+ + disable peer networking identity manager
+ + disable PNRP machine name publication service
+ + disable snmp trap
+ + disable upnp device host
+ + disable network location awareness
+ + disable network connected devices auto-setup
+ + disable network connectivity assistant
+ + disable network setup service
+ + disable webclient
+ + disable Device management wireless application protocol (wap) push message routing service
+ + disable wi-fi direct services connection manager service
+ + disable spatial data service 
+ + disable recommended troubleshooting service
+ + disable print spooler
+ + disable printer extensions and notifications 
+ + disable fax
+ + disable file history service
+ + disable SysMain / Superfetch
+ + disable AVCTP (Bluetooth and Xbox)
+ + disable Data Sharing Service (SMB related)
+ + disable netlogon
+ + disable connected user experiences and telemetry
+ + disable Diagnostic Policy Service, Diagnostic Service Host, Diagnostic System Host, Diagnostic Execution Service
+ + disable Windows error reporting service
+ + disable problem reports control panel support
+ + disable program compatibility assistant service
+ + disable windows biometric service
+ + disable Microsoft storage spaces smp
+ + disable connected devices Platform service (used for Bluetooth, Xbox, and printers)
+ + disable radio management service
+ + disable Data usage
+ + disable dcsvc (declared configuration)
+ + disable inventory and compatibility appraisal service
+ + disable Microsoft (r) Diagnostic hub standard collector service 
+ + disable Windows mobile hotspot service
+ + disable Windows push notifications system service
+ + disable Windows image acquisition (wia)
+ + disable Windows camera frame server
+ + disable Windows camera frame server monitor
+ + disable still image acquisition events
+ + disable Microsoft windows sms router service
+ + disable natural authentication 
+ + disable shared PC account manager
+ + disable sensor data service
+ + disable sensor monitoring service
+ + disable sensor service
+ + disable phone service
+ + disable retail demo service
+ + disable downloaded maps manager
+ + disable display enhancement service
+ + disable workstation
+ + disable server
+ + disable telephony
+ + disable smart card
+ + disable smart card device enumerator service
+ + disable smart card removal policy
+ + disable performance counter dll host
+ + disable performance logs & alerts
+ + disable volume shadow copy
+ + disable volumetric audio compositor service
+ + disable walletservice
+ + disable Windows mixed reality openxr service
+ + disable Windows perception service
+ + disable Windows perception simulation service
+ + disable quality Windows audio video experience 
+ + disable Windows search
+ + disable ActiveX installer (axinstsv)
+ + disable alljoyn router service
+ + disable block level backup engine service
+ + disable cellular time
+ + disable certificate propagation
+ + disable encrypting file system (efs)
+ + disable Windows encryption provider Host service
+ + disable Microsoft iscsi initiator service
+ + disable parental controls
+ + disable office 64 source engine
+ + disable language experience service
+ + disable payments and nfc/se manager 
+ + disable auto time zone updater
+ + disable warp jit service
+ + disable virtual disk
+ + disable hv Host service
+ + disable hyper-v* services
+ + disable Xbox* services
+ + disable GameInput service
+ + disable mcpmanagementservice
+ + disable Microsoft software shadow copy provider
+ + disable bitlocker drive encryption service
+ + disable Microsoft edge beta elevation service, elevation service, update service (edgeupdate/edgeupdatem)
+ + disable AMD user experience program data uploader (needs disabled again after driver update)
+ + disable AMD crash defender service (needs disabled again after driver update)
+ + disable ASUS App Service, Link Near/Link Remote (for linking phone), System Analysis/System Diagnosis (for troubleshooting wizard), Switch (for backup), Optimization (for keyboard backlight), Update Service (asus/asusm)         (ASUS services installed by windows update on Asus machines)
+ + disable Armoury Crate Control Interface  (very minimal, needed for rgb)
+ + disable Dolby dax API service
+ + disable Realtek Audio Universal Service (bloat)
+ + disable Microsoft store install service
+ + disable Windows pushtoinstall service
+ + disable portable device enumerator service
+ + disable network connections broker
+ + disable windows license manager service
+ + disable windows connect now - config registrar
+ + disable WWAN Auto config
+ + disable wmi performance adapter
+ + disable credential manager
+ + disable Web Threat Defense Service
+ + disable Web account manager
+ + disable security accounts manager
+ + disable WpnUserService_xxxxx (registry) (Windows push notifications)
+ + disable cbdhsvc_xxxxx (registry) (clipboard service)
+ + disable NPSMSvc_xxxxx (registry) (now playing session manager) (shows music track information in shell)
+ + disable Sync Host_xxxxx (registry)
+ + disable DevicesFlow_xxxxx (registry)
+ + disable Contact Data_xxxxx (registry)
+ + disable User Data Access_xxxxx (registry)
+ + disable User Data Storage_xxxxx (registry)
+ + disable MessagingService_xxxxx (registry)
+ + disable P9RdrService_xxxxc (registry) (used for trigger starting plan9 file servers)
+ + disable PrintWorkflow_xxxxx (registry)
+ + disable PenService_xxxxx (registry)
+ + disable CDPUserSvc_xxxxx (registry) (Connected devices platform) (used for Bluetooth, Xbox, and printers)
+ + disable GameDVR and Broadcast User Service_xxxxx (registry)
+ + disable client license service (ClipSVC) (registry)
+ + disable Gaming Services (registry)
+ + disable application identity (registry)
+ + disable enterprise app management service (registry)
+ + disable webthreatdefusersvc_xxxxx (registry) (Web Threat Defense)
+ + disable UdkUserSvc_xxxxx (registry) (used for shell components like search)
+ + disable AppIDSvc (Application Identity) (registry)
+ + disable security center (registry) (***)
+ + disable Windows security service (registry) (***)
+ + disable Microsoft defender antivirus network inspection service (registry) (SS)
+ + disable Microsoft defender antivirus service (registry) (SS)
+ + disable windows management instrumentation (needed for TCPOptimizer, AMD adrenaline software and AMD driver upgrades)
+ ++ ULTRA MINIMAL ONLY!!!  disable AppX Deployment Service (AppXSVC) (registry) (borks Settings/Personalization, borks File Explorer/Right Click Menu)
+ ++ ULTRA MINIMAL ONLY!!! disable capability access manager service (removes bottom right taskbar ui (date and time/sound/internet/app icons)
+ +++ ULTRA MEGA MINIMAL ONLY!!! disable state repository service, will cause black screen after login. you will need to CTRL+SHIFT+ESC after login to open task manager, then file and run new task, regedit then revert back value to 2, must use system with Task Manager and Run
+ +++ ONLY disable Microsoft passport for login on non-local accounts, needed for login on Microsoft hello / Microsoft accounts (PIN login). you will need to WinRE*** (login screen shift key method)
+ +++ NEVER disable WinHTTP web proxy auto discovery service (registry), will bork internet
+ +++ NEVER disable GraphicsPerfSvc, improves performance
+ +++ NEVER disable text input management service, needed for keyboard and mouse. you will need to WinRE*** (f8 key method)
+ +++ NEVER disable AppXSvc (AppX Deployment Service) and leave State Repository Service enabled, causes "explorer.exe - Unknown Hard error" and black screen after login, bugged input (build 29505)
+
+
+Disable unused components in Device Manager
+
+ --- Enable for Windows update only, then disable after updating (every Wednesday)
+ - Update Orchestrator Service
+ - Windows Insider Service
+ - Windows update
+ - background intelligent transfer service
+ - windows module installer
+ - waasmedicsvc (windows update medic service)
+
+C:\Windows\System32\GameBarPresenceWriter.exe.bak (***) (removes "Gamebar Presence Writer" process, needs done again after updates)
+
+C:\Windows\System32\SpatialAudioLicenseSrv.exe.bak (***) (removes "Spatial License AppService Broker", needs done again after updates)
+
+C:\Windows\SysWOW64\SpatialAudioLicenseSrv.exe.bak (***) (removes "Spatial License AppService Broker) process, needs done again after updates)
+
+C:\Windows\System32\smartscreen.exe.bak (***) (removes "Windows Defender Smartscreen" process, needs done again after updates)
+
+C:\Windows\SystemApps\ShellExperienceHost_cw5n1h2txyewy.bak (removes Shell process, needs done again after updates)
+
+C:\Program Files\AMD\Performance Profile Client\AUEPMaster.exe.bak (removes "AMD User Experience Program Master" process, needs done again after updates)
+
+C:\Program Files (x86)\ASUS\ArmouryDevice\dll\ArmourySocketServer.exe.bak (removes ArmourySocketServer process, needs done after updates)
+
+C:\Program Files (x86)\ASUS\ArmouryDevice\dll\ShareFromArmouryIII\Mouse\ROG STRIX CARRY\P508PowerAgent.exe.bak (end process first in task manager) (removes P508PowerAgent process, needs done after updates)
+
++++ MINIMAL C:\Windows\SystemApps\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\StartMenuExperienceHost.exe.bak (***) (removes Start process, needs done again after updates) (borks start menu, right click on start menu required)
+
++++ MINIMAL C:\Windows\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\SearchHost.exe.bak (***) (removes Search process, needs done again after updates) (borks Search)
+
++++ ULTRA MINIMAL C:\Windows\System32\ApplicationFrameHost.exe.bak (***) (removes "Application Frame Host" process, needs done again after updates) (displays UWP apps in separate frames/Windows) (borks Settings and windows key/alt+tab, Ctrl+alt+del needed to get back to desktop in Fullscreen games)
+
+Download shutup10++, open in downloads and disable most settings
+
+- Download BloatyNosy, then bottom left menu, select BloatPilot
+ + remove Microsoft.OneDrive
+ + remove Microsoft.WindowsCamera
+ + remove Microsoft.GetHelp
+ + remove Microsoft.People
+ + remove Microsoft.Windows.PeopleExperienceHost (***)
+ + remove Microsoft.Windows.CloudExperienceHost
+ + remove Microsoft.549981C3F5F10 (Cortana)
+ + remove Microsoft.Windows.Photos
+ + remove Microsoft.YourPhone (phone link) 
+ + remove Microsoft.XboxGameOverlay
+ + remove Microsoft.XboxGamingOverlay
+ + remove Microsoft.XboxIdentityProvider
+ + remove Microsoft.XboxSpeechToTextOverlay
+ + remove Microsoft.XboxGameCallableUI (***)
+ + remove Microsoft.MicrosoftEdge***/Beta/Stable/DevToolsClient***
+ + remove Microsoft.GamingServices (removes "Gaming Services" process, needs done again after updates)
+ + remove MicrosoftWindows.Client.WebExperience (removes Widgets process, needs done again after updates)
+ + remove Microsoft.Windows.ShellExperienceHost (removes Shell process, needs done again after updates)
+ +++ ONLY MINIMAL remove Microsoft.Windows.StartMenuExperienceHost (***) (borks start menu, right click on start menu required) (removes Start process, needs done again after updates)
+
+C:\Program Files\WindowsApps contains other SystemApps
+
+Download QuickCPU, open and max out sliders to %100 percent
+
+Download CCleaner / Bleach it and run
+
+Download TimerResolution and run, choose Maximum when running games, default when using desktop
+
+- Open Command Prompt
+ + netstat -ab and check for bloat listening on ports
+
+Download SG TCP Optimizer (requires WMI - Windows Management Instrumentation)
+ + test internet speed
+ + set connection speed
+ + set MTU
+  - open Command Prompt
+  - ping www.google.com -f -l 1500 (keep lowering -l value until packets aren't fragmented, from 1500 to probably 1472)
+ + TCP window auto-tuning - normal
+ + Windows scaling heuristics - disabled
+ + congestion control provider - ctcp
+ + receive side scaling RSS - enabled
+ + r segment coalescing RSC - disabled
+ + time to live (TTL) - 64
+ + ECN Capability - disabled
+ + checksum offloading - enabled
+ + TCP chimney offload - disabled
+ + large send offload LSO - disabled
+ + TCP 1323 Timestamps - disabled
+ + LocalPriority - 4
+ + HostPriority - 5
+ + DnsPriority - 6
+ + NetbtPriority - 7
+ + Max SYN Retransmissions - 2
+ + NonSackRttResiliency - disabled
+ + Initial RTO - 2000
+ + Min RTO - 300
+ + NetworkThrottlingIndex - disabled: ffffffff
+ + SystemResponsiveness - gaming: 0
+ + TcpAckFrequency - disabled: 1
+ + TCPNoDelay - enabled: 1
+ + TcpDelAckTicks - disable: 0
+ + LargeSystemCache - disabled: 0
+ + MaxUserPort - 65534
+ + TcpTimedWaitDelay - 30
+
+Download System Informer (nightly builds)
+ - Open System Informer
+  + services tab
+  + disable all unneeded services
+   - beep
+   - lltdio (link-layer topology discovery mapper I/o driver)
+   - MsLldp (Microsoft link-layer discovery protocol)
+   - Ndu (Windows network data usage monitoring driver)
+   - Psched (QoS packet scheduler)
+   - rdpbus (remote desktop device redirector bus driver)
+   - rspndr (link-layer topology discovery responder)
+   - tdx (NetIO legacy TDI support driver)
+   - CldFlt (Windows cloud files filter driver)
+   - Dfsc (DFS namespace client driver)
+   - !npsvctrig (named pipe service trigger provider) (dont disabled, seems important)
+   - !Mup (causes loss of internet after a couple of minutes, stutters and lags pc if disabled)
+   - !afd (ancillary function driver for winsock) (required for DHCP)
+   +++ NEVER disable volsnap (volume shadow copy driver), will cause PC to become unbootable, and requires to revert the change via WinRE*** (f8 key method) and revert value back to 0, also may require a couple restarts due to a PIN issue if using that login method
+   +++ NEVER disable fvevol (bitlocker drive encryption filter driver), will cause PC to become unbootable, and requires to revert the change via WinRE*** (f8 key method) and revert value back to 0, also may require a couple restarts due to a PIN issue if using that login method
+
+
+
+(SS) Requires safe mode
+
+(***) Requires ownership modification
+ - right click and permissions
+ - advanced
+ - click change at the top left of the window next to Owner:
+ - enter object name "Administrators" or "Users"
+ - checkmark replace owner on subcontainers and objects
+ - apply
+ - go back and click on username
+ - checkmark full control and apply
+
+WinRE***
+ - command prompt
+ - regedit
+ - load the registry hive by clicking on HKEY_LOCAL_MACHINE, file and load hive in c:\windows\system32\config\system
+ - name it test, revert the change, file and unload hive
+
+Backup files from WinRE
+ - command prompt
+ - notepad
+ - file then open
+ - copy and paste files from C: to external hard drive
+  + may not see files after being copied over until you refresh the directory
+
+Refresh your PC (reinstall windows, keeping all files, programs, and personal data)
+ - download windows Insider iso
+ - boot from windows iso usb
+ - reset this PC
+ - keep all files option
+
+Fix Windows Insider program stuck showing "A newer build is available in Windows update"
+ - open cmdprompt
+ - bcdedit /set flightsigning on
+ - bcdedit /set {bootmgr} flightsigning on
+ - reboot
+ 
+ Fix "A referral was returned from the server" when running a program as administrator (disables UAC)
+  - HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\EnableLUA 0 (dword)
+ 
+ Enable legacy boot menu (f8 at startup)
+ - bcdedit /set {default} bootmenupolicy legacy
+ 
+ Windows 10+ disabled "Last Known Good Configuration" boot option, enable with:
+ - bcdedit /set lastknowngood yes
+
+AMD Adrenalin Program (C:\Program Files\AMD\CNext\CNext\RadeonSoftware.exe)
+
+You cannot be in the Windows Insider program if you're on a local account, requires Microsoft account sign-in
+
+Be careful with driver updater programs. Some programs (IObit Driver Booster) download bad / questionable drivers that can break components (like keyboard and mouse).
+   +++ NEVER install drivers that driver updater programs find. use them as reference and look them up, then download yourself if legit
+
+You need to reinstall video drivers, reconfigure video settings, and disable services again after new insider build updates (use bat script)
+
+Remember to update the NICID for these registry settings when using a new NIC card
+ - HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\{NICID}\TcpAckFrequency 1
+ - HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\{NICID}\TcpDelAckTicks 0
+ - HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\{NICID}\TcpNoDelay 1
+
+Fix Windows Update
+ - launch disablewinupdate.bat script
+ - del "%ALLUSERSPROFILE%\Application Data\Microsoft\Network\Downloader\qmgr*.dat"
+ - rmdir %systemroot%\SoftwareDistribution /S /Q
+ - rmdir %systemroot%\system32\catroot2 /S /Q
+ - ren c:\windows\winsxs\pending.xml pending.old
+ - bitsadmin.exe /reset /allusers
+
+You can manually install windows updates using "uupdump.net" or by looking for the ".msu" file. using uup dumps can also download SystemApps that were removed
+
+NVIDIA driver settings are stored in "C:\ProgramData\NVIDIA Corporation\Drs"
+ + nvdrsdb0.bin being global
+ + nvdrsdb1.bin being program specific
+
+Basic Troubleshooting
+ - DISM /Online /Cleanup-Image /RestoreHealth
+ - dism /online /cleanup-image /startcomponentcleanup (cleans WinSxS directory)
+ - sfc /scannow
+ - chkdsk c: /sdcleanup /offlinescanandfix
+ - chkdsk c: /f /r /x /b
+
+Reinstall deleted Windows Store Apps
+ - launch enablestore.bat script
+ - open run
+ - ms-windows-store:
+
+Reinstall Settings app
+ - enable ClipSVC
+ - run and cmd
+ - powershell -ExecutionPolicy Unrestricted Add-AppxPackage -DisableDevelopmentMode -Register $Env:SystemRoot\ImmersiveControlPanel\AppxManifest.xml
+
+Reinstall all Windows apps
+ - enable ClipSVC
+ - run and cmd
+ - Get-AppXPackage | foreach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}
+
+Re-enter product key
+ - open cmd
+ - wmic path softwarelicensingservice get OA3xOriginalProductKey
+ - copy product key
+ - open run
+ - ms-settings:activation
+ - change product key
+ - paste product key
+ +++ OPTIONAL clear product key (backup product key before executing)
+      - slmgr /upk
+      - slmgr /cpky
+
+Run windows update
+ - open powershell terminal
+ - Install-Module PSWindowsUpdate
+ - Get-WindowsUpdate
+ - Install-WindowsUpdate
+
+Windows Insider Canary ISO
+ - https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewiso
+
+A newer build is available in windows update, but still says "You're up to date"
+ - download latest build iso (https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewiso)
+ - mount and run setup.exe
+ - select "Keep Windows settings, personal files, and apps" option
+
+Some latest insider canary builds may break systems with certain hardware (like Asus motherboards and Asus laptops for example), and not get pushed to the machine. do some research on the insider canary build if it's available but not getting pushed to the system before forcing an iso update to the machine
+
+Run DISM / SFC / chkdsk through WinRE
+ - boot into WinRE and open cmdprompt
+ - run diskpart then "list volume"
+ - find the drive letter corresponding to Windows (Label: OS)
+ - make sure to note boot partition drive letter (Label: System)
+ - exit diskpart
+ - sfc /scannow /offbootdir=C:\ /offwindir=C:\windows
+ - DISM /image:C:\ /Cleanup-Image /RestoreHealth
+ - chkdsk c: /sdcleanup /offlinescanandfix
+ - chkdsk c: /f /r /x /b
+
+Access C:\ from WinRE
+ - cmdprompt and diskpart
+ - "list vol" and find drive letter corresponding to "Label: OS"
+ - exit diskpart
+ - cd command doesn't work in X:\* directories
+ - type C: (not C:\)
+ - cd command now works once inside drive C:
+ - Desktop directory is either in "C:\Users\"username"\Desktop" or "C:\Users\"username"\OneDrive\Desktop"
+
+ - "cd" changes directories and lists current working directory
+ - "dir" list files in a directory
+ - "del" removes files from system
+ - "move" moves files into another directory
+ - "ren" renames files
+
+explorer.exe - System warning ! Unknown Hard error
+ - enable services with bat scripts
+ - Run DISM / SFC / chkdsk through WinRE
+ - Refresh this PC
+ - LAST RESORT! WinRE - Reset this PC
+
+Black screen after login
+ - CTRL+ALT+DEL to open Task Manager
+ - click "Run new task" to open Run
+ - Browse opens "File Explorer"
+  + spam right arrow key if screen keep flashing from focusing and loosing focus on windows to successfully type in commands
+ 
+Powershell can't be used in WinRE by default
+
+Feedback-Hub gives 0x80190001 error when signing in
+ - Make sure you sign into the feedback-hub using your Microsoft account before applying bat tweaks, or you'll have to wait until next build release for settings to default again to sign in successfully (feedback hub works after tweaks are applied)
+
+Error 192 - AMD Software installer Cannot Continue Due to an Operating System Issue
+ - install latest NVIDIA driver
+ - execute all enable*.bat scripts
+
+Windows Security settings may need tweaked again after insider build updates
+
+mmsys.cpl to open sound settings
+explorer to open file explorer
+services.msc to edit services
+devmgmt.msc to open device manager
+ncpa.cpl opens Network Settings (needs UI enabled)
+inetcpl.cpl to open Internet Properties
+appwiz.cpl to uninstall and remove programs (needs UI enabled)
+ms-settings: to open settings app (needs UI enabled)
+ms-windows-store: to open microsoft store app (needs store and UI enabled)
+eventvwr to open Event Viewer to see event log
+taskschd.msc to open Task Scheduler
+compmgmt.msc to open Computer Management program
+control opens Control Panel (needs UI enabled)
+windowsdefender: to open Windows Security app
+
+C:\Program Files\WindowsApps\NVIDIACorp.NVIDIAControlPanel_8.1.962.0_x64__56jybvy8sckqj\nvcplui.exe - Nvidia control panel
+
+Win+E = File Explorer
+Win+I = Settings
+Win+R = Run
