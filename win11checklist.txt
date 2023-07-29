@@ -728,6 +728,7 @@ taskschd.msc to open Task Scheduler
 compmgmt.msc to open Computer Management program
 control opens Control Panel (needs UI enabled)
 windowsdefender: to open Windows Security app
+firewall.cpl to open Windows Firewall
 
 C:\Program Files\WindowsApps\NVIDIACorp.NVIDIAControlPanel_8.1.962.0_x64__56jybvy8sckqj\nvcplui.exe - Nvidia control panel
 
