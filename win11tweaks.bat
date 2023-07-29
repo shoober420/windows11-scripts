@@ -1635,22 +1635,6 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "DefaultTTL
 
 
 
-netsh int tcp set global autotuninglevel=normal
-netsh int tcp set global timestamps=disabled
-netsh int tcp set global chimney=disabled
-netsh int tcp set global initialRto=2000
-netsh int tcp set global minRto=300
-netsh int tcp set global nonsackttresiliency=disabled
-netsh int tcp set global maxsynretransmissions=2
-netsh int tcp set global rss=enabled
-netsh int tcp set global rsc=disabled
-netsh int tcp set supplemental internet congestionprovider=ctcp
-netsh interface tcp set heuristics disabled
-netsh interface tcp set global ecncapability=disabled
-netsh interface ipv4 set subinterface "Wi-Fi" mtu=1472 store=persistent
-netsh advfirewall firewall set rule group="Network Discovery" new enable=No
-netsh advfirewall firewall set rule group="File and Printer Sharing" new enable=No
-
 PowerShell.exe Set-NetTCPSetting -SettingName internet -AutoTuningLevelLocal normal
 PowerShell.exe Set-NetTCPSetting -SettingName internet -ScalingHeuristics disabled
 PowerShell.exe Set-NetTCPSetting -SettingName internet -EcnCapability disabled
@@ -1667,9 +1651,28 @@ PowerShell.exe Enable-NetAdapterChecksumOffload -Name *
 powershell.exe Disable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol
 ECHO Y | powershell.exe Set-SmbServerConfiguration -EnableSMB1Protocol $false
 ECHO Y | powershell.exe Set-SmbServerConfiguration -EnableSMB2Protocol $false
+powershell.exe Remove-NetFirewallRule -All
 powershell.exe $DisableLMHosts_Class=Get-WmiObject -list Win32_NetworkAdapterConfiguration
 powershell.exe $DisableLMHosts_Class.EnableWINS($false,$false)
-powershell.exe Get-NetFirewallRule -DisplayGroup 'Network Discovery'|Set-NetFirewallRule -Profile 'Public, Private, Domain' -Enabled false
+
+
+
+netsh int tcp set global autotuninglevel=normal
+netsh int tcp set global timestamps=disabled
+netsh int tcp set global chimney=disabled
+netsh int tcp set global initialRto=2000
+netsh int tcp set global minRto=300
+netsh int tcp set global nonsackttresiliency=disabled
+netsh int tcp set global maxsynretransmissions=2
+netsh int tcp set global rss=enabled
+netsh int tcp set global rsc=disabled
+netsh int tcp set supplemental internet congestionprovider=ctcp
+netsh interface tcp set heuristics disabled
+netsh interface tcp set global ecncapability=disabled
+netsh interface ipv4 set subinterface "Wi-Fi" mtu=1472 store=persistent
+netsh advfirewall set domainprofile firewallpolicy blockinboundalways,allowoutbound
+netsh advfirewall firewall set rule group="Network Discovery" new enable=No
+netsh advfirewall firewall set rule group="File and Printer Sharing" new enable=No
 
 
 
