@@ -1767,25 +1767,22 @@ reg add "HKU\.DEFAULT\Control Panel\Mouse" /v "MouseThreshold2" /t REG_SZ /d "0"
 powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
 powercfg /setactive 9de83888-3942-4204-9bb1-71f7106e816f
 
+reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\DefaultIcon" /v "(Default)"
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\DefaultIcon" /v "(Default)" /t REG_EXPAND_SZ /d "%SystemRoot%\System32\shell32.dll,102" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\DefaultIcon" /v "empty" /t REG_EXPAND_SZ /d "%SystemRoot%\System32\shell32.dll,101" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\DefaultIcon" /v "full" /t REG_EXPAND_SZ /d "%SystemRoot%\System32\shell32.dll,102" /f
-reg del "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\DefaultIcon" /v "(Default)" /t REG_SZ /d "%SystemRoot%\System32\shell32.dll,102" /f
-reg del "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\DefaultIcon" /v "empty" /t REG_SZ /d "%SystemRoot%\System32\shell32.dll,101" /f
-reg del "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\DefaultIcon" /v "full" /t REG_SZ /d "%SystemRoot%\System32\shell32.dll,102" /f
 
-reg del "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\DefaultIcon" /v "(Default)" /t REG_EXPAND_SZ /d "%USERPROFILE%\Downloads\MyComputerIcon.ico" /f
-reg del "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\CLSID\{59031A47-3F72-44A7-89C5-5595FE6B30EE}\DefaultIcon" /v "(Default)" /t REG_EXPAND_SZ /d "%USERPROFILE%\Downloads\MyDocumentsIcon.ico" /f
-reg del "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\CLSID\{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}\DefaultIcon" /v "(Default)" /t REG_EXPAND_SZ /d "%USERPROFILE%\Downloads\MyNetworkIcon.ico" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\DefaultIcon" /v "(Default)" /t REG_SZ /d "%USERPROFILE%\Downloads\MyComputerIcon.ico" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\CLSID\{59031A47-3F72-44A7-89C5-5595FE6B30EE}\DefaultIcon" /v "(Default)" /t REG_SZ /d "%USERPROFILE%\Downloads\MyDocumentsIcon.ico" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\CLSID\{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}\DefaultIcon" /v "(Default)" /t REG_SZ /d "%USERPROFILE%\Downloads\MyNetworkIcon.ico" /f
+reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\DefaultIcon" /v "(Default)"
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\DefaultIcon" /v "(Default)" /t REG_EXPAND_SZ /d "%USERPROFILE%\Downloads\MyComputerIcon.ico" /f
+reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\CLSID\{59031A47-3F72-44A7-89C5-5595FE6B30EE}\DefaultIcon" /v "(Default)"
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\CLSID\{59031A47-3F72-44A7-89C5-5595FE6B30EE}\DefaultIcon" /v "(Default)" /t REG_EXPAND_SZ /d "%USERPROFILE%\Downloads\MyDocumentsIcon.ico" /f
+reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\CLSID\{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}\DefaultIcon" /v "(Default)"
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\CLSID\{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}\DefaultIcon" /v "(Default)" /t REG_EXPAND_SZ /d "%USERPROFILE%\Downloads\MyNetworkIcon.ico" /f
+
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Icons" /v "3" /t REG_SZ /d "%USERPROFILE%\Downloads\FolderIcon.ico" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Icons" /v "4" /t REG_SZ /d "%USERPROFILE%\Downloads\FolderIcon.ico" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\DriveIcons\C\DefaultIcon" /v "(Default) /t REG_SZ /d "%USERPROFILE%\Downloads\HDIcon.ico" /f
-reg del "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Icons" /v "3" /t REG_EXPAND_SZ /d "%USERPROFILE%\Downloads\FolderIcon.ico" /f
-reg del "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Icons" /v "4" /t REG_EXPAND_SZ /d "%USERPROFILE%\Downloads\FolderIcon.ico" /f
-reg del "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\DriveIcons\C\DefaultIcon" /v "(Default) /t REG_EXPAND_SZ /d "%USERPROFILE%\Downloads\HDIcon.ico" /f
+reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\DriveIcons\C\DefaultIcon" /v "(Default)"
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\DriveIcons\C\DefaultIcon" /v "(Default)" /t REG_SZ /d "%USERPROFILE%\Downloads\HDIcon.ico" /f
 
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes" /v "CurrentTheme" /t REG_SZ /d "%USERPROFILE%\Downloads\FuckingWindows98.deskthemepack" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes" /v "ThemeMRU" /t REG_SZ /d "%USERPROFILE%\Downloads\FuckingWindows98.deskthemepack" /f
