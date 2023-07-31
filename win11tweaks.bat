@@ -1782,6 +1782,12 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\DriveIcons\C\De
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes" /v "CurrentTheme" /t REG_SZ /d "%USERPROFILE%\Downloads\FuckingWindows98.deskthemepack" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes" /v "ThemeMRU" /t REG_SZ /d "%USERPROFILE%\Downloads\FuckingWindows98.deskthemepack" /f
 
+reg add "HKCR\Applications\notepad++.exe\DefaultIcon" /ve /d "%USERPROFILE%\Downloads\TextFileIcon.ico"
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.txt\UserChoice" /v "ProgId" /t REG_SZ /d "Applications\notepad++.exe" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.cfg\UserChoice" /v "ProgId" /t REG_SZ /d "Applications\notepad++.exe" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.ini\UserChoice" /v "ProgId" /t REG_SZ /d "Applications\notepad++.exe" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.log\UserChoice" /v "ProgId" /t REG_SZ /d "Applications\notepad++.exe" /f
+
 rmdir /s /q "C:\Windows\Temp"
 rmdir /s /q "C:\Users\shoober420\AppData\Local\Temp"
 
