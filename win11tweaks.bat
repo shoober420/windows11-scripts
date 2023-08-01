@@ -1673,6 +1673,7 @@ netsh interface ipv4 set subinterface "Wi-Fi" mtu=1472 store=persistent
 netsh advfirewall set domainprofile firewallpolicy blockinboundalways,allowoutbound
 netsh advfirewall firewall set rule group="Network Discovery" new enable=No
 netsh advfirewall firewall set rule group="File and Printer Sharing" new enable=No
+netsh advfirewall firewall set rule group="remote desktop" new enable=No
 netsh advfirewall set allprofiles settings unicastresponsetomulticast disable
 
 
