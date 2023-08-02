@@ -43,6 +43,7 @@ Windows 98 Icons: Original (https://win98icons.alexmeub.com) / HQ (https://githu
    + Recycle Bin (full): Original (%SystemRoot%\System32\SHELL32.dll,102) / Original2 (https://win98icons.alexmeub.com/icons/png/recycle_bin_full-4.png) / HQ (https://github.com/nestoris/Win98SE/blob/main/SE98/places/48/user-trash-full.png)
    + Recycle Bin (empty): Original (%SystemRoot%\System32\SHELL32.dll,101) / Original2 (https://win98icons.alexmeub.com/icons/png/recycle_bin_empty-4.png) / HQ (https://github.com/nestoris/Win98SE/blob/main/SE98/places/48/user-trash.png)
    + Control Panel: Original (https://win98icons.alexmeub.com/icons/png/directory_control_panel-3.png)
+   + Internet: Original (https://win98icons.alexmeub.com/icons/png/msie1-2.png)
  - Rename "This PC" desktop icon to "My Computer"
 
 Windows 95 Icon Pack (https://www.deviantart.com/vovan29/art/Windows-95-ALL-ICONS-805656804)
