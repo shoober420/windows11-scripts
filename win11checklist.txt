@@ -26,6 +26,7 @@ Download
  - 7zip
  - PowerToys (https://github.com/microsoft/PowerToys) (WARNING! constantly runs in background after installed)
  - pcgamingwiki.com (source for patches and tweaks)
+ - Chromium 64bit snapshot builds (https://download-chromium.appspot.com/)
 
 
 
