@@ -1655,7 +1655,20 @@ powershell.exe Remove-NetFirewallRule -All
 powershell.exe $DisableLMHosts_Class=Get-WmiObject -list Win32_NetworkAdapterConfiguration
 powershell.exe $DisableLMHosts_Class.EnableWINS($false,$false)
 powershell.exe Disable-ScheduledTask -TaskName "Microsoft Compatibility Appraiser" -TaskPath "\Microsoft\Windows\Application Experience"
-
+powershell.exe Set-MpPreference -PUAProtection 0
+powershell.exe Set-MpPreference -EnableControlledFolderAccess Disabled
+powershell.exe Set-Processmitigation -System -Disable DEP
+powershell.exe Set-Processmitigation -System -Disable StrictCFG
+powershell.exe Set-Processmitigation -System -Disable CFG
+powershell.exe Set-Processmitigation -System -Disable SuppressExports
+powershell.exe Set-Processmitigation -System -Disable EmulateAtlThunks
+powershell.exe Set-Processmitigation -System -Disable ForceRelocateImages
+powershell.exe Set-Processmitigation -System -Disable BottomUp
+powershell.exe Set-Processmitigation -System -Disable HighEntropy
+powershell.exe Set-Processmitigation -System -Disable SEHOP
+powershell.exe Set-Processmitigation -System -Disable SEHOPTelemetry
+powershell.exe Set-Processmitigation -System -Disable TerminateOnError
+powershell.exe Set-Processmitigation -System -Disable DynamicCode
 
 netsh int tcp set global autotuninglevel=normal
 netsh int tcp set global timestamps=disabled
@@ -1995,6 +2008,15 @@ Dism /Online /Disable-Feature /FeatureName:WorkFolders-Client /Quiet /NoRestart
 Dism /Online /Disable-Feature /FeatureName:NetFx3 /Quiet /NoRestart
 Dism /Online /Disable-Feature /FeatureName:LegacyComponents /Quiet /NoRestart
 Dism /Online /Disable-Feature /FeatureName:DirectPlay /Quiet /NoRestart
+
+BCDEDIT /SET {CURRENT} NX ALWAYSOFF
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\CI\Policy" /v "VerifiedAndReputablePolicyState" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender" /v "PUAProtection" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "EnableSmartScreen" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "ShellSmartScreenLevel" /t REG_SZ /d "" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\AppHost" /v "PreventOverride" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\Controlled Folder Access" /v "EnableControlledFolderAccess" /t REG_DWORD /d "0" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\{57ED556D-89ED-4E06-A387-DB7E38B6AF7D}" /v "TcpAckFrequency" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\{57ED556D-89ED-4E06-A387-DB7E38B6AF7D}" /v "TcpDelAckTicks" /t REG_DWORD /d "0" /f
