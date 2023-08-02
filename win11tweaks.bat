@@ -1669,6 +1669,15 @@ powershell.exe Set-Processmitigation -System -Disable SEHOP
 powershell.exe Set-Processmitigation -System -Disable SEHOPTelemetry
 powershell.exe Set-Processmitigation -System -Disable TerminateOnError
 powershell.exe Set-Processmitigation -System -Disable DynamicCode
+powershell.exe Set-Processmitigation -System -Disable AuditDynamicCode
+powershell.exe Set-Processmitigation -System -Disable AuditImageLoad
+powershell.exe Set-Processmitigation -System -Disable AuditFont
+powershell.exe Set-Processmitigation -System -Disable FontAuditOnly
+powershell.exe Set-Processmitigation -System -Disable AuditMicrosoftSigned
+powershell.exe Set-Processmitigation -System -Disable AuditStoreSigned
+powershell.exe Set-Processmitigation -System -Disable AuditSystemCall
+powershell.exe Set-Processmitigation -System -Disable AuditChildProcess
+
 
 netsh int tcp set global autotuninglevel=normal
 netsh int tcp set global timestamps=disabled
