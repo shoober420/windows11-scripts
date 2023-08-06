@@ -715,6 +715,9 @@ Error 192 - AMD Software installer Cannot Continue Due to an Operating System Is
  - install latest NVIDIA driver
  - execute all enable*.bat scripts
 
+Update winget apps
+ - winget upgrade --all --include-unknown
+
 Windows Security settings may need tweaked again after insider build updates
 
 mmsys.cpl to open sound settings
