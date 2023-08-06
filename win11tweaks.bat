@@ -2079,7 +2079,7 @@ reg add "HKLM\Software\Microsoft\WindowsUpdate\UX\Settings" /v "UserChoiceActive
 reg add "HKLM\Software\Microsoft\WindowsUpdate\UX\Settings" /v "AutoRebootLimitInDays" /t REG_DWORD /d "365" /f
 reg add "HKLM\Software\Microsoft\WindowsUpdate\UX\Settings" /v "SnoozeRebootHours" /t REG_DWORD /d "65535" /f
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Personalization" /v "NoLockScreen" /t REG_DWORD /d "1" /f
-
+reg add "HKLM\SYSTEM\Setup\MoSetup" /v "AllowUpgradesWithUnsupportedTPMOrCPU" /t REG_DWORD /d "1" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\{57ED556D-89ED-4E06-A387-DB7E38B6AF7D}" /v "TcpAckFrequency" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\{57ED556D-89ED-4E06-A387-DB7E38B6AF7D}" /v "TcpDelAckTicks" /t REG_DWORD /d "0" /f
