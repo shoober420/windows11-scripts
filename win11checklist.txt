@@ -742,3 +742,4 @@ C:\Program Files\WindowsApps\NVIDIACorp.NVIDIAControlPanel_8.1.962.0_x64__56jybv
 Win+E = File Explorer
 Win+I = Settings
 Win+R = Run
+Ctrl+Shift+Esc = Task Manager
