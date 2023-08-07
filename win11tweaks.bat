@@ -1796,45 +1796,43 @@ rem powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
 rem powercfg /setactive 9de83888-3942-4204-9bb1-71f7106e816f
 
 REM Makes maximum CPU speeds available, by default they're not
-rem powercfg -setacvalueindex scheme_current sub_processor PERFBOOSTMODE 2
-rem powercfg -setacvalueindex scheme_current sub_processor PERFBOOSTMODE1 2
-rem powercfg -setacvalueindex scheme_current sub_processor PERFINCTHRESHOLD 0
-rem powercfg -setacvalueindex scheme_current sub_processor PERFINCTHRESHOLD1 0
-rem powercfg -setacvalueindex scheme_current sub_processor PERFINCTIME 0
-rem powercfg -setacvalueindex scheme_current sub_processor PERFINCTIME1 0
-rem powercfg -setacvalueindex scheme_current sub_processor PERFDECTHRESHOLD 100
-rem powercfg -setacvalueindex scheme_current sub_processor PERFDECTHRESHOLD1 100
-rem powercfg -setacvalueindex scheme_current sub_processor LATENCYHINTPERF 0
-rem powercfg -setacvalueindex scheme_current sub_processor LATENCYHINTPERF1 0
-rem powercfg -setacvalueindex scheme_current sub_processor PERFAUTONOMOUS 0
-rem powercfg -setacvalueindex scheme_current sub_processor PERFDUTYCYCLING 0
+powercfg -setacvalueindex scheme_current sub_processor PERFBOOSTMODE 2
+powercfg -setacvalueindex scheme_current sub_processor PERFBOOSTMODE1 2
+powercfg -setacvalueindex scheme_current sub_processor PERFINCTHRESHOLD 0
+powercfg -setacvalueindex scheme_current sub_processor PERFINCTHRESHOLD1 0
+powercfg -setacvalueindex scheme_current sub_processor PERFINCTIME 0
+powercfg -setacvalueindex scheme_current sub_processor PERFINCTIME1 0
+powercfg -setacvalueindex scheme_current sub_processor PERFDECTHRESHOLD 100
+powercfg -setacvalueindex scheme_current sub_processor PERFDECTHRESHOLD1 100
+powercfg -setacvalueindex scheme_current sub_processor LATENCYHINTPERF 0
+powercfg -setacvalueindex scheme_current sub_processor LATENCYHINTPERF1 0
+powercfg -setacvalueindex scheme_current sub_processor PERFAUTONOMOUS 0
+powercfg -setacvalueindex scheme_current sub_processor PERFDUTYCYCLING 0
 
 REM Sets overall throttles to maximum
-rem powercfg -setacvalueindex scheme_current sub_processor PROCTHROTTLEMAX 100
-rem powercfg -setacvalueindex scheme_current sub_processor PROCTHROTTLEMAX1 100
-rem powercfg -setacvalueindex scheme_current sub_processor PROCTHROTTLEMIN 100
-rem powercfg -setacvalueindex scheme_current sub_processor PROCTHROTTLEMIN1 100
-rem powercfg -setacvalueindex scheme_current sub_processor HETEROCLASS1INITIALPERF 100
-rem powercfg -setacvalueindex scheme_current sub_processor HETEROCLASS0FLOORPERF 100
+powercfg -setacvalueindex scheme_current sub_processor PROCTHROTTLEMAX 100
+powercfg -setacvalueindex scheme_current sub_processor PROCTHROTTLEMAX1 100
+powercfg -setacvalueindex scheme_current sub_processor PROCTHROTTLEMIN 100
+powercfg -setacvalueindex scheme_current sub_processor PROCTHROTTLEMIN1 100
+powercfg -setacvalueindex scheme_current sub_processor HETEROCLASS1INITIALPERF 100
+powercfg -setacvalueindex scheme_current sub_processor HETEROCLASS0FLOORPERF 100
 
 REM Turns off CPU core controls, tells OS to just use them all.
-rem powercfg -setacvalueindex scheme_current sub_processor CPMAXCORES 100
-rem powercfg -setacvalueindex scheme_current sub_processor CPMINCORES 100
-rem powercfg -setacvalueindex scheme_current sub_processor DISTRIBUTEUTIL 0
-rem powercfg -setacvalueindex scheme_current sub_processor CPDISTRIBUTION 0
+powercfg -setacvalueindex scheme_current sub_processor CPMAXCORES 100
+powercfg -setacvalueindex scheme_current sub_processor CPMINCORES 100
+powercfg -setacvalueindex scheme_current sub_processor DISTRIBUTEUTIL 0
+powercfg -setacvalueindex scheme_current sub_processor CPDISTRIBUTION 0
 
 REM Minimizes CPU spinup time, and maximizes spindown time, just in case
-rem powercfg -setacvalueindex scheme_current sub_processor CPINCREASETIME 0
-rem powercfg -setacvalueindex scheme_current sub_processor CPDECREASETIME 100
-rem powercfg -setacvalueindex scheme_current sub_processor CPHEADROOM 0
-rem powercfg -setacvalueindex scheme_current sub_processor CPCONCURRENCY 0
-rem powercfg -setacvalueindex scheme_current sub_processor LATENCYHINTUNPARK 0
-rem powercfg -setacvalueindex scheme_current sub_processor LATENCYHINTUNPARK1 0
+powercfg -setacvalueindex scheme_current sub_processor CPINCREASETIME 0
+powercfg -setacvalueindex scheme_current sub_processor CPDECREASETIME 100
+powercfg -setacvalueindex scheme_current sub_processor CPHEADROOM 0
+powercfg -setacvalueindex scheme_current sub_processor CPCONCURRENCY 0
+powercfg -setacvalueindex scheme_current sub_processor LATENCYHINTUNPARK 0
+powercfg -setacvalueindex scheme_current sub_processor LATENCYHINTUNPARK1 0
 
 REM Sets energy savings preference to zero
-rem powercfg -setacvalueindex scheme_current sub_processor PERFEPP 0
-
-powercfg -attributes SUB_PROCESSOR 75b0ae3f-bce0-45a7-8c89-c9611c25e100 -ATTRIB_HIDE
+powercfg -setacvalueindex scheme_current sub_processor PERFEPP 0
 
 rem # Reserve battery level
 powercfg -attributes e73a048d-bf27-4f12-9731-8b2076e8891f f3c5027d-cd16-4930-aa6b-90db844a8f00 -ATTRIB_HIDE
