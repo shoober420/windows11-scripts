@@ -140,6 +140,8 @@ Change .txt, .cfg, .ini, and .log icons
  + powercfg.exe /hibernate off
  + open Control Panel / Power Options
  + select ultimate performance power plan
+ + run win11tweaks.bat (if you havent already)
+ + edit all new power settings (Interrupt Steering Setting - Interrupt Steering Mode: Processor 1)
 
 - disable bloat Windows features
  + open Programs and Features
