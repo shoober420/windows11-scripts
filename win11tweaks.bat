@@ -2546,7 +2546,8 @@ reg add "HKLM\SOFTWARE\Policies\Microsoft\Camera" /v "AllowCamera" /t REG_DWORD 
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Personalization" /v "NoLockScreenCamera" /t REG_DWORD /d "1" /f
 
 rem Timers (enabling HPET lowers FPS on Windows 11)
-bcdedit /deletevalue useplatformclock
+rem bcdedit /deletevalue useplatformclock
+bcdedit /set useplatformclock true
 bcdedit /set useplatformtick yes
 bcdedit /set disabledynamictick yes
 bcdedit /set tscsyncpolicy enhanced
