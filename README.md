@@ -28,3 +28,5 @@ disablewinhttp.bat / enablewinhttp.bat (borks internet)
 disablestaterepository.bat / enablestaterepository.bat (ultra mega minimal only, borks themes and UI)
 
 run.bat
+
+powerplan.bat
