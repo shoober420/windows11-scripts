@@ -1791,10 +1791,9 @@ reg add "HKU\.DEFAULT\Control Panel\Mouse" /v "MouseThreshold1" /t REG_SZ /d "0"
 reg add "HKU\.DEFAULT\Control Panel\Mouse" /v "MouseThreshold2" /t REG_SZ /d "0" /f
 
 
-
-powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
-powercfg /setactive 9de83888-3942-4204-9bb1-71f7106e816f
-powercfg -attributes SUB_PROCESSOR 75b0ae3f-bce0-45a7-8c89-c9611c25e100 -ATTRIB_HIDE
+rem Ultimate Performance Plan, use powerplan.bat instead, adds same power plan everytime command is executed, so use powerplan.bat only once every new build install
+rem powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
+rem powercfg /setactive 9de83888-3942-4204-9bb1-71f7106e816f
 
 REM Makes maximum CPU speeds available, by default they're not
 rem powercfg -setacvalueindex scheme_current sub_processor PERFBOOSTMODE 2
@@ -1834,6 +1833,8 @@ rem powercfg -setacvalueindex scheme_current sub_processor LATENCYHINTUNPARK1 0
 
 REM Sets energy savings preference to zero
 rem powercfg -setacvalueindex scheme_current sub_processor PERFEPP 0
+
+powercfg -attributes SUB_PROCESSOR 75b0ae3f-bce0-45a7-8c89-c9611c25e100 -ATTRIB_HIDE
 
 rem # Reserve battery level
 powercfg -attributes e73a048d-bf27-4f12-9731-8b2076e8891f f3c5027d-cd16-4930-aa6b-90db844a8f00 -ATTRIB_HIDE
