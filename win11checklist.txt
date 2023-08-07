@@ -739,6 +739,7 @@ control opens Control Panel (needs UI enabled)
 windowsdefender: to open Windows Security app
 firewall.cpl to open Windows Firewall
 desk.cpl ,5 opens Desktop Icon Settings
+powercfg.cpl opens Power Options
 
 C:\Program Files\WindowsApps\NVIDIACorp.NVIDIAControlPanel_8.1.962.0_x64__56jybvy8sckqj\nvcplui.exe - Nvidia control panel
 
