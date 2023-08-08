@@ -2560,6 +2560,11 @@ reg add "HKLM\System\CurrentControlSet\Services\Tcpip\Parameters" /v "NV Hostnam
 netsh interface ip set dns name="Wi-Fi" static 1.1.1.1
 netsh interface ip add dns name="Wi-Fi" 1.1.1.1 index=2
 
+rem # SvcHostSplitThresholdInKB value is amount of RAM in KiloBytes (KB)
+rem # Example math formula: 8 GB = 8x1024 MB = 8x1024x1024 KB = 8388608 KB
+rem # 8GB = 8388608 (800000) / 16GB = 16777216 (1000000) / 32GB = 33554432 (2000000) / 64GB = 67108864 (4000000)
+reg add "HKLM\SYSTEM\CurrentControlSet\Control" /v "SvcHostSplitThresholdInKB" /t REG_DWORD /d "1000000" /f
+
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp" /v "DisableWpad" /t REG_DWORD /d "0" /f
 
 PAUSE
