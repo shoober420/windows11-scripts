@@ -2649,6 +2649,9 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ComputerName" /v "Co
 reg add "HKLM\System\CurrentControlSet\Services\Tcpip\Parameters" /v "Hostname" /t REG_SZ /d "shoober420_-" /f
 reg add "HKLM\System\CurrentControlSet\Services\Tcpip\Parameters" /v "NV Hostname" /t REG_SZ /d "shoober420_-" /f
 
+# Disable 57-bits 5-level paging, also known as "Linear Address 57". Only 100% effective on 10th gen Intel. 256 TB of virtual memory per-disk is way much more than enough anyway
+bcdedit /set linearaddress57 OptOut
+bcdedit /set increaseuserva 268435328
 
 netsh interface ip set dns name="Wi-Fi" static 1.1.1.1
 netsh interface ip add dns name="Wi-Fi" 1.1.1.1 index=2
