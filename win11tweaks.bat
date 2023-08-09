@@ -2716,7 +2716,7 @@ bcdedit /set disabledynamictick yes
 bcdedit /set tscsyncpolicy enhanced
 
 rem # mouse and keyboard buffer sizes (too low value causes mouse glitches and unregistered keyboard presses, mouse values under 20 require very good hardware, keyboard values under 12 require very good hardware)
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\mouclass\Parameters" /v "MouseDataQueueSize" /t REG_DWORD /d "0x00000014" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\mouclass\Parameters" /v "MouseDataQueueSize" /t REG_DWORD /d "0x00000010" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\kbdclass\Parameters" /v "KeyboardDataQueueSize" /t REG_DWORD /d "0x0000000c" /f
 
 rem # last key changes based on NIC card
