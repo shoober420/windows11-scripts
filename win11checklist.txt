@@ -27,7 +27,7 @@ Download
  - PowerToys (https://github.com/microsoft/PowerToys) (WARNING! constantly runs in background after installed)
  - pcgamingwiki.com (source for patches and tweaks)
  - Chromium 64bit snapshot builds (https://download-chromium.appspot.com/)
-
+ - snappy driver installer (https://sdi-tool.org/)
 
 
 Windows 98 Icons: Original (https://win98icons.alexmeub.com) / HQ (https://github.com/nestoris/Win98SE)
