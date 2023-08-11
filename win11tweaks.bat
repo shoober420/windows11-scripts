@@ -1714,11 +1714,12 @@ netsh interface tcp set global hystart=disabled
 netsh interface tcp set global fastopen=enabled
 netsh interface tcp set global pacingprofile=slowstart
 netsh interface ip set global neighborcachelimit=4096
-netsh interface tcp set heuristics wsh=enabled
+netsh interface tcp set heuristics wsh=disabled
 netsh interface ip set global taskoffload=enabled
 netsh interface ip set global mediasenseeventlog=disabled
 netsh int tcp set security mpp=disabled
 netsh int tcp set security profiles=disabled
+netsh int tcp set heuristics forcews=disabled
 
 
 sc.exe config mrxsmb20 start= disabled
@@ -2773,6 +2774,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\{57E
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\{57ED556D-89ED-4E06-A387-DB7E38B6AF7D}" /v "TCPNoDelay" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\{57ED556D-89ED-4E06-A387-DB7E38B6AF7D}" /v "TcpNoDelay" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\NetBT\Parameters\Interfaces\Tcpip_{57ed556d-89ed-4e06-a387-db7e38b6af7d}" /v "NetbiosOptions" /t REG_DWORD /d "2" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "Tcp1323Opts" /t REG_DWORD /d "0" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0000" /v "*SpeedDuplex" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0000" /v "*FlowControl" /t REG_DWORD /d "3" /f
