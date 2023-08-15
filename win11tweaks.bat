@@ -1,10 +1,13 @@
 rem shoober420's Windows 11 Tweaks Batch Script
+rem Warning! Use with extreme caution!
 rem Some settings and format used from TairikuOokami, with additional custom tweaks (https://github.com/TairikuOokami)
-rem https://github.com/TairikuOokami/Windows/blob/main/Windows%20Tweaks.bat
 
 
 
-rem Too disable Windows Defender, run in Safe Mode
+rem Too disable Windows Defender, run this batch script in Safe Mode
+
+
+
 
 
 
