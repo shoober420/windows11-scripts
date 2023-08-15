@@ -1,6 +1,6 @@
 rem shoober420's Windows 11 Tweaks Batch Script
 rem Warning! Use with extreme caution!
-rem Some settings and format used from TairikuOokami, with additional custom tweaks (https://github.com/TairikuOokami)
+rem Some settings and format used from TairikuOokami, with my additional custom tweaks (https://github.com/TairikuOokami)
 
 
 
