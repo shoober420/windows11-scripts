@@ -1,10 +1,9 @@
+rem !!!WARNING!!! !!!WARNING!!! !!!WARNING!!!
+rem Use with extreme caution!
 rem shoober420's Windows 11 Tweaks Batch Script
-rem Warning! Use with extreme caution!
 rem Some settings and format used from TairikuOokami, along with my additional custom tweaks (https://github.com/TairikuOokami)
-
-
-
 rem Too disable Windows Defender, run this batch script in Safe Mode
+
 
 
 
