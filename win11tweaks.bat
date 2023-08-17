@@ -1766,11 +1766,14 @@ winget uninstall "windows web experience pack"
 
 
 rem Disable Anti-malware Service Executable (to restore run "sfc /scannow")
-takeown /s %computername% /u %username% /f "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.23070.1004-0\MsMpEng.exe"
-icacls "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.23070.1004-0\MsMpEng.exe" /grant:r %username%:F
+rem takeown /s %computername% /u %username% /f "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.23070.1004-0\MsMpEng.exe"
+takeown /s %computername% /u %username% /f "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.23070.1004-0"
+rem icacls "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.23070.1004-0\MsMpEng.exe" /grant:r %username%:F
+icacls "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.23070.1004-0" /grant:r %username%:F
 taskkill /im MsMpEng.exe /f
 rem del "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.23070.1004-0\MsMpEng.exe" /s /f /q
-ren "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.23070.1004-0\MsMpEng.exe" "MsMpEng.exe.bak"
+rem ren "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.23070.1004-0\MsMpEng.exe" "MsMpEng.exe.bak"
+ren "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.23070.1004-0" "4.18.23070.1004-0.bak"
 
 rem Disable Shell Experience Host (to restore run "sfc /scannow")
 takeown /s %computername% /u %username% /f "C:\Windows\SystemApps\ShellExperienceHost_cw5n1h2txyewy\ShellExperienceHost.exe"
@@ -2667,6 +2670,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm\FTS" /v "EnableRID73780
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm\FTS" /v "EnableRID74361" /t REG_DWORD /d "1" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Attachments" /v "SaveZoneInformation" /t REG_DWORD /d "1" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\DeliveryOptimization\Settings" /v "DownloadMode" /t REG_DWORD /d "0" /f
+reg add "HKCU\Software\Policies\Microsoft\Windows\CloudContent" /v "DisableWindowsSpotlightFeatures" /t REG_DWORD /d "1" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power" /v "ExitLatency" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power" /v "ExitLatencyCheckEnabled" /t REG_DWORD /d "1" /f
@@ -2793,7 +2797,7 @@ bcdedit /set useplatformtick yes
 bcdedit /set disabledynamictick yes
 bcdedit /set tscsyncpolicy enhanced
 
-rem # mouse and keyboard buffer sizes (too low value causes mouse glitches and unregistered keyboard presses, mouse values under 20 and keyboard values under 12 require very good hardware)
+rem # mouse and keyboard buffer sizes (too low value causes mouse glitches and unregistered keyboard presses, mouse values under 16 and keyboard values under 12 require very good hardware)
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\mouclass\Parameters" /v "MouseDataQueueSize" /t REG_DWORD /d "0x00000010" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\kbdclass\Parameters" /v "KeyboardDataQueueSize" /t REG_DWORD /d "0x0000000c" /f
 
