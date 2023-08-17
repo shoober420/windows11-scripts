@@ -1,8 +1,8 @@
 rem !!!WARNING!!! !!!WARNING!!! !!!WARNING!!!
-rem Use with extreme caution!
+rem !!!USE WITH EXTREME CAUTION!!!
 rem shoober420's Windows 11 Tweaks Batch Script
+rem Too disable Windows Defender and Windows Defender components, run this batch script in Safe Mode
 rem Some settings and format used from TairikuOokami, along with my additional custom tweaks (https://github.com/TairikuOokami)
-rem Too disable Windows Defender, run this batch script in Safe Mode
 
 
 
@@ -1766,14 +1766,11 @@ winget uninstall "windows web experience pack"
 
 
 rem Disable Anti-malware Service Executable (to restore run "sfc /scannow")
-rem takeown /s %computername% /u %username% /f "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.23070.1004-0\MsMpEng.exe"
-takeown /s %computername% /u %username% /f "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.23070.1004-0"
-rem icacls "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.23070.1004-0\MsMpEng.exe" /grant:r %username%:F
-icacls "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.23070.1004-0" /grant:r %username%:F
+takeown /s %computername% /u %username% /f "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.23070.1004-0\MsMpEng.exe"
+icacls "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.23070.1004-0\MsMpEng.exe" /grant:r %username%:F
 taskkill /im MsMpEng.exe /f
 rem del "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.23070.1004-0\MsMpEng.exe" /s /f /q
-rem ren "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.23070.1004-0\MsMpEng.exe" "MsMpEng.exe.bak"
-ren "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.23070.1004-0" "4.18.23070.1004-0.bak"
+ren "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.23070.1004-0\MsMpEng.exe" "MsMpEng.exe.bak"
 
 rem Disable Shell Experience Host (to restore run "sfc /scannow")
 takeown /s %computername% /u %username% /f "C:\Windows\SystemApps\ShellExperienceHost_cw5n1h2txyewy\ShellExperienceHost.exe"
