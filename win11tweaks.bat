@@ -1,7 +1,7 @@
 rem !!!WARNING!!! !!!WARNING!!! !!!WARNING!!!
 rem !!!USE WITH EXTREME CAUTION!!!
 rem shoober420's Windows 11 Tweaks Batch Script
-rem Too disable Windows Defender and Windows Defender components, run this batch script in Safe Mode
+rem Too disable Windows Defender and Windows Defender components, run this batch script in SAFE MODE
 rem Some settings and format used from TairikuOokami, along with my additional custom tweaks (https://github.com/TairikuOokami)
 
 
