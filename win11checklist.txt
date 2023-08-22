@@ -729,6 +729,9 @@ Windows Security settings may need tweaked again after insider build updates
 
 Be sure that your signed into your Microsoft account under Settings > Accounts before running bat scripts after new insider build updates
 
+
+---   https://ss64.com/nt/run.html   ---
+
 mmsys.cpl to open sound settings
 explorer to open file explorer
 services.msc to edit services
