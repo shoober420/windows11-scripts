@@ -2693,6 +2693,7 @@ reg delete "HKCR\Microsoft.Website\ShellEx\ContextMenuHandlers\PintoStartScreen"
 reg delete "HKCR\mscfile\shellex\ContextMenuHandlers\PintoStartScreen" /f
 reg delete "HKCR\*\shellex\ContextMenuHandlers\{90AA3A4E-1CBA-4233-B8BB-535773D48449}" /f
 reg add "HKCU\SOFTWARE\Policies\Microsoft\Windows\Explorer" /v "NoPinningToTaskbar" /t REG_DWORD /d "1" /f
+reg delete "HKCR\Folder\ShellEx\ContextMenuHandlers\Library Location" /f
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\csrss.exe\PerfOptions" /v "IoPriority" /t REG_DWORD /d "3" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\csrss.exe\PerfOptions" /v "CpuPriorityClass" /t REG_DWORD /d "4" /f
