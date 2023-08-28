@@ -1850,6 +1850,10 @@ reg add "HKU\.DEFAULT\Control Panel\Mouse" /v "MouseThreshold2" /t REG_SZ /d "0"
 
 
 
+
+rem Delete Balanced power config option
+powercfg -delete 381b4222-f694-41f0-9685-ff5bb260df2e
+
 rem Ultimate Performance Plan, use powerplan.bat instead, adds same power plan everytime command is executed, so use powerplan.bat only once every new build install
 rem powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
 rem powercfg /setactive 9de83888-3942-4204-9bb1-71f7106e816f
