@@ -1,7 +1,7 @@
 rem Disable Microsoft Store App
 
+rem net stop AppXSvc
 net stop NcbService
-net stop AppXSvc
 net stop camsvc
 net stop UdkUserSvc
 net stop UnistoreSvc
@@ -11,8 +11,8 @@ net stop OneSyncSvc
 net stop ClipSVC
 net stop PushToInstall
 
+rem reg add "HKLM\SYSTEM\CurrentControlSet\Services\AppXSvc" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\NcbService" /v "Start" /t REG_DWORD /d "4" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\AppXSvc" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\camsvc" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\UdkUserSvc" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\UnistoreSvc" /v "Start" /t REG_DWORD /d "4" /f
