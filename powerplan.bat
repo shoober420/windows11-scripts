@@ -1,5 +1,5 @@
 rem Ultimate Performance Plan
-rem New GUID is generated after command is executed, you must manually set randomly generated GUID with "powercfg /setactive"
+rem New GUID is generated after "powercfg -duplicatescheme" command is executed, you must manually set randomly generated GUID using "powercfg /setactive" command each time
 powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
 rem powercfg /setactive GUID
 
