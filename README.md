@@ -23,7 +23,7 @@ disablebluetooth.bat / enablebluetooth.bat
 
 disableappx.bat / enableappx.bat (causes "explorer.exe - System warning ! Unknown Hard error" at login screen, black screen after sign in and bugs input if AppXSvc is disabled with State Repository Service enabled) (build 25905)
 
-disablewinhttp.bat / enablewinhttp.bat (borks internet)
+disablewinhttp.bat / enablewinhttp.bat (borks internet if disabled)
 
 disablestaterepository.bat / enablestaterepository.bat (ultra mega minimal only, borks themes and UI)
 
