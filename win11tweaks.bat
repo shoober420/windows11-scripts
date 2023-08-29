@@ -1753,7 +1753,7 @@ netsh int tcp set heuristics forcews=disabled
 sc.exe config mrxsmb20 start= disabled
 sc.exe config mrxsmb30 start= disabled
 
-rem winget uninstall Microsoft.OneDrive
+winget uninstall Microsoft.OneDrive
 rem winget uninstall Microsoft.WindowsCamera
 rem winget uninstall Microsoft.GetHelp
 rem winget uninstall Microsoft.People
@@ -1771,7 +1771,7 @@ rem winget uninstall Microsoft.MicrosoftEdge
 rem winget uninstall Microsoft.MicrosoftEdgeBeta
 rem winget uninstall Microsoft.MicrosoftEdgeStable
 rem winget uninstall Microsoft.MicrosoftEdgeDevToolsClient
-rem winget uninstall Microsoft.GamingServices
+winget uninstall Microsoft.GamingServices
 rem winget uninstall MicrosoftWindows.Client.WebExperience
 rem winget uninstall Microsoft.Windows.ShellExperienceHost
 rem winget uninstall Microsoft.Windows.StartMenuExperienceHost
@@ -1887,7 +1887,7 @@ rem powercfg -setacvalueindex scheme_current sub_processor DISTRIBUTEUTIL 0
 rem powercfg -setacvalueindex scheme_current sub_processor CPDISTRIBUTION 0
 
 REM Minimizes CPU spinup time, and maximizes spindown time, just in case
-rempowercfg -setacvalueindex scheme_current sub_processor CPINCREASETIME 0
+rem powercfg -setacvalueindex scheme_current sub_processor CPINCREASETIME 0
 rem powercfg -setacvalueindex scheme_current sub_processor CPDECREASETIME 100
 rem powercfg -setacvalueindex scheme_current sub_processor CPHEADROOM 0
 rem powercfg -setacvalueindex scheme_current sub_processor CPCONCURRENCY 0
@@ -2510,6 +2510,8 @@ reg add "HKLM\Software\Policies\Microsoft\MRT" /v "DontOfferThroughWUAU" /t REG_
 reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager\Subscriptions" /f
 reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager\SuggestedApps" /f
 
+
+
 Dism /Online /Disable-Feature /FeatureName:MediaPlayback /Quiet /NoRestart
 Dism /Online /Disable-Feature /FeatureName:Microsoft-Windows-Subsystem-Linux /Quiet /NoRestart
 Dism /Online /Disable-Feature /FeatureName:MSRDC-Infrastructure /Quiet /NoRestart
@@ -2550,6 +2552,17 @@ dism /online /Remove-Package /PackageName:Microsoft-Windows-HVSI-Components-WOW6
 dism /online /Remove-Package /PackageName:Microsoft-Windows-HVSI-Package /NoRestart
 dism /online /Remove-Package /PackageName:Microsoft-Windows-HVSI-WOW64-Package /NoRestart
 dism /online /Remove-Package /PackageName:Microsoft-Windows-SecurityCenter /NoRestart
+dism /online /Remove-Package /PackageName:Multimedia-RestrictedCodecsDolby /NoRestart
+dism /online /Remove-Package /PackageName:RemoteDesktopServices-Base-Package /NoRestart
+dism /online /Remove-Package /PackageName:Microsoft-Windows-SMB /NoRestart
+dism /online /Remove-Package /PackageName:Microsoft-Windows-Smb /NoRestart
+dism /online /Remove-Package /PackageName:Microsoft-Windows-Telnet-Client-Opt /NoRestart
+dism /online /Remove-Package /PackageName:Microsoft-Windows-Telnet-Client-FOD-Package /NoRestart
+dism /online /Remove-Package /PackageName:Microsoft-Windows-TFTP-Client-FOD-Package /NoRestart
+dism /online /Remove-Package /PackageName:Microsoft-Windows-WMPNetworkSharingService /NoRestart
+dism /online /Remove-Package /PackageName:OpenSSH-Client /NoRestart
+
+
 
 BCDEDIT /SET {CURRENT} NX ALWAYSOFF
 bcdedit /set vsmlaunchtype Off
@@ -2565,6 +2578,8 @@ bcdedit /set nolowmem Yes
 bcdedit /set allowedinmemorysettings 0x0
 bcdedit /set isolatedcontext No
 bcdedit /set pae ForceEnable
+
+
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\CI\Policy" /v "VerifiedAndReputablePolicyState" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender" /v "PUAProtection" /t REG_DWORD /d "0" /f
@@ -2673,7 +2688,6 @@ reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\CloudContent" /v "DisableWindo
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\DriverSearching" /v "SearchOrderConfig" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\default\ApplicationManagement\AllowGameDVR" /v "value" /t REG_DWORD /d "0" /f
 reg add "HKCU\System\GameConfigStore" /v "GameDVR_FSEBehaviorMode" /t REG_DWORD /d "2" /f
-reg add "HKCU\Control Panel\Mouse" /v "MouseHoverTime" /t REG_SZ /d "10" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters" /v "NegativeCacheTime" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters" /v "NegativeSOACacheTime" /t REG_DWORD /d "0" /f
@@ -2750,6 +2764,45 @@ reg add "HKCU\Software\Microsoft\Windows Defender Security Center\Account protec
 reg add "HKLM\SOFTWARE\Microsoft\Security Center" /v "FirewallDisableNotify" /t REG_DWORD /d "1" /f
 reg add "HKLM\SOFTWARE\Microsoft\Security Center" /v "UpdatesDisableNotify" /t REG_DWORD /d "1" /f
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender Security Center\App and Browser protection" /v "DisallowExploitProtectionOverride" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\default\System\TurnOffFileHistory" /v "value" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\default\Experience\AllowCortana" /v "value" /t REG_DWORD /d "0" /f
+reg add "HKCU\SOFTWARE\Microsoft\Speech_OneCore\Settings\VoiceActivation\Microsoft.549981C3F5F10_8wekyb3d8bbwe!App" /v "AgentActivationEnabled" /t REG_DWORD /d "0"
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Search" /v "CanCortanaBeEnabled" /t REG_DWORD /d "0" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Search" /v "CortanaEnabled" /t REG_DWORD /d "0" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Search" /v "CortanaConsent" /t REG_DWORD /d "0" /f
+reg add "HKCU\Software\Microsoft\GameBar" /v "ShowStartupPanel" /t REG_DWORD /d "0" /f
+reg add "HKCU\Software\Microsoft\GameBar" /v "ShowGameModeNotifications" /t REG_DWORD /d "0" /f
+reg add "HKCU\Software\Microsoft\Games" /v "EnableXBGM" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\TabletPC" /v "PreventHandwritingDataSharing" /t REG_DWORD /d "1" /f
+reg add "HKLM\Software\Policies\Microsoft\Windows\HandwritingErrorReports" /v "PreventHandwritingErrorReports" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\default\TextInput\AllowIMELogging" /v "value" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\default\TextInput\AllowLinguisticDataCollection" /v "value" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\TextInput" /v "AllowLinguisticDataCollection" /t REG_DWORD /d "0" /f
+reg add "HKLM\software\policies\microsoft\ime\shared" /v "UserDict" /t REG_DWORD /d "0" /f
+reg add "HKLM\software\policies\microsoft\ime\shared" /v "UseHistorybasedPredictiveInput" /t REG_DWORD /d "0" /f
+reg add "HKLM\software\policies\microsoft\ime\shared" /v "OpenExtendedDict" /t REG_DWORD /d "0" /f
+reg add "HKLM\software\policies\microsoft\ime\shared" /v "misconvlogging" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CPSS\UserPolicy\ImproveInkingAndTyping" /v "DefaultValue" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CPSS\UserPolicy\InkingAndTypingPersonalization" /v "DefaultValue" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\default\TextInput\AllowHardwareKeyboardTextSuggestions" /v "value" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\default\TextInput\AllowTextInputSuggestionUpdate" /v "value" /t REG_DWORD /d "0" /f
+reg add "HKCU\Software\Microsoft\InputPersonalization\TrainedDataStore" /v "LMDataLoggerEnabled" /t REG_DWORD /d "0" /f
+reg add "HKCU\Control Panel\Keyboard" /v "KeyboardDelay" /t REG_DWORD /d "0" /f
+reg add "HKCU\Control Panel\Keyboard" /v "KeyboardSpeed" /t REG_DWORD /d "0" /f
+reg add "HKCU\Control Panel\Keyboard" /v "TypematicDelay" /t REG_DWORD /d "0" /f
+reg add "HKCU\Control Panel\Desktop" /v "KeyboardSpeed" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\default\LockDown\AllowEdgeSwipe" /v "value" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\EdgeUI" /v "AllowEdgeSwipe" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\mouhid\Parameters" /v "TreatAbsolutePointerAsAbsolute" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\mouhid\Parameters" /v "TreatAbsoluteAsRelative" /t REG_DWORD /d "0" /f
+
+rem # Disable GPUPerf
+reg delete "HKCR\WOW6432Node\AppID\{cd93979b-c14e-4c29-87a4-75e4f9fa5e0a}" /f
+reg delete "HKCR\AppID\{cd93979b-c14e-4c29-87a4-75e4f9fa5e0a}" /f
+
+rem # Remove Gallery Folder in File Explorer
+reg delete "HKCR\CLSID\{e88865ea-0e1c-4e20-9aa6-edcd0212c87c}"
+reg delete "HKCR\WOW6432Node\CLSID\{e88865ea-0e1c-4e20-9aa6-edcd0212c87c}" /f
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "TurnOffSPIAnimations" /t REG_DWORD /d "1" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "NoWelcomeScreen" /t REG_DWORD /d "1" /f
