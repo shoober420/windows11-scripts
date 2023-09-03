@@ -1715,7 +1715,8 @@ powershell "Get-NetAdapter -IncludeHidden | Set-NetIPInterface -WeakHostSend Ena
 powershell "Disable-MMAgent -MemoryCompression"
 powershell "Remove-Item -Path \"HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\*\" -Recurse -ErrorAction SilentlyContinue"
 powershell "ForEach($v in (Get-Command -Name \"Set-ProcessMitigation\").Parameters[\"Disable\"].Attributes.ValidValues){Set-ProcessMitigation -System -Disable $v.ToString() -ErrorAction SilentlyContinue}"
-
+powershell.exe -Command "Get-AppxPackage *MicrosoftEdge* | Remove-AppxPackage"
+powershell.exe -Command "Get-AppxPackage *edge* | Remove-AppxPackage"
 
 
 netsh int tcp set global autotuninglevel=normal
@@ -2564,7 +2565,8 @@ dism /online /Remove-Package /PackageName:Microsoft-Windows-Telnet-Client-FOD-Pa
 dism /online /Remove-Package /PackageName:Microsoft-Windows-TFTP-Client-FOD-Package /NoRestart
 dism /online /Remove-Package /PackageName:Microsoft-Windows-WMPNetworkSharingService /NoRestart
 dism /online /Remove-Package /PackageName:OpenSSH-Client /NoRestart
-
+dism /online /Remove-Package /PackageName:Microsoft-Windows-Internet-Browser-Package /NoRestart
+dism /online /Remove-Package /PackageName:Microsoft-Windows-MicrosoftEdgeDevToolsClient-Package /NoRestart
 
 
 BCDEDIT /SET {CURRENT} NX ALWAYSOFF
@@ -3117,7 +3119,11 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\SCMConfig" /v "EnableSvchostMitig
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Reliability" /v "ShutdownReasonOn" /t REG_DWORD /d "0" /f
 reg add "HKLM\Software\Policies\Microsoft\Windows NT\Reliability" /v "ShutdownReasonOn" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Windows" /v "ShutdownWarningDialogTimeout" /t REG_DWORD /d "1" /f
-reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control" /v "DisableRemoteScmEndpoints" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control" /v "DisableRemoteScmEndpoints" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\OneDrive" /v "DisableFileSync" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\OneDrive" /v "DisableFileSyncNGSC" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\OneDrive" /v "DisableLibrariesDefaultSaveToOneDrive" /t REG_DWORD /d "1" /f
+reg add "HKCU\SOFTWARE\Policies\Microsoft\OneDrive" /v "DisablePersonalSync" /t REG_DWORD /d "1" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "IGMPLevel" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "DisableIPSourceRouting" /t REG_DWORD /d "2" /f
