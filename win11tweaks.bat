@@ -1732,7 +1732,6 @@ netsh int tcp set supplemental internet congestionprovider=ctcp
 netsh interface tcp set heuristics disabled
 netsh interface tcp set global ecncapability=disabled
 netsh interface ipv4 set subinterface "Wi-Fi" mtu=1472 store=persistent
-netsh advfirewall set domainprofile firewallpolicy blockinboundalways,allowoutbound
 netsh advfirewall firewall set rule group="Network Discovery" new enable=No
 netsh advfirewall firewall set rule group="File and Printer Sharing" new enable=No
 netsh advfirewall firewall set rule group="remote desktop" new enable=No
@@ -3343,6 +3342,9 @@ rem # Example math formula: 8 GB = 8x1024 MB = 8x1024x1024 KB = 8388608 KB
 rem # 8GB = 8388608 (800000) / 16GB = 16777216 (1000000) / 32GB = 33554432 (2000000) / 64GB = 67108864 (4000000)
 reg add "HKLM\SYSTEM\ControlSet001\Control" /v "SvcHostSplitThresholdInKB" /t REG_DWORD /d "1000000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control" /v "SvcHostSplitThresholdInKB" /t REG_DWORD /d "1000000" /f
+
+rem Blocking all inbound connections can break certain Wi-Fi and Ethernet connections
+netsh advfirewall set domainprofile firewallpolicy blockinboundalways,allowoutbound
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp" /v "DisableWpad" /t REG_DWORD /d "0" /f
 
