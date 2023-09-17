@@ -2525,7 +2525,10 @@ rem deleting all inbound firewall rules may break internet for certain Wi-Fi car
 rem powershell.exe Remove-NetFirewallRule -All
 
 rem Blocking all inbound connections can break certain Wi-Fi and Ethernet connections
+rem using "Block all connections" instead of "Block" option under firewall fixes loss of internet for some WiFi cards
 netsh advfirewall set domainprofile firewallpolicy blockinboundalways,allowoutbound
+netsh advfirewall set publicprofile firewallpolicy blockinboundalways,allowoutbound
+netsh advfirewall set privateprofile firewallpolicy blockinboundalways,allowoutbound
 
 rem Make sure name matches network name, half of internet breaks unless DNS is specified
 netsh interface ip set dns name="Wi-Fi 2" static 1.1.1.1
