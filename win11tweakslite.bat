@@ -2151,16 +2151,6 @@ rem # Disable 57-bits 5-level paging, also known as "Linear Address 57". Only 10
 bcdedit /set linearaddress57 OptOut
 bcdedit /set increaseuserva 268435328
 
-
-rem # SvcHostSplitThresholdInKB value is amount of RAM in KiloBytes (KB)
-rem # Example math formula: 8 GB = 8x1024 MB = 8x1024x1024 KB = 8388608 KB
-rem # 8GB = 8388608 (800000) / 16GB = 16777216 (1000000) / 32GB = 33554432 (2000000) / 64GB = 67108864 (4000000)
-reg add "HKLM\SYSTEM\ControlSet001\Control" /v "SvcHostSplitThresholdInKB" /t REG_DWORD /d "1000000" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control" /v "SvcHostSplitThresholdInKB" /t REG_DWORD /d "1000000" /f
-
-rem Blocking all inbound connections can break certain Wi-Fi and Ethernet connections
-netsh advfirewall set domainprofile firewallpolicy blockinboundalways,allowoutbound
-
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp" /v "DisableWpad" /t REG_DWORD /d "0" /f
 
 
@@ -2325,6 +2315,217 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "DeadGWDete
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "SackOpts" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "EnablePMTUBHDetect" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "EnablePMTUDiscovery" /t REG_DWORD /d "1" /f
+
+
+
+rem =================================== Windows Settings ===================================	
+rem ---------------------------------- Privacy & security ----------------------------------	
+rem ................................ Diagnostics & feedback ................................	
+rem 1 - Improve inking and typing	
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\CPSS\Store\ImproveInkingAndTyping" /v "Value" /t REG_DWORD /d "0" /f	
+rem 3 - Send optional diagnostic data / 1 - No	
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "ShowedToastAtLevel" /t REG_DWORD /d "1" /f	
+rem 1 - Tailored experiences	
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Privacy" /v "TailoredExperiencesWithDiagnosticDataEnabled" /t REG_DWORD /d "0" /f	
+rem ________________________________________________________________________________________	
+rem Send optional diagnostic data / 0 - Security (Not aplicable on Home/Pro, it resets to Basic) / 1 - Basic / 2 - Enhanced (Hidden) / 3 - Full	
+reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\DataCollection" /v "AllowTelemetry" /t REG_DWORD /d "0" /f	
+rem Feedback Frequency - Windows should ask for my feedback: 0 - Never / Removed - Automatically	
+reg add "HKCU\Software\Microsoft\Siuf\Rules" /v "NumberOfSIUFInPeriod" /t REG_DWORD /d "0" /f	
+reg add "HKCU\Software\Microsoft\Siuf\Rules" /v "PeriodInNanoSeconds" /t REG_DWORD /d "0" /f
+
+rem ================================ Windows Error Reporting ===============================
+rem https://docs.microsoft.com/en-us/windows/win32/wer/wer-settings
+rem Disable Microsoft Support Diagnostic Tool MSDT
+reg add "HKLM\Software\Policies\Microsoft\Windows\ScriptedDiagnosticsProvider\Policy" /v "DisableQueryRemoteServer" /t REG_DWORD /d "0" /f
+reg add "HKLM\Software\Policies\Microsoft\Windows\ScriptedDiagnosticsProvider\Policy" /v "EnableQueryRemoteServer" /t REG_DWORD /d "0" /f
+rem Disable System Debugger (Dr. Watson)
+reg add "HKLM\Software\Microsoft\Windows NT\CurrentVersion\AeDebug" /v "Auto" /t REG_SZ /d "0" /f
+rem 1 - Disable Windows Error Reporting (WER)
+reg add "HKLM\Software\Microsoft\PCHealth\ErrorReporting" /v "DoReport" /t REG_DWORD /d "0" /f
+reg add "HKCU\Software\Microsoft\Windows\Windows Error Reporting" /v "Disabled" /t REG_DWORD /d "1" /f
+reg add "HKLM\Software\Microsoft\Windows\Windows Error Reporting" /v "Disabled" /t REG_DWORD /d "1" /f
+reg add "HKLM\Software\Policies\Microsoft\Windows\Windows Error Reporting" /v "Disabled" /t REG_DWORD /d "1" /f
+rem DefaultConsent / 1 - Always ask (default) / 2 - Parameters only / 3 - Parameters and safe data / 4 - All data
+reg add "HKCU\Software\Microsoft\Windows\Windows Error Reporting\Consent" /v "DefaultConsent" /t REG_DWORD /d "0" /f
+reg add "HKCU\Software\Microsoft\Windows\Windows Error Reporting\Consent" /v "DefaultOverrideBehavior" /t REG_DWORD /d "1" /f
+reg add "HKLM\Software\Microsoft\Windows\Windows Error Reporting\Consent" /v "DefaultConsent" /t REG_DWORD /d "0" /f
+reg add "HKLM\Software\Microsoft\Windows\Windows Error Reporting\Consent" /v "DefaultOverrideBehavior" /t REG_DWORD /d "1" /f
+rem 1 - Disable WER sending second-level data
+reg add "HKCU\Software\Microsoft\Windows\Windows Error Reporting" /v "DontSendAdditionalData" /t REG_DWORD /d "1" /f
+reg add "HKLM\Software\Microsoft\Windows\Windows Error Reporting" /v "DontSendAdditionalData" /t REG_DWORD /d "1" /f
+rem 1 - Disable WER crash dialogs, popups
+reg add "HKLM\Software\Microsoft\PCHealth\ErrorReporting" /v "ShowUI" /t REG_DWORD /d "0" /f
+reg add "HKCU\Software\Microsoft\Windows\Windows Error Reporting" /v "DontShowUI" /t REG_DWORD /d "1" /f
+reg add "HKLM\Software\Microsoft\Windows\Windows Error Reporting" /v "DontShowUI" /t REG_DWORD /d "1" /f
+rem 1 - Disable WER logging
+reg add "HKCU\Software\Microsoft\Windows\Windows Error Reporting" /v "LoggingDisabled" /t REG_DWORD /d "1" /f
+reg add "HKLM\Software\Microsoft\Windows\Windows Error Reporting" /v "LoggingDisabled" /t REG_DWORD /d "1" /f
+schtasks /Change /TN "Microsoft\Windows\ErrorDetails\EnableErrorDetailsUpdate" /Disable
+schtasks /Change /TN "Microsoft\Windows\Windows Error Reporting\QueueReporting" /Disable
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\ServiceProvider" /v "LocalPriority" /t REG_DWORD /d "4" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\ServiceProvider" /v "HostsPriority" /t REG_DWORD /d "5" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\ServiceProvider" /v "DnsPriority" /t REG_DWORD /d "6" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\ServiceProvider" /v "NetbtPriority" /t REG_DWORD /d "7" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "MaxUserPort" /t REG_DWORD /d "65534" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "TcpTimedWaitDelay" /t REG_DWORD /d "30" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "DefaultTTL" /t REG_DWORD /d "64" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\services\Tcpip\Parameters" /v "SynAttackProtect" /t REG_DWORD /d "1" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\services\Tcpip\Parameters" /v "TcpCreateAndConnectTcbRateLimitDepth" /t REG_DWORD /d "0" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip6" /v "Start" /t REG_DWORD /d "4" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "IGMPLevel" /t REG_DWORD /d "0" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "DisableIPSourceRouting" /t REG_DWORD /d "2" /f
+
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\CDP" /v "CdpSessionUserAuthzPolicy" /t REG_DWORD /d "0" /f	
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\CDP" /v "NearShareChannelUserAuthzPolicy" /t REG_DWORD /d "0" /f	
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\CDP\SettingsPage" /v "NearShareChannelUserAuthzPolicy" /t REG_DWORD /d "0" /f	
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\CDP\SettingsPage" /v "BluetoothLastDisabledNearShare" /t REG_DWORD /d "0" /f
+
+reg add "HKLM\Software\Microsoft\WindowsUpdate\UX\Settings" /v "SmartActiveHoursState" /t REG_DWORD /d "0" /f	
+reg add "HKLM\Software\Microsoft\WindowsUpdate\UX\Settings" /v "ActiveHoursEnd" /t REG_DWORD /d "0" /f	
+reg add "HKLM\Software\Microsoft\WindowsUpdate\UX\Settings" /v "ActiveHoursStart" /t REG_DWORD /d "6" /f	
+reg add "HKLM\Software\Microsoft\WindowsUpdate\UX\Settings" /v "UserChoiceActiveHoursEnd" /t REG_DWORD /d "0" /f	
+reg add "HKLM\Software\Microsoft\WindowsUpdate\UX\Settings" /v "UserChoiceActiveHoursStart" /t REG_DWORD /d "6" /f	
+reg add "HKLM\Software\Microsoft\WindowsUpdate\UX\Settings" /v "AutoRebootLimitInDays" /t REG_DWORD /d "365" /f	
+reg add "HKLM\Software\Microsoft\WindowsUpdate\UX\Settings" /v "SnoozeRebootHours" /t REG_DWORD /d "65535" /f
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0\Client" /v "Enabled" /t REG_DWORD /d "0" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0\Client" /v "DisabledByDefault" /t REG_DWORD /d "1" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0\Server" /v "Enabled" /t REG_DWORD /d "0" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0\Server" /v "DisabledByDefault" /t REG_DWORD /d "1" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Client" /v "Enabled" /t REG_DWORD /d "0" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Client" /v "DisabledByDefault" /t REG_DWORD /d "1" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Server" /v "Enabled" /t REG_DWORD /d "0" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Server" /v "DisabledByDefault" /t REG_DWORD /d "1" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Client" /v "Enabled" /t REG_DWORD /d "0" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Client" /v "DisabledByDefault" /t REG_DWORD /d "1" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Server" /v "Enabled" /t REG_DWORD /d "0" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Server" /v "DisabledByDefault" /t REG_DWORD /d "1" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\DTLS 1.0\Client" /v "Enabled" /t REG_DWORD /d "0" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\DTLS 1.0\Client" /v "DisabledByDefault" /t REG_DWORD /d "1" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\DTLS 1.0\Server" /v "Enabled" /t REG_DWORD /d "0" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\DTLS 1.0\Server" /v "DisabledByDefault" /t REG_DWORD /d "1" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1\Client" /v "Enabled" /t REG_DWORD /d "0" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1\Client" /v "DisabledByDefault" /t REG_DWORD /d "1" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1\Server" /v "Enabled" /t REG_DWORD /d "0" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1\Server" /v "DisabledByDefault" /t REG_DWORD /d "1" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\DTLS 1.1\Client" /v "Enabled" /t REG_DWORD /d "0" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\DTLS 1.1\Client" /v "DisabledByDefault" /t REG_DWORD /d "1" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\DTLS 1.1\Server" /v "Enabled" /t REG_DWORD /d "0" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\DTLS 1.1\Server" /v "DisabledByDefault" /t REG_DWORD /d "1" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Client" /v "Enabled" /t REG_DWORD /d "0" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Client" /v "DisabledByDefault" /t REG_DWORD /d "1" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server" /v "Enabled" /t REG_DWORD /d "0" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server" /v "DisabledByDefault" /t REG_DWORD /d "1" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\DTLS 1.2\Client" /v "Enabled" /t REG_DWORD /d "0" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\DTLS 1.2\Client" /v "DisabledByDefault" /t REG_DWORD /d "1" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\DTLS 1.2\Server" /v "Enabled" /t REG_DWORD /d "0" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\DTLS 1.2\Server" /v "DisabledByDefault" /t REG_DWORD /d "1" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.3\Client" /v "Enabled" /t REG_DWORD /d "1" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.3\Client" /v "DisabledByDefault" /t REG_DWORD /d "0" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.3\Server" /v "Enabled" /t REG_DWORD /d "0" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.3\Server" /v "DisabledByDefault" /t REG_DWORD /d "1" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\DTLS 1.3\Client" /v "Enabled" /t REG_DWORD /d "1" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\DTLS 1.3\Client" /v "DisabledByDefault" /t REG_DWORD /d "0" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\DTLS 1.3\Server" /v "Enabled" /t REG_DWORD /d "0" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\DTLS 1.3\Server" /v "DisabledByDefault" /t REG_DWORD /d "1" /f
+
+PowerShell.exe Set-NetTCPSetting -SettingName internet -AutoTuningLevelLocal normal
+PowerShell.exe Set-NetTCPSetting -SettingName internet -ScalingHeuristics disabled
+PowerShell.exe Set-NetTCPSetting -SettingName internet -EcnCapability disabled
+PowerShell.exe Set-NetTCPSetting -SettingName internet -Timestamps disabled
+PowerShell.exe Set-NetTCPSetting -SettingName internet -MaxSynRetransmissions 2
+PowerShell.exe Set-NetTCPSetting -SettingName internet -NonSackRttResiliency disable
+PowerShell.exe Set-NetTCPSetting -SettingName internet -InitialRto 2000
+PowerShell.exe Set-NetTCPSetting -SettingName internet -MinRto 300
+powershell.exe Set-NetOffloadGlobalSetting -ReceiveSegmentCoalescing disabled
+powershell.exe Set-NetOffloadGlobalSetting -ReceiveSideScaling enable
+powershell.exe Set-NetOffloadGlobalSetting -Chimney disabled
+PowerShell.exe Disable-NetAdapterLso -Name *
+PowerShell.exe Enable-NetAdapterChecksumOffload -Name *
+powershell.exe Disable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol
+ECHO Y | powershell.exe Set-SmbServerConfiguration -EnableSMB1Protocol $false
+ECHO Y | powershell.exe Set-SmbServerConfiguration -EnableSMB2Protocol $false
+powershell.exe $DisableLMHosts_Class=Get-WmiObject -list Win32_NetworkAdapterConfiguration
+powershell.exe $DisableLMHosts_Class.EnableWINS($false,$false)
+powershell.exe Disable-ScheduledTask -TaskName "Microsoft Compatibility Appraiser" -TaskPath "\Microsoft\Windows\Application Experience"
+powershell.exe Set-MpPreference -PUAProtection 0
+powershell.exe Set-MpPreference -EnableControlledFolderAccess Disabled
+powershell.exe Set-Processmitigation -System -Disable DEP
+powershell.exe Set-Processmitigation -System -Disable StrictCFG
+powershell.exe Set-Processmitigation -System -Disable CFG
+powershell.exe Set-Processmitigation -System -Disable SuppressExports
+powershell.exe Set-Processmitigation -System -Disable EmulateAtlThunks
+powershell.exe Set-Processmitigation -System -Disable ForceRelocateImages
+powershell.exe Set-Processmitigation -System -Disable BottomUp
+powershell.exe Set-Processmitigation -System -Disable HighEntropy
+powershell.exe Set-Processmitigation -System -Disable SEHOP
+powershell.exe Set-Processmitigation -System -Disable SEHOPTelemetry
+powershell.exe Set-Processmitigation -System -Disable TerminateOnError
+powershell.exe Set-Processmitigation -System -Disable DynamicCode
+powershell.exe Set-Processmitigation -System -Disable AuditDynamicCode
+powershell.exe Set-Processmitigation -System -Disable AuditImageLoad
+powershell.exe Set-Processmitigation -System -Disable AuditFont
+powershell.exe Set-Processmitigation -System -Disable FontAuditOnly
+powershell.exe Set-Processmitigation -System -Disable AuditMicrosoftSigned
+powershell.exe Set-Processmitigation -System -Disable AuditStoreSigned
+powershell.exe Set-Processmitigation -System -Disable AuditSystemCall
+powershell.exe Set-Processmitigation -System -Disable AuditChildProcess
+
+netsh int tcp set global autotuninglevel=normal
+netsh int tcp set global timestamps=disabled
+netsh int tcp set global chimney=disabled
+netsh int tcp set global initialRto=2000
+netsh int tcp set global minRto=300
+netsh int tcp set global nonsackrttresiliency=disabled
+netsh int tcp set global maxsynretransmissions=2
+netsh int tcp set global rss=enabled
+netsh int tcp set global rsc=disabled
+netsh int tcp set supplemental internet congestionprovider=ctcp
+netsh interface tcp set heuristics disabled
+netsh interface tcp set global ecncapability=disabled
+netsh advfirewall firewall set rule group="Network Discovery" new enable=No
+netsh advfirewall firewall set rule group="File and Printer Sharing" new enable=No
+netsh advfirewall firewall set rule group="remote desktop" new enable=No
+netsh advfirewall set allprofiles settings unicastresponsetomulticast disable
+netsh int udp set global uro=enabled
+netsh winsock set autotuning on
+netsh interface tcp set global hystart=disabled
+netsh interface tcp set global fastopen=enabled
+netsh interface tcp set global fastopenfallback=enabled 
+netsh interface tcp set global pacingprofile=slowstart
+netsh interface ip set global neighborcachelimit=4096
+netsh interface tcp set heuristics wsh=disabled
+netsh interface ip set global taskoffload=enabled
+netsh interface ip set global mediasenseeventlog=disabled
+netsh int tcp set security mpp=disabled
+netsh int tcp set security profiles=disabled
+netsh int tcp set heuristics forcews=disabled
+
+sc.exe config mrxsmb20 start= disabled
+sc.exe config mrxsmb30 start= disabled
+
+rem # SvcHostSplitThresholdInKB value is amount of RAM in KiloBytes (KB)
+rem # Example math formula: 8 GB = 8x1024 MB = 8x1024x1024 KB = 8388608 KB
+rem # 8GB = 8388608 (800000) / 16GB = 16777216 (1000000) / 32GB = 33554432 (2000000) / 64GB = 67108864 (4000000)
+reg add "HKLM\SYSTEM\ControlSet001\Control" /v "SvcHostSplitThresholdInKB" /t REG_DWORD /d "2000000" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control" /v "SvcHostSplitThresholdInKB" /t REG_DWORD /d "2000000" /f
+
+rem # set values according to core and thread count	
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Ndis\Parameters" /v "MaxNumRssCpus" /t REG_DWORD /d "24" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "MaxNumRssCpus" /t REG_DWORD /d "24" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Ndis\Parameters" /v "MaxNumRssThreads" /t REG_DWORD /d "32" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "MaxNumRssThreads" /t REG_DWORD /d "32" /f
+
+rem make sure subinterface matches network name
+netsh interface ipv4 set subinterface "Wi-Fi 2" mtu=1472 store=persistent
+
+rem deleting all inbound firewall rules may break internet for certain Wi-Fi cards
+rem powershell.exe Remove-NetFirewallRule -All
+
+rem Blocking all inbound connections can break certain Wi-Fi and Ethernet connections
+netsh advfirewall set domainprofile firewallpolicy blockinboundalways,allowoutbound
 
 rem Make sure name matches network name, half of internet breaks unless DNS is specified
 netsh interface ip set dns name="Wi-Fi 2" static 1.1.1.1
