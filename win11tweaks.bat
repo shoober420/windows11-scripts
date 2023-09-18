@@ -1789,6 +1789,13 @@ taskkill /im msedge.exe /f
 rem del "C:\Windows\SystemApps\Microsoft.MicrosoftEdgeDevToolsClient_8wekyb3d8bbwe" /s /f /q
 ren "C:\Windows\SystemApps\Microsoft.MicrosoftEdgeDevToolsClient_8wekyb3d8bbwe" "Microsoft.MicrosoftEdgeDevToolsClient_8wekyb3d8bbwe.bak"
 
+rem Disable GIGABYTE Update Service
+takeown /s %computername% /u %username% /f "C:\Windows\System32\GigabyteUpdateService.exe"
+icacls "C:\Windows\System32\GigabyteUpdateService.exe" /grant:r %username%:F
+taskkill /im msedge.exe /f
+rem del "C:\Windows\System32\GigabyteUpdateService.exe" /s /f /q
+ren "C:\Windows\System32\GigabyteUpdateService.exe" "GigabyteUpdateService.exe.bak"
+
 rem Disable Anti-malware Service Executable (to restore run "sfc /scannow")
 takeown /s %computername% /u %username% /f "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.23070.1004-0\MsMpEng.exe"
 icacls "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.23070.1004-0\MsMpEng.exe" /grant:r %username%:F
