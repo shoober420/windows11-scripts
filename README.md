@@ -30,3 +30,7 @@ disablestaterepository.bat / enablestaterepository.bat (ultra mega minimal only,
 run.bat
 
 powerplan.bat (adds duplicate power plan everytime command is executed, so use powerplan.bat only once after every new build install unless already present)
+
+win11tweakslite.bat
+
+serviceslite.bat
