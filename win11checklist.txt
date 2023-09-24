@@ -729,6 +729,9 @@ Windows Security settings may need tweaked again after insider build updates
 
 Be sure that your signed into your Microsoft account under Settings > Accounts before running bat scripts after new insider build updates
 
+Disable GIGABYTE update service through BIOS > Settings > IO Ports
+
+
 
 ---   https://ss64.com/nt/run.html   ---
 
