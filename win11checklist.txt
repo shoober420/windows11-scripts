@@ -423,6 +423,7 @@ Change .txt, .cfg, .ini, and .log icons
  +++ NEVER disable WinHTTP web proxy auto discovery service (registry), will bork internet
  +++ NEVER disable GraphicsPerfSvc, improves performance
  +++ NEVER disable text input management service, needed for keyboard and mouse. you will need to WinRE*** (f8 key method)
+ +++ NEVER disable user manager, black screen at login after boot
  +++ NEVER disable AppXSvc (AppX Deployment Service) and leave State Repository Service enabled, causes "explorer.exe - Unknown Hard error" and black screen after login, bugged input (build 29505)
 
 
