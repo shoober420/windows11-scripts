@@ -33,4 +33,6 @@ powerplan.bat (adds duplicate power plan everytime command is executed, so use p
 
 win11tweakslite.bat
 
-serviceslite.bat
+services.bat
+
+disablethemes.bat / enablethemes.bat
