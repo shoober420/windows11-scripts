@@ -13,7 +13,7 @@ disablestore.bat / enablestore.bat
 
 disablecomponets.bat / enablecomponents.bat
 
-wing3t.bat (if named "winget", other bat scripts with winget command will attempt to launch this bat script instead of launching winget normally since they are in the same directory and both named "winget")
+wing3t.bat
 
 vcredist.bat
 
@@ -21,7 +21,7 @@ HKCUdsound.reg (adds dsound registry keys needed for older games, like Max Payne
 
 disablebluetooth.bat / enablebluetooth.bat
 
-disableappx.bat / enableappx.bat (causes "explorer.exe - System warning ! Unknown Hard error" at login screen, black screen after sign in and bugs input if AppXSvc is disabled with State Repository Service enabled) (build 25905)
+disableappx.bat / enableappx.bat
 
 disablewinhttp.bat / enablewinhttp.bat (borks internet if disabled)
 
