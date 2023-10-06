@@ -2565,4 +2565,9 @@ rem Make sure name matches network name, half of internet breaks unless DNS is s
 netsh interface ip set dns name="Wi-Fi 2" static 1.1.1.1
 netsh interface ip add dns name="Wi-Fi 2" 1.1.1.1 index=2
 
+rem WMI can now be disabled
+
+net stop winmgmt
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD /d "4" /f 
+
 PAUSE
