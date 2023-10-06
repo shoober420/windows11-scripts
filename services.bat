@@ -1,4 +1,4 @@
-rem Disables services, use with win11tweakslite.bat when win11tweaks.bat breaks system
+rem Disables services, use with win11tweakslite.bat
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\PushToInstall" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\camsvc" /v "Start" /t REG_DWORD /d "4" /f
