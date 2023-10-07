@@ -226,6 +226,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\Killer Network Service" /v "Star
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\KAPSService" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Killer Analytics Service" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\KNDBWM" /v "Start" /t REG_DWORD /d "4" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\KillerSmartphoneSleepService" /v "Start" /t REG_DWORD /d "4" /f
 
 rem ASUS bloat services
 
