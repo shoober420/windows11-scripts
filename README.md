@@ -36,3 +36,5 @@ win11tweakslite.bat
 services.bat
 
 disablethemes.bat / enablethemes.bat
+
+startgraphicsperfsvc.bat
