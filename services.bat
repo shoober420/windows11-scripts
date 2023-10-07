@@ -274,4 +274,8 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\SamSs" /v "Start" /t REG_DWORD /
 rem Distributed Link Tracking Client service FORCE DISABLE
 sc config TrkWks start= disabled
 
+rem GraphicsPerfSvc enable, improves performance
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\GraphicsPerfSvc" /v "Start" /t REG_DWORD /d "2" /f
+
 PAUSE
