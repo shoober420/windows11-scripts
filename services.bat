@@ -183,7 +183,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\SgrmAgent" /v "Start" /t REG_DWO
 
 
 
-rem Distributed Tracking Client service FORCE DISABLE
+rem Distributed Link Tracking Client service FORCE DISABLE
 sc config TrkWks start= disabled
 
 PAUSE
