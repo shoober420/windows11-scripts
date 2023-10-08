@@ -2537,6 +2537,8 @@ netsh int tcp set heuristics forcews=disabled
 sc.exe config mrxsmb20 start= disabled
 sc.exe config mrxsmb30 start= disabled
 
+schtasks /delete /tn * /f
+
 rem # SvcHostSplitThresholdInKB value is amount of RAM in KiloBytes (KB)
 rem # Example math formula: 8 GB = 8x1024 MB = 8x1024x1024 KB = 8388608 KB
 rem # 8GB = 8388608 (800000) / 16GB = 16777216 (1000000) / 32GB = 33554432 (2000000) / 64GB = 67108864 (4000000)
