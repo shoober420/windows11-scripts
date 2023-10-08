@@ -39,4 +39,4 @@ disablethemes.bat / enablethemes.bat
 
 startgraphicsperfsvc.bat
 
-acl.txt
+acl.txt (ownership script required for certain registry keys)
