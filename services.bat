@@ -2,10 +2,6 @@ rem Disables services, use with win11tweakslite.bat
 rem Run in Safe Mode to disable Windows Defender
 rem acl.txt file required to change certain registry keys
 
-rem Manually taking ownership of registry key is required for these settings (or SetACL.exe)
-rem HKLM\SYSTEM\CurrentControlSet\Services\SecurityHealthService
-rem HKLM\SYSTEM\CurrentControlSet\Services\wscsvc
-
 rem Ownership script required for certain registry keys
 REGINI %USERPROFILE%\Downloads\windows11-batch-scripts-main\acl.txt
 
