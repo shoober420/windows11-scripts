@@ -1,5 +1,10 @@
 rem Disables services, use with win11tweakslite.bat
 rem Run in Safe Mode to disable Windows Defender
+rem acl.txt file required to change certain registry keys
+
+
+rem Ownership script required for certain registry keys
+REGINI %USERPROFILE%\Downloads\windows11-batch-scripts-main\acl.txt
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\PushToInstall" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\camsvc" /v "Start" /t REG_DWORD /d "4" /f
@@ -276,7 +281,6 @@ rem Distributed Link Tracking Client service FORCE DISABLE
 sc config TrkWks start= disabled
 
 rem GraphicsPerfSvc enable, improves performance
-
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\GraphicsPerfSvc" /v "Start" /t REG_DWORD /d "2" /f
 
 PAUSE
