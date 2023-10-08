@@ -38,3 +38,5 @@ services.bat
 disablethemes.bat / enablethemes.bat
 
 startgraphicsperfsvc.bat
+
+acl.txt
