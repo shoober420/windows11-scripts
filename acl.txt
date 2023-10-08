@@ -1,0 +1,10 @@
+rem Ownership script for registry keys
+
+\Registry\machine\SYSTEM\CurrentControlSet\Services\wscsvc [1 5]
+\Registry\machine\SYSTEM\CurrentControlSet\Services\SecurityHealthService [1 5]
+\Registry\machine\SYSTEM\CurrentControlSet\Services\SamSs [1 5]
+\Registry\machine\SYSTEM\CurrentControlSet\Services\TrustedInstaller [1 5]
+\Registry\machine\SYSTEM\CurrentControlSet\Services\WdiSystemHost [1 5]
+\Registry\machine\SYSTEM\CurrentControlSet\Services\WdiServiceHost [1 5]
+\Registry\machine\SYSTEM\CurrentControlSet\Services\TrkWks [1 5]
+\Registry\machine\SYSTEM\CurrentControlSet\Services\DPS [1 5]
