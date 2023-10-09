@@ -1,7 +1,7 @@
 # Windows Batch Scripts
 windows11checklist.txt (information on tweaks)
 
-win11tweaks.bat (to disable windows defender, run in safe mode)
+win11tweaks.bat (to disable windows defender, run in SAFE MODE)
 
 disablewinupdate.bat / enablewinupdate.bat
 
@@ -31,9 +31,7 @@ run.bat
 
 powerplan.bat (adds duplicate power plan everytime command is executed, so use powerplan.bat only once after every new build install unless already present)
 
-win11tweakslite.bat
-
-services.bat
+services.bat (to disable Windows Defender, run in SAFE MODE)
 
 disablethemes.bat / enablethemes.bat
 
