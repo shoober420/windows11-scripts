@@ -1336,10 +1336,14 @@ reg add "HKU\.DEFAULT\Control Panel\Mouse" /v "MouseThreshold2" /t REG_SZ /d "0"
 
 
 
-rem Delete Balanced power config option
+rem Delete "Balanced" power config plan
 powercfg -delete 381b4222-f694-41f0-9685-ff5bb260df2e
 
+rem Delete "Power saver" config plan
+powercfg -delete a1841308-3541-4fab-bc81-f71556f20b4a
 
+rem Delete "High Performance" power config plan (use Ultimate Performance instead, powerplan.bat)
+powercfg -delete 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "ClearPageFileAtShutdown" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "NonPagedPoolQuota" /t REG_DWORD /d "0" /f
