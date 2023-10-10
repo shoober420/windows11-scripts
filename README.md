@@ -42,3 +42,5 @@ acl.txt (ownership script required for certain registry keys)
 powerplansettings.bat (adds duplicate power plan everytime command is executed, so use powerplan.bat only once after every new build install unless already present)
 
 disablewindowsfeatures.bat (windows update services required for DISM)
+
+internetandsecurityps.bat (powershell requires WMI service)
