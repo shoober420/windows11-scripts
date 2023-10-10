@@ -48,3 +48,5 @@ internetandsecurityps.bat (powershell requires WMI service)
 icons.bat
 
 wingetupdateapps.bat
+
+removewindowsapps.bat (requires winget)
