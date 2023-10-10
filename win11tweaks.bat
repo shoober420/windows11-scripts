@@ -2194,60 +2194,6 @@ bcdedit /set increaseuserva 268435328
 
 
 
-Dism /Online /Disable-Feature /FeatureName:MediaPlayback /Quiet /NoRestart
-Dism /Online /Disable-Feature /FeatureName:Microsoft-Windows-Subsystem-Linux /Quiet /NoRestart
-Dism /Online /Disable-Feature /FeatureName:MSRDC-Infrastructure /Quiet /NoRestart
-Dism /Online /Disable-Feature /FeatureName:Printing-Foundation-Features /Quiet /NoRestart
-Dism /Online /Disable-Feature /FeatureName:Printing-Foundation-InternetPrinting-Client /Quiet /NoRestart
-Dism /Online /Disable-Feature /FeatureName:Printing-PrintToPDFServices-Features /Quiet /NoRestart
-Dism /Online /Disable-Feature /FeatureName:Printing-XPSServices-Features /Quiet /NoRestart
-Dism /Online /Disable-Feature /FeatureName:SMB1Protocol /Quiet /NoRestart
-Dism /Online /Disable-Feature /FeatureName:SearchEngine-Client-Package /Quiet /NoRestart
-Dism /Online /Disable-Feature /FeatureName:WCF-TCP-PortSharing45 /Quiet /NoRestart
-Dism /Online /Disable-Feature /FeatureName:Windows-Defender-Default-Definitions /Quiet /NoRestart
-Dism /Online /Disable-Feature /FeatureName:WorkFolders-Client /Quiet /NoRestart
-Dism /Online /Disable-Feature /FeatureName:NetFx3 /Quiet /NoRestart
-Dism /Online /Disable-Feature /FeatureName:LegacyComponents /Quiet /NoRestart
-Dism /Online /Disable-Feature /FeatureName:DirectPlay /Quiet /NoRestart
-
-dism /online /Remove-Package /PackageName:Microsoft-Windows-HVSI-Components-Package /NoRestart
-dism /online /Remove-Package /PackageName:Microsoft-Windows-CodeIntegrity-Diagnostics-Package /NoRestart
-dism /online /Remove-Package /PackageName:Microsoft-Windows-HypervisorEnforcedCodeIntegrity-Sysprep-Package /NoRestart
-dism /online /Remove-Package /PackageName:Microsoft-Windows-HypervisorEnforcedCodeIntegrity-Package /NoRestart
-dism /online /Remove-Package /PackageName:Microsoft-OneCore-VirtualizationBasedSecurity-Package /NoRestart
-dism /online /Remove-Package /PackageName:Microsoft-Windows-DeviceGuard-GPEXT-Package /NoRestart
-dism /online /Remove-Package /PackageName:Windows-Defender-Nis-Group-Package /NoRestart
-dism /online /Remove-Package /PackageName:Windows-Defender-Management-Powershell-Group-Package /NoRestart
-dism /online /Remove-Package /PackageName:Windows-Defender-Management-MDM-Group-Package /NoRestart
-dism /online /Remove-Package /PackageName:Windows-Defender-Management-Group-Package /NoRestart
-dism /online /Remove-Package /PackageName:Windows-Defender-Group-Policy-Package /NoRestart
-dism /online /Remove-Package /PackageName:Windows-Defender-Core-Group-Package /NoRestart
-dism /online /Remove-Package /PackageName:Windows-Defender-Client-Package /NoRestart
-dism /online /Remove-Package /PackageName:Windows-Defender-ApplicationGuard-Inbox-WOW64-Package /NoRestart
-dism /online /Remove-Package /PackageName:Windows-Defender-ApplicationGuard-Inbox-Package /NoRestart
-dism /online /Remove-Package /PackageName:Windows-Defender-AppLayer-Group-Package /NoRestart
-dism /online /Remove-Package /PackageName:Windows-Defender-AM-Default-Definitions-Package /NoRestart
-dism /online /Remove-Package /PackageName:Windows-Defender-AM-Default-Definitions-OptionalWrapper-Package /NoRestart
-dism /online /Remove-Package /PackageName:Windows-Defender-ApplicationGuard-Inbox-Package /NoRestart
-dism /online /Remove-Package /PackageName:Windows-Defender-Group-Policy-Package /NoRestart
-dism /online /Remove-Package /PackageName:Microsoft-Windows-HVSI-Components-WOW64-Package /NoRestart
-dism /online /Remove-Package /PackageName:Microsoft-Windows-HVSI-Package /NoRestart
-dism /online /Remove-Package /PackageName:Microsoft-Windows-HVSI-WOW64-Package /NoRestart
-dism /online /Remove-Package /PackageName:Microsoft-Windows-SecurityCenter /NoRestart
-dism /online /Remove-Package /PackageName:Multimedia-RestrictedCodecsDolby /NoRestart
-dism /online /Remove-Package /PackageName:RemoteDesktopServices-Base-Package /NoRestart
-dism /online /Remove-Package /PackageName:Microsoft-Windows-SMB /NoRestart
-dism /online /Remove-Package /PackageName:Microsoft-Windows-Smb /NoRestart
-dism /online /Remove-Package /PackageName:Microsoft-Windows-Telnet-Client-Opt /NoRestart
-dism /online /Remove-Package /PackageName:Microsoft-Windows-Telnet-Client-FOD-Package /NoRestart
-dism /online /Remove-Package /PackageName:Microsoft-Windows-TFTP-Client-FOD-Package /NoRestart
-dism /online /Remove-Package /PackageName:Microsoft-Windows-WMPNetworkSharingService /NoRestart
-dism /online /Remove-Package /PackageName:OpenSSH-Client /NoRestart
-dism /online /Remove-Package /PackageName:Microsoft-Windows-Internet-Browser-Package /NoRestart
-dism /online /Remove-Package /PackageName:Microsoft-Windows-MicrosoftEdgeDevToolsClient-Package /NoRestart
-
-
-
 rem =================================== Windows Settings ===================================
 rem ---------------------------------- Network & internet ----------------------------------
 rem ............................... Advanced network settings ..............................
