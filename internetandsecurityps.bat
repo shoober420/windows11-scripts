@@ -50,6 +50,9 @@ powershell.exe Set-Processmitigation -System -Disable AuditStoreSigned
 powershell.exe Set-Processmitigation -System -Disable AuditSystemCall
 powershell.exe Set-Processmitigation -System -Disable AuditChildProcess
 
+rem deleting all inbound firewall rules may break internet for certain Wi-Fi cards
+powershell.exe Remove-NetFirewallRule -All
+
 rem Disable and stop WMI
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD /d "4" /f
