@@ -44,3 +44,5 @@ powerplansettings.bat (adds duplicate power plan everytime command is executed, 
 disablewindowsfeatures.bat (windows update services required for DISM)
 
 internetandsecurityps.bat (powershell requires WMI service)
+
+icons.bat
