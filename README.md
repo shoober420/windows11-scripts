@@ -46,3 +46,5 @@ disablewindowsfeatures.bat (windows update services required for DISM)
 internetandsecurityps.bat (powershell requires WMI service)
 
 icons.bat
+
+wingetupdateapps.bat
