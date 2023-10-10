@@ -2476,6 +2476,13 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protoc
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\DTLS 1.3\Server" /v "Enabled" /t REG_DWORD /d "0" /f	
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\DTLS 1.3\Server" /v "DisabledByDefault" /t REG_DWORD /d "1" /f
 
+rem Try to start WMI again to make sure its running one more time
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD /d "2" /f
+sc config winmgmt start= auto
+net start winmgmt
+
+TIMEOUT /T 5
+
 PowerShell.exe Set-NetTCPSetting -SettingName internet -AutoTuningLevelLocal normal
 PowerShell.exe Set-NetTCPSetting -SettingName internet -ScalingHeuristics disabled
 PowerShell.exe Set-NetTCPSetting -SettingName internet -EcnCapability disabled
