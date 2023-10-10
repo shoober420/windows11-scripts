@@ -22,6 +22,14 @@ rem WMI (Windows Management Instrumentation) is required for PowerShell commands
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD /d "2" /f
 net start winmgmt
 
+TIMEOUT /T 3
+
+rem Try to start WMI again to make sure its running
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD /d "2" /f
+net start winmgmt
+
+TIMEOUT /T 5
+
 rem =========================== Windows Defender Security Centre ===========================
 rem -------------------------------- App & browser control ---------------------------------
 
