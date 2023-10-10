@@ -18,20 +18,6 @@ rem ----------------------------------------------------------------------------
 
 
 
-rem WMI (Windows Management Instrumentation) is required for PowerShell commands
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD /d "2" /f
-sc config winmgmt start= auto
-net start winmgmt
-
-TIMEOUT /T 3
-
-rem Try to start WMI again to make sure its running
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD /d "2" /f
-sc config winmgmt start= auto
-net start winmgmt
-
-TIMEOUT /T 5
-
 rem =========================== Windows Defender Security Centre ===========================
 rem -------------------------------- App & browser control ---------------------------------
 
@@ -2422,54 +2408,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protoc
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\DTLS 1.3\Server" /v "Enabled" /t REG_DWORD /d "0" /f	
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\DTLS 1.3\Server" /v "DisabledByDefault" /t REG_DWORD /d "1" /f
 
-rem Try to start WMI again to make sure its running one more time
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD /d "2" /f
-sc config winmgmt start= auto
-net start winmgmt
 
-TIMEOUT /T 5
-
-PowerShell.exe Set-NetTCPSetting -SettingName internet -AutoTuningLevelLocal normal
-PowerShell.exe Set-NetTCPSetting -SettingName internet -ScalingHeuristics disabled
-PowerShell.exe Set-NetTCPSetting -SettingName internet -EcnCapability disabled
-PowerShell.exe Set-NetTCPSetting -SettingName internet -Timestamps disabled
-PowerShell.exe Set-NetTCPSetting -SettingName internet -MaxSynRetransmissions 2
-PowerShell.exe Set-NetTCPSetting -SettingName internet -NonSackRttResiliency disable
-PowerShell.exe Set-NetTCPSetting -SettingName internet -InitialRto 2000
-PowerShell.exe Set-NetTCPSetting -SettingName internet -MinRto 300
-powershell.exe Set-NetOffloadGlobalSetting -ReceiveSegmentCoalescing disabled
-powershell.exe Set-NetOffloadGlobalSetting -ReceiveSideScaling enable
-powershell.exe Set-NetOffloadGlobalSetting -Chimney disabled
-PowerShell.exe Disable-NetAdapterLso -Name *
-PowerShell.exe Enable-NetAdapterChecksumOffload -Name *
-powershell.exe Disable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol
-ECHO Y | powershell.exe Set-SmbServerConfiguration -EnableSMB1Protocol $false
-ECHO Y | powershell.exe Set-SmbServerConfiguration -EnableSMB2Protocol $false
-powershell.exe $DisableLMHosts_Class=Get-WmiObject -list Win32_NetworkAdapterConfiguration
-powershell.exe $DisableLMHosts_Class.EnableWINS($false,$false)
-powershell.exe Disable-ScheduledTask -TaskName "Microsoft Compatibility Appraiser" -TaskPath "\Microsoft\Windows\Application Experience"
-powershell.exe Set-MpPreference -PUAProtection 0
-powershell.exe Set-MpPreference -EnableControlledFolderAccess Disabled
-powershell.exe Set-Processmitigation -System -Disable DEP
-powershell.exe Set-Processmitigation -System -Disable StrictCFG
-powershell.exe Set-Processmitigation -System -Disable CFG
-powershell.exe Set-Processmitigation -System -Disable SuppressExports
-powershell.exe Set-Processmitigation -System -Disable EmulateAtlThunks
-powershell.exe Set-Processmitigation -System -Disable ForceRelocateImages
-powershell.exe Set-Processmitigation -System -Disable BottomUp
-powershell.exe Set-Processmitigation -System -Disable HighEntropy
-powershell.exe Set-Processmitigation -System -Disable SEHOP
-powershell.exe Set-Processmitigation -System -Disable SEHOPTelemetry
-powershell.exe Set-Processmitigation -System -Disable TerminateOnError
-powershell.exe Set-Processmitigation -System -Disable DynamicCode
-powershell.exe Set-Processmitigation -System -Disable AuditDynamicCode
-powershell.exe Set-Processmitigation -System -Disable AuditImageLoad
-powershell.exe Set-Processmitigation -System -Disable AuditFont
-powershell.exe Set-Processmitigation -System -Disable FontAuditOnly
-powershell.exe Set-Processmitigation -System -Disable AuditMicrosoftSigned
-powershell.exe Set-Processmitigation -System -Disable AuditStoreSigned
-powershell.exe Set-Processmitigation -System -Disable AuditSystemCall
-powershell.exe Set-Processmitigation -System -Disable AuditChildProcess
 
 netsh int tcp set global autotuninglevel=normal
 netsh int tcp set global timestamps=disabled
@@ -2563,9 +2502,6 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08
 
 rem make sure subinterface matches network name
 netsh interface ipv4 set subinterface "Wi-Fi 2" mtu=1472 store=persistent
-
-rem deleting all inbound firewall rules may break internet for certain Wi-Fi cards
-rem powershell.exe Remove-NetFirewallRule -All
 
 rem Blocking all inbound connections can break certain Wi-Fi and Ethernet connections
 rem using "Block all connections" instead of "Block" option under firewall fixes loss of internet for some WiFi cards
