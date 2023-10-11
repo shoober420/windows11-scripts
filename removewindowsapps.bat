@@ -23,3 +23,5 @@ winget uninstall MicrosoftWindows.Client.WebExperience
 winget uninstall Microsoft.Windows.ShellExperienceHost
 winget uninstall Microsoft.Windows.StartMenuExperienceHost
 winget uninstall "windows web experience pack"
+
+PAUSE
