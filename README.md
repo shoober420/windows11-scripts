@@ -50,5 +50,3 @@ icons.bat
 wingetupdateapps.bat
 
 removewindowsapps.bat (requires winget)
-
-disablewindowslicense.bat / enablewindowslicense.bat (service for activating Windows product key)
