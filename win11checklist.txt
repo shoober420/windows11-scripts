@@ -757,6 +757,7 @@ msinfo32 opens System Information
 nvidia-smi displays video card information (driver version)
 
 C:\Program Files\WindowsApps\NVIDIACorp.NVIDIAControlPanel_8.1.962.0_x64__56jybvy8sckqj\nvcplui.exe - Nvidia control panel
+C:\Program Files\WindowsApps\Microsoft.DesktopAppInstaller_1.22.2782.0_x64__8wekyb3d8bbwe - winget
 
 Win+E = File Explorer
 Win+I = Settings
