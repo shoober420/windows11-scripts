@@ -11,7 +11,7 @@ disableui.bat / enableui.bat
 
 disablestore.bat / enablestore.bat
 
-disablecomponets.bat / enablecomponents.bat
+disablecomponents.bat / enablecomponents.bat
 
 wing3t.bat
 
@@ -31,7 +31,7 @@ run.bat
 
 powerplan.bat (adds duplicate power plan everytime command is executed, so use powerplan.bat only once after every new build install unless already present)
 
-services.bat (to disable Windows Defender, run in SAFE MODE)
+disableservices.bat / enableservices.bat (to disable Windows Defender, run in SAFE MODE)
 
 disablethemes.bat / enablethemes.bat
 
