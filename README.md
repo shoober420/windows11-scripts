@@ -50,3 +50,5 @@ icons.bat
 wingetupdateapps.bat
 
 removewindowsapps.bat (requires winget)
+
+disableappinfo.bat / enableappinfo.bat
