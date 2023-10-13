@@ -49,7 +49,7 @@ icons.bat
 
 wingetupdateapps.bat
 
-removewindowsapps.bat (requires winget)
+removewindowsapps.bat (requires winget and powershell)
 
 disableappinfo.bat / enableappinfo.bat
 
