@@ -7,30 +7,30 @@ net start Appinfo
 winget uninstall onedrive
 winget uninstall camera
 winget uninstall help
-rem winget uninstall Microsoft.People
-rem winget uninstall Microsoft.Windows.PeopleExperienceHost
-rem winget uninstall Microsoft.Windows.CloudExperienceHost
-rem winget uninstall Microsoft.549981C3F5F10
 winget uninstall photos
 winget uninstall phone
-rem winget uninstall Microsoft.XboxGameOverlay
-rem winget uninstall Microsoft.XboxGamingOverlay
-rem winget uninstall Microsoft.XboxIdentityProvider
-rem winget uninstall Microsoft.XboxSpeechToTextOverlay
-rem winget uninstall Microsoft.XboxGameCallableUI
 winget uninstall edge
-rem winget uninstall Microsoft.MicrosoftEdgeBeta
-rem winget uninstall Microsoft.MicrosoftEdgeStable
-rem winget uninstall Microsoft.MicrosoftEdgeDevToolsClient
-rem winget uninstall Microsoft.GamingServices
-rem winget uninstall Microsoft.Windows.ShellExperienceHost
-rem winget uninstall Microsoft.Windows.StartMenuExperienceHost
 winget uninstall "windows web experience pack"
 winget uninstall "microsoft teams"
 winget uninstall "feedback hub"
 winget uninstall paint
 
 powershell -command "Get-AppxPackage *Microsoft.WindowsNotepad* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.People* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.549981C3F5F10* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.Windows.CloudExperienceHost* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.Windows.PeopleExperienceHost* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.XboxGameOverlay* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.XboxGamingOverlay* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.XboxIdentityProvider* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.XboxSpeechToTextOverlay* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.XboxGameCallableUI* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.GamingServices* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.MicrosoftEdgeBeta* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.MicrosoftEdgeStable* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.MicrosoftEdgeDevToolsClient* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.Windows.ShellExperienceHost* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.Windows.StartMenuExperienceHost* | Remove-AppxPackage"
 
 rem Uninstalls "Remote Desktop Connection" program
 mstsc /uninstall
