@@ -4,29 +4,36 @@ rem winget requires "Application Information" service to be running
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Appinfo" /v "Start" /t REG_DWORD /d "2" /f
 net start Appinfo
 
-winget uninstall Microsoft.OneDrive
-winget uninstall Microsoft.WindowsCamera
-winget uninstall Microsoft.GetHelp
-winget uninstall Microsoft.People
-winget uninstall Microsoft.Windows.PeopleExperienceHost
-winget uninstall Microsoft.Windows.CloudExperienceHost
-winget uninstall Microsoft.549981C3F5F10
-winget uninstall Microsoft.Windows.Photos
-winget uninstall Microsoft.YourPhone
-winget uninstall Microsoft.XboxGameOverlay
-winget uninstall Microsoft.XboxGamingOverlay
-winget uninstall Microsoft.XboxIdentityProvider
-winget uninstall Microsoft.XboxSpeechToTextOverlay
-winget uninstall Microsoft.XboxGameCallableUI
-winget uninstall Microsoft.MicrosoftEdge
-winget uninstall Microsoft.MicrosoftEdgeBeta
-winget uninstall Microsoft.MicrosoftEdgeStable
-winget uninstall Microsoft.MicrosoftEdgeDevToolsClient
-winget uninstall Microsoft.GamingServices
-winget uninstall MicrosoftWindows.Client.WebExperience
-winget uninstall Microsoft.Windows.ShellExperienceHost
-winget uninstall Microsoft.Windows.StartMenuExperienceHost
+winget uninstall onedrive
+winget uninstall camera
+winget uninstall help
+rem winget uninstall Microsoft.People
+rem winget uninstall Microsoft.Windows.PeopleExperienceHost
+rem winget uninstall Microsoft.Windows.CloudExperienceHost
+rem winget uninstall Microsoft.549981C3F5F10
+winget uninstall photos
+winget uninstall phone
+rem winget uninstall Microsoft.XboxGameOverlay
+rem winget uninstall Microsoft.XboxGamingOverlay
+rem winget uninstall Microsoft.XboxIdentityProvider
+rem winget uninstall Microsoft.XboxSpeechToTextOverlay
+rem winget uninstall Microsoft.XboxGameCallableUI
+winget uninstall edge
+rem winget uninstall Microsoft.MicrosoftEdgeBeta
+rem winget uninstall Microsoft.MicrosoftEdgeStable
+rem winget uninstall Microsoft.MicrosoftEdgeDevToolsClient
+rem winget uninstall Microsoft.GamingServices
+rem winget uninstall Microsoft.Windows.ShellExperienceHost
+rem winget uninstall Microsoft.Windows.StartMenuExperienceHost
 winget uninstall "windows web experience pack"
+winget uninstall "microsoft teams"
+winget uninstall "feedback hub"
+winget uninstall paint
+
+powershell -command "Get-AppxPackage *Microsoft.WindowsNotepad* | Remove-AppxPackage"
+
+rem Uninstalls "Remote Desktop Connection" program
+mstsc /uninstall
 
 rem Disable "Application Information" service
 net stop Appinfo
