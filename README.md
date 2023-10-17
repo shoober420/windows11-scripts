@@ -53,4 +53,6 @@ removewindowsapps.bat (requires winget and powershell)
 
 disableappinfo.bat / enableappinfo.bat
 
-disablenla.nat / enablenla.bat (fixes internet)
+disablenla.bat / enablenla.bat (fixes internet)
+
+resetnetwork.bat
