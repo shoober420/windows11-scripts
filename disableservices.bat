@@ -251,10 +251,6 @@ rem Intel driver update services
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\DSAService" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\DSAUpdateService" /v "Start" /t REG_DWORD /d "4" /f
 
-rem Intel SpeedStep Technology (makes computer slow if disabled)
-rem reg add "HKLM\SYSTEM\CurrentControlSet\Services\intelppm" /v "Start" /t REG_DWORD /d "4" /f
-sc config intelppm start= demand
-
 rem NVIDIA bloat service
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\NVDisplay.ContainerLocalSystem" /v "Start" /t REG_DWORD /d "4" /f
 
@@ -286,6 +282,10 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\wscsvc" /v "Start" /t REG_DWORD 
 
 rem Distributed Link Tracking Client service FORCE DISABLE
 sc config TrkWks start= disabled
+
+rem Intel SpeedStep Technology (makes computer slow if disabled)
+rem reg add "HKLM\SYSTEM\CurrentControlSet\Services\intelppm" /v "Start" /t REG_DWORD /d "4" /f
+sc config intelppm start= demand
 
 rem GraphicsPerfSvc enable, improves performance
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\GraphicsPerfSvc" /v "Start" /t REG_DWORD /d "2" /f
