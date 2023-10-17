@@ -284,7 +284,7 @@ rem Distributed Link Tracking Client service FORCE DISABLE
 sc config TrkWks start= disabled
 
 rem Intel SpeedStep Technology (Intel Processor Power Management)
-rem Disable for CPU constant max frequency
+rem Disable for constant CPU max frequency
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\intelppm" /v "Start" /t REG_DWORD /d "4" /f
 rem sc config intelppm start= demand
 
