@@ -1,6 +1,7 @@
-Run windows update
+ Run windows update
 
 Download
+ - QuickCPU (https://coderbag.com/product/quickcpu)
  - BIOS for motherboard
  - Nvidia vulkan beta driver
  - AMD Adrenalin Software
