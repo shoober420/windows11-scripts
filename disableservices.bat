@@ -283,9 +283,10 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\wscsvc" /v "Start" /t REG_DWORD 
 rem Distributed Link Tracking Client service FORCE DISABLE
 sc config TrkWks start= disabled
 
-rem Intel SpeedStep Technology (makes computer slow if disabled)
-rem reg add "HKLM\SYSTEM\CurrentControlSet\Services\intelppm" /v "Start" /t REG_DWORD /d "4" /f
-sc config intelppm start= demand
+rem Intel SpeedStep Technology (Intel Processor Power Management)
+rem Disable for CPU constant max frequency
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\intelppm" /v "Start" /t REG_DWORD /d "4" /f
+rem sc config intelppm start= demand
 
 rem GraphicsPerfSvc enable, improves performance
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\GraphicsPerfSvc" /v "Start" /t REG_DWORD /d "2" /f
