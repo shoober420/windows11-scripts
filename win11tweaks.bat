@@ -2427,7 +2427,8 @@ reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Personalization" /v "NoLockScr
 
 rem Power Scheme GUID is random, set and check GUID matches using "powercfg -L"
 rem EXAMPLE: "HKLM\SYSTEM\ControlSet001\Control\Power\User\PowerSchemes\"UNIQUE GUID"\54533251-82be-4824-96c1-47b60b740d00\0cc5b647-c1df-4637-891a-dec35c318583"
-rem Disable CPU Parking
+
+rem Disable CPU Parking (fixes stuttering)
 reg add "HKLM\SYSTEM\ControlSet001\Control\Power\PowerSettings\54533251-82be-4824-96c1-47b60b740d00\0cc5b647-c1df-4637-891a-dec35c318583" /v "ValueMax" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\54533251-82be-4824-96c1-47b60b740d00\0cc5b647-c1df-4637-891a-dec35c318583" /v "ValueMax" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\ControlSet001\Control\Power\PowerSettings\54533251-82be-4824-96c1-47b60b740d00\0cc5b647-c1df-4637-891a-dec35c318583" /v "ValueMin" /t REG_DWORD /d "0" /f
@@ -2527,7 +2528,8 @@ reg add "HKLM\SYSTEM\ControlSet001\Control\Power\User\PowerSchemes\8782c2b6-5968
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\User\PowerSchemes\8782c2b6-5968-4523-8d9a-11af1ab29cda\e73a048d-bf27-4f12-9731-8b2076e8891f\d8742dcb-3e6a-4b3c-b3fe-374623cdcf06" /v "ACSettingIndex" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\User\PowerSchemes\8782c2b6-5968-4523-8d9a-11af1ab29cda\e73a048d-bf27-4f12-9731-8b2076e8891f\d8742dcb-3e6a-4b3c-b3fe-374623cdcf06" /v "DCSettingIndex" /t REG_DWORD /d "0" /f
 
-rem Interrupt Steering Mode ( 0: Default / 1: Any processor / 2: Any unparked processor with time delay / 3: Any unparked processor / 4: Lock Interrupt Routing / 5: Processor 0 / 6: Processor 1 ) 
+rem Interrupt Steering Mode ( 0: Default / 1: Any processor / 2: Any unparked processor with time delay / 3: Any unparked processor / 4: Lock Interrupt Routing / 5: Processor 0 / 6: Processor 1 )
+rem Lowers latency and improves performance
 reg add "HKLM\SYSTEM\ControlSet001\Control\Power\PowerSettings\48672f38-7a9a-4bb2-8bf8-3d85be19de4e\2bfc24f9-5ea2-4801-8213-3dbae01aa39d" /v "ValueMax" /t REG_DWORD /d "6" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\48672f38-7a9a-4bb2-8bf8-3d85be19de4e\2bfc24f9-5ea2-4801-8213-3dbae01aa39d" /v "ValueMax" /t REG_DWORD /d "6" /f
 reg add "HKLM\SYSTEM\ControlSet001\Control\Power\PowerSettings\48672f38-7a9a-4bb2-8bf8-3d85be19de4e\2bfc24f9-5ea2-4801-8213-3dbae01aa39d" /v "ValueMin" /t REG_DWORD /d "6" /f
