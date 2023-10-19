@@ -5,7 +5,8 @@ Download
  - Nvidia vulkan beta driver
  - AMD Adrenalin Software
  - Intel Driver & support assistant (Intel DSA) / Intel Wireless Bluetooth - Intel PROSet/Wireless WiFi
- - Chipset INF Utility (https://www.intel.com/content/www/us/en/download/19347/chipset-inf-utility.html?)
+ - Chipset INF Utility (https://www.intel.com/content/www/us/en/download/19347/chipset-inf-utility.html)
+ - Intel Killer Performance Suite (https://www.intel.com/content/www/us/en/download/19779/intel-killer-performance-suite.html)
  - Audio drivers
  - WiFi drivers (or disable if on wired connection)
  - QuickCPU (https://coderbag.com/product/quickcpu)
