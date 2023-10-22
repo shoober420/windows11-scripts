@@ -32,8 +32,8 @@ Download
  - Chromium 64bit snapshot builds (https://download-chromium.appspot.com/)
  - snappy driver installer (https://sdi-tool.org/)
  - Device Cleanup Tool (https://www.uwe-sieber.de/misc_tools_e.html)
-
-
+ - HWiNFO (https://www.hwinfo.com/)
+ - HWMonitor (https://www.cpuid.com/softwares/hwmonitor.html)
 
 Windows 98 Icons: Original (https://win98icons.alexmeub.com) / HQ (https://github.com/nestoris/Win98SE)
  +++ use Original icons for a faithful and pixelated icon, HQ for a smoothed icon (original recommended)
