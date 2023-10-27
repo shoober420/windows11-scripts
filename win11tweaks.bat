@@ -2629,8 +2629,35 @@ reg add "HKLM\SYSTEM\ControlSet001\Control\Power\User\PowerSchemes\8782c2b6-5968
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\User\PowerSchemes\8782c2b6-5968-4523-8d9a-11af1ab29cda\48672f38-7a9a-4bb2-8bf8-3d85be19de4e\d6ba4903-386f-4c2c-8adb-5c21b3328d25" /v "ACSettingIndex" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\User\PowerSchemes\8782c2b6-5968-4523-8d9a-11af1ab29cda\48672f38-7a9a-4bb2-8bf8-3d85be19de4e\d6ba4903-386f-4c2c-8adb-5c21b3328d25" /v "DCSettingIndex" /t REG_DWORD /d "0" /f
 
+rem Human Presence Sensor Adaptive Away Display Timeout
+reg add "HKLM\SYSTEM\ControlSet001\Control\Power\PowerSettings\8619b916-e004-4dd8-9b66-dae86f806698\0a7d6ab6-ac83-4ad1-8282-eca5b58308f3" /v "ValueMax" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\8619b916-e004-4dd8-9b66-dae86f806698\0a7d6ab6-ac83-4ad1-8282-eca5b58308f3" /v "ValueMax" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\ControlSet001\Control\Power\PowerSettings\8619b916-e004-4dd8-9b66-dae86f806698\0a7d6ab6-ac83-4ad1-8282-eca5b58308f3" /v "ValueMin" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\8619b916-e004-4dd8-9b66-dae86f806698\0a7d6ab6-ac83-4ad1-8282-eca5b58308f3" /v "ValueMin" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\ControlSet001\Control\Power\User\PowerSchemes\8782c2b6-5968-4523-8d9a-11af1ab29cda\8619b916-e004-4dd8-9b66-dae86f806698\0a7d6ab6-ac83-4ad1-8282-eca5b58308f3" /v "ACSettingIndex" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\ControlSet001\Control\Power\User\PowerSchemes\8782c2b6-5968-4523-8d9a-11af1ab29cda\8619b916-e004-4dd8-9b66-dae86f806698\0a7d6ab6-ac83-4ad1-8282-eca5b58308f3" /v "DCSettingIndex" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\User\PowerSchemes\8782c2b6-5968-4523-8d9a-11af1ab29cda\8619b916-e004-4dd8-9b66-dae86f806698\0a7d6ab6-ac83-4ad1-8282-eca5b58308f3" /v "ACSettingIndex" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\User\PowerSchemes\8782c2b6-5968-4523-8d9a-11af1ab29cda\8619b916-e004-4dd8-9b66-dae86f806698\0a7d6ab6-ac83-4ad1-8282-eca5b58308f3" /v "DCSettingIndex" /t REG_DWORD /d "0" /f
 
+rem Non-sensor Input Presence Timeout
+reg add "HKLM\SYSTEM\ControlSet001\Control\Power\PowerSettings\8619b916-e004-4dd8-9b66-dae86f806698\5adbbfbc-074e-4da1-ba38-db8b36b2c8f3" /v "ValueMax" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\8619b916-e004-4dd8-9b66-dae86f806698\5adbbfbc-074e-4da1-ba38-db8b36b2c8f3" /v "ValueMax" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\ControlSet001\Control\Power\PowerSettings\8619b916-e004-4dd8-9b66-dae86f806698\5adbbfbc-074e-4da1-ba38-db8b36b2c8f3" /v "ValueMin" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\8619b916-e004-4dd8-9b66-dae86f806698\5adbbfbc-074e-4da1-ba38-db8b36b2c8f3" /v "ValueMin" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\ControlSet001\Control\Power\User\PowerSchemes\8782c2b6-5968-4523-8d9a-11af1ab29cda\8619b916-e004-4dd8-9b66-dae86f806698\5adbbfbc-074e-4da1-ba38-db8b36b2c8f3" /v "ACSettingIndex" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\ControlSet001\Control\Power\User\PowerSchemes\8782c2b6-5968-4523-8d9a-11af1ab29cda\8619b916-e004-4dd8-9b66-dae86f806698\5adbbfbc-074e-4da1-ba38-db8b36b2c8f3" /v "DCSettingIndex" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\User\PowerSchemes\8782c2b6-5968-4523-8d9a-11af1ab29cda\8619b916-e004-4dd8-9b66-dae86f806698\5adbbfbc-074e-4da1-ba38-db8b36b2c8f3" /v "ACSettingIndex" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\User\PowerSchemes\8782c2b6-5968-4523-8d9a-11af1ab29cda\8619b916-e004-4dd8-9b66-dae86f806698\5adbbfbc-074e-4da1-ba38-db8b36b2c8f3" /v "DCSettingIndex" /t REG_DWORD /d "0" /f
 
+rem Human Presence Sensor Adaptive Inattentive Dim Timeout
+reg add "HKLM\SYSTEM\ControlSet001\Control\Power\PowerSettings\8619b916-e004-4dd8-9b66-dae86f806698\cf8c6097-12b8-4279-bbdd-44601ee5209d" /v "ValueMax" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\8619b916-e004-4dd8-9b66-dae86f806698\cf8c6097-12b8-4279-bbdd-44601ee5209d" /v "ValueMax" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\ControlSet001\Control\Power\PowerSettings\8619b916-e004-4dd8-9b66-dae86f806698\cf8c6097-12b8-4279-bbdd-44601ee5209d" /v "ValueMin" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\8619b916-e004-4dd8-9b66-dae86f806698\cf8c6097-12b8-4279-bbdd-44601ee5209d" /v "ValueMin" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\ControlSet001\Control\Power\User\PowerSchemes\8782c2b6-5968-4523-8d9a-11af1ab29cda\8619b916-e004-4dd8-9b66-dae86f806698\cf8c6097-12b8-4279-bbdd-44601ee5209d" /v "ACSettingIndex" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\ControlSet001\Control\Power\User\PowerSchemes\8782c2b6-5968-4523-8d9a-11af1ab29cda\8619b916-e004-4dd8-9b66-dae86f806698\cf8c6097-12b8-4279-bbdd-44601ee5209d" /v "DCSettingIndex" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\User\PowerSchemes\8782c2b6-5968-4523-8d9a-11af1ab29cda\8619b916-e004-4dd8-9b66-dae86f806698\cf8c6097-12b8-4279-bbdd-44601ee5209d" /v "ACSettingIndex" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\User\PowerSchemes\8782c2b6-5968-4523-8d9a-11af1ab29cda\8619b916-e004-4dd8-9b66-dae86f806698\cf8c6097-12b8-4279-bbdd-44601ee5209d" /v "DCSettingIndex" /t REG_DWORD /d "0" /f
 
 rem # SvcHostSplitThresholdInKB value is amount of RAM in KiloBytes (KB)
 rem # Example math formula: 8 GB = 8x1024 MB = 8x1024x1024 KB = 8388608 KB
