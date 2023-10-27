@@ -2589,6 +2589,46 @@ reg add "HKLM\SYSTEM\ControlSet001\Control\Power\User\PowerSchemes\8782c2b6-5968
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\User\PowerSchemes\8782c2b6-5968-4523-8d9a-11af1ab29cda\7516b95f-f776-4464-8c53-06167f40cc99\3c0bc021-c8a8-4e07-a973-6b14cbcb2b7e" /v "ACSettingIndex" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\User\PowerSchemes\8782c2b6-5968-4523-8d9a-11af1ab29cda\7516b95f-f776-4464-8c53-06167f40cc99\3c0bc021-c8a8-4e07-a973-6b14cbcb2b7e" /v "DCSettingIndex" /t REG_DWORD /d "0" /f
 
+rem Primary NVMe Idle Timeout
+reg add "HKLM\SYSTEM\ControlSet001\Control\Power\PowerSettings\0012ee47-9041-4b5d-9b77-535fba8b1442\d639518a-e56d-4345-8af2-b9f32fb26109" /v "ValueMax" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\0012ee47-9041-4b5d-9b77-535fba8b1442\d639518a-e56d-4345-8af2-b9f32fb26109" /v "ValueMax" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\ControlSet001\Control\Power\PowerSettings\0012ee47-9041-4b5d-9b77-535fba8b1442\d639518a-e56d-4345-8af2-b9f32fb26109" /v "ValueMin" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\0012ee47-9041-4b5d-9b77-535fba8b1442\d639518a-e56d-4345-8af2-b9f32fb26109" /v "ValueMin" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\ControlSet001\Control\Power\User\PowerSchemes\8782c2b6-5968-4523-8d9a-11af1ab29cda\0012ee47-9041-4b5d-9b77-535fba8b1442\d639518a-e56d-4345-8af2-b9f32fb26109" /v "ACSettingIndex" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\ControlSet001\Control\Power\User\PowerSchemes\8782c2b6-5968-4523-8d9a-11af1ab29cda\0012ee47-9041-4b5d-9b77-535fba8b1442\d639518a-e56d-4345-8af2-b9f32fb26109" /v "DCSettingIndex" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\User\PowerSchemes\8782c2b6-5968-4523-8d9a-11af1ab29cda\0012ee47-9041-4b5d-9b77-535fba8b1442\d639518a-e56d-4345-8af2-b9f32fb26109" /v "ACSettingIndex" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\User\PowerSchemes\8782c2b6-5968-4523-8d9a-11af1ab29cda\0012ee47-9041-4b5d-9b77-535fba8b1442\d639518a-e56d-4345-8af2-b9f32fb26109" /v "DCSettingIndex" /t REG_DWORD /d "0" /f
+
+rem Secondary NVMe Idle Timeout
+reg add "HKLM\SYSTEM\ControlSet001\Control\Power\PowerSettings\0012ee47-9041-4b5d-9b77-535fba8b1442\d3d55efd-c1ff-424e-9dc3-441be7833010" /v "ValueMax" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\0012ee47-9041-4b5d-9b77-535fba8b1442\d3d55efd-c1ff-424e-9dc3-441be7833010" /v "ValueMax" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\ControlSet001\Control\Power\PowerSettings\0012ee47-9041-4b5d-9b77-535fba8b1442\d3d55efd-c1ff-424e-9dc3-441be7833010" /v "ValueMin" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\0012ee47-9041-4b5d-9b77-535fba8b1442\d3d55efd-c1ff-424e-9dc3-441be7833010" /v "ValueMin" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\ControlSet001\Control\Power\User\PowerSchemes\8782c2b6-5968-4523-8d9a-11af1ab29cda\0012ee47-9041-4b5d-9b77-535fba8b1442\d3d55efd-c1ff-424e-9dc3-441be7833010" /v "ACSettingIndex" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\ControlSet001\Control\Power\User\PowerSchemes\8782c2b6-5968-4523-8d9a-11af1ab29cda\0012ee47-9041-4b5d-9b77-535fba8b1442\d3d55efd-c1ff-424e-9dc3-441be7833010" /v "DCSettingIndex" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\User\PowerSchemes\8782c2b6-5968-4523-8d9a-11af1ab29cda\0012ee47-9041-4b5d-9b77-535fba8b1442\d3d55efd-c1ff-424e-9dc3-441be7833010" /v "ACSettingIndex" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\User\PowerSchemes\8782c2b6-5968-4523-8d9a-11af1ab29cda\0012ee47-9041-4b5d-9b77-535fba8b1442\d3d55efd-c1ff-424e-9dc3-441be7833010" /v "DCSettingIndex" /t REG_DWORD /d "0" /f
+
+rem Execution Required power request timeout
+reg add "HKLM\SYSTEM\ControlSet001\Control\Power\PowerSettings\2e601130-5351-4d9d-8e04-252966bad054\3166bc41-7e98-4e03-b34e-ec0f5f2b218e" /v "ValueMax" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\2e601130-5351-4d9d-8e04-252966bad054\3166bc41-7e98-4e03-b34e-ec0f5f2b218e" /v "ValueMax" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\ControlSet001\Control\Power\PowerSettings\2e601130-5351-4d9d-8e04-252966bad054\3166bc41-7e98-4e03-b34e-ec0f5f2b218e" /v "ValueMin" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\2e601130-5351-4d9d-8e04-252966bad054\3166bc41-7e98-4e03-b34e-ec0f5f2b218e" /v "ValueMin" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\ControlSet001\Control\Power\User\PowerSchemes\8782c2b6-5968-4523-8d9a-11af1ab29cda\2e601130-5351-4d9d-8e04-252966bad054\3166bc41-7e98-4e03-b34e-ec0f5f2b218e" /v "ACSettingIndex" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\ControlSet001\Control\Power\User\PowerSchemes\8782c2b6-5968-4523-8d9a-11af1ab29cda\2e601130-5351-4d9d-8e04-252966bad054\3166bc41-7e98-4e03-b34e-ec0f5f2b218e" /v "DCSettingIndex" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\User\PowerSchemes\8782c2b6-5968-4523-8d9a-11af1ab29cda\2e601130-5351-4d9d-8e04-252966bad054\3166bc41-7e98-4e03-b34e-ec0f5f2b218e" /v "ACSettingIndex" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\User\PowerSchemes\8782c2b6-5968-4523-8d9a-11af1ab29cda\2e601130-5351-4d9d-8e04-252966bad054\3166bc41-7e98-4e03-b34e-ec0f5f2b218e" /v "DCSettingIndex" /t REG_DWORD /d "0" /f
+
+rem Unparked time trigger
+reg add "HKLM\SYSTEM\ControlSet001\Control\Power\PowerSettings\48672f38-7a9a-4bb2-8bf8-3d85be19de4e\d6ba4903-386f-4c2c-8adb-5c21b3328d25" /v "ValueMax" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\48672f38-7a9a-4bb2-8bf8-3d85be19de4e\d6ba4903-386f-4c2c-8adb-5c21b3328d25" /v "ValueMax" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\ControlSet001\Control\Power\PowerSettings\48672f38-7a9a-4bb2-8bf8-3d85be19de4e\d6ba4903-386f-4c2c-8adb-5c21b3328d25" /v "ValueMin" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\48672f38-7a9a-4bb2-8bf8-3d85be19de4e\d6ba4903-386f-4c2c-8adb-5c21b3328d25" /v "ValueMin" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\ControlSet001\Control\Power\User\PowerSchemes\8782c2b6-5968-4523-8d9a-11af1ab29cda\48672f38-7a9a-4bb2-8bf8-3d85be19de4e\d6ba4903-386f-4c2c-8adb-5c21b3328d25" /v "ACSettingIndex" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\ControlSet001\Control\Power\User\PowerSchemes\8782c2b6-5968-4523-8d9a-11af1ab29cda\48672f38-7a9a-4bb2-8bf8-3d85be19de4e\d6ba4903-386f-4c2c-8adb-5c21b3328d25" /v "DCSettingIndex" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\User\PowerSchemes\8782c2b6-5968-4523-8d9a-11af1ab29cda\48672f38-7a9a-4bb2-8bf8-3d85be19de4e\d6ba4903-386f-4c2c-8adb-5c21b3328d25" /v "ACSettingIndex" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\User\PowerSchemes\8782c2b6-5968-4523-8d9a-11af1ab29cda\48672f38-7a9a-4bb2-8bf8-3d85be19de4e\d6ba4903-386f-4c2c-8adb-5c21b3328d25" /v "DCSettingIndex" /t REG_DWORD /d "0" /f
+
 
 
 
