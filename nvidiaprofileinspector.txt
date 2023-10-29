@@ -10,11 +10,27 @@ GSYNC - Support Indicator Overlay: Off
 Ultra Low Latency - CPL State: Off
 Ultra Low Latency - Enabled: Off
 
+3 - Antialiasing
+-------------------------
+Antialiasing - FXAA Enabled (predefined by NVIDIA): Disallowed
+
+4 - Texture filtering
+-------------------------
+Anisotropic filtering (mode + setting): 0x10000001 Off [Linear]
+Prevent Anisotropic Filtering: On
+
 5 - Common
 -------------------------
 Ansel - Enabled: Off (screenshot tool)
 CUDA - Force P2 State: Off
 rBAR - Feature: Enabled
+
+7 - Stereo
+-------------------------
+Force Stereo shuttering: 0x00000000 OGL_FORCE_STEREO_OFF
+Stereo - Dongle Support: 0x00000000 WKS_STEREO_DONGLE_SUPPORT_OFF
+Stereo - Enable: 0x00000000 WKS_STEREO_SUPPORT_OFF
+Stereo - Swap eyes: 0x00000000 WKS_API_STEREO_EYES_EXCHANGE_OFF
 
 8 - Extra
 -------------------------
