@@ -94,6 +94,7 @@ ASYNC10_OOO_QUERY_LIMIT: 0x0000000A Default - How many out of order query getDat
 ASYNC10_PRESENT_MODE: 0x53855200 Sync - DX10 present will be sync call
 ASYNC9_ENABLE: 0x42563729 On - Enable AsyncDevice ignoring safety or application requests
 ASYNC0_PRESENT_MODE: 0x53855200 Sync - All DX9 presents will be synchronous
+CULL_BEFORE_FETCH: 0x00000006 Dynamic
 MAX_PENDING_CMD_BUFFERS: 0x00000001 1
 MCFORCEHOSTSTAGINGBUFFERSIZE: 0x00040000 Default - size of host staging buffer, mostly for early push
 OGL_THREAD_OPTIMIZATION: 0x0000001F ENABLE_ALL Enable all threading optimizations
