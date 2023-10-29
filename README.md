@@ -29,6 +29,8 @@ disablestaterepository.bat / enablestaterepository.bat (ultra mega minimal only,
 
 run.bat
 
+acl.txt (needed to disable certain services)
+
 powerplan.bat (adds duplicate power plan everytime command is executed, so use powerplan.bat only once after every new build install unless already present)
 
 disableservices.bat / enableservices.bat (to disable Windows Defender, run in SAFE MODE)
