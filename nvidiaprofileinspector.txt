@@ -55,9 +55,23 @@ Texture Filtering - Trilinear Optimization: On ( will be ignored if using high q
 
 5 - Common
 -------------------------
+Ambient Occlusion - Usage: Disabled
+Ambient Occlusion - Setting: Off
 Ansel - Enabled: Off (screenshot tool)
 CUDA - Force P2 State: Off
+Extension Limit (OGL): Off
+Multi-Display / Mixed-GPU Acceleration: Single display performance mode
+PhysX - Indicator Overlay: Off
+Power Management - Mode: Prefer maximum performance
+Raytracing - (DXR) Enabled: RT Disabled
+Raytracing - (Vulkan RT) Enabled: RT Disabled
 rBAR - Feature: Enabled
+rBAR - Options: 0x00000001
+rBAR - Size Limit: 0x0000000040000000
+Shadercache - Cachesize: Unlimited
+Shadercache - Enabled: On
+Threaded Optimization: On
+Version Override (OGL): Disabled
 
 7 - Stereo
 -------------------------
