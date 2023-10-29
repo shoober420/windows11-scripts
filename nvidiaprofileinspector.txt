@@ -112,10 +112,11 @@ Display the VRR Overlay Indicator: 0x00000000 VRROVERLAYINDICATOR_DISABLED
 High level control of the rendering quality on OpenGL: 0x00000014 OGL_QUALITY_ENHANCEMENTS_HPERF
 Idle Application Max FPS Limit: 0x00000000
 Idle Application Threshold Time out in seconds: 0x00000000
-Maximum frames allowed: 0x00000002
+Maximum frames allowed: 0x00000001
 Memory Allocation Policy: 0x00000002 WKS_MEMORY_ALLOCATION_POLICY_AGGRESIVE_PRE_ALLOCATION (causes stuttering)
 NVIDIA Predefined Ansel Usage: 0x00000000 ANSEL_ALLOW_DISALLOW (screenshot tool)
 OpenGL Default swap interval: 0xFFFFFFFF OGL_DEFAULT_SWAP_INTERVAL_DISABLED
+Unified back/depth buffer: 0x00000001 OGL_SINGLE_BACKDEPTH_BUFFER_ENABLE
 Variable refresh rate: 0x00000000 VSYNCVRRCONTROL_DISABLE
 Virtual Reality pre-rendered frames: 0x00000001
 Vsync - Behavior Flags: 0x00000000 VSYNC_BEHAVIOR_FLAGS_NONE
