@@ -1,0 +1,18 @@
+Select Driver Version To Install
+-----------------------------------
+Install best driver for my hardware (make sure it's latest beta, otherwise use "Manually select a driver version" or "Use driver files on disk")
+
+Select Components To Install
+------------------------------
+Display Driver (required)
+Uncheck everything else
+
+Installation Tweaks
+------------------------------
+Disable Installer Telemetry & Advertising
+Disable Multiplayer Overlay (MPO)
+Disable Ansel
+Show Expert Tweaks
+--- Disable Driver Telemetry (breaks install)
+Disable NVIDIA HD Audio device sleep timer
+Disable HDCP
