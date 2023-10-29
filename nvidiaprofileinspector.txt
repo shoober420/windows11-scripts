@@ -73,6 +73,10 @@ Shadercache - Enabled: On
 Threaded Optimization: On
 Version Override (OGL): Disabled
 
+6 - SLI
+-------------------------
+Antialiasing - SLI AA: 0x00000000 AA_MODE_SELECTOR_SLIAA_DISABLED
+
 7 - Stereo
 -------------------------
 Force Stereo shuttering: 0x00000000 OGL_FORCE_STEREO_OFF
