@@ -90,7 +90,7 @@ Stereo - Swap eyes: 0x00000000 WKS_API_STEREO_EYES_EXCHANGE_OFF
 APP_COMPAT_SHIM: 0x00000000 Disabled
 ASYNC10_ENABLE: 0x42563729 ON - Enable dual core optimizations
 ASYNC10_NVAPI_MODE: 0x00000003 ALLOW_ALL - Allow all optimizations
-ASYNC10_OOO_QUERY_LIMIT: 0x0000000A Default - How many out of order query getData calls are allowed before stalling the Async device
+ASYNC10_OOO_QUERY_LIMIT: 0x00010000 (Battlefield 3)
 ASYNC10_PRESENT_MODE: 0x53855200 Sync - DX10 present will be sync call
 ASYNC9_ENABLE: 0x42563729 On - Enable AsyncDevice ignoring safety or application requests
 ASYNC0_PRESENT_MODE: 0x53855200 Sync - All DX9 presents will be synchronous
@@ -107,6 +107,7 @@ OGL_OPTIMIZED_IMMEDIATE_MODE - 0x00000001 Enabled - Fast immediate mode path ena
 OGL_APP_VIDMEM_PUSHBUFFER - 0x00000001 Enabled - This app benefits greatly from vidmem pushbuffers
 OGL_APP_YIELD_AFTER_SWAP - 0x00000001 Enabled - Call GL_YIELD in postSwapBuffers()
 OGL_SYSTEM_TEXTURE_PROMOTION - 0x00000001 Enable - Textures being promoted from Sysmem to Vidmem
+OGL_THREAD_CONTROL_2 - 0x0FC00008 (Unigine: Heaven 4.0 demo, Unigine: Tropics demo, Unigine Engine, Unigine: Sanctuary demo, Unigine: Valley demo, Unigine: Heaven demo)
 OGL_THREAD_OPTIMIZATION: 0x0000001F ENABLE_ALL Enable all threading optimizations
 OGL_THREAD_OPTIMIZATION_GEFORCE: 0x0000001F Enable all threading optimizations
 OGL_VID_HEAP_REUSE_RATIO - 0x00000064 Default - Control the amount of freed video memory the allocator reserves for reuse by future allocations. By default the allocator reserves up to 10% of the total VRAM. The units are in 1/1000ths of total heap. So 100 means 10%
