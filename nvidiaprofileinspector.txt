@@ -86,15 +86,37 @@ Stereo - Swap eyes: 0x00000000 WKS_API_STEREO_EYES_EXCHANGE_OFF
 
 8 - Extra
 -------------------------
+3DSMax Shim Layer Control: 0x00000000 Disable - Disable the 3DSMax Shim Layer
+APP_COMPAT_SHIM: 0x00000000 Disabled
 ASYNC10_ENABLE: 0x42563729 ON - Enable dual core optimizations
 ASYNC10_NVAPI_MODE: 0x00000003 ALLOW_ALL - Allow all optimizations
 ASYNC10_OOO_QUERY_LIMIT: 0x0000000A Default - How many out of order query getData calls are allowed before stalling the Async device
 ASYNC10_PRESENT_MODE: 0x53855200 Sync - DX10 present will be sync call
 ASYNC9_ENABLE: 0x42563729 On - Enable AsyncDevice ignoring safety or application requests
 ASYNC0_PRESENT_MODE: 0x53855200 Sync - All DX9 presents will be synchronous
+MAX_PENDING_CMD_BUFFERS: 0x00000001 1
+MCFORCEHOSTSTAGINGBUFFERSIZE: 0x00040000 Default - size of host staging buffer, mostly for early push
+OGL_THREAD_OPTIMIZATION: 0x0000001F ENABLE_ALL Enable all threading optimizations
+OGL_THREAD_OPTIMIZATION_GEFORCE: 0x0000001F Enable all threading optimizations
+PHYSX_APPLICATION: 0x00000000 Off
+SHADERMAXREGALLOWED: 0x00000400 Max - Specifies max register allowed when compiling/optimizing a shader
+SLIMOSAIC_CONTROL: 0x00000000 ALLOW_ALL - Allow all performance strategies
+STAGING_CACHE_SIZE: 0x10000001 Max
 
 Other
 -------------------------
+Ansel flags for enabled applications: 0x00000000 ANSEL_ALLOWLISTED_DISALLOWED
+Application Profile Notification Popup Timeout: 0x00000000 APPLICATION_PROFILE_NOTIFICATION_TIMEOUT_DISABLED
+Autoalign flash indicator: 0x00000000 LATENCY_INDICATOR_AUTOALIGN_DISABLED
+Display the VRR Overlay Indicator: 0x00000000 VRROVERLAYINDICATOR_DISABLED
+High level control of the rendering quality on OpenGL: 0x00000014 OGL_QUALITY_ENHANCEMENTS_HPERF
+Idle Application Max FPS Limit: 0x00000000
+Idle Application Threshold Time out in seconds: 0x00000000
+Maximum frames allowed: 0x00000002
 Memory Allocation Policy: 0x00000002 WKS_MEMORY_ALLOCATION_POLICY_AGGRESIVE_PRE_ALLOCATION (causes stuttering)
 NVIDIA Predefined Ansel Usage: 0x00000000 ANSEL_ALLOW_DISALLOW (screenshot tool)
+OpenGL Default swap interval: 0xFFFFFFFF OGL_DEFAULT_SWAP_INTERVAL_DISABLED
 Variable refresh rate: 0x00000000 VSYNCVRRCONTROL_DISABLE
+Virtual Reality pre-rendered frames: 0x00000001
+Vsync - Behavior Flags: 0x00000000 VSYNC_BEHAVIOR_FLAGS_NONE
+Vulkan/OpenGL present method: Prefer layered on DXGI Swapchain (improves performance)
