@@ -56,3 +56,7 @@ disableappinfo.bat / enableappinfo.bat
 disablenla.bat / enablenla.bat (fixes internet)
 
 resetnetwork.bat
+
+nvprofileinspector.txt
+
+nvcleanstall.txt
