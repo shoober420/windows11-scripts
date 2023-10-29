@@ -1,5 +1,8 @@
 2 - Sync and Refresh
 -------------------------
+Flip Indicator: Disabled
+Frame Rate Limiter - Background Application: Off
+Frame Rate Limiter V3: Off
 GSYNC - Application Mode: Off
 GSYNC - Application Requested State: Force Off
 GSYNC - Application State: Force Off
@@ -7,8 +10,16 @@ GSYNC - Global Feature: Off
 GSYNC - Global Mode: Off
 GSYNC - Indicator Overlay: Off
 GSYNC - Support Indicator Overlay: Off
-Ultra Low Latency - CPL State: Off
-Ultra Low Latency - Enabled: Off
+Maximum Pre-Rendered Frames: 1
+Prefered Refreshrate: Highest available
+Triple Buffering: Off
+Ultra Low Latency - CPL State: Off (does NOT improve latency)
+Ultra Low Latency - Enabled: Off (does NOT improve latency)
+Vertical Sync: Force Off
+Vertical Sync - Smooth AFR Behavior: Off
+Vertical Sync - Tear Control: 0x00000000
+Vertical Sync Indicator: 0x00000000 Off
+
 
 3 - Antialiasing
 -------------------------
