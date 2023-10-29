@@ -57,6 +57,8 @@ disablenla.bat / enablenla.bat (fixes internet)
 
 resetnetwork.bat
 
+powerplanextra.bat
+
 nvprofileinspector.txt
 
 nvcleanstall.txt
