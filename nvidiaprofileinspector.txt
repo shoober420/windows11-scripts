@@ -16,6 +16,15 @@ Ansel - Enabled: Off (screenshot tool)
 CUDA - Force P2 State: Off
 rBAR - Feature: Enabled
 
+8 - Extra
+-------------------------
+ASYNC10_ENABLE: 0x42563729 ON - Enable dual core optimizations
+ASYNC10_NVAPI_MODE: 0x00000003 ALLOW_ALL - Allow all optimizations
+ASYNC10_OOO_QUERY_LIMIT: 0x0000000A Default - How many out of order query getData calls are allowed before stalling the Async device
+ASYNC10_PRESENT_MODE: 0x53855200 Sync - DX10 present will be sync call
+ASYNC9_ENABLE: 0x42563729 On - Enable AsyncDevice ignoring safety or application requests
+ASYNC0_PRESENT_MODE: 0x53855200 Sync - All DX9 presents will be synchronous
+
 Other
 -------------------------
 Memory Allocation Policy: 0x00000002 WKS_MEMORY_ALLOCATION_POLICY_AGGRESIVE_PRE_ALLOCATION
