@@ -43,6 +43,6 @@ ASYNC0_PRESENT_MODE: 0x53855200 Sync - All DX9 presents will be synchronous
 
 Other
 -------------------------
-Memory Allocation Policy: 0x00000002 WKS_MEMORY_ALLOCATION_POLICY_AGGRESIVE_PRE_ALLOCATION
+Memory Allocation Policy: 0x00000002 WKS_MEMORY_ALLOCATION_POLICY_AGGRESIVE_PRE_ALLOCATION (causes stuttering)
 NVIDIA Predefined Ansel Usage: 0x00000000 ANSEL_ALLOW_DISALLOW (screenshot tool)
 Variable refresh rate: 0x00000000 VSYNCVRRCONTROL_DISABLE
