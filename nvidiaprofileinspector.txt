@@ -18,5 +18,6 @@ rBAR - Feature: Enabled
 
 Other
 -------------------------
+Memory Allocation Policy: 0x00000002 WKS_MEMORY_ALLOCATION_POLICY_AGGRESIVE_PRE_ALLOCATION
 NVIDIA Predefined Ansel Usage: 0x00000000 ANSEL_ALLOW_DISALLOW (screenshot tool)
 Variable refresh rate: 0x00000000 VSYNCVRRCONTROL_DISABLE
