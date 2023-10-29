@@ -97,12 +97,26 @@ ASYNC0_PRESENT_MODE: 0x53855200 Sync - All DX9 presents will be synchronous
 CULL_BEFORE_FETCH: 0x00000006 Dynamic
 MAX_PENDING_CMD_BUFFERS: 0x00000001 1
 MCFORCEHOSTSTAGINGBUFFERSIZE: 0x00040000 Default - size of host staging buffer, mostly for early push
+OGL_APP_CLAW - 0x00000001 Enabled - Enable the Workstation Performance Code, CLAW
+OGL_APP_CLAW_OPTIMIZE - 0x00000001 Enabled - Enable the optimizing compile in CLAW
+OGL_APP_CLAW_THREADS - 0x00000001 Enabled - CLAW threading
+OGL_APP_CONSTANT_OPTIMIZE - 0x00000001 Enabled - Optimize based on constant values
+OGL_APP_DIRECT_PUSHBUFFER - 0x00000001 Enabled - Use direct pushbuffer, not cached pushbuffer
+OGL_APP_LAZY_VBUM_VBOS - 0x00000001 Enabled - Enable the Lazy VBUM optimization for VBOs
+OGL_OPTIMIZED_IMMEDIATE_MODE - 0x00000001 Enabled - Fast immediate mode path enable
+OGL_APP_VIDMEM_PUSHBUFFER - 0x00000001 Enabled - This app benefits greatly from vidmem pushbuffers
+OGL_APP_YIELD_AFTER_SWAP - 0x00000001 Enabled - Call GL_YIELD in postSwapBuffers()
+OGL_SYSTEM_TEXTURE_PROMOTION - 0x00000001 Enable - Textures being promoted from Sysmem to Vidmem
 OGL_THREAD_OPTIMIZATION: 0x0000001F ENABLE_ALL Enable all threading optimizations
 OGL_THREAD_OPTIMIZATION_GEFORCE: 0x0000001F Enable all threading optimizations
+OGL_VID_HEAP_REUSE_RATIO - 0x00000064 Default - Control the amount of freed video memory the allocator reserves for reuse by future allocations. By default the allocator reserves up to 10% of the total VRAM. The units are in 1/1000ths of total heap. So 100 means 10%
 PHYSX_APPLICATION: 0x00000000 Off
+PS_ALPHABETA - 0x00000002 Dynamic_VBIB - The driver adjusts a vb/ib ID unique Alpha fraction via AlphaBeta clocks
+PS_ALPHABETA_FRACTION - 0x000000FF Max
 SHADERMAXREGALLOWED: 0x00000400 Max - Specifies max register allowed when compiling/optimizing a shader
 SLIMOSAIC_CONTROL: 0x00000000 ALLOW_ALL - Allow all performance strategies
 STAGING_CACHE_SIZE: 0x10000001 Max
+SYSTEMCACHEDCOPYBEHAVIOR - 0x00000002 ALLOW_FOR_TEXTURES_WITH_SUBRESOURCES - Allow for textures with mips
 
 Other
 -------------------------
