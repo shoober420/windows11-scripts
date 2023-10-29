@@ -23,7 +23,20 @@ Vertical Sync Indicator: 0x00000000 Off
 
 3 - Antialiasing
 -------------------------
+Antialiasing - Combined (Mode + Setting): 0x00000000 Application-controlled / Off
+Antialiasing - FXAA Enabled: Off
 Antialiasing - FXAA Enabled (predefined by NVIDIA): Disallowed
+Antialiasing - FXAA Indicator Overlay: Off
+Antialiasing - Gamma Correction: Off (changes intended original look of games)
+Antialiasing - Line Gamma: Disabled
+Antialiasing - MFAA Enabled: Off
+Antialiasing - Transparency Multisampling: Disabled
+Antialiasing - Transparency Multisampling - Setting: 0x00000000 Q - (Default, Mixed Mode) uses application detection
+Antialiasing - Transparency Supersampling: Off / Multisampling
+Antialiasing (MSAA) - Behavior Flags: Disable Antialiasing at NVIDIA Control Panel
+Antialiasing (MSAA) - Mode: Override any application setting
+Antialiasing (MSAA) - Setting: Application-controlled / Off
+Prevent Antialiasing (OGL): 0x00000000 Disable none
 
 4 - Texture filtering
 -------------------------
