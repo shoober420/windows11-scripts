@@ -1,0 +1,22 @@
+2 - Sync and Refresh
+-------------------------
+GSYNC - Application Mode: Off
+GSYNC - Application Requested State: Force Off
+GSYNC - Application State: Force Off
+GSYNC - Global Feature: Off
+GSYNC - Global Mode: Off
+GSYNC - Indicator Overlay: Off
+GSYNC - Support Indicator Overlay: Off
+Ultra Low Latency - CPL State: Off
+Ultra Low Latency - Enabled: Off
+
+5 - Common
+-------------------------
+Ansel - Enabled: Off (screenshot tool)
+CUDA - Force P2 State: Off
+rBAR - Feature: Enabled
+
+Other
+-------------------------
+NVIDIA Predefined Ansel Usage: 0x00000000 ANSEL_ALLOW_DISALLOW (screenshot tool)
+Variable refresh rate: 0x00000000 VSYNCVRRCONTROL_DISABLE
