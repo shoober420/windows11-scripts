@@ -35,6 +35,7 @@ Download
  - HWiNFO (https://www.hwinfo.com/)
  - HWMonitor (https://www.cpuid.com/softwares/hwmonitor.html)
  - NVIDIA Profile Inspector (https://github.com/Orbmu2k/nvidiaProfileInspector)
+ - LatencyMon (https://www.resplendence.com/download/LatencyMon.exe)
 
 Windows 98 Icons: Original (https://win98icons.alexmeub.com) / HQ (https://github.com/nestoris/Win98SE)
  +++ use Original icons for a faithful and pixelated icon, HQ for a smoothed icon (original recommended)
