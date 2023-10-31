@@ -1,4 +1,5 @@
 rem Disable all Windows Defender components
+rem Make sure program versions are the same for the directory path
 
 rem Disable Windows Defender Security Center
 reg add "HKLM\System\CurrentControlSet\Services\SecurityHealthService" /v "Start" /t REG_DWORD /d "4" /f
