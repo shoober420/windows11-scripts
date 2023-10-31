@@ -6,6 +6,7 @@ Download
  - AMD Adrenalin Software
  - Intel Driver & support assistant (Intel DSA) / Intel Wireless Bluetooth - Intel PROSet/Wireless WiFi
  - Chipset INF Utility (https://www.intel.com/content/www/us/en/download/19347/chipset-inf-utility.html)
+ - Intel Serial IO Driver (https://www.intel.com/content/www/us/en/download/773396/intel-serial-io-driver-for-windows-10-64-bit-windows-11-for-the-intel-nuc-11-pro-kits-mini-pcs-nuc11tn.html)
  - Intel Killer Performance Suite (https://www.intel.com/content/www/us/en/download/19779/intel-killer-performance-suite.html)
  - Audio drivers
  - WiFi drivers (or disable if on wired connection)
