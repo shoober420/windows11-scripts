@@ -1,10 +1,28 @@
 Disable drivers:
+========================
 
+Audio Input and Outputs:
+--------------------------------
+Digital Audio (S/PDIF) (High Definition Audio Device)
+
+Bluetooth:
+--------------------------------
 Intel Wireless Bluetooth
+
+Software components:
+--------------------------------
 Intel(R) Dynamic Application Loader Host Interface
 Intel(R) Management Engine WMI Provider
+
+Software devices:
+--------------------------------
 Microsoft Device Association Root Enumerator
+Microsoft GS Wavetable Synth
+
+System devices:
+--------------------------------
 High precision event timer
 Microsoft Hyper-V Virtualization Infrastructure Driver
 Microsoft Virtual Drive Enumerator
+NDIS Virtual Network Adaptor Enumerator
 Remote Desktop Device Redirector Bus
