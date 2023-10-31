@@ -6,4 +6,5 @@ Intel(R) Management Engine WMI Provider
 Microsoft Device Association Root Enumerator
 High precision event timer
 Microsoft Hyper-V Virtualization Infrastructure Driver
+Microsoft Virtual Drive Enumerator
 Remote Desktop Device Redirector Bus
