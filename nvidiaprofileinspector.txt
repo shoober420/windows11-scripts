@@ -88,11 +88,11 @@ Stereo - Swap eyes: 0x00000000 WKS_API_STEREO_EYES_EXCHANGE_OFF
 -------------------------
 3DSMax Shim Layer Control: 0x00000000 Disable - Disable the 3DSMax Shim Layer
 APP_COMPAT_SHIM: 0x00000000 Disabled
-ASYNC10_ENABLE: 0x42563729 ON - Enable dual core optimizations
+ASYNC10_ENABLE: 0x37605835 APP - Enable dual core optimizations unless the application requested to disable them 
 ASYNC10_NVAPI_MODE: 0x00000003 ALLOW_ALL - Allow all optimizations
 ASYNC10_OOO_QUERY_LIMIT: 0x00010000 (Battlefield 3)
 ASYNC10_PRESENT_MODE: 0x53855200 Sync - DX10 present will be sync call
-ASYNC9_ENABLE: 0x42563729 On - Enable AsyncDevice ignoring safety or application requests
+ASYNC9_ENABLE: 0x37605835 App - Enable AsyncDevice except in configs that do not work (some SLI, Optimus) or if the application requested to disable them
 ASYNC0_PRESENT_MODE: 0x53855200 Sync - All DX9 presents will be synchronous
 CULL_BEFORE_FETCH: 0x00000006 Dynamic
 MAX_PENDING_CMD_BUFFERS: 0x00000001 1
@@ -129,7 +129,7 @@ High level control of the rendering quality on OpenGL: 0x00000014 OGL_QUALITY_EN
 Idle Application Max FPS Limit: 0x00000000
 Idle Application Threshold Time out in seconds: 0x00000000
 Maximum frames allowed: 0x00000001
-Memory Allocation Policy: 0x00000002 WKS_MEMORY_ALLOCATION_POLICY_AGGRESIVE_PRE_ALLOCATION (causes stuttering)
+Memory Allocation Policy: 0x00000002 WKS_MEMORY_ALLOCATION_POLICY_AGGRESIVE_PRE_ALLOCATION
 NVIDIA Predefined Ansel Usage: 0x00000000 ANSEL_ALLOW_DISALLOW (screenshot tool)
 OpenGL Default swap interval: 0xFFFFFFFF OGL_DEFAULT_SWAP_INTERVAL_DISABLED
 Unified back/depth buffer: 0x00000001 OGL_SINGLE_BACKDEPTH_BUFFER_ENABLE
