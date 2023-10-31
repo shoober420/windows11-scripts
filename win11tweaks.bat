@@ -1129,7 +1129,7 @@ rem Add downloads and temporary downloads folder to expceptions to prevent "MD D
 rem Run "MD Disable.bat" TWICE !!!!! RESTART! Otherwise Defener will enable itself after uninstalling AV!
 rem After restart, uninstall 3rd party AV (preferably using HiBit Uninstaller).
 rem Restart (HiBit Uninstaller will run to remove leftovers).
-start windowsdefender:
+rem start windowsdefender:
 
 
 
