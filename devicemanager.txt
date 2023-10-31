@@ -9,6 +9,10 @@ Bluetooth:
 --------------------------------
 Intel Wireless Bluetooth
 
+Other Devices:
+--------------------------------
+Unknown Device
+
 Software components:
 --------------------------------
 Intel(R) Dynamic Application Loader Host Interface
@@ -26,3 +30,4 @@ Microsoft Hyper-V Virtualization Infrastructure Driver
 Microsoft Virtual Drive Enumerator
 NDIS Virtual Network Adaptor Enumerator
 Remote Desktop Device Redirector Bus
+Resource Hub proxy device
