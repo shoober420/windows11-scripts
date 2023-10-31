@@ -1261,13 +1261,6 @@ taskkill /im msedge.exe /f
 rem del "C:\Windows\System32\GigabyteUpdateService.exe" /s /f /q
 ren "C:\Windows\System32\GigabyteUpdateService.exe" "GigabyteUpdateService.exe.bak"
 
-rem Disable Anti-malware Service Executable (to restore run "sfc /scannow")
-takeown /s %computername% /u %username% /f "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.23070.1004-0\MsMpEng.exe"
-icacls "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.23070.1004-0\MsMpEng.exe" /grant:r %username%:F
-taskkill /im MsMpEng.exe /f
-rem del "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.23070.1004-0\MsMpEng.exe" /s /f /q
-ren "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.23070.1004-0\MsMpEng.exe" "MsMpEng.exe.bak"
-
 rem Disable Shell Experience Host (to restore run "sfc /scannow")
 takeown /s %computername% /u %username% /f "C:\Windows\SystemApps\ShellExperienceHost_cw5n1h2txyewy\ShellExperienceHost.exe"
 icacls "C:\Windows\SystemApps\ShellExperienceHost_cw5n1h2txyewy\ShellExperienceHost.exe" /grant:r %username%:F
