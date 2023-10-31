@@ -6,3 +6,8 @@
 \Registry\machine\SYSTEM\CurrentControlSet\Services\WdiServiceHost [1]
 \Registry\machine\SYSTEM\CurrentControlSet\Services\TrkWks [1]
 \Registry\machine\SYSTEM\CurrentControlSet\Services\DPS [1]
+\Registry\machine\SYSTEM\CurrentControlSet\Services\WdBoot [1]
+\Registry\machine\SYSTEM\CurrentControlSet\Services\WdFilter [1]
+\Registry\machine\SYSTEM\CurrentControlSet\Services\WdNisDrv [1]
+\Registry\machine\SYSTEM\CurrentControlSet\Services\WdNisSvc [1]
+\Registry\machine\SYSTEM\CurrentControlSet\Services\WinDefend [1]
