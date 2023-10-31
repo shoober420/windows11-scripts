@@ -66,3 +66,5 @@ powerplanextra.bat
 nvprofileinspector.txt
 
 nvcleanstall.txt
+
+devicemanager.txt
