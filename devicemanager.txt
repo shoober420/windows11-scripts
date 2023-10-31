@@ -1,0 +1,6 @@
+Disable drivers:
+
+Intel Wireless Bluetooth
+Intel(R) Dynamic Application Loader Host Interface
+Intel(R) Management Engine WMI Provider
+Microsoft Device Association Root Enumerator
