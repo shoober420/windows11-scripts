@@ -68,3 +68,5 @@ nvprofileinspector.txt
 nvcleanstall.txt
 
 devicemanager.txt
+
+setacl.bat (requires SetACL.exe to be in scripts directory)
