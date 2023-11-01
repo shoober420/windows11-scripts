@@ -1,6 +1,9 @@
 rem Disable all Windows Defender components
 rem Make sure program versions are the same for the directory path
 
+rem Disable Microsoft SAM (Security Accounts Manager)
+reg add "HKLM\System\CurrentControlSet\Services\SamSs" /v "Start" /t REG_DWORD /d "4" /f
+
 rem Disable Windows Defender Security Center
 reg add "HKLM\System\CurrentControlSet\Services\SecurityHealthService" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\System\CurrentControlSet\Services\wscsvc" /v "Start" /t REG_DWORD /d "4" /f
