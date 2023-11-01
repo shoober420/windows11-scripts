@@ -28,3 +28,5 @@ icacls "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.23090.2008-0\Nis
 taskkill /im NisSrv.exe /f
 rem del "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.23090.2008-0\NisSrv.exe" /s /f /q
 ren "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.23090.2008-0\NisSrv.exe" "NisSrv.exe.bak"
+
+PAUSE
