@@ -2382,6 +2382,7 @@ sc.exe config mrxsmb30 start= disabled
 schtasks /delete /tn * /f
 
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Personalization" /v "NoLockScreenSlideshow" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "GlobalTimeResolutionRequests" /t REG_DWORD /d "1" /f
 
 
 
