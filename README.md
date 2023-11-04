@@ -29,7 +29,7 @@ DisableStateRepository.bat / enablestaterepository.bat (ultra mega minimal only,
 
 run.bat
 
-ACL.txt (needed to disable certain services)
+acl.txt (ACL: Access Control List - needed to take ownership of registry keys for services)
 
 DeleteNVIDIAShaderCache.bat
 
@@ -67,6 +67,6 @@ nvcleanstall.txt
 
 DeviceManager.txt
 
-SetACL.bat (requires SetACL.exe to be in scripts directory)
+SetACL.bat (ACL: Access Control List - requires SetACL.exe to be in scripts directory)
 
 InterruptAffinityPolicyTool.txt
