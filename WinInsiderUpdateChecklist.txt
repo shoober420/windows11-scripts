@@ -1,3 +1,5 @@
 Update Video Drivers
+ - NVIDIA: https://www.nvidia.com/download/find.aspx
+ - AMD: https://www.amd.com/en/support
 Setup Microsoft Interrupt Affinity Tool
-SetTimerResoltion
+SetTimerResoltion (https://github.com/amitxv/TimerResolution)
