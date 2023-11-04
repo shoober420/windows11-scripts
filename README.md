@@ -70,3 +70,5 @@ DeviceManager.txt
 SetACL.bat (ACL: Access Control List - requires SetACL.exe to be in scripts directory)
 
 InterruptAffinityPolicyTool.txt
+
+WinInsiderUpdateChecklist.txt (to do list when new Windows Insider build is installed)
