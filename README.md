@@ -72,3 +72,5 @@ SetACL.bat (ACL: Access Control List - requires SetACL.exe to be in scripts dire
 InterruptAffinityPolicyTool.txt
 
 WinInsiderUpdateChecklist.txt (to do list when new Windows Insider build is installed)
+
+SetTimerResolution.bat (script needed to launch SetTimerResolution at boot)
