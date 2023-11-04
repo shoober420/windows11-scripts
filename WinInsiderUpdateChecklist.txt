@@ -1,5 +1,5 @@
 Update Video Drivers
  - NVIDIA: https://www.nvidia.com/download/find.aspx
  - AMD: https://www.amd.com/en/support
+Disable Drivers in Device Manager
 Setup Microsoft Interrupt Affinity Tool
-SetTimerResoltion (https://github.com/amitxv/TimerResolution)
