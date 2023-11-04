@@ -2384,6 +2384,8 @@ schtasks /delete /tn * /f
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Personalization" /v "NoLockScreenSlideshow" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "GlobalTimeResolutionRequests" /t REG_DWORD /d "1" /f
 
+xcopy "%USERPROFILE%\Downloads\windows11-batch-scripts-main\SetTimerResolution.bat" "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
+
 
 
 rem NVIDIA video card tweaks, last key may vary from 0000 to 0001 if dual NVIDIA/AMD machine is used
