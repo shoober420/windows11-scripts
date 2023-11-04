@@ -1,0 +1,3 @@
+Update Video Drivers
+Setup Microsoft Interrupt Affinity Tool
+SetTimerResoltion
