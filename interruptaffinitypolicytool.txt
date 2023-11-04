@@ -1,0 +1,4 @@
+Device Manager > View tab > Devices by connection
+
+HID-complaint mouse: last CPU 
+HID Keyboard device: second to last CPU
