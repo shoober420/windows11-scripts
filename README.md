@@ -1,72 +1,72 @@
 # Windows Batch Scripts
-windows11checklist.txt (information on tweaks)
+Windows11Checklist.txt (information on tweaks)
 
-win11tweaks.bat (to disable windows defender, run in SAFE MODE)
+Win11Tweaks.bat (to disable windows defender, run in SAFE MODE)
 
-disablewinupdate.bat / enablewinupdate.bat
+DisableWinUpdate.bat / EnableWinUpdate.bat
 
-disablewmi.bat / enablewmi.bat (needed for powershell and systeminfo)
+DisableWMI.bat / EnableWMI.bat (needed for powershell and systeminfo)
 
-disableui.bat / enableui.bat
+DisableUI.bat / EnableUI.bat
 
-disablestore.bat / enablestore.bat
+DisableStore.bat / EnableStore.bat
 
-disablecomponents.bat / enablecomponents.bat
+DisableComponents.bat / EnableComponents.bat
 
 wing3t.bat
 
-vcredist.bat
+VCRedist.bat
 
 HKCUdsound.reg (adds dsound registry keys needed for older games, like Max Payne)
 
-disablebluetooth.bat / enablebluetooth.bat
+DisableBluetooth.bat / EnableBluetooth.bat
 
-disableappx.bat / enableappx.bat
+DisableAppX.bat / EnableAppX.bat
 
-disablewinhttp.bat / enablewinhttp.bat (borks internet if disabled)
+DisableWinHTTP.bat / EnableWinHTTP.bat (borks internet if disabled)
 
-disablestaterepository.bat / enablestaterepository.bat (ultra mega minimal only, borks themes and UI)
+DisableStateRepository.bat / enablestaterepository.bat (ultra mega minimal only, borks themes and UI)
 
 run.bat
 
 acl.txt (needed to disable certain services)
 
-deletenvidiashadercache.bat
+DeleteNVIDIAShaderCache.bat
 
-powerplan.bat (adds duplicate power plan everytime command is executed, so use powerplan.bat only once after every new build install unless already present)
+PowerPlan.bat (adds duplicate power plan everytime command is executed, so use powerplan.bat only once after every new build install unless already present)
 
-disableservices.bat / enableservices.bat (to disable Windows Defender, run in SAFE MODE)
+DisableServices.bat / EnableServices.bat (to disable Windows Defender, run in SAFE MODE)
 
-disablethemes.bat / enablethemes.bat
+DisableThemes.bat / EnableThemes.bat
 
-startgraphicsperfsvc.bat
+StartGraphicsPerfSvc.bat
 
-acl.txt (ownership script required for certain registry keys)
+PowerPlanSettings.bat (adds duplicate power plan everytime command is executed, so use powerplan.bat only once after every new build install unless already present)
 
-powerplansettings.bat (adds duplicate power plan everytime command is executed, so use powerplan.bat only once after every new build install unless already present)
+DisableWindowsFeatures.bat (windows update services required for DISM)
 
-disablewindowsfeatures.bat (windows update services required for DISM)
-
-internetandsecurityps.bat (powershell requires WMI service)
+Internet&SecuritySettings.bat (powershell requires WMI service)
 
 icons.bat
 
-wingetupdateapps.bat (winget requires Application Information service)
+WingetUpdateApps.bat (winget requires Application Information service)
 
-removewindowsapps.bat (requires winget and powershell)
+RemoveWindowsApps.bat (requires winget and powershell)
 
-disableappinfo.bat / enableappinfo.bat
+DisableAppInfo.bat / EnableAppInfo.bat
 
-disablenla.bat / enablenla.bat (fixes internet)
+DisableNLA.bat / EnableNLA.bat (fixes internet)
 
-resetnetwork.bat
+ResetNetwork.bat
 
-powerplanextra.bat
+PowerPlanExtra.bat
 
-nvprofileinspector.txt
+NVProfileInspector.txt
 
 nvcleanstall.txt
 
-devicemanager.txt
+DeviceManager.txt
 
 setacl.bat (requires SetACL.exe to be in scripts directory)
+
+InterruptAffinityPolicyTool.txt
