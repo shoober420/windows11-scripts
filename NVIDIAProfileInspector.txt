@@ -42,7 +42,7 @@ Prevent Antialiasing (OGL): 0x00000000 Disable none
 Anisotropic Filter - Optimization: On
 Anisotropic Filter - Sample Optimization: On
 Anisotropic Filtering - Mode: User-defined / Off
-Anisotropic Filtering - Setting: Off [Linear]
+Anisotropic Filtering - Setting: Off [Point]
 Anisotropic filtering (mode + setting): 0x10000001 Off [Linear]
 Prevent Anisotropic Filtering: On
 Texture Filtering - Driver Controlled LOD Bias: Off
