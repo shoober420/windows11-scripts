@@ -93,7 +93,7 @@ ASYNC10_NVAPI_MODE: 0x00000003 ALLOW_ALL - Allow all optimizations
 ASYNC10_OOO_QUERY_LIMIT: 0x00010000 (Battlefield 3)
 ASYNC10_PRESENT_MODE: 0x53855200 Sync - DX10 present will be sync call
 ASYNC9_ENABLE: 0x37605835 App - Enable AsyncDevice except in configs that do not work (some SLI, Optimus) or if the application requested to disable them
-ASYNC0_PRESENT_MODE: 0x53855200 Sync - All DX9 presents will be synchronous
+ASYNC9_PRESENT_MODE: 0x53855200 Sync - All DX9 presents will be synchronous
 CULL_BEFORE_FETCH: 0x00000006 Dynamic
 MAX_PENDING_CMD_BUFFERS: 0x00000001 1
 MCFORCEHOSTSTAGINGBUFFERSIZE: 0x00040000 Default - size of host staging buffer, mostly for early push
