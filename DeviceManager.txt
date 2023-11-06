@@ -23,8 +23,13 @@ Software devices:
 Microsoft Device Association Root Enumerator
 Microsoft GS Wavetable Synth
 
+Sound, video and game controllers:
+--------------------------------------
+High Definition Audio Device
+
 System devices:
 --------------------------------
+Composite Bus Enumerator
 High precision event timer
 Microsoft Hyper-V Virtualization Infrastructure Driver
 Microsoft Virtual Drive Enumerator
