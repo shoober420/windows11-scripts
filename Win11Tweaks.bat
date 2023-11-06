@@ -2387,6 +2387,18 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "Globa
 ECHO Yes | xcopy "%USERPROFILE%\Downloads\windows11-batch-scripts-main\SetTimerResolution.bat" "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
 
 rem Long Quantum
+rem 2A Hex = Short, Fixed , High foreground boost.
+rem 29 Hex = Short, Fixed , Medium foreground boost.
+rem 28 Hex = Short, Fixed , No foreground boost.
+rem 26 Hex = Short, Variable , High foreground boost.
+rem 25 Hex = Short, Variable , Medium foreground boost.
+rem 24 Hex = Short, Variable , No foreground boost
+rem 1A Hex = Long, Fixed, High foreground boost.
+rem 19 Hex = Long, Fixed, Medium foreground boost.
+rem 18 Hex = Long, Fixed, No foreground boost.
+rem 16 Hex = Long, Variable, High foreground boost.
+rem 15 Hex = Long, Variable, Medium foreground boost.
+rem 14 Hex = Long, Variable, No foreground boost.
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\PriorityControl" /v "Win32PrioritySeparation" /t REG_DWORD /d "26" /f
 reg add "HKLM\SYSTEM\ControlSet001\Control\PriorityControl" /v "Win32PrioritySeparation" /t REG_DWORD /d "26" /f
 
