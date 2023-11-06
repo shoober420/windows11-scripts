@@ -36,3 +36,4 @@ Microsoft Virtual Drive Enumerator
 NDIS Virtual Network Adaptor Enumerator
 Remote Desktop Device Redirector Bus
 Resource Hub proxy device
+UMBus Root Bus Enumerator
