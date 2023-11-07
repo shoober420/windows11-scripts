@@ -2399,8 +2399,8 @@ rem 18 Hex = Long, Fixed, No foreground boost.
 rem 16 Hex = Long, Variable, High foreground boost.
 rem 15 Hex = Long, Variable, Medium foreground boost.
 rem 14 Hex = Long, Variable, No foreground boost.
-rem Best input: Short, Fixed, No boost
-rem Best performance: Long, Variable, High Boost
+rem Best input: Short, Fixed, No boost (28)
+rem Best performance: Long, Variable, High Boost (
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\PriorityControl" /v "Win32PrioritySeparation" /t REG_DWORD /d "26" /f
 reg add "HKLM\SYSTEM\ControlSet001\Control\PriorityControl" /v "Win32PrioritySeparation" /t REG_DWORD /d "26" /f
 
