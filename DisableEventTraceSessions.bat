@@ -1,4 +1,5 @@
 rem Disable Event Trace Sessions
+rem NEVER disable UBPM, required by Windows
 
 ECHO Yes | reg delete "HKLM\SYSTEM\ControlSet001\Control\WMI\Autologger\Cellcore"
 ECHO Yes | reg delete "HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\Cellcore"
@@ -28,5 +29,15 @@ ECHO Yes | reg delete "HKLM\SYSTEM\ControlSet001\Control\WMI\Autologger\WiFiDriv
 ECHO Yes | reg delete "HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\WiFiDriverIHVSession"
 ECHO Yes | reg delete "HKLM\SYSTEM\ControlSet001\Control\WMI\Autologger\WdiContextLog"
 ECHO Yes | reg delete "HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\WdiContextLog"
+ECHO Yes | reg delete "HKLM\SYSTEM\ControlSet001\Control\WMI\Autologger\DefenderApiLogger"
+ECHO Yes | reg delete "HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\DefenderApiLogger"
+ECHO Yes | reg delete "HKLM\SYSTEM\ControlSet001\Control\WMI\Autologger\DefenderAuditLogger"
+ECHO Yes | reg delete "HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\DefenderAuditLogger"
+ECHO Yes | reg delete "HKLM\SYSTEM\ControlSet001\Control\WMI\Autologger\EventLog-Application"
+ECHO Yes | reg delete "HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\EventLog-Application"
+ECHO Yes | reg delete "HKLM\SYSTEM\ControlSet001\Control\WMI\Autologger\EventLog-Security"
+ECHO Yes | reg delete "HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\EventLog-Security"
+ECHO Yes | reg delete "HKLM\SYSTEM\ControlSet001\Control\WMI\Autologger\EventLog-System"
+ECHO Yes | reg delete "HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\EventLog-System"
 
 PAUSE
