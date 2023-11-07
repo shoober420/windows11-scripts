@@ -74,3 +74,5 @@ InterruptAffinityPolicyTool.txt
 WinInsiderUpdateChecklist.txt (to-do list when new Windows Insider build is installed)
 
 SetTimerResolution.bat (script needed to launch SetTimerResolution.exe at boot)
+
+DisableEventTraceSessions.bat (disable logs)
