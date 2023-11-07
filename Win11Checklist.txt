@@ -745,25 +745,26 @@ Disable GIGABYTE update service through BIOS > Settings > IO Ports > Gigabyte Ut
 
 ---   https://ss64.com/nt/run.html   ---
 
-mmsys.cpl to open sound settings
-explorer to open file explorer
-services.msc to edit services
-devmgmt.msc to open device manager
-ncpa.cpl opens Network Settings (needs UI enabled)
-inetcpl.cpl to open Internet Properties
-appwiz.cpl to uninstall and remove programs (needs UI enabled)
-ms-settings: to open settings app (needs UI enabled)
-ms-windows-store: to open microsoft store app (needs store and UI enabled)
-eventvwr to open Event Viewer to see event log
-taskschd.msc to open Task Scheduler
-compmgmt.msc to open Computer Management program
-control opens Control Panel (needs UI enabled)
-windowsdefender: to open Windows Security app
-firewall.cpl to open Windows Firewall
-desk.cpl ,5 opens Desktop Icon Settings
-powercfg.cpl opens Power Options
-msinfo32 opens System Information
-nvidia-smi displays video card information (driver version)
+mmsys.cpl - sound settings
+explorer - file explorer
+services.msc - services
+devmgmt.msc - device manager
+ncpa.cpl - Network Settings (needs UI enabled)
+inetcpl.cpl - Internet Properties
+appwiz.cpl - uninstall and remove programs (needs UI enabled)
+ms-settings: - settings app (needs UI enabled)
+ms-windows-store: - microsoft store app (needs store and UI enabled)
+eventvwr - Event Viewer to see event log
+taskschd.msc - Task Scheduler
+compmgmt.msc - Computer Management program
+control - Control Panel (needs UI enabled)
+windowsdefender: - Windows Security app
+firewall.cpl - Windows Firewall
+desk.cpl ,5 - Desktop Icon Settings
+powercfg.cpl - Power Options
+msinfo32 - System Information
+nvidia-smi - video card information (driver version)
+perfmon - Performance Monitor
 
 C:\Program Files\WindowsApps\NVIDIACorp.NVIDIAControlPanel_8.1.962.0_x64__56jybvy8sckqj\nvcplui.exe - Nvidia control panel
 C:\Program Files\WindowsApps\Microsoft.DesktopAppInstaller_1.22.2782.0_x64__8wekyb3d8bbwe - winget
