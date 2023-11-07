@@ -2401,8 +2401,8 @@ rem 15 Hex = Long, Variable, Medium foreground boost.
 rem 14 Hex = Long, Variable, No foreground boost.
 rem Best input: Short, Fixed, No boost (28)
 rem Best performance: Long, Variable, High Boost (16)
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\PriorityControl" /v "Win32PrioritySeparation" /t REG_DWORD /d "26" /f
-reg add "HKLM\SYSTEM\ControlSet001\Control\PriorityControl" /v "Win32PrioritySeparation" /t REG_DWORD /d "26" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\PriorityControl" /v "Win32PrioritySeparation" /t REG_DWORD /d "0x00000016" /f
+reg add "HKLM\SYSTEM\ControlSet001\Control\PriorityControl" /v "Win32PrioritySeparation" /t REG_DWORD /d "0x00000016" /f
 
 rem NVIDIA video card tweaks, last key may vary from 0000 to 0001 if dual NVIDIA/AMD machine is used
 rem Second to last key is the "Class Guid"
