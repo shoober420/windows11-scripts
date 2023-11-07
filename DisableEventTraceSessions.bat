@@ -1,8 +1,6 @@
 rem Disable Event Trace Sessions
 rem NEVER disable UBPM, required by Windows
 
-ECHO Yes | reg delete "HKLM\SYSTEM\ControlSet001\Control\WMI\Autologger\Cellcore"
-ECHO Yes | reg delete "HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\Cellcore"
 ECHO Yes | reg delete "HKLM\SYSTEM\ControlSet001\Control\WMI\Autologger\Circular Kernel Context Logger"
 ECHO Yes | reg delete "HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\Circular Kernel Context Logger"
 ECHO Yes | reg delete "HKLM\SYSTEM\ControlSet001\Control\WMI\Autologger\FilterMgr-Logger"
@@ -13,12 +11,8 @@ ECHO Yes | reg delete "HKLM\SYSTEM\ControlSet001\Control\WMI\Autologger\Microsof
 ECHO Yes | reg delete "HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\Microsoft-Windows-ProjFS-Filter-Log"
 ECHO Yes | reg delete "HKLM\SYSTEM\ControlSet001\Control\WMI\Autologger\Microsoft-Windows-Rdp-Graphics-RdpIdd-Trace"
 ECHO Yes | reg delete "HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\Microsoft-Windows-Rdp-Graphics-RdpIdd-Trace"
-ECHO Yes | reg delete "HKLM\SYSTEM\ControlSet001\Control\WMI\Autologger\NetCore"
-ECHO Yes | reg delete "HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\NetCore"
 ECHO Yes | reg delete "HKLM\SYSTEM\ControlSet001\Control\WMI\Autologger\NtfsLog"
 ECHO Yes | reg delete "HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\NtfsLog"
-ECHO Yes | reg delete "HKLM\SYSTEM\ControlSet001\Control\WMI\Autologger\RadioMgr"
-ECHO Yes | reg delete "HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\RadioMgr"
 ECHO Yes | reg delete "HKLM\SYSTEM\ControlSet001\Control\WMI\Autologger\ReFSLog"
 ECHO Yes | reg delete "HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\ReFSLog"
 ECHO Yes | reg delete "HKLM\SYSTEM\ControlSet001\Control\WMI\Autologger\UnionFS-Filter"
@@ -35,9 +29,15 @@ ECHO Yes | reg delete "HKLM\SYSTEM\ControlSet001\Control\WMI\Autologger\Defender
 ECHO Yes | reg delete "HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\DefenderAuditLogger"
 ECHO Yes | reg delete "HKLM\SYSTEM\ControlSet001\Control\WMI\Autologger\EventLog-Application"
 ECHO Yes | reg delete "HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\EventLog-Application"
-ECHO Yes | reg delete "HKLM\SYSTEM\ControlSet001\Control\WMI\Autologger\EventLog-Security"
-ECHO Yes | reg delete "HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\EventLog-Security"
 ECHO Yes | reg delete "HKLM\SYSTEM\ControlSet001\Control\WMI\Autologger\EventLog-System"
 ECHO Yes | reg delete "HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\EventLog-System"
+ECHO Yes | reg delete "HKLM\SYSTEM\ControlSet001\Control\WMI\Autologger\EventLog-Security"
+ECHO Yes | reg delete "HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\EventLog-Security"
+ECHO Yes | reg delete "HKLM\SYSTEM\ControlSet001\Control\WMI\Autologger\Cellcore"
+ECHO Yes | reg delete "HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\Cellcore"
+ECHO Yes | reg delete "HKLM\SYSTEM\ControlSet001\Control\WMI\Autologger\NetCore"
+ECHO Yes | reg delete "HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\NetCore"
+ECHO Yes | reg delete "HKLM\SYSTEM\ControlSet001\Control\WMI\Autologger\RadioMgr"
+ECHO Yes | reg delete "HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\RadioMgr"
 
 PAUSE
