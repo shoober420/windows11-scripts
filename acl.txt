@@ -11,3 +11,12 @@
 \Registry\machine\SYSTEM\CurrentControlSet\Services\WdNisDrv [1]
 \Registry\machine\SYSTEM\CurrentControlSet\Services\WdNisSvc [1]
 \Registry\machine\SYSTEM\CurrentControlSet\Services\WinDefend [1]
+
+\Registry\machine\SYSTEM\ControlSet001\Control\WMI\Autologger\EventLog-Security [1]
+\Registry\machine\SYSTEM\CurrentControlSet\Control\WMI\Autologger\EventLog-Security [1]
+\Registry\machine\SYSTEM\ControlSet001\Control\WMI\Autologger\Cellcore [1]
+\Registry\machine\SYSTEM\CurrentControlSet\Control\WMI\Autologger\Cellcore [1]
+\Registry\machine\SYSTEM\ControlSet001\Control\WMI\Autologger\NetCore [1]
+\Registry\machine\SYSTEM\CurrentControlSet\Control\WMI\Autologger\NetCore [1]
+\Registry\machine\SYSTEM\ControlSet001\Control\WMI\Autologger\RadioMgr [1]
+\Registry\machine\SYSTEM\CurrentControlSet\Control\WMI\Autologger\RadioMgr [1]
