@@ -13,7 +13,7 @@ GSYNC - Support Indicator Overlay: Off
 Maximum Pre-Rendered Frames: 1
 Prefered Refreshrate: Highest available
 Triple Buffering: Off
-Ultra Low Latency - CPL State: Off (will NOT improve Latency)
+Ultra Low Latency - CPL State: Off (will NOT improve latency)
 Ultra Low Latency - Enabled: Off (will NOT improve latency)
 Vertical Sync: Force Off
 Vertical Sync - Smooth AFR Behavior: Off
