@@ -2389,10 +2389,10 @@ ECHO Yes | xcopy "%USERPROFILE%\Downloads\windows11-batch-scripts-main\SetTimerR
 rem Thread Quantum
 rem https://smallvoid.com/article/winnt-process-scheduler-priority.html
 rem https://forums.blurbusters.com/viewtopic.php?t=8535
-rem 2A Hex = Short, Fixed, High foreground boost
+rem 2A Hex = Short, Fixed, High foreground boost (very good)
 rem 29 Hex = Short, Fixed, Medium foreground boost
 rem 28 Hex = Short, Fixed, No foreground boost
-rem 26 Hex = Short, Variable, High foreground boost
+rem 26 Hex = Short, Variable, High foreground boost (good)
 rem 25 Hex = Short, Variable, Medium foreground boost
 rem 24 Hex = Short, Variable, No foreground boost (lag spikes)
 rem 1A Hex = Long, Fixed, High foreground boost
