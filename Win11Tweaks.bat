@@ -2403,7 +2403,8 @@ rem 15 Hex = Long, Variable, Medium foreground boost
 rem 14 Hex = Long, Variable, No foreground boost
 rem Best input: Short
 rem Best performance: Long
-rem "No foreground boost" and "Variable" options cause lag spikes
+rem "No foreground boost" causes stuttering
+rem "Variable" causes lag
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\PriorityControl" /v "Win32PrioritySeparation" /t REG_DWORD /d "0x0000002A" /f
 reg add "HKLM\SYSTEM\ControlSet001\Control\PriorityControl" /v "Win32PrioritySeparation" /t REG_DWORD /d "0x0000002A" /f
 
