@@ -4,6 +4,12 @@ rem winget requires "Application Information" service to be running
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Appinfo" /v "Start" /t REG_DWORD /d "2" /f
 net start Appinfo
 
+rem Enable and start WMI
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD /d "2" /f
+sc config winmgmt start= auto
+net start winmgmt
+
 winget uninstall onedrive
 winget uninstall camera
 winget uninstall help
@@ -38,5 +44,11 @@ mstsc /uninstall
 rem Disable "Application Information" service
 net stop Appinfo
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Appinfo" /v "Start" /t REG_DWORD /d "4" /f
+
+rem Disable and stop WMI
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD /d "4" /f
+sc config winmgmt start= disabled
+net stop winmgmt
 
 PAUSE
