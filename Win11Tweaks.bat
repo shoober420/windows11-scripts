@@ -2391,8 +2391,8 @@ rem https://smallvoid.com/article/winnt-process-scheduler-priority.html
 rem https://forums.blurbusters.com/viewtopic.php?t=8535
 rem 2A Hex = Short, Fixed, High foreground boost
 rem 29 Hex = Short, Fixed, Medium foreground boost
-rem 28 Hex = Short, Fixed, No foreground boost (stuttering)
-rem 26 Hex = Short, Variable, High foreground boost (good)
+rem 28 Hex = Short, Fixed, No foreground boost
+rem 26 Hex = Short, Variable, High foreground boost
 rem 25 Hex = Short, Variable, Medium foreground boost
 rem 24 Hex = Short, Variable, No foreground boost (lag spikes)
 rem 1A Hex = Long, Fixed, High foreground boost
@@ -2401,9 +2401,8 @@ rem 18 Hex = Long, Fixed, No foreground boost
 rem 16 Hex = Long, Variable, High foreground boost
 rem 15 Hex = Long, Variable, Medium foreground boost
 rem 14 Hex = Long, Variable, No foreground boost
-rem Best input: Short, Fixed, High foreground boost
+rem Best input: Short, Fixed, No foreground boost (28)
 rem Best performance: Long, Variable, High foreground boost (16)
-rem "No foreground boost" causes stuttering
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\PriorityControl" /v "Win32PrioritySeparation" /t REG_DWORD /d "0x0000002A" /f
 reg add "HKLM\SYSTEM\ControlSet001\Control\PriorityControl" /v "Win32PrioritySeparation" /t REG_DWORD /d "0x0000002A" /f
 
