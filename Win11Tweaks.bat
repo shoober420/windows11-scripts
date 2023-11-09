@@ -2401,8 +2401,8 @@ rem 18 Hex = Long, Fixed, No foreground boost
 rem 16 Hex = Long, Variable, High foreground boost (best performance)
 rem 15 Hex = Long, Variable, Medium foreground boost
 rem 14 Hex = Long, Variable, No foreground boost
-rem Best input: Short and Fixed (2A)
-rem Best performance: Long and Variable (16)
+rem Best input: Short, Fixed, No foreground boost (28, but causes lag spikes)
+rem Best performance: Long, Variable, High foreground boost (16)
 rem "No foreground boost" causes lag spikes
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\PriorityControl" /v "Win32PrioritySeparation" /t REG_DWORD /d "0x0000002A" /f
 reg add "HKLM\SYSTEM\ControlSet001\Control\PriorityControl" /v "Win32PrioritySeparation" /t REG_DWORD /d "0x0000002A" /f
