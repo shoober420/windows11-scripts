@@ -741,7 +741,7 @@ Be sure that your signed into your Microsoft account under Settings > Accounts b
 
 Disable GIGABYTE update service through BIOS > Settings > IO Ports > Gigabyte Utility Downloader
 
-NVIDIA Reflex Low Latency: Enabled + Boost fixes stuttering
+NVIDIA Reflex Low Latency: Enabled + Boost MIGHT fix stuttering issues in CS2
 
 ---   https://ss64.com/nt/run.html   ---
 
