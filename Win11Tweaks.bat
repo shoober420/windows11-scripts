@@ -2386,7 +2386,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "Globa
 
 ECHO Yes | xcopy "%USERPROFILE%\Downloads\windows11-batch-scripts-main\SetTimerResolution.bat" "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
 
-rem Quantum Size
+rem Thread Quantum
 rem https://smallvoid.com/article/winnt-process-scheduler-priority.html
 rem https://forums.blurbusters.com/viewtopic.php?t=8535
 rem 2A Hex = Short, Fixed , High foreground boost.
@@ -2403,8 +2403,8 @@ rem 15 Hex = Long, Variable, Medium foreground boost.
 rem 14 Hex = Long, Variable, No foreground boost.
 rem Best input: Short, Fixed, No boost (28)
 rem Best performance: Long, Variable, High Boost (16)
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\PriorityControl" /v "Win32PrioritySeparation" /t REG_DWORD /d "0x00000016" /f
-reg add "HKLM\SYSTEM\ControlSet001\Control\PriorityControl" /v "Win32PrioritySeparation" /t REG_DWORD /d "0x00000016" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\PriorityControl" /v "Win32PrioritySeparation" /t REG_DWORD /d "0x00000028" /f
+reg add "HKLM\SYSTEM\ControlSet001\Control\PriorityControl" /v "Win32PrioritySeparation" /t REG_DWORD /d "0x00000028" /f
 
 rem NVIDIA video card tweaks, last key may vary from 0000 to 0001 if dual NVIDIA/AMD machine is used
 rem Second to last key is the "Class Guid"
