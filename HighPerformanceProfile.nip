@@ -19,7 +19,7 @@
       <ProfileSetting>
         <SettingNameInfo> </SettingNameInfo>
         <SettingID>390467</SettingID>
-        <SettingValue>0</SettingValue>
+        <SettingValue>2</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
@@ -247,7 +247,7 @@
       <ProfileSetting>
         <SettingNameInfo>FRL Low Latency</SettingNameInfo>
         <SettingID>277041152</SettingID>
-        <SettingValue>0</SettingValue>
+        <SettingValue>1</SettingValue>
         <ValueType>Dword</ValueType>
       </ProfileSetting>
       <ProfileSetting>
