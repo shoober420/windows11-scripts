@@ -2,3 +2,54 @@ DDU (Display Driver Uninstaller)
  - Download (https://www.wagnardsoft.com/forums/viewtopic.php?t=4731 / https://www.wagnardsoft.com/display-driver-uninstaller-DDU-)
  - Extract / Install
  - Disconnect internet (not needed if booting into safe mode)
+
+++++++++++
+NVIDIA:
+++++++++++
+
+-----------------------------
+General Options:
+-----------------------------
+
+CHECKMARK: Remove present and non-present monitors (Recommended)
+CHECKMARK: Save log files in startup path (Highly recommended)
+UNCHECK: Create a system restore point (if allowed)
+UNCHECK: Store a config file in roaming folder
+CHECKMARK: Automatically check for DDU updates on startup (Recommended)
+CHECKMARK: Remove Vulkan Runtime
+UNCHECK: Show offers from our partners
+
+-----------------------------
+NVIDIA Specific Options:
+-----------------------------
+
+CHECKMARK: Remove "C:\NVIDIA" driver folders
+CHECKMARK: Remove PhysX
+CHECKMARK: Remove 3DTV Play
+CHECKMARK: Remove Geforce Experience (GFE)
+CHECKMARK: Remove NVIDIA Broadcast
+CHECKMARK: (DCH driver) Remove the NVIDIA Control Panel installed from the Microsoft Store
+UNCHECK: Keep NVIDIA Control Panel Global / Program Settings
+
+-----------------------------
+AMD Specific Options:
+-----------------------------
+
+CHECKMARK: Remove "C:\AMD" driver folders
+CHECKMARK: Remove the driver/filter AMDKMPFD (A backup is recommended for AMD chipset)
+CHECKMARK: Remove AMD Audio Bus
+CHECKMARK: Remove AMD Crimson Shader Cache folder
+CHECKMARK: (DCH driver) Remove the AMD Control Panel installed from the Microsoft Store
+
+-----------------------------
+INTEL Specific Options:
+-----------------------------
+
+CHECKMARK: (DCH driver) Remove the INTEL Control Panel installed from the Microsoft Store
+
+-----------------------------
+Advanced Options (Change at your own risk):
+-----------------------------
+
+UNCHECK: Enable Safe Mode dialog (Not recommended until you tested Safe Mode manually)
+UNCHECK: Prevent downloads of drivers from "Windows update" when "Windows" search for a driver for a device.
