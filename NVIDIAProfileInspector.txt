@@ -117,7 +117,7 @@ PS_ALPHABETA_FRACTION - 0x000000FF Max
 SHADERMAXREGALLOWED: 0x00000400 Max - Specifies max register allowed when compiling/optimizing a shader
 SLIMOSAIC_CONTROL: 0x00000000 ALLOW_ALL - Allow all performance strategies
 STAGING_CACHE_SIZE: 0x10000001 Max
-SYSTEMCACHEDCOPYBEHAVIOR - 0x00000002 ALLOW_FOR_TEXTURES_WITH_SUBRESOURCES - Allow for textures with mips
+SYSMEMCACHEDCOPYBEHAVIOR - 0x00000002 ALLOW_FOR_TEXTURES_WITH_SUBRESOURCES - Allow for textures with mips
 
 Other
 -------------------------
