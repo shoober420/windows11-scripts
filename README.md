@@ -61,8 +61,6 @@ ResetNetwork.bat
 
 PowerPlanExtra.bat
 
-NVProfileInspector.txt
-
 NVCleanstall.txt
 
 DeviceManager.txt
@@ -78,3 +76,5 @@ SetTimerResolution.bat (script needed to launch SetTimerResolution.exe at boot)
 DisableEventTraceSessions.bat (disable logs)
 
 DDU.txt (Display Drivers Uninstaller)
+
+NVProfileInspectorHP.txt / NVProfileInspectorHQ.txt
