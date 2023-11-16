@@ -57,8 +57,8 @@ Texture Filtering - Trilinear Optimization: Off
 
 5 - Common
 -------------------------
-Ambient Occlusion - Usage: Disabled
-Ambient Occlusion - Setting: Off
+Ambient Occlusion - Usage: Enabled
+Ambient Occlusion - Setting: Quality
 Ansel - Enabled: Off (screenshot tool)
 CUDA - Force P2 State: Off
 Extension Limit (OGL): Off
