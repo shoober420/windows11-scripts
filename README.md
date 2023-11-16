@@ -78,3 +78,5 @@ DisableEventTraceSessions.bat (disable logs)
 DDU.txt (Display Drivers Uninstaller)
 
 NVProfileInspectorHPerf.txt / NVProfileInspectorHQual.txt
+
+HighPerformanceProfile.nip / HighQualityProfile.nip (NVProfileInspector profiles)
