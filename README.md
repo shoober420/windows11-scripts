@@ -63,7 +63,7 @@ PowerPlanExtra.bat
 
 NVProfileInspector.txt
 
-nvcleanstall.txt
+NVCleanstall.txt
 
 DeviceManager.txt
 
@@ -76,3 +76,5 @@ WinInsiderUpdateChecklist.txt (to-do list when new Windows Insider build is inst
 SetTimerResolution.bat (script needed to launch SetTimerResolution.exe at boot)
 
 DisableEventTraceSessions.bat (disable logs)
+
+DDU.txt (Display Drivers Uninstaller)
