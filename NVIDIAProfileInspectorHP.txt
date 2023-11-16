@@ -1,3 +1,5 @@
+NVIDIA Profile Inspector High Performance Settings
+
 2 - Sync and Refresh
 -------------------------
 Flip Indicator: Disabled
