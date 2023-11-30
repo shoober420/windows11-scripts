@@ -1,0 +1,54 @@
+NVIDIA Control Panel Performance Settings:
+--------------------------------------------
+
+Manage 3D Settings:
+--------------------------------------------
+
+Image Scaling: Off
+Ambient Occulsion: Off
+Anisotropic filtering: Off
+Antialiasing - FXAA: Off
+Antialiasing - Gamma correction: Off (makes image too bright)
+Antialiasing - Mode: Off
+Antialiasing - Setting: Application-controlled
+Antialiasing - Transparency: Off
+Background Application Max Frame Rate: Off
+CUDA - GPUs: All
+CUDA - Sysmem Fallback Policy: Prefer No Sysmem Fallback
+DSR - Factors: Off
+DSR - Smoothness: Off
+Low Latency Mode: Ultra
+Max Frame Rate: Off
+Multi-Frame Sampled AA (MFAA): Off
+OpenGL GDI compatibility: Prefer performance
+OpenGL rendering GPU: NVIDIA GeForce RTX 4090
+Power management mode: Prefer maximum performance
+Prefered refresh rate: Highest available
+Shader Cache Size: Unlimited
+Texture filtering - Anisotropic sample optimization: On
+Texture filtering - Negative LOD bias: Clamp
+Texture filtering - Quality: High performance
+Texture filtering - Trilinear optimization: On
+Threaded optimization: On
+Triple buffering: Off
+Vertical sync: Off
+Virtual Reality pre-rendered frames: 1
+Virtual Reality - Variable Rate Super Sampling: Off
+Vulkan/OpenGL present method: Prefer layered on DXGI swapchain
+
+Configure Surround, PhysX:
+--------------------------------------------
+
+PhysX settings - Processor: NVIDIA GeForce RTX 4090
+
+Adjust Desktop Color Settings:
+--------------------------------------------
+
+Digital vibrance: 100%
+Content type reported to the display: Games
+
+Adjust desktop size and position:
+--------------------------------------------
+
+Select a scaling mode: No scaling
+Perform scaling on: Display (GPU scaling adds latency)
