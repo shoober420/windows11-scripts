@@ -743,7 +743,7 @@ Disable GIGABYTE update service through BIOS > Settings > IO Ports > Gigabyte Ut
 
 NVIDIA Reflex Low Latency: Enabled + Boost fixes stuttering issues in cs2
 
-Perform scaling on: Display (lower latency and more performance than GPU)
+Perform scaling on: GPU (lower latency, sharper, and more performance than Display scaling)
 
 ---   https://ss64.com/nt/run.html   ---
 
