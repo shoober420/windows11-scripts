@@ -36,21 +36,21 @@ Antialiasing - Transparency Multisampling - Setting: 0x00000007 C4X_ALL - (Quali
 Antialiasing - Transparency Supersampling: Off / Multisampling
 Antialiasing (MSAA) - Behavior Flags: None
 Antialiasing (MSAA) - Mode: Override any application setting
-Antialiasing (MSAA) - Setting: 16x [16x CSAA (4 color + 12 cv samples)]
+Antialiasing (MSAA) - Setting: 8xQ [8x Multisampling]
 Prevent Antialiasing (OGL): 0x00000000 Disable none
 
 4 - Texture filtering
 -------------------------
 Anisotropic Filter - Optimization: Off
 Anisotropic Filter - Sample Optimization: Off
-Anisotropic Filtering - Mode: Application-controlled
+Anisotropic Filtering - Mode: User-defined / Off
 Anisotropic Filtering - Setting: 16x
 Anisotropic filtering (mode + setting): 0x10000010 16x
 Prevent Anisotropic Filtering: Off
 Texture Filtering - Driver Controlled LOD Bias: Off
 Texture Filtering - LOD Bias (DX): +0.000
 Texture Filtering - LOD Bias (OGL): +0.000
-Texture Filtering - Negative LOD Bias: Allow
+Texture Filtering - Negative LOD Bias: Clamp
 Texture Filtering - Quality: High Quality
 Texture Filtering - Quality Substitution: No Substitution
 Texture Filtering - Trilinear Optimization: Off
