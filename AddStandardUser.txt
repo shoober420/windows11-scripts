@@ -1,0 +1,6 @@
+rem Adds Standard User (non-microsoft account)
+
+rem net user /add shoober420 <password>
+
+rem YOU MUST USE ".\" before username to login
+rem .\shoober420
