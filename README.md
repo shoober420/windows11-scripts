@@ -82,3 +82,5 @@ NVProfileInspectorPerf.txt / NVProfileInspectorHQ.txt
 HighPerformanceProfile.nip / HighQualityProfile.nip (NVProfileInspector profiles)
 
 NVIDIAControlPanelHQ.txt / NVIDIAControlPanelPerf.txt
+
+DownloadChromium.txt
