@@ -7,3 +7,5 @@ rem .\shoober420
 
 rem type in administrator account name for XXXXX
 rem runas /user:XXXXX cmd
+
+rem display accounts using "net user"
