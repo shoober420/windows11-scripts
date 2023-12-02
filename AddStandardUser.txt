@@ -4,3 +4,6 @@ rem net user /add shoober420 <password>
 
 rem YOU MUST USE ".\" before username to login
 rem .\shoober420
+
+rem type in administrator account name for XXXXX
+rem runas /user:XXXXX cmd
