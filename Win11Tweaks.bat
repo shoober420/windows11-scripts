@@ -2387,25 +2387,28 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "Globa
 ECHO Yes | xcopy "%USERPROFILE%\Downloads\windows11-batch-scripts-main\SetTimerResolution.bat" "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
 
 rem delete Windows Defender user account
+net user WDAGUtilityAccount /active:no
 net user "WDAGUtilityAccount" /delete
 
 rem delete web sign-in user account
+net user WsiAccount /active:no
 net user "WsiAccount" /delete
 
 rem delete "defaultuser100000" account
+net user defaultuser100000 /active:no
 net user "defaultuser100000" /delete
 
 rem delete "DefaultAccount" account
-net user "DefaultAccount" /delete
 net user DefaultAccount /active:no
+net user "DefaultAccount" /delete
 
 rem delete guest account
-net user "Guest" /delete
 net user Guest /active:no
+net user "Guest" /delete
 
 rem delete administrator account
-net user "Administrator" /delete
 net user Administrator /active:no
+net user "Administrator" /delete
 
 rem Thread Quantum
 rem https://smallvoid.com/article/winnt-process-scheduler-priority.html
