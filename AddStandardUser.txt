@@ -1,9 +1,11 @@
 rem Adds Standard User (non-microsoft account)
 
-rem net user /add shoober420 <password>
+rem net user /add shoober420_- <password>
+
+rem use "_-" at the end of usernames for more security
 
 rem YOU MUST USE ".\" before username to login
-rem .\shoober420
+rem .\shoober420_-
 
 rem type in administrator account name for XXXXX
 rem runas /user:XXXXX cmd
