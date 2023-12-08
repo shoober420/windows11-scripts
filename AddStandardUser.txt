@@ -7,7 +7,10 @@ rem use "_-" at the end of usernames for more security
 rem YOU MUST USE ".\" before username to login
 rem .\shoober420_-
 
-rem type in administrator account name for XXXXX
-rem runas /user:XXXXX cmd
-
 rem display accounts using "net user"
+
+rem Enable admin under local user account
+rem execute RunasAdmin.bat script
+rem type in administrator account name for XXXXX
+rem open run
+rem runas /user:XXXXX cmd
