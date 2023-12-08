@@ -1,4 +1,5 @@
 rem Enable SAFE MODE
+rem Cant "RunasAdmin" for local user accounts in Safe Mode
 
 Hold Shift key while restarting PC
 
