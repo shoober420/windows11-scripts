@@ -1,7 +1,7 @@
 Device Manager > View tab > Devices by connection
 
 HID-complaint mouse: last CPU 
-HID Keyboard device: second to last CPU
+HID Keyboard Device: second to last CPU
 Standard NVM Express Controller: third to last CPU
 Network Adapter: fourth to last CPU
 NVIDIA GeForce RTX 4090: fifth to last CPU
