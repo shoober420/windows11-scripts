@@ -4,7 +4,7 @@ Hold Shift key while restarting PC
 
 "Choose an option" screen:
 
-Down arrow > Enter (Troubleshoot)
+Down arrow > Down arrow > Enter (Troubleshoot)
 
 "Troubleshoot" screen
 
@@ -14,5 +14,7 @@ Down arrow > Enter (Startup Settings)
 
 Enter
 
-F4
+After reboot / "Startup Settings" screen
+
+F4 (Enable Safe Mode)
 
