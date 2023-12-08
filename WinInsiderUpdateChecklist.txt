@@ -3,3 +3,4 @@ Update Video Drivers
  - AMD: https://www.amd.com/en/support
 Disable Drivers in Device Manager
 Setup Microsoft Interrupt Affinity Tool
+Run batch scripts
