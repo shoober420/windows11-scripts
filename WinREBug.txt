@@ -1,0 +1,18 @@
+rem Enable SAFE MODE
+
+Hold Shift key while restarting PC
+
+"Choose an option" screen:
+
+Down arrow > Enter (Troubleshoot)
+
+"Troubleshoot" screen
+
+Down arrow > Enter (Advanced options)
+
+Down arrow > Enter (Startup Settings)
+
+Enter
+
+F4
+
