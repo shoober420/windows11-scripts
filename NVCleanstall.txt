@@ -16,6 +16,6 @@ Disable Ansel
 Disable Driver Telemetry (breaks install)
 Disable NVIDIA HD Audio device sleep timer
 Enable Message Signaled Interrupts
- - Interrupt Policy: Default
+ - Interrupt Policy: Specified Processors > Select Processors > fifth to last CPU
  - Interrupt Priority: High
 Disable HDCP
