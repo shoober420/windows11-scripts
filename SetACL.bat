@@ -1,4 +1,5 @@
 rem Script for taking ownership of Windows Defender services and other bloat
+rem Requires SetACL.exe (https://helgeklein.com/download/)
 
 SetACL.exe -on "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\TrustedInstaller" -ot reg -actn setowner -ownr "n:Administrators"
 SetACL.exe -on "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\TrustedInstaller" -ot reg -actn ace -ace "n:Administrators;p:full"
