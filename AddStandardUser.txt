@@ -9,5 +9,7 @@ REM display accounts: net user
 REM add user: net user /add <username> <password>
 REM change user password: net user <username> <password>
 
-REM Cant enable "RunasAdmin" for local users under Safe Mode
+REM admin rights command prompt under standard user account
+REM cant enable "RunasAdmin" for local users under Safe Mode
+
 REM runas /user:<adminaccount> cmd
