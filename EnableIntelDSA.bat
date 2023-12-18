@@ -7,6 +7,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\DSAService" /v "Start" /t REG_DWORD /d "2" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\DSAUpdateService" /v "Start" /t REG_DWORD /d "2" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\SystemUsageReportSvc_QUEENCREEK" /v "Start" /t REG_DWORD /d "2" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Intel(R) SUR QC SAM" /v "Start" /t REG_DWORD /d "2" /f
 
 net start TrustedInstaller
 net start Appinfo
@@ -14,5 +15,6 @@ net start Winmgmt
 net start DSAService
 net start DSAUpdateService
 net start SystemUsageReportSvc_QUEENCREEK
+net start "Intel(R) SUR QC SAM"
 
 PAUSE
