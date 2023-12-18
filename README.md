@@ -79,7 +79,7 @@ DDU.txt (Display Drivers Uninstaller)
 
 NVProfileInspectorPerf.txt / NVProfileInspectorHQ.txt
 
-HighPerformanceProfile.nip / HighQualityProfile.nip (NVProfileInspector profiles)
+PerformanceProfile.nip / HighQualityProfile.nip (NVProfileInspector profiles)
 
 NVIDIAControlPanelHQ.txt / NVIDIAControlPanelPerf.txt
 
