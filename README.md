@@ -90,3 +90,5 @@ UserManagement.txt
 DisableRunasAdministrator.bat / EnableRunasAdministrator.bat
 
 DisableIntelDSA.bat / EnableIntelDSA.bat
+
+AdminCmdPrompt.bat
