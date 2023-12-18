@@ -85,6 +85,8 @@ NVIDIAControlPanelHQ.txt / NVIDIAControlPanelPerf.txt
 
 DownloadChromium.txt
 
-AddStandardUser.txt
+UserManagement.txt
 
 DisableRunasAdministrator.bat / EnableRunasAdministrator.bat
+
+DisableIntelDSA.bat / EnableIntelDSA.bat
