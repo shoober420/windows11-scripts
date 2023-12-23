@@ -68,4 +68,11 @@ taskkill /im P508PowerAgent.exe /f
 rem del "C:\Program Files (x86)\ASUS\ArmouryDevice\dll\ShareFromArmouryIII\Mouse\ROG STRIX CARRY\P508PowerAgent.exe" /s /f /q
 ren "C:\Program Files (x86)\ASUS\ArmouryDevice\dll\ShareFromArmouryIII\Mouse\ROG STRIX CARRY\P508PowerAgent.exe" "P508PowerAgent.exe.bak"
 
+rem Disable INTEL Energy Server Service
+takeown /s %computername% /u %username% /f "C:\Program Files\Intel\SUR\QUEENCREEK\x64\esrv_svc.exe"
+icacls "C:\Program Files\Intel\SUR\QUEENCREEK\x64\esrv_svc.exe" /grant:r %username%:F
+taskkill /im esrv_svc.exe /f
+rem del "C:\Program Files\Intel\SUR\QUEENCREEK\x64\esrv_svc.exe" /s /f /q
+ren "C:\Program Files\Intel\SUR\QUEENCREEK\x64\esrv_svc.exe" "esrv_svc.exe.bak"
+
 PAUSE
