@@ -16,6 +16,9 @@ reg add "HKLM\System\CurrentControlSet\Services\WdNisSvc" /v "Start" /t REG_DWOR
 reg add "HKLM\System\CurrentControlSet\Services\WinDefend" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\System\CurrentControlSet\Services\MDCoreSvc" /v "Start" /t REG_DWORD /d "4" /f
 
+REM Disable Windows Firewall
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\mpssvc" /v "Start" /t REG_DWORD /d "4" /f
+
 rem Disable Anti-malware Service Executable (to restore run "sfc /scannow")
 takeown /s %computername% /u %username% /f "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.23090.2008-0\MsMpEng.exe"
 icacls "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.23090.2008-0\MsMpEng.exe" /grant:r %username%:F
