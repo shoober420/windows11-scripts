@@ -576,7 +576,7 @@ Download System Informer (nightly builds)
 WinRE***
  - command prompt
  - regedit
- - load the registry hive by clicking on HKEY_LOCAL_MACHINE, file and load hive in c:\windows\system32\config\system
+ - load the registry hive by clicking on HKEY_LOCAL_MACHINE, file and load hive in c:\windows\system32\config\SYSTEM
  - name it test, revert the change, file and unload hive
 
 Backup files from WinRE
