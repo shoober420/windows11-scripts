@@ -1,4 +1,5 @@
 rem Remove bloat windows apps
+REM "Get-WindowsOptionalFeature -Online" shows enabled features
 
 rem winget requires "Application Information" service to be running
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Appinfo" /v "Start" /t REG_DWORD /d "2" /f
