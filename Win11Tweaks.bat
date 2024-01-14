@@ -1474,6 +1474,7 @@ bcdedit /set nolowmem Yes
 bcdedit /set allowedinmemorysettings 0x0
 bcdedit /set isolatedcontext No
 bcdedit /set pae ForceEnable
+bcdedit /set hypervisorlaunchtype off
 
 
 
