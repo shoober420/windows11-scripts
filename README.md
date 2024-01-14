@@ -92,3 +92,5 @@ DisableRunasAdministrator.bat / EnableRunasAdministrator.bat
 DisableIntelDSA.bat / EnableIntelDSA.bat
 
 AdminCmdPrompt.bat
+
+DisableMaintenanceServices.bat / EnableMaintenanceServices.bat
