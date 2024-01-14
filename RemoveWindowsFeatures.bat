@@ -53,6 +53,7 @@ Dism /Online /Disable-Feature /FeatureName:WorkFolders-Client /Quiet /NoRestart
 Dism /Online /Disable-Feature /FeatureName:NetFx3 /Quiet /NoRestart
 Dism /Online /Disable-Feature /FeatureName:LegacyComponents /Quiet /NoRestart
 Dism /Online /Disable-Feature /FeatureName:DirectPlay /Quiet /NoRestart
+dism /online /disable-feature /featurename:Microsoft-hyper-v-all
 
 dism /online /Remove-Package /PackageName:Microsoft-Windows-HVSI-Components-Package /NoRestart
 dism /online /Remove-Package /PackageName:Microsoft-Windows-CodeIntegrity-Diagnostics-Package /NoRestart
