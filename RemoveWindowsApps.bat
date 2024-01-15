@@ -39,6 +39,8 @@ powershell -command "Get-AppxPackage *Microsoft.MicrosoftEdgeDevToolsClient* | R
 powershell -command "Get-AppxPackage *Microsoft.Windows.ShellExperienceHost* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *Microsoft.Windows.StartMenuExperienceHost* | Remove-AppxPackage"
 
+
+
 rem Uninstalls "Remote Desktop Connection" program
 mstsc /uninstall
 
