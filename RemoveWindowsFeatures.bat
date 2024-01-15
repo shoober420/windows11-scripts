@@ -54,6 +54,14 @@ Dism /Online /Disable-Feature /FeatureName:NetFx3 /Quiet /NoRestart
 Dism /Online /Disable-Feature /FeatureName:LegacyComponents /Quiet /NoRestart
 Dism /Online /Disable-Feature /FeatureName:DirectPlay /Quiet /NoRestart
 dism /online /disable-feature /featurename:Microsoft-hyper-v-all
+Dism /Online /Disable-Feature /FeatureName:Client-ProjFS /Quiet /NoRestart
+Dism /Online /Disable-Feature /FeatureName:TelnetClient /Quiet /NoRestart
+Dism /Online /Disable-Feature /FeatureName:TFTP /Quiet /NoRestart
+Dism /Online /Disable-Feature /FeatureName:TIFFIFilter /Quiet /NoRestart
+Dism /Online /Disable-Feature /FeatureName:NetFx4-AdvSrvs /Quiet /NoRestart
+Dism /Online /Disable-Feature /FeatureName:WCF-Services45 /Quiet /NoRestart
+
+
 
 dism /online /Remove-Package /PackageName:Microsoft-Windows-HVSI-Components-Package /NoRestart
 dism /online /Remove-Package /PackageName:Microsoft-Windows-CodeIntegrity-Diagnostics-Package /NoRestart
@@ -90,6 +98,15 @@ dism /online /Remove-Package /PackageName:Microsoft-Windows-WMPNetworkSharingSer
 dism /online /Remove-Package /PackageName:OpenSSH-Client /NoRestart
 dism /online /Remove-Package /PackageName:Microsoft-Windows-Internet-Browser-Package /NoRestart
 dism /online /Remove-Package /PackageName:Microsoft-Windows-MicrosoftEdgeDevToolsClient-Package /NoRestart
+dism /online /Remove-Package /PackageName:Microsoft-hyper-v-all /NoRestart
+dism /online /Remove-Package /PackageName:Client-ProjFS /NoRestart
+dism /online /Remove-Package /PackageName:TelnetClient /NoRestart
+dism /online /Remove-Package /PackageName:TFTP /NoRestart
+dism /online /Remove-Package /PackageName:TIFFIFilter /NoRestart
+dism /online /Remove-Package /PackageName:NetFx4-AdvSrvs /NoRestart
+dism /online /Remove-Package /PackageName:WCF-Services45 /NoRestart
+
+
 
 rem Disable Windows update services required for DISM
 
