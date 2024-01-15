@@ -1,5 +1,6 @@
 rem Remove bloat windows apps
-REM "Get-WindowsOptionalFeature -Online" shows enabled features
+REM "DISM /online /get-features /format:table" shows installed features
+REM "Get-WindowsOptionalFeature -Online" shows installed features
 
 rem winget requires "Application Information" service to be running
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Appinfo" /v "Start" /t REG_DWORD /d "2" /f
@@ -38,6 +39,12 @@ powershell -command "Get-AppxPackage *Microsoft.MicrosoftEdgeStable* | Remove-Ap
 powershell -command "Get-AppxPackage *Microsoft.MicrosoftEdgeDevToolsClient* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *Microsoft.Windows.ShellExperienceHost* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *Microsoft.Windows.StartMenuExperienceHost* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Client-ProjFS* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *TelnetClient* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *TFTP* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *TIFFIFilter* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *NetFx4-AdvSrvs* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *WCF-Services45* | Remove-AppxPackage"
 
 
 
