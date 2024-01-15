@@ -1,5 +1,7 @@
 rem Disable and remove Windows features
 rem Windows update services required for DISM
+REM "DISM /online /get-features /format:table" shows installed features
+REM "Get-WindowsOptionalFeature -Online" shows installed features
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\UsoSvc" /v "Start" /t REG_DWORD /d "2" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\wisvc" /v "Start" /t REG_DWORD /d "2" /f
