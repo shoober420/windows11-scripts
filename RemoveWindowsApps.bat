@@ -76,9 +76,9 @@ powershell -command "Get-AppxPackage *Microsoft.DolbyAudioExtensions* | Remove-A
 powershell -command "Get-AppxPackage *Microsoft.MicrosoftOfficeHub* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *microsoft.windowscommunicationsapps* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *Microsoft.WindowsTerminal* | Remove-AppxPackage"
-
-
-
+powershell -command "Get-AppxPackage *Microsoft.Windows.NarratorQuickStart* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.Windows.ContentDeliveryManager* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.Win32WebViewHost* | Remove-AppxPackage"
 
 
 rem Uninstalls "Remote Desktop Connection" program
