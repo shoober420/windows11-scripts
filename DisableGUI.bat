@@ -1,4 +1,4 @@
-REM Enable Minimal GUI (no taskbar, no icons, no background)
+REM Disable GUI (no taskbar, no icons, no background)
 
 net stop StateRepository
 net stop TimeBrokerSvc
