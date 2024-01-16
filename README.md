@@ -94,3 +94,5 @@ DisableIntelDSA.bat / EnableIntelDSA.bat
 AdminCmdPrompt.bat
 
 DisableMaintenanceServices.bat / EnableMaintenanceServices.bat
+
+MinimalGUI.bat
