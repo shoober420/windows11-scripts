@@ -96,3 +96,5 @@ AdminCmdPrompt.bat
 DisableMaintenanceServices.bat / EnableMaintenanceServices.bat
 
 DisableGUI.bat / EnableGUI.bat
+
+DeleteWindowsAppDir.bat
