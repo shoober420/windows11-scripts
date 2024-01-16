@@ -95,4 +95,4 @@ AdminCmdPrompt.bat
 
 DisableMaintenanceServices.bat / EnableMaintenanceServices.bat
 
-MinimalGUI.bat
+DisableGUI.bat / EnableGUI.bat
