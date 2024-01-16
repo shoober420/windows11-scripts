@@ -10,6 +10,8 @@ rem Enable and start WMI
 net stop winmgmt
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD /d "4" /f
 
+net stop ClipSVC
+
 net stop SENS
 net stop TimeBrokerSvc
 net stop SystemEventsBroker
@@ -31,6 +33,8 @@ net stop DoSvc
 net stop DiagTrack
 net stop NetSetupSvc
 net stop DsmSvc
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\ClipSVC" /v "Start" /t REG_DWORD /d "4" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\SENS" /t REG_DWORD /d "4" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\TimeBrokerSvc" /v "Start" /t REG_DWORD /d "4" /f
