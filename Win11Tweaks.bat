@@ -2434,6 +2434,10 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "Globa
 
 ECHO Yes | xcopy "%USERPROFILE%\Downloads\windows11-batch-scripts-main\SetTimerResolution.bat" "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
 
+REM Make sure services dont get reenabled by Windows
+ECHO Yes | xcopy "%USERPROFILE%\Downloads\windows11-batch-scripts-main\DisableServices.bat" "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
+ECHO Yes | xcopy "%USERPROFILE%\Downloads\windows11-batch-scripts-main\DisableWinUpdate.bat" "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
+
 rem delete Windows Defender user account
 net user WDAGUtilityAccount /active:no
 net user "WDAGUtilityAccount" /delete
