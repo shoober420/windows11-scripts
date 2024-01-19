@@ -25,7 +25,7 @@ DisableAppX.bat / EnableAppX.bat
 
 DisableWinHTTP.bat / EnableWinHTTP.bat (borks internet if disabled)
 
-DisableStateRepository.bat / enablestaterepository.bat (ultra mega minimal only, borks themes and UI)
+DisableStateRepository.bat / EnableStateRepository.bat (ultra mega minimal only, borks themes and GUI)
 
 run.bat
 
@@ -100,3 +100,5 @@ DisableGUI.bat / EnableGUI.bat (no taskbar, no icons, no background)
 DeleteWindowsAppDir.bat
 
 DisableWinFirewall.bat / EnableWinFirewall.bat (use router firewall instead)
+
+DisableWinDefender.bat (AV software is bloat)
