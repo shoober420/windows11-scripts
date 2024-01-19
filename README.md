@@ -43,7 +43,7 @@ StartGraphicsPerfSvc.bat
 
 PowerPlanSettings.bat (adds duplicate power plan everytime command is executed, so use powerplan.bat only once after every new build install unless already present)
 
-DisableWindowsFeatures.bat (windows update services required for DISM)
+RemoveWindowsFeatures.bat (windows update services required for DISM)
 
 Internet&SecuritySettings.bat (powershell requires WMI service)
 
@@ -98,3 +98,5 @@ DisableMaintenanceServices.bat / EnableMaintenanceServices.bat
 DisableGUI.bat / EnableGUI.bat (no taskbar, no icons, no background)
 
 DeleteWindowsAppDir.bat
+
+DisableWinFirewall.bat / EnableWinFirewall.bat (use router firewall instead)
