@@ -101,4 +101,4 @@ DeleteWindowsAppDir.bat
 
 DisableWinFirewall.bat / EnableWinFirewall.bat (use router firewall instead)
 
-DisableWinDefender.bat (AV software is bloat)
+DisableWindowsDefender.bat (AV software is bloat)
