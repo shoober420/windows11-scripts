@@ -1,8 +1,7 @@
-rem Disable all Windows Defender components
+REM Disable all Windows Defender components
 REM AV Software is bloat
+REM Use router firewall instead
 REM Run in SAFE MODE
-REM reminder: try * where version is for fix
-rem Make sure program versions are the same for the directory path
 
 rem Disable Microsoft SAM (Security Accounts Manager)
 reg add "HKLM\System\CurrentControlSet\Services\SamSs" /v "Start" /t REG_DWORD /d "4" /f
@@ -24,18 +23,26 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\mpssvc" /v "Start" /t REG_DWORD 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\BFE" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\wtd" /v "Start" /t REG_DWORD /d "4" /f
 
-rem Disable Anti-malware Service Executable (to restore run "sfc /scannow")
-takeown /s %computername% /u %username% /f "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.23090.2008-0\MsMpEng.exe"
-icacls "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.23090.2008-0\MsMpEng.exe" /grant:r %username%:F
+REM Disable Anti-malware and Network Realtime Inspection Services
+takeown /s %computername% /u %username% /f "C:\ProgramData\Microsoft\Windows Defender\Platform"
+icacls "C:\ProgramData\Microsoft\Windows Defender\Platform" /grant:r %username%:F
 taskkill /im MsMpEng.exe /f
-rem del "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.23090.2008-0\MsMpEng.exe" /s /f /q
-ren "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.23090.2008-0\MsMpEng.exe" "MsMpEng.exe.bak"
+taskkill /im NisSrv.exe
+REM del "C:\ProgramData\Microsoft\Windows Defender\Platform" /s /f /q
+ren "C:\ProgramData\Microsoft\Windows Defender\Platform" "Platform.bak"
+
+rem Disable Anti-malware Service Executable (to restore run "sfc /scannow")
+rem takeown /s %computername% /u %username% /f "C:\ProgramData\Microsoft\Windows Defender\Platform\*\MsMpEng.exe"
+rem icacls "C:\ProgramData\Microsoft\Windows Defender\Platform\*\MsMpEng.exe" /grant:r %username%:F
+rem taskkill /im MsMpEng.exe /f
+rem del "C:\ProgramData\Microsoft\Windows Defender\Platform\*\MsMpEng.exe" /s /f /q
+rem ren "C:\ProgramData\Microsoft\Windows Defender\Platform\*\MsMpEng.exe" "MsMpEng.exe.bak"
 
 rem Disable Microsoft Network Realtime Inspection Service (to restore run "sfc /scannow")
-takeown /s %computername% /u %username% /f "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.23090.2008-0\NisSrv.exe"
-icacls "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.23090.2008-0\NisSrv.exe" /grant:r %username%:F
-taskkill /im NisSrv.exe /f
-rem del "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.23090.2008-0\NisSrv.exe" /s /f /q
-ren "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.23090.2008-0\NisSrv.exe" "NisSrv.exe.bak"
+rem takeown /s %computername% /u %username% /f "C:\ProgramData\Microsoft\Windows Defender\Platform\*\NisSrv.exe"
+rem icacls "C:\ProgramData\Microsoft\Windows Defender\Platform\*\NisSrv.exe" /grant:r %username%:F
+rem taskkill /im NisSrv.exe /f
+rem del "C:\ProgramData\Microsoft\Windows Defender\Platform\*\NisSrv.exe" /s /f /q
+rem ren "C:\ProgramData\Microsoft\Windows Defender\Platform\*\NisSrv.exe" "NisSrv.exe.bak"
 
 PAUSE
