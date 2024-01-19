@@ -1348,7 +1348,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management
 
 
 rmdir /s /q "C:\Windows\Temp"
-rmdir /s /q "C:\Users\penny\AppData\Local\Temp"
+rmdir /s /q "%USERPROFILE%\AppData\Local\Temp"
 DEL /F /S /Q /A %LocalAppData%\Microsoft\Windows\Explorer\thumbcache_*.db
 
 
