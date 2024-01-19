@@ -1,4 +1,4 @@
-REM Disable Windows Firewall
+REM Disable Windows Firewall (use router firewall instead)
 
 net stop mpssvc
 net stop BFE
