@@ -1,4 +1,6 @@
 rem Disable all Windows Defender components
+REM AV Software is bloat
+REM reminder: try * where version is for fix
 rem Make sure program versions are the same for the directory path
 
 rem Disable Microsoft SAM (Security Accounts Manager)
