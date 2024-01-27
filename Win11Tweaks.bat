@@ -2439,8 +2439,9 @@ REM Start GraphicsPerfSvc (increases performance)
 ECHO Yes | xcopy "%USERPROFILE%\Downloads\windows11-batch-scripts-main\StartGraphicsPerfSvc.bat" "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
 
 REM Make sure services dont get reenabled by Windows after reboot
-ECHO Yes | xcopy "%USERPROFILE%\Downloads\windows11-batch-scripts-main\DisableServices.bat" "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
-ECHO Yes | xcopy "%USERPROFILE%\Downloads\windows11-batch-scripts-main\DisableWinUpdate.bat" "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
+REM Use StartBATs.bat after login method instead
+REM ECHO Yes | xcopy "%USERPROFILE%\Downloads\windows11-batch-scripts-main\DisableServices.bat" "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
+REM ECHO Yes | xcopy "%USERPROFILE%\Downloads\windows11-batch-scripts-main\DisableWinUpdate.bat" "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
 
 rem delete Windows Defender user account
 net user WDAGUtilityAccount /active:no
