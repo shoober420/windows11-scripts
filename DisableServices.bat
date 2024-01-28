@@ -184,6 +184,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\USER_ESRV_SVC_QUEENCREEK" /t REG
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\SENS" /t REG_DWORD /d "4" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\CdRomArbiterService" /t REG_DWORD /d "4" /f
 
+sc config CdRomArbiterService start= disabled
 sc config ESRV_SVC_QUEENCREEK start= disabled
 
 rem Internet connection services
