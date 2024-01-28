@@ -429,10 +429,11 @@ Change .txt, .cfg, .ini, and .log icons
  + disable windows management instrumentation (needed for TCPOptimizer, AMD adrenaline software and AMD driver upgrades)
  ++ ULTRA MINIMAL ONLY!!!  disable AppX Deployment Service (AppXSVC) (registry) (borks Settings/Personalization, borks File Explorer/Right Click Menu)
  ++ ULTRA MINIMAL ONLY!!! disable capability access manager service (removes bottom right taskbar ui (date and time/sound/internet/app icons)
- +++ ULTRA MEGA MINIMAL ONLY!!! disable state repository service, will cause black screen after login. you will need to CTRL+SHIFT+ESC after login to open task manager, then file and run new task, regedit then revert back value to 2, must use system with Task Manager and Run
  +++ ONLY disable Microsoft passport for login on non-local accounts, needed for login on Microsoft hello / Microsoft accounts (PIN login). you will need to WinRE*** (login screen shift key method)
+ +++ NEVER disable state repository service, breaks system configuration settings (like power options), will cause black screen after login. you will need to CTRL+SHIFT+ESC after login to open task manager, then file and run new task, regedit then revert back value to 2, must use system with Task Manager and Run
  +++ NEVER disable WinHTTP web proxy auto discovery service (registry), will bork internet
  +++ NEVER disable GraphicsPerfSvc, improves performance
+ +++ NEVER disable Themes, breaks user theme settings
  +++ NEVER disable text input management service, needed for keyboard and mouse. you will need to WinRE*** (f8 key method)
  +++ NEVER disable user manager, black screen at login after boot
  +++ NEVER disable AudioEndpointBuilder, breaks sound and audio
