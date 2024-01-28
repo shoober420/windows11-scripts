@@ -95,8 +95,6 @@ AdminCmdPrompt.bat
 
 DisableMaintenanceServices.bat / EnableMaintenanceServices.bat
 
-DisableGUI.bat / EnableGUI.bat (no taskbar, no icons, no background)
-
 DeleteWindowsAppDir.bat
 
 DisableWinFirewall.bat / EnableWinFirewall.bat (use router firewall instead)
