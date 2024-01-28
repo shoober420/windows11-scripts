@@ -25,7 +25,7 @@ DisableAppX.bat / EnableAppX.bat
 
 DisableWinHTTP.bat / EnableWinHTTP.bat (borks internet if disabled)
 
-DisableStateRepository.bat / EnableStateRepository.bat (ultra mega minimal only, borks themes and GUI)
+DisableStateRepository.bat / EnableStateRepository.bat (WARNING: breaks system configuration options, like power options)
 
 run.bat
 
