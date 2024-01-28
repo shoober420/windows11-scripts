@@ -25,7 +25,7 @@ DisableAppX.bat / EnableAppX.bat
 
 DisableWinHTTP.bat / EnableWinHTTP.bat (borks internet if disabled)
 
-DisableStateRepository.bat / EnableStateRepository.bat (WARNING: breaks system configuration settings, like power options)
+DisableStateRepository.bat / EnableStateRepository.bat (WARNING: breaks system configuration settings, like power options) (WARNING: Breaks GUI, no taskbar, no icons, no background)
 
 run.bat
 
