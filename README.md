@@ -35,7 +35,7 @@ DeleteNVIDIAShaderCache.bat
 
 PowerPlan.bat (adds duplicate power plan everytime command is executed, so use powerplan.bat only once after every new build install unless already present)
 
-DisableServices.bat / EnableServices.bat (to disable Windows Defender, run in SAFE MODE)
+DisableServices.bat (to disable Windows Defender, run in SAFE MODE)
 
 DisableThemes.bat / EnableThemes.bat
 
