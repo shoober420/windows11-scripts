@@ -1,6 +1,5 @@
 rem Enable Windows Update
 
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\Themes" /t REG_DWORD /d "2" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\AppXSvc" /t REG_DWORD /d "2" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\StateRepository" /t REG_DWORD /d "2" /f
 
