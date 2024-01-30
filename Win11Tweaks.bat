@@ -1618,7 +1618,10 @@ reg delete "HKCR\Microsoft.Website\ShellEx\ContextMenuHandlers\PintoStartScreen"
 reg delete "HKCR\mscfile\shellex\ContextMenuHandlers\PintoStartScreen" /f
 reg delete "HKCR\*\shellex\ContextMenuHandlers\{90AA3A4E-1CBA-4233-B8BB-535773D48449}" /f
 reg add "HKCU\SOFTWARE\Policies\Microsoft\Windows\Explorer" /v "NoPinningToTaskbar" /t REG_DWORD /d "1" /f
+
+REM Disable Include in library from context_menu
 reg delete "HKCR\Folder\ShellEx\ContextMenuHandlers\Library Location" /f
+reg delete "HKLM\SOFTWARE\Classes\Folder\ShellEx\ContextMenuHandlers\Library Location" /f
 
 reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\default\WebThreatDefense\AuditMode" /v "value" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\default\WebThreatDefense\NotifyUnsafeOrReusedPassword" /v "value" /t REG_DWORD /d "0" /f
