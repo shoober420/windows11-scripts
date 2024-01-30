@@ -16,14 +16,15 @@ REM if Windows.old is not found, copy X:\Windows\Fonts C:\Windows\Fonts (uses sa
 rmdir /s /q "%USERPROFILE%\AppData\Local\Microsoft\Windows\Fonts"
 
 copy "%WINDIR%\Fonts\micross.ttf" "%USERPROFILE%\Downloads"
-copy "%WINDIR%\Fonts.bak\" "%USERPROFILE%\Downloads"
+copy "%WINDIR%\Fonts\arial.ttf" "%USERPROFILE%\Downloads"
 
 takeown /s %computername% /u %username% /f "%WINDIR%\Fonts"
 icacls "%WINDIR%\Fonts" /grant:r %username%:F
-rename "%WINDIR%\Fonts" "Fonts.bak"
+ren "%WINDIR%\Fonts" "Fonts.bak"
 REM rmdir /s /q "%WINDIR%\Fonts"
 
 copy "%USERPROFILE%\Downloads\micross.ttf" "%WINDIR%\Fonts"
+copy "%USERPROFILE%\Downloads\arial.ttf" "%WINDIR%\Fonts"
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "Segoe UI (TrueType)" /t REG_SZ /d "" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "Segoe UI Black (TrueType)" /t REG_SZ /d "" /f
