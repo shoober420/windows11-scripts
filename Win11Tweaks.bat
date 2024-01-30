@@ -2296,7 +2296,6 @@ reg delete "HKCR\UserLibraryFolder\shellex\ContextMenuHandlers\Sharing" /f
 reg delete "HKCR\Directory\shellex\CopyHookHandlers\Sharing" /f
 reg delete "HKCR\Directory\shellex\PropertySheetHandlers\Sharing" /f
 reg delete "HKCR\Drive\shellex\PropertySheetHandlers\Sharing" /f
-reg delete "HKCR\LibraryFolder\background\shellex\ContextMenuHandlers\Sharing" /f
 
 reg add "HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Explorer\FolderDescriptions\{0ddd015d-b06c-45d5-8c4c-f59713854639}\PropertyBag" /v "ThisPCPolicy" /t REG_SZ /d "Hide" /f
 reg add "HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Explorer\FolderDescriptions\{35286a68-3c57-41a1-bbb1-0eae73d76c95}\PropertyBag" /v "ThisPCPolicy" /t REG_SZ /d "Hide" /f
