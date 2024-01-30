@@ -1,4 +1,5 @@
-REM Delete Fonts
+REM Rename Fonts directory
+REM Debloat extra fonts
 REM Windows 11 requires Segou font family, or will black screen at login
 
 rmdir /s /q "%USERPROFILE%\AppData\Local\Microsoft\Windows\Fonts"
