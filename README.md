@@ -102,3 +102,5 @@ DisableWinFirewall.bat / EnableWinFirewall.bat (use router firewall instead)
 DisableWindowsDefender.bat (AV software is bloat, run in SAFE MODE)
 
 StartBATs.bat (runs startup batch scripts)
+
+DeleteFonts.bat
