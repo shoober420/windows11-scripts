@@ -9,14 +9,21 @@ REM Windows 11 uses Segoe UI Variable
 REM GUI font required or will black screen at login
 
 REM If font folder is deleted, boot into WinRE and open cmd prompt
-REM copy X:\Windows\Fonts C:\Windows\Fonts
+REM copy C:\Windows.old\Fonts C:\Windows\Fonts
+REM if Windows.old is not found, copy X:\Windows\Fonts C:\Windows\Fonts (uses same font scheme as WinRE shell such as italic desktop icons) (missing lots of fonts like Arial)
+
 
 rmdir /s /q "%USERPROFILE%\AppData\Local\Microsoft\Windows\Fonts"
 
-takeown /s %computername% /u %username% /f "C:\Windows\Fonts"
-icacls "C:\Windows\Fonts" /grant:r %username%:F
-rename "C:\Windows\Fonts" "Fonts.bak"
-REM rmdir /s /q "C:\Windows\Fonts"
+copy "%WINDIR%\Fonts\micross.ttf" "%USERPROFILE%\Downloads"
+copy "%WINDIR%\Fonts.bak\" "%USERPROFILE%\Downloads"
+
+takeown /s %computername% /u %username% /f "%WINDIR%\Fonts"
+icacls "%WINDIR%\Fonts" /grant:r %username%:F
+rename "%WINDIR%\Fonts" "Fonts.bak"
+REM rmdir /s /q "%WINDIR%\Fonts"
+
+copy "%USERPROFILE%\Downloads\micross.ttf" "%WINDIR%\Fonts"
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "Segoe UI (TrueType)" /t REG_SZ /d "" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "Segoe UI Black (TrueType)" /t REG_SZ /d "" /f
