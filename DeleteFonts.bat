@@ -1,6 +1,6 @@
 REM Rename Fonts directory
 REM Debloat extra fonts
-REM You must remove all Segoe* fonts manually for this bat script to work
+REM You must remove all Segoe* fonts manually in the "C:\Windows\Fonts" directory for this batch script to work
 
 REM Windows 95/98 uses Microsoft Sans Serif
 REM Windows XP/7 uses Tahoma
@@ -9,14 +9,12 @@ REM Windows 11 uses Segoe UI Variable
 
 REM Both "%WINDIR%\Fonts" and "%USERPROFILE%\AppData\Local\Microsoft\Windows\Fonts" are linked together
 
-REM Monospaced fonts are use up too much space in GUI and cut off text, NOT RECOMMENDED
+REM Monospaced fonts use up too much space in GUI and cut off text, NOT RECOMMENDED
 
 REM Microsoft Sans Serif Regular (micross.ttf) is the new TrueType version
 REM MS Sans Serif Regular (ssee1257.fon) is the old bitmap version
 
-REM GUI font required or will black screen at login
-
-REM If font folder is deleted, boot into WinRE and open cmd prompt
+REM If font folder is deleted which creates black screen at login, boot into WinRE and open cmd prompt
 REM copy C:\Windows.old\Fonts C:\Windows\Fonts
 REM if Windows.old is not found, copy X:\Windows\Fonts C:\Windows\Fonts (uses same font scheme as WinRE shell such as italic desktop icons) (missing lots of fonts like Arial)
 
