@@ -11,7 +11,7 @@ REM Both "%WINDIR%\Fonts" and "%USERPROFILE%\AppData\Local\Microsoft\Windows\Fon
 REM Monospaced fonts are use up too much space in GUI and cut off text, NOT RECOMMENDED
 
 REM Microsoft Sans Serif Regular (micross.ttf) is the new TrueType version
-REM MS Sans Serif Regular is the old .FON bitmap version
+REM MS Sans Serif Regular (ssee1257.fon) is the old bitmap version
 
 REM GUI font required or will black screen at login
 
