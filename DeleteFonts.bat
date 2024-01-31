@@ -7,7 +7,7 @@ REM Windows 10 uses Segoe UI
 REM Windows 11 uses Segoe UI Variable
 
 REM Microsoft Sans Serif Regular (micross.ttf) is the new TrueType version
-REM MS Sans Serif Regular is the old bitmap version
+REM MS Sans Serif Regular is the old .FON bitmap version
 
 REM GUI font required or will black screen at login
 
@@ -21,7 +21,8 @@ rmdir /s /q "%USERPROFILE%\AppData\Local\Microsoft\Windows\Fonts"
 REM copy "%WINDIR%\Fonts\micross.ttf" "%USERPROFILE%\Downloads"
 REM copy "%WINDIR%\Fonts\arial.ttf" "%USERPROFILE%\Downloads"
 
-REM Manual removal of fonts needed 
+REM Manual removal of fonts needed
+REM Deleting fonts breaks games like CS1.6, find out what fonts games use
 REM takeown /s %computername% /u %username% /f "%WINDIR%\Fonts"
 REM icacls "%WINDIR%\Fonts" /grant:r %username%:F
 REM ren "%WINDIR%\Fonts" "Fonts.bak"
@@ -48,7 +49,21 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "Segoe UI V
 
 REM .FON fonts are not supported (MS Sans Serif Regular)
 reg delete "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes" /v "Segoe UI" /t REG_SZ /d "Microsoft Sans Serif Regular" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes" /v "Segoe UI Variable" /t REG_SZ /d "Microsoft Sans Serif Regular" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes" /v "Segoe UI" /t REG_SZ /d "IBM Plex Mono" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes" /v "Segoe UI Variable" /t REG_SZ /d "IBM Plex Mono" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes" /v "Segoe UI Black" /t REG_SZ /d "IBM Plex Mono" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes" /v "Segoe UI Black Italic" /t REG_SZ /d "IBM Plex Mono" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes" /v "Segoe UI Emoji" /t REG_SZ /d "IBM Plex Mono" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes" /v "Segoe UI Historic" /t REG_SZ /d "IBM Plex Mono" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes" /v "Segoe UI Light Italic" /t REG_SZ /d "IBM Plex Mono" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes" /v "Segoe UI Semibold Italic" /t REG_SZ /d "IBM Plex Mono" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes" /v "Segoe UI Semilight" /t REG_SZ /d "IBM Plex Mono" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes" /v "Segoe UI Semilight Italic" /t REG_SZ /d "IBM Plex Mono" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes" /v "Segoe UI Bold" /t REG_SZ /d "IBM Plex Mono" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes" /v "Segoe UI Bold Italic" /t REG_SZ /d "IBM Plex Mono" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes" /v "Segoe UI Italic" /t REG_SZ /d "IBM Plex Mono" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes" /v "Segoe UI Light" /t REG_SZ /d "IBM Plex Mono" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes" /v "Segoe UI Semibold" /t REG_SZ /d "IBM Plex Mono" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes" /v "Segoe UI Symbol" /t REG_SZ /d "IBM Plex Mono" /f
 
 PAUSE
