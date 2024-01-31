@@ -6,6 +6,9 @@ REM Windows XP/7 uses Tahoma
 REM Windows 10 uses Segoe UI
 REM Windows 11 uses Segoe UI Variable
 
+REM Microsoft Sans Serif Regular (micross.ttf) is the new TrueType version
+REM MS Sans Serif Regular (sserv1257.fon) is the old bitmap version
+
 REM GUI font required or will black screen at login
 
 REM If font folder is deleted, boot into WinRE and open cmd prompt
