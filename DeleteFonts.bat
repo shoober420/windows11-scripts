@@ -8,6 +8,8 @@ REM Windows 11 uses Segoe UI Variable
 
 REM Both "%WINDIR%\Fonts" and "%USERPROFILE%\AppData\Local\Microsoft\Windows\Fonts" are linked together
 
+REM Monospaced fonts are use up too much space in GUI and cut off text, NOT RECOMMENDED
+
 REM Microsoft Sans Serif Regular (micross.ttf) is the new TrueType version
 REM MS Sans Serif Regular is the old .FON bitmap version
 
