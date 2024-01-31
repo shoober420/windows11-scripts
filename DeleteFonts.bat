@@ -18,16 +18,16 @@ REM if Windows.old is not found, copy X:\Windows\Fonts C:\Windows\Fonts (uses sa
 
 rmdir /s /q "%USERPROFILE%\AppData\Local\Microsoft\Windows\Fonts"
 
-copy "%WINDIR%\Fonts\micross.ttf" "%USERPROFILE%\Downloads"
-copy "%WINDIR%\Fonts\arial.ttf" "%USERPROFILE%\Downloads"
+REM copy "%WINDIR%\Fonts\micross.ttf" "%USERPROFILE%\Downloads"
+REM copy "%WINDIR%\Fonts\arial.ttf" "%USERPROFILE%\Downloads"
 
-takeown /s %computername% /u %username% /f "%WINDIR%\Fonts"
-icacls "%WINDIR%\Fonts" /grant:r %username%:F
-ren "%WINDIR%\Fonts" "Fonts.bak"
+REM Manual removal of fonts needed 
+REM takeown /s %computername% /u %username% /f "%WINDIR%\Fonts"
+REM icacls "%WINDIR%\Fonts" /grant:r %username%:F
+REM ren "%WINDIR%\Fonts" "Fonts.bak"
 REM rmdir /s /q "%WINDIR%\Fonts"
-
-copy "%USERPROFILE%\Downloads\micross.ttf" "%WINDIR%\Fonts"
-copy "%USERPROFILE%\Downloads\arial.ttf" "%WINDIR%\Fonts"
+REM copy "%USERPROFILE%\Downloads\micross.ttf" "%WINDIR%\Fonts"
+REM copy "%USERPROFILE%\Downloads\arial.ttf" "%WINDIR%\Fonts"
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "Segoe UI (TrueType)" /t REG_SZ /d "" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "Segoe UI Black (TrueType)" /t REG_SZ /d "" /f
@@ -46,7 +46,9 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "Segoe UI S
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "Segoe UI Symbol (TrueType)" /t REG_SZ /d "" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "Segoe UI Variable (TrueType)" /t REG_SZ /d "" /f
 
-reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes" /v "Segoe UI" /t REG_SZ /d "Microsoft Sans Serif" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes" /v "Segoe UI Variable" /t REG_SZ /d "Microsoft Sans Serif" /f
+REM .FON fonts are not supported (MS Sans Serif Regular)
+reg delete "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes" /v "Segoe UI" /t REG_SZ /d "Microsoft Sans Serif Regular" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes" /v "Segoe UI Variable" /t REG_SZ /d "Microsoft Sans Serif Regular" /f
 
 PAUSE
