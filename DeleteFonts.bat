@@ -16,7 +16,7 @@ REM copy C:\Windows.old\Fonts C:\Windows\Fonts
 REM if Windows.old is not found, copy X:\Windows\Fonts C:\Windows\Fonts (uses same font scheme as WinRE shell such as italic desktop icons) (missing lots of fonts like Arial)
 
 
-rmdir /s /q "%USERPROFILE%\AppData\Local\Microsoft\Windows\Fonts"
+REM rmdir /s /q "%USERPROFILE%\AppData\Local\Microsoft\Windows\Fonts"
 
 REM copy "%WINDIR%\Fonts\micross.ttf" "%USERPROFILE%\Downloads"
 REM copy "%WINDIR%\Fonts\arial.ttf" "%USERPROFILE%\Downloads"
