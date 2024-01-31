@@ -6,6 +6,8 @@ REM Windows XP/7 uses Tahoma
 REM Windows 10 uses Segoe UI
 REM Windows 11 uses Segoe UI Variable
 
+REM Both "%WINDIR%\Fonts" and "%USERPROFILE%\AppData\Local\Microsoft\Windows\Fonts" are linked together
+
 REM Microsoft Sans Serif Regular (micross.ttf) is the new TrueType version
 REM MS Sans Serif Regular is the old .FON bitmap version
 
@@ -16,7 +18,6 @@ REM copy C:\Windows.old\Fonts C:\Windows\Fonts
 REM if Windows.old is not found, copy X:\Windows\Fonts C:\Windows\Fonts (uses same font scheme as WinRE shell such as italic desktop icons) (missing lots of fonts like Arial)
 
 
-REM rmdir /s /q "%USERPROFILE%\AppData\Local\Microsoft\Windows\Fonts"
 
 REM copy "%WINDIR%\Fonts\micross.ttf" "%USERPROFILE%\Downloads"
 REM copy "%WINDIR%\Fonts\arial.ttf" "%USERPROFILE%\Downloads"
@@ -27,6 +28,7 @@ REM takeown /s %computername% /u %username% /f "%WINDIR%\Fonts"
 REM icacls "%WINDIR%\Fonts" /grant:r %username%:F
 REM ren "%WINDIR%\Fonts" "Fonts.bak"
 REM rmdir /s /q "%WINDIR%\Fonts"
+REM rmdir /s /q "%USERPROFILE%\AppData\Local\Microsoft\Windows\Fonts"
 REM copy "%USERPROFILE%\Downloads\micross.ttf" "%WINDIR%\Fonts"
 REM copy "%USERPROFILE%\Downloads\arial.ttf" "%WINDIR%\Fonts"
 
