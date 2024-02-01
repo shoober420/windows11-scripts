@@ -10,6 +10,8 @@ REM You must have segoeui.ttf in the "C:\Windows\Fonts" directory, or Windows bl
 
 REM Manually delete the Segoe font family via entering the C:\Windows\Fonts directory to change Windows default font (Login screen and certain GUI fonts are unchangable)
 
+REM Copying another font and naming it segoeui.ttf will not change the default Windows font, and results in black screen at login
+
 REM Deleting fonts via entering the C:\Windows\Fonts directory does NOT delete the actual font files inside the directory, it only disables the font and leaves the files behind
 
 REM Deleting fonts manually using cmd will delete the font, but still show up when entering the C:\Windows\Fonts directory
