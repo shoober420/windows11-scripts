@@ -1,11 +1,12 @@
 REM Rename Fonts directory
 REM Debloat extra fonts
-REM You must remove all Segoe* fonts manually in the "C:\Windows\Fonts" directory for this batch script to work
 
 REM Windows 95/98 uses Microsoft Sans Serif
 REM Windows XP/7 uses Tahoma
 REM Windows 10 uses Segoe UI
 REM Windows 11 uses Segoe UI Variable
+
+REM You must remove all Segoe* fonts in the "C:\Windows\Fonts" directory for this batch script to work
 
 REM Both "%WINDIR%\Fonts" and "%USERPROFILE%\AppData\Local\Microsoft\Windows\Fonts" are linked together
 
@@ -33,54 +34,79 @@ REM rmdir /s /q "%USERPROFILE%\AppData\Local\Microsoft\Windows\Fonts"
 REM copy "%USERPROFILE%\Downloads\micross.ttf" "%WINDIR%\Fonts"
 REM copy "%USERPROFILE%\Downloads\arial.ttf" "%WINDIR%\Fonts"
 
-del "%WINDIR%\Fonts\8514oemt.fon" /f
-del "%WINDIR%\Fonts\YuGothB.ttc" /f
-del "%WINDIR%\Fonts\YuGothL.ttc" /f
-del "%WINDIR%\Fonts\YuGothM.ttc" /f
-del "%WINDIR%\Fonts\YuGothR.ttc" /f
-del "%WINDIR%\Fonts\wingding.ttf" /f
-del "%WINDIR%\Fonts\webdings.ttf" /f
-del "%WINDIR%\Fonts\dos869.fon" /f
-del "%WINDIR%\Fonts\8514oemg.fon" /f
-del "%WINDIR%\Fonts\sylfaen.ttf" /f
-del "%WINDIR%\Fonts\SitkaVF.ttf" /f
-del "%WINDIR%\Fonts\SitkaVF-Italic.ttf" /f
-del "%WINDIR%\Fonts\simsunb.ttf" /f
-del "%WINDIR%\Fonts\simsun.ttc" /f
-del "%WINDIR%\Fonts\script.fon" /f
-del "%WINDIR%\Fonts\mingliub.ttc" /f
-del "%WINDIR%\Fonts\Nirmala.ttc" /f
-del "%WINDIR%\Fonts\mmrtext.ttf" /f
-del "%WINDIR%\Fonts\mmrtextb.ttf" /f
-del "%WINDIR%\Fonts\mvboli.ttf" /f
-del "%WINDIR%\Fonts\msyi.ttf" /f
-del "%WINDIR%\Fonts\msyh.ttc" /f
-del "%WINDIR%\Fonts\msyhbd.ttc" /f
-del "%WINDIR%\Fonts\msyhl.ttc" /f
-del "%WINDIR%\Fonts\taile.ttf /f
-del "%WINDIR%\Fonts\taileb.ttf" /f
-del "%WINDIR%\Fonts\phagspa.ttf" /f
-del "%WINDIR%\Fonts\phagspab.ttf" /f
-del "%WINDIR%\Fonts\ntailu.ttf" /f
-del "%WINDIR%\Fonts\ntailub.ttf" /f
-del "%WINDIR%\Fonts\msjh.ttc" /f
-del "%WINDIR%\Fonts\msjhbd.ttc" /f
-del "%WINDIR%\Fonts\msjhl.ttc" /f
-del "%WINDIR%\Fonts\himalaya.ttf" /f
-del "%WINDIR%\Fonts\malgun.ttf" /f
-del "%WINDIR%\Fonts\malgunbd.ttf" /f
-del "%WINDIR%\Fonts\malgunsl.ttf" /f
-del "%WINDIR%\Fonts\LeelaUIb.ttf" /f
-del "%WINDIR%\Fonts\LeelawUI.ttf" /f
-del "%WINDIR%\Fonts\LeelUIsl.ttf" /f
-del "%WINDIR%\Fonts\javatext.ttf" /f
-del "%WINDIR%\Fonts\Inkfree.ttf" /f
-del "%WINDIR%\Fonts\impact.ttf" /f
-del "%WINDIR%\Fonts\holomdl2.ttf" /f
-del "%WINDIR%\Fonts\gadugi.ttf" /f
-del "%WINDIR%\Fonts\gadugib.ttf" /f
-del "%WINDIR%\Fonts\ebrima.ttf" /f
-del "%WINDIR%\Fonts\ebrimabd.ttf" /f
+REM Remove all Segoe* fonts
+del "%WINDIR%\Fonts\SegoeIcons.ttf"
+del "%WINDIR%\Fonts\segmdl2.ttf"
+del "%WINDIR%\Fonts\segoepr.ttf"
+del "%WINDIR%\Fonts\segoeprb.ttf"
+del "%WINDIR%\Fonts\segoesc.ttf"
+del "%WINDIR%\Fonts\segoescb.ttf"
+del "%WINDIR%\Fonts\segoeui.ttf"
+del "%WINDIR%\Fonts\segoeuib.ttf"
+del "%WINDIR%\Fonts\segoeuii.ttf"
+del "%WINDIR%\Fonts\segoeuil.ttf"
+del "%WINDIR%\Fonts\segoeuisl.ttf"
+del "%WINDIR%\Fonts\segoeuiz.ttf"
+del "%WINDIR%\Fonts\seguibl.ttf"
+del "%WINDIR%\Fonts\seguibli.ttf"
+del "%WINDIR%\Fonts\seguili.ttf"
+del "%WINDIR%\Fonts\seguisb.ttf"
+del "%WINDIR%\Fonts\seguisbi.ttf"
+del "%WINDIR%\Fonts\seguisli.ttf"
+del "%WINDIR%\Fonts\seguiemj.ttf"
+del "%WINDIR%\Fonts\seguihis.ttf"
+del "%WINDIR%\Fonts\seguisym.ttf"
+del "%WINDIR%\Fonts\SegUIVar.ttf"
+
+REM Remove bloat fonts
+del "%WINDIR%\Fonts\8514oemt.fon"
+del "%WINDIR%\Fonts\YuGothB.ttc"
+del "%WINDIR%\Fonts\YuGothL.ttc"
+del "%WINDIR%\Fonts\YuGothM.ttc"
+del "%WINDIR%\Fonts\YuGothR.ttc"
+del "%WINDIR%\Fonts\wingding.ttf"
+del "%WINDIR%\Fonts\webdings.ttf"
+del "%WINDIR%\Fonts\dos869.fon"
+del "%WINDIR%\Fonts\8514oemg.fon"
+del "%WINDIR%\Fonts\sylfaen.ttf"
+del "%WINDIR%\Fonts\SitkaVF.ttf"
+del "%WINDIR%\Fonts\SitkaVF-Italic.ttf"
+del "%WINDIR%\Fonts\simsunb.ttf"
+del "%WINDIR%\Fonts\simsun.ttc"
+del "%WINDIR%\Fonts\script.fon"
+del "%WINDIR%\Fonts\mingliub.ttc"
+del "%WINDIR%\Fonts\Nirmala.ttc"
+del "%WINDIR%\Fonts\mmrtext.ttf"
+del "%WINDIR%\Fonts\mmrtextb.ttf"
+del "%WINDIR%\Fonts\mvboli.ttf"
+del "%WINDIR%\Fonts\msyi.ttf"
+del "%WINDIR%\Fonts\msyh.ttc"
+del "%WINDIR%\Fonts\msyhbd.ttc"
+del "%WINDIR%\Fonts\msyhl.ttc"
+del "%WINDIR%\Fonts\taile.ttf
+del "%WINDIR%\Fonts\taileb.ttf"
+del "%WINDIR%\Fonts\phagspa.ttf"
+del "%WINDIR%\Fonts\phagspab.ttf"
+del "%WINDIR%\Fonts\ntailu.ttf"
+del "%WINDIR%\Fonts\ntailub.ttf"
+del "%WINDIR%\Fonts\msjh.ttc"
+del "%WINDIR%\Fonts\msjhbd.ttc"
+del "%WINDIR%\Fonts\msjhl.ttc"
+del "%WINDIR%\Fonts\himalaya.ttf"
+del "%WINDIR%\Fonts\malgun.ttf"
+del "%WINDIR%\Fonts\malgunbd.ttf"
+del "%WINDIR%\Fonts\malgunsl.ttf"
+del "%WINDIR%\Fonts\LeelaUIb.ttf"
+del "%WINDIR%\Fonts\LeelawUI.ttf"
+del "%WINDIR%\Fonts\LeelUIsl.ttf"
+del "%WINDIR%\Fonts\javatext.ttf"
+del "%WINDIR%\Fonts\Inkfree.ttf"
+del "%WINDIR%\Fonts\impact.ttf"
+del "%WINDIR%\Fonts\holomdl2.ttf"
+del "%WINDIR%\Fonts\gadugi.ttf"
+del "%WINDIR%\Fonts\gadugib.ttf"
+del "%WINDIR%\Fonts\ebrima.ttf"
+del "%WINDIR%\Fonts\ebrimabd.ttf"
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "Segoe UI (TrueType)" /t REG_SZ /d "" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "Segoe UI Black (TrueType)" /t REG_SZ /d "" /f
