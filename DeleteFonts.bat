@@ -86,6 +86,12 @@ del "%WINDIR%\Fonts\app*"
 REM 8514oem Regular
 del "%WINDIR%\Fonts\8514oemt.fon"
 del "%WINDIR%\Fonts\85*"
+del "%WINDIR%\Fonts\c8514fix.fon"
+del "%WINDIR%\Fonts\c8514oem.fon"
+del "%WINDIR%\Fonts\c8514sys.fon"
+
+REM cga fonts
+del "%WINDIR%\Fonts\cga*"
 
 REM Yu Gothic / Yu Gothic UI
 del "%WINDIR%\Fonts\YuGothB.ttc"
