@@ -85,7 +85,7 @@ del "%WINDIR%\Fonts\app*"
 
 REM 8514oem Regular
 del "%WINDIR%\Fonts\8514oemt.fon"
-del "%WINDIR%\Fonts\85*"
+
 del "%WINDIR%\Fonts\c8514fix.fon"
 del "%WINDIR%\Fonts\c8514oem.fon"
 del "%WINDIR%\Fonts\c8514sys.fon"
@@ -95,6 +95,8 @@ del "%WINDIR%\Fonts\j8514sys.fon"
 del "%WINDIR%\Fonts\s8514fix.fon"
 del "%WINDIR%\Fonts\s8514oem.fon"
 del "%WINDIR%\Fonts\s8514sys.fon"
+
+del "%WINDIR%\Fonts\85*"
 
 REM cga fonts
 del "%WINDIR%\Fonts\cga*"
