@@ -79,52 +79,127 @@ REM Segoe UI Variable
 del "%WINDIR%\Fonts\SegUIVar.ttf"
 
 REM Remove bloat fonts
+
+REM 8514oem Regular
 del "%WINDIR%\Fonts\8514oemt.fon"
+
+REM Yu Gothic / Yu Gothic UI
 del "%WINDIR%\Fonts\YuGothB.ttc"
 del "%WINDIR%\Fonts\YuGothL.ttc"
 del "%WINDIR%\Fonts\YuGothM.ttc"
 del "%WINDIR%\Fonts\YuGothR.ttc"
+
+REM Wingdings Regular
 del "%WINDIR%\Fonts\wingding.ttf"
+
+REM Webdings Regular
 del "%WINDIR%\Fonts\webdings.ttf"
+
+REM Terminal Greek 869 Bold
 del "%WINDIR%\Fonts\dos869.fon"
+
+REM Terminal Greek 737 (437G) Regular
 del "%WINDIR%\Fonts\8514oemg.fon"
+
+REM Symbol Regular
+del "%WINDIR%\Fonts\symbol.ttf"
+
+REM Sylfaen Regular
 del "%WINDIR%\Fonts\sylfaen.ttf"
+
+REM Sitka
 del "%WINDIR%\Fonts\SitkaVF.ttf"
 del "%WINDIR%\Fonts\SitkaVF-Italic.ttf"
+
+REM SimSun-ExtB Regular
 del "%WINDIR%\Fonts\simsunb.ttf"
+
+REM SimSun Regular / NSimSun Regular
 del "%WINDIR%\Fonts\simsun.ttc"
+
+REM Script Regular
 del "%WINDIR%\Fonts\script.fon"
+
+REM MingLiU-ExtB Regular  / MingLiU_HKSCS-ExtB Regular / MingLiU_MSCS-ExtB Regular / PMingLiU-ExtB Regular
 del "%WINDIR%\Fonts\mingliub.ttc"
+
+REM Palatino Linotype
+del "%WINDIR%\Fonts\pala.ttf"
+del "%WINDIR%\Fonts\palab.ttf"
+del "%WINDIR%\Fonts\palabi.ttf"
+del "%WINDIR%\Fonts\palai.ttf"
+
+REM Nirmala UI / Nirmala Text
 del "%WINDIR%\Fonts\Nirmala.ttc"
+
+REM Myanmar Text
 del "%WINDIR%\Fonts\mmrtext.ttf"
 del "%WINDIR%\Fonts\mmrtextb.ttf"
+
+REM MV Boli Reuglar
 del "%WINDIR%\Fonts\mvboli.ttf"
+
+REM Mongolian Baiti Regular
+del "%WINDIR%\Fonts\monbaiti.ttf"
+
+REM Modern Regular
+del "%WINDIR%\Fonts\modern.fon"
+
+REM Microsoft Yi Baiti Regular
 del "%WINDIR%\Fonts\msyi.ttf"
+
+REM Microsoft YaHei / Microsoft YaHei UI
 del "%WINDIR%\Fonts\msyh.ttc"
 del "%WINDIR%\Fonts\msyhbd.ttc"
 del "%WINDIR%\Fonts\msyhl.ttc"
+
+REM Microsoft Tai Le
 del "%WINDIR%\Fonts\taile.ttf
 del "%WINDIR%\Fonts\taileb.ttf"
+
+REM Microsoft PhagsPa
 del "%WINDIR%\Fonts\phagspa.ttf"
 del "%WINDIR%\Fonts\phagspab.ttf"
+
+REM Microsoft New Tai Lue
 del "%WINDIR%\Fonts\ntailu.ttf"
 del "%WINDIR%\Fonts\ntailub.ttf"
+
+REM Microsoft JhengHei / Microsoft JhengHei UI
 del "%WINDIR%\Fonts\msjh.ttc"
 del "%WINDIR%\Fonts\msjhbd.ttc"
 del "%WINDIR%\Fonts\msjhl.ttc"
+
+REM Microsoft Himalaya Regular
 del "%WINDIR%\Fonts\himalaya.ttf"
+
+REM Malgun Gothic
 del "%WINDIR%\Fonts\malgun.ttf"
 del "%WINDIR%\Fonts\malgunbd.ttf"
 del "%WINDIR%\Fonts\malgunsl.ttf"
+
+REM Leelawadee UI
 del "%WINDIR%\Fonts\LeelaUIb.ttf"
 del "%WINDIR%\Fonts\LeelawUI.ttf"
 del "%WINDIR%\Fonts\LeelUIsl.ttf"
+
+REM Javanese Text Regular
 del "%WINDIR%\Fonts\javatext.ttf"
+
+REM Ink Free Regular
 del "%WINDIR%\Fonts\Inkfree.ttf"
+
+REM Impact Regular
 del "%WINDIR%\Fonts\impact.ttf"
+
+REM HoloLens MDL2 Assets Regular
 del "%WINDIR%\Fonts\holomdl2.ttf"
+
+REM Gadugi
 del "%WINDIR%\Fonts\gadugi.ttf"
 del "%WINDIR%\Fonts\gadugib.ttf"
+
+REM Ebrima
 del "%WINDIR%\Fonts\ebrima.ttf"
 del "%WINDIR%\Fonts\ebrimabd.ttf"
 
