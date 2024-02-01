@@ -57,8 +57,8 @@ REM Segoe Script
 del "%WINDIR%\Fonts\segoesc.ttf"
 del "%WINDIR%\Fonts\segoescb.ttf"
 
-REM Segoe UI (segoeui.ttf replacement is required or black screen occurs at login)
-del "%WINDIR%\Fonts\segoeui.ttf"
+REM Segoe UI (segoeui.ttf is required or black screen occurs at login)
+REM del "%WINDIR%\Fonts\segoeui.ttf"
 del "%WINDIR%\Fonts\segoeuib.ttf"
 del "%WINDIR%\Fonts\segoeuii.ttf"
 del "%WINDIR%\Fonts\segoeuil.ttf"
