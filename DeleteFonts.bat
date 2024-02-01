@@ -8,6 +8,8 @@ REM Windows 11 uses Segoe UI Variable
 
 REM You must remove all Segoe* fonts in the "C:\Windows\Fonts" directory for this batch script to work
 
+REM Deleting fonts via the Fonts directory directly does NOT delete the actual font files inside the directory, it only disables the font and leaves the files behind
+
 REM Both "%WINDIR%\Fonts" and "%USERPROFILE%\AppData\Local\Microsoft\Windows\Fonts" are linked together
 
 REM Monospaced fonts (IBM Plex Mono) use up too much space in GUI and cut off text, NOT RECOMMENDED
