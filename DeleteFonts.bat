@@ -89,9 +89,29 @@ del "%WINDIR%\Fonts\85*"
 del "%WINDIR%\Fonts\c8514fix.fon"
 del "%WINDIR%\Fonts\c8514oem.fon"
 del "%WINDIR%\Fonts\c8514sys.fon"
+del "%WINDIR%\Fonts\j8514fix.fon"
+del "%WINDIR%\Fonts\j8514oem.fon"
+del "%WINDIR%\Fonts\j8514sys.fon"
+del "%WINDIR%\Fonts\s8514fix.fon"
+del "%WINDIR%\Fonts\s8514oem.fon"
+del "%WINDIR%\Fonts\s8514sys.fon"
 
 REM cga fonts
 del "%WINDIR%\Fonts\cga*"
+
+REM ega fonts
+del "%WINDIR%\Fonts\ega*"
+
+REM jvga fonts
+del "%WINDIR%\Fonts\jvgafix.fon"
+del "%WINDIR%\Fonts\jvgasys.fon"
+
+REM vga fonts
+del "%WINDIR%\Fonts\vga*"
+
+REM svga fonts
+del "%WINDIR%\Fonts\svgafix.fon"
+del "%WINDIR%\Fonts\svgasys.fon"
 
 REM Yu Gothic / Yu Gothic UI
 del "%WINDIR%\Fonts\YuGothB.ttc"
