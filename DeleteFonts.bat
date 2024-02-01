@@ -80,8 +80,12 @@ del "%WINDIR%\Fonts\SegUIVar.ttf"
 
 REM Remove bloat fonts
 
+REM app fonts
+del "%WINDIR%\Fonts\app*"
+
 REM 8514oem Regular
 del "%WINDIR%\Fonts\8514oemt.fon"
+del "%WINDIR%\Fonts\85*"
 
 REM Yu Gothic / Yu Gothic UI
 del "%WINDIR%\Fonts\YuGothB.ttc"
