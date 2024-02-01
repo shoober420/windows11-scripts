@@ -6,7 +6,9 @@ REM Windows XP/7 uses Tahoma
 REM Windows 10 uses Segoe UI
 REM Windows 11 uses Segoe UI Variable
 
-REM You must create an segoeui.ttf replacement in the "C:\Windows\Fonts" directory, or manually delete the Segoe font family via entering the C:\Windows\Fonts directory to change Windows default font
+REM You must have segoeui.ttf in the "C:\Windows\Fonts" directory, or Windows black screens at login
+
+REM Manually delete the Segoe font family via entering the C:\Windows\Fonts directory to change Windows default font (Login screen and certain GUI fonts are unchangable)
 
 REM Deleting fonts via entering the C:\Windows\Fonts directory does NOT delete the actual font files inside the directory, it only disables the font and leaves the files behind
 
@@ -19,7 +21,7 @@ REM Monospaced fonts (IBM Plex Mono) use up too much space in GUI and cut off te
 REM Microsoft Sans Serif Regular (micross.ttf) is the new TrueType version
 REM MS Sans Serif Regular (ssee1257.fon) is the old bitmap version
 
-REM If segoeui.ttf is removed with no replacement which creates black screen at login, boot into WinRE and open cmd prompt
+REM If segoeui.ttf is removed which creates black screen at login, boot into WinRE and open cmd prompt
 REM notepad then open
 REM you must copy and paste the Fonts folder using the mouse, using keyboard shortcuts will cause an out of memory error and not copy the files
 REM if Windows.old\Fonts is not found, copy X:\Windows\Fonts into C:\Windows\Fonts (uses same font scheme as WinRE shell such as italic desktop icons) (missing lots of fonts like Arial)
