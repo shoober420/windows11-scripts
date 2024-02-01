@@ -33,6 +33,55 @@ REM rmdir /s /q "%USERPROFILE%\AppData\Local\Microsoft\Windows\Fonts"
 REM copy "%USERPROFILE%\Downloads\micross.ttf" "%WINDIR%\Fonts"
 REM copy "%USERPROFILE%\Downloads\arial.ttf" "%WINDIR%\Fonts"
 
+del "%WINDIR%\Fonts\8514oemt.fon" /f
+del "%WINDIR%\Fonts\YuGothB.ttc" /f
+del "%WINDIR%\Fonts\YuGothL.ttc" /f
+del "%WINDIR%\Fonts\YuGothM.ttc" /f
+del "%WINDIR%\Fonts\YuGothR.ttc" /f
+del "%WINDIR%\Fonts\wingding.ttf" /f
+del "%WINDIR%\Fonts\webdings.ttf" /f
+del "%WINDIR%\Fonts\dos869.fon" /f
+del "%WINDIR%\Fonts\8514oemg.fon" /f
+del "%WINDIR%\Fonts\sylfaen.ttf" /f
+del "%WINDIR%\Fonts\SitkaVF.ttf" /f
+del "%WINDIR%\Fonts\SitkaVF-Italic.ttf" /f
+del "%WINDIR%\Fonts\simsunb.ttf" /f
+del "%WINDIR%\Fonts\simsun.ttc" /f
+del "%WINDIR%\Fonts\script.fon" /f
+del "%WINDIR%\Fonts\mingliub.ttc" /f
+del "%WINDIR%\Fonts\Nirmala.ttc" /f
+del "%WINDIR%\Fonts\mmrtext.ttf" /f
+del "%WINDIR%\Fonts\mmrtextb.ttf" /f
+del "%WINDIR%\Fonts\mvboli.ttf" /f
+del "%WINDIR%\Fonts\msyi.ttf" /f
+del "%WINDIR%\Fonts\msyh.ttc" /f
+del "%WINDIR%\Fonts\msyhbd.ttc" /f
+del "%WINDIR%\Fonts\msyhl.ttc" /f
+del "%WINDIR%\Fonts\taile.ttf /f
+del "%WINDIR%\Fonts\taileb.ttf" /f
+del "%WINDIR%\Fonts\phagspa.ttf" /f
+del "%WINDIR%\Fonts\phagspab.ttf" /f
+del "%WINDIR%\Fonts\ntailu.ttf" /f
+del "%WINDIR%\Fonts\ntailub.ttf" /f
+del "%WINDIR%\Fonts\msjh.ttc" /f
+del "%WINDIR%\Fonts\msjhbd.ttc" /f
+del "%WINDIR%\Fonts\msjhl.ttc" /f
+del "%WINDIR%\Fonts\himalaya.ttf" /f
+del "%WINDIR%\Fonts\malgun.ttf" /f
+del "%WINDIR%\Fonts\malgunbd.ttf" /f
+del "%WINDIR%\Fonts\malgunsl.ttf" /f
+del "%WINDIR%\Fonts\LeelaUIb.ttf" /f
+del "%WINDIR%\Fonts\LeelawUI.ttf" /f
+del "%WINDIR%\Fonts\LeelUIsl.ttf" /f
+del "%WINDIR%\Fonts\javatext.ttf" /f
+del "%WINDIR%\Fonts\Inkfree.ttf" /f
+del "%WINDIR%\Fonts\impact.ttf" /f
+del "%WINDIR%\Fonts\holomdl2.ttf" /f
+del "%WINDIR%\Fonts\gadugi.ttf" /f
+del "%WINDIR%\Fonts\gadugib.ttf" /f
+del "%WINDIR%\Fonts\ebrima.ttf" /f
+del "%WINDIR%\Fonts\ebrimabd.ttf" /f
+
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "Segoe UI (TrueType)" /t REG_SZ /d "" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "Segoe UI Black (TrueType)" /t REG_SZ /d "" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "Segoe UI Black Italic (TrueType)" /t REG_SZ /d "" /f
