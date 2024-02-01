@@ -18,7 +18,8 @@ REM Microsoft Sans Serif Regular (micross.ttf) is the new TrueType version
 REM MS Sans Serif Regular (ssee1257.fon) is the old bitmap version
 
 REM If font folder is deleted which creates black screen at login, boot into WinRE and open cmd prompt
-REM copy C:\Windows.old\Fonts C:\Windows\Fonts
+REM notepad then open
+REM you must copy and paste the Fonts folser using the mouse, using keyboard shortcuts will cause an out of memory error and not copy the files
 REM if Windows.old is not found, copy X:\Windows\Fonts C:\Windows\Fonts (uses same font scheme as WinRE shell such as italic desktop icons) (missing lots of fonts like Arial)
 
 
