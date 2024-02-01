@@ -102,16 +102,16 @@ del "%WINDIR%\Fonts\cga*"
 REM ega fonts
 del "%WINDIR%\Fonts\ega*"
 
-REM jvga fonts
-del "%WINDIR%\Fonts\jvgafix.fon"
-del "%WINDIR%\Fonts\jvgasys.fon"
-
 REM vga fonts
 del "%WINDIR%\Fonts\vga*"
 
 REM svga fonts
 del "%WINDIR%\Fonts\svgafix.fon"
 del "%WINDIR%\Fonts\svgasys.fon"
+
+REM jvga fonts
+del "%WINDIR%\Fonts\jvgafix.fon"
+del "%WINDIR%\Fonts\jvgasys.fon"
 
 REM Yu Gothic / Yu Gothic UI
 del "%WINDIR%\Fonts\YuGothB.ttc"
