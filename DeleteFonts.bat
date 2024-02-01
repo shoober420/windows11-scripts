@@ -6,9 +6,11 @@ REM Windows XP/7 uses Tahoma
 REM Windows 10 uses Segoe UI
 REM Windows 11 uses Segoe UI Variable
 
-REM You must remove all Segoe* fonts in the "C:\Windows\Fonts" directory for this batch script to work
+REM You must create an segoeui.ttf replacement in the "C:\Windows\Fonts" directory, or manually delete the Segoe font family via entering the C:\Windows\Fonts directory to change Windows default font
 
-REM Deleting fonts via the Fonts directory directly does NOT delete the actual font files inside the directory, it only disables the font and leaves the files behind
+REM Deleting fonts via entering the C:\Windows\Fonts directory does NOT delete the actual font files inside the directory, it only disables the font and leaves the files behind
+
+REM Deleting fonts manually using cmd will delete the font, but still show up when entering the C:\Windows\Fonts directory
 
 REM Both "%WINDIR%\Fonts" and "%USERPROFILE%\AppData\Local\Microsoft\Windows\Fonts" are linked together
 
@@ -17,15 +19,15 @@ REM Monospaced fonts (IBM Plex Mono) use up too much space in GUI and cut off te
 REM Microsoft Sans Serif Regular (micross.ttf) is the new TrueType version
 REM MS Sans Serif Regular (ssee1257.fon) is the old bitmap version
 
-REM If font folder is deleted which creates black screen at login, boot into WinRE and open cmd prompt
+REM If segoeui.ttf is removed with no replacement which creates black screen at login, boot into WinRE and open cmd prompt
 REM notepad then open
-REM you must copy and paste the Fonts folser using the mouse, using keyboard shortcuts will cause an out of memory error and not copy the files
-REM if Windows.old is not found, copy X:\Windows\Fonts C:\Windows\Fonts (uses same font scheme as WinRE shell such as italic desktop icons) (missing lots of fonts like Arial)
+REM you must copy and paste the Fonts folder using the mouse, using keyboard shortcuts will cause an out of memory error and not copy the files
+REM if Windows.old\Fonts is not found, copy X:\Windows\Fonts into C:\Windows\Fonts (uses same font scheme as WinRE shell such as italic desktop icons) (missing lots of fonts like Arial)
 
 
 
-REM copy "%WINDIR%\Fonts\micross.ttf" "%USERPROFILE%\Downloads"
-REM copy "%WINDIR%\Fonts\arial.ttf" "%USERPROFILE%\Downloads"
+copy "%WINDIR%\Fonts\micross.ttf" "%USERPROFILE%\Downloads"
+copy "%WINDIR%\Fonts\arial.ttf" "%USERPROFILE%\Downloads"
 
 REM Manual removal of fonts needed
 REM Deleting certain fonts breaks games like CS1.6, find out what fonts games use
@@ -53,7 +55,7 @@ REM Segoe Script
 del "%WINDIR%\Fonts\segoesc.ttf"
 del "%WINDIR%\Fonts\segoescb.ttf"
 
-REM Segoe UI
+REM Segoe UI (segoeui.ttf replacement is required or black screen occurs at login)
 del "%WINDIR%\Fonts\segoeui.ttf"
 del "%WINDIR%\Fonts\segoeuib.ttf"
 del "%WINDIR%\Fonts\segoeuii.ttf"
