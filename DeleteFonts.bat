@@ -37,12 +37,22 @@ REM copy "%USERPROFILE%\Downloads\micross.ttf" "%WINDIR%\Fonts"
 REM copy "%USERPROFILE%\Downloads\arial.ttf" "%WINDIR%\Fonts"
 
 REM Remove all Segoe* fonts
+
+REM Segoe Fluent Icons Regular
 del "%WINDIR%\Fonts\SegoeIcons.ttf"
+
+REM Segoe MDL2 Assets Regular
 del "%WINDIR%\Fonts\segmdl2.ttf"
+
+REM Segoe Print
 del "%WINDIR%\Fonts\segoepr.ttf"
 del "%WINDIR%\Fonts\segoeprb.ttf"
+
+REM Segoe Script
 del "%WINDIR%\Fonts\segoesc.ttf"
 del "%WINDIR%\Fonts\segoescb.ttf"
+
+REM Segoe UI
 del "%WINDIR%\Fonts\segoeui.ttf"
 del "%WINDIR%\Fonts\segoeuib.ttf"
 del "%WINDIR%\Fonts\segoeuii.ttf"
@@ -55,9 +65,17 @@ del "%WINDIR%\Fonts\seguili.ttf"
 del "%WINDIR%\Fonts\seguisb.ttf"
 del "%WINDIR%\Fonts\seguisbi.ttf"
 del "%WINDIR%\Fonts\seguisli.ttf"
+
+REM Segoe UI Emoji Regular
 del "%WINDIR%\Fonts\seguiemj.ttf"
+
+REM Segoe UI Historic Regular
 del "%WINDIR%\Fonts\seguihis.ttf"
+
+REM Segoe UI Symbol Regular
 del "%WINDIR%\Fonts\seguisym.ttf"
+
+REM Segoe UI Variable
 del "%WINDIR%\Fonts\SegUIVar.ttf"
 
 REM Remove bloat fonts
