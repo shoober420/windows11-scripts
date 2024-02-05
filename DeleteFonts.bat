@@ -43,7 +43,7 @@ REM rmdir /s /q "%USERPROFILE%\AppData\Local\Microsoft\Windows\Fonts"
 REM copy "%USERPROFILE%\Downloads\micross.ttf" "%WINDIR%\Fonts"
 REM copy "%USERPROFILE%\Downloads\arial.ttf" "%WINDIR%\Fonts"
 
-REM Remove all Segoe* fonts
+REM Remove bloat Segoe* fonts (except Segoe UI, segoeui.ttf is required or black screen occurs at login)
 
 REM Segoe Fluent Icons Regular
 del "%WINDIR%\Fonts\SegoeIcons.ttf"
@@ -96,6 +96,9 @@ del "%WINDIR%\Fonts\8514oemt.fon"
 del "%WINDIR%\Fonts\c8514fix.fon"
 del "%WINDIR%\Fonts\c8514oem.fon"
 del "%WINDIR%\Fonts\c8514sys.fon"
+del "%WINDIR%\Fonts\h8514fix.fon"
+del "%WINDIR%\Fonts\h8514oem.fon"
+del "%WINDIR%\Fonts\h8514sys.fon"
 del "%WINDIR%\Fonts\j8514fix.fon"
 del "%WINDIR%\Fonts\j8514oem.fon"
 del "%WINDIR%\Fonts\j8514sys.fon"
@@ -121,6 +124,10 @@ del "%WINDIR%\Fonts\svgasys.fon"
 REM jvga fonts
 del "%WINDIR%\Fonts\jvgafix.fon"
 del "%WINDIR%\Fonts\jvgasys.fon"
+
+REM hvga fonts
+del "%WINDIR%\Fonts\hvgafix.fon"
+del "%WINDIR%\Fonts\hvgasys.fon"
 
 REM Yu Gothic / Yu Gothic UI
 del "%WINDIR%\Fonts\YuGothB.ttc"
@@ -241,6 +248,45 @@ del "%WINDIR%\Fonts\gadugib.ttf"
 REM Ebrima
 del "%WINDIR%\Fonts\ebrima.ttf"
 del "%WINDIR%\Fonts\ebrimabd.ttf"
+
+REM Bahnschrift
+del "%WINDIR%\Fonts\bahnschrift.ttf"
+
+REM Calibri
+del "%WINDIR%\Fonts\calibri.ttf"
+del "%WINDIR%\Fonts\calibrib.ttf"
+del "%WINDIR%\Fonts\calibrii.ttf"
+del "%WINDIR%\Fonts\calibril.ttf"
+del "%WINDIR%\Fonts\calibrili.ttf"
+del "%WINDIR%\Fonts\calibriz.ttf"
+
+REM Cambria / Cambria Math Regular
+del "%WINDIR%\Fonts\cambria.ttf"
+del "%WINDIR%\Fonts\cambriab.ttf"
+del "%WINDIR%\Fonts\cambriai.ttf"
+del "%WINDIR%\Fonts\cambriaz.ttf"
+
+REM Candara
+del "%WINDIR%\Fonts\Candara.ttf"
+del "%WINDIR%\Fonts\Candarab.ttf"
+del "%WINDIR%\Fonts\Candarai.ttf"
+del "%WINDIR%\Fonts\Candaral.ttf"
+del "%WINDIR%\Fonts\Candarali.ttf"
+del "%WINDIR%\Fonts\Candaraz.ttf"
+
+REM Constantia
+del "%WINDIR%\Fonts\constan.ttf"
+del "%WINDIR%\Fonts\constanb.ttf"
+del "%WINDIR%\Fonts\constani.ttf"
+del "%WINDIR%\Fonts\constanz.ttf"
+
+REM Corbel
+del "%WINDIR%\Fonts\corbel.ttf"
+del "%WINDIR%\Fonts\corbelb.ttf"
+del "%WINDIR%\Fonts\corbeli.ttf"
+del "%WINDIR%\Fonts\corbell.ttf"
+del "%WINDIR%\Fonts\corbelli.ttf"
+del "%WINDIR%\Fonts\corbelz.ttf"
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "Segoe UI (TrueType)" /t REG_SZ /d "" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "Segoe UI Black (TrueType)" /t REG_SZ /d "" /f
