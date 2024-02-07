@@ -48,9 +48,11 @@ REM copy "%USERPROFILE%\Downloads\arial.ttf" "%WINDIR%\Fonts"
 
 REM Remove bloat Segoe* fonts (except Segoe UI, segoeui.ttf is required or black screen occurs at login)
 
+REM Windows 11 uses "Segoe Fluent Icons" for GUI icons
 REM Segoe Fluent Icons Regular
 del "%WINDIR%\Fonts\SegoeIcons.ttf"
 
+REM Windows 10 uses "Segoe MDL2 Assets" for GUI icons
 REM Segoe MDL2 Assets Regular
 del "%WINDIR%\Fonts\segmdl2.ttf"
 
