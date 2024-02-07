@@ -2,9 +2,12 @@ REM Rename Fonts directory
 REM Debloat extra fonts
 
 REM Windows 95/98 uses Microsoft Sans Serif
+REM Windows 95/98/2000 use "Marlett" for GUI icons
 REM Windows XP/7 uses Tahoma
 REM Windows 10 uses Segoe UI
+REM Windows 10 uses "Segoe MDL2 Assets" for GUI icons
 REM Windows 11 uses Segoe UI Variable
+REM Windows 11 uses "Segoe Fluent Icons" for GUI icons
 
 REM You must have segoeui.ttf in the "C:\Windows\Fonts" directory, or Windows black screens at login
 
@@ -287,6 +290,9 @@ del "%WINDIR%\Fonts\corbeli.ttf"
 del "%WINDIR%\Fonts\corbell.ttf"
 del "%WINDIR%\Fonts\corbelli.ttf"
 del "%WINDIR%\Fonts\corbelz.ttf"
+
+REM Gabriola Regular
+del "%WINDIR%\Fonts\Gabriola.ttf"
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "Segoe UI (TrueType)" /t REG_SZ /d "" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "Segoe UI Black (TrueType)" /t REG_SZ /d "" /f
