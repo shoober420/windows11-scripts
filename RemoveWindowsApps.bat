@@ -81,7 +81,7 @@ powershell -command "Get-AppxPackage *Microsoft.Windows.ContentDeliveryManager* 
 powershell -command "Get-AppxPackage *Microsoft.Win32WebViewHost* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *devhome* | Remove-AppxPackage" 
 
-REM Remove all other apps
+REM Remove all other apps except Microsoft Store
 powershell -command "Get-AppXPackage | where-object {$_.name -notlike '*store*'} | Remove-AppxPackage"
 
 rem Uninstalls "Remote Desktop Connection" program
