@@ -1,6 +1,5 @@
 rem Remove bloat windows apps
-REM "DISM /online /get-features /format:table" shows installed features
-REM "Get-WindowsOptionalFeature -Online" shows installed features
+REM powershell -command "Get-AppxPackage | Select Name, PackageFullName" shows installed apps
 
 rem winget requires "Application Information" service to be running
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Appinfo" /v "Start" /t REG_DWORD /d "2" /f
@@ -79,7 +78,10 @@ powershell -command "Get-AppxPackage *Microsoft.WindowsTerminal* | Remove-AppxPa
 powershell -command "Get-AppxPackage *Microsoft.Windows.NarratorQuickStart* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *Microsoft.Windows.ContentDeliveryManager* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *Microsoft.Win32WebViewHost* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *devhome* | Remove-AppxPackage" 
 
+REM Remove all other apps
+powershell -command "Get-AppXPackage | where-object {$_.name -notlike '*store*'} | Remove-AppxPackage"
 
 rem Uninstalls "Remote Desktop Connection" program
 mstsc /uninstall
