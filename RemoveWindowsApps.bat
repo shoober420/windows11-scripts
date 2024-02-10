@@ -1,4 +1,5 @@
 rem Remove bloat windows apps
+REM "winget list" shows installed apps
 REM powershell -command "Get-AppxPackage | Select Name, PackageFullName" shows installed apps
 
 rem winget requires "Application Information" service to be running
