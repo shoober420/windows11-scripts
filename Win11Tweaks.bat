@@ -579,7 +579,7 @@ rem =================================== Windows Settings =======================
 rem ----------------------------------- Personalization ------------------------------------
 rem ....................................... Colors .........................................
 
-rem 1 - Transparency Effects
+rem - Transparency Effects \ 1 = Enabled \ 0 = Disabled
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "EnableTransparency" /t REG_DWORD /d "0" /f
 
 
