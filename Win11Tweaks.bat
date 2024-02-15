@@ -12,6 +12,14 @@ rem https://github.com/ionuttbara
 rem https://github.com/raspi
 rem -----------------------------------------------------------------------------------------
 
+rem Enable and start WMI
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD /d "2" /f
+sc config winmgmt start= auto
+net start winmgmt
+
+TIMEOUT /T 5
+
 
 
 
@@ -656,6 +664,9 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "T
 
 rem Search / 0 - Off / 1 - On
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Search" /v "SearchboxTaskbarMode" /t REG_DWORD /d "0" /f
+
+rem Autohide Taskbar
+powershell -command "&{$p='HKCU:SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\StuckRects3';$v=(Get-ItemProperty -Path $p).Settings;$v[8]=3;&Set-ItemProperty -Path $p -Name Settings -Value $v;&Stop-Process -f -ProcessName explorer}"
 
 rem ________________________________________________________________________________________
 rem 1 - Always show all icons and notifications on the taskbar
