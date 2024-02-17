@@ -106,3 +106,5 @@ StartBATs.bat (runs startup batch scripts)
 DeleteFonts.bat
 
 DisableMicrophone.bat / EnableMicrophone.bat
+
+EnableEssentialServices.bat
