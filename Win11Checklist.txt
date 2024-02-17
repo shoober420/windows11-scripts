@@ -428,7 +428,7 @@ Change .txt, .cfg, .ini, and .log icons
  + disable Microsoft defender antivirus service (registry) (SS)
  + disable windows management instrumentation (needed for TCPOptimizer, AMD adrenaline software and AMD driver upgrades)
  ++ ULTRA MINIMAL ONLY!!!  disable AppX Deployment Service (AppXSVC) (registry) (borks Settings/Personalization, borks File Explorer/Right Click Menu)
- ++ ULTRA MINIMAL ONLY!!! disable capability access manager service (removes bottom right taskbar ui (date and time/sound/internet/app icons)
+ +++ ONLY disable capability access manager service (camsvc) if you dont want to use a microphone
  +++ ONLY disable Microsoft passport for login on non-local accounts, needed for login on Microsoft hello / Microsoft accounts (PIN login). you will need to WinRE*** (login screen shift key method)
  +++ NEVER disable BrokerInfrastructure, causes sihost.exe error at login, system instability and lag, breaks GUI theme settings
  +++ NEVER disable SystemEventsBroker (scheduler depends on this service), causes explorer.exe error at login, system instability and lag, breaks GUI theme settings
