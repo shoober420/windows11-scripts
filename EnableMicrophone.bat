@@ -4,7 +4,7 @@ rem =================================== Windows Settings =======================
 rem ---------------------------------- Privacy & security ----------------------------------
 rem ...................................... Microphone ......................................
 
-REM camsvc is required for microphone to work
+REM Capability Access Manager Service (camsvc) is required for microphone to work
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\camsvc" /v "Start" /t REG_DWORD /d "2" /f
 net start camsvc
 
