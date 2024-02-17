@@ -105,6 +105,6 @@ StartBATs.bat (runs startup batch scripts)
 
 DeleteFonts.bat
 
-DisableMicrophone.bat / EnableMicrophone.bat
+DisableMicrophone.bat / EnableMicrophone.bat (camsvc is required for microphone to work)
 
 EnableEssentialServices.bat
