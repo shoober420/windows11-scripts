@@ -1,4 +1,4 @@
-Find latest 64bit version at using phone:
+Find latest 64bit version using phone:
    - https://chromium.woolyss.com/download/
    - https://storage.googleapis.com/chromium-browser-snapshots/Win_x64/xxxxxxx/chrome-win.zip
 
