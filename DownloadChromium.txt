@@ -1,6 +1,6 @@
 Find latest 64bit version using phone:
    - https://chromium.woolyss.com/download/
-   - find version where it says "Revision:"
+   - find version where it says "Revision:xxxxxxx"
    - https://storage.googleapis.com/chromium-browser-snapshots/Win_x64/xxxxxxx/chrome-win.zip
 
 Use "curl" to download file:
