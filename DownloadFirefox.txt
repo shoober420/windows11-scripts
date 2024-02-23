@@ -1,0 +1,2 @@
+Download Firefox Nightly
+   - Find latest version here: https://ftp.mozilla.org/pub/firefox/nightly/
