@@ -1324,6 +1324,11 @@ taskkill /im P508PowerAgent.exe /f
 rem del "C:\Program Files (x86)\ASUS\ArmouryDevice\dll\ShareFromArmouryIII\Mouse\ROG STRIX CARRY\P508PowerAgent.exe" /s /f /q
 ren "C:\Program Files (x86)\ASUS\ArmouryDevice\dll\ShareFromArmouryIII\Mouse\ROG STRIX CARRY\P508PowerAgent.exe" "P508PowerAgent.exe.bak"
 
+rem Disable WWAHost.exe (to restore run "sfc /scannow")
+takeown /s %computername% /u %username% /f "%WinDir%\System32\WWAHost.exe"
+icacls "%WinDir%\System32\WWAHost.exe" /grant:r %username%:F
+ren "%WinDir%\System32\WWAHost.exe" "WWAHost.exe.bak"
+
 
 
 rem MarkC Acceleration Fix
