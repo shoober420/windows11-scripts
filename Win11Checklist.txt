@@ -789,3 +789,5 @@ Win+E = File Explorer
 Win+I = Settings
 Win+R = Run
 Ctrl+Shift+Esc = Task Manager
+
+Join beta uodates for Android by either going to the Play Store app page and joining the beta. if its full, google android and the app name, then beta tester afterward (android youtube beta tester) and click "become a tester" on the beta opt-in page (https://play.google.com/apps/testing/)
