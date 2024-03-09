@@ -108,3 +108,7 @@ DeleteFonts.bat
 DisableMicrophone.bat / EnableMicrophone.bat (Capability Access Manager Service is required for microphone to work)
 
 EnableEssentialServices.bat
+
+DownloadFirefox.txt
+
+DeleteTmpCache.bat
