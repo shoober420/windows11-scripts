@@ -10,6 +10,8 @@ rmdir /s /q "C:\Windows\LastGood.tmp"
 rmdir /s /q "C:\Windows\LiveKernelReports"
 rmdir /s /q "C:\Windows\Prefetch"
 
+takeown /s %computername% /u %username% /f "C:\Windows.old"
+icacls "C:\Windows.old" /grant:r %username%:F
 rmdir /s /q "C:\Windows.old"
 
 PAUSE
