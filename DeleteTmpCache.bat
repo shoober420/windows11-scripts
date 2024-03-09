@@ -14,4 +14,7 @@ takeown /s %computername% /u %username% /f "C:\Windows.old"
 icacls "C:\Windows.old" /grant:r %username%:F
 rmdir /s /q "C:\Windows.old"
 
+rmdir /s /q "C:\pagefile.sys"
+rmdir /s /q "C:\swapfile.sys"
+
 PAUSE
