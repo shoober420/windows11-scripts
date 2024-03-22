@@ -16,7 +16,12 @@ Run batch scripts
  - PowerPlanSettings.bat
 RESTART
  - Win11Tweaks.bat
- - Disable*.bat
+ - Disable*.bat (DO NOT RUN DisableStateRepository.bat and DisableWinHTTP.bat)
+ - DeleteFonts.bat
 RESTART (SAFE MODE)
+ - SetACL.bat
+ - DisableWindowsDefender.bat
+ - DisableWindowsFirewall.bat
+ - DisableEventTraceSessions.bat
 
 
