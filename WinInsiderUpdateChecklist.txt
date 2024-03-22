@@ -1,6 +1,22 @@
 Update Video Drivers
  - NVIDIA: https://www.nvidia.com/download/find.aspx
  - AMD: https://www.amd.com/en/support
+
+Run Intel DSA (Driver Support Assistant)
+
 Disable Drivers in Device Manager
+
 Setup Microsoft Interrupt Affinity Tool
+
 Run batch scripts
+ - WingetUpdateApps.bat
+ - RemoveWindowsApps.bat
+ - RemoveWindowsFeatures.bat
+ - Internet&SecuritySettings.bat
+ - PowerPlanSettings.bat
+RESTART
+ - Win11Tweaks.bat
+ - Disable*.bat
+RESTART (SAFE MODE)
+
+
