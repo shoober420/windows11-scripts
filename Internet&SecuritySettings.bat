@@ -50,6 +50,12 @@ powershell.exe Set-Processmitigation -System -Disable AuditStoreSigned
 powershell.exe Set-Processmitigation -System -Disable AuditSystemCall
 powershell.exe Set-Processmitigation -System -Disable AuditChildProcess
 
+powershell.exe Set-SmbClientConfiguration -EnableSMBQUIC $false
+powershell.exe Set-SmbClientConfiguration -AuditServerDoesNotSupportEncryption $true
+powershell.exe Set-SmbClientConfiguration -AuditServerDoesNotSupportSigning $true
+powershell.exe Set-SmbServerConfiguration -AuditClientDoesNotSupportEncryption $true
+powershell.exe Set-SmbServerConfiguration -AuditClientDoesNotSupportSigning $true
+
 rem deleting all inbound firewall rules may break internet for certain Wi-Fi cards
 powershell.exe Remove-NetFirewallRule -All
 
