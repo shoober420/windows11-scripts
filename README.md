@@ -149,6 +149,6 @@ RESTART (SAFE MODE)
 
 RESTART
 
-NVProfileInspector load profile
+nvidiaProfileInspector load profile
 
 RESTART
