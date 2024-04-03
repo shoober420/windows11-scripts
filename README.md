@@ -112,3 +112,43 @@ EnableEssentialServices.bat
 DownloadFirefox.txt
 
 DeleteTmpCache.bat
+
+=============================
+INSTRUCTIONS
+=============================
+
+Update Video Drivers
+ - NVIDIA: https://www.nvidia.com/download/find.aspx
+ - AMD: https://www.amd.com/en/support
+
+Run Intel DSA (Driver Support Assistant)
+
+Disable Drivers in Device Manager
+
+Setup Microsoft Interrupt Affinity Tool
+
+Run batch scripts
+ - WingetUpdateApps.bat
+ - RemoveWindowsApps.bat
+ - RemoveWindowsFeatures.bat
+ - Internet&SecuritySettings.bat
+ - PowerPlanSettings.bat
+
+RESTART
+
+ - Win11Tweaks.bat
+ - Disable*.bat (DO NOT RUN DisableStateRepository.bat and DisableWinHTTP.bat)
+
+RESTART (SAFE MODE)
+
+ - SetACL.bat
+ - DisableWindowsDefender.bat
+ - DisableWinFirewall.bat
+ - DisableEventTraceSessions.bat
+ - DeleteFonts.bat
+
+RESTART
+
+NVProfileInspector load profile
+
+RESTART
