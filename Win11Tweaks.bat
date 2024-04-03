@@ -2539,8 +2539,8 @@ rem 14 Hex = Long, Variable, No foreground boost
 rem Best input: Short, Fixed, No foreground boost (28, but causes lag spikes)
 rem Best performance: Long, Variable, High foreground boost (16)
 rem "No foreground boost" causes lag spikes
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\PriorityControl" /v "Win32PrioritySeparation" /t REG_DWORD /d "0x0000002A" /f
-reg add "HKLM\SYSTEM\ControlSet001\Control\PriorityControl" /v "Win32PrioritySeparation" /t REG_DWORD /d "0x0000002A" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\PriorityControl" /v "Win32PrioritySeparation" /t REG_DWORD /d "0x00000028" /f
+reg add "HKLM\SYSTEM\ControlSet001\Control\PriorityControl" /v "Win32PrioritySeparation" /t REG_DWORD /d "0x00000028" /f
 
 rem NVIDIA video card tweaks, last key may vary from 0000 to 0001 if dual NVIDIA/AMD machine is used
 rem Second to last key is the "Class Guid"
