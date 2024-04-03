@@ -24,6 +24,12 @@ RESTART (SAFE MODE)
 
  - SetACL.bat
  - DisableWindowsDefender.bat
- - DisableWindowsFirewall.bat
+ - DisableWinFirewall.bat
  - DisableEventTraceSessions.bat
- - DisableFonts.bat
+ - DeleteFonts.bat
+
+RESTART
+
+NVProfileInspector load profile
+
+RESTART
