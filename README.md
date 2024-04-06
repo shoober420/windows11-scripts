@@ -154,3 +154,9 @@ nvidiaProfileInspector load desired profile
 RESTART
 
 Disable Drivers in Device Manager
+
+RESTART
+
+Setup Microsoft Interrupt Affinity Tool
+
+RESTART
