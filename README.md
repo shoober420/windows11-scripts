@@ -33,7 +33,7 @@ acl.txt (ACL: Access Control List - needed to take ownership of registry keys fo
 
 DeleteNVIDIAShaderCache.bat
 
-PowerPlanUltra.bat (adds duplicate power plan everytime command is executed, so use powerplan.bat only once after every new build install unless already present)
+PowerPlanUltra.bat (adds duplicate Ultra power plan everytime command is executed, so use PowerPlanUltra.bat only if Ultimate Performance power plan profile is NOT present)
 
 DisableServices.bat (to disable Windows Defender, run in SAFE MODE)
 
@@ -41,7 +41,7 @@ DisableThemes.bat / EnableThemes.bat
 
 StartGraphicsPerfSvc.bat
 
-PowerPlanSettings.bat (adds duplicate power plan everytime command is executed, so use powerplan.bat only once after every new build install unless already present)
+PowerPlanSettings.bat
 
 RemoveWindowsFeatures.bat (windows update services required for DISM)
 
@@ -127,7 +127,7 @@ Run batch scripts
  - RemoveWindowsApps.bat
  - RemoveWindowsFeatures.bat
  - Internet&SecuritySettings.bat
- - PowerPlanUltra.bat (if Ultimate Performance power plan profile is NOT present)
+ - PowerPlanUltra.bat (only if Ultimate Performance power plan profile is NOT present)
  - PowerPlanSettings.bat
 
 RESTART
