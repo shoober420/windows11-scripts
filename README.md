@@ -127,12 +127,12 @@ Run batch scripts
  - RemoveWindowsApps.bat
  - RemoveWindowsFeatures.bat
  - Internet&SecuritySettings.bat
- - PowerPlan.bat (if Ultimate Performance profile is NOT present)
+ - PowerPlanUltra.bat (if Ultimate Performance power plan profile is NOT present)
  - PowerPlanSettings.bat
 
 RESTART
 
- - Win11Tweaks.bat
+ - Windows11Tweaks.bat
  - Disable*.bat (DO NOT RUN DisableStateRepository.bat and DisableWinHTTP.bat)
 
 RESTART
@@ -143,13 +143,13 @@ RESTART (SAFE MODE)
 
  - SetACL.bat
  - DisableWindowsDefender.bat
- - DisableWinFirewall.bat
+ - DisableWindowsFirewall.bat
  - DisableEventTraceSessions.bat
  - DeleteFonts.bat
 
 RESTART
 
-nvidiaProfileInspector load profile
+nvidiaProfileInspector load desired profile
 
 RESTART
 
