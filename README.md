@@ -101,7 +101,7 @@ DisableWindowsFirewall.bat / EnableWindowsFirewall.bat (use router firewall inst
 
 DisableWindowsDefender.bat (AV software is bloat, run in SAFE MODE)
 
-StartBATs.bat (runs startup batch scripts)
+StartUpBATs.bat (Run this script after login every boot, executes SetTimerResolution.exe and disables services launched after login)
 
 DeleteFonts.bat
 
