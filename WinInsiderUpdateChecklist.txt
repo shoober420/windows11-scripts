@@ -6,7 +6,7 @@ Update Video Drivers
 
 Run Intel DSA (Driver Support Assistant)
 
-Setup Microsoft Interrupt Affinity Tool
+RESTART
 
 Run batch scripts
  - WingetUpdateApps.bat
@@ -35,5 +35,9 @@ nvidiaProfileInspector load profile
 RESTART
 
 Disable Drivers in Device Manager
+
+RESTART
+
+Setup Microsoft Interrupt Affinity Tool
 
 RESTART
