@@ -69,7 +69,7 @@ SetACL.bat (ACL: Access Control List - requires SetACL.exe to be in scripts dire
 
 InterruptAffinityPolicyTool.txt
 
-WinInsiderUpdateChecklist.txt (to-do list when new Windows Insider build is installed)
+WinInsiderBuildUpdateChecklist.txt (instructions for when a new Windows Insider build is installed)
 
 SetTimerResolution.bat (script needed to launch SetTimerResolution.exe at boot)
 
@@ -123,21 +123,24 @@ Update Video Drivers
 
 Run Intel DSA (Driver Support Assistant)
 
-Disable Drivers in Device Manager
-
-Setup Microsoft Interrupt Affinity Tool
+RESTART
 
 Run batch scripts
  - WingetUpdateApps.bat
  - RemoveWindowsApps.bat
  - RemoveWindowsFeatures.bat
  - Internet&SecuritySettings.bat
+ - PowerPlan.bat (if Ultimate Performance profile is NOT present)
  - PowerPlanSettings.bat
 
 RESTART
 
  - Win11Tweaks.bat
  - Disable*.bat (DO NOT RUN DisableStateRepository.bat and DisableWinHTTP.bat)
+
+RESTART
+
+If stuck at "Just a moment..." screen before login, press CTRL+ALT+DEL to force login screen to show
 
 RESTART (SAFE MODE)
 
@@ -152,3 +155,5 @@ RESTART
 nvidiaProfileInspector load profile
 
 RESTART
+
+Disable Drivers in Device Manager
