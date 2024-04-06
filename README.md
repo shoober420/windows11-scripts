@@ -113,6 +113,8 @@ DownloadFirefox.txt
 
 DeleteTmpCache.bat
 
+WindowsFix.bat (standard fixes to troubleshoot Windows systems with issues and bugs)
+
 # Instructions
 Update Video Drivers
  - NVIDIA: https://www.nvidia.com/download/find.aspx
