@@ -444,7 +444,7 @@ Change .txt, .cfg, .ini, and .log icons
 
 Disable unused components in Device Manager
 
- --- Enable for Windows update only, then disable after updating (every Wednesday)
+ --- Enable for Windows update
  - Update Orchestrator Service
  - Windows Insider Service
  - Windows update
@@ -759,6 +759,8 @@ NVIDIA Reflex Low Latency: Enabled + Boost fixes stuttering issues in cs2
 
 Perform scaling on: Display (lower latency and more performance than GPU scaling)
 
+If stuck at "Just a moment..." screen before login, press CTRL+ALT+DEL to force login screen to show
+
 ---   https://ss64.com/nt/run.html   ---
 
 mmsys.cpl - sound settings
@@ -790,4 +792,4 @@ Win+I = Settings
 Win+R = Run
 Ctrl+Shift+Esc = Task Manager
 
-Join beta uodates for Android by either going to the Play Store app page and joining the beta. if its full, google android and the app name, then beta tester afterward (android youtube beta tester) and click "become a tester" on the beta opt-in page (https://play.google.com/apps/testing/)
+Join any Android app beta update by going to the Play Store app page and joining the beta. if its full, google android and the app name, then beta tester afterward (android youtube beta tester) and click "become a tester" on the beta opt-in page (https://play.google.com/apps/testing/)
