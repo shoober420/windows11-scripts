@@ -113,7 +113,7 @@ DownloadFirefox.txt
 
 DeleteTmpCache.bat
 
-# INSTRUCTIONS
+# Instructions
 Update Video Drivers
  - NVIDIA: https://www.nvidia.com/download/find.aspx
  - AMD: https://www.amd.com/en/support
