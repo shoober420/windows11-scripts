@@ -1,4 +1,5 @@
 Windows Insider Build Update Checklist
+ - Instructions for when you install a new Windows Insider build update
 
 Update Video Drivers
  - NVIDIA: https://www.nvidia.com/download/find.aspx
