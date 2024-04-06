@@ -1,10 +1,10 @@
+Windows Insider Build Update Checklist
+
 Update Video Drivers
  - NVIDIA: https://www.nvidia.com/download/find.aspx
  - AMD: https://www.amd.com/en/support
 
 Run Intel DSA (Driver Support Assistant)
-
-Disable Drivers in Device Manager
 
 Setup Microsoft Interrupt Affinity Tool
 
@@ -31,5 +31,9 @@ RESTART (SAFE MODE)
 RESTART
 
 nvidiaProfileInspector load profile
+
+RESTART
+
+Disable Drivers in Device Manager
 
 RESTART
