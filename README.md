@@ -151,6 +151,7 @@ RESTART (SAFE MODE)
  - DisableWindowsDefender.bat
  - DisableWindowsFirewall.bat
  - DisableEventTraceSessions.bat
+ - DisableServices.bat
  - DeleteFonts.bat
 
 RESTART
