@@ -137,7 +137,7 @@ RESTART
 
 RESTART
 
-If stuck at "Just a moment..." screen before login, press CTRL+ALT+DEL to force login screen to show (sometimes takes a minute for login screen to appear at boot naturally, this occurs when SENS service is disabled)
+If stuck at "Just a moment..." screen before login, press CTRL+ALT+DEL to force login screen to show (this occurs when SENS service is disabled)
 
 RESTART (SAFE MODE)
 
