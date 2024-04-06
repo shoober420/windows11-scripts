@@ -1,9 +1,9 @@
 # Windows Batch Scripts
-Win11Checklist.txt (information on tweaks)
+Windows11Checklist.txt (information on tweaks)
 
-Win11Tweaks.bat (to disable windows defender, run in SAFE MODE)
+Windows11Tweaks.bat (to disable windows defender, run in SAFE MODE)
 
-DisableWinUpdate.bat / EnableWinUpdate.bat
+DisableWindowsUpdate.bat / EnableWindowsUpdate.bat
 
 DisableWMI.bat / EnableWMI.bat (needed for powershell and systeminfo)
 
@@ -33,7 +33,7 @@ acl.txt (ACL: Access Control List - needed to take ownership of registry keys fo
 
 DeleteNVIDIAShaderCache.bat
 
-PowerPlan.bat (adds duplicate power plan everytime command is executed, so use powerplan.bat only once after every new build install unless already present)
+PowerPlanUltra.bat (adds duplicate power plan everytime command is executed, so use powerplan.bat only once after every new build install unless already present)
 
 DisableServices.bat (to disable Windows Defender, run in SAFE MODE)
 
@@ -59,7 +59,7 @@ DisableNLA.bat / EnableNLA.bat (fixes internet)
 
 ResetNetwork.bat
 
-PowerPlanExtra.bat
+PowerPlanExtraOptions.bat (NOT RECOMMENDED)
 
 NVCleanstall.txt
 
@@ -97,7 +97,7 @@ DisableMaintenanceServices.bat / EnableMaintenanceServices.bat
 
 DeleteWindowsAppDir.bat
 
-DisableWinFirewall.bat / EnableWinFirewall.bat (use router firewall instead)
+DisableWindowsFirewall.bat / EnableWindowsFirewall.bat (use router firewall instead)
 
 DisableWindowsDefender.bat (AV software is bloat, run in SAFE MODE)
 
