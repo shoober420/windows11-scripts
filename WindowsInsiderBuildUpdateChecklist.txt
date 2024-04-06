@@ -14,7 +14,7 @@ Run batch scripts
  - RemoveWindowsApps.bat
  - RemoveWindowsFeatures.bat
  - Internet&SecuritySettings.bat
- - PowerPlanUltra.bat (if Ultimate Performance power plan profile is NOT present)
+ - PowerPlanUltra.bat (only if Ultimate Performance power plan profile is NOT present)
  - PowerPlanSettings.bat
 
 RESTART
