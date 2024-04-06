@@ -149,7 +149,7 @@ RESTART (SAFE MODE)
 
 RESTART
 
-nvidiaProfileInspector load desired profile
+nvidiaProfileInspector load PerformanceProfile.nip or HighQualityProfile.nip
 
 RESTART
 
