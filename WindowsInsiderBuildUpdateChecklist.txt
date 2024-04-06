@@ -36,7 +36,7 @@ RESTART (SAFE MODE)
 
 RESTART
 
-nvidiaProfileInspector load profile
+nvidiaProfileInspector load desired profile
 
 RESTART
 
