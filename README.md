@@ -170,3 +170,5 @@ Setup Microsoft Interrupt Affinity Tool
 RESTART
 
 StartUpBATs.bat (run everytime after login)
+
+AutoHideTaskbar.bat / AlwaysShowTaskbar.bat
