@@ -128,7 +128,7 @@ Update Video Drivers
 
 Install and run Intel DSA (Driver Support Assistant)
  - download (https://www.intel.com/content/www/us/en/support/detect.html)
- - if already installed, Uninstall and Reinstall to get Launch option to open Intel DSA
+ - if already installed, Uninstall and Reinstall using downloaded exe to get Launch option to appear after install to run Intel DSA
 
 RESTART
 
