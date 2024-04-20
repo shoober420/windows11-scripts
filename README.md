@@ -119,6 +119,8 @@ WindowsUpdateFix.bat (fixes Windows Update errors and bugs)
 
 SafeMode.txt (multiple methods to get into Safe Mode)
 
+AutoHideTaskbar.bat / AlwaysShowTaskbar.bat
+
 # Instructions
 Update Video Drivers
  - NVIDIA: https://www.nvidia.com/download/find.aspx
@@ -172,5 +174,3 @@ Setup Microsoft Interrupt Affinity Tool
 RESTART
 
 StartUpBATs.bat (run everytime after login)
-
-AutoHideTaskbar.bat / AlwaysShowTaskbar.bat
