@@ -125,6 +125,7 @@ Update Video Drivers
  - AMD: https://www.amd.com/en/support
 
 Install and run Intel DSA (Driver Support Assistant)
+ - download (https://www.intel.com/content/www/us/en/support/detect.html)
  - if already installed, Uninstall and Reinstall to get Launch option to open Intel DSA
 
 RESTART
