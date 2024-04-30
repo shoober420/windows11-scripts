@@ -738,6 +738,11 @@ Error 192 - AMD Software installer Cannot Continue Due to an Operating System Is
 Error 195 - AMD Software Installer Cannot Continue Because It Is Unable to Access the Required Web Resources
  - install drivers manually not using auto-detect web installer
 
+Update certification has expired. Make sure your date, time, and time zone settings are correct and we'll try to install the update later
+ - set date and time to period when update was first issued
+ - run windows update again
+ - change back date and time to current
+
 Windows is still setting up the class configuration for this device. (Code 56)
  - make sure "Network Setup Service (NetSetupDvc)" service is enabled
  - reinstall drivers
