@@ -1222,12 +1222,17 @@ rem ----------------------------------------------------------------------------
 
 
 
+rem System profiles always on
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile" /v "AlwaysOn" /t REG_DWORD /d "1" /f
 
 rem Disable Network throttling
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile" /v "NetworkThrottlingIndex" /t REG_DWORD /d "0xffffffff" /f
 
 rem Improve system responsiveness
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile" /v "SystemResponsiveness" /t REG_DWORD /d "0x00000000" /f
+
+rem Disable lazy mode
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile" /v "NoLazyMode" /t REG_DWORD /d "1" /f
 
 rem Games system profile tweaks 
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Games" /v "Affinity" /t REG_DWORD /d "0" /f
@@ -1376,7 +1381,7 @@ powercfg -delete 381b4222-f694-41f0-9685-ff5bb260df2e
 rem Delete "Power saver" config plan
 powercfg -delete a1841308-3541-4fab-bc81-f71556f20b4a
 
-rem Delete "High Performance" power config plan (use Ultimate Performance instead, powerplan.bat)
+rem Delete "High Performance" power config plan (use Ultimate Performance instead, PowerPlanUltra.bat)
 powercfg -delete 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c
 
 rem Page file tweaks
