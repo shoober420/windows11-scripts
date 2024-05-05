@@ -1582,21 +1582,36 @@ reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManage
 
 
 
+rem Disable Data Execution Prevention (DEP)
 BCDEDIT /SET {CURRENT} NX ALWAYSOFF
+
+rem Disable DMA memory protection and cores isolation
+rem Disable Virtual Secure Mode (VSM)
+rem Disable Hyper-V
 bcdedit /set vsmlaunchtype Off
 bcdedit /set vm No
+bcdedit /set hypervisorlaunchtype off
+
+rem Processor x2APIC Support helps operating systems run more efficiently on high core count configurations
 bcdedit /set x2apicpolicy Enable
+
+rem Enable MSI
 bcdedit /set configaccesspolicy Default
 bcdedit /set MSI Default
 bcdedit /set usephysicaldestination No
 bcdedit /set usefirmwarepcisettings No
+
+rem Avoid the use of uncontiguous portions of low-memory from the OS
 bcdedit /set firstmegabytepolicy UseAll
 bcdedit /set avoidlowmemory 0x8000000
 bcdedit /set nolowmem Yes
+
+rem Disable some of the kernel memory mitigations
 bcdedit /set allowedinmemorysettings 0x0
 bcdedit /set isolatedcontext No
+
+rem Enable Physical Address Extension (PAE)
 bcdedit /set pae ForceEnable
-bcdedit /set hypervisorlaunchtype off
 
 
 
