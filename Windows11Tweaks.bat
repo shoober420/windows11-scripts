@@ -1057,7 +1057,7 @@ rem . . . . . . . . . . . . . . . . Advanced system settings . . . . . . . . . .
 rem Performance - Advanced - Processor Scheduling
 rem 0 - Foreground and background applications equally responsive / 1 - Foreground application more responsive than background / 2 - Best foreground application response time (Default)
 rem 38 - Adjust for best performance of Programs / 24 - Adjust for best performance of Background Services
-reg add "HKLM\System\CurrentControlSet\Control\PriorityControl" /v "Win32PrioritySeparation" /t REG_DWORD /d "2" /f
+rem reg add "HKLM\System\CurrentControlSet\Control\PriorityControl" /v "Win32PrioritySeparation" /t REG_DWORD /d "2" /f
 
 rem Remote Settings - Disable Remote Assistance
 reg add "HKLM\System\CurrentControlSet\Control\Remote Assistance" /v "fAllowToGetHelp" /t REG_DWORD /d "0" /f
