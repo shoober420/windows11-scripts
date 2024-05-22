@@ -123,7 +123,7 @@ AutoHideTaskbar.bat / AlwaysShowTaskbar.bat
 
 # Instructions
 Update Video Drivers
- - NVIDIA: https://www.nvidia.com/download/find.aspx
+ - NVIDIA: https://www.nvidia.com/download/find.aspx (NVCleanstall method preferred)
  - AMD: https://www.amd.com/en/support
 
 Install and run Intel DSA (Driver Support Assistant)
@@ -161,11 +161,8 @@ RESTART (SAFE MODE)
 
 RESTART
 
-nvidiaProfileInspector load PerformanceProfile.nip or HighQualityProfile.nip
-
-RESTART
-
-Disable Drivers in Device Manager
+- nvidiaProfileInspector: load PerformanceProfile.nip or HighQualityProfile.nip
+- Disable Drivers in Device Manager
 
 RESTART
 
