@@ -768,6 +768,8 @@ Perform scaling on: Display (lower latency and more performance than GPU scaling
 
 If stuck at "Just a moment..." screen before login, press CTRL+ALT+DEL to force login screen to show
 
+Properties > Compatibility > change high dpi settings > Override high DPI scaling behavior > Scaling performed by: Application will this fix zoomed in menu screen with games
+
 ---   https://ss64.com/nt/run.html   ---
 
 mmsys.cpl - sound settings
