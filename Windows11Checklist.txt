@@ -41,6 +41,7 @@ Download
  - Microsoft Interrupt Affinity Tool (https://www.techpowerup.com/download/microsoft-interrupt-affinity-tool/)
  - Power Settings Explorer (http://www.mediafire.com/file/wt37sbsejk7iepm/PowerSettingsExplorer.zip)
  - WinCDEmu (https://wincdemu.sysprogs.org/) (mounts mds and other rare image extensions)
+ - RInput (https://fearless-assassins.com/files/file/1656-rinput/)
 
 SAFE MODE: Press and hold F8, then power on system while holding down F8
 
