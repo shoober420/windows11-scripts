@@ -175,4 +175,4 @@ SafeMode.txt (multiple methods to get into Safe Mode)
 
 AutoHideTaskbar.bat / AlwaysShowTaskbar.bat
 
-InstallScoopAsAdmin.bat
+InstallScoop.bat
