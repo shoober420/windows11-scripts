@@ -47,6 +47,10 @@ RESTART
 
 Setup Microsoft Interrupt Affinity Tool
 
+RESTART
+
+StartUpBATs.bat (run everytime after login)
+
 # Windows Batch Scripts
 
 Windows11Checklist.txt (information on tweaks)
@@ -171,7 +175,4 @@ SafeMode.txt (multiple methods to get into Safe Mode)
 
 AutoHideTaskbar.bat / AlwaysShowTaskbar.bat
 
-
-RESTART
-
-StartUpBATs.bat (run everytime after login)
+InstallScoopAsAdmin.bat
