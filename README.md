@@ -1,4 +1,54 @@
 # Windows Batch Scripts
+
+# Instructions
+Update Video Drivers
+ - NVIDIA: https://www.nvidia.com/download/find.aspx (NVCleanstall method preferred)
+ - AMD: https://www.amd.com/en/support
+
+Install and run Intel DSA (Driver Support Assistant)
+ - download (https://www.intel.com/content/www/us/en/support/detect.html)
+ - if already installed, Uninstall and Reinstall using downloaded exe to get Launch option to appear after install to run Intel DSA
+
+RESTART
+
+Run batch scripts
+ - WingetUpdateApps.bat
+ - RemoveWindowsApps.bat
+ - RemoveWindowsFeatures.bat
+ - Internet&SecuritySettings.bat
+ - !!! PowerPlanUltra.bat (only if Ultimate Performance power plan profile is NOT present)
+ - PowerPlanSettings.bat
+
+RESTART
+
+ - Windows11Tweaks.bat
+ - Disable*.bat (DO NOT RUN DisableStateRepository.bat and DisableWinHTTP.bat)
+
+RESTART
+
+If stuck at "Just a moment..." screen before login, press CTRL+ALT+DEL to force login screen to show
+
+RESTART (SAFE MODE)
+
+ - SetACL.bat
+ - DisableWindowsDefender.bat
+ - DisableWindowsFirewall.bat
+ - DisableEventTraceSessions.bat
+ - DisableComponents.bat
+ - DisableServices.bat
+ - DeleteFonts.bat
+
+RESTART
+
+- nvidiaProfileInspector: load PerformanceProfile.nip or HighQualityProfile.nip
+- Disable Drivers in Device Manager
+
+RESTART
+
+Setup Microsoft Interrupt Affinity Tool
+
+# Windows Batch Scripts
+
 Windows11Checklist.txt (information on tweaks)
 
 Windows11Tweaks.bat (to disable windows defender, run in SAFE MODE)
@@ -121,52 +171,6 @@ SafeMode.txt (multiple methods to get into Safe Mode)
 
 AutoHideTaskbar.bat / AlwaysShowTaskbar.bat
 
-# Instructions
-Update Video Drivers
- - NVIDIA: https://www.nvidia.com/download/find.aspx (NVCleanstall method preferred)
- - AMD: https://www.amd.com/en/support
-
-Install and run Intel DSA (Driver Support Assistant)
- - download (https://www.intel.com/content/www/us/en/support/detect.html)
- - if already installed, Uninstall and Reinstall using downloaded exe to get Launch option to appear after install to run Intel DSA
-
-RESTART
-
-Run batch scripts
- - WingetUpdateApps.bat
- - RemoveWindowsApps.bat
- - RemoveWindowsFeatures.bat
- - Internet&SecuritySettings.bat
- - !!! PowerPlanUltra.bat (only if Ultimate Performance power plan profile is NOT present)
- - PowerPlanSettings.bat
-
-RESTART
-
- - Windows11Tweaks.bat
- - Disable*.bat (DO NOT RUN DisableStateRepository.bat and DisableWinHTTP.bat)
-
-RESTART
-
-If stuck at "Just a moment..." screen before login, press CTRL+ALT+DEL to force login screen to show
-
-RESTART (SAFE MODE)
-
- - SetACL.bat
- - DisableWindowsDefender.bat
- - DisableWindowsFirewall.bat
- - DisableEventTraceSessions.bat
- - DisableComponents.bat
- - DisableServices.bat
- - DeleteFonts.bat
-
-RESTART
-
-- nvidiaProfileInspector: load PerformanceProfile.nip or HighQualityProfile.nip
-- Disable Drivers in Device Manager
-
-RESTART
-
-Setup Microsoft Interrupt Affinity Tool
 
 RESTART
 
