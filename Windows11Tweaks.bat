@@ -5,14 +5,17 @@ rem !!!VERY DANGEROUS!!!
 rem -----------------------------------------------------------------------------------------
 rem _______________________shoober420's Windows 11 Tweaks Batch Script_______________________
 rem -----------------------------------------------------------------------------------------
-rem Too disable Windows Defender and Windows Defender components, run this batch script in SAFE MODE
-rem Additional settings and format used from:
-rem https://github.com/TairikuOokami
-rem https://github.com/ionuttbara
-rem https://github.com/raspi
+rem # Too disable Windows Defender and Windows Defender components, run this batch script in SAFE MODE
+rem # Additional settings and format used from:
+rem # https://github.com/TairikuOokami
+rem # https://github.com/ionuttbara
+rem # https://github.com/raspi
 rem -----------------------------------------------------------------------------------------
 
-rem Enable and start WMI
+rem # Most settings are self explanatory after reading them, although I've provided descriptions
+rem # and comments for settings and options to further clarify.
+
+rem # Enable and start WMI
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD /d "2" /f
 sc config winmgmt start= auto
@@ -1614,12 +1617,20 @@ rem Enable Physical Address Extension (PAE)
 bcdedit /set pae ForceEnable
 
 
-
+Application Control for Windows
+0 - Off / 1 - Enforce / 2 - Evaluation
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\CI\Policy" /v "VerifiedAndReputablePolicyState" /t REG_DWORD /d "0" /f
+
+Detect and block potentially unwanted applications
+0 - Off / 1 - On
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender" /v "PUAProtection" /t REG_DWORD /d "0" /f
+
+Smartscreen
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "EnableSmartScreen" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "ShellSmartScreenLevel" /t REG_SZ /d "" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\AppHost" /v "PreventOverride" /t REG_DWORD /d "1" /f
+
+Configure Controlled folder access
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\Controlled Folder Access" /v "EnableControlledFolderAccess" /t REG_DWORD /d "0" /f
 
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Search" /v "PreventUsingAdvancedIndexingOptions" /t REG_DWORD /d "1" /f
