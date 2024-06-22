@@ -176,3 +176,5 @@ SafeMode.txt (multiple methods to get into Safe Mode)
 AutoHideTaskbar.bat / AlwaysShowTaskbar.bat
 
 InstallScoop.bat
+
+Steam.bat (minimal and bloatless Steam launch script)
