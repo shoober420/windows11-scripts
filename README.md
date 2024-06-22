@@ -28,7 +28,7 @@ RESTART
 
 If stuck at "Just a moment..." screen before login, press CTRL+ALT+DEL to force login screen to show
 
-RESTART (SAFE MODE)
+RESTART (SAFE MODE) (hold SHIFT while restarting)
 
  - SetACL.bat
  - DisableWindowsDefender.bat
@@ -41,7 +41,7 @@ RESTART (SAFE MODE)
 RESTART
 
 - nvidiaProfileInspector: load PerformanceProfile.nip or HighQualityProfile.nip
-- Disable Drivers in Device Manager
+- Disable Drivers in Device Manager (devmgmt.msc)
 
 RESTART
 
