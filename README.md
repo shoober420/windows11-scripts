@@ -182,4 +182,4 @@ Steam.bat (minimal and bloatless Steam launch script)
 
 MouseAccelFix.bat
 
-CloudflareDNS.bat
+NetworkTweaks.bat (script settings need tweaked to match users computer hardware)
