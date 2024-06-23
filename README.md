@@ -197,3 +197,5 @@ GPUTweaks.bat (script settings need tweaked to match users computer hardware)
 ThreadQuantum.bat
 
 Date&TimeShow.bat / Date&TimeHide.bat (show or hide taskbar date and time on bottom right)
+
+InstallChocolatey.bat
