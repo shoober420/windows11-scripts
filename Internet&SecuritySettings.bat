@@ -29,6 +29,7 @@ powershell.exe $DisableLMHosts_Class.EnableWINS($false,$false)
 powershell.exe Disable-ScheduledTask -TaskName "Microsoft Compatibility Appraiser" -TaskPath "\Microsoft\Windows\Application Experience"
 
 rem # https://learn.microsoft.com/en-us/powershell/module/processmitigations/set-processmitigation?view=windowsserver2022-ps
+rem # Disable mitigations to fix stuttering in games
 powershell.exe Set-MpPreference -PUAProtection 0
 powershell.exe Set-MpPreference -EnableControlledFolderAccess Disabled
 powershell.exe Set-Processmitigation -System -Disable StrictCFG
@@ -51,10 +52,10 @@ powershell.exe Set-Processmitigation -System -Disable AuditStoreSigned
 powershell.exe Set-Processmitigation -System -Disable AuditSystemCall
 powershell.exe Set-Processmitigation -System -Disable AuditChildProcess
 
-rem # Enable Data Execution Prevention (DEP)
-rem # Does NOT improve performance when disabled
-BCDEDIT /set {current} nx AlwaysOn
-powershell.exe Set-Processmitigation -System -Enable DEP
+rem # Disable Data Execution Prevention (DEP)
+rem # Fixes stuttering in games
+BCDEDIT /SET {CURRENT} NX ALWAYSOFF
+powershell.exe Set-Processmitigation -System -Disable DEP
 
 rem # Disable DMA memory protection and cores isolation
 rem # Disable Virtual Secure Mode (VSM)
