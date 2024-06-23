@@ -71,4 +71,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD
 sc config winmgmt start= disabled
 net stop winmgmt
 
+rem # Breaks internet if 1
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp" /v "DisableWpad" /t REG_DWORD /d "0" /f
+
 PAUSE
