@@ -2544,28 +2544,73 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "M
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" /v "EnableAutoTray" /t REG_DWORD /d "0" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "NoTaskGrouping" /t REG_DWORD /d "1" /f
 
+rem # Remove Homegroup link from Start Menu
 reg add "HKCU\Software\Policies\Microsoft\Windows\Explorer" /v "NoStartMenuHomegroup" /t REG_DWORD /d "1" /f
+
+rem # Clear history of recently opened documents on exit
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "ClearRecentDocsOnExit" /t REG_DWORD /d "1" /f
+
+rem # Clear the recent programs list for new users
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "ClearRecentProgForNewUserInStartMenu" /t REG_DWORD /d "1" /f
+
+rem # Do not display any custom toolbars in the taskbar
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "NoToolbarsOnTaskbar" /t REG_DWORD /d "1" /f
+
+rem # Do not display or track items in Jump Lists from remote locations
 reg add "HKCU\Software\Policies\Microsoft\Windows\Explorer" /v "NoRemoteDestinations" /t REG_DWORD /d "1" /f
+
+rem # Remove common program groups from Start Menu
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "NoCommonGroups" /t REG_DWORD /d "1" /f
+
+rem # Remove Help menu from Start Menu
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "NoSMHelp" /t REG_DWORD /d "1" /f
+
+rem # Remove pinned programs list from the Start Menu
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "NoStartMenuPinnedList" /t REG_DWORD /d "1" /f
+
+rem # Remove Recent Items menu from Start Menu
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "NoRecentDocsMenu" /t REG_DWORD /d "1" /f
+
+rem # Remove See More Results / Search Everywhere link
 reg add "HKCU\Software\Policies\Microsoft\Windows\Explorer" /v "NoSearchEverywhereLinkInStartMenu" /t REG_DWORD /d "1" /f
+
+rem # Remove the "Undock PC" button from the Start Menu
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "NoStartMenuEjectPC" /t REG_DWORD /d "1" /f
+
+rem # Remove the Meet Now icon
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "HideSCAMeetNow" /t REG_DWORD /d "1" /f
+
+rem # Enable or Disable People Bar on Taskbar
 reg add "HKCU\Software\Policies\Microsoft\Windows\Explorer" /v "HidePeopleBar" /t REG_DWORD /d "1" /f
+
+rem # Remove the Security and Maintenance icon
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "HideSCAHealth" /t REG_DWORD /d "1" /f
+
+rem # Remove the networking icon
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "HideSCANetwork" /t REG_DWORD /d "1" /f
+
+rem # Turn off feature advertisement balloon notifications
 reg add "HKCU\Software\Policies\Microsoft\Windows\Explorer" /v "NoBalloonFeatureAdvertisements" /t REG_DWORD /d "1" /f
+
+rem # Turn off user tracking
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "NoInstrumentation" /t REG_DWORD /d "1" /f
+
+rem # Remove Recorded TV link from Start Menu
 reg add "HKCU\Software\Policies\Microsoft\Windows\Explorer" /v "NoStartMenuRecordedTV" /t REG_DWORD /d "1" /f
+
+rem # Hide the notification area
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "NoTrayItemsDisplay" /t REG_DWORD /d "1" /f
+
+rem # Remove Notifications and Action Center
 reg add "HKCU\Software\Policies\Microsoft\Windows\Explorer" /v "DisableNotificationCenter" /t REG_DWORD /d "1" /f
+
+rem # Turn On or Off Hidden Icon Menu on Taskbar System Tray
 reg add "HKCU\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\TrayNotify" /v "SystemTrayChevronVisibility" /t REG_DWORD /d "0" /f
+
+rem # Enable or Disable Notification Badging for Microsoft Accounts on Start menu
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "Start_AccountNotifications" /t REG_DWORD /d "0" /f
+
+rem # Turn On or Off Compatible Apps in Foreground Control Dynamic Lighting
 reg add "HKCU\Software\Microsoft\Lighting" /v "ControlledByForegroundApp" /t REG_DWORD /d "0" /f
 reg add "HKCU\Software\Microsoft\Lighting" /v "EffectType" /t REG_DWORD /d "0" /f
 
