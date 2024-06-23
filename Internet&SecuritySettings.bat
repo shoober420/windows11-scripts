@@ -29,6 +29,7 @@ powershell.exe $DisableLMHosts_Class.EnableWINS($false,$false)
 powershell.exe Disable-ScheduledTask -TaskName "Microsoft Compatibility Appraiser" -TaskPath "\Microsoft\Windows\Application Experience"
 
 rem # https://learn.microsoft.com/en-us/powershell/module/processmitigations/set-processmitigation?view=windowsserver2022-ps
+rem # https://learn.microsoft.com/en-us/powershell/module/defender/set-mppreference?view=windowsserver2022-ps
 rem # Disable mitigations to fix stuttering in games
 powershell.exe Set-MpPreference -PUAProtection 0
 powershell.exe Set-MpPreference -EnableControlledFolderAccess Disabled
