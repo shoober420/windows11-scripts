@@ -61,9 +61,43 @@ rem # Using "Block all connections" instead of "Block" option under firewall fix
 netsh advfirewall set domainprofile firewallpolicy blockinboundalways,allowoutbound
 netsh advfirewall set publicprofile firewallpolicy blockinboundalways,allowoutbound
 netsh advfirewall set privateprofile firewallpolicy blockinboundalways,allowoutbound
+netsh advfirewall firewall set rule group="Network Discovery" new enable=No
+netsh advfirewall firewall set rule group="File and Printer Sharing" new enable=No
+netsh advfirewall firewall set rule group="remote desktop" new enable=No
+netsh advfirewall set allprofiles settings unicastresponsetomulticast disable
 
-rem deleting all inbound firewall rules may break internet for certain Wi-Fi cards
+rem # Deleting all inbound firewall rules may break internet for certain Wi-Fi cards
 powershell.exe Remove-NetFirewallRule -All
+
+rem # SG TCP Optimizer program tweaks
+rem # https://www.speedguide.net/downloads.php
+netsh int tcp set global autotuninglevel=normal
+netsh int tcp set global timestamps=disabled
+netsh int tcp set global chimney=disabled
+netsh int tcp set global initialRto=2000
+netsh int tcp set global minRto=300
+netsh int tcp set global nonsackrttresiliency=disabled
+netsh int tcp set global maxsynretransmissions=2
+netsh int tcp set global rss=enabled
+netsh int tcp set global rsc=disabled
+netsh int tcp set supplemental internet congestionprovider=ctcp
+netsh interface tcp set heuristics disabled
+netsh interface tcp set global ecncapability=disabled
+netsh int udp set global uro=enabled
+netsh winsock set autotuning on
+netsh interface tcp set global hystart=disabled
+netsh interface tcp set global fastopen=enabled
+netsh interface tcp set global fastopenfallback=enabled 
+netsh interface tcp set global pacingprofile=slowstart
+netsh interface ip set global neighborcachelimit=4096
+netsh interface tcp set heuristics wsh=disabled
+netsh interface ip set global taskoffload=enabled
+netsh interface ip set global mediasenseeventlog=disabled
+netsh int tcp set security mpp=disabled
+netsh int tcp set security profiles=disabled
+netsh int tcp set heuristics forcews=disabled
+netsh int ipv4 set dynamicport tcp start=1025 num=65411
+netsh int ipv4 set dynamicport udp start=1025 num=65411
 
 rem Disable and stop WMI
 
