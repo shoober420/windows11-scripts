@@ -24,6 +24,7 @@ RESTART
 
  - NetworkTweaks.bat (script settings need tweaked to match users computer hardware)
  - RAMTweaks.bat (script settings need tweaked to match users computer hardware)
+ - GPUTweaks.bat (script settings need tweaked to match users computer hardware)
  - Windows11Tweaks.bat
  - Disable*.bat (DO NOT RUN DisableStateRepository.bat and DisableWinHTTP.bat)
 
@@ -189,3 +190,5 @@ NetworkTweaks.bat (script settings need tweaked to match users computer hardware
 ComputerName.bat (change computer name and Hostname)
 
 RAMTweaks.bat (script settings need tweaked to match users computer hardware)
+
+GPUTweaks.bat (script settings need tweaked to match users computer hardware)
