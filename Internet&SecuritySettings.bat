@@ -27,9 +27,10 @@ ECHO Y | powershell.exe Set-SmbServerConfiguration -EnableSMB2Protocol $false
 powershell.exe $DisableLMHosts_Class=Get-WmiObject -list Win32_NetworkAdapterConfiguration
 powershell.exe $DisableLMHosts_Class.EnableWINS($false,$false)
 powershell.exe Disable-ScheduledTask -TaskName "Microsoft Compatibility Appraiser" -TaskPath "\Microsoft\Windows\Application Experience"
+
+rem # https://learn.microsoft.com/en-us/powershell/module/processmitigations/set-processmitigation?view=windowsserver2022-ps
 powershell.exe Set-MpPreference -PUAProtection 0
 powershell.exe Set-MpPreference -EnableControlledFolderAccess Disabled
-powershell.exe Set-Processmitigation -System -Disable DEP
 powershell.exe Set-Processmitigation -System -Disable StrictCFG
 powershell.exe Set-Processmitigation -System -Disable CFG
 powershell.exe Set-Processmitigation -System -Disable SuppressExports
@@ -53,6 +54,7 @@ powershell.exe Set-Processmitigation -System -Disable AuditChildProcess
 rem # Enable Data Execution Prevention (DEP)
 rem # Does NOT improve performance when disabled
 BCDEDIT /set {current} nx AlwaysOn
+powershell.exe Set-Processmitigation -System -Enable DEP
 
 rem # Disable DMA memory protection and cores isolation
 rem # Disable Virtual Secure Mode (VSM)
