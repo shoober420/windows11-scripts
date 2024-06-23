@@ -2662,68 +2662,68 @@ schtasks /delete /tn * /f
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Personalization" /v "NoLockScreenSlideshow" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "GlobalTimeResolutionRequests" /t REG_DWORD /d "1" /f
 
-REM Enable TimerResolution program
+rem # Enable TimerResolution program
 ECHO Yes | xcopy "%USERPROFILE%\Downloads\windows11-batch-scripts-main\SetTimerResolution.bat" "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
 
-REM Start GraphicsPerfSvc (increases performance)
+rem # Start GraphicsPerfSvc (increases performance)
 ECHO Yes | xcopy "%USERPROFILE%\Downloads\windows11-batch-scripts-main\StartGraphicsPerfSvc.bat" "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
 
-REM Make sure services dont get reenabled by Windows after reboot
-REM Use StartBATs.bat after login method instead
-REM ECHO Yes | xcopy "%USERPROFILE%\Downloads\windows11-batch-scripts-main\DisableServices.bat" "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
-REM ECHO Yes | xcopy "%USERPROFILE%\Downloads\windows11-batch-scripts-main\DisableWinUpdate.bat" "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
+rem # Make sure services dont get reenabled by Windows after reboot
+rem # Use StartBATs.bat after login method instead
+rem # ECHO Yes | xcopy "%USERPROFILE%\Downloads\windows11-batch-scripts-main\DisableServices.bat" "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
+rem # ECHO Yes | xcopy "%USERPROFILE%\Downloads\windows11-batch-scripts-main\DisableWinUpdate.bat" "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
 
-rem delete Windows Defender user account
+rem # Delete Windows Defender user account
 net user WDAGUtilityAccount /active:no
 net user "WDAGUtilityAccount" /delete
 
-rem delete web sign-in user account
+rem # Delete web sign-in user account
 net user WsiAccount /active:no
 net user "WsiAccount" /delete
 
-rem delete "defaultuser100000" account
+rem # Delete "defaultuser100000" account
 net user defaultuser100000 /active:no
 net user "defaultuser100000" /delete
 
-rem delete "DefaultAccount" account
+rem # Delete "DefaultAccount" account
 net user DefaultAccount /active:no
 net user "DefaultAccount" /delete
 
-rem delete guest account
+rem # Delete Guest account
 net user Guest /active:no
 net user "Guest" /delete
 
-rem delete administrator account
+rem # Delete Administrator account
 net user Administrator /active:no
 net user "Administrator" /delete
 
-rem Thread Quantum
-rem https://smallvoid.com/article/winnt-process-scheduler-priority.html
-rem https://forums.blurbusters.com/viewtopic.php?t=8535
-rem 2A Hex = Short, Fixed, High foreground boost (very good input)
-rem 29 Hex = Short, Fixed, Medium foreground boost
-rem 28 Hex = Short, Fixed, No foreground boost (best input, lag spikes)
-rem 26 Hex = Short, Variable, High foreground boost (good input)
-rem 25 Hex = Short, Variable, Medium foreground boost
-rem 24 Hex = Short, Variable, No foreground boost (lag spikes)
-rem 1A Hex = Long, Fixed, High foreground boost
-rem 19 Hex = Long, Fixed, Medium foreground boost
-rem 18 Hex = Long, Fixed, No foreground boost
-rem 16 Hex = Long, Variable, High foreground boost (best performance)
-rem 15 Hex = Long, Variable, Medium foreground boost
-rem 14 Hex = Long, Variable, No foreground boost
-rem Best input: Short, Fixed, No foreground boost (28, but causes lag spikes)
-rem Best performance: Long, Variable, High foreground boost (16)
-rem "No foreground boost" causes lag spikes
+rem # Thread Quantum
+rem # https://smallvoid.com/article/winnt-process-scheduler-priority.html
+rem # https://forums.blurbusters.com/viewtopic.php?t=8535
+rem # 2A Hex = Short, Fixed, High foreground boost (very good input)
+rem # 29 Hex = Short, Fixed, Medium foreground boost
+rem # 28 Hex = Short, Fixed, No foreground boost (best input, lag spikes)
+rem # 26 Hex = Short, Variable, High foreground boost (good input)
+rem # 25 Hex = Short, Variable, Medium foreground boost
+rem # 24 Hex = Short, Variable, No foreground boost (lag spikes)
+rem # 1A Hex = Long, Fixed, High foreground boost
+rem # 19 Hex = Long, Fixed, Medium foreground boost
+rem # 18 Hex = Long, Fixed, No foreground boost
+rem # 16 Hex = Long, Variable, High foreground boost (best performance)
+rem # 15 Hex = Long, Variable, Medium foreground boost
+rem # 14 Hex = Long, Variable, No foreground boost
+rem # Best input: Short, Fixed, No foreground boost (28, but causes lag spikes)
+rem # Best performance: Long, Variable, High foreground boost (16)
+rem # "No foreground boost" causes lag spikes
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\PriorityControl" /v "Win32PrioritySeparation" /t REG_DWORD /d "0x00000028" /f
 reg add "HKLM\SYSTEM\ControlSet001\Control\PriorityControl" /v "Win32PrioritySeparation" /t REG_DWORD /d "0x00000028" /f
 
-rem NVIDIA video card tweaks, last key may vary from 0000 to 0001 if dual NVIDIA/AMD machine is used
-rem Second to last key is the "Class Guid"
-rem Find "Class Guid" under Device Manager > Display adapters > Properties > Details tab
-rem Example: "HKLM\SYSTEM\CurrentControlSet\Control\Class\"Class Guid"\0000"
+rem # NVIDIA video card tweaks, last key may vary from 0000 to 0001 if dual NVIDIA/AMD machine is used
+rem # Second to last key is the "Class Guid"
+rem # Find "Class Guid" under Device Manager > Display adapters > Properties > Details tab
+rem # Example: "HKLM\SYSTEM\CurrentControlSet\Control\Class\"Class Guid"\0000"
 
-rem Disable HDCP
+rem # Disable HDCP
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0000" /v "RMHdcpKeyglobZero" /t REG_DWORD /d "1" /f
 rem reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0001" /v "RMHdcpKeyglobZero" /t REG_DWORD /d "1" /f
 
@@ -2766,7 +2766,7 @@ rem reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc
 rem reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0001" /v "vrrDeflickerMarginUs" /t REG_DWORD /d "1" /f
 rem reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0001" /v "vrrDeflickerMaxUs" /t REG_DWORD /d "1" /f
 
-rem Persistant max voltage and clock speeds on NVIDIA GPU
+rem # Persistant max voltage and clock speeds on NVIDIA GPU
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0000" /v "DisableDynamicPstate" /t REG_DWORD /d "1" /f
 
 rem # AMD video card tweaks, last key may vary from 0000 to 0001 if dual NVIDIA/AMD machine is used
@@ -2811,67 +2811,6 @@ rem reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc
 
 
 
-rem NIC tweaks
-rem # last key changes based on NIC card registry ID
-rem Second to last key is the "Class Guid"
-rem Find "Class Guid" under Device Manager > Network adapters > Properties > Details tab
-rem Go to "HKLM\SYSTEM\CurrentControlSet\Control\Network\"Class Guid"\<NIC ID>\Connection" to match NIC network name (ex: Wi-Fi 2) with registry NIC ID
-
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\{0871ca3f-f9ed-4c80-9478-ed432f629784}" /v "TcpAckFrequency" /t REG_DWORD /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\{0871ca3f-f9ed-4c80-9478-ed432f629784}" /v "TcpDelAckTicks" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\{0871ca3f-f9ed-4c80-9478-ed432f629784}" /v "TCPNoDelay" /t REG_DWORD /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\{0871ca3f-f9ed-4c80-9478-ed432f629784}" /v "TcpNoDelay" /t REG_DWORD /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\NetBT\Parameters\Interfaces\Tcpip_{0871ca3f-f9ed-4c80-9478-ed432f629784}" /v "NetbiosOptions" /t REG_DWORD /d "2" /f
-
-rem # find value for 000X at HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\"Class Guid"\<NIC ID>\DriverDesc key
-
-rem MIMO Power Save Mode - 3 Disable
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0000" /v "MIMOPowerSaveMode" /t REG_SZ /d "3" /f
-
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0000" /v "*WakeOnMagicPacket" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0000" /v "*WakeOnPattern" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0000" /v "*PacketCoalescing" /t REG_SZ /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0000" /v "ThroughputBoosterEnabled" /t REG_SZ /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0000" /v "FatChannelIntolerant" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0000" /v "*MiracastSupported" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0000" /v "*DeviceSleepOnDisconnect" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0000" /v "RoamAggressiveness" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0000" /v "RoamingPreferredBandType" /t REG_SZ /d "3" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0000" /v "uAPSDSupport" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0000" /v "RecommendedBeaconInterval" /t REG_DWORD /d "99999999" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0000" /v "*InterruptModeration" /t REG_SZ /d "0" /f
-
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0000" /v "*SpeedDuplex" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0000" /v "*FlowControl" /t REG_SZ /d "3" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0000" /v "*RSS" /t REG_SZ /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0000" /v "*TCPConnectionOffloadIPv4" /t REG_SZ /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0000" /v "*TCPConnectionOffloadIPv6" /t REG_SZ /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0000" /v "*IPChecksumOffloadIPv4" /t REG_SZ /d "3" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0000" /v "*TCPChecksumOffloadIPv4" /t REG_SZ /d "3" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0000" /v "*TCPChecksumOffloadIPv6" /t REG_SZ /d "3" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0000" /v "*UDPChecksumOffloadIPv4" /t REG_SZ /d "3" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0000" /v "*UDPChecksumOffloadIPv6" /t REG_SZ /d "3" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0000" /v "*LsoV1IPv4" /t REG_SZ /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0000" /v "*LsoV2IPv4" /t REG_SZ /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0000" /v "*LsoV2IPv6" /t REG_SZ /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0000" /v "*TCPUDPChecksumOffloadIPv4" /t REG_SZ /d "3" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0000" /v "*TCPUDPChecksumOffloadIPv6" /t REG_SZ /d "3" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*SpeedDuplex" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*FlowControl" /t REG_DWORD /d "3" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*RSS" /t REG_DWORD /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*TCPConnectionOffloadIPv4" /t REG_DWORD /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*TCPConnectionOffloadIPv6" /t REG_DWORD /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*IPChecksumOffloadIPv4" /t REG_DWORD /d "3" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*TCPChecksumOffloadIPv4" /t REG_DWORD /d "3" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*TCPChecksumOffloadIPv6" /t REG_DWORD /d "3" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*UDPChecksumOffloadIPv4" /t REG_DWORD /d "3" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*UDPChecksumOffloadIPv6" /t REG_DWORD /d "3" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*LsoV1IPv4" /t REG_DWORD /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*LsoV2IPv4" /t REG_DWORD /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*LsoV2IPv6" /t REG_DWORD /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*TCPUDPChecksumOffloadIPv4" /t REG_DWORD /d "3" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*TCPUDPChecksumOffloadIPv6" /t REG_DWORD /d "3" /f
-
 rem # HighPerfAdapter must match Hardware ID in Device Manager for GPU
 rem # rem Device Manager > Display Adapters > "GPUNAME" > Properties > Details > Property > Hardware Ids
 rem # HighPerfAdapter="VEN&DEV&SUBSYS" / PCI\VEN_10DE&DEV_2684&SUBSYS_89321043 / HighPerfAdapter=10DE&2684&89321043
@@ -2894,33 +2833,9 @@ rem # Example math formula: 8 GB = 8x1024 MB = 8x1024x1024 KB = 8388608 KB
 rem # 8GB = 8388608 (800000) / 16GB = 16777216 (1000000) / 32GB = 33554432 (2000000) / 64GB = 67108864 (4000000)
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "IoPageLockLimit" /t REG_DWORD /d "2000000" /f
 
-rem # set values according to core and thread count	
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\Ndis\Parameters" /v "MaxNumRssCpus" /t REG_DWORD /d "8" /f	
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "MaxNumRssCpus" /t REG_DWORD /d "8" /f	
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\Ndis\Parameters" /v "MaxNumRssThreads" /t REG_DWORD /d "32" /f	
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "MaxNumRssThreads" /t REG_DWORD /d "32" /f
-
-rem # Set to last Core on CPU (cpu count doesnt start with 0, so setting this to 9 will not actually mean core 8)
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\Ndis\Parameters" /v "RssBaseCpu" /t REG_DWORD /d "8" /f
-
-rem # Make sure subinterface matches network name
-netsh interface ipv4 set subinterface "Wi-Fi 2" mtu=1472 store=persistent
-
-rem # Blocking all inbound connections can break certain Wi-Fi and Ethernet connections
-rem # Using "Block all connections" instead of "Block" option under firewall fixes loss of internet for some WiFi cards
-netsh advfirewall set domainprofile firewallpolicy blockinboundalways,allowoutbound
-netsh advfirewall set publicprofile firewallpolicy blockinboundalways,allowoutbound
-netsh advfirewall set privateprofile firewallpolicy blockinboundalways,allowoutbound
-
-rem # Make sure name matches network name, half of internet breaks unless DNS is specified
-netsh interface ip set dns name="Wi-Fi 2" static 1.1.1.1
-netsh interface ip add dns name="Wi-Fi 2" 1.1.1.1 index=2
-
 rem reg add "HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ActiveComputerName" /v "ComputerName" /t REG_SZ /d "shoober420_-" /f
 rem reg add "HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ComputerName" /v "ComputerName" /t REG_SZ /d "shoober420_-" /f
 rem reg add "HKLM\System\CurrentControlSet\Services\Tcpip\Parameters" /v "Hostname" /t REG_SZ /d "penny" /f
 rem reg add "HKLM\System\CurrentControlSet\Services\Tcpip\Parameters" /v "NV Hostname" /t REG_SZ /d "penny" /f
-
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp" /v "DisableWpad" /t REG_DWORD /d "0" /f
 
 PAUSE
