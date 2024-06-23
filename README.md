@@ -22,6 +22,7 @@ Run batch scripts
 
 RESTART
 
+ - NetworkTweaks.bat (script settings need tweaked to match users computer hardware)
  - Windows11Tweaks.bat
  - Disable*.bat (DO NOT RUN DisableStateRepository.bat and DisableWinHTTP.bat)
 
