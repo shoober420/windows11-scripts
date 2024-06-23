@@ -90,8 +90,6 @@ run.bat
 
 acl.txt (ACL: Access Control List - needed to take ownership of registry keys for services)
 
-DeleteNVIDIAShaderCache.bat
-
 PowerPlanUltra.bat (adds duplicate Ultra power plan everytime command is executed, so use PowerPlanUltra.bat only if Ultimate Performance power plan profile is NOT present)
 
 DisableServices.bat (to disable Windows Defender, run in SAFE MODE)
@@ -170,7 +168,7 @@ EnableEssentialServices.bat
 
 DownloadFirefox.txt
 
-DeleteTmpCache.bat
+DeleteCache.bat
 
 WindowsFix.bat (standard fixes to troubleshoot Windows systems with issues and bugs)
 
