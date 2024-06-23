@@ -51,6 +51,36 @@ powershell.exe Set-Processmitigation -System -Disable AuditMicrosoftSigned
 powershell.exe Set-Processmitigation -System -Disable AuditStoreSigned
 powershell.exe Set-Processmitigation -System -Disable AuditSystemCall
 powershell.exe Set-Processmitigation -System -Disable AuditChildProcess
+powershell.exe Set-Processmitigation -System -Disable RequireInfo
+powershell.exe Set-Processmitigation -System -Disable StrictHandle
+powershell.exe Set-Processmitigation -System -Disable DisableWin32kSystemCalls
+powershell.exe Set-Processmitigation -System -Disable DisableExtensionPoints
+powershell.exe Set-Processmitigation -System -Disable BlockDynamicCode
+powershell.exe Set-Processmitigation -System -Disable AllowThreadsToOptOut
+powershell.exe Set-Processmitigation -System -Disable DisableNonSystemFonts
+powershell.exe Set-Processmitigation -System -Disable MicrosoftSignedOnly
+powershell.exe Set-Processmitigation -System -Disable AllowStoreSignedBinaries
+powershell.exe Set-Processmitigation -System -Disable EnforceModuleDependencySigning
+powershell.exe Set-Processmitigation -System -Disable BlockRemoteImageLoads
+powershell.exe Set-Processmitigation -System -Disable BlockLowLabelImageLoads
+powershell.exe Set-Processmitigation -System -Disable PreferSystem32
+powershell.exe Set-Processmitigation -System -Disable AuditRemoteImageLoads
+powershell.exe Set-Processmitigation -System -Disable AuditLowLabelImageLoads
+powershell.exe Set-Processmitigation -System -Disable AuditPreferSystem32
+powershell.exe Set-Processmitigation -System -Disable EnableExportAddressFilter
+powershell.exe Set-Processmitigation -System -Disable AuditEnableExportAddressFilter
+powershell.exe Set-Processmitigation -System -Disable EnableExportAddressFilterPlus
+powershell.exe Set-Processmitigation -System -Disable AuditEnableExportAddressFilterPlus
+powershell.exe Set-Processmitigation -System -Disable EnableImportAddressFilter
+powershell.exe Set-Processmitigation -System -Disable AuditEnableImportAddressFilter
+powershell.exe Set-Processmitigation -System -Disable EnableRopStackPivot
+powershell.exe Set-Processmitigation -System -Disable AuditEnableRopStackPivot
+powershell.exe Set-Processmitigation -System -Disable EnableRopCallerCheck
+powershell.exe Set-Processmitigation -System -Disable AuditEnableRopCallerCheck
+powershell.exe Set-Processmitigation -System -Disable EnableRopSimExec
+powershell.exe Set-Processmitigation -System -Disable AuditEnableRopSimExec
+powershell.exe Set-Processmitigation -System -Disable AuditSEHOP
+powershell.exe Set-Processmitigation -System -Disable DisallowChildProcessCreation
 
 rem # Disable Data Execution Prevention (DEP)
 rem # Fixes stuttering in games
