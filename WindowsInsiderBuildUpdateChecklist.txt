@@ -12,6 +12,7 @@ Install and run Intel DSA (Driver Support Assistant)
 RESTART
 
 Run batch scripts
+ - MouseAccelFix.bat
  - WingetUpdateApps.bat
  - RemoveWindowsApps.bat
  - RemoveWindowsFeatures.bat
