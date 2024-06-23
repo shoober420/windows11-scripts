@@ -178,7 +178,7 @@ WindowsUpdateFix.bat (fixes Windows Update errors and bugs)
 
 SafeMode.txt (multiple methods to get into Safe Mode)
 
-AutoHideTaskbar.bat / AlwaysShowTaskbar.bat
+TaskbarAutoHide.bat / TaskbarAlwaysShow.bat
 
 InstallScoop.bat
 
@@ -195,3 +195,5 @@ RAMTweaks.bat (script settings need tweaked to match users computer hardware)
 GPUTweaks.bat (script settings need tweaked to match users computer hardware)
 
 ThreadQuantum.bat
+
+Date&TimeShow.bat / Date&TimeHide.bat (show or hide taskbar date and time on bottom right)
