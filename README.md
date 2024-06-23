@@ -19,6 +19,7 @@ Run batch scripts
  - Internet&SecuritySettings.bat
  - !!! PowerPlanUltra.bat (only if Ultimate Performance power plan profile is NOT present)
  - PowerPlanSettings.bat
+ - ThreadQuantum.bat
 
 RESTART
 
@@ -192,3 +193,5 @@ ComputerName.bat (change computer name and Hostname)
 RAMTweaks.bat (script settings need tweaked to match users computer hardware)
 
 GPUTweaks.bat (script settings need tweaked to match users computer hardware)
+
+ThreadQuantum.bat
