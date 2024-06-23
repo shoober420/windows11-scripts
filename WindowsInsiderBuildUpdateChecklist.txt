@@ -19,6 +19,7 @@ Run batch scripts
  - Internet&SecuritySettings.bat
  - !!! PowerPlanUltra.bat (only if Ultimate Performance power plan profile is NOT present)
  - PowerPlanSettings.bat
+ - ThreadQuantum.bat
 
 RESTART
 
