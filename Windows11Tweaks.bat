@@ -1663,9 +1663,11 @@ rem # Turn On or Off Hardware Accelerated GPU Scheduling
 rem # 1 = Off / 2 = On
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "HwSchMode" /t REG_DWORD /d "2" /f
 
-
+rem # Turn On or Off Optimizations for Windowed Games
 reg add "HKCU\Software\Microsoft\DirectX\GraphicsSettings" /v "SwapEffectUpgradeCache" /t REG_DWORD /d "1" /f
-reg add "HKCU\Software\Microsoft\DirectX\UserGpuPreferences" /v "DirectXUserGlobalSettings" /t REG_SZ /d "VRROptimizeEnable=0;SwapEffectUpgradeEnable=1;" /f
+
+
+reg add "HKCU\Software\Microsoft\DirectX\UserGpuPreferences" /v "DirectXUserGlobalSettings" /t REG_SZ /d "HighPerfAdapter=xxx;VRROptimizeEnable=0;AutoHDREnable=1;SwapEffectUpgradeEnable=1;" /f
 reg add "HKLM\SOFTWARE\Microsoft\OEM\Device\Capture" /v "NoPhysicalCameraLED" /t REG_DWORD /d "0" /f
 reg add "HKCU\Software\Policies\Microsoft\Windows\Control Panel\Desktop" /v "EnablePerProcessSystemDPI" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Printers" /v "DisableWebPrinting" /t REG_DWORD /d "1" /f
@@ -1754,10 +1756,10 @@ reg delete "HKLM\SYSTEM\CurrentControlSet\Control\WMI\AutoLogger\SQMLogger" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\EMDMgmt" /v "GroupPolicyDisallowCaches" /t REG_DWORD /d "1" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\EMDMgmt" /v "AllowNewCachesByDefault" /t REG_DWORD /d "0" /f
 
-rem FastSendDatagramThreshold should match MTU value in decimal, not hexadecimal (usually 1472)
-rem https://docs.oracle.com/cd/E13924_01/coh.340/e13818/perftune.htm
-rem As opposed to NVIDIA saying to use a value of 64K
-rem https://docs.nvidia.com/networking/display/winofv55054000/general+performance+optimization+and+tuning
+rem # FastSendDatagramThreshold should match MTU value in decimal, not hexadecimal (usually 1472)
+rem # https://docs.oracle.com/cd/E13924_01/coh.340/e13818/perftune.htm
+rem # As opposed to NVIDIA saying to use a value of 64K
+rem # https://docs.nvidia.com/networking/display/winofv55054000/general+performance+optimization+and+tuning
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\AFD\Parameters" /v "FastSendDatagramThreshold" /t REG_DWORD /d "0x000005c0" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\AFD\Parameters" /v "FastCopyReceiveThreshold" /t REG_DWORD /d "0x000005dc" /f
@@ -1784,11 +1786,11 @@ reg delete "HKCR\mscfile\shellex\ContextMenuHandlers\PintoStartScreen" /f
 reg delete "HKCR\*\shellex\ContextMenuHandlers\{90AA3A4E-1CBA-4233-B8BB-535773D48449}" /f
 reg add "HKCU\SOFTWARE\Policies\Microsoft\Windows\Explorer" /v "NoPinningToTaskbar" /t REG_DWORD /d "1" /f
 
-REM Disable Include in library from context_menu
+rem # Disable Include in library from context_menu
 reg delete "HKCR\Folder\ShellEx\ContextMenuHandlers\Library Location" /f
 reg delete "HKLM\SOFTWARE\Classes\Folder\ShellEx\ContextMenuHandlers\Library Location" /f
 
-REM Disable Share from context menu
+rem # Disable Share from context menu
 reg delete "HKCR\*\shellex\ContextMenuHandlers\ModernSharing" /f
 
 reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\default\WebThreatDefense\AuditMode" /v "value" /t REG_DWORD /d "0" /f
@@ -2840,12 +2842,15 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*TCPUDPChecksumOffloadIPv4" /t REG_DWORD /d "3" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*TCPUDPChecksumOffloadIPv6" /t REG_DWORD /d "3" /f
 
+rem # HighPerfAdapter must match Hardware ID in Device Manager for GPU
+rem # rem Device Manager > Display Adapters > "GPUNAME" > Properties > Details > Property > Hardware Ids
+rem # HighPerfAdapter="VEN&DEV&SUBSYS" / PCI\VEN_10DE&DEV_2684&SUBSYS_89321043 / HighPerfAdapter=10DE&2684&89321043
+reg add "HKCU\Software\Microsoft\DirectX\UserGpuPreferences" /v "DirectXUserGlobalSettings" /t REG_SZ /d "HighPerfAdapter=10DE&2684&89321043;VRROptimizeEnable=0;AutoHDREnable=1;SwapEffectUpgradeEnable=1;" /f
 
-
-rem GPU Enable MSI mode
-rem Program: http://www.mediafire.com/file/ewpy1p0rr132thk/MSI_util_v3.zip/file
-rem Device Manager > Display Adapters > GPU > Properties > Details tab > Device instant path
-rem HKLM\SYSTEM\CurrentControlSet\Enum\PCI\"Device instant path"
+rem # GPU Enable MSI mode
+rem # Program: http://www.mediafire.com/file/ewpy1p0rr132thk/MSI_util_v3.zip/file
+rem # Device Manager > Display Adapters > "GPUNAME" > Properties > Details > Property > Device instant path
+rem # HKLM\SYSTEM\CurrentControlSet\Enum\PCI\"Device instant path"
 reg add "HKLM\SYSTEM\CurrentControlSet\Enum\PCI\VEN_10DE&DEV_2684&SUBSYS_89321043&REV_A1\4&8bd6e8d&0&0008\Device Parameters\Interrupt Management\MessageSignaledInterruptProperties" /v "MSISupported" /t REG_DWORD /d "1" /f
 
 rem # SvcHostSplitThresholdInKB value is amount of RAM in KiloBytes (KB)
@@ -2865,19 +2870,19 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "MaxNumRssC
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Ndis\Parameters" /v "MaxNumRssThreads" /t REG_DWORD /d "32" /f	
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "MaxNumRssThreads" /t REG_DWORD /d "32" /f
 
-rem Set to last Core on CPU (cpu count doesnt start with 0, so setting this to 9 will not actually mean core 8)
+rem # Set to last Core on CPU (cpu count doesnt start with 0, so setting this to 9 will not actually mean core 8)
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Ndis\Parameters" /v "RssBaseCpu" /t REG_DWORD /d "8" /f
 
-rem Make sure subinterface matches network name
+rem # Make sure subinterface matches network name
 netsh interface ipv4 set subinterface "Wi-Fi 2" mtu=1472 store=persistent
 
-rem Blocking all inbound connections can break certain Wi-Fi and Ethernet connections
-rem using "Block all connections" instead of "Block" option under firewall fixes loss of internet for some WiFi cards
+rem # Blocking all inbound connections can break certain Wi-Fi and Ethernet connections
+rem # Using "Block all connections" instead of "Block" option under firewall fixes loss of internet for some WiFi cards
 netsh advfirewall set domainprofile firewallpolicy blockinboundalways,allowoutbound
 netsh advfirewall set publicprofile firewallpolicy blockinboundalways,allowoutbound
 netsh advfirewall set privateprofile firewallpolicy blockinboundalways,allowoutbound
 
-rem Make sure name matches network name, half of internet breaks unless DNS is specified
+rem # Make sure name matches network name, half of internet breaks unless DNS is specified
 netsh interface ip set dns name="Wi-Fi 2" static 1.1.1.1
 netsh interface ip add dns name="Wi-Fi 2" 1.1.1.1 index=2
 
