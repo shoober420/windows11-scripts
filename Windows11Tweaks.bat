@@ -2193,7 +2193,7 @@ reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\default\SmartScreen\PreventOverri
 
 rem # Turn On or Off Automatic Recommended Troubleshooting
 rem # 1 = Don't run troubleshooters / 2 = Ask me before running troubleshooters / 3 = Run troubleshooters automatically, then notify me / 4 = Run troubleshooters automatically, don't notify me
-reg add "HKLM\SOFTWARE\Microsoft\WindowsMitigation" /v "UserPreference" /t REG_DWORD /d "2" /f
+reg add "HKLM\SOFTWARE\Microsoft\WindowsMitigation" /v "UserPreference" /t REG_DWORD /d "1" /f
 
 rem # Enable svchost.exe mitigation options
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\SCMConfig" /v "EnableSvchostMitigationPolicy" /t REG_DWORD /d "0" /f
@@ -2653,6 +2653,22 @@ net user "Guest" /delete
 rem # Delete Administrator account
 net user Administrator /active:no
 net user "Administrator" /delete
+
+rem # Encrypt and sign outgoing secure channel traffic when possible
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters" /v "SealSecureChannel" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters" /v "SignSecureChannel" /t REG_DWORD /d "1" /f
+
+rem # Disable DEP
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Explorer" /v "NoDataExecutionPrevention" /t REG_DWORD /d "1" /f
+
+rem # Turn off heap termination on corruption
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Explorer" /v "NoHeapTerminationOnCorruption" /t REG_DWORD /d "0" /f
+
+rem # Turn off shell protocol protected mode
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "PreXPSP2ShellProtocolBehavior" /t REG_DWORD /d "0" /f
+
+rem # Windows Connection Manager Minimize Connections
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WcmSvc\GroupPolicy" /v "fMinimizeConnections" /t REG_DWORD /d "1" /f
 
 rem # Enable TimerResolution program
 ECHO Yes | xcopy "%USERPROFILE%\Downloads\windows11-batch-scripts-main\SetTimerResolution.bat" "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
