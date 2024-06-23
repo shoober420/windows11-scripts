@@ -50,6 +50,21 @@ powershell.exe Set-Processmitigation -System -Disable AuditStoreSigned
 powershell.exe Set-Processmitigation -System -Disable AuditSystemCall
 powershell.exe Set-Processmitigation -System -Disable AuditChildProcess
 
+rem # Enable Data Execution Prevention (DEP)
+rem # Does NOT improve performance when disabled
+BCDEDIT /set {current} nx AlwaysOn
+
+rem # Disable DMA memory protection and cores isolation
+rem # Disable Virtual Secure Mode (VSM)
+rem # Disable Hyper-V
+bcdedit /set vsmlaunchtype Off
+bcdedit /set vm No
+bcdedit /set hypervisorlaunchtype off
+
+rem # Disable some of the kernel memory mitigations
+bcdedit /set allowedinmemorysettings 0x0
+bcdedit /set isolatedcontext No
+
 ECHO Y | powershell.exe Set-SmbClientConfiguration -EnableSMBQUIC $false
 ECHO Y | powershell.exe Set-SmbClientConfiguration -AuditServerDoesNotSupportEncryption $true
 ECHO Y | powershell.exe Set-SmbClientConfiguration -AuditServerDoesNotSupportSigning $true
