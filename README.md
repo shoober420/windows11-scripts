@@ -3,6 +3,7 @@
 # Instructions
 Update Video Drivers
  - NVIDIA: https://www.nvidia.com/download/find.aspx (NVCleanstall method preferred)
+  + Vulkan Beta Driver (https://developer.nvidia.com/vulkan-driver)
  - AMD: https://www.amd.com/en/support
 
 Install and run Intel DSA (Driver Support Assistant)
