@@ -2622,56 +2622,18 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protoc
 
 
 
-netsh int tcp set global autotuninglevel=normal
-netsh int tcp set global timestamps=disabled
-netsh int tcp set global chimney=disabled
-netsh int tcp set global initialRto=2000
-netsh int tcp set global minRto=300
-netsh int tcp set global nonsackrttresiliency=disabled
-netsh int tcp set global maxsynretransmissions=2
-netsh int tcp set global rss=enabled
-netsh int tcp set global rsc=disabled
-netsh int tcp set supplemental internet congestionprovider=ctcp
-netsh interface tcp set heuristics disabled
-netsh interface tcp set global ecncapability=disabled
-netsh advfirewall firewall set rule group="Network Discovery" new enable=No
-netsh advfirewall firewall set rule group="File and Printer Sharing" new enable=No
-netsh advfirewall firewall set rule group="remote desktop" new enable=No
-netsh advfirewall set allprofiles settings unicastresponsetomulticast disable
-netsh int udp set global uro=enabled
-netsh winsock set autotuning on
-netsh interface tcp set global hystart=disabled
-netsh interface tcp set global fastopen=enabled
-netsh interface tcp set global fastopenfallback=enabled 
-netsh interface tcp set global pacingprofile=slowstart
-netsh interface ip set global neighborcachelimit=4096
-netsh interface tcp set heuristics wsh=disabled
-netsh interface ip set global taskoffload=enabled
-netsh interface ip set global mediasenseeventlog=disabled
-netsh int tcp set security mpp=disabled
-netsh int tcp set security profiles=disabled
-netsh int tcp set heuristics forcews=disabled
-netsh int ipv4 set dynamicport tcp start=1025 num=65411
-netsh int ipv4 set dynamicport udp start=1025 num=65411
-
+rem # Disable SMB2.0 and SMB3.0
 sc.exe config mrxsmb20 start= disabled
 sc.exe config mrxsmb30 start= disabled
 
+rem # Delete Task Scheduler tasks
 schtasks /delete /tn * /f
 
+rem # Disable slide shows on the lock screen
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Personalization" /v "NoLockScreenSlideshow" /t REG_DWORD /d "1" /f
+
+rem # Timer Resolution Tweak
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "GlobalTimeResolutionRequests" /t REG_DWORD /d "1" /f
-
-rem # Enable TimerResolution program
-ECHO Yes | xcopy "%USERPROFILE%\Downloads\windows11-batch-scripts-main\SetTimerResolution.bat" "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
-
-rem # Start GraphicsPerfSvc (increases performance)
-ECHO Yes | xcopy "%USERPROFILE%\Downloads\windows11-batch-scripts-main\StartGraphicsPerfSvc.bat" "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
-
-rem # Make sure services dont get reenabled by Windows after reboot
-rem # Use StartBATs.bat after login method instead
-rem # ECHO Yes | xcopy "%USERPROFILE%\Downloads\windows11-batch-scripts-main\DisableServices.bat" "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
-rem # ECHO Yes | xcopy "%USERPROFILE%\Downloads\windows11-batch-scripts-main\DisableWinUpdate.bat" "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
 
 rem # Delete Windows Defender user account
 net user WDAGUtilityAccount /active:no
@@ -2696,5 +2658,11 @@ net user "Guest" /delete
 rem # Delete Administrator account
 net user Administrator /active:no
 net user "Administrator" /delete
+
+rem # Enable TimerResolution program
+ECHO Yes | xcopy "%USERPROFILE%\Downloads\windows11-batch-scripts-main\SetTimerResolution.bat" "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
+
+rem # Start GraphicsPerfSvc (increases performance)
+ECHO Yes | xcopy "%USERPROFILE%\Downloads\windows11-batch-scripts-main\StartGraphicsPerfSvc.bat" "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
 
 PAUSE
