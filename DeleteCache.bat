@@ -1,5 +1,5 @@
-REM Deletes tmp, cache, prefetch, last known good configuration files, live kernel reports, and Windows.old
-REM Dont delete "rescache" folder
+rem # Deletes tmp, cache, prefetch, last known good configuration files, live kernel reports, and Windows.old
+rem # Dont delete "rescache" folder
 
 rmdir /f /s /q "C:\Windows\Temp"
 rmdir /f /s /q "%USERPROFILE%\AppData\Local\Temp"
@@ -30,6 +30,8 @@ rmdir /f /s /q "C:\Windows.old"
 DEL /F /S /Q /A "C:\pagefile.sys"
 DEL /F /S /Q /A "C:\swapfile.sys"
 
-
+rem # Deletes NVIDIA shader caches
+rmdir /s /q "%LocalAppData%\NVIDIA\DXCache"
+rmdir /s /q "%LocalAppData%\NVIDIA\GLCache"
 
 PAUSE
