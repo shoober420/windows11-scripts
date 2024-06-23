@@ -181,3 +181,5 @@ InstallScoop.bat
 Steam.bat (minimal and bloatless Steam launch script)
 
 MouseAccelFix.bat
+
+CloudflareDNS.bat
