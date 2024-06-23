@@ -2,7 +2,7 @@ Windows Insider Build Update Checklist
  - Instructions for when you install a new Windows Insider build update
 
 Update Video Drivers
- - NVIDIA: https://www.nvidia.com/download/find.aspx (NVCleanstall method preferred)
+ - NVIDIA: https://www.nvidia.com/download/find.aspx (NVCleanstall method preferred) (https://developer.nvidia.com/vulkan-driver)
  - AMD: https://www.amd.com/en/support
 
 Install and run Intel DSA (Driver Support Assistant)
