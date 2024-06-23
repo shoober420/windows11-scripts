@@ -1572,18 +1572,6 @@ reg add "HKLM\Software\Policies\Microsoft\MRT" /v "DontOfferThroughWUAU" /t REG_
 reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager\Subscriptions" /f
 reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager\SuggestedApps" /f
 
-
-
-rem # Disable Data Execution Prevention (DEP)
-BCDEDIT /SET {CURRENT} NX ALWAYSOFF
-
-rem # Disable DMA memory protection and cores isolation
-rem # Disable Virtual Secure Mode (VSM)
-rem # Disable Hyper-V
-bcdedit /set vsmlaunchtype Off
-bcdedit /set vm No
-bcdedit /set hypervisorlaunchtype off
-
 rem # Processor x2APIC Support helps operating systems run more efficiently on high core count configurations
 bcdedit /set x2apicpolicy Enable
 
@@ -1598,13 +1586,8 @@ bcdedit /set firstmegabytepolicy UseAll
 bcdedit /set avoidlowmemory 0x8000000
 bcdedit /set nolowmem Yes
 
-rem # Disable some of the kernel memory mitigations
-bcdedit /set allowedinmemorysettings 0x0
-bcdedit /set isolatedcontext No
-
 rem # Enable Physical Address Extension (PAE)
 bcdedit /set pae ForceEnable
-
 
 rem # Application Control for Windows
 rem # 0 = Off / 1 = Enforce / 2 = Evaluation
