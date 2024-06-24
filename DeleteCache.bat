@@ -96,7 +96,44 @@ rem # Clear regedit favorites
 reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Applets\Regedit\Favorites" /va /f
 reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Applets\Regedit\Favorites" /va /f
 
+rem # Clear Distributed Transaction Coordinator log
+del "C:\Windows\DtcInstall.log" /f /q /s
 
+rem # Clear Optional Component Manager and COM+ components logs
+del "C:\Windows\comsetup.log" /f /q /s
 
+rem # Clear Pending File Rename Operations logs
+del "C:\Windows\PFRO.log" /f /q /s
+
+rem # Clear Windows Deployment Upgrade Process Logs
+del "C:\Windows\setupact.log" /f /q /s
+del "C:\Windows\setuperr.log" /f /q /s
+
+rem # Clear Windows Setup Logs
+del "C:\Windows\setupapi.log" /f /q /s
+del "C:\Windows\Panther\*" /f /q /s
+del "C:\Windows\INF\setupapi.*" /f /q /s
+
+rem # Clear Windows System Assessment Tool logs
+del "C:\Windows\Performance\WinSAT\winsat.log" /f /q /s
+
+rem # Clear Password change events and debug logs
+del "C:\Windows\debug\*.log" /f /q /s
+
+rem # Clear user web cache database
+del "%LOCALAPPDATA%\Microsoft\Windows\WebCache\*" /f /q /s
+
+rem # Clear system temp folder when noone is logged in
+del "C:\Windows\ServiceProfiles\LocalService\AppData\Local\Temp" /f /q /s
+
+rem # Clear DISM (Deployment Image Servicing and Management) Logs and Windows\Logs folder
+del "C:\Windows\Logs" /f /q /s
+
+rem # Clear Cryptographic Services Traces
+del "C:\Windows\System32\catroot2\dberr.txt" /f /q /s
+del "C:\Windows\System32\catroot2.log" /f /q /s
+del "C:\Windows\System32\catroot2.jrs" /f /q /s
+del "C:\Windows\System32\catroot2.edb" /f /q /s
+del "C:\Windows\System32\catroot2.chk" /f /q /s
 
 PAUSE
