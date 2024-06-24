@@ -16,6 +16,8 @@ rem ----------------------------------------------------------------------------
 rem # Most settings are self explanatory after reading them, although I've provided descriptions
 rem # and comments for settings and options to further clarify.
 
+rem # https://admx.help/
+
 rem # Enable and start WMI
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD /d "2" /f
