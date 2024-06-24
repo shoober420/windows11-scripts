@@ -1,4 +1,4 @@
-rem # Deletes tmp, cache, prefetch, last known good configuration files, live kernel reports, and Windows.old
+rem # Deletes various logs, tmp, cache, prefetch, last known good configuration files, live kernel reports, and Windows.old
 rem # Dont delete "rescache" folder
 
 rmdir /s /q "C:\Windows\Temp"
