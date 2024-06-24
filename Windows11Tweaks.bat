@@ -2666,6 +2666,10 @@ rem # Delete Administrator account
 net user Administrator /active:no
 net user "Administrator" /delete
 
+rem # Delete controversial default0 user
+net user defaultuser0 /active:no
+net user defaultuser0 /delete 2>nul
+
 rem # Disable DEP
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Explorer" /v "NoDataExecutionPrevention" /t REG_DWORD /d "1" /f
 
