@@ -10,6 +10,7 @@ rem # Additional settings and format used from:
 rem # https://github.com/TairikuOokami
 rem # https://github.com/ionuttbara
 rem # https://github.com/raspi
+rem # https://github.com/simeononsecurity/
 rem -----------------------------------------------------------------------------------------
 
 rem # Most settings are self explanatory after reading them, although I've provided descriptions
