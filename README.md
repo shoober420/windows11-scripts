@@ -168,7 +168,7 @@ EnableEssentialServices.bat
 
 DownloadFirefox.txt
 
-DeleteCache.bat
+DeleteCache&Logs.bat
 
 WindowsFix.bat (standard fixes to troubleshoot Windows systems with issues and bugs)
 
