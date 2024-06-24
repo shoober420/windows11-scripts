@@ -48,4 +48,55 @@ del "%USERPROFILE%\AppData\Roaming\NVIDIA\ComputeCache" /f /q /s
 rem # Delete Steam htmlcache
 del "%USERPROFILE%\AppData\Local\Steam\htmlcache" /f /q /s
 
+rem # Clear Windows Run MRU & typedpaths
+reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU" /va /f
+reg delete "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\TypedPaths" /va /f
+
+rem # Clear Most Recent Application's Use of DirectX
+reg delete "HKCU\Software\Microsoft\Direct3D\MostRecentApplication" /va /f
+reg delete "HKLM\SOFTWARE\Microsoft\Direct3D\MostRecentApplication" /va /f
+
+rem # Clear windows media player recent files and urls
+reg delete "HKCU\Software\Microsoft\MediaPlayer\Player\RecentFileList" /va /f
+reg delete "HKCU\Software\Microsoft\MediaPlayer\Player\RecentURLList" /va /f
+reg delete "HKLM\SOFTWARE\Microsoft\MediaPlayer\Player\RecentFileList" /va /f
+reg delete "HKLM\SOFTWARE\Microsoft\MediaPlayer\Player\RecentURLList" /va /f
+
+rem # Clear list of Recent Files Opened, by Filetype
+reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\RecentDocs" /va /f
+reg delete "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\RecentDocs" /va /f
+reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\OpenSaveMRU" /va /f
+
+rem # Clear Windows Search Assistant history
+reg delete "HKCU\Software\Microsoft\Search Assistant\ACMru" /va /f
+
+rem # Clear Adobe Media Browser MRU
+reg delete "HKCU\Software\Adobe\MediaBrowser\MRU" /va /f
+
+rem # Clear MSPaint MRU
+reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Applets\Paint\Recent File List" /va /f
+reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Applets\Paint\Recent File List" /va /f
+
+rem # Clear Wordpad MRU
+reg delete "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Applets\Wordpad\Recent File List" /va /f
+        
+rem # Clear Map Network Drive MRU MRU
+reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Map Network Drive MRU" /va /f
+reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Map Network Drive MRU" /va /f
+
+rem # Clear list of recent programs opened
+reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\LastVisitedPidlMRU" /va /f
+reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\LastVisitedPidlMRULegacy" /va /f
+
+rem # Clear regedit last key
+reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Applets\Regedit" /va /f
+reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Applets\Regedit" /va /f
+        
+rem # Clear regedit favorites
+reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Applets\Regedit\Favorites" /va /f
+reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Applets\Regedit\Favorites" /va /f
+
+
+
+
 PAUSE
