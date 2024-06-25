@@ -1,6 +1,9 @@
 rem !!! WARNING !!!
 rem !!! THE FOLLOWING SETTINGS REQUIRE ADJUSTING BEFORE BEING EXECUTED !!!
 
+echo "ADJUST SCRIPT SETTINGS TO CORRESPOND WITH YOUR HARDWARE BEFORE RUNNING"
+PAUSE
+
 rem # Make sure "name=" matches network name, half of internet breaks unless DNS is specified
 rem # Go to "HKLM\SYSTEM\CurrentControlSet\Control\Network\"Class Guid"\<NIC ID>\Connection" to get NIC network name (ex: Wi-Fi 2)
 rem # Enables Cloudflare DNS
