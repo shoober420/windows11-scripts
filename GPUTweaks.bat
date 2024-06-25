@@ -1,7 +1,6 @@
 rem !!! WARNING !!!
 rem # VALUES NEED ADJUSTED BASED ON HARDWARE
 
-msg "ADJUST SCRIPT SETTINGS TO CORRESPOND WITH YOUR HARDWARE BEFORE RUNNING"
 PAUSE
 
 rem # HighPerfAdapter must match Hardware ID in Device Manager for GPU
