@@ -1,6 +1,9 @@
 rem !!! WARNING !!!
 rem # VALUES NEED ADJUSTED BASED ON HARDWARE
 
+echo "ADJUST SCRIPT SETTINGS TO CORRESPOND WITH YOUR HARDWARE BEFORE RUNNING"
+PAUSE
+
 rem # HighPerfAdapter must match Hardware ID in Device Manager for GPU
 rem # rem Device Manager > Display Adapters > "GPUNAME" > Properties > Details > Property > Hardware Ids
 rem # HighPerfAdapter="VEN&DEV&SUBSYS" / PCI\VEN_10DE&DEV_2684&SUBSYS_89321043 / HighPerfAdapter=10DE&2684&89321043
