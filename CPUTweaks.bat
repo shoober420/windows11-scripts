@@ -1,7 +1,6 @@
 rem !!! WARNING !!!
 rem # ADJUST SETTINGS TO CORRESPOND WITH YOUR HARDWARE
 
-msg "ADJUST SCRIPT SETTINGS TO CORRESPOND WITH YOUR HARDWARE BEFORE RUNNING"
 PAUSE
 
 rem # https://www.overclock.net/threads/additionalcriticalworkerthreads.1254416/
