@@ -1,7 +1,6 @@
 rem !!! WARNING !!!
 rem !!! THE FOLLOWING SETTINGS REQUIRE ADJUSTING BEFORE BEING EXECUTED !!!
 
-msg "ADJUST SCRIPT SETTINGS TO CORRESPOND WITH YOUR HARDWARE BEFORE RUNNING"
 PAUSE
 
 rem # Make sure "name=" matches network name, half of internet breaks unless DNS is specified
