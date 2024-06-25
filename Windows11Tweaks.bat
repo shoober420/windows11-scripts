@@ -11,6 +11,7 @@ rem # https://github.com/TairikuOokami
 rem # https://github.com/ionuttbara
 rem # https://github.com/raspi
 rem # https://github.com/simeononsecurity/
+rem # https://sites.google.com/site/tweakradje/windows/windows-tweaking
 rem -----------------------------------------------------------------------------------------
 
 rem # Most settings are self explanatory after reading them, although I've provided descriptions
@@ -1938,7 +1939,16 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "SuperWetEnabled" /t REG_DWORD 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "UseHWDrawListEntriesOnWARP" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\DWM\ExtendedComposition" /v "ExclusiveModeFramerateAveragingPeriodMs" /t REG_DWORD /d "0x000000fa" /f
 
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager" /v "HeapDeCommitFreeBlockThreshold" /t REG_DWORD /d "0x00040000" /f
+rem # Running Low on Virtual Memory and Excessive Page File Usage
+rem # https://techcommunity.microsoft.com/t5/windows-server-essentials-and/running-low-on-virtual-memory-and-excessive-page-file-usage/ba-p/395847
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager" /v "HeapDeCommitFreeBlockThreshold" /t REG_DWORD /d "0" /f
+
+rem # Trim your massive WorkingSet
+rem # https://www.tenforums.com/performance-maintenance/189717-test-trim-workingset-ram.html
+rem # https://www.i.u-tokyo.ac.jp/edu/training/ss/lecture/new-documents/Lectures/15-CacheManager/CacheManager.pdf
+rem # CacheUnmapBehindLengthInMB=dword:00000100 ;256MB = 4GB RAM / 512MB = 8GB RAM / 1024MB = 16GB RAM / 2048MB = 32GB RAM / 4096MB = 64GB RAM
+rem # dword:00000100 = 256MB = 4GB RAM / dword:00000200 = 512MB = 8GB RAM / dword:00000300 = 768MB = 12GB RAM / dword:00000400 = 1024MB = 16GB RAM / dword:00000800 = 2048MB = 32GB RAM / dword:00001600 = 4096MB = 64GB RAM 
+rem # ModifiedWriteMaximum=dword:00000020 ;32MB for 4GB
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "CacheUnmapBehindLengthInMB" /t REG_DWORD /d "0x00000100" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "ModifiedWriteMaximum" /t REG_DWORD /d "0x00000020" /f
 
