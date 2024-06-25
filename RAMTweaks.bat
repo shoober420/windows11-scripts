@@ -1,6 +1,9 @@
 rem !!! WARNING !!!
 rem # ADJUST VALUES ACCORDING TO RAM SIZE
 
+echo "ADJUST SCRIPT SETTINGS TO CORRESPOND WITH YOUR HARDWARE BEFORE RUNNING"
+PAUSE
+
 rem # Pagefile Size in MB (16GB = 16384) (32GB = 32768) (64GB = 65536)
 rem # InitialSize=65536,MaximumSize=65536
 wmic computersystem where name="%computername%" set AutomaticManagedPagefile=False
