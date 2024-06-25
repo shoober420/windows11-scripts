@@ -1,6 +1,9 @@
 rem !!! WARNING !!!
 rem # ADJUST SETTINGS TO CORRESPOND WITH YOUR HARDWARE
 
+echo "ADJUST SCRIPT SETTINGS TO CORRESPOND WITH YOUR HARDWARE BEFORE RUNNING"
+PAUSE
+
 rem # https://www.overclock.net/threads/additionalcriticalworkerthreads.1254416/
 rem # https://martin77s.wordpress.com/2010/04/05/performance-tuning-your-windows-server-part-3/
 rem # https://www.wilderssecurity.com/threads/increase-number-of-threads-per-process.317532/
@@ -12,3 +15,5 @@ rem # 32 threads = 8 default critical thread , 16 additional critical threads an
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Executive" /v "AdditionalCriticalWorkerThreads" /t REG_DWORD /d "16" /f
 rem # Delayed Worker Threads - Threads in this queue have a lower priority and therefore a higher latency because they must compete with other processing for CPU time
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Executive" /v "AdditionalDelayedWorkerThreads" /t REG_DWORD /d "0" /f
+
+PAUSE
