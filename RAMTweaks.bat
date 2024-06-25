@@ -1,3 +1,4 @@
+rem !!! WARNING !!!
 rem # ADJUST VALUES ACCORDING TO RAM SIZE
 
 rem # Pagefile Size in MB (16GB = 16384) (32GB = 32768) (64GB = 65536)
