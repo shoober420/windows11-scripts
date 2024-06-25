@@ -2,6 +2,8 @@ rem !!! WARNING !!!
 rem # ADJUST SETTINGS TO CORRESPOND WITH YOUR HARDWARE
 
 rem # https://www.overclock.net/threads/additionalcriticalworkerthreads.1254416/
+rem # https://martin77s.wordpress.com/2010/04/05/performance-tuning-your-windows-server-part-3/
+rem # https://www.wilderssecurity.com/threads/increase-number-of-threads-per-process.317532/
 rem # 4 threads = 1 default critical thread , 2 additional critical threads and 1 thread left for background processes / AdditionalCriticalWorkerThreads = 2
 rem # 8 threads = 2 default critical thread , 4 additional critical threads and 2 thread left for background processes / AdditionalCriticalWorkerThreads = 4
 rem # 12 threads = 3 default critical thread , 6 additional critical threads and 3 thread left for background processes / AdditionalCriticalWorkerThreads = 6
