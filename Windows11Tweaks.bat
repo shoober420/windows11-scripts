@@ -1781,6 +1781,8 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\DeliveryOptimization\Set
 reg add "HKCU\Software\Policies\Microsoft\Windows\CloudContent" /v "DisableWindowsSpotlightFeatures" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\FileSystem" /v "LongPathsEnabled" /t REG_DWORD /d "1" /f
 
+rem # Add or Remove Pin to Quick access Context Menu
+rem # Add or Remove Pin to Start Context Menu
 reg delete "HKCR\AllFilesystemObjects\shell\pintohome" /f
 reg delete "HKCR\Drive\shell\pintohome" /f
 reg delete "HKCR\Folder\shell\pintohome" /f
