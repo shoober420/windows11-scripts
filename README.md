@@ -27,6 +27,8 @@ RESTART
  - RAMTweaks.bat (script settings need tweaked to match users computer hardware)
  - GPUTweaks.bat (script settings need tweaked to match users computer hardware)
  - CPUTweaks.bat (script settings need tweaked to match users computer hardware)
+ - UseLargePages.bat (add user programs to enable Large Pages for them)
+ - HighPriorty.bat (add user programs to enable High Priority for them)
  - Windows11Tweaks.bat
  - Disable*.bat (DO NOT RUN DisableStateRepository.bat and DisableWinHTTP.bat)
 
@@ -200,3 +202,7 @@ Date&TimeShow.bat / Date&TimeHide.bat (show or hide taskbar date and time on bot
 InstallChocolatey.bat
 
 CPUTweaks.bat (script settings need tweaked to match users computer hardware)
+
+UseLargePages.bat (add user programs to enable Large Pages for them)
+
+HighPriorty.bat (add user programs to enable High Priority for them)
