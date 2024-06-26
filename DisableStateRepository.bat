@@ -1,6 +1,12 @@
 rem Disable State Repository Service
-REM WARNING: Breaks system configuration settings, like power options
-REM WARNING: Breaks GUI, like taskbar, icons, and background
+rem # !!! WARNING !!!
+rem # Breaks system configuration settings, like power options
+rem # Breaks GUI, like taskbar, icons, and background
+rem # !!! CAUTION !!!
+rem # DO NOT USE 
+rem # FOR TESTING PURPOSES ONLY
+
+PAUSE
 
 net stop StateRepository
 
