@@ -21,6 +21,7 @@ del "%USERPROFILE%\AppData\Local\Google\Chrome SxS\User Data\Default\GPUCache" /
 del "%USERPROFILE%\AppData\Local\Chromium\User Data\Default\Cache" /f /q /s
 del "%USERPROFILE%\AppData\Local\Chromium\User Data\Default\GPUCache" /f /q /s
 DEL /F /S /Q /A %LocalAppData%\Microsoft\Windows\Explorer\thumbcache_*.db
+del "C:\PerfLogs" /f /q /s
 
 rmdir /s /q "C:\Windows\LastGood"
 rmdir /s /q "C:\Windows\LastGood.tmp"
