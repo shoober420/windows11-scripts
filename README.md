@@ -38,7 +38,7 @@ If stuck at "Just a moment..." screen before login, press CTRL+ALT+DEL to force 
 
 RESTART (SAFE MODE) (hold SHIFT while restarting)
 
- - SetACL.bat
+ - SetACL.bat (required for taking ownership of Windows Defender services and other bloat)
  - DisableWindowsDefender.bat
  - DisableWindowsFirewall.bat
  - DisableEventTraceSessions.bat
