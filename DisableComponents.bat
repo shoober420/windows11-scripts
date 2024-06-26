@@ -27,6 +27,7 @@ rem icacls "C:\Windows\SystemApps\ShellExperienceHost_cw5n1h2txyewy\ShellExperie
 rem ren "C:\Windows\SystemApps\ShellExperienceHost_cw5n1h2txyewy\ShellExperienceHost.exe" "ShellExperienceHost.exe.bak"
 
 rem # Disable Application Frame Host (to restore run "sfc /scannow")
+rem # Used for Windows Store UWP apps
 takeown /s %computername% /u %username% /f "%WinDir%\System32\ApplicationFrameHost.exe"
 icacls "%WinDir%\System32\ApplicationFrameHost.exe" /grant:r %username%:F
 taskkill /im ApplicationFrameHost.exe /f
