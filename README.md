@@ -42,7 +42,7 @@ RESTART (SAFE MODE) (hold SHIFT while restarting)
  - DisableWindowsDefender.bat
  - DisableWindowsFirewall.bat
  - DisableEventTraceSessions.bat
- - DisableComponents.bat
+ - DisableComponents.bat (Disables Windows Store and UWP apps)
  - DisableServices.bat
  - DeleteFonts.bat
 
@@ -73,7 +73,7 @@ DisableUI.bat / EnableUI.bat
 
 DisableStore.bat / EnableStore.bat
 
-DisableComponents.bat / EnableComponents.bat
+DisableComponents.bat / EnableComponents.bat (Disables Windows Store and UWP apps)
 
 wing3t.bat
 
