@@ -68,11 +68,23 @@ taskkill /im P508PowerAgent.exe /f
 rem del "C:\Program Files (x86)\ASUS\ArmouryDevice\dll\ShareFromArmouryIII\Mouse\ROG STRIX CARRY\P508PowerAgent.exe" /s /f /q
 ren "C:\Program Files (x86)\ASUS\ArmouryDevice\dll\ShareFromArmouryIII\Mouse\ROG STRIX CARRY\P508PowerAgent.exe" "P508PowerAgent.exe.bak"
 
+rem # Disable GIGABYTE Update Service
+takeown /s %computername% /u %username% /f "C:\Windows\System32\GigabyteUpdateService.exe"
+icacls "C:\Windows\System32\GigabyteUpdateService.exe" /grant:r %username%:F
+taskkill /im msedge.exe /f
+rem del "C:\Windows\System32\GigabyteUpdateService.exe" /s /f /q
+ren "C:\Windows\System32\GigabyteUpdateService.exe" "GigabyteUpdateService.exe.bak"
+
 rem Disable INTEL Energy Server Service
 takeown /s %computername% /u %username% /f "C:\Program Files\Intel\SUR\QUEENCREEK\x64\esrv_svc.exe"
 icacls "C:\Program Files\Intel\SUR\QUEENCREEK\x64\esrv_svc.exe" /grant:r %username%:F
 taskkill /im esrv_svc.exe /f
 rem del "C:\Program Files\Intel\SUR\QUEENCREEK\x64\esrv_svc.exe" /s /f /q
 ren "C:\Program Files\Intel\SUR\QUEENCREEK\x64\esrv_svc.exe" "esrv_svc.exe.bak"
+
+rem # Disable WWAHost.exe (to restore run "sfc /scannow")
+takeown /s %computername% /u %username% /f "%WinDir%\System32\WWAHost.exe"
+icacls "%WinDir%\System32\WWAHost.exe" /grant:r %username%:F
+ren "%WinDir%\System32\WWAHost.exe" "WWAHost.exe.bak"
 
 PAUSE
