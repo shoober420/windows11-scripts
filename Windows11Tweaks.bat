@@ -1320,13 +1320,6 @@ taskkill /im ShellExperienceHost.exe /f
 rem del "C:\Windows\SystemApps\ShellExperienceHost_cw5n1h2txyewy\ShellExperienceHost.exe" /s /f /q
 ren "C:\Windows\SystemApps\ShellExperienceHost_cw5n1h2txyewy\ShellExperienceHost.exe" "ShellExperienceHost.exe.bak"
 
-rem # Disable Application Frame Host (to restore run "sfc /scannow")
-takeown /s %computername% /u %username% /f "%WinDir%\System32\ApplicationFrameHost.exe"
-icacls "%WinDir%\System32\ApplicationFrameHost.exe" /grant:r %username%:F
-taskkill /im ApplicationFrameHost.exe /f
-rem del "%WinDir%\System32\ApplicationFrameHost.exe" /s /f /q
-ren "%WinDir%\System32\ApplicationFrameHost.exe" "ApplicationFrameHost.exe.bak"
-
 rem # Disable Spatial Audio License Service (to restore run "sfc /scannow")
 takeown /s %computername% /u %username% /f "%WinDir%\System32\SpatialAudioLicenseSrv.exe"
 icacls "%WinDir%\System32\SpatialAudioLicenseSrv.exe" /grant:r %username%:F
