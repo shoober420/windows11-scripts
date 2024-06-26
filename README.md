@@ -125,7 +125,7 @@ NVCleanstall.txt
 
 DeviceManager.txt
 
-SetACL.bat (ACL: Access Control List - requires SetACL.exe to be in scripts directory)
+SetACL.bat (ACL: Access Control List - requires SetACL.exe to be in scripts directory) (required for taking ownership of Windows Defender services and other bloat)
 
 InterruptAffinityPolicyTool.txt
 
