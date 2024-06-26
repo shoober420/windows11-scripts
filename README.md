@@ -31,6 +31,7 @@ RESTART
  - HighPriority.bat (add user programs to enable High Priority for them)
  - Windows11Tweaks.bat
  - Disable*.bat (DO NOT RUN DisableStateRepository.bat and DisableWinHTTP.bat)
+  + DisableAppX.bat (Causes File Explorer to crash frequently)
 
 RESTART
 
@@ -83,7 +84,7 @@ HKCUdsound.reg (adds dsound registry keys needed for older games, like Max Payne
 
 DisableBluetooth.bat / EnableBluetooth.bat
 
-DisableAppX.bat / EnableAppX.bat
+DisableAppX.bat / EnableAppX.bat (Disabling AppXSvc causes File Explorer to crash frequently)
 
 DisableWinHTTP.bat / EnableWinHTTP.bat (borks internet if disabled)
 
