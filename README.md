@@ -30,8 +30,7 @@ RESTART
  - UseLargePages.bat (add user programs to enable Large Pages for them)
  - HighPriority.bat (add user programs to enable High Priority for them)
  - Windows11Tweaks.bat
- - Disable*.bat (DO NOT RUN DisableStateRepository.bat and DisableWinHTTP.bat)
-  + DisableAppX.bat (Causes File Explorer to crash frequently)
+ - Disable*.bat (DisableAppX.bat causes File Explorer to crash frequently) (DO NOT RUN DisableStateRepository.bat and DisableWinHTTP.bat)
 
 RESTART
 
