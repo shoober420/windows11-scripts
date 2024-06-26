@@ -63,7 +63,7 @@ StartUpBATs.bat (run everytime after login)
 
 Windows11Checklist.txt (information on tweaks)
 
-Windows11Tweaks.bat (to disable windows defender, run in SAFE MODE)
+Windows11Tweaks.bat (Disables Telemetry required for Windows Insider Updates, run EnableWindowsUpdate.bat to fix) (to disable Windows Defender, run in SAFE MODE)
 
 DisableWindowsUpdate.bat / EnableWindowsUpdate.bat
 
