@@ -1301,53 +1301,6 @@ taskkill /im msedge.exe /f
 rem del "C:\Windows\SystemApps\Microsoft.MicrosoftEdgeDevToolsClient_8wekyb3d8bbwe" /s /f /q
 ren "C:\Windows\SystemApps\Microsoft.MicrosoftEdgeDevToolsClient_8wekyb3d8bbwe" "Microsoft.MicrosoftEdgeDevToolsClient_8wekyb3d8bbwe.bak"
 
-rem # Disable GIGABYTE Update Service
-takeown /s %computername% /u %username% /f "C:\Windows\System32\GigabyteUpdateService.exe"
-icacls "C:\Windows\System32\GigabyteUpdateService.exe" /grant:r %username%:F
-taskkill /im msedge.exe /f
-rem del "C:\Windows\System32\GigabyteUpdateService.exe" /s /f /q
-ren "C:\Windows\System32\GigabyteUpdateService.exe" "GigabyteUpdateService.exe.bak"
-
-rem # Disable Spatial Audio License Service (to restore run "sfc /scannow")
-takeown /s %computername% /u %username% /f "%WinDir%\System32\SpatialAudioLicenseSrv.exe"
-icacls "%WinDir%\System32\SpatialAudioLicenseSrv.exe" /grant:r %username%:F
-taskkill /im SpatialAudioLicenseSrv.exe /f
-rem del "%WinDir%\System32\SpatialAudioLicenseSrv.exe" /s /f /q
-ren "%WinDir%\System32\SpatialAudioLicenseSrv.exe" "SpatialAudioLicenseSrv.exe.bak"
-
-rem # Disable Spatial Audio License Service 64 (to restore run "sfc /scannow")
-takeown /s %computername% /u %username% /f "%WinDir%\SysWOW64\SpatialAudioLicenseSrv.exe"
-icacls "%WinDir%\SysWOW64\SpatialAudioLicenseSrv.exe" /grant:r %username%:F
-taskkill /im SpatialAudioLicenseSrv.exe /f
-rem del "%WinDir%\SysWOW64\SpatialAudioLicenseSrv.exe" /s /f /q
-ren "%WinDir%\SysWOW64\SpatialAudioLicenseSrv.exe" "SpatialAudioLicenseSrv.exe.bak"
-
-rem # Disable AMD User Experience Program Master
-takeown /s %computername% /u %username% /f "C:\Program Files\AMD\Performance Profile Client\AUEPMaster.exe"
-icacls "C:\Program Files\AMD\Performance Profile Client\AUEPMaster.exe" /grant:r %username%:F
-taskkill /im AUEPMaster.exe /f
-rem del "C:\Program Files\AMD\Performance Profile Client\AUEPMaster.exe" /s /f /q
-ren "C:\Program Files\AMD\Performance Profile Client\AUEPMaster.exe" "AUEPMaster.exe.bak"
-
-rem # Disable Armoury Socket Server
-takeown /s %computername% /u %username% /f "C:\Program Files (x86)\ASUS\ArmouryDevice\dll\ArmourySocketServer.exe"
-icacls "C:\Program Files (x86)\ASUS\ArmouryDevice\dll\ArmourySocketServer.exe" /grant:r %username%:F
-taskkill /im ArmourySocketServer.exe /f
-rem del "C:\Program Files (x86)\ASUS\ArmouryDevice\dll\ArmourySocketServer.exe" /s /f /q
-ren "C:\Program Files (x86)\ASUS\ArmouryDevice\dll\ArmourySocketServer.exe" "ArmourySocketServer.exe.bak"
-
-rem # Disable P508PowerAgent
-takeown /s %computername% /u %username% /f "C:\Program Files (x86)\ASUS\ArmouryDevice\dll\ShareFromArmouryIII\Mouse\ROG STRIX CARRY\P508PowerAgent.exe"
-icacls "C:\Program Files (x86)\ASUS\ArmouryDevice\dll\ShareFromArmouryIII\Mouse\ROG STRIX CARRY\P508PowerAgent.exe" /grant:r %username%:F
-taskkill /im P508PowerAgent.exe /f
-rem del "C:\Program Files (x86)\ASUS\ArmouryDevice\dll\ShareFromArmouryIII\Mouse\ROG STRIX CARRY\P508PowerAgent.exe" /s /f /q
-ren "C:\Program Files (x86)\ASUS\ArmouryDevice\dll\ShareFromArmouryIII\Mouse\ROG STRIX CARRY\P508PowerAgent.exe" "P508PowerAgent.exe.bak"
-
-rem # Disable WWAHost.exe (to restore run "sfc /scannow")
-takeown /s %computername% /u %username% /f "%WinDir%\System32\WWAHost.exe"
-icacls "%WinDir%\System32\WWAHost.exe" /grant:r %username%:F
-ren "%WinDir%\System32\WWAHost.exe" "WWAHost.exe.bak"
-
 rem # Fastest cursor update rate
 reg add "HKLM\SOFTWARE\Microsoft\Input\Settings\ControllerProcessor\CursorSpeed" /v "CursorUpdateInterval" /t REG_DWORD /d "1" /f
 
