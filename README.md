@@ -206,3 +206,5 @@ CPUTweaks.bat (script settings need tweaked to match users computer hardware)
 UseLargePages.bat (add user programs to enable Large Pages for them)
 
 HighPriority.bat (add user programs to enable High Priority for them)
+
+DisableStartMenu.bat / EnableStartMenu.bat
