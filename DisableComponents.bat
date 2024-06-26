@@ -1,5 +1,11 @@
 rem # Disable Components
 
+rem # !!! WARNING !!!
+rem # Disables Windows Store and UWP apps
+rem # !!! CAUTION !!!
+
+PAUSE
+
 rem # Disable Smartscreen (to restore run "sfc /scannow")
 takeown /s %computername% /u %username% /f "%WinDir%\System32\smartscreen.exe"
 icacls "%WinDir%\System32\smartscreen.exe" /grant:r %username%:F
