@@ -17,6 +17,8 @@ rem ----------------------------------------------------------------------------
 rem # Disables Telemetry required for Windows Update to function on Windows Insider builds
 rem # Running EnableWindowsUpdate.bat is required to download Windows updates after running this batch script
 
+PAUSE
+
 rem # Most settings are self explanatory after reading them, although I've provided descriptions
 rem # and comments for settings and options to further clarify.
 
