@@ -8,8 +8,7 @@ taskkill /im ShellExperienceHost.exe /f
 rem del "C:\Windows\SystemApps\ShellExperienceHost_cw5n1h2txyewy\ShellExperienceHost.exe" /s /f /q
 ren "C:\Windows\SystemApps\ShellExperienceHost_cw5n1h2txyewy\ShellExperienceHost.exe" "ShellExperienceHost.exe.bak"
 
-rem ________________________________________________________________________________________
-rem Remove Start (to restore run SFC scan)
+rem # Remove Start (to restore run SFC scan)
 takeown /s %computername% /u %username% /f "%WINDIR%\SystemApps\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\StartMenuExperienceHost.exe"
 icacls "%WINDIR%\SystemApps\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\StartMenuExperienceHost.exe" /inheritance:r /grant:r %username%:F
 taskkill /im StartMenuExperienceHost.exe /f
