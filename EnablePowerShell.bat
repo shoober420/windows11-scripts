@@ -1,0 +1,2 @@
+rem # Enable PowerShell
+
