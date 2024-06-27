@@ -1,7 +1,7 @@
 rem # Disable and remove Windows features
 rem # Windows update services required for DISM
 rem # "DISM /online /get-features /format:table" shows installed features
-rem #"Get-WindowsOptionalFeature -Online" shows installed features
+rem # "Get-WindowsOptionalFeature -Online" shows installed features
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\UsoSvc" /v "Start" /t REG_DWORD /d "2" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\wisvc" /v "Start" /t REG_DWORD /d "2" /f
@@ -28,13 +28,14 @@ net start DiagTrack
 net start Appinfo
 net start Winmgmt
 
-
-
 rem Enable and start WMI
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD /d "2" /f
 sc config winmgmt start= auto
 net start winmgmt
+
+rem # Enable PowerShell
+powershell.exe Enable-WindowsOptionalFeature -Online -FeatureName MicrosoftWindowsPowerShellV2Root
 
 rem TLS 1.2 or lower is required for Windows Update to work, TLS 1.3 not supported yet
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Client" /v "Enabled" /t REG_DWORD /d "1" /f
