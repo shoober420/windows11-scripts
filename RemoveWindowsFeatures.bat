@@ -35,6 +35,9 @@ sc config winmgmt start= auto
 net start winmgmt
 
 rem # Enable PowerShell
+
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowRun" /v "powershell.exe" /t REG_DWORD /d "0" /f
+
 powershell.exe Enable-WindowsOptionalFeature -Online -FeatureName MicrosoftWindowsPowerShellV2Root
 
 rem TLS 1.2 or lower is required for Windows Update to work, TLS 1.3 not supported yet
@@ -148,6 +151,8 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD
 
 rem # Disable PowerShell
 powershell.exe Disable-WindowsOptionalFeature -Online -FeatureName MicrosoftWindowsPowerShellV2Root
+
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowRun" /v "powershell.exe" /t REG_DWORD /d "1" /f
 
 rem Disable and stop WMI
 
