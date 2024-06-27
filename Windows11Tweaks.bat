@@ -14,6 +14,7 @@ rem # https://github.com/ionuttbara
 rem # https://github.com/raspi
 rem # https://github.com/simeononsecurity/
 rem # https://sites.google.com/site/tweakradje/windows/windows-tweaking
+
 rem -----------------------------------------------------------------------------------------
 
 rem # Disables Telemetry required for Windows Update to function on Windows Insider builds
