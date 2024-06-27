@@ -1,7 +1,7 @@
-rem Disable and remove Windows features
-rem Windows update services required for DISM
-REM "DISM /online /get-features /format:table" shows installed features
-REM "Get-WindowsOptionalFeature -Online" shows installed features
+rem # Disable and remove Windows features
+rem # Windows update services required for DISM
+rem # "DISM /online /get-features /format:table" shows installed features
+rem #"Get-WindowsOptionalFeature -Online" shows installed features
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\UsoSvc" /v "Start" /t REG_DWORD /d "2" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\wisvc" /v "Start" /t REG_DWORD /d "2" /f
@@ -27,6 +27,9 @@ net start DoSvc
 net start DiagTrack
 net start Appinfo
 net start Winmgmt
+
+rem # Enable PowerShell
+powershell.exe Enable-WindowsOptionalFeature -Online -FeatureName MicrosoftWindowsPowerShellV2Root
 
 rem Enable and start WMI
 
