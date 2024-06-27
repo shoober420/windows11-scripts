@@ -5,7 +5,9 @@ rem !!!VERY DANGEROUS!!!
 rem -----------------------------------------------------------------------------------------
 rem _______________________shoober420's Windows 11 Tweaks Batch Script_______________________
 rem -----------------------------------------------------------------------------------------
+
 rem # Too disable Windows Defender and Windows Defender components, run this batch script in SAFE MODE
+
 rem # Additional settings and format used from:
 rem # https://github.com/TairikuOokami
 rem # https://github.com/ionuttbara
