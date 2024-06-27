@@ -28,8 +28,7 @@ net start DiagTrack
 net start Appinfo
 net start Winmgmt
 
-rem # Enable PowerShell
-powershell.exe Enable-WindowsOptionalFeature -Online -FeatureName MicrosoftWindowsPowerShellV2Root
+
 
 rem Enable and start WMI
 
