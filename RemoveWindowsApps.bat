@@ -1,6 +1,6 @@
-rem Remove bloat windows apps
-REM "winget list" shows installed apps
-REM powershell -command "Get-AppxPackage | Select Name, PackageFullName" shows installed apps
+rem # Remove bloat windows apps
+rem # "winget list" shows installed apps
+rem # powershell -command "Get-AppxPackage | Select Name, PackageFullName" shows installed apps
 
 rem winget requires "Application Information" service to be running
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Appinfo" /v "Start" /t REG_DWORD /d "2" /f
@@ -11,6 +11,9 @@ rem Enable and start WMI
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD /d "2" /f
 sc config winmgmt start= auto
 net start winmgmt
+
+rem # Enable PowerShell
+powershell.exe Enable-WindowsOptionalFeature -Online -FeatureName MicrosoftWindowsPowerShellV2Root
 
 winget uninstall onedrive
 winget uninstall camera
