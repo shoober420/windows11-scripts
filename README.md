@@ -29,7 +29,7 @@ RESTART
  - CPUTweaks.bat (script settings need tweaked to match users computer hardware)
  - UseLargePages.bat (add user programs to enable Large Pages for them)
  - HighPriority.bat (add user programs to enable High Priority for them)
- - Windows11Tweaks.bat
+ - Windows11Tweaks.bat (Removes and disables Microsoft Edge)
  - Disable*.bat (DisableAppX.bat causes File Explorer to crash frequently) (DO NOT RUN DisableStateRepository.bat and DisableWinHTTP.bat)
 
 RESTART
@@ -63,7 +63,7 @@ StartUpBATs.bat (run everytime after login)
 
 Windows11Checklist.txt (information on tweaks)
 
-Windows11Tweaks.bat (Disables Telemetry required for Windows Insider Updates, run EnableWindowsUpdate.bat to fix) (to disable Windows Defender, run in SAFE MODE)
+Windows11Tweaks.bat (Disables Telemetry required for Windows Insider Updates, run EnableWindowsUpdate.bat to fix) (Removes and disables Microsoft Edge) (to disable Windows Defender, run in SAFE MODE)
 
 DisableWindowsUpdate.bat / EnableWindowsUpdate.bat
 
