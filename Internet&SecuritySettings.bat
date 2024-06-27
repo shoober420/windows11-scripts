@@ -7,7 +7,6 @@ sc config winmgmt start= auto
 net start winmgmt
 
 rem # Enable PowerShell
-
 Enable-WindowsOptionalFeature -Online -FeatureName MicrosoftWindowsPowerShellV2Root
 
 TIMEOUT /T 5
@@ -253,9 +252,6 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\Netbt\Parameters" /v "NoNameRele
 rem # Disable Remote PowerShell
 powershell.exe Disable-PSRemoting -Force
 
-rem # Disable PowerShell
-Disable-WindowsOptionalFeature -Online -FeatureName MicrosoftWindowsPowerShellV2Root
-
 rem # Disable SSL2.0 and SSL3.0
 rem # Disable TLS1.0, TLS1.1, and TLS1.2
 rem # Disable DTLS1.0, DTLS1.1, and DTLS1.2
@@ -306,6 +302,9 @@ rem Disable and stop WMI
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD /d "4" /f
 sc config winmgmt start= disabled
 net stop winmgmt
+
+rem # Disable PowerShell
+Disable-WindowsOptionalFeature -Online -FeatureName MicrosoftWindowsPowerShellV2Root
 
 rem # Breaks internet if 1
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp" /v "DisableWpad" /t REG_DWORD /d "0" /f
