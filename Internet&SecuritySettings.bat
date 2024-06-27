@@ -6,12 +6,16 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD
 sc config winmgmt start= auto
 net start winmgmt
 
+rem # Enable PowerShell
+
+Enable-WindowsOptionalFeature -Online -FeatureName MicrosoftWindowsPowerShellV2Root
+
 TIMEOUT /T 5
 
 PowerShell.exe Set-NetTCPSetting -SettingName internet -AutoTuningLevelLocal normal
-PowerShell.exe Set-NetTCPSetting -SettingName internet -ScalingHeuristics disabled
+PowerShell.exe Set-NetTCPSetting -SettingName internet -ScalingHeuristics disabledcz
 PowerShell.exe Set-NetTCPSetting -SettingName internet -EcnCapability disabled
-PowerShell.exe Set-NetTCPSetting -SettingName internet -Timestamps disabled
+PowerShell.exe Set-NetTCPSetting -SettingName internet -Timestamps disabledac
 PowerShell.exe Set-NetTCPSetting -SettingName internet -MaxSynRetransmissions 2
 PowerShell.exe Set-NetTCPSetting -SettingName internet -NonSackRttResiliency disable
 PowerShell.exe Set-NetTCPSetting -SettingName internet -InitialRto 2000
@@ -248,6 +252,9 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\Netbt\Parameters" /v "NoNameRele
 
 rem # Disable Remote PowerShell
 powershell.exe Disable-PSRemoting -Force
+
+rem # Disable PowerShell
+Disable-WindowsOptionalFeature -Online -FeatureName MicrosoftWindowsPowerShellV2Root
 
 rem # Disable SSL2.0 and SSL3.0
 rem # Disable TLS1.0, TLS1.1, and TLS1.2
