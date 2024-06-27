@@ -7,7 +7,7 @@ sc config winmgmt start= auto
 net start winmgmt
 
 rem # Enable PowerShell
-Enable-WindowsOptionalFeature -Online -FeatureName MicrosoftWindowsPowerShellV2Root
+powershell.exe Enable-WindowsOptionalFeature -Online -FeatureName MicrosoftWindowsPowerShellV2Root
 
 TIMEOUT /T 5
 
@@ -304,7 +304,7 @@ sc config winmgmt start= disabled
 net stop winmgmt
 
 rem # Disable PowerShell
-Disable-WindowsOptionalFeature -Online -FeatureName MicrosoftWindowsPowerShellV2Root
+powershell.exe Disable-WindowsOptionalFeature -Online -FeatureName MicrosoftWindowsPowerShellV2Root
 
 rem # Breaks internet if 1
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp" /v "DisableWpad" /t REG_DWORD /d "0" /f
