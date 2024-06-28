@@ -1,12 +1,6 @@
-rem -----------------------------------------------------------------------------------------
-rem !!!WARNING!!! !!!WARNING!!! !!!WARNING!!!
-rem !!!USE WITH EXTREME CAUTION!!!
-rem !!!VERY DANGEROUS!!!
-rem -----------------------------------------------------------------------------------------
-rem _______________________shoober420's Windows 11 Tweaks Batch Script_______________________
-rem -----------------------------------------------------------------------------------------
-
-rem # Too disable Windows Defender and Windows Defender components, run this batch script in SAFE MODE
+rem # -----------------------------------------------------------------------------------------
+rem # _______________________shoober420's Windows 11 Tweaks Batch Script_______________________
+rem # -----------------------------------------------------------------------------------------
 
 rem # Additional settings and format used from:
 rem # https://github.com/TairikuOokami
@@ -14,8 +8,11 @@ rem # https://github.com/ionuttbara
 rem # https://github.com/raspi
 rem # https://github.com/simeononsecurity/
 rem # https://sites.google.com/site/tweakradje/windows/windows-tweaking
+rem # https://admx.help/
 
-rem -----------------------------------------------------------------------------------------
+rem # -----------------------------------------------------------------------------------------
+
+rem # Too disable Windows Defender and Windows Defender components, run this batch script in SAFE MODE
 
 rem # Disables Telemetry required for Windows Update to function on Windows Insider builds
 rem # Running EnableWindowsUpdate.bat is required to download Windows updates after running this batch script
@@ -23,11 +20,6 @@ rem # Running EnableWindowsUpdate.bat is required to download Windows updates af
 rem # Removes and disables Microsoft Edge
 
 PAUSE
-
-rem # Most settings are self explanatory after reading them, although I've provided descriptions
-rem # and comments for settings and options to further clarify.
-
-rem # https://admx.help/
 
 rem # Enable and start WMI
 
