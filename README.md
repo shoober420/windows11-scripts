@@ -179,7 +179,7 @@ WindowsUpdateFix.bat (fixes Windows Update errors and bugs)
 
 SafeMode.txt (multiple methods to get into Safe Mode)
 
-TaskbarAutoHide.bat / TaskbarAlwaysShow.bat
+TaskbarHide.bat / TaskbarShow.bat
 
 InstallScoop.bat
 
