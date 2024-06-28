@@ -2706,9 +2706,6 @@ reg add "HKLM\Software\Policies\Microsoft\Windows\Explorer" /v "DisableNotificat
 reg add "HKCU\Software\Policies\Microsoft\Windows\Explorer" /v "DisableControlCenter" /t REG_DWORD /d "1" /f
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Explorer" /v "DisableControlCenter" /t REG_DWORD /d "1" /f
 
-rem # Turn On or Off Hidden Icon Menu on Taskbar System Tray
-reg add "HKCU\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\TrayNotify" /v "SystemTrayChevronVisibility" /t REG_DWORD /d "0" /f
-
 rem # Enable or Disable Notification Badging for Microsoft Accounts on Start menu
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "Start_AccountNotifications" /t REG_DWORD /d "0" /f
 
