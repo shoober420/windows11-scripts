@@ -7,7 +7,6 @@ Update Video Drivers
 
 Install and run Intel DSA (Driver Support Assistant)
  - Download (https://www.intel.com/content/www/us/en/support/detect.html)
- - If already Installed, Uninstall and Reinstall using downloaded exe to get Launch option to appear after installation completes to run Intel DSA
 
 RESTART
 
@@ -35,6 +34,8 @@ RESTART
 RESTART
 
 If stuck at "Just a moment..." screen before login, press CTRL+ALT+DEL to force login screen to show
+
+ - Login to account
 
 RESTART (SAFE MODE) (hold SHIFT while restarting)
 
