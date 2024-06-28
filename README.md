@@ -210,3 +210,5 @@ HighPriority.bat (add user programs to enable High Priority for them)
 DisableStartMenu.bat / EnableStartMenu.bat
 
 DisablePowerShell.bat / EnablePowerShell.bat
+
+TaskbarChevronHide.bat / TaskbarChevronShow.bat
