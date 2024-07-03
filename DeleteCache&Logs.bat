@@ -3,6 +3,10 @@ rem # Dont delete "rescache" folder
 
 rmdir /s /q "C:\Windows\Temp"
 rmdir /s /q "%USERPROFILE%\AppData\Local\Temp"
+
+# Deletes SuperFetch files
+rmdir /s /q "C:\Windows\Prefetch"
+
 del "%USERPROFILE%\AppData\Local\cache" /f /q /s
 del "%USERPROFILE%\AppData\Local\OneDrive\cache" /f /q /s
 del "%USERPROFILE%\AppData\Local\CrashDumps" /f /q /s
@@ -26,7 +30,6 @@ del "C:\PerfLogs" /f /q /s
 rmdir /s /q "C:\Windows\LastGood"
 rmdir /s /q "C:\Windows\LastGood.tmp"
 rmdir /s /q "C:\Windows\LiveKernelReports"
-rmdir /s /q "C:\Windows\Prefetch"
 
 takeown /s %computername% /u %username% /f "C:\Windows.old"
 icacls "C:\Windows.old" /grant:r %username%:F
