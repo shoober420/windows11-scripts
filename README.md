@@ -222,5 +222,3 @@ DisableStartMenu.bat / EnableStartMenu.bat
 DisablePowerShell.bat / EnablePowerShell.bat
 
 TaskbarChevronHide.bat / TaskbarChevronShow.bat
-
-DisableCCleaner.bat / EnableCCleaner.bat
