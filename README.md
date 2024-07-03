@@ -17,6 +17,8 @@ Install and open CCleaner
  - Tools > Registry > Scan for Issues
  - Run multiple times until same registry errors occur
 
+RESTART
+
 Run batch scripts
  - MouseAccelFix.bat
  - WingetUpdateApps.bat
