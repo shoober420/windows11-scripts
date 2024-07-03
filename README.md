@@ -10,6 +10,13 @@ Install and run Intel DSA (Driver Support Assistant)
 
 RESTART
 
+Install and open CCleaner
+ - Download (https://www.ccleaner.com/)
+ - Launch CCleaner
+ - Run Registry Cleaner
+ - Tools > Registry > Scan for Issues
+ - Run multiple times until same registry errors occur
+
 Run batch scripts
  - MouseAccelFix.bat
  - WingetUpdateApps.bat
@@ -213,3 +220,5 @@ DisableStartMenu.bat / EnableStartMenu.bat
 DisablePowerShell.bat / EnablePowerShell.bat
 
 TaskbarChevronHide.bat / TaskbarChevronShow.bat
+
+DisableCCleaner.bat / EnableCCleaner.bat
