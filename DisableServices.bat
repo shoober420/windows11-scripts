@@ -307,7 +307,7 @@ rem Disable for constant CPU max frequency
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\intelppm" /v "Start" /t REG_DWORD /d "4" /f
 rem sc config intelppm start= demand
 
-rem # Disable CCleaner Services
+rem # Disable CCleaner Performance Optimizer Service
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\CCleanerPerformanceOptimizerService" /v "Start" /t REG_DWORD /d "4" /f
 
 rem GraphicsPerfSvc enable, improves performance
