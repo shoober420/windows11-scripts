@@ -2,11 +2,11 @@ rem # Remove bloat windows apps
 rem # "winget list" shows installed apps
 rem # powershell -command "Get-AppxPackage | Select Name, PackageFullName" shows installed apps
 
-rem winget requires "Application Information" service to be running
+rem # winget requires "Application Information" service to be running
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Appinfo" /v "Start" /t REG_DWORD /d "2" /f
 net start Appinfo
 
-rem Enable and start WMI
+rem # Enable and start WMI
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD /d "2" /f
 sc config winmgmt start= auto
@@ -85,15 +85,87 @@ powershell -command "Get-AppxPackage *Microsoft.WindowsTerminal* | Remove-AppxPa
 powershell -command "Get-AppxPackage *Microsoft.Windows.NarratorQuickStart* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *Microsoft.Windows.ContentDeliveryManager* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *Microsoft.Win32WebViewHost* | Remove-AppxPackage"
-powershell -command "Get-AppxPackage *devhome* | Remove-AppxPackage" 
+powershell -command "Get-AppxPackage *devhome* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.BingFinance* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.3DBuilder* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.BingFoodAndDrink * | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.BingHealthAndFitness* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.BingSports* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.BingTranslator* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.BingTravel* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.Messaging* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.Microsoft3DViewer* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.MicrosoftJournal* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.MicrosoftPowerBIForWindows* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.MixedReality.Portal* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.NetworkSpeedTest* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.News* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.Office.OneNote* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.Office.Sway* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.OneConnect* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.Print3D* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.SkypeApp* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.XboxApp* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *MicrosoftCorporationII.MicrosoftFamily* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *MicrosoftCorporationII.QuickAssist* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *MSTeams* | Remove-AppxPackage"
 
-REM Remove all other apps except Microsoft Store
+powershell -command "Get-AppxPackage *ACGMediaPlayer* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *ActiproSoftwareLLC* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *AdobeSystemsIncorporated.AdobePhotoshopExpress* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Amazon.com.Amazon* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *AmazonVideo.PrimeVideo* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Asphalt8Airborne* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *AutodeskSketchBook* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *CaesarsSlotsFreeCasino* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *COOKINGFEVER* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *CyberLinkMediaSuiteEssentials* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *DisneyMagicKingdoms* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Disney* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *DrawboardPDF* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Duolingo-LearnLanguagesforFree* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *EclipseManager* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Facebook* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *FarmVille2CountryEscape* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *fitbit* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Flipboard* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *HiddenCity* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *HULULLC.HULUPLUS* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *iHeartRadio* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Instagram* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *king.com.BubbleWitch3Saga* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *king.com.CandyCrushSaga* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *king.com.CandyCrushSodaSaga* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *LinkedInforWindows* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *MarchofEmpires* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Netflix* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *NYTCrossword* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *OneCalendar* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *PandoraMediaInc* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *PhototasticCollage* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *PicsArt-PhotoStudio* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Plex* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *PolarrPhotoEditorAcademicEdition* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Royal Revolt* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Shazam* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Sidia.LiveWallpaper* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *SlingTV* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Spotify* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *TikTok* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *TuneInRadio* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Twitter* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Viber* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *WinZipUniversal* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Wunderlist* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *XING* | Remove-AppxPackage"
+
+rem # Remove all other apps except Microsoft Store
 powershell -command "Get-AppXPackage | where-object {$_.name -notlike '*store*'} | Remove-AppxPackage"
 
-rem Uninstalls "Remote Desktop Connection" program
+rem # Uninstalls "Remote Desktop Connection" program
 mstsc /uninstall
 
-rem Disable "Application Information" service
+rem # Disable "Application Information" service
 net stop Appinfo
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Appinfo" /v "Start" /t REG_DWORD /d "4" /f
 
@@ -102,7 +174,7 @@ powershell.exe Disable-WindowsOptionalFeature -Online -FeatureName MicrosoftWind
 
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowRun" /v "powershell.exe" /t REG_DWORD /d "1" /f
 
-rem Disable and stop WMI
+rem # Disable and stop WMI
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD /d "4" /f
 sc config winmgmt start= disabled
