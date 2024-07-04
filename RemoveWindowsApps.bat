@@ -28,6 +28,7 @@ winget uninstall "windows web experience pack"
 winget uninstall "microsoft teams"
 winget uninstall "feedback hub"
 winget uninstall paint
+winget uninstall WebView2
 
 powershell -command "Get-AppxPackage *Microsoft.WindowsNotepad* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *Microsoft.People* | Remove-AppxPackage"
@@ -119,6 +120,7 @@ powershell -command "Get-AppxPackage *Microsoft.Whiteboard* | Remove-AppxPackage
 powershell -command "Get-AppxPackage *Microsoft.Windows.Photos* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *Microsoft.WindowsStore* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *Microsoft.RemoteDesktop* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.EdgeWebView2Runtime* | Remove-AppxPackage"
 
 powershell -command "Get-AppxPackage *ACGMediaPlayer* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *ActiproSoftwareLLC* | Remove-AppxPackage"
