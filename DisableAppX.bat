@@ -1,7 +1,6 @@
 rem # Disable AppXSvc
 rem # !!! WARNING !!!
-rem # Disabling AppXSvc breaks File Explorer features, like zip functionality and right click menu
-rem # Causes File Explorer to crash frequently
+rem # Disabling AppXSvc breaks File Explorer features, like zip functionality and right click context menu
 rem # !!! CAUTION !!!
 
 PAUSE
