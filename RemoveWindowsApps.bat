@@ -2,6 +2,11 @@ rem # Remove bloat windows apps
 rem # "winget list" shows installed apps
 rem # powershell -command "Get-AppxPackage | Select Name, PackageFullName" shows installed apps
 
+rem # WARNING
+rem # This script may delete Windows Apps you use, do a back up in case anything is lost you need
+
+PAUSE
+
 rem # winget requires "Application Information" service to be running
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Appinfo" /v "Start" /t REG_DWORD /d "2" /f
 net start Appinfo
@@ -171,8 +176,17 @@ powershell -command "Get-AppxPackage *WinZipUniversal* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *Wunderlist* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *XING* | Remove-AppxPackage"
 
+# Find and Remove eveything
+Get-AppxPackage | Remove-AppxPackage
+
+rem # Find and Remove for all existing user packages
+Get-AppxPackage -AllUsers | Remove-AppxPackage
+
+rem # Find, remove, and nevercomeback for every User and every future User on this computer
+Get-AppxProvisionedPackage -online | Remove-AppxProvisionedPackage -online
+
 rem # Remove all other apps except Microsoft Store
-powershell -command "Get-AppXPackage | where-object {$_.name -notlike '*store*'} | Remove-AppxPackage"
+rem # powershell -command "Get-AppXPackage | where-object {$_.name -notlike '*store*'} | Remove-AppxPackage"
 
 rem # Uninstalls "Remote Desktop Connection" program
 mstsc /uninstall
