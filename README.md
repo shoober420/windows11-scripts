@@ -37,8 +37,8 @@ RESTART
  - CPUTweaks.bat (script settings need tweaked to match users computer hardware)
  - UseLargePages.bat (add user programs to enable Large Pages for them)
  - HighPriority.bat (add user programs to enable High Priority for them)
- - Windows11Tweaks.bat (Removes and disables Microsoft Edge)
- - Disable*.bat (DisableAppX.bat causes File Explorer to crash frequently) (DO NOT RUN DisableStateRepository.bat and DisableWinHTTP.bat)
+ - Windows11Tweaks.bat
+ - Disable*.bat (DisableAppX.bat causes File Explorer to crash when opening right click context menu) (DO NOT RUN DisableStateRepository.bat and DisableWinHTTP.bat)
 
 RESTART
 
