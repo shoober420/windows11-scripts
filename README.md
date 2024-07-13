@@ -222,3 +222,5 @@ DisableStartMenu.bat / EnableStartMenu.bat
 DisablePowerShell.bat / EnablePowerShell.bat
 
 TaskbarChevronHide.bat / TaskbarChevronShow.bat
+
+ProductKey.bat
