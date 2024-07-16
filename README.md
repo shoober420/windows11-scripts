@@ -224,3 +224,5 @@ DisablePowerShell.bat / EnablePowerShell.bat
 TaskbarChevronHide.bat / TaskbarChevronShow.bat
 
 ProductKey.bat
+
+UpdatePython.txt
