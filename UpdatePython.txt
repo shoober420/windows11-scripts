@@ -1,0 +1,8 @@
+Update Python
+
+ - download (https://www.python.org/download/pre-releases/)
+ - Windows installer (64-bit) and Windows installer (32-bit)
+ - checkmark "Use admin privileges" and "Add python.exe to PATH"
+
+ - Open PowerShell terminal as Admin
+ - pip3 install rx
