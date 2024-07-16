@@ -11,4 +11,6 @@ Update Python
  - pip3 install requests
  - pip3 install PyQt5
  - pip3 install PyQt6
+ - pip3 install pyobjc
+ - pip3 install typing_extensions
  - python.exe -m pip install --upgrade pip
