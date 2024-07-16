@@ -6,4 +6,9 @@ Update Python
 
  - Open PowerShell terminal as Admin
  - pip3 install rx
+ - pip3 install lhafile
+ - pip3 install pillow
+ - pip3 install requests
+ - pip3 install PyQt5
+ - pip3 install PyQt6
  - python.exe -m pip install --upgrade pip
