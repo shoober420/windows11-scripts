@@ -1,5 +1,8 @@
 # Windows Batch Scripts
 
+NOTE:
+If at any point during the process you get stuck at "Just a moment..." screen before login, press CTRL+ALT+DEL to force login screen to show
+
 # Instructions
 Update Video Drivers
  - NVIDIA: https://www.nvidia.com/download/find.aspx (NVCleanstall method preferred) (https://developer.nvidia.com/vulkan-driver)
@@ -41,8 +44,6 @@ RESTART
  - Disable*.bat (DisableAppX.bat causes File Explorer to crash when opening right click context menu) (DO NOT RUN DisableStateRepository.bat and DisableWinHTTP.bat)
 
 RESTART
-
-If stuck at "Just a moment..." screen before login, press CTRL+ALT+DEL to force login screen to show
 
  - Login to account
 
