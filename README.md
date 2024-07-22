@@ -227,3 +227,9 @@ TaskbarChevronHide.bat / TaskbarChevronShow.bat
 ProductKey.bat
 
 UpdatePython.txt
+
+RefreshRate.bat
+
+RestartExplorer.bat
+
+
