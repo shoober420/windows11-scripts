@@ -12,6 +12,8 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\Disall
 
 powershell.exe Enable-WindowsOptionalFeature -Online -FeatureName MicrosoftWindowsPowerShellV2Root
 
+rem # Enable PowerShell scripts
+
 powershell.exe Get-AppxPackage 'NVIDIACorp.NVIDIAControlPanel' | % { Copy-Item -LiteralPath $_.InstallLocation -Destination $Env:USERPROFILE\Desktop -Recurse -Force; Invoke-Item "$Env:USERPROFILE\Desktop\NVIDIACorp.NVIDIAControlPanel_*\nvcplui.exe" }
 
 PAUSE
