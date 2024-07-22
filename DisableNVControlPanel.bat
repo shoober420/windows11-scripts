@@ -2,8 +2,10 @@
 
 powershell -command "Get-AppxPackage *NVIDIACorp.NVIDIAControlPanel* | Remove-AppxPackage"
 
-rem # Disable PowerShell
+rem # Disable PowerShell scripts
+Set-ExecutionPolicy Default
 
+rem # Disable PowerShell
 powershell.exe Disable-WindowsOptionalFeature -Online -FeatureName MicrosoftWindowsPowerShellV2Root
 
 rem # Disable Remote PowerShell
