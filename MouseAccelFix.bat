@@ -1,4 +1,11 @@
 rem # MarkC Acceleration Fix
+
+rem # !!! WARNING !!!
+rem # Scale items size must be 100%
+rem # System > Display > Scale & layout > Scale 100% (Recommended)
+
+PAUSE
+
 rem reg import "%USERPROFILE%\Downloads\MarkC_Windows_10+8.x+7_MouseFix\Windows 10 Fixes\Windows_10+8.x_MouseFix_ItemsSize=100%_Scale=1-to-1_@6-of-11.reg"
 rem REGEDIT.EXE /s "%USERPROFILE%\Downloads\MarkC_Windows_10+8.x+7_MouseFix\Windows 10 Fixes\Windows_10+8.x_MouseFix_ItemsSize=100%_Scale=1-to-1_@6-of-11.reg"
 
