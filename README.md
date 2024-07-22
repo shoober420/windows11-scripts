@@ -235,3 +235,5 @@ UpdatePython.txt
 RefreshRate.bat
 
 RestartExplorer.bat
+
+LaunchNVControlPanel.bat
