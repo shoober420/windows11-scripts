@@ -800,8 +800,10 @@ perfmon - Performance Monitor
 
 Visual Studio - C:\Program Files\Microsoft Visual Studio\2022\Preview\Common7\IDE\devenv.exe
 
-C:\Program Files\WindowsApps\NVIDIACorp.NVIDIAControlPanel_8.1.962.0_x64__56jybvy8sckqj\nvcplui.exe - Nvidia control panel
-C:\Program Files\WindowsApps\Microsoft.DesktopAppInstaller_1.22.2782.0_x64__8wekyb3d8bbwe - winget
+C:\Program Files\NVIDIA Corporation\Control Panel Client\nvcplui.exe - Nvidia control panel
+C:\Program Files\WindowsApps\NVIDIACorp.NVIDIAControlPanel_X.X.XXX.0_x64__56jybvy8sckqj\nvcplui.exe - Nvidia control panel
+
+C:\Program Files\WindowsApps\Microsoft.DesktopAppInstaller_X.XX.XXXX.0_x64__8wekyb3d8bbwe - winget
 
 Win+E = File Explorer
 Win+I = Settings
