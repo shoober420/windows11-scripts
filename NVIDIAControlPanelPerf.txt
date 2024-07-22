@@ -34,7 +34,7 @@ Triple buffering: Off
 Vertical sync: Off
 Virtual Reality pre-rendered frames: 1
 Virtual Reality - Variable Rate Super Sampling: Off
-Vulkan/OpenGL present method: Prefer layered on DXGI swapchain
+Vulkan/OpenGL present method: Prefer native
 
 Configure Surround, PhysX:
 --------------------------------------------
