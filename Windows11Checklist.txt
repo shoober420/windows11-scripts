@@ -42,6 +42,7 @@ Download
  - Power Settings Explorer (http://www.mediafire.com/file/wt37sbsejk7iepm/PowerSettingsExplorer.zip)
  - WinCDEmu (https://wincdemu.sysprogs.org/) (mounts mds and other rare image extensions)
  - RInput (https://fearless-assassins.com/files/file/1656-rinput/)
+ - RefreshRateSwitcher (https://github.com/sryze/RefreshRateSwitcher)
 
 SAFE MODE: Press and hold F8, then power on system while holding down F8
 
