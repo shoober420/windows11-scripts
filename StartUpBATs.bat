@@ -13,6 +13,6 @@ cd %USERPROFILE%\Downloads\windows11-batch-scripts-main
 call DisableServices.bat
 
 cd %USERPROFILE%\Downloads\windows11-batch-scripts-main
-call DisableWinUpdate.bat
+call DisableWindowsUpdate.bat
 
 PAUSE
