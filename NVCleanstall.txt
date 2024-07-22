@@ -20,3 +20,6 @@ Enable Message Signaled Interrupts
  - Interrupt Policy: Specified Processors > Select Processors > fifth to last CPU
  - Interrupt Priority: High
 Disable HDCP
+Rebuild digital signature (required for one or more selected tweaks on this page)
+ - Use method compatible with Easy-Anti-Cheat (triggers a "driver unsigned" warning during installation)
+ - Automatically accept the "driver unsigned" warning
