@@ -43,6 +43,9 @@ Antialiasing (MSAA) - Mode: Override any application setting
 NOTE:
 SUPERVCAA has no effect on OGL or D3D games
 
+NOTE:
+Some games dont support anti-aliasing (GTA4)
+
 Prevent Antialiasing (OGL): 0x00000000 Disable none
 
 4 - Texture filtering
