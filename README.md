@@ -69,6 +69,7 @@ Setup Microsoft Interrupt Affinity Tool
 RESTART
 
 StartUpBATs.bat (run everytime after login)
+RefreshRate.bat (script settings need tweaked to match users computer hardware)
 
 # Windows Batch Scripts
 
