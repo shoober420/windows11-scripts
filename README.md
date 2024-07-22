@@ -59,7 +59,7 @@ RESTART (SAFE MODE) (hold SHIFT while restarting)
 
 RESTART
 
-- nvidiaProfileInspector: load PerformanceProfile.nip or HighQualityProfile.nip
+- nvidiaProfileInspector: load PerformanceProfile.nip or HighQualityProfileOGL.nip / HighQualityProfileD3D.nip
 - Disable Drivers in Device Manager using DeviceManager.txt as reference (devmgmt.msc)
 
 RESTART
@@ -151,7 +151,7 @@ DDU.txt (Display Drivers Uninstaller)
 
 NVProfileInspectorPerf.txt / NVProfileInspectorHQ.txt
 
-PerformanceProfile.nip / HighQualityProfile.nip (NVProfileInspector profiles)
+PerformanceProfile.nip / HighQualityProfileOGL.nip / HighQualityProfileD3D.nip (NVProfileInspector profiles)
 
 NVIDIAControlPanelHQ.txt / NVIDIAControlPanelPerf.txt
 
