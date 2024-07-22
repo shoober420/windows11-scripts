@@ -72,7 +72,7 @@ RESTART
 - RefreshRate.bat (script settings need tweaked to match users computer hardware)
 
 NOTE:
-If NVIDIA Control Panel is needed, go to "https://github.com/Aetopia/Install-NVCPL"
+If NVIDIA Control Panel is needed, go to https://github.com/Aetopia/Install-NVCPL
 
 # Windows Batch Scripts
 
