@@ -233,4 +233,4 @@ RefreshRate.bat
 
 RestartExplorer.bat
 
-
+DisableNVControlPanel.bat / EnableNVControlPanel.bat
