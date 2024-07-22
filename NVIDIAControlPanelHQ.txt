@@ -15,18 +15,18 @@ Antialiasing - Transparency: 8x (supersample)
 Background Application Max Frame Rate: Off
 CUDA - GPUs: All
 CUDA - Sysmem Fallback Policy: Prefer No Sysmem Fallback
-DSR - Factors: Off
-DSR - Smoothness: Off
+DSR - Factors: 4.00x
+DSR - Smoothness: Off / 0%
 Low Latency Mode: Ultra
 Max Frame Rate: Off
 Multi-Frame Sampled AA (MFAA): Off
-OpenGL GDI compatibility: Prefer performance
+OpenGL GDI compatibility: Prefer compatible
 OpenGL rendering GPU: NVIDIA GeForce RTX 4090
 Power management mode: Prefer maximum performance
 Prefered refresh rate: Highest available
 Shader Cache Size: Unlimited
 Texture filtering - Anisotropic sample optimization: Off
-Texture filtering - Negative LOD bias: Clamp
+Texture filtering - Negative LOD bias: Allow
 Texture filtering - Quality: High quality
 Texture filtering - Trilinear optimization: Off
 Threaded optimization: On
