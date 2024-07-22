@@ -36,8 +36,13 @@ Antialiasing - Transparency Multisampling - Setting: 0x00000007 C4X_ALL - (Quali
 Antialiasing - Transparency Supersampling: Off / Multisampling
 Antialiasing (MSAA) - Behavior Flags: None
 Antialiasing (MSAA) - Mode: Override any application setting
+
 !!! Antialiasing (MSAA) - Setting (OGL): 32xS [Combined: 2x2 SS + 8x MS]
 !!! Antialiasing (MSAA) - Setting (D3D): 4x4 [4x4 Supersampling (D3D only)]
+
+NOTE:
+SUPERVCAA has no effect on OGL or D3D games
+
 Prevent Antialiasing (OGL): 0x00000000 Disable none
 
 4 - Texture filtering
