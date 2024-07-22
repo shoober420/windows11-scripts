@@ -141,10 +141,6 @@ reg add "HKLM\System\CurrentControlSet\Control" /v "WaitToKillServiceTimeout" /t
 rem Determines in milliseconds the interval from the time the cursor is pointed at a menu until the menu items are displayed
 reg add "HKCU\Control Panel\Desktop" /v "MenuShowDelay" /t REG_SZ /d "0" /f
 
-rem Remove Windows Mouse Acceleration Curve (USE MARKC MOUSE FIX BELOW)
-rem reg delete "HKCU\Control Panel\Mouse" /v "SmoothMouseXCurve" /f
-rem reg delete "HKCU\Control Panel\Mouse" /v "SmoothMouseYCurve" /f
-
 rem Mouse Hover Time in milliseconds before Pop-up Display
 reg add "HKCU\Control Panel\Mouse" /v "MouseHoverTime" /t REG_SZ /d "0" /f
 
@@ -473,11 +469,6 @@ rem =================================== Windows Settings =======================
 rem --------------------------------- Bluetooth & Devices ----------------------------------
 rem ........................................ Mouse .........................................
 rem . . . . . . . . . . . . . . . . Additional mouse options . . . . . . . . . . . . . . . .
-
-rem 1/6/10 - Enhance pointer precision (Mouse Acceleration)
-reg add "HKCU\Control Panel\Mouse" /v "MouseSpeed" /t REG_SZ /d "0" /f
-reg add "HKCU\Control Panel\Mouse" /v "MouseThreshold1" /t REG_SZ /d "0" /f
-reg add "HKCU\Control Panel\Mouse" /v "MouseThreshold2" /t REG_SZ /d "0" /f
 
 rem ________________________________________________________________________________________
 reg add "HKCU\Control Panel\Desktop" /v "SmoothScroll" /t REG_DWORD /d "0" /f
