@@ -148,7 +148,7 @@ Unified back/depth buffer: 0x00000001 OGL_SINGLE_BACKDEPTH_BUFFER_ENABLE
 Variable refresh rate: 0x00000000 VSYNCVRRCONTROL_DISABLE
 Virtual Reality pre-rendered frames: 0x00000001
 Vsync - Behavior Flags: 0x00000000 VSYNC_BEHAVIOR_FLAGS_NONE
-Vulkan/OpenGL present method: 0x00000001 (Prefer layered on DXGI Swapchain)
+Vulkan/OpenGL present method: 0x00000001 (prefer layered on DXGI Swapchain)
 
 
 
