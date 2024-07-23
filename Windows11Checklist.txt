@@ -35,7 +35,7 @@ Download
  - Device Cleanup Tool (https://www.uwe-sieber.de/misc_tools_e.html)
  - HWiNFO (https://www.hwinfo.com/)
  - HWMonitor (https://www.cpuid.com/softwares/hwmonitor.html)
- - NVIDIA Profile Inspector (https://github.com/Orbmu2k/nvidiaProfileInspector)
+ - NVIDIA Profile Inspector (https://github.com/neatchee/nvidiaProfileInspectorForkAIO) !!! OLD (https://github.com/Orbmu2k/nvidiaProfileInspector) OLD !!!
  - LatencyMon (https://www.resplendence.com/download/LatencyMon.exe)
  - SetACL (https://helgeklein.com/download/)
  - Microsoft Interrupt Affinity Tool (https://www.techpowerup.com/download/microsoft-interrupt-affinity-tool/)
