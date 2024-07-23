@@ -237,3 +237,11 @@ RefreshRate.bat
 RestartExplorer.bat
 
 LaunchNVControlPanel.bat
+
+LaunchAddRemovePrograms.bat
+
+LaunchMouseProperties.bat
+
+LaunchMultimediaProperties.bat
+
+LaunchSystemProperties.bat
