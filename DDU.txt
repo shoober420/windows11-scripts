@@ -1,5 +1,5 @@
 DDU (Display Driver Uninstaller)
- - Download (https://www.wagnardsoft.com/forums/viewtopic.php?t=4731 / https://www.wagnardsoft.com/display-driver-uninstaller-DDU-)
+ - Download (https://www.wagnardsoft.com/display-driver-uninstaller-DDU-)
  - Extract / Install
  - Disconnect internet (not needed if booting into safe mode)
 
