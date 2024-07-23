@@ -1,3 +1,5 @@
+https://github.com/neatchee/nvidiaProfileInspectorForkAIO
+
 NVIDIA Profile Inspector High Quality Settings
 
 2 - Sync and Refresh
