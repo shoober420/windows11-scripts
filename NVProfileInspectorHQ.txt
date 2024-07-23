@@ -2,6 +2,27 @@ https://github.com/neatchee/nvidiaProfileInspectorForkAIO
 
 NVIDIA Profile Inspector High Quality Settings
 
+0.1 - RTX - Volatile (lost on driver update)
+-------------------------
+RTX Dynamic Vibrance - Enabled: On
+RTX Dynamic Vibrance - Saturation: 0
+RTX Dynamic Vibrance - Value: 100
+RTX HDR - Contrast (NVIDIA App/Freestyle only): 0x00000000
+RTX HDR - Enable Game Filters: Off
+RTX HDR - Enabled: On
+RTX HDR - Middle Grey (NVIDIA App/Freestyle only): 0x00000000
+RTX HDR - Peak Brightness (NVIDIA App/Freestyle only): 0x00000000
+RTX HDR - Quality: Enabled (VeryHigh Quality) (0x02)
+RTX HDR - Saturation (NVIDIA App/Freestyle only): 0x00000000
+RTX HDR - UNKNOWN SETTING (required for RTX HDR): On
+
+0.2 - DLSS - Volatile (lost on driver update)
+-------------------------
+DLSS 3.1.11+ - Force all quality levels to DLAA (base profile only): Off
+DLSS 3.1.11+ - Forced DLSS3.1 preset letter (base profile only): N/A
+DLSS 3.1.11+ - Forced scaling ratio (base profile only): Render at 1.00x native
+
+
 2 - Sync and Refresh
 -------------------------
 Flip Indicator: Disabled
@@ -42,13 +63,18 @@ Antialiasing (MSAA) - Mode: Override any application setting
 !!! Antialiasing (MSAA) - Setting (OGL): 32xS [Combined: 2x2 SS + 8x MS]
 !!! Antialiasing (MSAA) - Setting (D3D): 4x4 [4x4 Supersampling (D3D only)]
 
+Nvidia Image Sharpening 2.0: Off
+Nvidia Image Sharpening Value: 0.00
+Prevent Antialiasing (OGL): 0x00000000 Disable none
+Sharpening - Denoising Factor: 0.00
+Sharpening Filter: Off
+Sharpening Value: 0.00
+
 NOTE:
 SUPERVCAA has no effect on OGL or D3D games
 
 NOTE:
 Some games dont support anti-aliasing (GTA4)
-
-Prevent Antialiasing (OGL): 0x00000000 Disable none
 
 4 - Texture filtering
 -------------------------
@@ -72,6 +98,7 @@ Ambient Occlusion - Usage: Enabled
 Ambient Occlusion - Setting: Quality
 Ansel - Enabled: Off (screenshot tool)
 CUDA - Force P2 State: Off
+CUDA - Sysmem Fallback Policy: Prefer No Sysmem Fallback
 Extension Limit (OGL): Off
 Multi-Display / Mixed-GPU Acceleration: Single display performance mode
 PhysX - Indicator Overlay: Off
@@ -145,12 +172,12 @@ Maximum frames allowed: 0x00000001
 Memory Allocation Policy: 0x00000002 WKS_MEMORY_ALLOCATION_POLICY_AGGRESIVE_PRE_ALLOCATION
 NVIDIA Predefined Ansel Usage: 0x00000000 ANSEL_ALLOW_DISALLOW (screenshot tool)
 OpenGL Default swap interval: 0xFFFFFFFF OGL_DEFAULT_SWAP_INTERVAL_DISABLED
-OpenGL GDI compatibility: 0x00000001 (prefer compatibility)
+OpenGL GDI compatibility: 0x00000001 (prefer compatibility) (OGL_CPL_GDI_COMPATIBILITY_PREFER_ENABLED)
 Unified back/depth buffer: 0x00000001 OGL_SINGLE_BACKDEPTH_BUFFER_ENABLE
 Variable refresh rate: 0x00000000 VSYNCVRRCONTROL_DISABLE
 Virtual Reality pre-rendered frames: 0x00000001
 Vsync - Behavior Flags: 0x00000000 VSYNC_BEHAVIOR_FLAGS_NONE
-Vulkan/OpenGL present method: 0x00000001 (prefer layered on DXGI Swapchain)
+Vulkan/OpenGL present method: 0x00000001 (prefer layered on DXGI Swapchain) (OGL_CPL_PREFER_DXPRESENT_PREFER_ENABLED)
 
 
 
