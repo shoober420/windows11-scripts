@@ -2,6 +2,26 @@ https://github.com/neatchee/nvidiaProfileInspectorForkAIO
 
 NVIDIA Profile Inspector High Performance Settings
 
+0.1 - RTX - Volatile (lost on driver update)
+-------------------------
+RTX Dynamic Vibrance - Enabled: On
+RTX Dynamic Vibrance - Saturation: 0
+RTX Dynamic Vibrance - Value: 100
+RTX HDR - Contrast (NVIDIA App/Freestyle only): 0x00000000
+RTX HDR - Enable Game Filters: Off
+RTX HDR - Enabled: Off
+RTX HDR - Middle Grey (NVIDIA App/Freestyle only): 0x00000000
+RTX HDR - Peak Brightness (NVIDIA App/Freestyle only): 0x00000000
+RTX HDR - Quality: Off (0x00)
+RTX HDR - Saturation (NVIDIA App/Freestyle only): 0x00000000
+RTX HDR - UNKNOWN SETTING (required for RTX HDR): Off
+
+0.2 - DLSS - Volatile (lost on driver update)
+-------------------------
+DLSS 3.1.11+ - Force all quality levels to DLAA (base profile only): Off
+DLSS 3.1.11+ - Forced DLSS3.1 preset letter (base profile only): N/A
+DLSS 3.1.11+ - Forced scaling ratio (base profile only): Off
+
 2 - Sync and Refresh
 -------------------------
 Flip Indicator: Disabled
@@ -39,6 +59,12 @@ Antialiasing - Transparency Supersampling: Off / Multisampling
 Antialiasing (MSAA) - Behavior Flags: Disable Antialiasing at NVIDIA Control Panel
 Antialiasing (MSAA) - Mode: Override any application setting
 Antialiasing (MSAA) - Setting: Application-controlled / Off
+Nvidia Image Sharpening 2.0: Off
+Nvidia Image Sharpening Value: 0.00
+Prevent Antialiasing (OGL): 0x00000000 Disable none
+Sharpening - Denoising Factor: 0.00
+Sharpening Filter: Off
+Sharpening Value: 0.00
 Prevent Antialiasing (OGL): 0x00000000 Disable none
 
 4 - Texture filtering
@@ -63,6 +89,7 @@ Ambient Occlusion - Usage: Disabled
 Ambient Occlusion - Setting: Off
 Ansel - Enabled: Off (screenshot tool)
 CUDA - Force P2 State: Off
+CUDA - Sysmem Fallback Policy: Prefer No Sysmem Fallback
 Extension Limit (OGL): Off
 Multi-Display / Mixed-GPU Acceleration: Single display performance mode
 PhysX - Indicator Overlay: Off
@@ -136,12 +163,12 @@ Maximum frames allowed: 0x00000001
 Memory Allocation Policy: 0x00000002 WKS_MEMORY_ALLOCATION_POLICY_AGGRESIVE_PRE_ALLOCATION
 NVIDIA Predefined Ansel Usage: 0x00000000 ANSEL_ALLOW_DISALLOW (screenshot tool)
 OpenGL Default swap interval: 0xFFFFFFFF OGL_DEFAULT_SWAP_INTERVAL_DISABLED
-OpenGL GDI compatibility: 0x00000000 (prefer performance)
+OpenGL GDI compatibility: 0x00000000 (prefer performance) (OGL_CPL_GDI_COMPATIBILITY_PREFER_DISABLED)
 Unified back/depth buffer: 0x00000001 OGL_SINGLE_BACKDEPTH_BUFFER_ENABLE
 Variable refresh rate: 0x00000000 VSYNCVRRCONTROL_DISABLE
 Virtual Reality pre-rendered frames: 0x00000001
 Vsync - Behavior Flags: 0x00000000 VSYNC_BEHAVIOR_FLAGS_NONE
-Vulkan/OpenGL present method: 0x00000000 (prefer native)
+Vulkan/OpenGL present method: 0x00000000 (prefer native) (OGL_CPL_PREFER_DXPRESENT_PREFER_DISABLED)
 
 
 
