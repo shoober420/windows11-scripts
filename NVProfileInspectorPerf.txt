@@ -4,9 +4,9 @@ NVIDIA Profile Inspector High Performance Settings
 
 0.1 - RTX - Volatile (lost on driver update)
 -------------------------
-RTX Dynamic Vibrance - Enabled: On
+RTX Dynamic Vibrance - Enabled: Off
 RTX Dynamic Vibrance - Saturation: 0
-RTX Dynamic Vibrance - Value: 100
+RTX Dynamic Vibrance - Value: 0
 RTX HDR - Contrast (NVIDIA App/Freestyle only): 0x00000000
 RTX HDR - Enable Game Filters: Off
 RTX HDR - Enabled: Off
