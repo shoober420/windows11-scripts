@@ -1,0 +1,175 @@
+https://github.com/neatchee/nvidiaProfileInspectorForkAIO
+
+NVIDIA Profile Inspector Pro Settings
+
+0.1 - RTX - Volatile (lost on driver update)
+-------------------------
+RTX Dynamic Vibrance - Enabled: On
+RTX Dynamic Vibrance - Saturation: 0
+RTX Dynamic Vibrance - Value: 100
+RTX HDR - Contrast (NVIDIA App/Freestyle only): 0x00000000
+RTX HDR - Enable Game Filters: Off
+RTX HDR - Enabled: On
+RTX HDR - Middle Grey (NVIDIA App/Freestyle only): 0x00000000
+RTX HDR - Peak Brightness (NVIDIA App/Freestyle only): 0x00000000
+RTX HDR - Quality: Enabled (VeryHigh Quality) (0x02)
+RTX HDR - Saturation (NVIDIA App/Freestyle only): 0x00000000
+RTX HDR - UNKNOWN SETTING (required for RTX HDR): On
+
+0.2 - DLSS - Volatile (lost on driver update)
+-------------------------
+DLSS 3.1.11+ - Force all quality levels to DLAA (base profile only): Off
+DLSS 3.1.11+ - Forced DLSS3.1 preset letter (base profile only): N/A
+DLSS 3.1.11+ - Forced scaling ratio (base profile only): Off
+
+2 - Sync and Refresh
+-------------------------
+Flip Indicator: Disabled
+Frame Rate Limiter - Background Application: Off
+Frame Rate Limiter V3: Off
+GSYNC - Application Mode: Off
+GSYNC - Application Requested State: Force Off
+GSYNC - Application State: Force Off
+GSYNC - Global Feature: Off
+GSYNC - Global Mode: Off
+GSYNC - Indicator Overlay: Off
+GSYNC - Support Indicator Overlay: Off
+Maximum Pre-Rendered Frames: 1
+Prefered Refreshrate: Highest available
+Triple Buffering: Off
+Ultra Low Latency - CPL State: Ultra (Max Pre-Rendered Frames - Ultra = 1)
+Ultra Low Latency - Enabled: On (Max Pre-Rendered Frames)
+Vertical Sync: Force Off
+Vertical Sync - Smooth AFR Behavior: Off
+Vertical Sync - Tear Control: Standard
+Vertical Sync Indicator: 0x00000000 Off
+
+3 - Antialiasing
+-------------------------
+Antialiasing - Combined (Mode + Setting): 0x00000000 Application-controlled / Off
+Antialiasing - FXAA Enabled: Off
+Antialiasing - FXAA Enabled (predefined by NVIDIA): Disallowed
+Antialiasing - FXAA Indicator Overlay: Off
+Antialiasing - Gamma Correction: Off (changes intended original look of games)
+Antialiasing - Line Gamma: Disabled
+Antialiasing - MFAA Enabled: Off
+Antialiasing - Transparency Multisampling: Disabled
+Antialiasing - Transparency Multisampling - Setting: 0x00000000 Q - (Default, Mixed Mode) uses application detection
+Antialiasing - Transparency Supersampling: Off / Multisampling
+Antialiasing (MSAA) - Behavior Flags: Disable Antialiasing at NVIDIA Control Panel
+Antialiasing (MSAA) - Mode: Override any application setting
+Antialiasing (MSAA) - Setting: Application-controlled / Off
+Nvidia Image Sharpening 2.0: Off
+Nvidia Image Sharpening Value: 0.00
+Prevent Antialiasing (OGL): 0x00000000 Disable none
+Sharpening - Denoising Factor: 0.00
+Sharpening Filter: Off
+Sharpening Value: 0.00
+Prevent Antialiasing (OGL): 0x00000000 Disable none
+
+4 - Texture filtering
+-------------------------
+Anisotropic Filter - Optimization: On
+Anisotropic Filter - Sample Optimization: On
+Anisotropic Filtering - Mode: User-defined / Off
+Anisotropic Filtering - Setting: Off [Point]
+Anisotropic filtering (mode + setting): 0x10000001 Off [Linear]
+Prevent Anisotropic Filtering: On
+Texture Filtering - Driver Controlled LOD Bias: Off
+Texture Filtering - LOD Bias (DX): +0.000
+Texture Filtering - LOD Bias (OGL): +0.000
+Texture Filtering - Negative LOD Bias: Clamp
+Texture Filtering - Quality: High Performance
+Texture Filtering - Quality Substitution: No Substitution
+Texture Filtering - Trilinear Optimization: On ( will be ignored if using high quality )
+
+5 - Common
+-------------------------
+Ambient Occlusion - Usage: Disabled
+Ambient Occlusion - Setting: Off
+Ansel - Enabled: Off (screenshot tool)
+CUDA - Force P2 State: Off
+CUDA - Sysmem Fallback Policy: Prefer No Sysmem Fallback
+Extension Limit (OGL): Off
+Multi-Display / Mixed-GPU Acceleration: Single display performance mode
+PhysX - Indicator Overlay: Off
+Power Management - Mode: Prefer maximum performance
+Raytracing - (DXR) Enabled: RT Disabled
+Raytracing - (Vulkan RT) Enabled: RT Disabled
+rBAR - Feature: Enabled
+rBAR - Options: 0x00000001
+rBAR - Size Limit: 0x0000000040000000
+Shadercache - Cachesize: Unlimited
+Shadercache - Enabled: On
+Threaded Optimization: On
+Version Override (OGL): Disabled
+
+6 - SLI
+-------------------------
+Antialiasing - SLI AA: 0x00000000 AA_MODE_SELECTOR_SLIAA_DISABLED
+
+7 - Stereo
+-------------------------
+Force Stereo shuttering: 0x00000000 OGL_FORCE_STEREO_OFF
+Stereo - Dongle Support: 0x00000000 WKS_STEREO_DONGLE_SUPPORT_OFF
+Stereo - Enable: 0x00000000 WKS_STEREO_SUPPORT_OFF
+Stereo - Swap eyes: 0x00000000 WKS_API_STEREO_EYES_EXCHANGE_OFF
+
+8 - Extra
+-------------------------
+3DSMax Shim Layer Control: 0x00000000 Disable - Disable the 3DSMax Shim Layer
+APP_COMPAT_SHIM: 0x00000000 Disabled
+ASYNC10_ENABLE: 0x37605835 APP - Enable dual core optimizations unless the application requested to disable them 
+ASYNC10_NVAPI_MODE: 0x00000003 ALLOW_ALL - Allow all optimizations
+ASYNC10_OOO_QUERY_LIMIT: 0x00010000 (Battlefield 3)
+ASYNC10_PRESENT_MODE: 0x53855200 Sync - DX10 present will be sync call
+ASYNC9_ENABLE: 0x37605835 App - Enable AsyncDevice except in configs that do not work (some SLI, Optimus) or if the application requested to disable them
+ASYNC9_PRESENT_MODE: 0x53855200 Sync - All DX9 presents will be synchronous
+CULL_BEFORE_FETCH: 0x00000006 Dynamic
+MAX_PENDING_CMD_BUFFERS: 0x00000001 1
+MCFORCEHOSTSTAGINGBUFFERSIZE: 0x00040000 Default - size of host staging buffer, mostly for early push
+OGL_APP_CLAW - 0x00000001 Enabled - Enable the Workstation Performance Code, CLAW
+OGL_APP_CLAW_OPTIMIZE - 0x00000001 Enabled - Enable the optimizing compile in CLAW
+OGL_APP_CLAW_THREADS - 0x00000001 Enabled - CLAW threading
+OGL_APP_CONSTANT_OPTIMIZE - 0x00000001 Enabled - Optimize based on constant values
+OGL_APP_DIRECT_PUSHBUFFER - 0x00000001 Enabled - Use direct pushbuffer, not cached pushbuffer
+OGL_APP_LAZY_VBUM_VBOS - 0x00000001 Enabled - Enable the Lazy VBUM optimization for VBOs
+OGL_APP_OPTIMIZED_IMMEDIATE_MODE - 0x00000001 Enabled - Fast immediate mode path enable
+OGL_APP_VIDMEM_PUSHBUFFER - 0x00000001 Enabled - This app benefits greatly from vidmem pushbuffers
+OGL_APP_YIELD_AFTER_SWAP - 0x00000001 Enabled - Call GL_YIELD in postSwapBuffers()
+OGL_SYSMEM_TEXTURE_PROMOTION - 0x00000001 Enable - Textures being promoted from Sysmem to Vidmem
+OGL_THREAD_CONTROL_2 - 0x0FC00008 (Unigine: Heaven 4.0 demo, Unigine: Tropics demo, Unigine Engine, Unigine: Sanctuary demo, Unigine: Valley demo, Unigine: Heaven demo)
+OGL_THREAD_OPTIMIZATION: 0x0000001F ENABLE_ALL Enable all threading optimizations
+OGL_THREAD_OPTIMIZATION_GEFORCE: 0x0000001F Enable all threading optimizations
+OGL_VID_HEAP_REUSE_RATIO - 0x00000064 Default - Control the amount of freed video memory the allocator reserves for reuse by future allocations. By default the allocator reserves up to 10% of the total VRAM. The units are in 1/1000ths of total heap. So 100 means 10%
+PHYSX_APPLICATION: 0x00000000 Off
+PS_ALPHABETA - 0x00000002 Dynamic_VBIB - The driver adjusts a vb/ib ID unique Alpha fraction via AlphaBeta clocks
+PS_ALPHABETA_FRACTION - 0x000000FF Max
+SHADERMAXREGALLOWED: 0x00000400 Max - Specifies max register allowed when compiling/optimizing a shader
+SLIMOSAIC_CONTROL: 0x00000000 ALLOW_ALL - Allow all performance strategies
+STAGING_CACHE_SIZE: 0x10000001 Max
+SYSMEMCACHEDCOPYBEHAVIOR - 0x00000002 ALLOW_FOR_TEXTURES_WITH_SUBRESOURCES - Allow for textures with mips
+
+Other
+-------------------------
+Ansel flags for enabled applications: 0x00000000 ANSEL_ALLOWLISTED_DISALLOWED (screenshot tool)
+Application Profile Notification Popup Timeout: 0x00000000 APPLICATION_PROFILE_NOTIFICATION_TIMEOUT_DISABLED
+Autoalign flash indicator: 0x00000000 LATENCY_INDICATOR_AUTOALIGN_DISABLED
+Display the VRR Overlay Indicator: 0x00000000 VRROVERLAYINDICATOR_DISABLED
+High level control of the rendering quality on OpenGL: 0x00000014 OGL_QUALITY_ENHANCEMENTS_HPERF
+Idle Application Max FPS Limit: 0x00000000
+Idle Application Threshold Time out in seconds: 0x00000000
+Maximum frames allowed: 0x00000001
+Memory Allocation Policy: 0x00000002 WKS_MEMORY_ALLOCATION_POLICY_AGGRESIVE_PRE_ALLOCATION
+NVIDIA Predefined Ansel Usage: 0x00000000 ANSEL_ALLOW_DISALLOW (screenshot tool)
+OpenGL Default swap interval: 0xFFFFFFFF OGL_DEFAULT_SWAP_INTERVAL_DISABLED
+OpenGL GDI compatibility: 0x00000000 (prefer performance) (OGL_CPL_GDI_COMPATIBILITY_PREFER_DISABLED)
+Unified back/depth buffer: 0x00000001 OGL_SINGLE_BACKDEPTH_BUFFER_ENABLE
+Variable refresh rate: 0x00000000 VSYNCVRRCONTROL_DISABLE
+Virtual Reality pre-rendered frames: 0x00000001
+Vsync - Behavior Flags: 0x00000000 VSYNC_BEHAVIOR_FLAGS_NONE
+Vulkan/OpenGL present method: 0x00000000 (prefer native) (OGL_CPL_PREFER_DXPRESENT_PREFER_DISABLED)
+
+
+
+NVIDIA Reflex Low-Latency: Enabled + Boost fixes stuttering issues in cs2
