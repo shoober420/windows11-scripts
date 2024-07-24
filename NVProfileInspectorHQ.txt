@@ -4,17 +4,17 @@ NVIDIA Profile Inspector High Quality Settings
 
 0.1 - RTX - Volatile (lost on driver update)
 -------------------------
-RTX Dynamic Vibrance - Enabled: On
+RTX Dynamic Vibrance - Enabled: Off
 RTX Dynamic Vibrance - Saturation: 0
-RTX Dynamic Vibrance - Value: 100
+RTX Dynamic Vibrance - Value: 0
 RTX HDR - Contrast (NVIDIA App/Freestyle only): 0x00000000
 RTX HDR - Enable Game Filters: Off
-RTX HDR - Enabled: On
+RTX HDR - Enabled: Off
 RTX HDR - Middle Grey (NVIDIA App/Freestyle only): 0x00000000
 RTX HDR - Peak Brightness (NVIDIA App/Freestyle only): 0x00000000
-RTX HDR - Quality: Enabled (VeryHigh Quality) (0x02)
+RTX HDR - Quality: Off (0x00)
 RTX HDR - Saturation (NVIDIA App/Freestyle only): 0x00000000
-RTX HDR - UNKNOWN SETTING (required for RTX HDR): On
+RTX HDR - UNKNOWN SETTING (required for RTX HDR): Off
 
 0.2 - DLSS - Volatile (lost on driver update)
 -------------------------
