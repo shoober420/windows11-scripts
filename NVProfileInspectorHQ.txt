@@ -20,7 +20,7 @@ RTX HDR - UNKNOWN SETTING (required for RTX HDR): On
 -------------------------
 DLSS 3.1.11+ - Force all quality levels to DLAA (base profile only): Off
 DLSS 3.1.11+ - Forced DLSS3.1 preset letter (base profile only): N/A
-DLSS 3.1.11+ - Forced scaling ratio (base profile only): Render at 1.00x native
+DLSS 3.1.11+ - Forced scaling ratio (base profile only): Off
 
 
 2 - Sync and Refresh
