@@ -1,5 +1,7 @@
 # Windows Batch Scripts
 
+Its not only about FPS, its also about latency.
+
 NOTE:
 If at any point during the process you get stuck at "Just a moment..." screen before login, press CTRL+ALT+DEL to force login screen to show
 
