@@ -1,3 +1,3 @@
-rem # Launches Add / Remove programs
+rem # Launch Add / Remove programs
 
 appwiz.cpl
