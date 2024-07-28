@@ -1118,24 +1118,6 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\UserProfileEngagement" /
 
 
 
-
-
-rem USE AT OWN RISK AS IS WITHOUT WARRANTY OF ANY KIND !!!!!
-
-rem https://www.adaware.com/free-antivirus-download
-rem https://www.techpowerup.com/295877/windows-defender-can-significantly-impact-intel-cpu-performance-we-have-the-fix
-rem https://www.bleepingcomputer.com/news/security/lockbit-ransomware-abuses-windows-defender-to-load-cobalt-strike
-
-rem Disable Tamper and Real Protection in Defender
-rem Install any 3rd party AV that registers within Windows Security (like Adaware), update definitions, restart!
-rem Add downloads and temporary downloads folder to expceptions to prevent "MD Disable.bat" from being removed!
-rem Run "MD Disable.bat" TWICE !!!!! RESTART! Otherwise Defener will enable itself after uninstalling AV!
-rem After restart, uninstall 3rd party AV (preferably using HiBit Uninstaller).
-rem Restart (HiBit Uninstaller will run to remove leftovers).
-rem start windowsdefender:
-
-
-
 rem https://www.elevenforum.com/t/turn-on-or-off-tamper-protection-for-microsoft-defender-antivirus-in-windows-11.3973
 reg add "HKLM\Software\Microsoft\Windows Defender\Features" /v "TamperProtection" /t REG_DWORD /d "0" /f
 
