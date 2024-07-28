@@ -248,3 +248,5 @@ LaunchMouseProperties.bat
 LaunchMultimediaProperties.bat
 
 LaunchSystemProperties.bat
+
+LaunchDeviceManager.bat
