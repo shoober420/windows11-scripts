@@ -58,6 +58,7 @@ RESTART (SAFE MODE) (hold SHIFT while restarting)
  - DisableComponents.bat (Disables Windows Store and UWP apps)
  - DisableServices.bat
  - DeleteFonts.bat
+ - Windows11Tweaks.bat
 
 RESTART
 
