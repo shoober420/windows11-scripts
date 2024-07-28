@@ -1,3 +1,3 @@
-rem # Launches Device Manager
+rem # Launch Device Manager
 
 devmgmt.msc
