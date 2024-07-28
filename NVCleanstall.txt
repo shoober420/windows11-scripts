@@ -14,7 +14,7 @@ Disable Multiplayer Overlay (MPO)
 Disable Ansel
 * Show Expert Tweaks
 Disable Driver Telemetry (breaks install)
-Disable NVIDIA Container (Experimental, breaks NVIDIA Control Panel) (NVControlPanel still works if installed with 
+Disable NVIDIA Container (Experimental, breaks NVIDIA Control Panel) (NVControlPanel still works if installed with https://github.com/Aetopia/Install-NVCPL)
 Disable NVIDIA HD Audio device sleep timer
 Enable Message Signaled Interrupts
  - Interrupt Policy: Specified Processors > Select Processors > fifth to last CPU
