@@ -5,6 +5,7 @@ rem # --------------------------------------------------------------------------
 rem # Additional settings and format used from:
 rem # https://github.com/TairikuOokami
 rem # https://github.com/ionuttbara
+rem # https://github.com/ChrisTitusTech
 rem # https://github.com/raspi
 rem # https://github.com/simeononsecurity/
 rem # https://sites.google.com/site/tweakradje/windows/windows-tweaking
