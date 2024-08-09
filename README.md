@@ -1,4 +1,4 @@
-# Windows Batch Scripts
+# Windows Scripts
 
 Its not only about FPS, its also about latency.
 
@@ -250,3 +250,5 @@ LaunchMultimediaProperties.bat
 LaunchSystemProperties.bat
 
 LaunchDeviceManager.bat
+
+HDR_Switch.vbs
