@@ -3,7 +3,7 @@ rem # https://superuser.com/questions/1777667/is-there-a-way-to-set-hdr-mode-by-
 
 rem # WIN + ALT + B also toggles HDR on display
 
-rem # Toggles HDR On and Off everytime this script is executed
+rem # Toggles HDR On or Off when this script is launched
 
 Set oShell = CreateObject("WScript.Shell")
 oShell.Run("""ms-settings:display""")
