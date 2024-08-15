@@ -78,6 +78,7 @@ RESTART
 - StartUpBATs.bat (run everytime after login)
 - RefreshRate.bat (script settings need tweaked to match users computer hardware)
 - HDR_Switch.vbs (if you want HDR enabled)
+- RemoveActivateWindowsWatermark.bat (if needed)
 
 NOTE:
 If NVIDIA Control Panel is needed, go to https://github.com/Aetopia/Install-NVCPL
