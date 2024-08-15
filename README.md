@@ -257,3 +257,5 @@ LaunchSystemProperties.bat
 LaunchDeviceManager.bat
 
 HDR_Switch.vbs
+
+LaunchControlPanel.bat
