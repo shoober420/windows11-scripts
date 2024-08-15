@@ -9,9 +9,12 @@ rem # Make sure "name=" matches network name, half of internet breaks unless DNS
 rem # Enables Cloudflare DNS
 netsh interface ip set dns name="Wi-Fi 2" static 1.1.1.1
 netsh interface ip add dns name="Wi-Fi 2" 1.1.1.1 index=2
+netsh interface ip set dns name="Ethernet 3" static 1.1.1.1
+netsh interface ip add dns name="Ethernet 3" 1.1.1.1 index=2
 
 rem # Make sure "subinterface" matches network name
 netsh interface ipv4 set subinterface "Wi-Fi 2" mtu=1472 store=persistent
+netsh interface ipv4 set subinterface "Ethernet 3" mtu=1472 store=persistent
 
 rem # Set values according to core and thread count	
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Ndis\Parameters" /v "MaxNumRssCpus" /t REG_DWORD /d "8" /f	
