@@ -31,7 +31,7 @@ rem # Last key changes based on NIC card registry ID
 rem # Find "Class Guid" under Device Manager > Network adapters > Properties > Details tab
 rem # Go to "HKLM\SYSTEM\CurrentControlSet\Control\Network\"Class Guid"\<NIC ID>\Connection" to get NIC ID
 
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\{0871ca3f-f9ed-4c80-9478-ed432f629784}" /v "TcpAckFrequency" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\{1B2AF3AC-865B-4B81-BFFA-790A51C634A6}" /v "TcpAckFrequency" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\{0871ca3f-f9ed-4c80-9478-ed432f629784}" /v "TcpDelAckTicks" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\{0871ca3f-f9ed-4c80-9478-ed432f629784}" /v "TCPNoDelay" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\{0871ca3f-f9ed-4c80-9478-ed432f629784}" /v "TcpNoDelay" /t REG_DWORD /d "1" /f
