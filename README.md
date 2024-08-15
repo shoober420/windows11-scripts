@@ -57,7 +57,7 @@ RESTART (SAFE MODE) (hold SHIFT while restarting)
 
  - SetACL.bat (required for taking ownership of Windows Defender services and other bloat)
  - DisableWindowsDefender.bat (AV software is bloat)
- - DisableWindowsFirewall.bat (use router firewall instead)
+ - DisableWindowsFirewall.bat (use router firewall)
  - DisableEventTraceSessions.bat
  - DisableComponents.bat (Disables Windows Store and UWP apps)
  - DisableServices.bat
