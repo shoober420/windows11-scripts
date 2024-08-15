@@ -3,14 +3,14 @@ rem !!! THE FOLLOWING SETTINGS REQUIRE ADJUSTING BEFORE BEING EXECUTED !!!
 
 PAUSE
 
+rem # Go to Control Panel > Network and Sharing Center for network name
+
 rem # Make sure "name=" matches network name, half of internet breaks unless DNS is specified
-rem # Go to "HKLM\SYSTEM\CurrentControlSet\Control\Network\"Class Guid"\<NIC ID>\Connection" to get NIC network name (ex: Wi-Fi 2)
 rem # Enables Cloudflare DNS
 netsh interface ip set dns name="Wi-Fi 2" static 1.1.1.1
 netsh interface ip add dns name="Wi-Fi 2" 1.1.1.1 index=2
 
 rem # Make sure "subinterface" matches network name
-rem # Go to "HKLM\SYSTEM\CurrentControlSet\Control\Network\"Class Guid"\<NIC ID>\Connection" to get NIC network name (ex: Wi-Fi 2)
 netsh interface ipv4 set subinterface "Wi-Fi 2" mtu=1472 store=persistent
 
 rem # Set values according to core and thread count	
@@ -23,10 +23,10 @@ rem # Set to last Core on CPU (cpu count doesnt start with 0, so setting this to
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Ndis\Parameters" /v "RssBaseCpu" /t REG_DWORD /d "8" /f
 
 rem # NIC Tweaks
+
 rem # Last key changes based on NIC card registry ID
-rem # Second to last key is the "Class Guid"
 rem # Find "Class Guid" under Device Manager > Network adapters > Properties > Details tab
-rem # Go to "HKLM\SYSTEM\CurrentControlSet\Control\Network\"Class Guid"\<NIC ID>\Connection" to get NIC network name (ex: Wi-Fi 2)
+rem # Go to "HKLM\SYSTEM\CurrentControlSet\Control\Network\"Class Guid"\<NIC ID>\Connection" to get NIC ID
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\{0871ca3f-f9ed-4c80-9478-ed432f629784}" /v "TcpAckFrequency" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\{0871ca3f-f9ed-4c80-9478-ed432f629784}" /v "TcpDelAckTicks" /t REG_DWORD /d "0" /f
