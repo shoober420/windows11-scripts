@@ -1,6 +1,10 @@
 Windows Insider Build Update Checklist
  - Instructions for when you install a new Windows Insider build update
 
+AV software is bloat, DisableWindowsDefender.bat is NOT a virus.
+
+Windows Firewall is bloat, use router firewall.
+
 NOTE:
 If at any point during the process you get stuck at "Just a moment..." screen before login, press CTRL+ALT+DEL to force login screen to show
 
@@ -52,7 +56,7 @@ RESTART (SAFE MODE) (hold SHIFT while restarting)
 
  - SetACL.bat (required for taking ownership of Windows Defender services and other bloat)
  - DisableWindowsDefender.bat (AV software is bloat)
- - DisableWindowsFirewall.bat (use router firewall instead)
+ - DisableWindowsFirewall.bat (use router firewall)
  - DisableEventTraceSessions.bat
  - DisableComponents.bat (Disables Windows Store and UWP apps)
  - DisableServices.bat
