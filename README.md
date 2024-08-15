@@ -2,6 +2,10 @@
 
 Its not only about FPS, its also about latency.
 
+AV software is bloat, DisableWindowsDefender.bat is NOT a virus.
+
+Windows Firewall is bloat, use router firewall.
+
 NOTE:
 If at any point during the process you get stuck at "Just a moment..." screen before login, press CTRL+ALT+DEL to force login screen to show
 
