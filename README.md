@@ -29,7 +29,7 @@ Install and open CCleaner
 RESTART
 
 Run batch scripts
- - MouseAccelFix.bat
+ - MouseAccelFix.bat (Scale 100% required)
  - WingetUpdateApps.bat
  - RemoveWindowsApps.bat
  - RemoveWindowsFeatures.bat
