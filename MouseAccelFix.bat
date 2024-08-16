@@ -2,7 +2,7 @@ rem # MarkC Acceleration Fix
 
 rem # !!! WARNING !!!
 rem # Scale items size must be 100%
-rem # System > Display > Scale & layout > Scale 100% (Recommended)
+rem # System > Display > Scale & layout > Scale: 100% required
 
 PAUSE
 
