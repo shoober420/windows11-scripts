@@ -16,6 +16,9 @@ Update Video Drivers
 Install and run Intel DSA (Driver Support Assistant)
  - Download (https://www.intel.com/content/www/us/en/support/detect.html)
 
+Install Intel Chipset INF Utility
+ - Download (https://www.intel.com/content/www/us/en/download/19347/chipset-inf-utility.html)
+
 RESTART
 
 Install and open CCleaner
