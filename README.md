@@ -25,7 +25,7 @@ Install Intel Chipset INF Utility
 
 RESTART
 
-Install and open CCleaner
+Install and open CCleaner (optional)
  - Download (https://www.ccleaner.com/)
  - Launch CCleaner
  - Run Registry Cleaner
