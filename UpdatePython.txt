@@ -13,4 +13,5 @@ Update Python
  - pip3 install PyQt6
  - pip3 install pyobjc
  - pip3 install typing_extensions
+ - pip3 install poetry
  - python.exe -m pip install --upgrade pip
