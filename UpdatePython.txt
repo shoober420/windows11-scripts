@@ -15,4 +15,5 @@ Update Python
  - pip3 install typing_extensions
  - pip3 install poetry
  - pip3 install browser-cookie3
+ - pip3 install beautifulsoup4
  - python.exe -m pip install --upgrade pip
