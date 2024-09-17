@@ -1,3 +1,5 @@
+*** Use Chrome browser extension "Batchcamp" to download whole collection ***
+
 download - github.com/easlice/bandcamp-downloader
 extract zip into Downloads
 open powershell
