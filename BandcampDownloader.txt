@@ -1,0 +1,8 @@
+download - github.com/easlice/bandcamp-downloader
+extract zip into Downloads
+open powershell
+cd Downloads\bandcamp-downloader-master
+
+poetry install
+poetry shell
+python bandcamp-downloader.py --browser chrome --directory D:\ --format flac shoober420
