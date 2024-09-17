@@ -1,4 +1,10 @@
 *** Use Chrome browser extension "Batchcamp" to download whole collection ***
+ + tweak chrome downloads settings
+  - Change download location to D:\ 
+  - open certain file types | click Delete
+  - Uncheck Show downloads when they're done
+
+
 
 download - github.com/easlice/bandcamp-downloader
 extract zip into Downloads
