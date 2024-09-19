@@ -269,4 +269,4 @@ LaunchControlPanel.bat
 
 RemoveActivateWindowsWatermark.bat
 
-dxvk.conf
+dxvk.conf (place in game exe directory / were logs are generated)
