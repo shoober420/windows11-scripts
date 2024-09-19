@@ -268,3 +268,5 @@ HDR_Switch.vbs
 LaunchControlPanel.bat
 
 RemoveActivateWindowsWatermark.bat
+
+dxvk.conf
