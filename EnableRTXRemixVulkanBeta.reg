@@ -1,0 +1,4 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment\]
+"DXVK_REMIX_NVIDIA_MIN_DRIVER"="553.02"
