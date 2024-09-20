@@ -21,6 +21,10 @@ Update BIOS
 
 RESTART
 
+Run Windows update
+
+RESTART
+
 Update Video Drivers
  - NVIDIA: https://www.nvidia.com/download/find.aspx (NVCleanstall method preferred) (https://developer.nvidia.com/vulkan-driver)
  - AMD: https://www.amd.com/en/support
