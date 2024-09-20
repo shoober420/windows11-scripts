@@ -28,8 +28,13 @@ Update Video Drivers
 Install DirectX End-User Runtime Web Installer (dxwebsetup.exe)
 - Download (https://www.microsoft.com/en-us/download/details.aspx?id=35)
 
-Install and run Intel DSA (Driver Support Assistant)
+Install SetACL
+ - Download (https://helgeklein.com/download/)
+ - Extract into %USERPROFILE%\Downloads
+
+Install Intel DSA (Driver Support Assistant)
  - Download (https://www.intel.com/content/www/us/en/support/detect.html)
+ - Check for updates with Intel DSA
 
 Install Intel Chipset INF Utility
  - Download (https://www.intel.com/content/www/us/en/download/19347/chipset-inf-utility.html)
