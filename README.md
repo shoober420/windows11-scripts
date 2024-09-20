@@ -55,6 +55,17 @@ Run batch scripts
  - PowerPlanSettings.bat
  - ThreadQuantum.bat
 
+RESTART (SAFE MODE) (hold SHIFT while restarting)
+
+ - SetACL.bat (required for taking ownership of Windows Defender services and other bloat)
+ - DisableWindowsDefender.bat (AV software is bloat)
+ - DisableWindowsFirewall.bat (use router firewall)
+ - DisableEventTraceSessions.bat
+ - DisableComponents.bat (Disables Windows Store and UWP apps)
+ - DisableServices.bat
+ - DeleteFonts.bat
+ - Windows11Tweaks.bat
+
 RESTART
 
  - NetworkTweaks.bat (script settings need tweaked to match users computer hardware)
@@ -66,21 +77,6 @@ RESTART
  - Internet&SecuritySettings.bat
  - Windows11Tweaks.bat
  - Disable*.bat (DisableAppX.bat causes File Explorer to crash when opening right click context menu) (DO NOT RUN DisableStateRepository.bat and DisableWinHTTP.bat)
-
-RESTART
-
- - Login to account
-
-RESTART (SAFE MODE) (hold SHIFT while restarting)
-
- - SetACL.bat (required for taking ownership of Windows Defender services and other bloat)
- - DisableWindowsDefender.bat (AV software is bloat)
- - DisableWindowsFirewall.bat (use router firewall)
- - DisableEventTraceSessions.bat
- - DisableComponents.bat (Disables Windows Store and UWP apps)
- - DisableServices.bat
- - DeleteFonts.bat
- - Windows11Tweaks.bat
 
 RESTART
 
