@@ -1,6 +1,6 @@
 # Windows Scripts
 
-Its not only about FPS, its also about latency.
+Its not only about FPS, but also latency.
 
 ----------------------------------------------------------
 
