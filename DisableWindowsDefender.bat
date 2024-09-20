@@ -1,16 +1,16 @@
-REM Disable all Windows Defender components
-REM AV Software is bloat
-REM Use router firewall instead
-REM Run in SAFE MODE
+rem # Disable all Windows Defender components
+rem # AV Software is bloat
+rem # Use router firewall instead
+rem # Run in SAFE MODE
 
-rem Disable Microsoft SAM (Security Accounts Manager)
+rem # Disable Microsoft SAM (Security Accounts Manager)
 reg add "HKLM\System\CurrentControlSet\Services\SamSs" /v "Start" /t REG_DWORD /d "4" /f
 
-rem Disable Windows Defender Security Center
+rem # Disable Windows Defender Security Center
 reg add "HKLM\System\CurrentControlSet\Services\SecurityHealthService" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\System\CurrentControlSet\Services\wscsvc" /v "Start" /t REG_DWORD /d "4" /f
 
-rem Disable services (it will stop WdFilter.sys as well, better not to disable the driver by itself)
+rem # Disable services (it will stop WdFilter.sys as well, better not to disable the driver by itself)
 reg add "HKLM\System\CurrentControlSet\Services\WdBoot" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\System\CurrentControlSet\Services\WdFilter" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\System\CurrentControlSet\Services\WdNisDrv" /v "Start" /t REG_DWORD /d "4" /f
@@ -18,26 +18,21 @@ reg add "HKLM\System\CurrentControlSet\Services\WdNisSvc" /v "Start" /t REG_DWOR
 reg add "HKLM\System\CurrentControlSet\Services\WinDefend" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\System\CurrentControlSet\Services\MDCoreSvc" /v "Start" /t REG_DWORD /d "4" /f
 
-REM Disable Windows Firewall (use router firewall instead)
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\mpssvc" /v "Start" /t REG_DWORD /d "4" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\BFE" /v "Start" /t REG_DWORD /d "4" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\wtd" /v "Start" /t REG_DWORD /d "4" /f
-
-REM Disable Anti-malware and Network Realtime Inspection Services
+rem # Disable Anti-malware and Network Realtime Inspection Services
 takeown /s %computername% /u %username% /f "C:\ProgramData\Microsoft\Windows Defender\Platform"
 icacls "C:\ProgramData\Microsoft\Windows Defender\Platform" /grant:r %username%:F
 taskkill /im MsMpEng.exe /f
 taskkill /im NisSrv.exe
-REM del "C:\ProgramData\Microsoft\Windows Defender\Platform" /s /f /q
+rem # del "C:\ProgramData\Microsoft\Windows Defender\Platform" /s /f /q
 ren "C:\ProgramData\Microsoft\Windows Defender\Platform" "Platform.bak"
 
 rem https://www.elevenforum.com/t/turn-on-or-off-tamper-protection-for-microsoft-defender-antivirus-in-windows-11.3973
 reg add "HKLM\Software\Microsoft\Windows Defender\Features" /v "TamperProtection" /t REG_DWORD /d "0" /f
 
-rem Disable System Guard Runtime Monitor Broker (when disabled, it might cause BSOD Critical Process Died)
+rem # Disable System Guard Runtime Monitor Broker (when disabled, it might cause BSOD Critical Process Died)
 rem reg add "HKLM\System\CurrentControlSet\Services\SgrmBroker" /v "Start" /t REG_DWORD /d "2" /f
 
-rem Disable Windows Defender Security Center
+rem # Disable Windows Defender Security Center
 reg add "HKLM\System\CurrentControlSet\Services\SecurityHealthService" /v "Start" /t REG_DWORD /d "4" /f
 
 rem 1 - Antivirus Disabled Notification
@@ -69,30 +64,30 @@ rem 0 - Disable Logging
 reg add "HKLM\System\CurrentControlSet\Control\WMI\Autologger\DefenderApiLogger" /v "Start" /t REG_DWORD /d "0" /f
 reg add "HKLM\System\CurrentControlSet\Control\WMI\Autologger\DefenderAuditLogger" /v "Start" /t REG_DWORD /d "0" /f
 
-rem Disable Tasks
+rem # Disable Tasks
 schtasks /Change /TN "Microsoft\Windows\ExploitGuard\ExploitGuard MDM policy Refresh" /Disable
 schtasks /Change /TN "Microsoft\Windows\Windows Defender\Windows Defender Cache Maintenance" /Disable
 schtasks /Change /TN "Microsoft\Windows\Windows Defender\Windows Defender Cleanup" /Disable
 schtasks /Change /TN "Microsoft\Windows\Windows Defender\Windows Defender Scheduled Scan" /Disable
 schtasks /Change /TN "Microsoft\Windows\Windows Defender\Windows Defender Verification" /Disable
 
-rem Disable systray icon
+rem # Disable systray icon
 reg delete "HKLM\Software\Microsoft\Windows\CurrentVersion\Explorer\StartupApproved\Run" /v "SecurityHealth" /f
 reg delete "HKLM\Software\Microsoft\Windows\CurrentVersion\Run" /v "SecurityHealth" /f
 
-rem Remove context menu
+rem # Remove context menu
 reg delete "HKCR\*\shellex\ContextMenuHandlers\EPP" /f
 reg delete "HKCR\Directory\shellex\ContextMenuHandlers\EPP" /f
 reg delete "HKCR\Drive\shellex\ContextMenuHandlers\EPP" /f
 
-rem Disable Anti-malware Service Executable (to restore run "sfc /scannow")
+rem # Disable Anti-malware Service Executable (to restore run "sfc /scannow")
 rem takeown /s %computername% /u %username% /f "C:\ProgramData\Microsoft\Windows Defender\Platform\*\MsMpEng.exe"
 rem icacls "C:\ProgramData\Microsoft\Windows Defender\Platform\*\MsMpEng.exe" /grant:r %username%:F
 rem taskkill /im MsMpEng.exe /f
 rem del "C:\ProgramData\Microsoft\Windows Defender\Platform\*\MsMpEng.exe" /s /f /q
 rem ren "C:\ProgramData\Microsoft\Windows Defender\Platform\*\MsMpEng.exe" "MsMpEng.exe.bak"
 
-rem Disable Microsoft Network Realtime Inspection Service (to restore run "sfc /scannow")
+rem # Disable Microsoft Network Realtime Inspection Service (to restore run "sfc /scannow")
 rem takeown /s %computername% /u %username% /f "C:\ProgramData\Microsoft\Windows Defender\Platform\*\NisSrv.exe"
 rem icacls "C:\ProgramData\Microsoft\Windows Defender\Platform\*\NisSrv.exe" /grant:r %username%:F
 rem taskkill /im NisSrv.exe /f
