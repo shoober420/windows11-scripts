@@ -49,7 +49,6 @@ Run batch scripts
  - WingetUpdateApps.bat
  - RemoveWindowsApps.bat
  - RemoveWindowsFeatures.bat
- - Internet&SecuritySettings.bat
  - !!! PowerPlanUltra.bat (only if Ultimate Performance power plan profile is NOT present)
  - PowerPlanSettings.bat
  - ThreadQuantum.bat
@@ -62,6 +61,7 @@ RESTART
  - CPUTweaks.bat (script settings need tweaked to match users computer hardware)
  - UseLargePages.bat (add user programs to enable Large Pages for them)
  - HighPriority.bat (add user programs to enable High Priority for them)
+ - Internet&SecuritySettings.bat
  - Windows11Tweaks.bat
  - Disable*.bat (DisableAppX.bat causes File Explorer to crash when opening right click context menu) (DO NOT RUN DisableStateRepository.bat and DisableWinHTTP.bat)
 
