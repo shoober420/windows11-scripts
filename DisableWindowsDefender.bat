@@ -1,6 +1,6 @@
 rem # Disable all Windows Defender components
 rem # AV Software is bloat
-rem # Use router firewall instead
+rem # Windows Firewall is bloat, use router firewall instead
 rem # Run in SAFE MODE
 
 rem # Disable Microsoft SAM (Security Accounts Manager)
