@@ -44,6 +44,14 @@ Install and open CCleaner (optional)
  - Tools > Registry > Scan for Issues
  - Run multiple times until same registry errors occur
 
+RESTART (SAFE MODE) (hold SHIFT while restarting)
+
+ - SetACL.bat (required for taking ownership of Windows Defender services and other bloat)
+ - DisableWindowsDefender.bat (AV software is bloat)
+ - DisableWindowsFirewall.bat (use router firewall)
+ - DisableEventTraceSessions.bat
+ - DeleteFonts.bat
+
 RESTART
 
 Run batch scripts
@@ -55,17 +63,6 @@ Run batch scripts
  - !!! PowerPlanUltra.bat (only if Ultimate Performance power plan profile is NOT present)
  - PowerPlanSettings.bat
  - ThreadQuantum.bat
-
-RESTART (SAFE MODE) (hold SHIFT while restarting)
-
- - SetACL.bat (required for taking ownership of Windows Defender services and other bloat)
- - DisableWindowsDefender.bat (AV software is bloat)
- - DisableWindowsFirewall.bat (use router firewall)
- - DisableEventTraceSessions.bat
- - DisableComponents.bat (Disables Windows Store and UWP apps)
- - DisableServices.bat
- - DeleteFonts.bat
- - Windows11Tweaks.bat
 
 RESTART
 
