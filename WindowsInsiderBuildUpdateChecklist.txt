@@ -35,6 +35,7 @@ RESTART
 
 Run batch scripts
  - MouseAccelFix.bat (Display > Scale: 100% required)
+ - VCRedist.bat
  - WingetUpdateApps.bat
  - RemoveWindowsApps.bat
  - RemoveWindowsFeatures.bat
