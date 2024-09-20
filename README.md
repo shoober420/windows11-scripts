@@ -15,12 +15,12 @@ Update BIOS
 
 RESTART
 
-Install DirectX End-User Runtime Web Installer (dxwebsetup.exe)
-- Download https://www.microsoft.com/en-us/download/details.aspx?id=35
-
 Update Video Drivers
  - NVIDIA: https://www.nvidia.com/download/find.aspx (NVCleanstall method preferred) (https://developer.nvidia.com/vulkan-driver)
  - AMD: https://www.amd.com/en/support
+
+Install DirectX End-User Runtime Web Installer (dxwebsetup.exe)
+- Download https://www.microsoft.com/en-us/download/details.aspx?id=35
 
 Install and run Intel DSA (Driver Support Assistant)
  - Download (https://www.intel.com/content/www/us/en/support/detect.html)
