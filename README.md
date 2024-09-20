@@ -59,7 +59,6 @@ RESTART (SAFE MODE) (hold SHIFT while restarting)
  - DisableWindowsFirewall.bat (use router firewall)
  - DisableEventTraceSessions.bat
  - DeleteFonts.bat
- - DisableServices.bat (if skipped, black screen after login)
 
 RESTART
 
