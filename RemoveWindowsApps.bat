@@ -30,6 +30,7 @@ winget uninstall photos
 winget uninstall phone
 winget uninstall edge
 winget uninstall "windows web experience pack"
+winget uninstall "microsoft teams free"
 winget uninstall "microsoft teams"
 winget uninstall "feedback hub"
 winget uninstall paint
