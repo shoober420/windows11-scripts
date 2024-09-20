@@ -8,8 +8,6 @@ AV software is bloat, DisableWindowsDefender.bat and Internet&SecuritySettings.b
 
 Windows Firewall is bloat, use router firewall.
 
-Windows Security > Virus & threat protection > Virus & threat protection settings > Manage settings > Disable all options
-
 ----------------------------------------------------------
 
 NOTE:
