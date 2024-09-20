@@ -9,6 +9,8 @@ Windows Firewall is bloat, use router firewall.
 NOTE:
 If at any point during the process you get stuck at "Just a moment..." screen before login, press CTRL+ALT+DEL to force login screen to show
 
+Files marked with an asterisk (*) run only once on fresh install
+
 # Instructions
 
 Update BIOS
@@ -36,6 +38,7 @@ RESTART
 
 Run batch scripts
  - MouseAccelFix.bat (Display > Scale: 100% required)
+ - *VCRedist.bat
  - WingetUpdateApps.bat
  - RemoveWindowsApps.bat
  - RemoveWindowsFeatures.bat
