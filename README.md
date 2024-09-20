@@ -23,6 +23,9 @@ Install and run Intel DSA (Driver Support Assistant)
 Install Intel Chipset INF Utility
  - Download (https://www.intel.com/content/www/us/en/download/19347/chipset-inf-utility.html)
 
+Install DirectX End-User Runtime Web Installer (dxwebsetup.exe)
+- Download https://www.microsoft.com/en-us/download/details.aspx?id=35
+
 RESTART
 
 Install and open CCleaner (optional)
@@ -37,8 +40,6 @@ RESTART
 Run batch scripts
  - MouseAccelFix.bat (Display > Scale: 100% required)
  - VCRedist.bat
- - DirectX End-User Runtime Web Installer (dxwebsetup.exe) (https://www.microsoft.com/en-us/download/details.aspx?id=35)
- - Intel Chipset INF Utility (https://www.intel.com/content/www/us/en/download/19347/chipset-inf-utility.html)
  - WingetUpdateApps.bat
  - RemoveWindowsApps.bat
  - RemoveWindowsFeatures.bat
