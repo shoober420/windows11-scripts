@@ -1,8 +1,7 @@
-rem Disables services, use with win11tweakslite.bat
-rem Run in Safe Mode to disable Windows Defender
-rem acl.txt file required to change certain registry keys
+rem # Disables bloat services
+rem # acl.txt file required to change certain registry keys
 
-rem Ownership script required for certain registry keys
+rem # Ownership script required for certain registry keys
 REGINI %USERPROFILE%\Downloads\windows11-batch-scripts-main\acl.txt
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\PushToInstall" /v "Start" /t REG_DWORD /d "4" /f
