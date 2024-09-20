@@ -59,6 +59,7 @@ RESTART (SAFE MODE) (hold SHIFT while restarting)
  - DisableWindowsFirewall.bat (use router firewall)
  - DisableEventTraceSessions.bat
  - DeleteFonts.bat
+ - DisableServices.bat (if skipped, desktop becomes unresponsive after reboot)
 
 RESTART
 
