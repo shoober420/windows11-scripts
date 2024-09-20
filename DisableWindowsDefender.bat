@@ -32,9 +32,6 @@ reg add "HKLM\Software\Microsoft\Windows Defender\Features" /v "TamperProtection
 rem # Disable System Guard Runtime Monitor Broker (when disabled, it might cause BSOD Critical Process Died)
 rem reg add "HKLM\System\CurrentControlSet\Services\SgrmBroker" /v "Start" /t REG_DWORD /d "2" /f
 
-rem # Disable Windows Defender Security Center
-reg add "HKLM\System\CurrentControlSet\Services\SecurityHealthService" /v "Start" /t REG_DWORD /d "4" /f
-
 rem 1 - Antivirus Disabled Notification
 reg add "HKLM\Software\Microsoft\Windows Defender Security Center\Notifications" /v "DisableNotifications" /t REG_DWORD /d "1" /f
 
