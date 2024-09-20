@@ -2,11 +2,15 @@
 
 Its not only about FPS, its also about latency.
 
+----------------------------------------------------------
+
 AV software is bloat, DisableWindowsDefender.bat and Internet&SecuritySettings.bat are NOT viruses.
 
 Windows Firewall is bloat, use router firewall.
 
 Windows Security > Virus & threat protection > Virus & threat protection settings > Manage settings > Disable all options
+
+----------------------------------------------------------
 
 NOTE:
 If at any point during the process you get stuck at "Just a moment..." screen before login, press CTRL+ALT+DEL to force login screen to show
