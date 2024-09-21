@@ -36,6 +36,8 @@ Install SetACL
  - Download (https://helgeklein.com/download/)
  - Extract into %USERPROFILE%\Downloads
 
+- InstallWinget.bat
+
 Install Intel DSA (Driver Support Assistant)
  - Download (https://www.intel.com/content/www/us/en/support/detect.html)
  - Check for updates with Intel DSA
@@ -63,7 +65,6 @@ RESTART (SAFE MODE) (hold SHIFT while restarting)
 
 RESTART
 
-Run batch scripts
  - MouseAccelFix.bat (Display > Scale: 100% required)
  - VCRedist.bat
  - WingetUpdateApps.bat
