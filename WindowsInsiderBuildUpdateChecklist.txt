@@ -37,7 +37,11 @@ Install SetACL
  - Download (https://helgeklein.com/download/)
  - Extract into %USERPROFILE%\Downloads
 
-- InstallWinget.bat
+Download Winget
+ - InstallWinget.bat
+
+Download Powershell
+ - InstallPowershell.bat
 
 Install Intel DSA (Driver Support Assistant)
  - Download (https://www.intel.com/content/www/us/en/support/detect.html)
