@@ -309,4 +309,6 @@ InstallChromeCanary.bat
 
 RemoveWindowsTerminal.bat
 
+DisableSAM.bat / EnableSAM.bat (may cause black screen after login if SAM is disabled)
+
 
