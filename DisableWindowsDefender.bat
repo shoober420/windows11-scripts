@@ -3,7 +3,7 @@ rem # AV Software is bloat
 rem # Windows Firewall is bloat, use router firewall instead
 rem # Run in SAFE MODE
 
-rem # Disable Windows Defender Security Center
+rem # Disable Windows Security Center
 reg add "HKLM\System\CurrentControlSet\Services\SecurityHealthService" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\System\CurrentControlSet\Services\wscsvc" /v "Start" /t REG_DWORD /d "4" /f
 
