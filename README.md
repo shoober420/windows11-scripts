@@ -302,3 +302,5 @@ InstallWinget.bat
 InstallPowershell.bat
 
 InstallChromeCanary.bat
+
+RemoveWindowsTerminal.bat
