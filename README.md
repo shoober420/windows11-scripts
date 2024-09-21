@@ -314,6 +314,8 @@ DisableSAM.bat / EnableSAM.bat (may cause black screen after login if SAM is dis
 
 DisableSGRMBroker.bat / EnableSGRMBroker.bat
 
+DisableWebThreatDefense.bat / EnableWebThreatDefense.bat
+
 DisableWindowsSecurityCenter.bat / EnableWindowsSecurityCenter.bat
 
 
