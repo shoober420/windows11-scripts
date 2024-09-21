@@ -298,3 +298,7 @@ EnableDXVK_HUD.reg / RemoveDXVK_HUD.reg
 EnableRTXRemixVulkanBeta.reg / RemoveRTXRemixVulkanBeta.reg
 
 InstallWinget.bat
+
+InstallPowershell.bat
+
+InstallChromeCanary.bat
