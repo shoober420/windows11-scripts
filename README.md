@@ -308,3 +308,5 @@ InstallPowershell.bat
 InstallChromeCanary.bat
 
 RemoveWindowsTerminal.bat
+
+
