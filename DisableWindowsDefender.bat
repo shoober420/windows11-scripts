@@ -3,9 +3,6 @@ rem # AV Software is bloat
 rem # Windows Firewall is bloat, use router firewall instead
 rem # Run in SAFE MODE
 
-rem # Disable Microsoft SAM (Security Accounts Manager)
-reg add "HKLM\System\CurrentControlSet\Services\SamSs" /v "Start" /t REG_DWORD /d "4" /f
-
 rem # Disable Windows Defender Security Center
 reg add "HKLM\System\CurrentControlSet\Services\SecurityHealthService" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\System\CurrentControlSet\Services\wscsvc" /v "Start" /t REG_DWORD /d "4" /f
@@ -20,7 +17,6 @@ reg add "HKLM\System\CurrentControlSet\Services\MDCoreSvc" /v "Start" /t REG_DWO
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\webthreatdefsvc" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\webthreatdefusersvc" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\MsSecCore" /v "Start" /t REG_DWORD /d "4" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\SgrmAgent" /v "Start" /t REG_DWORD /d "4" /f
 
 rem # Disable Anti-malware and Network Realtime Inspection Services
 takeown /s %computername% /u %username% /f "C:\ProgramData\Microsoft\Windows Defender\Platform"
