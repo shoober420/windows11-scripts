@@ -316,6 +316,5 @@ DisableSGRMBroker.bat / EnableSGRMBroker.bat
 
 DisableWebThreatDefense.bat / EnableWebThreatDefense.bat
 
-DisableWindowsSecurityCenter.bat / EnableWindowsSecurityCenter.bat
-
+DisableWindowsSecurityCenter.bat / EnableWindowsSecurityCenter.bat (Requires SAFE MODE and SetACL.bat to be run first)
 
