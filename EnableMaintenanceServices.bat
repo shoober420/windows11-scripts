@@ -1,22 +1,26 @@
-REM Disables maintenance services for adding and removing windows features and various tweaks
+rem # Enables maintenance services for adding and removing windows features and various tweaks
 
-REM "Get-WindowsOptionalFeature -Online" shows enabled features
+rem # "Get-WindowsOptionalFeature -Online" shows enabled features
 
-rem TLS 1.2 or lower is required for Windows Update to work, TLS 1.3 not supported yet
+rem # TLS 1.2 or lower is required for Windows Update to work, TLS 1.3 not supported yet
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Client" /v "Enabled" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Client" /v "DisabledByDefault" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\DTLS 1.2\Client" /v "Enabled" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\DTLS 1.2\Client" /v "DisabledByDefault" /t REG_DWORD /d "0" /f
 
-rem Telemetry and Diagnostic Data must be enabled for Insider updates
+rem # Telemetry and Diagnostic Data must be enabled for Insider updates
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "ShowedToastAtLevel" /t REG_DWORD /d "3" /f
 reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\DataCollection" /v "AllowTelemetry" /t REG_DWORD /d "3" /f
 
-rem winget requires "Application Information" service to be running
+rem # Enable AppXSvc, required by winget
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\AppXSvc" /v "Start" /t REG_DWORD /d "2" /f
+net start AppXSvc
+
+rem # winget requires "Application Information" service to be running
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Appinfo" /v "Start" /t REG_DWORD /d "2" /f
 net start Appinfo
 
-rem Enable and start WMI
+rem # Enable and start WMI
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD /d "2" /f
 net start winmgmt
 
