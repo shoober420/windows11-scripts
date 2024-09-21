@@ -320,3 +320,4 @@ DisableWindowsSecurityCenter.bat / EnableWindowsSecurityCenter.bat (Requires SAF
 
 DisableTrustedInstaller.bat / EnableTrustedInstaller.bat (Requires SAFE MODE and SetACL.bat to be run first)
 
+DisableNetworkSetupService.bat / EnableNetworkSetupService.bat (required for Windows Updates)
