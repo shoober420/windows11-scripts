@@ -325,3 +325,5 @@ DisableTrustedInstaller.bat / EnableTrustedInstaller.bat (Requires SAFE MODE and
 DisableNetworkSetupService.bat / EnableNetworkSetupService.bat (required for Windows Updates)
 
 InstallNotepad++.bat
+
+DisableWebAccountManager.bat / EnableWebAccountManager.bat (May cause black screen after login)
