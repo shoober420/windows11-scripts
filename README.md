@@ -66,6 +66,7 @@ RESTART (SAFE MODE) (hold SHIFT while restarting)
  - SetACL.bat (required for taking ownership of Windows Defender services and other bloat)
  - DisableWindowsDefender.bat (AV software is bloat)
  - DisableWindowsFirewall.bat (use router firewall)
+ - DisableSAM.bat
  - DisableEventTraceSessions.bat
  - DeleteFonts.bat
  - DisableServices.bat (if skipped, desktop becomes unresponsive after reboot)
@@ -309,6 +310,8 @@ InstallChromeCanary.bat
 
 RemoveWindowsTerminal.bat
 
-DisableSAM.bat / EnableSAM.bat (may cause black screen after login if SAM is disabled)
+DisableSAM.bat / EnableSAM.bat (may cause black screen after login if SAM is disabled) (requires SAFE MODE and SetACL.bat to be run first)
+
+DisableSGRMBroker.bat / EnableSGRMBroker.bat
 
 
