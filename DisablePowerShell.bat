@@ -9,7 +9,6 @@ rem # Disable Remote PowerShell
 powershell.exe Disable-PSRemoting -Force
 
 rem # Disable and stop WMI
-
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD /d "4" /f
 sc config winmgmt start= disabled
 net stop winmgmt
