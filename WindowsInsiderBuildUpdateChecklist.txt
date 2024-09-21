@@ -46,6 +46,9 @@ Download Winget
 Download Powershell
  - InstallPowershell.bat
 
+Download Notepad++
+ - InstallNotepad++.bat
+
 Install Intel DSA (Driver Support Assistant)
  - Download (https://www.intel.com/content/www/us/en/support/detect.html)
  - Check for updates with Intel DSA
