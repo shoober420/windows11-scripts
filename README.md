@@ -36,6 +36,9 @@ Install SetACL
  - Download (https://helgeklein.com/download/)
  - Extract into %USERPROFILE%\Downloads
 
+Uninstall Windows Terminal
+ - RemoveWindowsTerminal.bat
+
 Download Winget
  - InstallWinget.bat
 
