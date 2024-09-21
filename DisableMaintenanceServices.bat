@@ -2,10 +2,6 @@ REM Disables maintenance services for adding and removing windows features and v
 
 REM "Get-WindowsOptionalFeature -Online" shows enabled features
 
-rem winget requires "Application Information" service to be running
-net stop Appinfo
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\Appinfo" /v "Start" /t REG_DWORD /d "4" /f
-
 rem Enable and start WMI
 net stop winmgmt
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD /d "4" /f
