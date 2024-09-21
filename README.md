@@ -72,7 +72,6 @@ RESTART (SAFE MODE) (hold SHIFT while restarting)
  - DisableSAM.bat
  - DisableEventTraceSessions.bat
  - DeleteFonts.bat
- - DisableServices.bat (if skipped, desktop becomes unresponsive after reboot)
  - Windows11Tweaks.bat (if skipped, admin privileges are borked)
 
 RESTART
