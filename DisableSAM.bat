@@ -1,5 +1,6 @@
 rem # Disable Microsoft SAM (Security Accounts Manager)
 rem # May cause black screen after login if disabled
+rem # May cause very slow and unresponsive desktop
 
 rem # Requires SAFE MODE
 rem # Requires SetACL.bat script to be run first
