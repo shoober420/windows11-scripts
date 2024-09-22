@@ -327,3 +327,5 @@ DisableNetworkSetupService.bat / EnableNetworkSetupService.bat (required for Win
 InstallNotepad++.bat
 
 DisableWebAccountManager.bat / EnableWebAccountManager.bat (May cause black screen after login)
+
+DisableWindowsSearch.bat / EnableWindowsSearch.bat (Causes system hangs and freezes when enabled)
