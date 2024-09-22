@@ -13,7 +13,7 @@ rem # https://admx.help/
 
 rem # -----------------------------------------------------------------------------------------
 
-rem # Recommended to run this batch script in SAFE MODE
+rem # Run this batch script in SAFE MODE
 
 rem # Disables Telemetry required for Windows Update to function on Windows Insider builds
 rem # Running EnableWindowsUpdate.bat is required to download Windows updates after running this batch script
