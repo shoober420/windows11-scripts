@@ -10,6 +10,8 @@ Windows Firewall is bloat, use router firewall.
 
 Windows Security > Virus & threat protection > Virus & threat protection settings > Manage settings > Disable all options
 
+Windows Security Virus & threat protection > Virus & threat protection settings > Exclusions > Add or remove exclusions > Add an exclusion > Folder > %USERPROFILE%\Downloads\windows11-scripts-main
+
 ----------------------------------------------------------
 
 NOTE:
