@@ -74,6 +74,18 @@ Install and open CCleaner (optional)
  - Tools > Registry > Scan for Issues
  - Run multiple times until same registry errors occur
 
+RESTART (SAFE MODE) (hold SHIFT while restarting)
+
+ - SetACL.bat (required for taking ownership of Windows Defender services and other bloat)
+ - DisableWindowsDefender.bat (AV software is bloat)
+ - DisableWindowsFirewall.bat (use router firewall)
+ - DisableWindowsSecurityCenter.bat
+ - DisableSAM.bat
+ - DisableEventTraceSessions.bat
+ - DisableWindowsSearch.bat (if skipped, file explorer and system will hang and freeze)
+ - DeleteFonts.bat
+ - Windows11Tweaks.bat (if skipped, admin privileges are borked)
+
 RESTART
 
  - MouseAccelFix.bat (Display > Scale: 100% required)
@@ -93,21 +105,6 @@ RESTART
  - HighPriority.bat (add user programs to enable High Priority for them)
  - Internet&SecuritySettings.bat
  - Disable*.bat (DisableAppX.bat causes File Explorer to crash when opening right click context menu) (DO NOT RUN DisableStateRepository.bat and DisableWinHTTP.bat)
-
-RESTART (SAFE MODE) (hold SHIFT while restarting)
-
- - SetACL.bat (required for taking ownership of Windows Defender services and other bloat)
- - DisableWindowsDefender.bat (AV software is bloat)
- - DisableWindowsFirewall.bat (use router firewall)
- - DisableWindowsSecurityCenter.bat
- - DisableSAM.bat
- - DisableEventTraceSessions.bat
- - DisableWindowsSearch.bat (if skipped, file explorer and system will hang and freeze)
- - DeleteFonts.bat
- - Windows11Tweaks.bat (if skipped, admin privileges are borked)
- - DisableServices.msc
-
-RESTART
 
 - nvidiaProfileInspectorForkAIO: load PerformanceProfile.nip or HighQualityProfileOGL.nip / HighQualityProfileD3D.nip (https://github.com/neatchee/nvidiaProfileInspectorForkAIO)
 - Disable Drivers in Device Manager using DeviceManager.txt as reference (devmgmt.msc)
