@@ -23,15 +23,15 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\Disall
 
 powershell.exe Enable-WindowsOptionalFeature -Online -FeatureName MicrosoftWindowsPowerShellV2Root
 
-winget uninstall onedrive
+winget uninstall "Microsoft.OneDrive"
 winget uninstall camera
 winget uninstall help
 winget uninstall photos
 winget uninstall phone
 winget uninstall edge
 winget uninstall "windows web experience pack"
-winget uninstall "microsoft teams free"
-winget uninstall "microsoft teams"
+winget uninstall "Microsoft.Teams.Free"
+winget uninstall "Microsoft.Teams"
 winget uninstall "feedback hub"
 winget uninstall paint
 winget uninstall WebView2
