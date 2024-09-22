@@ -70,7 +70,6 @@ RESTART (SAFE MODE) (hold SHIFT while restarting)
  - DisableWindowsDefender.bat (AV software is bloat)
  - DisableWindowsFirewall.bat (use router firewall)
  - DisableWindowsSecurityCenter.bat
- - DisableSAM.bat
  - DisableEventTraceSessions.bat
  - DeleteFonts.bat
  - Windows11Tweaks.bat (if skipped, admin privileges are borked)
@@ -313,7 +312,7 @@ InstallChromeCanary.bat
 
 RemoveWindowsTerminal.bat
 
-DisableSAM.bat / EnableSAM.bat (may cause black screen after login if SAM is disabled) (requires SAFE MODE and SetACL.bat to be run first)
+DisableSAM.bat / EnableSAM.bat (may cause black screen after login and very slow desktop if SAM is disabled) (requires SAFE MODE and SetACL.bat to be run first)
 
 DisableSGRMBroker.bat / EnableSGRMBroker.bat
 
