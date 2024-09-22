@@ -106,6 +106,8 @@ RESTART
  - Internet&SecuritySettings.bat
  - Disable*.bat (DisableAppX.bat causes File Explorer to crash when opening right click context menu) (DO NOT RUN DisableStateRepository.bat and DisableWinHTTP.bat)
 
+RESTART
+
 - nvidiaProfileInspectorForkAIO: load PerformanceProfile.nip or HighQualityProfileOGL.nip / HighQualityProfileD3D.nip (https://github.com/neatchee/nvidiaProfileInspectorForkAIO)
 - Disable Drivers in Device Manager using DeviceManager.txt as reference (devmgmt.msc)
 
