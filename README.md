@@ -55,6 +55,9 @@ Download Notepad++
 Download Microsoft Visual C++ Redistributables
  - VCRedist.bat
 
+Download Chrome Canary
+ - InstallChromeCanary.bat
+
 Update Winget programs
  - WingetUpdateApps.bat
 
