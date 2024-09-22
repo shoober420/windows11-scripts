@@ -55,6 +55,9 @@ Download Notepad++
 Download Microsoft Visual C++ Redistributables
  - VCRedist.bat
 
+Update Winget programs
+ - WingetUpdateApps.bat
+
 Install Intel DSA (Driver Support Assistant)
  - Download (https://www.intel.com/content/www/us/en/support/detect.html)
  - Check for updates with Intel DSA
@@ -74,7 +77,6 @@ Install and open CCleaner (optional)
 RESTART
 
  - MouseAccelFix.bat (Display > Scale: 100% required)
- - WingetUpdateApps.bat
  - RemoveWindowsApps.bat
  - RemoveWindowsFeatures.bat
  - !!! PowerPlanUltra.bat (only if Ultimate Performance power plan profile is NOT present)
