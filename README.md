@@ -27,6 +27,8 @@ Run Windows update
 
 RESTART
 
+ - DisableUAC.bat
+
 Update Video Drivers
  - NVIDIA: https://www.nvidia.com/download/find.aspx (NVCleanstall method preferred) (https://developer.nvidia.com/vulkan-driver)
  - AMD: https://www.amd.com/en/support
