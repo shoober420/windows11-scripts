@@ -71,7 +71,6 @@ RESTART (SAFE MODE) (hold SHIFT while restarting)
  - DisableWindowsDefender.bat (AV software is bloat)
  - DisableWindowsFirewall.bat (use router firewall)
  - DisableWindowsSecurityCenter.bat
- - DisableSAM.bat
  - DisableEventTraceSessions.bat
  - DeleteFonts.bat
  - Windows11Tweaks.bat (if skipped, admin privileges are borked)
