@@ -343,3 +343,5 @@ DisableWebAccountManager.bat / EnableWebAccountManager.bat (May cause black scre
 DisableWindowsSearch.bat / EnableWindowsSearch.bat (Causes system hangs and freezes when enabled)
 
 DisableUAC.bat / EnableUAC.bat
+
+DisableLanmanServer.bat / EnableLanmanServer.bat
