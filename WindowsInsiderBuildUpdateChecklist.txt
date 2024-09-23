@@ -84,7 +84,7 @@ RESTART (SAFE MODE) (hold SHIFT while restarting)
  - DisableWindowsDefender.bat (AV software is bloat)
  - DisableWindowsFirewall.bat (use router firewall)
  - DisableWindowsSecurityCenter.bat
- - DisableSAM.bat
+ - DisableSAM.bat (black screen and unresponsive desktop if LanmanServer is enabled)
  - DisableEventTraceSessions.bat
  - DisableWindowsSearch.bat (if skipped, file explorer and system will hang and freeze)
  - DeleteFonts.bat
