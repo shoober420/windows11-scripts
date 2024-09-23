@@ -324,7 +324,7 @@ InstallChromeCanary.bat
 
 RemoveWindowsTerminal.bat
 
-DisableSAM.bat / EnableSAM.bat (may cause black screen after login and very slow desktop if SAM is disabled) (requires SAFE MODE and SetACL.bat to be run first)
+DisableSAM.bat / EnableSAM.bat (Causes black screen and unresponsive desktop if LanmanServer is enabled) (requires SAFE MODE and SetACL.bat to be run first)
 
 DisableSGRMBroker.bat / EnableSGRMBroker.bat
 
