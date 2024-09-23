@@ -68,6 +68,9 @@ Install Intel DSA (Driver Support Assistant)
 Install Intel Chipset INF Utility
  - Download (https://www.intel.com/content/www/us/en/download/19347/chipset-inf-utility.html)
 
+- RemoveWindowsApps.bat
+- RemoveWindowsFeatures.bat (possible AUTO-REBOOT)
+
 RESTART
 
 Install and open CCleaner (optional)
@@ -83,6 +86,7 @@ RESTART (SAFE MODE) (hold SHIFT while restarting)
  - DisableWindowsDefender.bat (AV software is bloat)
  - DisableWindowsFirewall.bat (use router firewall)
  - DisableWindowsSecurityCenter.bat
+
  - DisableSAM.bat (black screen and unresponsive desktop if LanmanServer is enabled)
  - DisableLanmanServer.bat
  - DisableEventTraceSessions.bat
@@ -93,13 +97,9 @@ RESTART (SAFE MODE) (hold SHIFT while restarting)
 RESTART
 
  - MouseAccelFix.bat (Display > Scale: 100% required)
- - RemoveWindowsApps.bat
- - RemoveWindowsFeatures.bat (possible REBOOT)
  - !!! PowerPlanUltra.bat (only if Ultimate Performance power plan profile is NOT present: powercfg -L)
  - PowerPlanSettings.bat
  - ThreadQuantum.bat
-
-RESTART
 
  - NetworkTweaks.bat (script settings need tweaked to match users computer hardware)
  - RAMTweaks.bat (script settings need tweaked to match users computer hardware)
@@ -107,6 +107,7 @@ RESTART
  - CPUTweaks.bat (script settings need tweaked to match users computer hardware)
  - UseLargePages.bat (add user programs to enable Large Pages for them)
  - HighPriority.bat (add user programs to enable High Priority for them)
+
  - Internet&SecuritySettings.bat
  - Disable*.bat (DisableAppX.bat causes File Explorer to crash when opening right click context menu) (DO NOT RUN DisableStateRepository.bat and DisableWinHTTP.bat)
 
