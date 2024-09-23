@@ -192,15 +192,4 @@ rem # powershell -command "Get-AppXPackage | where-object {$_.name -notlike '*st
 rem # Uninstalls "Remote Desktop Connection" program
 mstsc /uninstall
 
-rem # Disable PowerShell
-powershell.exe Disable-WindowsOptionalFeature -Online -FeatureName MicrosoftWindowsPowerShellV2Root
-
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowRun" /v "powershell.exe" /t REG_DWORD /d "1" /f
-
-rem # Disable and stop WMI
-
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD /d "4" /f
-sc config winmgmt start= disabled
-net stop winmgmt
-
 PAUSE
