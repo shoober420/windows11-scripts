@@ -95,7 +95,7 @@ RESTART
  - MouseAccelFix.bat (Display > Scale: 100% required)
  - RemoveWindowsApps.bat
  - RemoveWindowsFeatures.bat (possible REBOOT)
- - !!! PowerPlanUltra.bat (only if Ultimate Performance power plan profile is NOT present)
+ - !!! PowerPlanUltra.bat (only if Ultimate Performance power plan profile is NOT present: powercfg -L)
  - PowerPlanSettings.bat
  - ThreadQuantum.bat
 
