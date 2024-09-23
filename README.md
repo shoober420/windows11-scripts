@@ -109,6 +109,7 @@ RESTART
  - HighPriority.bat (add user programs to enable High Priority for them)
 
  - Internet&SecuritySettings.bat
+
  - Disable*.bat (DisableAppX.bat causes File Explorer to crash when opening right click context menu) (DO NOT RUN DisableStateRepository.bat and DisableWinHTTP.bat)
 
 RESTART
