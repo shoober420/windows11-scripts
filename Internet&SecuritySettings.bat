@@ -6,6 +6,14 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD
 sc config winmgmt start= auto
 net start winmgmt
 
+rem # Enable AppXSvc (required for powershell)
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\AppXSvc" /v "Start" /t REG_DWORD /d "2" /f
+net start AppXSvc
+
+rem # Powershell requires "Application Information" service to be running
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Appinfo" /v "Start" /t REG_DWORD /d "2" /f
+net start Appinfo
+
 rem # Enable PowerShell
 
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowRun" /v "powershell.exe" /t REG_DWORD /d "0" /f
@@ -307,6 +315,14 @@ rem Disable and stop WMI
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD /d "4" /f
 sc config winmgmt start= disabled
 net stop winmgmt
+
+rem # Disable AppXSvc
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\AppXSvc" /v "Start" /t REG_DWORD /d "4" /f
+net stop AppXSvc
+
+rem # Disable "Application Information" service
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Appinfo" /v "Start" /t REG_DWORD /d "4" /f
+net stop Appinfo
 
 rem # Breaks internet if 1
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp" /v "DisableWpad" /t REG_DWORD /d "0" /f
