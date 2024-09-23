@@ -30,7 +30,7 @@ Run Windows update
 RESTART
 
  - DisableUAC.bat
- - DisabledWinHTTP.bat (WIRED CONNECTION ONLY)
+ - DisableWinHTTP.bat (WIRED CONNECTION ONLY)
 
 Update Video Drivers
  - NVIDIA: https://www.nvidia.com/download/find.aspx (NVCleanstall method preferred) (https://developer.nvidia.com/vulkan-driver)
