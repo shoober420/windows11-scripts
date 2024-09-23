@@ -2,7 +2,7 @@ REM Disables maintenance services for adding and removing windows features and v
 
 REM "Get-WindowsOptionalFeature -Online" shows enabled features
 
-rem Enable and start WMI
+rem # Disable WMI
 net stop winmgmt
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD /d "4" /f
 
