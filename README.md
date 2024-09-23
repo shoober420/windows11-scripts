@@ -158,7 +158,7 @@ DisableBluetooth.bat / EnableBluetooth.bat
 
 DisableAppX.bat / EnableAppX.bat (Disabling AppXSvc causes File Explorer to crash frequently)
 
-DisableWinHTTP.bat / EnableWinHTTP.bat (borks internet if disabled)
+DisableWinHTTP.bat / EnableWinHTTP.bat (borks WiFi and wireless internet if disabled)
 
 DisableStateRepository.bat / EnableStateRepository.bat (WARNING: breaks system configuration settings, like power options) (WARNING: Breaks GUI, like taskbar, icons, and background)
 
