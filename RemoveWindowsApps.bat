@@ -8,7 +8,7 @@ rem # This script may delete Windows Apps you use, do a back up in case anything
 PAUSE
 
 rem # winget requires "Application Information" service to be running
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\Appinfo" /v "Start" /t REG_DWORD /d "2" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Appinfo" /v "Start" /t REG_DWORD /d "3" /f
 net start Appinfo
 
 rem # Enable and start WMI
@@ -191,10 +191,6 @@ rem # powershell -command "Get-AppXPackage | where-object {$_.name -notlike '*st
 
 rem # Uninstalls "Remote Desktop Connection" program
 mstsc /uninstall
-
-rem # Disable "Application Information" service
-net stop Appinfo
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\Appinfo" /v "Start" /t REG_DWORD /d "4" /f
 
 rem # Disable PowerShell
 powershell.exe Disable-WindowsOptionalFeature -Online -FeatureName MicrosoftWindowsPowerShellV2Root
