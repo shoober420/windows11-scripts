@@ -13,6 +13,8 @@ Windows Security > Virus & threat protection > Virus & threat protection setting
 
 Windows Security > Virus & threat protection > Virus & threat protection settings > Exclusions > Add or remove exclusions > Add an exclusion > Folder > %USERPROFILE%\Downloads\windows11-scripts-main
 
+Right click > Run as administrator
+
 ----------------------------------------------------------
 
 NOTE:
