@@ -1,9 +1,5 @@
 rem # Disable WinHttpAutoProxySvc
-rem # !!! WARNING !!!
-rem # Breaks internet when disabled
-rem # !!! CAUTION !!!
-rem # DO NOT USE 
-rem # FOR TESTING PURPOSES ONLY
+rem # Breaks WiFi and wireless internet when disabled
 
 PAUSE
 
