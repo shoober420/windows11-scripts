@@ -1,7 +1,7 @@
 rem # Enable Winget
 
 rem # winget requires "Application Information" service to be running
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\Appinfo" /v "Start" /t REG_DWORD /d "2" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Appinfo" /v "Start" /t REG_DWORD /d "3" /f
 net start Appinfo
 
 rem # Enable and start WMI (required for winget)
