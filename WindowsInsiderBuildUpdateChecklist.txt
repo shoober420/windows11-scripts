@@ -72,6 +72,7 @@ Install Intel Chipset INF Utility
  - Download (https://www.intel.com/content/www/us/en/download/19347/chipset-inf-utility.html)
 
 - RemoveWindowsApps.bat
+- Internet&SecuritySettings.bat
 - RemoveWindowsFeatures.bat (possible AUTO-REBOOT)
 
 RESTART
@@ -110,8 +111,6 @@ RESTART
  - CPUTweaks.bat (script settings need tweaked to match users computer hardware)
  - UseLargePages.bat (add user programs to enable Large Pages for them)
  - HighPriority.bat (add user programs to enable High Priority for them)
-
- - Internet&SecuritySettings.bat
 
  - Disable*.bat (DisableAppX.bat causes File Explorer to crash when opening right click context menu) (DO NOT RUN DisableStateRepository.bat and DisableWinHTTP.bat)
 
