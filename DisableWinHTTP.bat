@@ -1,4 +1,4 @@
-rem # Disable WinHttpAutoProxySvc
+rem # Disable WinHTTP Web Proxy Auto-Discovery Service (WinHttpAutoProxySvc)
 rem # Breaks WiFi and wireless internet when disabled
 
 PAUSE
