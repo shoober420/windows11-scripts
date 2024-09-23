@@ -11,7 +11,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\AppXSvc" /v "Start" /t REG_DWORD
 net start AppXSvc
 
 rem # Powershell requires "Application Information" service to be running
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\Appinfo" /v "Start" /t REG_DWORD /d "2" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Appinfo" /v "Start" /t REG_DWORD /d "3" /f
 net start Appinfo
 
 rem # Enable PowerShell
@@ -319,10 +319,6 @@ net stop winmgmt
 rem # Disable AppXSvc
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\AppXSvc" /v "Start" /t REG_DWORD /d "4" /f
 net stop AppXSvc
-
-rem # Disable "Application Information" service
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\Appinfo" /v "Start" /t REG_DWORD /d "4" /f
-net stop Appinfo
 
 rem # Breaks internet if 1
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp" /v "DisableWpad" /t REG_DWORD /d "0" /f
