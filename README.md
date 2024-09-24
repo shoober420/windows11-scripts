@@ -149,7 +149,7 @@ DisableUI.bat / EnableUI.bat
 
 DisableStore.bat / EnableStore.bat
 
-DisableComponents.bat / EnableComponents.bat (Disables Windows Store and UWP apps)
+DisableComponents.bat / EnableComponents.bat (Disables Windows Store and UWP apps) (recommended to run in SAFE MODE)
 
 wing3t.bat
 
@@ -171,7 +171,7 @@ acl.txt (ACL: Access Control List - needed to take ownership of registry keys fo
 
 PowerPlanUltra.bat (adds duplicate Ultra power plan everytime command is executed, so use PowerPlanUltra.bat only if Ultimate Performance power plan profile is NOT present)
 
-DisableServices.bat (to disable Windows Defender, run in SAFE MODE)
+DisableServices.bat
 
 DisableThemes.bat / EnableThemes.bat
 
@@ -209,7 +209,7 @@ WinInsiderBuildUpdateChecklist.txt (instructions for when a new Windows Insider 
 
 SetTimerResolution.bat (script needed to launch SetTimerResolution.exe at boot)
 
-DisableEventTraceSessions.bat (disable logs)
+DisableEventTraceSessions.bat (disable logs) (must run in SAFE MODE after using SetACL.bat)
 
 DDU.txt (Display Drivers Uninstaller)
 
@@ -283,7 +283,7 @@ UseLargePages.bat (add user programs to enable Large Pages for them)
 
 HighPriority.bat (add user programs to enable High Priority for them)
 
-DisableStartMenu.bat / EnableStartMenu.bat
+DisableStartMenu.bat / EnableStartMenu.bat (recommended to run in SAFE MODE)
 
 DisablePowerShell.bat / EnablePowerShell.bat
 
