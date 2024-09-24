@@ -35,6 +35,9 @@ RESTART
 
 Update NIC Drivers
 
+Install SG TCP Optimizer
+ - https://www.speedguide.net/downloads.php
+
 Update Video Drivers
  - NVIDIA: https://www.nvidia.com/download/find.aspx (NVCleanstall method preferred) (https://developer.nvidia.com/vulkan-driver)
  - AMD: https://www.amd.com/en/support
