@@ -34,6 +34,7 @@ RESTART
 
 Update NIC Drivers
  - NetworkSettings.txt
+ - NetworkOptions.txt
 
 Install SG TCP Optimizer
  - https://www.speedguide.net/downloads.php
