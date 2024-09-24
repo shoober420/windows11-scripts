@@ -1,0 +1,20 @@
+Network Options
+
+Settings > Network & internet > Ethernet > :NetworkName: > DNS server assignment > Edit
+
+Manual
+IPv4: On
+Preferred DNS: 1.1.1.1
+DNS over HTTPS: On (automatic template)
+IPv6: Off
+
+Settings > Network & internet > Advanced network settings > Ethernet > More adapter options > Edit
+
+Uncheck:
+Client for Microsoft Networks
+File and Printer Sharing for Microsoft Networks
+QoS Packet Scheduler
+Microsoft LLDP Protocol Driver
+Internet Protocol Version 6 (TCP/IPv6)
+Link-Layer Topology Discovery Responder
+Link-Layer Topology Discovery Mapper I/O Driver
