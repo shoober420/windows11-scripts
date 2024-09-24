@@ -1,3 +1,26 @@
 Network Settings
 
 Device Manager (devmgmt.msc) > Network adapters > NIC > Right click + Properties > Advanced tab
+
+ARP Offload: Enabled
+Downshift retries: Disabled (0)
+Energy-Efficient Ethernet: Disabled (0)
+Flow Control: Rx & Tx Enabled (3)
+Interrupt Moderation: Disabled (0)
+Interrupt Moderation Rate: Disabled (0) (ITR)
+IPv4 Checksum Offload: Rx & Tx Enabled (3)
+Jumbo Packet: Disabled (1472)
+Large Send Offload V1 (IPv4): Enabled (1)
+Large Send Offload V2 (IPv4): Enabled (1)
+Large Send Offload V2 (IPv6): Enabled (1)
+Locally Administered Address: Not Present
+Log Link State Event: Disabled (0)
+Maximum number of RSS Queues: 8 Queues (8)
+NDIS QoS: QoS Disabled
+NS Offload: Enabled (1)
+Priority & VLAN: Priority & VLAN Disabled (0)
+Recieve Buffers: 4096
+Recieve Side Scaling: Enabled (1)
+Recv Segment Coalescing (IPv4): Enabled (1)
+Recv Segment Coalescing (IPv6): Enabled (1)
+
