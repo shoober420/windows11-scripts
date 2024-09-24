@@ -357,3 +357,5 @@ DisableWindowsSearch.bat / EnableWindowsSearch.bat (Causes system hangs and free
 DisableUAC.bat / EnableUAC.bat
 
 DisableLanmanServer.bat / EnableLanmanServer.bat
+
+SGTCPOptimizer.txt (https://www.speedguide.net/downloads.php)
