@@ -1,0 +1,37 @@
+Download SG TCP Optimizer
+ - 
+
+Requires WMI - Windows Management Instrumentation
+
+ + test internet speed
+ + set connection speed
+ + set MTU
+  - open Command Prompt
+  - ping www.google.com -f -l 1500 (keep lowering -l value until packets aren't fragmented, from 1500 to probably 1472)
+ + TCP window auto-tuning - normal
+ + Windows scaling heuristics - disabled
+ + congestion control provider - ctcp
+ + receive side scaling RSS - enabled
+ + r segment coalescing RSC - disabled
+ + time to live (TTL) - 64
+ + ECN Capability - disabled
+ + checksum offloading - enabled
+ + TCP chimney offload - disabled
+ + large send offload LSO - disabled
+ + TCP 1323 Timestamps - disabled
+ + LocalPriority - 4
+ + HostPriority - 5
+ + DnsPriority - 6
+ + NetbtPriority - 7
+ + Max SYN Retransmissions - 2
+ + NonSackRttResiliency - disabled
+ + Initial RTO - 2000
+ + Min RTO - 300
+ + NetworkThrottlingIndex - disabled: ffffffff
+ + SystemResponsiveness - gaming: 0
+ + TcpAckFrequency - disabled: 1
+ + TCPNoDelay - enabled: 1
+ + TcpDelAckTicks - disable: 0
+ + LargeSystemCache - disabled: 0
+ + MaxUserPort - 65534
+ + TcpTimedWaitDelay - 30
