@@ -1,0 +1,3 @@
+Network Settings
+
+Device Manager (devmgmt.msc) > Network adapters > NIC > Right click + Properties > Advanced tab
