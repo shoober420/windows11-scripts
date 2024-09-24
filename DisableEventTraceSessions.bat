@@ -1,5 +1,10 @@
-rem Disable Event Trace Sessions
-rem NEVER disable UBPM, required by Windows
+rem # Disable Event Trace Sessions
+rem # NEVER disable UBPM, required by Windows
+
+rem # Requires SAFE MODE
+rem # Requires SetACL.bat script to be run first
+
+PAUSE
 
 ECHO Yes | reg delete "HKLM\SYSTEM\ControlSet001\Control\WMI\Autologger\Circular Kernel Context Logger"
 ECHO Yes | reg delete "HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\Circular Kernel Context Logger"
