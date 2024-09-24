@@ -33,7 +33,7 @@ Composite Bus Enumerator
 High precision event timer
 Microsoft Hyper-V Virtualization Infrastructure Driver
 Microsoft Virtual Drive Enumerator
-NDIS Virtual Network Adaptor Enumerator
+NDIS Virtual Network Adaptor Enumerator (MAY BORK INTERNET)
 Remote Desktop Device Redirector Bus
 Resource Hub proxy device
 UMBus Root Bus Enumerator
