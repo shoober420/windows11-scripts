@@ -33,6 +33,7 @@ RESTART
  - DisableWinHTTP.bat (WIRED CONNECTION ONLY)
 
 Update NIC Drivers
+ - NetworkSettings.txt
 
 Install SG TCP Optimizer
  - https://www.speedguide.net/downloads.php
