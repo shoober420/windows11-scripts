@@ -43,6 +43,7 @@ Download
  - WinCDEmu (https://wincdemu.sysprogs.org/) (mounts mds and other rare image extensions)
  - RInput (https://fearless-assassins.com/files/file/1656-rinput/)
  - RefreshRateSwitcher (https://github.com/sryze/RefreshRateSwitcher)
+ - Marvell Aqtion NIC Drivers (Marvell Public Drivers) (AQCxxx) (
 
 SAFE MODE: Press and hold F8, then power on system while holding down F8
 
