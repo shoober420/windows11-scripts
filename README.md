@@ -362,3 +362,7 @@ DisableUAC.bat / EnableUAC.bat
 DisableLanmanServer.bat / EnableLanmanServer.bat
 
 SGTCPOptimizer.txt (https://www.speedguide.net/downloads.php)
+
+NetworkSettings.txt
+
+NetworkOptions.txt
