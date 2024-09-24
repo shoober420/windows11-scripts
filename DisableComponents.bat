@@ -5,6 +5,8 @@ rem # Disables Windows Store and UWP apps
 rem # Disables Windows Defender Anti-Malware service
 rem # !!! CAUTION !!!
 
+rem # recommended to run in SAFE MODE
+
 PAUSE
 
 rem # Disable Smartscreen (to restore run "sfc /scannow")
