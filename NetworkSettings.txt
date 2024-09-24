@@ -23,4 +23,14 @@ Recieve Buffers: 4096
 Recieve Side Scaling: Enabled (1)
 Recv Segment Coalescing (IPv4): Enabled (1)
 Recv Segment Coalescing (IPv6): Enabled (1)
+Speed & Duplex: Auto Negotiation (0)
+TCP/UDP Checksum Offload (IPv4): Rx & Tx Enabled
+TCP/UDP Checksum Offload (IPv6): Rx & Tx Enabled
+Transmit Buffers: 8184
+VLAN ID: 0
+Wake from power off state: Disabled
+Wake on Link: Disabled
+Wake on Magic Packet: Disabled
+Wake on Pattern Match: Disabled
+Wake on Ping: Disabled
 
