@@ -23,6 +23,7 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\Disall
 
 powershell.exe Enable-WindowsOptionalFeature -Online -FeatureName MicrosoftWindowsPowerShellV2Root
 
+winget uninstall "cortana"
 winget uninstall "Microsoft.OneDrive"
 winget uninstall camera
 winget uninstall help
