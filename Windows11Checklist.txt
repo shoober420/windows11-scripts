@@ -438,13 +438,15 @@ Change .txt, .cfg, .ini, and .log icons
  +++ NEVER disable Dnscache, borks internet
  +++ NEVER disable SystemEventsBroker (scheduler depends on this service), causes explorer.exe error at login, system instability and lag, breaks GUI theme settings
  +++ NEVER disable state repository service, breaks system configuration settings (like power options), breaks GUI (like taskbar, icons, and background), will cause black screen after login. you will need to CTRL+SHIFT+ESC after login to open task manager, then file and run new task, regedit then revert back value to 2, must use system with Task Manager and Run
- +++ NEVER disable WinHTTP web proxy auto discovery service (registry), will bork internet
+ +++ NEVER disable WinHTTP web proxy auto discovery service (registry) on WiFi / Wireless connections
  +++ NEVER disable GraphicsPerfSvc, improves performance
  +++ NEVER disable Themes, breaks user theme settings
  +++ NEVER disable text input management service, needed for keyboard and mouse. you will need to WinRE*** (f8 key method)
  +++ NEVER disable user manager, black screen at login after boot
  +++ NEVER disable AudioEndpointBuilder, breaks sound and audio
  +++ NEVER disable DcomLaunch (DCOM Server Process Launcher), causes black screen forever loading after boot, requires WinRE***
+ +++ NEVER disable RpcEptMapper (RPC Endpoint Mapper), causes black screen forever loading after boot, requires WinRE***
+
 
 
 Disable unused components in Device Manager
