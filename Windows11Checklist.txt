@@ -446,6 +446,7 @@ Change .txt, .cfg, .ini, and .log icons
  +++ NEVER disable AudioEndpointBuilder, breaks sound and audio
  +++ NEVER disable DcomLaunch (DCOM Server Process Launcher), causes black screen forever loading after boot, requires WinRE***
  +++ NEVER disable RpcEptMapper (RPC Endpoint Mapper), causes black screen forever loading after boot, requires WinRE***
++++ NEVER disable RpcSs (Remote Procedure Call RPC), causes black screen forever loading after boot, requires WinRE***
 
 
 
