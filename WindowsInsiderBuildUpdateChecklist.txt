@@ -123,7 +123,7 @@ RESTART
  - UseLargePages.bat (add user programs to enable Large Pages for them)
  - HighPriority.bat (add user programs to enable High Priority for them)
 
- - Disable*.bat (DisableAppX.bat causes File Explorer to crash when opening right click context menu) (DO NOT RUN DisableStateRepository.bat and DisableWinHTTP.bat)
+ - Disable*.bat (DisableAppX.bat causes File Explorer to crash when opening right click context menu) (DO NOT RUN DisableStateRepository.bat and DisableDNSClient.bat)
 
 RESTART
 
