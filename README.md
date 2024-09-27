@@ -147,7 +147,7 @@ If NVIDIA Control Panel is needed, go to https://github.com/Aetopia/Install-NVCP
 
 Windows11Checklist.txt (information on tweaks)
 
-Windows11Tweaks.bat (Disables Telemetry required for Windows Insider Updates, run EnableWindowsUpdate.bat to fix) (Removes and disables Microsoft Edge) (to disable Windows Defender, run in SAFE MODE)
+Windows11Tweaks.bat (Disables Telemetry required for Windows Insider Updates, run EnableWindowsUpdate.bat to fix) (Removes and disables Microsoft Edge) (recommended to run in SAFE MODE)
 
 DisableWindowsUpdate.bat / EnableWindowsUpdate.bat
 
