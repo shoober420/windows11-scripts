@@ -13,5 +13,11 @@ winget install --id=Microsoft.VCRedist.2013.x86 -e
 winget install --id=Microsoft.VCRedist.2013.x64 -e
 winget install --id=Microsoft.VCRedist.2015+.x86 -e
 winget install --id=Microsoft.VCRedist.2015+.x64 -e
+winget install --id=Microsoft.VCRedist.2017.x86 -e
+winget install --id=Microsoft.VCRedist.2017.x64 -e
+winget install --id=Microsoft.VCRedist.2019.x86 -e
+winget install --id=Microsoft.VCRedist.2019.x64 -e
+winget install --id=Microsoft.VCRedist.2022.x86 -e
+winget install --id=Microsoft.VCRedist.2022.x64 -e
 
 PAUSE
