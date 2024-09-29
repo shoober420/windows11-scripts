@@ -1,5 +1,7 @@
 rem # Enables maintenance services for adding and removing windows features and various tweaks
 
+rem # Required for Battle.net installer
+
 rem # "Get-WindowsOptionalFeature -Online" shows enabled features
 
 rem # TLS 1.2 or lower is required for Windows Update to work, TLS 1.3 not supported yet
