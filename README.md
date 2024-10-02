@@ -370,3 +370,5 @@ NetworkOptions.txt
 DisableDNSClient.bat / EnableDNSClient.bat (DO NOT USE) (Was able to be disabled in Windows 7)
 
 DisableCOM+EventSystem.bat / EnableCOM+EventSystem.bat
+
+DisableDriverSignatureEnforcement.bat
