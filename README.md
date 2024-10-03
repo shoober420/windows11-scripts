@@ -44,6 +44,8 @@ RESTART (hold SHIFT while restarting)
 
 Troubleshoot > Advanced options > Startup Settings > Restart > 7) Disable driver signature enforcement
 
+- RemoveWindowsApps.bat
+
 Update Video Drivers
  - NVIDIA: https://www.nvidia.com/download/find.aspx
   + Vulkan beta drivers (not recommended): https://developer.nvidia.com/vulkan-driver
@@ -88,7 +90,6 @@ Install Intel Chipset INF Utility
  - Download (https://www.intel.com/content/www/us/en/download/19347/chipset-inf-utility.html)
 
 - RemoveRemoteDesktopConnection.bat
-- RemoveWindowsApps.bat
 - Internet&SecuritySettings.bat
 - RemoveWindowsFeatures.bat (possible AUTO-REBOOT)
 
