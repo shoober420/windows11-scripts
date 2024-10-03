@@ -37,7 +37,6 @@ winget uninstall "Microsoft.Teams"
 winget uninstall "feedback hub"
 winget uninstall paint
 winget uninstall WebView2
-winget uninstall linkedin
 
 powershell -command "Get-AppxPackage *Microsoft.WindowsNotepad* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *Microsoft.People* | Remove-AppxPackage"
