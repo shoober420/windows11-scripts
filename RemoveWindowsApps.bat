@@ -204,6 +204,7 @@ powershell -command "Get-AppxPackage *Microsoft.WebpImageExtension* | Remove-App
 powershell -command "Get-AppxPackage *MicrosoftWindows.CrossDevice* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *Microsoft.WidgetsPlatformRuntime* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *RivetNetworks.KillerControlCenter* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.StorePurchaseApp* | Remove-AppxPackage"
 
 rem # Find and Remove eveything (borks Windows, constant desktop refresh, borked startmenu)
 rem powershell "Get-AppxPackage | Remove-AppxPackage"
