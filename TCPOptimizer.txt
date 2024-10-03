@@ -1,4 +1,4 @@
-Download SG TCP Optimizer
+Download TCP Optimizer
  - https://www.speedguide.net/downloads.php
 
 Requires WMI - Windows Management Instrumentation
