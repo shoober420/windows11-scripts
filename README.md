@@ -411,3 +411,4 @@ RemovePhoton.bat
 
 RemoveParentalControls.bat
 
+RemovePrintQueueActionCenter.bat
