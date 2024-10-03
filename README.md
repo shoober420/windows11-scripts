@@ -401,3 +401,5 @@ RemoveSecurityHealthUI.bat
 
 RemoveNarratorQuickStart.bat
 
+RemoveContentDeliveryManager.bat
+
