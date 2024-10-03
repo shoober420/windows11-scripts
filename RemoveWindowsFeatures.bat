@@ -61,7 +61,7 @@ Dism /Online /Disable-Feature /FeatureName:WorkFolders-Client /Quiet /NoRestart
 Dism /Online /Disable-Feature /FeatureName:NetFx3 /Quiet /NoRestart
 Dism /Online /Disable-Feature /FeatureName:LegacyComponents /Quiet /NoRestart
 Dism /Online /Disable-Feature /FeatureName:DirectPlay /Quiet /NoRestart
-dism /online /disable-feature /featurename:Microsoft-hyper-v-all
+Dism /Online /Disable-Feature /FeatureName:Microsoft-Hyper-V-All
 Dism /Online /Disable-Feature /FeatureName:Client-ProjFS /Quiet /NoRestart
 Dism /Online /Disable-Feature /FeatureName:TelnetClient /Quiet /NoRestart
 Dism /Online /Disable-Feature /FeatureName:TFTP /Quiet /NoRestart
