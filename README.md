@@ -389,3 +389,5 @@ RemoveCloudExperienceHost.bat
 
 RemovePeopleExperienceHost.bat
 
+RemoveXboxGameCallableUI.bat
+
