@@ -40,7 +40,7 @@ Install TCP Optimizer
  - https://www.speedguide.net/downloads.php
  - TCPOptimizer.txt
 
-RESTART (hold SHIFT)
+RESTART (hold SHIFT while restarting)
 
 Troubleshoot > Advanced options > Startup Settings > Restart > 7) Disable driver signature enforcement
 
