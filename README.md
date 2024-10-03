@@ -387,3 +387,5 @@ RemoveWebView2.bat
 
 RemoveCloudExperienceHost.bat
 
+RemovePeopleExperienceHost.bat
+
