@@ -3,6 +3,6 @@ rem # Requires SAFE MODE
 
 PAUSE
 
-powershell -command "Get-AppxPackage *Microsoft.Windows.ShellExperienceHost* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.Windows.StartMenuExperienceHost* | Remove-AppxPackage"
 
 PAUSE
