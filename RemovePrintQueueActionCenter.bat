@@ -1,0 +1,1 @@
+rem # Uninstall Print Queue Action Center
