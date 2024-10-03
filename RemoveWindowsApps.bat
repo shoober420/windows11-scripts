@@ -37,6 +37,7 @@ winget uninstall "Microsoft.Teams"
 winget uninstall "feedback hub"
 winget uninstall paint
 winget uninstall WebView2
+winget uninstall linkedin
 
 powershell -command "Get-AppxPackage *Microsoft.WindowsNotepad* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *Microsoft.People* | Remove-AppxPackage"
@@ -157,6 +158,7 @@ powershell -command "Get-AppxPackage *king.com.BubbleWitch3Saga* | Remove-AppxPa
 powershell -command "Get-AppxPackage *king.com.CandyCrushSaga* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *king.com.CandyCrushSodaSaga* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *LinkedInforWindows* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *LinkedIn* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *MarchofEmpires* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *Netflix* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *NYTCrossword* | Remove-AppxPackage"
