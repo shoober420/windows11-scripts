@@ -46,7 +46,10 @@ RESTART (hold SHIFT)
 Troubleshoot > Advanced options > Startup Settings > Restart > 7) Disable driver signature enforcement
 
 Update Video Drivers
- - NVIDIA: https://www.nvidia.com/download/find.aspx (NVCleanstall method preferred) (https://developer.nvidia.com/vulkan-driver)
+ - NVIDIA: https://www.nvidia.com/download/find.aspx
+  + Vulkan beta drivers: https://developer.nvidia.com/vulkan-driver
+ - NVCleanstall.txt
+
  - AMD: https://www.amd.com/en/support
 
 Install DirectX End-User Runtime Web Installer (dxwebsetup.exe)
