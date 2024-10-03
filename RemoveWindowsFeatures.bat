@@ -114,4 +114,10 @@ dism /online /Remove-Package /PackageName:TIFFIFilter /NoRestart
 dism /online /Remove-Package /PackageName:NetFx4-AdvSrvs /NoRestart
 dism /online /Remove-Package /PackageName:WCF-Services45 /NoRestart
 
+dism /online /Remove-Package /PackageName:VirtualMachinePlatform /NoRestart
+dism /online /Remove-Package /PackageName:HypervisorPlatform /NoRestart
+dism /online /Remove-Package /PackageName:Containers /NoRestart
+dism /online /Remove-Package /PackageName:Windows-Defender-ApplicationGuard /NoRestart
+dism /online /Remove-Package /PackageName:Containers-DisposableClientVM /NoRestart
+
 PAUSE
