@@ -227,9 +227,10 @@ rem powershell "Get-AppxProvisionedPackage -online | Remove-AppxProvisionedPacka
 rem # Remove all other apps except Microsoft Store
 rem powershell -command "Get-AppXPackage | where-object {$_.name -notlike '*store*'} | Remove-AppxPackage"
 
-rem # Remove all other apps except Microsoft.UI.Xaml.CBS
+rem # Remove all apps except "Microsoft.UI.Xaml.CBS"
 powershell -command "Get-AppXPackage | where-object {$_.name -notlike '*Microsoft.UI.Xaml.CBS*'} | Remove-AppxPackage"
 
-
+rem # Remove all apps for all users but keep "Microsoft.UI.Xaml.CBS"
+powershell -command "Get-AppXPackage -AllUsers | where-object {$_.name -notlike '*Microsoft.UI.Xaml.CBS*'} | Remove-AppxPackage"
 
 PAUSE
