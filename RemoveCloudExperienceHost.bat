@@ -1,8 +1,8 @@
-rem # Uninstall Microsoft Edge WebView2
+rem # Uninstall Microsoft Windows Cloud Experience Host (CXH)
 rem # Requires SAFE MODE
 
 PAUSE
 
-winget uninstall WebView2
+powershell -command "Get-AppxPackage *Microsoft.Windows.CloudExperienceHost* | Remove-AppxPackage"
 
 PAUSE
