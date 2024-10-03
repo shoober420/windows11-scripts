@@ -182,7 +182,7 @@ powershell -command "Get-AppxPackage *WinZipUniversal* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *Wunderlist* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *XING* | Remove-AppxPackage"
 
-rem # Find and Remove eveything
+rem # Find and Remove eveything (borks Windows, constant desktop refresh, borked startmenu)
 rem powershell "Get-AppxPackage | Remove-AppxPackage"
 
 rem # Find and Remove for all existing user packages
@@ -192,6 +192,6 @@ rem # Find, remove, and nevercomeback for every User and every future User on th
 rem powershell "Get-AppxProvisionedPackage -online | Remove-AppxProvisionedPackage -online"
 
 rem # Remove all other apps except Microsoft Store
-rem # powershell -command "Get-AppXPackage | where-object {$_.name -notlike '*store*'} | Remove-AppxPackage"
+rem powershell -command "Get-AppXPackage | where-object {$_.name -notlike '*store*'} | Remove-AppxPackage"
 
 PAUSE
