@@ -1,0 +1,1 @@
+powershell -command "Get-AppxPackage *Microsoft.SecHealthUI* | Remove-AppxPackage"
