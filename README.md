@@ -407,3 +407,7 @@ RemoveAADBrokerPlugin.bat
 
 RemoveCapturePicker.bat
 
+RemovePhoton.bat
+
+RemoveParentalControls.bat
+
