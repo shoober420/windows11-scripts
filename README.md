@@ -36,9 +36,9 @@ Update NIC Drivers
  - NetworkSettings.txt
  - NetworkOptions.txt
 
-Install SG TCP Optimizer
+Install TCP Optimizer
  - https://www.speedguide.net/downloads.php
- - SGTCPOptimizer.txt
+ - TCPOptimizer.txt
 
 RESTART (hold SHIFT)
 
