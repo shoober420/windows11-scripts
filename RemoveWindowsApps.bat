@@ -230,7 +230,7 @@ rem powershell -command "Get-AppXPackage | where-object {$_.name -notlike '*stor
 rem # Remove all apps except "Microsoft.UI.Xaml.CBS"
 powershell -command "Get-AppXPackage | where-object {$_.name -notlike '*Microsoft.UI.Xaml.CBS*'} | Remove-AppxPackage"
 
-rem # Remove all apps for all users but keep "Microsoft.UI.Xaml.CBS"
+rem # Remove all apps for every user but keep "Microsoft.UI.Xaml.CBS"
 powershell -command "Get-AppXPackage -AllUsers | where-object {$_.name -notlike '*Microsoft.UI.Xaml.CBS*'} | Remove-AppxPackage"
 
 PAUSE
