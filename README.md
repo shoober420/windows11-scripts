@@ -403,3 +403,7 @@ RemoveNarratorQuickStart.bat
 
 RemoveContentDeliveryManager.bat
 
+RemoveAADBrokerPlugin.bat
+
+RemoveCapturePicker.bat
+
