@@ -3,3 +3,6 @@ rem # Requires SAFE MODE
 
 PAUSE
 
+powershell -command "Get-AppxPackage *Microsoft.Windows.ContentDeliveryManager* | Remove-AppxPackage"
+
+PAUSE
