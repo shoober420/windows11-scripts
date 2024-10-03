@@ -86,6 +86,7 @@ Install Intel DSA (Driver Support Assistant)
 Install Intel Chipset INF Utility
  - Download (https://www.intel.com/content/www/us/en/download/19347/chipset-inf-utility.html)
 
+- RemoveRemoteDesktopConnection.bat
 - RemoveWindowsApps.bat
 - Internet&SecuritySettings.bat
 - RemoveWindowsFeatures.bat (possible AUTO-REBOOT)
