@@ -3,6 +3,8 @@ rem # "winget list" shows installed apps
 rem # powershell -command "Get-AppxPackage | Select Name, PackageFullName" shows installed apps
 rem # Add-AppxPackage installs apps
 
+rem # Do NOT uninstall "Microsoft.UI.Xaml.CBS", causes screen flickering and blinking
+
 rem # !!!WARNING!!!
 rem # This script may delete Windows Apps you use, do a back up in case anything is lost you need
 rem # !!!WARNING!!!
