@@ -208,7 +208,8 @@ powershell -command "Get-AppxPackage *Microsoft.StorePurchaseApp* | Remove-AppxP
 powershell -command "Get-AppxPackage *Microsoft.StartExperiencesApp* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *Microsoft.WindowsAppRuntime.CBS* | Remove-AppxPackage"
 
-rem # Find and Remove eveything (borks Windows, constant desktop refresh, borked startmenu)
+rem # Remove all apps
+rem # Uninstalls "Microsoft.UI.Xaml.CBS", which causes constant desktop refresh flicker
 rem powershell "Get-AppxPackage | Remove-AppxPackage"
 
 rem # Find and Remove for all existing user packages
@@ -219,5 +220,10 @@ rem powershell "Get-AppxProvisionedPackage -online | Remove-AppxProvisionedPacka
 
 rem # Remove all other apps except Microsoft Store
 rem powershell -command "Get-AppXPackage | where-object {$_.name -notlike '*store*'} | Remove-AppxPackage"
+
+rem # Remove all other apps except Microsoft.UI.Xaml.CBS
+powershell -command "Get-AppXPackage | where-object {$_.name -notlike '*Microsoft.UI.Xaml.CBS*'} | Remove-AppxPackage"
+
+
 
 PAUSE
