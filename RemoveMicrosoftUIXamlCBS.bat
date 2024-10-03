@@ -1,6 +1,6 @@
 rem # Uninstalls Microsoft UI Xaml CBS
 rem # !!!WARNING!!!
-rem # Borks desktop, causes screen flicker and blinking
+rem # Borks desktop, causes constant screen flicker and blinking
 rem # !!!WARNING!!!
 
 PAUSE
