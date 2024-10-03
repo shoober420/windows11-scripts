@@ -40,6 +40,8 @@ winget uninstall paint
 winget uninstall WebView2
 winget uninstall "LinkedIn"
 winget uninstall "LinkedInforWindows"
+winget uninstall "Clipchamp"
+winget uninstall "Clipchamp.Clipchamp"
 
 powershell -command "Get-AppxPackage *Microsoft.WindowsNotepad* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *Microsoft.People* | Remove-AppxPackage"
