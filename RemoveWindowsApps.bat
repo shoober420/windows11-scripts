@@ -1,6 +1,7 @@
 rem # Remove bloat windows apps
 rem # "winget list" shows installed apps
 rem # powershell -command "Get-AppxPackage | Select Name, PackageFullName" shows installed apps
+rem # Add-AppxPackage installs apps
 
 rem # !!!WARNING!!!
 rem # This script may delete Windows Apps you use, do a back up in case anything is lost you need
@@ -38,7 +39,7 @@ winget uninstall "feedback hub"
 winget uninstall paint
 winget uninstall WebView2
 winget uninstall "LinkedIn"
-winger uninstall "LinkedInforWindows"
+winget uninstall "LinkedInforWindows"
 
 powershell -command "Get-AppxPackage *Microsoft.WindowsNotepad* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *Microsoft.People* | Remove-AppxPackage"
