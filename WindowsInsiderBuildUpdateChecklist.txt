@@ -30,6 +30,10 @@ Run Windows update
 
 RESTART
 
+Boot into Windows Recovery Environment (hold SHIFT)
+
+WinRE > Troubleshoot > Advanced options > Startup Settings > Restart > 7) Disable driver signature enforcement
+
  - DisableUAC.bat
  - DisableWinHTTP.bat (WIRED CONNECTION ONLY)
 
