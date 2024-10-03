@@ -179,7 +179,7 @@ powershell -command "Get-AppxPackage *WinZipUniversal* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *Wunderlist* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *XING* | Remove-AppxPackage"
 
-# Find and Remove eveything
+rem # Find and Remove eveything
 powershell Get-AppxPackage | Remove-AppxPackage
 
 rem # Find and Remove for all existing user packages
