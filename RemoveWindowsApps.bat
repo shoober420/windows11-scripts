@@ -193,6 +193,14 @@ powershell -command "Get-AppxPackage *WinZipUniversal* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *Wunderlist* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *XING* | Remove-AppxPackage"
 
+powershell -command "Get-AppxPackage *Microsoft.HEVCVideoExtension* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.HEIFImageExtension* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.MPEG2VideoExtension* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.RawImageExtension* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.VP9VideoExtensions* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.WebMediaExtensions* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *Microsoft.WebpImageExtension* | Remove-AppxPackage"
+
 rem # Find and Remove eveything (borks Windows, constant desktop refresh, borked startmenu)
 rem powershell "Get-AppxPackage | Remove-AppxPackage"
 
