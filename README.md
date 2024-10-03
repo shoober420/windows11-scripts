@@ -381,5 +381,7 @@ DisableCOM+EventSystem.bat / EnableCOM+EventSystem.bat
 
 DisableDriverSignatureEnforcement.bat
 
-RemoveDriverSignatureEnforcement.bat
+RemoveWebView2.bat
+
+RemoveCloudExperienceHost.bat
 
