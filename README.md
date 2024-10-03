@@ -412,3 +412,5 @@ RemovePhoton.bat
 RemoveParentalControls.bat
 
 RemovePrintQueueActionCenter.bat
+
+RemoveMicrosoftUIXamlCBS.bat / InstallMicrosoftUIXamlCNS.bat (causes constant screen flicker and blinking when removed)
