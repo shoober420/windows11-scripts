@@ -29,10 +29,6 @@ Run Windows update
 
 RESTART
 
-Boot into Windows Recovery Environment (hold SHIFT)
-
-WinRE > Troubleshoot > Advanced options > Startup Settings > Restart > 7) Disable driver signature enforcement
-
  - DisableUAC.bat
  - DisableWinHTTP.bat (WIRED CONNECTION ONLY)
 
@@ -43,6 +39,10 @@ Update NIC Drivers
 Install SG TCP Optimizer
  - https://www.speedguide.net/downloads.php
  - SGTCPOptimizer.txt
+
+RESTART (hold SHIFT)
+
+Troubleshoot > Advanced options > Startup Settings > Restart > 7) Disable driver signature enforcement
 
 Update Video Drivers
  - NVIDIA: https://www.nvidia.com/download/find.aspx (NVCleanstall method preferred) (https://developer.nvidia.com/vulkan-driver)
