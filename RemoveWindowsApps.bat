@@ -37,6 +37,8 @@ winget uninstall "Microsoft.Teams"
 winget uninstall "feedback hub"
 winget uninstall paint
 winget uninstall WebView2
+winget uninstall "LinkedIn"
+winger uninstall "LinkedInforWindows"
 
 powershell -command "Get-AppxPackage *Microsoft.WindowsNotepad* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *Microsoft.People* | Remove-AppxPackage"
@@ -181,13 +183,13 @@ powershell -command "Get-AppxPackage *Wunderlist* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *XING* | Remove-AppxPackage"
 
 rem # Find and Remove eveything
-powershell Get-AppxPackage | Remove-AppxPackage
+rem powershell Get-AppxPackage | Remove-AppxPackage
 
 rem # Find and Remove for all existing user packages
-powershell Get-AppxPackage -AllUsers | Remove-AppxPackage
+rem powershell Get-AppxPackage -AllUsers | Remove-AppxPackage
 
 rem # Find, remove, and nevercomeback for every User and every future User on this computer
-powershell Get-AppxProvisionedPackage -online | Remove-AppxProvisionedPackage -online
+rem powershell Get-AppxProvisionedPackage -online | Remove-AppxProvisionedPackage -online
 
 rem # Remove all other apps except Microsoft Store
 rem # powershell -command "Get-AppXPackage | where-object {$_.name -notlike '*store*'} | Remove-AppxPackage"
