@@ -380,3 +380,6 @@ DisableDNSClient.bat / EnableDNSClient.bat (DO NOT USE) (Was able to be disabled
 DisableCOM+EventSystem.bat / EnableCOM+EventSystem.bat
 
 DisableDriverSignatureEnforcement.bat
+
+RemoveDriverSignatureEnforcement.bat
+
