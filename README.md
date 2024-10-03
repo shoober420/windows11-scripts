@@ -399,3 +399,5 @@ RemoveMicrosoftEdge.bat
 
 RemoveSecurityHealthUI.bat
 
+RemoveNarratorQuickStart.bat
+
