@@ -48,6 +48,7 @@ Update Video Drivers
  - NVIDIA: https://www.nvidia.com/download/find.aspx
   + Vulkan beta drivers (not recommended): https://developer.nvidia.com/vulkan-driver
  - NVCleanstall.txt
+ - NVIDIA Control Panel: https://github.com/Aetopia/Install-NVCPL
 
  - AMD: https://www.amd.com/en/support
 
@@ -147,9 +148,6 @@ RESTART
 - RefreshRate.bat (script settings need tweaked to match users computer hardware)
 - HDR_Switch.vbs (if you want HDR enabled)
 - RemoveActivateWindowsWatermark.bat (if needed)
-
-NOTE:
-If NVIDIA Control Panel is needed, go to https://github.com/Aetopia/Install-NVCPL
 
 # Windows Scripts
 
