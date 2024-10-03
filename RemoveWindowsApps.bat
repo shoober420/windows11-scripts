@@ -2,8 +2,9 @@ rem # Remove bloat windows apps
 rem # "winget list" shows installed apps
 rem # powershell -command "Get-AppxPackage | Select Name, PackageFullName" shows installed apps
 
-rem # WARNING
+rem # !!!WARNING!!!
 rem # This script may delete Windows Apps you use, do a back up in case anything is lost you need
+rem # !!!WARNING!!!
 
 PAUSE
 
@@ -189,8 +190,5 @@ Get-AppxProvisionedPackage -online | Remove-AppxProvisionedPackage -online
 
 rem # Remove all other apps except Microsoft Store
 rem # powershell -command "Get-AppXPackage | where-object {$_.name -notlike '*store*'} | Remove-AppxPackage"
-
-rem # Uninstalls "Remote Desktop Connection" program
-mstsc /uninstall
 
 PAUSE
