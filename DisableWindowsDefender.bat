@@ -3,7 +3,6 @@ rem # AV Software is bloat
 rem # Windows Firewall is bloat, use router firewall instead
 rem # Run in SAFE MODE
 
-rem # Disable services (it will stop WdFilter.sys as well, better not to disable the driver by itself)
 reg add "HKLM\System\CurrentControlSet\Services\WdBoot" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\System\CurrentControlSet\Services\WdFilter" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\System\CurrentControlSet\Services\WdNisDrv" /v "Start" /t REG_DWORD /d "4" /f
