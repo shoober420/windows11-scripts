@@ -180,13 +180,13 @@ powershell -command "Get-AppxPackage *Wunderlist* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *XING* | Remove-AppxPackage"
 
 # Find and Remove eveything
-Get-AppxPackage | Remove-AppxPackage
+powershell Get-AppxPackage | Remove-AppxPackage
 
 rem # Find and Remove for all existing user packages
-Get-AppxPackage -AllUsers | Remove-AppxPackage
+powershell Get-AppxPackage -AllUsers | Remove-AppxPackage
 
 rem # Find, remove, and nevercomeback for every User and every future User on this computer
-Get-AppxProvisionedPackage -online | Remove-AppxProvisionedPackage -online
+powershell Get-AppxProvisionedPackage -online | Remove-AppxProvisionedPackage -online
 
 rem # Remove all other apps except Microsoft Store
 rem # powershell -command "Get-AppXPackage | where-object {$_.name -notlike '*store*'} | Remove-AppxPackage"
