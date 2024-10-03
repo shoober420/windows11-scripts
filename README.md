@@ -391,7 +391,11 @@ RemovePeopleExperienceHost.bat
 
 RemoveShellExperienceHost.bat
 
+RemoveStartMenuExperienceHost.bat
+
 RemoveXboxGameCallableUI.bat
 
 RemoveMicrosoftEdge.bat
+
+RemoveSecurityHealthUI.bat
 
