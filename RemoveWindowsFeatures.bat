@@ -68,8 +68,11 @@ Dism /Online /Disable-Feature /FeatureName:TFTP /Quiet /NoRestart
 Dism /Online /Disable-Feature /FeatureName:TIFFIFilter /Quiet /NoRestart
 Dism /Online /Disable-Feature /FeatureName:NetFx4-AdvSrvs /Quiet /NoRestart
 Dism /Online /Disable-Feature /FeatureName:WCF-Services45 /Quiet /NoRestart
-
-
+Dism /Online /Disable-Feature /FeatureName:SimpleTCP /Quiet /NoRestart
+Dism /Online /Disable-Feature /FeatureName:Microsoft-RemoteDesktopConnection /Quiet /NoRestart
+Dism /Online /Disable-Feature /FeatureName:DirectoryServices-ADAM-Client /Quiet /NoRestart
+Dism /Online /Disable-Feature /FeatureName:SmbDirect /Quiet /NoRestart
+Dism /Online /Disable-Feature /FeatureName:MSRDC-Infrastructure /Quiet /NoRestart
 
 dism /online /Remove-Package /PackageName:Microsoft-Windows-HVSI-Components-Package /NoRestart
 dism /online /Remove-Package /PackageName:Microsoft-Windows-CodeIntegrity-Diagnostics-Package /NoRestart
