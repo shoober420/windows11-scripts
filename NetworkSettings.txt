@@ -1,7 +1,9 @@
 Network Settings
 
-Device Manager (devmgmt.msc) > Network adapters > NIC > Right click + Properties > Advanced tab
+Device Manager (devmgmt.msc) > Network adapters > NIC > Right click > Properties
 
+Advanced tab
+================
 ARP Offload: Enabled
 Downshift retries: Disabled (0)
 Energy-Efficient Ethernet: Disabled (0)
@@ -33,4 +35,8 @@ Wake on Link: Disabled
 Wake on Magic Packet: Disabled
 Wake on Pattern Match: Disabled
 Wake on Ping: Disabled
+
+Power Management tab
+=======================
+Uncheck all settings
 
