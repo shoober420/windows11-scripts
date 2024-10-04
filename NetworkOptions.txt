@@ -22,7 +22,7 @@ Link-Layer Topology Discovery Mapper I/O Driver
 Checkmark:
 Internet Protocol Version 4 (TCP/IPv4)
 
-Properties:
+Internet Protocol Version 4 (TCP/IPv4) Properties:
 General tab > Advanced > WINS tab
 
 Uncheck Enable LMHOSTS lookup
