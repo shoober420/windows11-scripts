@@ -240,12 +240,6 @@ reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Internet Settings\WinHtt
 reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Internet Settings" /v "TcpAutotuning" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\services\Tcpip\Parameters" /v "TcpHybridAck" /t REG_DWORD /d "0" /f
 
-rem # FastSendDatagramThreshold should match MTU value in decimal, not hexadecimal (usually 1472)
-rem # https://docs.oracle.com/cd/E13924_01/coh.340/e13818/perftune.htm
-rem # As opposed to NVIDIA saying to use a value of 64K
-rem # https://docs.nvidia.com/networking/display/winofv55054000/general+performance+optimization+and+tuning
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\AFD\Parameters" /v "FastSendDatagramThreshold" /t REG_DWORD /d "0x000005c0" /f
-
 rem # Disable Unicast
 reg add "HKLM\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile" /v "DisableUnicastResponsesToMulticastBroadcast" /t REG_DWORD /d "1" /f
 reg add "HKLM\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile" /v "DisableUnicastResponsesToMulticastBroadcast" /t REG_DWORD /d "1" /f
