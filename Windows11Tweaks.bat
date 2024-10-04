@@ -2844,4 +2844,9 @@ reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\QoS" /v "" /t REG_DWORD /d "0"
 rem # Winsock
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Winsock" /v "UseDelayedAcceptance" /t REG_DWORD /d "0" /f
 
+rem # Disable Windows Geolocation Provider
+reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\default\System\AllowLocation" /v "value" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\System" /v "AllowLocation" /t REG_DWORD /d "0" /f
+
+
 PAUSE
