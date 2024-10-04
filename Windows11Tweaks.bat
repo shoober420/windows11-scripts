@@ -2854,4 +2854,11 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\LeapSecondInformation" /v "Enable
 rem # Disable NVME Throttling
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Classpnp" /v "NVMeDisablePerfThrottling" /t REG_DWORD /d "1" /f
 
+rem # Swap File Control
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "SwapfileControl" /t REG_DWORD /d "0" /f
+
+rem # Disable WLAN Background Scan
+reg add "HKLM\SOFTWARE\Microsoft\Wlansvc" /v "DisableBackgroundScanOptimization" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\Wlansvc" /v "AllowVirtualStationExtensibility" /t REG_DWORD /d "0" /f
+
 PAUSE
