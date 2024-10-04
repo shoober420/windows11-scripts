@@ -45,8 +45,6 @@ RESTART (hold SHIFT while restarting)
 
 Troubleshoot > Advanced options > Startup Settings > Restart > 7) Disable driver signature enforcement
 
- - RemoveWindowsApps.bat
-
 Update Video Drivers
  - NVIDIA: https://www.nvidia.com/download/find.aspx
   + Vulkan beta drivers (not recommended): https://developer.nvidia.com/vulkan-driver
@@ -54,6 +52,10 @@ Update Video Drivers
  - NVIDIA Control Panel: https://github.com/Aetopia/Install-NVCPL
 
  - AMD: https://www.amd.com/en/support
+
+RESTART
+
+ - RemoveWindowsApps.bat
 
 Install DirectX End-User Runtime Web Installer (dxwebsetup.exe)
 - Download (https://www.microsoft.com/en-us/download/details.aspx?id=35)
