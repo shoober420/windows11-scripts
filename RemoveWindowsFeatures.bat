@@ -120,4 +120,19 @@ dism /online /Remove-Package /PackageName:Containers /NoRestart
 dism /online /Remove-Package /PackageName:Windows-Defender-ApplicationGuard /NoRestart
 dism /online /Remove-Package /PackageName:Containers-DisposableClientVM /NoRestart
 
+powershell Remove-WindowsCapability -Name Realtek -Online
+powershell Remove-WindowsCapability -Name Vmware -Online
+powershell Remove-WindowsCapability -Name InternetExplorer -Online
+powershell Remove-WindowsCapability -Name StepsRecorder -Online
+powershell Remove-WindowsCapability -Name WindowsMediaPlayer -Online
+powershell Remove-WindowsCapability -Name Wallpapers -Online
+powershell Remove-WindowsCapability -Name Print -Online
+powershell Remove-WindowsCapability -Name MathRecognizer -Online
+powershell Remove-WindowsCapability -Name OpenSSH -Online
+powershell Remove-WindowsCapability -Name QuickAssist -Online
+powershell Remove-WindowsCapability -Name OneSync -Online
+powershell Remove-WindowsCapability -Name LA57 -Online
+powershell Remove-WindowsCapability -Name Virtual -Online
+powershell Remove-WindowsCapability -Name Hello -Online
+
 PAUSE
