@@ -2848,5 +2848,10 @@ rem # Disable Windows Geolocation Provider
 reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\default\System\AllowLocation" /v "value" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\System" /v "AllowLocation" /t REG_DWORD /d "0" /f
 
+rem # Disable Leap Second Information
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\LeapSecondInformation" /v "Enabled" /t REG_DWORD /d "0" /f
+
+rem # Disable NVME Throttling
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Classpnp" /v "NVMeDisablePerfThrottling" /t REG_DWORD /d "1" /f
 
 PAUSE
