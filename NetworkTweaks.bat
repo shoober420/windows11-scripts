@@ -16,13 +16,19 @@ rem # Make sure "subinterface" matches network name
 netsh interface ipv4 set subinterface "Wi-Fi 2" mtu=1472 store=persistent
 netsh interface ipv4 set subinterface "Ethernet 3" mtu=1472 store=persistent
 
+rem # FastSendDatagramThreshold should match MTU value in decimal, not hexadecimal (usually 1472)
+rem # https://docs.oracle.com/cd/E13924_01/coh.340/e13818/perftune.htm
+rem # As opposed to NVIDIA saying to use a value of 64K
+rem # https://docs.nvidia.com/networking/display/winofv55054000/general+performance+optimization+and+tuning
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\AFD\Parameters" /v "FastSendDatagramThreshold" /t REG_DWORD /d "0x000005c0" /f
+
 rem # Set values according to core and thread count	
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Ndis\Parameters" /v "MaxNumRssCpus" /t REG_DWORD /d "8" /f	
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "MaxNumRssCpus" /t REG_DWORD /d "8" /f	
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Ndis\Parameters" /v "MaxNumRssThreads" /t REG_DWORD /d "32" /f	
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "MaxNumRssThreads" /t REG_DWORD /d "32" /f
 
-rem # Set to last Core on CPU (cpu count doesnt start with 0, so setting this to 9 will not actually mean core 8)
+rem # Set to last Core on CPU
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Ndis\Parameters" /v "RssBaseCpu" /t REG_DWORD /d "8" /f
 
 rem # NIC Tweaks
