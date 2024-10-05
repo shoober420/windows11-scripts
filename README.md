@@ -134,8 +134,8 @@ RESTART
  - RAMTweaks.bat (script settings need tweaked to match users computer hardware)
  - GPUTweaks.bat (script settings need tweaked to match users computer hardware)
  - CPUTweaks.bat (script settings need tweaked to match users computer hardware)
- - UseLargePages.bat (add user programs to enable Large Pages for them)
- - HighPriority.bat (add user programs to enable High Priority for them)
+ - UseLargePages.bat (add programs to enable Large Pages for them)
+ - HighPriority.bat (add programs to enable High Priority for them)
 
  - Disable*.bat (DisableAppX.bat causes File Explorer to crash when opening right click context menu) (DO NOT RUN DisableStateRepository.bat and DisableDNSClient.bat)
 
@@ -152,8 +152,7 @@ RESTART
 
 - StartUpBATs.bat (run everytime after login)
 - RefreshRate.bat (script settings need tweaked to match users computer hardware)
-- HDR_Switch.vbs (if you want HDR enabled)
-- RemoveActivateWindowsWatermark.bat (if needed)
+- HDR_Switch.vbs
 
 # Windows Scripts
 
