@@ -33,7 +33,6 @@ Run Windows update
 RESTART
 
  - DisableUAC.bat
- - DisableWinHTTP.bat (WIRED CONNECTION ONLY)
 
 Update NIC Drivers
  - NetworkSettings.txt
@@ -57,6 +56,9 @@ Update Video Drivers
 
 RESTART
 
+Uninstall Windows Terminal
+ - RemoveWindowsTerminal.bat
+
  - RemoveWindowsApps.bat
 
 Install DirectX End-User Runtime Web Installer (dxwebsetup.exe)
@@ -65,9 +67,6 @@ Install DirectX End-User Runtime Web Installer (dxwebsetup.exe)
 Install SetACL
  - Download (https://helgeklein.com/download/)
  - Extract into %USERPROFILE%\Downloads
-
-Uninstall Windows Terminal
- - RemoveWindowsTerminal.bat
 
 Download Winget
  - InstallWinget.bat
@@ -129,6 +128,7 @@ RESTART
  - !!! PowerPlanUltra.bat (only if Ultimate Performance power plan profile is NOT present: powercfg -L)
  - PowerPlanSettings.bat
  - ThreadQuantum.bat
+ - DisableWinHTTP.bat (WIRED CONNECTION ONLY)
 
  - NetworkTweaks.bat (script settings need tweaked to match users computer hardware)
  - RAMTweaks.bat (script settings need tweaked to match users computer hardware)
