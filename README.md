@@ -95,7 +95,7 @@ Install Intel Chipset INF Utility
 
 - RemoveRemoteDesktopConnection.bat
 - Internet&SecuritySettings.bat
-- RemoveWindowsFeatures.bat (possible AUTO-REBOOT)
+- RemoveWindowsFeatures.bat
 
 RESTART
 
