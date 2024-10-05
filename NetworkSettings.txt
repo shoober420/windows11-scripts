@@ -29,8 +29,8 @@ NS Offload: Enabled (1)
 Priority & VLAN: Priority & VLAN Disabled (0)
 Recieve Buffers: 4096
 Recieve Side Scaling: Enabled (1)
-Recv Segment Coalescing (IPv4): Enabled (1)
-Recv Segment Coalescing (IPv6): Enabled (1)
+Recv Segment Coalescing (IPv4): Disabled (1)
+Recv Segment Coalescing (IPv6): Disabled (1)
 Speed & Duplex: Auto Negotiation (0)
 TCP/UDP Checksum Offload (IPv4): Rx & Tx Enabled
 TCP/UDP Checksum Offload (IPv6): Rx & Tx Enabled
