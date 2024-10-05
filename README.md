@@ -20,7 +20,7 @@ NOTE:
 If at any point during the process you get stuck at "Just a moment..." screen before login, press CTRL+ALT+DEL to force login screen to show
 
 NOTE:
-Make sure to disable any unused network adapters under Device Manager, or scripts will run very slow
+Make sure to disable any unused network adapters under Device Manager, or scripts may run very slow
 
 # Instructions
 
