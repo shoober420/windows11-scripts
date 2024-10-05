@@ -86,16 +86,16 @@ Download Chrome Canary
 Update Winget programs
  - WingetUpdateApps.bat
 
+- RemoveRemoteDesktopConnection.bat
+- Internet&SecuritySettings.bat
+- RemoveWindowsFeatures.bat
+
 Install Intel DSA (Driver Support Assistant)
  - Download (https://www.intel.com/content/www/us/en/support/detect.html)
  - Check for updates with Intel DSA
 
 Install Intel Chipset INF Utility
  - Download (https://www.intel.com/content/www/us/en/download/19347/chipset-inf-utility.html)
-
-- RemoveRemoteDesktopConnection.bat
-- Internet&SecuritySettings.bat
-- RemoveWindowsFeatures.bat
 
 RESTART
 
