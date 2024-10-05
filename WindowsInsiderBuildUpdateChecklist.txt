@@ -60,6 +60,8 @@ RESTART
 
  - RemoveWindowsApps.bat
 
+RESTART
+
 Install DirectX End-User Runtime Web Installer (dxwebsetup.exe)
 - Download (https://www.microsoft.com/en-us/download/details.aspx?id=35)
 
