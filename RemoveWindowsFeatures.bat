@@ -3,6 +3,10 @@ rem # Windows update services required for DISM
 rem # "DISM /online /get-features /format:table" shows installed features
 rem # "Get-WindowsOptionalFeature -Online" shows installed features
 
+rem # Possible AUTO-REBOOT if ran without admin privileges
+
+PAUSE
+
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\UsoSvc" /v "Start" /t REG_DWORD /d "2" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\wisvc" /v "Start" /t REG_DWORD /d "2" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\wuauserv" /v "Start" /t REG_DWORD /d "2" /f
