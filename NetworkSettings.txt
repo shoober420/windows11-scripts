@@ -1,5 +1,8 @@
 Network Settings
 
+NOTE:
+Make sure to disable any unused network adapters under Device Manager, or scripts will run very slow
+
 Device Manager (devmgmt.msc) > Network adapters > NIC > Right click > Properties
 
 Advanced tab
