@@ -58,6 +58,7 @@ Update Video Drivers
 RESTART
 
  - RemoveWindowsApps.bat
+ - RemoveWindowsFeatures.bat
 
 RESTART
 
@@ -88,7 +89,6 @@ Update Winget programs
 
 - RemoveRemoteDesktopConnection.bat
 - Internet&SecuritySettings.bat
-- RemoveWindowsFeatures.bat
 
 Install Intel DSA (Driver Support Assistant)
  - Download (https://www.intel.com/content/www/us/en/support/detect.html)
