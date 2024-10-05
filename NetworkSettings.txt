@@ -23,7 +23,7 @@ Large Send Offload V2 (IPv4): Enabled (1)
 Large Send Offload V2 (IPv6): Enabled (1)
 Locally Administered Address: Not Present
 Log Link State Event: Disabled (0)
-Maximum number of RSS Queues: 8 Queues (8)
+Maximum number of RSS Queues: 4 Queues (8 Queues may cause laggy internet)
 NDIS QoS: QoS Disabled
 NS Offload: Enabled (1)
 Priority & VLAN: Priority & VLAN Disabled (0)
