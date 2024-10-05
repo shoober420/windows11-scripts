@@ -1,7 +1,10 @@
 Network Settings
 
 NOTE:
-Make sure to disable any unused network adapters under Device Manager, or scripts will run very slow
+Make sure to disable any unused network adapters under Device Manager, or scripts will run very slow.
+
+NOTE:
+Internet may drop after applying settings, it returns after restarting.
 
 Device Manager (devmgmt.msc) > Network adapters > NIC > Right click > Properties
 
