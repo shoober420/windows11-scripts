@@ -32,6 +32,7 @@ Run Windows update
 
 RESTART
 
+ - RemoveWindowsTerminal.bat
  - DisableUAC.bat
 
 Update NIC Drivers
@@ -55,9 +56,6 @@ Update Video Drivers
  - AMD: https://www.amd.com/en/support
 
 RESTART
-
-Uninstall Windows Terminal
- - RemoveWindowsTerminal.bat
 
  - RemoveWindowsApps.bat
 
