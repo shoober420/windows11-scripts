@@ -419,3 +419,5 @@ RemovePrintQueueActionCenter.bat
 RemoveMicrosoftUIXamlCBS.bat / InstallMicrosoftUIXamlCBS.bat (causes constant screen flicker and blinking when removed)
 
 DisableTouchPad.bat / EnableTouchPad.bat
+
+BlockRazerSynapse.bat (prevents Razer Synapse auto install rubber ducky attack)
