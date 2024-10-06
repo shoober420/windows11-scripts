@@ -786,6 +786,7 @@ pacman -S mingw-w64-x86_64-toolchain mingw-w64-i686-toolchain mingw-w64-clang-x8
 mmsys.cpl - sound settings
 explorer - file explorer
 services.msc - services
+sysdm.cpl - System Properties
 devmgmt.msc - device manager
 ncpa.cpl - Network Settings (needs UI enabled)
 inetcpl.cpl - Internet Properties
