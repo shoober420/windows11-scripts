@@ -1,4 +1,5 @@
 rem # Prevent Razer Synapse auto install (rubber ducky attack)
+rem # use OpenRGB instead (https://github.com/CalcProgrammer1/OpenRGB)
 
 del C:\Windows\Installer\Razer
 mkdir C:\Windows\Installer\Razer
