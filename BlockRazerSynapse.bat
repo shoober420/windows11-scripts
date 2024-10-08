@@ -2,6 +2,8 @@ rem # Prevent Razer Synapse auto install (rubber ducky attack)
 
 rem # NEVER INSTALL RGB SOFTWARE, LEAVE AT DEFAULTS
 
+rem # You must uninstall all RGB software and power down the machine for 5 minutes to HOPEFULLY get everything working again
+
 rem # OpenRGB (DANGEROUSLY BUGGY)
 rem # OpenRGB can bork your RAM RGB by itself, and even fan rgb, along with led strips if used in conjuction with other RGB software
 
