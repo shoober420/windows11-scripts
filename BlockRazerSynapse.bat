@@ -8,7 +8,7 @@ rem # OpenRGB can bork your RAM RGB by itself, and even fan rgb, along with led 
 rem # if OpenRGB borks fan lighting and shuts it off even after rebooting, you will need to download the company software (NZXT CAM) and tweak it again to get it to turn on
 
 rem # SignalRGB (bloat)
-rem # SignalRGB needs to be running jn the background for RGB effects to work
+rem # SignalRGB needs to be running in the background for RGB effects to work
 
 del C:\Windows\Installer\Razer
 mkdir C:\Windows\Installer\Razer
