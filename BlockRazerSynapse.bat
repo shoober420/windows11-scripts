@@ -6,6 +6,7 @@ rem # You must uninstall all RGB software and power down the machine for 5 minut
 
 rem # OpenRGB (DANGEROUSLY BUGGY)
 rem # OpenRGB can bork your RAM RGB by itself, and even fan rgb, along with led strips if used in conjuction with other RGB software
+rem # Only use experimental builds (https://openrgb.org/index.html#pl)
 
 rem # if OpenRGB borks fan lighting and shuts it off even after rebooting, you will need to download the company software (NZXT CAM) and tweak it again to get it to turn on
 
