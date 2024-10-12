@@ -154,6 +154,9 @@ RESTART
 - RefreshRate.bat (script settings need tweaked to match users computer hardware)
 - HDR_Switch.vbs
 
+Steve Gibson ShieldsUp! firewall test
+ - grc.com
+
 # Windows Scripts
 
 Windows11Checklist.txt (information on tweaks)
