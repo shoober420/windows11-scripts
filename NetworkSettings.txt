@@ -13,13 +13,13 @@ Device Manager (devmgmt.msc) > Network adapters > NIC > Right click > Properties
 
 Advanced tab
 ================
-ARP Offload: Enabled
+ARP Offload: Disabled (0)
 Downshift retries: Disabled (0)
 Energy-Efficient Ethernet: Disabled (0)
 Flow Control: Rx & Tx Enabled (3)
 Interrupt Moderation: Disabled (0)
 Interrupt Moderation Rate: Disabled (0) (ITR)
-IPv4 Checksum Offload: Rx & Tx Enabled (3)
+IPv4 Checksum Offload: Disabled (0)
 Jumbo Packet: Disabled (1472)
 Large Send Offload V1 (IPv4): Disabled (0)
 Large Send Offload V2 (IPv4): Disabled (0)
@@ -28,15 +28,15 @@ Locally Administered Address: Not Present
 Log Link State Event: Disabled (0)
 Maximum number of RSS Queues: 4 Queues (8 Queues may cause laggy internet)
 NDIS QoS: QoS Disabled
-NS Offload: Enabled (1)
+NS Offload: Disabled (0)
 Priority & VLAN: Priority & VLAN Disabled (0)
 Recieve Buffers: 4096
 Recieve Side Scaling: Enabled (1)
 Recv Segment Coalescing (IPv4): Disabled (0)
 Recv Segment Coalescing (IPv6): Disabled (0)
 Speed & Duplex: Auto Negotiation (0)
-TCP/UDP Checksum Offload (IPv4): Rx & Tx Enabled
-TCP/UDP Checksum Offload (IPv6): Rx & Tx Enabled
+TCP/UDP Checksum Offload (IPv4): Disabled (0)
+TCP/UDP Checksum Offload (IPv6): Disabled (0)
 Transmit Buffers: 8184
 VLAN ID: 0
 Wake from power off state: Disabled
