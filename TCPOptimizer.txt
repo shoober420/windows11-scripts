@@ -3,14 +3,17 @@ Download TCP Optimizer
 
 Requires WMI - Windows Management Instrumentation
 
+Test internet speed (https://www.speedtest.net/)
+
 General Settings
 =====================
-
- - Test internet speed (https://www.speedtest.net/)
-  + set connection speed slider
- - set MTU
+ 
+ - Connection Speed
+  + adjust connection speed slider according to speedtest results
+ - Choose settings: Custom
+ - MTU (1472)
   + open Command Prompt
-  + ping www.google.com -f -l 1500 (keep lowering -l value until packets aren't fragmented, from 1500 to probably 1472)
+  + ping www.google.com -f -l 1500 (keep lowering value until packets aren't fragmented)
  - TCP Window Auto-Tuning: normal
  - Windows Scaling heuristics: disabled
  - Congestion Control Provider: ctcp
