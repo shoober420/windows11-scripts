@@ -23,9 +23,9 @@ powershell.exe Enable-WindowsOptionalFeature -Online -FeatureName MicrosoftWindo
 TIMEOUT /T 5
 
 PowerShell.exe Set-NetTCPSetting -SettingName internet -AutoTuningLevelLocal normal
-PowerShell.exe Set-NetTCPSetting -SettingName internet -ScalingHeuristics disabledcz
+PowerShell.exe Set-NetTCPSetting -SettingName internet -ScalingHeuristics disabled
 PowerShell.exe Set-NetTCPSetting -SettingName internet -EcnCapability disabled
-PowerShell.exe Set-NetTCPSetting -SettingName internet -Timestamps disabledac
+PowerShell.exe Set-NetTCPSetting -SettingName internet -Timestamps disabled
 PowerShell.exe Set-NetTCPSetting -SettingName internet -MaxSynRetransmissions 2
 PowerShell.exe Set-NetTCPSetting -SettingName internet -NonSackRttResiliency disable
 PowerShell.exe Set-NetTCPSetting -SettingName internet -InitialRto 2000
@@ -35,6 +35,7 @@ powershell.exe Set-NetOffloadGlobalSetting -ReceiveSideScaling enable
 powershell.exe Set-NetOffloadGlobalSetting -Chimney disabled
 PowerShell.exe Disable-NetAdapterLso -Name *
 PowerShell.exe Enable-NetAdapterChecksumOffload -Name *
+
 powershell.exe Disable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol
 ECHO Y | powershell.exe Set-SmbServerConfiguration -EnableSMB1Protocol $false
 ECHO Y | powershell.exe Set-SmbServerConfiguration -EnableSMB2Protocol $false
@@ -197,13 +198,13 @@ rem # NIC Properties
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "MaximumReassemblyHeaders" /t REG_DWORD /d "0x0000ffff" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "DisableMediaSenseEventLog" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "DisableRss" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "DisableTaskOffload" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "DisableTcpChimneyOffload" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "DisableTaskOffload" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "DisableTcpChimneyOffload" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "EnableAddrMaskReply" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "EnableBcastArpReply" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "EnableConnectionRateLimiting" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "EnableDca" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "EnableHeuristics" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "EnableHeuristics" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "EnableIPAutoConfigurationLimits" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "EnableTCPA" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "EnableWsd" /t REG_DWORD /d "0" /f
