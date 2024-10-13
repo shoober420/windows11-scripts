@@ -22,7 +22,7 @@ powershell.exe Enable-WindowsOptionalFeature -Online -FeatureName MicrosoftWindo
 
 TIMEOUT /T 5
 
-PowerShell.exe Set-NetTCPSetting -SettingName internet -AutoTuningLevelLocal normal
+PowerShell.exe Set-NetTCPSetting -SettingName internet -AutoTuningLevelLocal disabled
 PowerShell.exe Set-NetTCPSetting -SettingName internet -ScalingHeuristics disabled
 PowerShell.exe Set-NetTCPSetting -SettingName internet -EcnCapability disabled
 PowerShell.exe Set-NetTCPSetting -SettingName internet -Timestamps disabled
@@ -138,7 +138,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters" /v "EnableA
 
 rem # SG TCP Optimizer program tweaks
 rem # https://www.speedguide.net/downloads.php
-netsh int tcp set global autotuninglevel=normal
+netsh int tcp set global autotuninglevel=disabled
 netsh int tcp set global timestamps=disabled
 netsh int tcp set global chimney=disabled
 netsh int tcp set global initialRto=2000
@@ -147,7 +147,6 @@ netsh int tcp set global nonsackrttresiliency=disabled
 netsh int tcp set global maxsynretransmissions=2
 netsh int tcp set global rss=enabled
 netsh int tcp set global rsc=disabled
-netsh int tcp set supplemental internet congestionprovider=ctcp
 netsh interface tcp set heuristics disabled
 netsh interface tcp set global ecncapability=disabled
 netsh int udp set global uro=enabled
@@ -165,6 +164,7 @@ netsh int tcp set security profiles=disabled
 netsh int tcp set heuristics forcews=disabled
 netsh int ipv4 set dynamicport tcp start=1025 num=65411
 netsh int ipv4 set dynamicport udp start=1025 num=65411
+
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\ServiceProvider" /v "LocalPriority" /t REG_DWORD /d "4" /f	
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\ServiceProvider" /v "HostsPriority" /t REG_DWORD /d "5" /f	
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\ServiceProvider" /v "DnsPriority" /t REG_DWORD /d "6" /f	
@@ -180,6 +180,13 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "DisableIPS
 
 netsh int isatap set state disable
 netsh int tcp set global ecn=disabled
+
+rem # enable BBR2 
+netsh int tcp set supplemental Template=Internet CongestionProvider=bbr2
+netsh int tcp set supplemental Template=Datacenter CongestionProvider=bbr2
+netsh int tcp set supplemental Template=Compat CongestionProvider=bbr2
+netsh int tcp set supplemental Template=DatacenterCustom CongestionProvider=bbr2
+netsh int tcp set supplemental Template=InternetCustom CongestionProvider=bbr2
 
 rem # Disable IPv6
 netsh int ipv6 isatap set state disabled
@@ -235,10 +242,10 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\AFD\Parameters" /v "DisableAddre
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\AFD\Parameters" /v "DisableRawSecurity" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\AFD\Parameters" /v "DisableDirectAcceptEx" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\AFD\Parameters" /v "DisableChainedReceive" /t REG_DWORD /d "1" /f
-reg add "HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp" /v "TcpAutotuning" /t REG_DWORD /d "1" /f
-reg add "HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Internet Settings" /v "TcpAutotuning" /t REG_DWORD /d "1" /f
-reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp" /v "TcpAutotuning" /t REG_DWORD /d "1" /f
-reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Internet Settings" /v "TcpAutotuning" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp" /v "TcpAutotuning" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Internet Settings" /v "TcpAutotuning" /t REG_DWORD /d "0" /f
+reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp" /v "TcpAutotuning" /t REG_DWORD /d "0" /f
+reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Internet Settings" /v "TcpAutotuning" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\services\Tcpip\Parameters" /v "TcpHybridAck" /t REG_DWORD /d "0" /f
 
 rem # Disable Unicast
