@@ -16,7 +16,7 @@ Advanced tab
 ARP Offload: Disabled (0)
 Downshift retries: Disabled (0)
 Energy-Efficient Ethernet: Disabled (0)
-Flow Control: Rx & Tx Enabled (3)
+Flow Control: Disabled (0)
 Interrupt Moderation: Disabled (0)
 Interrupt Moderation Rate: Disabled (0) (ITR)
 IPv4 Checksum Offload: Disabled (0)
