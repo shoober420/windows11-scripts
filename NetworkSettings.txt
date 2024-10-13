@@ -6,6 +6,9 @@ Make sure to disable any unused network adapters under Device Manager, or script
 NOTE:
 Internet may drop after applying settings, it returns after restarting.
 
+NOTE:
+Disable all offloading settings for gaming
+
 Device Manager (devmgmt.msc) > Network adapters > NIC > Right click > Properties
 
 Advanced tab
