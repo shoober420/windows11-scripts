@@ -21,7 +21,7 @@ General Settings
   + normal causes bufferbloat
   + waveform.com/tools/bufferbloat
  - Windows Scaling heuristics: disabled
- - Congestion Control Provider: ctcp
+ - Congestion Control Provider: CUBIC
  - Receive-Side Scaling (RSS): enabled
  - R.Segment Coalescing (RSC): disabled
  - Time to Live (TTL): 64
