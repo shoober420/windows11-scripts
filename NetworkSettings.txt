@@ -7,7 +7,7 @@ NOTE:
 Internet may drop after applying settings, it returns after restarting.
 
 NOTE:
-Disable all offloading settings for gaming
+Disable all offloading settings except Checksum Offload for gaming
 
 Device Manager (devmgmt.msc) > Network adapters > NIC > Right click > Properties
 
@@ -19,7 +19,7 @@ Energy-Efficient Ethernet: Disabled (0)
 Flow Control: Disabled (0)
 Interrupt Moderation: Disabled (0)
 Interrupt Moderation Rate: Disabled (0) (ITR)
-IPv4 Checksum Offload: Disabled (0)
+IPv4 Checksum Offload: Rx & Tx Enabled (3)
 Jumbo Packet: Disabled (1472)
 Large Send Offload V1 (IPv4): Disabled (0)
 Large Send Offload V2 (IPv4): Disabled (0)
