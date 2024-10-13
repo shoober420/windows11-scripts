@@ -3,6 +3,9 @@ Download TCP Optimizer
 
 Requires WMI - Windows Management Instrumentation
 
+NOTE:
+Disable all offloading settings for gaming
+
 Test internet speed (https://www.speedtest.net/)
 
 General Settings
@@ -22,7 +25,7 @@ General Settings
  - R.Segment Coalescing (RSC): disabled
  - Time to Live (TTL): 64
  - ECN Capability: disabled
- - Checksum Offloading: enabled
+ - Checksum Offloading: disabled
  - TCP Chimney Offload: disabled
  - Large Send Offload (LSO): disabled
  - TCP 1323 Timestamps: disabled
