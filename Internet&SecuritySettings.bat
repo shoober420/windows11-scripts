@@ -1,6 +1,10 @@
-rem Internet and security settings (powershell requires WMI service)
+rem # Internet and security settings (powershell requires WMI service)
 
-rem Enable and start WMI
+rem # Disable all offloading except Checksum Offloading for gaming
+
+rem # 
+
+rem # Enable and start WMI
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD /d "2" /f
 sc config winmgmt start= auto
