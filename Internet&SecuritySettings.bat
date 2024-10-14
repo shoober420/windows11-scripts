@@ -2,6 +2,8 @@ rem # Internet and security settings (powershell requires WMI service)
 
 rem # Disable all offloading except Checksum Offloading for gaming
 
+rem # Disable Auto-Tuning, causes high bufferbloat
+
 rem # 
 
 rem # Enable and start WMI
