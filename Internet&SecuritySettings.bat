@@ -4,6 +4,8 @@ rem # Disable all offloading except Checksum Offloading for gaming
 
 rem # Disable Auto-Tuning, causes high bufferbloat
 
+rem # https://www.speedguide.net/articles/gaming-tweaks-5812
+
 rem # Enable and start WMI
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD /d "2" /f
