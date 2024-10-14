@@ -26,7 +26,7 @@ General Settings
  - Receive-Side Scaling (RSS): enabled
  - R.Segment Coalescing (RSC): disabled
  - Time to Live (TTL): 64
- - ECN Capability: disabled
+ - ECN Capability: enabled
  - Checksum Offloading: enabled
  - TCP Chimney Offload: disabled
  - Large Send Offload (LSO): disabled
