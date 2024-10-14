@@ -153,7 +153,7 @@ netsh interface tcp set global ecncapability=disabled
 rem # UDP Receive Segment Coalescing Offload (URO)
 netsh int udp set global uro=disabled
 
-netsh winsock set autotuning on
+netsh winsock set autotuning off
 netsh interface tcp set global hystart=disabled
 netsh interface tcp set global fastopen=enabled
 netsh interface tcp set global fastopenfallback=enabled 
