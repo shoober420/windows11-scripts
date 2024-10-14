@@ -149,7 +149,10 @@ netsh int tcp set global rss=enabled
 netsh int tcp set global rsc=disabled
 netsh interface tcp set heuristics disabled
 netsh interface tcp set global ecncapability=disabled
-netsh int udp set global uro=enabled
+
+rem # UDP Receive Segment Coalescing Offload (URO)
+netsh int udp set global uro=disabled
+
 netsh winsock set autotuning on
 netsh interface tcp set global hystart=disabled
 netsh interface tcp set global fastopen=enabled
