@@ -164,8 +164,11 @@ netsh int udp set global uro=disabled
 netsh winsock set autotuning on
 netsh interface tcp set global hystart=disabled
 netsh interface tcp set global fastopen=enabled
-netsh interface tcp set global fastopenfallback=enabled 
-netsh interface tcp set global pacingprofile=slowstart
+netsh interface tcp set global fastopenfallback=enabled
+
+rem # TCP Pacing delays traffic, keep disabled
+netsh interface tcp set global pacingprofile=off
+
 netsh interface ip set global neighborcachelimit=4096
 netsh interface tcp set heuristics wsh=disabled
 netsh interface ip set global taskoffload=disabled
