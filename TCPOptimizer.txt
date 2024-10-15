@@ -17,8 +17,8 @@ General Settings
  - MTU (1472)
   + open Command Prompt
   + ping www.google.com -f -l 1500 (keep lowering value until packets aren't fragmented)
- - TCP Window Auto-Tuning: disabled
-  + normal causes bufferbloat
+ - TCP Window Auto-Tuning: normal
+  + normal does NOT cause bufferbloat, DONT set to disabled to increase score
   + waveform.com/tools/bufferbloat
  - Windows Scaling heuristics: disabled
  - Congestion Control Provider: BBR2
