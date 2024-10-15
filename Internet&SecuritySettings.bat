@@ -6,6 +6,8 @@ rem # Disable Auto-Tuning, causes high bufferbloat
 
 rem # https://www.speedguide.net/articles/gaming-tweaks-5812
 
+rem # https://www.speedguide.net/articles/windows-2kxp-registry-tweaks-157/p-1/
+
 rem # Enable and start WMI
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD /d "2" /f
