@@ -42,7 +42,7 @@ Advanced Settings
  - NetbtPriority: 7
  - Max SYN Retransmissions: 2
  - NonSackRttResiliency: disabled
- - Initial RTO: 2000
+ - Initial RTO: 1000
  - Min RTO: 300
  - NetworkThrottlingIndex: disabled: ffffffff
  - SystemResponsiveness: gaming: 0
