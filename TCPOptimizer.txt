@@ -13,6 +13,7 @@ General Settings
  
  - Connection Speed
   + adjust connection speed slider according to speedtest results
+ - Network Adapter selection: NIC NAME
  - Choose settings: Custom
  - MTU (1472)
   + open Command Prompt
