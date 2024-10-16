@@ -36,7 +36,7 @@ PowerShell.exe Set-NetTCPSetting -SettingName internet -EcnCapability disabled
 PowerShell.exe Set-NetTCPSetting -SettingName internet -Timestamps disabled
 PowerShell.exe Set-NetTCPSetting -SettingName internet -MaxSynRetransmissions 2
 PowerShell.exe Set-NetTCPSetting -SettingName internet -NonSackRttResiliency disable
-PowerShell.exe Set-NetTCPSetting -SettingName internet -InitialRto 2000
+PowerShell.exe Set-NetTCPSetting -SettingName internet -InitialRto 1000
 PowerShell.exe Set-NetTCPSetting -SettingName internet -MinRto 300
 powershell.exe Set-NetOffloadGlobalSetting -ReceiveSegmentCoalescing disabled
 powershell.exe Set-NetOffloadGlobalSetting -ReceiveSideScaling enable
@@ -149,7 +149,7 @@ rem # https://www.speedguide.net/downloads.php
 netsh int tcp set global autotuninglevel=normal
 netsh int tcp set global timestamps=disabled
 netsh int tcp set global chimney=disabled
-netsh int tcp set global initialRto=2000
+netsh int tcp set global initialRto=1000
 netsh int tcp set global minRto=300
 netsh int tcp set global nonsackrttresiliency=disabled
 netsh int tcp set global maxsynretransmissions=2
