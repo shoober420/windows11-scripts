@@ -30,7 +30,7 @@ powershell.exe Enable-WindowsOptionalFeature -Online -FeatureName MicrosoftWindo
 
 TIMEOUT /T 5
 
-PowerShell.exe Set-NetTCPSetting -SettingName internet -AutoTuningLevelLocal disabled
+PowerShell.exe Set-NetTCPSetting -SettingName internet -AutoTuningLevelLocal normal
 PowerShell.exe Set-NetTCPSetting -SettingName internet -ScalingHeuristics disabled
 PowerShell.exe Set-NetTCPSetting -SettingName internet -EcnCapability disabled
 PowerShell.exe Set-NetTCPSetting -SettingName internet -Timestamps disabled
