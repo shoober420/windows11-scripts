@@ -176,12 +176,18 @@ rem # TCP Pacing delays traffic, keep disabled
 netsh interface tcp set global pacingprofile=off
 
 netsh interface ip set global neighborcachelimit=4096
-netsh interface tcp set heuristics wsh=disabled
+
+rem # TCP window scaling
+netsh interface tcp set heuristics wsh=enabled
+
 netsh interface ip set global taskoffload=disabled
 netsh interface ip set global mediasenseeventlog=disabled
 netsh int tcp set security mpp=disabled
 netsh int tcp set security profiles=disabled
-netsh int tcp set heuristics forcews=disabled
+
+rem # force window scaling
+netsh int tcp set heuristics forcews=enabled
+
 netsh int ipv4 set dynamicport tcp start=1025 num=65411
 netsh int ipv4 set dynamicport udp start=1025 num=65411
 
