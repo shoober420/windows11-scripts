@@ -8,9 +8,9 @@ rem # Go to Control Panel > Network and Sharing Center for network name
 rem # Make sure "name=" matches network name, half of internet breaks unless DNS is specified
 rem # Enables Cloudflare DNS
 netsh interface ip set dns name="Wi-Fi" static 1.1.1.1
-netsh interface ip add dns name="Wi-Fi" 1.1.1.1 index=2
+netsh interface ip add dns name="Wi-Fi" 1.0.0.1 index=2
 netsh interface ip set dns name="Ethernet" static 1.1.1.1
-netsh interface ip add dns name="Ethernet" 1.1.1.1 index=2
+netsh interface ip add dns name="Ethernet" 1.0.0.1 index=2
 
 rem # Make sure "subinterface" matches network name
 netsh interface ipv4 set subinterface "Wi-Fi" mtu=1472 store=persistent
