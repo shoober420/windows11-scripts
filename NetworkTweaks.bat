@@ -23,7 +23,7 @@ rem # https://docs.nvidia.com/networking/display/winofv55054000/general+performa
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\AFD\Parameters" /v "FastSendDatagramThreshold" /t REG_DWORD /d "0x000005c0" /f
 
 rem # Set values according to core and thread count
-rem # 8+ can cause laggy internet
+rem # 8+ Queues may cause laggy internet, test by running RemoveWindowsApps.bat
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Ndis\Parameters" /v "MaxNumRssCpus" /t REG_DWORD /d "4" /f	
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "MaxNumRssCpus" /t REG_DWORD /d "4" /f	
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Ndis\Parameters" /v "MaxNumRssThreads" /t REG_DWORD /d "32" /f	
@@ -49,7 +49,7 @@ rem # find value for 000X at HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control
 rem # NIC parameters are at HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\"Class Guid"\<NIC ID>\Ndi\Params
 
 rem # Set to how many cores your CPU has
-rem # 8+ may cause laggy internet
+rem # 8+ Queues may cause laggy internet, test by running RemoveWindowsApps.bat
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*NumRssQueues" /t REG_SZ /d "4" /f
 
 rem # MIMO Power Save Mode - 3 Disable
