@@ -106,6 +106,12 @@ powershell.exe Set-Processmitigation -System -Disable AuditEnableRopSimExec
 powershell.exe Set-Processmitigation -System -Disable AuditSEHOP
 powershell.exe Set-Processmitigation -System -Disable DisallowChildProcessCreation
 
+rem # Disable Memory Compression
+PowerShell -Command "Disable-MMAgent -MemoryCompression"
+
+rem # Disable Page Combining
+PowerShell -Command "Disable-MMAgent -PageCombining"
+
 rem # Disable Data Execution Prevention (DEP)
 rem # Fixes stuttering in games
 BCDEDIT /SET {CURRENT} NX ALWAYSOFF
