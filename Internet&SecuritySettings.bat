@@ -296,6 +296,8 @@ reg add "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon" /v "CachedL
 
 reg add "HKLM\SYSTEM\CurrentControlSet\services\Tcpip\Parameters" /v "TcpInitialRTT" /t REG_DWORD /d "1000" /f
 
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\QoS" /v "" /t REG_DWORD /d "0" /f
+
 rem # Disable Unicast
 reg add "HKLM\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile" /v "DisableUnicastResponsesToMulticastBroadcast" /t REG_DWORD /d "1" /f
 reg add "HKLM\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile" /v "DisableUnicastResponsesToMulticastBroadcast" /t REG_DWORD /d "1" /f
