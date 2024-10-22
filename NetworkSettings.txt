@@ -26,7 +26,7 @@ Large Send Offload V2 (IPv4): Disabled (0)
 Large Send Offload V2 (IPv6): Disabled (0)
 Locally Administered Address: Not Present
 Log Link State Event: Disabled (0)
-Maximum number of RSS Queues: 4 Queues (8 Queues may cause laggy internet)
+Maximum number of RSS Queues: 4 Queues (8 Queues may cause laggy internet, test by running RemoveWindowsApps.bat)
 NDIS QoS: QoS Disabled
 NS Offload: Disabled (0)
 Priority & VLAN: Priority & VLAN Disabled (0)
