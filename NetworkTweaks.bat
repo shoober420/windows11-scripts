@@ -8,9 +8,9 @@ rem # Go to Control Panel > Network and Sharing Center for network name
 rem # Make sure "name=" matches network name, half of internet breaks unless DNS is specified
 rem # Enables Cloudflare DNS
 netsh interface ip set dns name="Wi-Fi" static 1.1.1.1
-netsh interface ip add dns name="Wi-Fi" 1.0.0.1 index=2
+rem netsh interface ip add dns name="Wi-Fi" 1.0.0.1 index=2
 netsh interface ip set dns name="Ethernet" static 1.1.1.1
-netsh interface ip add dns name="Ethernet" 1.0.0.1 index=2
+rem netsh interface ip add dns name="Ethernet" 1.0.0.1 index=2
 
 rem # Make sure "subinterface" matches network name
 netsh interface ipv4 set subinterface "Wi-Fi" mtu=1472 store=persistent
@@ -107,5 +107,8 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08
 
 rem # Interrupt Moderation Rate: Interrupt Throttling Rate (ITR)
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "ITR" /t REG_SZ /d "0" /f
+
+rem 3 - Require DoH / 2 - Allow DoH / 1 - Prohibit DoH
+reg add "HKLM\Software\Policies\Microsoft\Windows NT\DNSClient" /v "DoHPolicy" /t REG_DWORD /d "3" /f
 
 PAUSE
