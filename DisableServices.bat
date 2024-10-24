@@ -308,4 +308,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\CCleanerPerformanceOptimizerServ
 rem # GraphicsPerfSvc enable, improves performance
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\GraphicsPerfSvc" /v "Start" /t REG_DWORD /d "2" /f
 
+rem # Disable AMD Logging
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdlog" /v "Start" /t REG_DWORD /d "4" /f
+
 PAUSE
