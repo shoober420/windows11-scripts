@@ -10,6 +10,7 @@ rem # https://github.com/raspi
 rem # https://github.com/simeononsecurity/
 rem # https://sites.google.com/site/tweakradje/windows/windows-tweaking
 rem # https://admx.help/
+rem # https://github.com/ancel1x/Ancels-Performance-Batch
 
 rem # -----------------------------------------------------------------------------------------
 
