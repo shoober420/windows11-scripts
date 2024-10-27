@@ -77,6 +77,7 @@ Dism /Online /Disable-Feature /FeatureName:Microsoft-RemoteDesktopConnection /Qu
 Dism /Online /Disable-Feature /FeatureName:DirectoryServices-ADAM-Client /Quiet /NoRestart
 Dism /Online /Disable-Feature /FeatureName:SmbDirect /Quiet /NoRestart
 Dism /Online /Disable-Feature /FeatureName:MSRDC-Infrastructure /Quiet /NoRestart
+Dism /Online /Disable-Feature /FeatureName:Recall /Quiet /NoRestart
 
 dism /online /Remove-Package /PackageName:Microsoft-Windows-HVSI-Components-Package /NoRestart
 dism /online /Remove-Package /PackageName:Microsoft-Windows-CodeIntegrity-Diagnostics-Package /NoRestart
