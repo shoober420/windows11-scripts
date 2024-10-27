@@ -314,4 +314,6 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdlog" /v "Start" /t REG_DWORD 
 rem # Disable UserChoice Protection Driver (UCPD)
 sc config UCPD start=disabled​
 
+sc config FileSyncHelper start=disabled
+
 PAUSE
