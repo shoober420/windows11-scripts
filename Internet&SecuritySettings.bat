@@ -186,6 +186,9 @@ netsh interface ip set global neighborcachelimit=4096
 rem # TCP window scaling (obsolete)
 rem netsh interface tcp set heuristics wsh=enabled
 
+rem # Enable DoT
+netsh dns add global dot=yes
+
 netsh interface ip set global taskoffload=disabled
 netsh interface ip set global mediasenseeventlog=disabled
 netsh int tcp set security mpp=disabled
