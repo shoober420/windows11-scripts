@@ -149,6 +149,7 @@ powershell.exe Remove-NetFirewallRule -All
 
 rem # Enable DNS over HTTPS (DoH)
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters" /v "EnableAutoDoh" /t REG_DWORD /d "2" /f
+netsh dns set global doh=yes
 
 rem # SG TCP Optimizer program tweaks
 rem # https://www.speedguide.net/downloads.php
@@ -185,9 +186,6 @@ netsh interface ip set global neighborcachelimit=4096
 
 rem # TCP window scaling (obsolete)
 rem netsh interface tcp set heuristics wsh=enabled
-
-rem # Enable DoT
-netsh dns add global dot=yes
 
 netsh interface ip set global taskoffload=disabled
 netsh interface ip set global mediasenseeventlog=disabled
