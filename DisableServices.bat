@@ -311,4 +311,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\GraphicsPerfSvc" /v "Start" /t R
 rem # Disable AMD Logging
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdlog" /v "Start" /t REG_DWORD /d "4" /f
 
+rem # Disable UserChoice Protection Driver (UCPD)
+sc config UCPD start=disabled​
+
 PAUSE
