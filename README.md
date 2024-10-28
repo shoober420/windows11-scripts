@@ -425,3 +425,5 @@ RemoveMicrosoftUIXamlCBS.bat / InstallMicrosoftUIXamlCBS.bat (causes constant sc
 DisableTouchPad.bat / EnableTouchPad.bat
 
 BlockRazerSynapse.bat (prevents Razer Synapse auto install rubber ducky attack)
+
+InputTweaks.bat (script settings need tweaked to match users computer hardware)
