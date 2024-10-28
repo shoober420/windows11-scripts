@@ -85,47 +85,47 @@ reg add "%%n" /v "*InterruptModeration" /t REG_SZ /d "0" /f
 
 
 rem # Speed & Duplex must be set to "Auto Negotiation" or internet borks
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*SpeedDuplex" /t REG_SZ /d "0" /f
+reg add "%%n" /v "*SpeedDuplex" /t REG_SZ /d "0" /f
 
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*FlowControl" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*RSS" /t REG_SZ /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*TCPConnectionOffloadIPv4" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*TCPConnectionOffloadIPv6" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*IPChecksumOffloadIPv4" /t REG_SZ /d "3" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*TCPChecksumOffloadIPv4" /t REG_SZ /d "3" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*TCPChecksumOffloadIPv6" /t REG_SZ /d "3" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*UDPChecksumOffloadIPv4" /t REG_SZ /d "3" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*UDPChecksumOffloadIPv6" /t REG_SZ /d "3" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*LsoV1IPv4" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*LsoV2IPv4" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*LsoV2IPv6" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*TCPUDPChecksumOffloadIPv4" /t REG_SZ /d "3" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*TCPUDPChecksumOffloadIPv6" /t REG_SZ /d "3" /f
+reg add "%%n" /v "*FlowControl" /t REG_SZ /d "0" /f
+reg add "%%n" /v "*RSS" /t REG_SZ /d "1" /f
+reg add "%%n" /v "*TCPConnectionOffloadIPv4" /t REG_SZ /d "0" /f
+reg add "%%n" /v "*TCPConnectionOffloadIPv6" /t REG_SZ /d "0" /f
+reg add "%%n" /v "*IPChecksumOffloadIPv4" /t REG_SZ /d "3" /f
+reg add "%%n" /v "*TCPChecksumOffloadIPv4" /t REG_SZ /d "3" /f
+reg add "%%n" /v "*TCPChecksumOffloadIPv6" /t REG_SZ /d "3" /f
+reg add "%%n" /v "*UDPChecksumOffloadIPv4" /t REG_SZ /d "3" /f
+reg add "%%n" /v "*UDPChecksumOffloadIPv6" /t REG_SZ /d "3" /f
+reg add "%%n" /v "*LsoV1IPv4" /t REG_SZ /d "0" /f
+reg add "%%n" /v "*LsoV2IPv4" /t REG_SZ /d "0" /f
+reg add "%%n" /v "*LsoV2IPv6" /t REG_SZ /d "0" /f
+reg add "%%n" /v "*TCPUDPChecksumOffloadIPv4" /t REG_SZ /d "3" /f
+reg add "%%n" /v "*TCPUDPChecksumOffloadIPv6" /t REG_SZ /d "3" /f
 
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*PMARPOffload" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "Downshift" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*EEE" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*JumboPacket" /t REG_SZ /d "1472" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "LogLinkStateEvent" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*QoS" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*PriorityVLANTag" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*ReceiveBuffers" /t REG_SZ /d "4096" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*RscIPv4" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*RscIPv6" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*TransmitBuffers" /t REG_SZ /d "8184" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "WakeOnLink" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "WakeOnPing" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "WakeFromPowerOff" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*PMNSOffload" /t REG_SZ /d "0" /f
+reg add "%%n" /v "*PMARPOffload" /t REG_SZ /d "0" /f
+reg add "%%n" /v "Downshift" /t REG_SZ /d "0" /f
+reg add "%%n" /v "*EEE" /t REG_SZ /d "0" /f
+reg add "%%n" /v "*JumboPacket" /t REG_SZ /d "1472" /f
+reg add "%%n" /v "LogLinkStateEvent" /t REG_SZ /d "0" /f
+reg add "%%n" /v "*QoS" /t REG_SZ /d "0" /f
+reg add "%%n" /v "*PriorityVLANTag" /t REG_SZ /d "0" /f
+reg add "%%n" /v "*ReceiveBuffers" /t REG_SZ /d "4096" /f
+reg add "%%n" /v "*RscIPv4" /t REG_SZ /d "0" /f
+reg add "%%n" /v "*RscIPv6" /t REG_SZ /d "0" /f
+reg add "%%n" /v "*TransmitBuffers" /t REG_SZ /d "8184" /f
+reg add "%%n" /v "WakeOnLink" /t REG_SZ /d "0" /f
+reg add "%%n" /v "WakeOnPing" /t REG_SZ /d "0" /f
+reg add "%%n" /v "WakeFromPowerOff" /t REG_SZ /d "0" /f
+reg add "%%n" /v "*PMNSOffload" /t REG_SZ /d "0" /f
 
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "TxIntDelay" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "TxAbsIntDelay" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "RxIntDelay" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "RxAbsIntDelay" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "FlowControlCap" /t REG_SZ /d "0" /f
+reg add "%%n" /v "TxIntDelay" /t REG_SZ /d "0" /f
+reg add "%%n" /v "TxAbsIntDelay" /t REG_SZ /d "0" /f
+reg add "%%n" /v "RxIntDelay" /t REG_SZ /d "0" /f
+reg add "%%n" /v "RxAbsIntDelay" /t REG_SZ /d "0" /f
+reg add "%%n" /v "FlowControlCap" /t REG_SZ /d "0" /f
 
 rem # Interrupt Moderation Rate: Interrupt Throttling Rate (ITR)
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "ITR" /t REG_SZ /d "0" /f
+reg add "%%n" /v "ITR" /t REG_SZ /d "0" /f
 
 rem 3 - Require DoH / 2 - Allow DoH / 1 - Prohibit DoH
 reg add "HKLM\Software\Policies\Microsoft\Windows NT\DNSClient" /v "DoHPolicy" /t REG_DWORD /d "3" /f
