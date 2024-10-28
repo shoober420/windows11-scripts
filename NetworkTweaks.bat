@@ -126,6 +126,7 @@ reg add "%%n" /v "FlowControlCap" /t REG_SZ /d "0" /f
 
 rem # Interrupt Moderation Rate: Interrupt Throttling Rate (ITR)
 reg add "%%n" /v "ITR" /t REG_SZ /d "0" /f
+)
 
 rem 3 - Require DoH / 2 - Allow DoH / 1 - Prohibit DoH
 reg add "HKLM\Software\Policies\Microsoft\Windows NT\DNSClient" /v "DoHPolicy" /t REG_DWORD /d "3" /f
