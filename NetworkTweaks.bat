@@ -5,6 +5,8 @@ PAUSE
 
 rem # Go to Control Panel > Network and Sharing Center for network name
 
+rem # Receive Side Scaling requires Checksum Offloading to be enabled to work, disable all other offloading options for best latency
+
 rem # Make sure "name=" matches network name, half of internet breaks unless DNS is specified
 rem # Enables Cloudflare DNS
 netsh interface ip set dns name="Wi-Fi" static 1.1.1.1
@@ -55,26 +57,31 @@ rem # find value for 000X at HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control
 
 rem # NIC parameters are at HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\"Class Guid"\<NIC ID>\Ndi\Params
 
+
+
+rem # Get the Sub ID of the Network Adapter
+for /f %%n in ('Reg query "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4D36E972-E325-11CE-BFC1-08002bE10318}" /v "*SpeedDuplex" /s ^| findstr  "HKEY"') do (
+
 rem # Set to how many cores your CPU has
 rem # 8+ Queues may cause laggy internet, test by running RemoveWindowsApps.bat and
 rem # https://www.waveform.com/tools/bufferbloat
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*NumRssQueues" /t REG_SZ /d "4" /f
+reg add "%%n" /v "*NumRssQueues" /t REG_SZ /d "4" /f
 
 rem # MIMO Power Save Mode - 3 Disable
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "MIMOPowerSaveMode" /t REG_SZ /d "3" /f
+reg add "%%n" /v "MIMOPowerSaveMode" /t REG_SZ /d "3" /f
 
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*WakeOnMagicPacket" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*WakeOnPattern" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*PacketCoalescing" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "ThroughputBoosterEnabled" /t REG_SZ /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "FatChannelIntolerant" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*MiracastSupported" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*DeviceSleepOnDisconnect" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "RoamAggressiveness" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "RoamingPreferredBandType" /t REG_SZ /d "3" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "uAPSDSupport" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "RecommendedBeaconInterval" /t REG_DWORD /d "99999999" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*InterruptModeration" /t REG_SZ /d "0" /f
+reg add "%%n" /v "*WakeOnMagicPacket" /t REG_SZ /d "0" /f
+reg add "%%n" /v "*WakeOnPattern" /t REG_SZ /d "0" /f
+reg add "%%n" /v "*PacketCoalescing" /t REG_SZ /d "0" /f
+reg add "%%n" /v "ThroughputBoosterEnabled" /t REG_SZ /d "1" /f
+reg add "%%n" /v "FatChannelIntolerant" /t REG_SZ /d "0" /f
+reg add "%%n" /v "*MiracastSupported" /t REG_DWORD /d "0" /f
+reg add "%%n" /v "*DeviceSleepOnDisconnect" /t REG_DWORD /d "0" /f
+reg add "%%n" /v "RoamAggressiveness" /t REG_SZ /d "0" /f
+reg add "%%n" /v "RoamingPreferredBandType" /t REG_SZ /d "3" /f
+reg add "%%n" /v "uAPSDSupport" /t REG_SZ /d "0" /f
+reg add "%%n" /v "RecommendedBeaconInterval" /t REG_DWORD /d "99999999" /f
+reg add "%%n" /v "*InterruptModeration" /t REG_SZ /d "0" /f
 
 
 rem # Speed & Duplex must be set to "Auto Negotiation" or internet borks
