@@ -1,3 +1,10 @@
+rem # !!!WARNING!!!
+rem # VALUES NEED ADJUSTED TO MATCH USER HARDWARE
+rem # !!!WARNING!!!
+
+PAUSE
+
+rem # DataQueueSize
 rem # Mouse and keyboard buffer sizes
 rem # Values too low cause mouse glitches/skipping and unregistered keyboard presses
 rem # Mouse and keyboard values under 16 require very good hardware
