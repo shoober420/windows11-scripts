@@ -2297,9 +2297,9 @@ bcdedit /set useplatformtick yes
 bcdedit /set disabledynamictick yes
 bcdedit /set tscsyncpolicy enhanced
 
-rem # Mouse and keyboard buffer sizes (too low value causes mouse glitches and unregistered keyboard presses, mouse values under 16 and keyboard values under 12 require very good hardware)
+rem # Mouse and keyboard buffer sizes (too low value causes mouse glitches and unregistered keyboard presses, mouse and keyboard values under 16 require very good hardware)
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\mouclass\Parameters" /v "MouseDataQueueSize" /t REG_DWORD /d "0x00000010" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\kbdclass\Parameters" /v "KeyboardDataQueueSize" /t REG_DWORD /d "0x0000000c" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\kbdclass\Parameters" /v "KeyboardDataQueueSize" /t REG_DWORD /d "0x00000010" /f
 
 rem # Disable 57-bits 5-level paging, also known as "Linear Address 57". Only 100% effective on 10th gen Intel. 256 TB of virtual memory per-disk is way much more than enough anyway
 bcdedit /set linearaddress57 OptOut
