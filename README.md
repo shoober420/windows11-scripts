@@ -136,6 +136,7 @@ RESTART
  - CPUTweaks.bat (script settings need tweaked to match users computer hardware)
  - UseLargePages.bat (add programs to enable Large Pages for them)
  - HighPriority.bat (add programs to enable High Priority for them)
+ - DataQueueSize.bat (values too low can cause input glitches)
 
  - Disable*.bat (DisableAppX.bat causes File Explorer to crash when opening right click context menu) (DO NOT RUN DisableStateRepository.bat and DisableDNSClient.bat)
 
