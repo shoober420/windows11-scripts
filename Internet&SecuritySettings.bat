@@ -226,6 +226,7 @@ netsh int tcp set supplemental Template=DatacenterCustom CongestionProvider=bbr2
 netsh int tcp set supplemental Template=InternetCustom CongestionProvider=bbr2
 
 rem # Disable IPv6
+netsh int ipv6 set state disabled
 netsh int ipv6 isatap set state disabled
 netsh int teredo set state disabled
 netsh interface ipv6 6to4 set state state=disabled undoonstop=disabled
