@@ -316,4 +316,6 @@ sc config UCPD start=disabled​
 
 sc config FileSyncHelper start=disabled
 
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\GpuEnergyDr" /v "Start" /t REG_DWORD /d "4" /f
+
 PAUSE
