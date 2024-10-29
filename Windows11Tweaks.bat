@@ -3047,5 +3047,12 @@ reg add "HKLM\SOFTWARE\Policies\Microsoft\Internet Explorer\Main" /v "DEPOff" /t
 
 rem # BCDEDIT Tweaks
 bcdedit /set disableelamdrivers Yes
+bcdedit /set highestmode Yes
+bcdedit /set forcefipscrypto No
+bcdedit /set noumex Yes
+bcdedit /set uselegacyapicmode No
+bcdedit /set ems No
+bcdedit /set extendedinput Yes
+bcdedit /set debug No
 
 PAUSE
