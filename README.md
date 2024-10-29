@@ -53,7 +53,7 @@ Troubleshoot > Advanced options > Startup Settings > Restart > 7) Disable driver
 
 Update Video Drivers
  - NVIDIA: https://www.nvidia.com/download/find.aspx
-  + Vulkan beta drivers (not recommended): https://developer.nvidia.com/vulkan-driver
+  + NVIDIA Vulkan beta drivers (not recommended): https://developer.nvidia.com/vulkan-driver
  - NVCleanstall.txt
  - NVIDIA Control Panel: https://github.com/Aetopia/Install-NVCPL
 
