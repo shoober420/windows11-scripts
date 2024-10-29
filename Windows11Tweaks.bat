@@ -3045,10 +3045,4 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management
 rem # Disable DEP
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Internet Explorer\Main" /v "DEPOff" /t REG_DWORD /d "1" /f
 
-rem # BCDEDIT Tweaks
-bcdedit /set allowedinmemorysettings 0x0
-bcdedit /set isolatedcontext No
-bcdedit /set vsmlaunchtype Off
-bcdedit /set vm No
-
 PAUSE
