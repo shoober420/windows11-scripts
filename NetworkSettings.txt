@@ -9,6 +9,9 @@ Internet may drop after applying settings, it returns after restarting.
 NOTE:
 Disable all offloading settings except Checksum Offload for gaming
 
+NOTE:
+Receive Side Scaling requires Checksum Offloading to be enabled to work
+
 Device Manager (devmgmt.msc) > Network adapters > NIC > Right click > Properties
 
 Advanced tab
