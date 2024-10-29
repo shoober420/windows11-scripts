@@ -115,6 +115,7 @@ PowerShell -Command "Disable-MMAgent -PageCombining"
 rem # Disable Data Execution Prevention (DEP)
 rem # Fixes stuttering in games
 BCDEDIT /SET {CURRENT} NX ALWAYSOFF
+bcdedit /set nx optout
 powershell.exe Set-Processmitigation -System -Disable DEP
 
 rem # Disable DMA memory protection and cores isolation
