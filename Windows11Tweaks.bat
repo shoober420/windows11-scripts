@@ -3100,4 +3100,7 @@ reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Notifications\Settings\W
 rem # Disable Cortana Above Lock
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Search" /v "AllowCortanaAboveLock" /t REG_DWORD /d "0" /f
 
+rem # Disable Show Me Notifications in the Settings app
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\SystemSettings\AccountNotifications" /v "EnableAccountNotifications" /t REG_DWORD /d "0" /f
+
 PAUSE
