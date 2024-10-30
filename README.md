@@ -35,7 +35,6 @@ RESTART
  - DisableUAC.bat
  - EnablePowershell.bat
  - RemoveWindowsTerminal.bat
- - DNS.ps1
 
 Update NIC Drivers
  - NetworkSettings.txt
@@ -132,6 +131,7 @@ RESTART
  - ThreadQuantum.bat
  - DisableWinHTTP.bat (WIRED CONNECTION ONLY)
 
+ - DNS.ps1
  - NetworkTweaks.bat (script settings need tweaked to match users computer hardware)
  - RAMTweaks.bat (script settings need tweaked to match users computer hardware)
  - GPUTweaks.bat (script settings need tweaked to match users computer hardware)
