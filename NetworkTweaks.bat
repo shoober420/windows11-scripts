@@ -15,6 +15,7 @@ rem netsh interface ip set dns name="Ethernet" static 1.1.1.1
 rem netsh interface ip add dns name="Ethernet" 1.0.0.1 index=2
 
 rem # Make sure "subinterface" matches network name
+rem # Find correct MTU value and set below
 netsh interface ipv4 set subinterface "Wi-Fi" mtu=1472 store=persistent
 netsh interface ipv4 set subinterface "Ethernet" mtu=1472 store=persistent
 
