@@ -1,4 +1,5 @@
 rem # Enable PowerShell
+rem # Required to run PowerShell (ps1) scripts since Windows blocks them from running by default
 
 rem # Enable and start WMI (required for powershell)
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD /d "2" /f
