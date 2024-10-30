@@ -4,7 +4,7 @@ Its not only about FPS, but also latency.
 
 ----------------------------------------------------------
 
-AV software is bloat, DisableWindowsDefender.bat and Internet&SecuritySettings.bat are NOT viruses. (Ulthar and Wacatac FALSE POSITIVES)
+AV software is bloat, DisableWindowsDefender.bat and Internet&SecuritySettings.bat are NOT viruses. (AME!MTB, Ulthar, and Wacatac FALSE POSITIVES)
 
 Windows Firewall is bloat, use router firewall.
 
