@@ -3,6 +3,7 @@ rem # VALUES NEED ADJUSTED BASED ON HARDWARE BEFORE RUNNING
 
 PAUSE
 
+rem # SwapEffectUpgradeEnable = Optimizations for windowed and borderless windowed games
 rem # HighPerfAdapter must match Hardware ID in Device Manager for GPU
 rem # Device Manager > Display Adapters > "GPUNAME" > Properties > Details > Property > Hardware Ids
 rem # HighPerfAdapter="VEN&DEV&SUBSYS" / PCI\VEN_10DE&DEV_2684&SUBSYS_89321043 / HighPerfAdapter=10DE&2684&89321043
