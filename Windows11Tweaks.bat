@@ -3106,8 +3106,4 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\SystemSettings\AccountNo
 rem # Disable Location Override
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\CPSS\Store\UserLocationOverridePrivacySetting" /v "Value" /t REG_DWORD /d "0" /f
 
-rem # Disable Notify when apps requests location
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\location" /v 
-"ShowGlobalPrompts" /t REG_DWORD /d "0" /f
-
 PAUSE
