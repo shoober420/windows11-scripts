@@ -9,9 +9,9 @@ rem # Receive Side Scaling requires Checksum Offloading to be enabled to work, d
 
 rem # Make sure "name=" matches network name, half of internet breaks unless DNS is specified
 rem # Enables Cloudflare DNS
-netsh interface ip set dns name="Wi-Fi" static 1.1.1.1
+rem netsh interface ip set dns name="Wi-Fi" static 1.1.1.1
 rem netsh interface ip add dns name="Wi-Fi" 1.0.0.1 index=2
-netsh interface ip set dns name="Ethernet" static 1.1.1.1
+rem netsh interface ip set dns name="Ethernet" static 1.1.1.1
 rem netsh interface ip add dns name="Ethernet" 1.0.0.1 index=2
 
 rem # Make sure "subinterface" matches network name
@@ -38,8 +38,8 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\Ndis\Parameters" /v "RssBaseCpu"
 rem # Enable DNS over HTTPS
 rem # "wmic nic" to find NIC ID
 rem # HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\InterfaceSpecificParameters\{NIC ID}\DohInterfaceSettings\Doh\1.1.1.1
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\InterfaceSpecificParameters\{86ce1c79-20b9-4314-9c3f-356bccdd8a62}\DohInterfaceSettings\Doh\1.1.1.1" /v "DohFlags" /t REG_QWORD /d "0x00000011" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\InterfaceSpecificParameters\{86ce1c79-20b9-4314-9c3f-356bccdd8a62}\DohInterfaceSettings\Doh\1.1.1.1" /v "DohTemplate" /t REG_SZ /d "https://cloudfare-dns.com/dns-query" /f
+rem reg add "HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\InterfaceSpecificParameters\{86ce1c79-20b9-4314-9c3f-356bccdd8a62}\DohInterfaceSettings\Doh\1.1.1.1" /v "DohFlags" /t REG_QWORD /d "0x00000011" /f
+rem reg add "HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\InterfaceSpecificParameters\{86ce1c79-20b9-4314-9c3f-356bccdd8a62}\DohInterfaceSettings\Doh\1.1.1.1" /v "DohTemplate" /t REG_SZ /d "https://cloudfare-dns.com/dns-query" /f
 
 rem # NIC Tweaks
 
