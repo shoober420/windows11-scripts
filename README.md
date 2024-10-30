@@ -132,6 +132,8 @@ RESTART
  - DisableWinHTTP.bat (WIRED CONNECTION ONLY)
 
  - DNS.ps1
+ - NICProperties.ps1
+
  - NetworkTweaks.bat (script settings need tweaked to match users computer hardware)
  - RAMTweaks.bat (script settings need tweaked to match users computer hardware)
  - GPUTweaks.bat (script settings need tweaked to match users computer hardware)
