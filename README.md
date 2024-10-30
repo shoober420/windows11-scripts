@@ -431,3 +431,5 @@ BlockRazerSynapse.bat (prevents Razer Synapse auto install rubber ducky attack)
 InputTweaks.bat (script settings need tweaked to match users computer hardware)
 
 DNS.ps1
+
+NICProperties.ps1
