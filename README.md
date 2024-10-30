@@ -32,8 +32,10 @@ Run Windows update
 
 RESTART
 
- - RemoveWindowsTerminal.bat
  - DisableUAC.bat
+ - EnablePowershell.bat
+ - RemoveWindowsTerminal.bat
+ - DNS.ps1
 
 Update NIC Drivers
  - NetworkSettings.txt
