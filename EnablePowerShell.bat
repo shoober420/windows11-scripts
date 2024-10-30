@@ -18,6 +18,6 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\Disall
 powershell.exe Enable-WindowsOptionalFeature -Online -FeatureName MicrosoftWindowsPowerShellV2Root
 
 rem # Enable PowerShell scripts
-powershell.exe Set-ExecutionPolicy RemoteSigned
+powershell.exe Set-ExecutionPolicy Bypass
 
 PAUSE
