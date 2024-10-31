@@ -1,6 +1,13 @@
+rem # CPU with more than 4 cores is required for Affinity tweak, if older CPU is used, remove Affinity tweak
+
 rem # AMD USERS: if screen flickering occurs, remove the "DalDramClockChangeLatencyNs" option from the script (line 217)
 
 PAUSE
+
+rem # Affinity tweak (dont use if you have less than 4 CPU cores)
+for /f %%i in ('wmic path Win32_VideoController get PNPDeviceID^| findstr /l "PCI\VEN_"') do (
+		reg add "HKLM\SYSTEM\CurrentControlSet\Enum\%%i\Device Parameters\Interrupt Management\Affinity Policy" /v "DevicePolicy" /t REG_DWORD /d "3" /f
+)
 
 rem # SwapEffectUpgradeEnable = Optimizations for windowed and borderless windowed games
 rem # HighPerfAdapter must match Hardware ID in Device Manager for GPU
@@ -14,11 +21,6 @@ rem # https://www.elevenforum.com/t/find-gpu-ven-dev-subsys-values-for-highperfa
 
 for /f "tokens=1-6 delims=_&" %%a in ('wmic path win32_videocontroller get PNPDeviceID ^| findstr PCI') do (
     reg add "HKCU\Software\Microsoft\DirectX\UserGpuPreferences" /v "DirectXUserGlobalSettings" /t REG_SZ /d "HighPerfAdapter=%%b&%%d&%%f;VRROptimizeEnable=0;AutoHDREnable=1;SwapEffectUpgradeEnable=1" /f 
-)
-
-rem # Affinity tweak (dont use if you have less than 4 CPU cores)
-for /f %%i in ('wmic path Win32_VideoController get PNPDeviceID^| findstr /l "PCI\VEN_"') do (
-		reg add "HKLM\SYSTEM\CurrentControlSet\Enum\%%i\Device Parameters\Interrupt Management\Affinity Policy" /v "DevicePolicy" /t REG_DWORD /d "3" /f
 )
 
 rem # Enable MSI Mode for GPU
