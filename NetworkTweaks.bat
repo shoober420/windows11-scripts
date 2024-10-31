@@ -2,6 +2,8 @@ rem !!! SETTINGS REQUIRE ADJUSTING BEFORE BEING EXECUTED !!!
 
 PAUSE
 
+DISM /Online /Add-Capability /CapabilityName:WMIC~~~~
+
 rem # Go to Control Panel > Network and Sharing Center for network name
 
 rem # Receive Side Scaling requires Checksum Offloading to be enabled to work, disable all other offloading options for best latency
