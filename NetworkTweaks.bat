@@ -114,7 +114,10 @@ reg add "%%n" /v "*TCPUDPChecksumOffloadIPv6" /t REG_SZ /d "3" /f
 reg add "%%n" /v "*PMARPOffload" /t REG_SZ /d "0" /f
 reg add "%%n" /v "Downshift" /t REG_SZ /d "0" /f
 reg add "%%n" /v "*EEE" /t REG_SZ /d "0" /f
-reg add "%%n" /v "*JumboPacket" /t REG_SZ /d "1472" /f
+
+rem # JumboPacket: 1514 = Disabled
+reg add "%%n" /v "*JumboPacket" /t REG_SZ /d "1514" /f
+
 reg add "%%n" /v "LogLinkStateEvent" /t REG_SZ /d "0" /f
 reg add "%%n" /v "*QoS" /t REG_SZ /d "0" /f
 reg add "%%n" /v "*PriorityVLANTag" /t REG_SZ /d "0" /f
