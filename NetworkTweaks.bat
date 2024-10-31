@@ -43,6 +43,9 @@ rem reg add "HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\InterfaceSpecificPa
 
 
 rem # Affinity tweak
+rem # garlin: https://www.elevenforum.com/members/garlin.5387/
+rem # https://www.elevenforum.com/t/wmic-query-cpu-core-count-to-execute-setting.30155/post-521450
+
 for /f "tokens=2 delims=^=" %%f in ('wmic cpu get NumberOfCores /value ^| find "="') do set Cores=%%f
 
 if %Cores% gtr 4 (
