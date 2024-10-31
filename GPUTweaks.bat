@@ -2,6 +2,8 @@ rem # AMD USERS: if screen flickering occurs, remove the "DalDramClockChangeLate
 
 PAUSE
 
+DISM /Online /Add-Capability /CapabilityName:WMIC~~~~
+
 rem # SwapEffectUpgradeEnable = Optimizations for windowed and borderless windowed games
 rem # HighPerfAdapter must match Hardware ID in Device Manager for GPU
 rem # Device Manager > Display Adapters > "GPUNAME" > Properties > Details > Property > Hardware Ids
