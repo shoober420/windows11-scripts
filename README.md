@@ -435,3 +435,9 @@ InputTweaks.bat (script settings need tweaked to match users computer hardware)
 DNS.ps1
 
 NICProperties.ps1
+
+StaticIP.bat
+
+DHCP.bat
+
+DisableDHCP.bat / EnableDHCP.bat
