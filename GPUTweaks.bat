@@ -1,4 +1,4 @@
-rem # CPU with more than 4 cores is required for Affinity tweak, if older CPU is used, remove Affinity tweak
+rem # CPU with more than 4 cores is required for Affinity tweak, if older CPU is used, remove Affinity tweak (lines 8,9, and 10)
 
 rem # AMD USERS: if screen flickering occurs, remove the "DalDramClockChangeLatencyNs" option from the script (line 217)
 
