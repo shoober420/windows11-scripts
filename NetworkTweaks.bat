@@ -2,7 +2,11 @@ rem !!! SETTINGS REQUIRE ADJUSTING BEFORE BEING EXECUTED !!!
 
 PAUSE
 
-DISM /Online /Add-Capability /CapabilityName:WMIC~~~~
+if not exist C:\Windows\System32\wbem\WMIC.exe (
+    echo Installing WMIC...
+    DISM /Online /Add-Capability /CapabilityName:WMIC~~~~
+    echo Done.
+)
 
 rem # Go to Control Panel > Network and Sharing Center for network name
 
