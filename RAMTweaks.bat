@@ -3,7 +3,11 @@ rem # ADJUST VALUES ACCORDING TO RAM SIZE BEFORE RUNNING
 
 PAUSE
 
-DISM /Online /Add-Capability /CapabilityName:WMIC~~~~
+if not exist C:\Windows\System32\wbem\WMIC.exe (
+    echo Installing WMIC...
+    DISM /Online /Add-Capability /CapabilityName:WMIC~~~~
+    echo Done.
+)
 
 rem # Pagefile Size in MB (16GB = 16384) (32GB = 32768) (64GB = 65536)
 rem # InitialSize=65536,MaximumSize=65536
