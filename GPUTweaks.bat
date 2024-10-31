@@ -2,7 +2,11 @@ rem # AMD USERS: if screen flickering occurs, remove the "DalDramClockChangeLate
 
 PAUSE
 
-DISM /Online /Add-Capability /CapabilityName:WMIC~~~~
+if not exist C:\Windows\System32\wbem\WMIC.exe (
+    echo Installing WMIC...
+    DISM /Online /Add-Capability /CapabilityName:WMIC~~~~
+    echo Done.
+)
 
 rem # SwapEffectUpgradeEnable = Optimizations for windowed and borderless windowed games
 rem # HighPerfAdapter must match Hardware ID in Device Manager for GPU
