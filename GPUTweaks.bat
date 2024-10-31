@@ -252,7 +252,7 @@ for /f %%i in ('wmic path Win32_VideoController get PNPDeviceID^| findstr /L "PC
 			 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "FlipQueueSize" /t REG_BINARY /d "3100" /f
 			 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "ShaderCache" /t REG_BINARY /d "3200" /f
 			 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "TFQ" /t REG_BINARY /d "3200" /f
-			 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\\DAL2_DATA__2_0\DisplayPath_4\EDID_D109_78E9\Option"" /v "ProtectionControl" /t REG_BINARY /d "0100000001000000" /f
+			 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\DAL2_DATA__2_0\DisplayPath_4\EDID_D109_78E9\Option"" /v "ProtectionControl" /t REG_BINARY /d "0100000001000000" /f
 			 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "PP_GPUPowerDownEnabled" /t REG_DWORD /d "1" /f
                    )
                 )
