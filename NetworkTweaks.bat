@@ -41,9 +41,12 @@ rem # HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\InterfaceSpecificParameter
 rem reg add "HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\InterfaceSpecificParameters\{86ce1c79-20b9-4314-9c3f-356bccdd8a62}\DohInterfaceSettings\Doh\1.1.1.1" /v "DohFlags" /t REG_QWORD /d "0x00000011" /f
 rem reg add "HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\InterfaceSpecificParameters\{86ce1c79-20b9-4314-9c3f-356bccdd8a62}\DohInterfaceSettings\Doh\1.1.1.1" /v "DohTemplate" /t REG_SZ /d "https://cloudfare-dns.com/dns-query" /f
 
-rem # Affinity tweak (dont use if you have less than 4 cores)
-for /f %%i in ('wmic path Win32_NetworkAdapter get PNPDeviceID^| findstr /l "PCI\VEN_"') do (
-		reg add "HKLM\SYSTEM\CurrentControlSet\Enum\%%i\Device Parameters\Interrupt Management\Affinity Policy" /v "DevicePolicy" /t REG_DWORD /d "5" /f
+
+rem # Affinity tweak
+for /f "tokens=2 delims=^=" %%f in ('wmic cpu get NumberOfCores /value ^| find "="') do set Cores=%%f
+
+if %Cores% gtr 4 (
+  reg add "HKLM\SYSTEM\CurrentControlSet\Enum\%%i\Device Parameters\Interrupt Management\Affinity Policy" /v "DevicePolicy" /t REG_DWORD /d "5" /f
 )
 
 rem # NIC Tweaks
