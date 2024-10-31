@@ -1,4 +1,4 @@
-rem # AMD USERS: if screen flickering occurs, sleemove the "DalDramClockChangeLatencyNs" option from the script (line 217)
+rem # AMD USERS: if screen flickering occurs, remove the "DalDramClockChangeLatencyNs" option from the script (line 217)
 
 PAUSE
 
