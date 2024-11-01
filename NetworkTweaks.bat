@@ -43,8 +43,11 @@ rem # Intel P-Cores are 2 threads per core with Hyper-Threading enabled
 rem # With Intel Hyper-Threading disabled, its 1 thread per core
 rem # Intel Hyper-Threading may increase FPS in games that support 8+ threads
 rem # Intel Hyper-Threading does increase latency
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\Ndis\Parameters" /v "MaxNumRssThreads" /t REG_DWORD /d "8" /f	
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "MaxNumRssThreads" /t REG_DWORD /d "8" /f
+
+for /f "tokens=2 delims=^=" %%t in ('wmic cpu get NumberOfLogicalProcessors /value ^| find "="') do set Threads=%%t
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Ndis\Parameters" /v "MaxNumRssThreads" /t REG_DWORD /d "%%t" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "MaxNumRssThreads" /t REG_DWORD /d "%%t" /f
 
 rem # Set to last Core on CPU
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Ndis\Parameters" /v "RssBaseCpu" /t REG_DWORD /d "8" /f
