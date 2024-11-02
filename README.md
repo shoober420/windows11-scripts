@@ -436,9 +436,9 @@ DNS.ps1
 
 NICProperties.ps1
 
-StaticIP.bat
+StaticIPConnection.bat
 
-DHCP.bat
+DHCPConnection.bat
 
 DisableDHCP.bat / EnableDHCP.bat
 
