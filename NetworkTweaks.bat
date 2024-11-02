@@ -48,7 +48,13 @@ rem # With Intel Hyper-Threading disabled, its 1 thread per core
 rem # Intel Hyper-Threading may increase FPS in games that support 8+ threads
 rem # Intel Hyper-Threading does increase latency
 
-for /f "tokens=2 delims=^=" %%t in ('wmic cpu get NumberOfLogicalProcessors /value ^| find "="') do set Threads=%%t
+rem # https://www.elevenforum.com/members/garlin.5387/
+rem # https://www.elevenforum.com/t/wmic-thread-count-command.30192/post-521969
+
+for /f "tokens=2 delims=^=" %%t in ('wmic cpu get NumberOfLogicalProcessors /value ^| find "="') do (
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Ndis\Parameters" /v "MaxNumRssThreads" /t REG_DWORD /d "%%t" /f	
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "MaxNumRssThreads" /t REG_DWORD /d "%%t" /f
+)
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Ndis\Parameters" /v "MaxNumRssThreads" /t REG_DWORD /d "%Threads%" /f	
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "MaxNumRssThreads" /t REG_DWORD /d "%Threads%" /f
