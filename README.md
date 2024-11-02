@@ -441,3 +441,5 @@ StaticIP.bat
 DHCP.bat
 
 DisableDHCP.bat / EnableDHCP.bat
+
+DisablePowerManagement.ps1
