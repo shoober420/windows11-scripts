@@ -172,6 +172,9 @@ reg add "%%n" /v "FlowControlCap" /t REG_SZ /d "0" /f
 
 rem # Interrupt Moderation Rate: Interrupt Throttling Rate (ITR)
 reg add "%%n" /v "ITR" /t REG_SZ /d "0" /f
+
+rem # Disable Power Management options
+reg add "%%n" /v "PnPCapabilities" /t REG_DWORD /d "0x00000118" /f
 )
 
 rem 3 - Require DoH / 2 - Allow DoH / 1 - Prohibit DoH
