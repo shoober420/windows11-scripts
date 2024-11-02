@@ -44,9 +44,9 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\Ndis\Parameters" /v "MaxNumRssCp
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "MaxNumRssCpus" /t REG_DWORD /d "4" /f
 
 rem # Intel P-Cores are 2 threads per core with Hyper-Threading enabled
-rem # With Intel Hyper-Threading disabled, its 1 thread per core
-rem # Intel Hyper-Threading may increase FPS in games that support 8+ threads
-rem # Intel Hyper-Threading does increase latency
+rem # With Intel Hyper-Threading disabled, P-Cores have 1 thread per core
+rem # Intel E-Cores always have 1 thread per core
+rem # Intel Hyper-Threading enabled will increase latency
 
 rem # https://www.elevenforum.com/members/garlin.5387/
 rem # https://www.elevenforum.com/t/wmic-thread-count-command.30192/post-521969
