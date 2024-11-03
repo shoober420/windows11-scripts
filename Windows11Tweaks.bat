@@ -3113,4 +3113,10 @@ for /f %%i in ('wmic path Win32_IDEController get PNPDeviceID ^| findstr /l "PCI
 	reg add "HKLM\SYSTEM\CurrentControlSet\Enum\%%i\Device Parameters\Interrupt Management\Affinity Policy" /v "DevicePriority" /t REG_DWORD /d "0" /f
 )
 
+rem # Disable "Allow this device to wake the computer"
+powercfg -devicedisablewake "HID-complaint mouse"
+powercfg -devicedisablewake "HID-complaint mouse (001)"
+powercfg -devicedisablewake "HID Keyboard Device"
+powercfg -devicedisablewake "HID Keyboard Device (001)"
+
 PAUSE
