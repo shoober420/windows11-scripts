@@ -443,3 +443,5 @@ DHCPConnection.bat
 DisableDHCP.bat / EnableDHCP.bat
 
 DisablePowerManagement.ps1
+
+TestModeOn.bat / TestModeOff.bat
