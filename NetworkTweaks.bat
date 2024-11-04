@@ -51,10 +51,12 @@ rem # Intel Hyper-Threading enabled will increase latency
 rem # https://www.elevenforum.com/members/garlin.5387/
 rem # https://www.elevenforum.com/t/wmic-thread-count-command.30192/post-521969
 
-for /f "tokens=2 delims=^=" %%t in ('wmic cpu get NumberOfLogicalProcessors /value ^| find "="') do set Threads=%%t
+rem# for /f "tokens=2 delims=^=" %%t in ('wmic cpu get NumberOfLogicalProcessors /value ^| find "="') do set Threads=%%t
 
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\Ndis\Parameters" /v "MaxNumRssThreads" /t REG_DWORD /d "%Threads%" /f       
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "MaxNumRssThreads" /t REG_DWORD /d "%Threads%" /f
+rem reg add "HKLM\SYSTEM\CurrentControlSet\Services\Ndis\Parameters" /v "MaxNumRssThreads" /t REG_DWORD /d "%Threads%" /f       
+rem reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "MaxNumRssThreads" /t REG_DWORD /d "%Threads%" /f
+
+@For /F "Tokens=2 Delims==" %%G In ('%SystemRoot%\System32\wbem\WMIC.exe CPU Get NumberOfLogicalProcessors /Value 2^>NUL ^| %SystemRoot%\System32\find.exe "="') Do @For /F %%H In ("%%G") Do @For %%I In (Ndis Tcpip) Do @%SystemRoot%\System32\reg.exe Add "HKLM\SYSTEM\CurrentControlSet\Services\%%I\Parameters" /V "MaxNumRssThreads" /T REG_DWORD /D %%H /F 1>NUL
 
 rem # Set to last Core on CPU
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Ndis\Parameters" /v "RssBaseCpu" /t REG_DWORD /d "8" /f
