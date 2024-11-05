@@ -37,9 +37,13 @@ rem # As opposed to NVIDIA saying to use a value of 64K
 rem # https://docs.nvidia.com/networking/display/winofv55054000/general+performance+optimization+and+tuning
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\AFD\Parameters" /v "FastSendDatagramThreshold" /t REG_DWORD /d "0x000005c0" /f
 
-rem # Set values according to core and thread count
-rem # 8+ Queues may cause laggy internet, test by running RemoveWindowsApps.bat and
-rem # https://www.waveform.com/tools/bufferbloat
+rem # Set value according to core amount
+rem # 4 cores = 4 Queues / 8+ = 8 Queues
+rem # 8+ Queues may cause loss of connection
+rem # 8+ Queues may cause laggy internet
+rem # Test by running 
+https://www.waveform.com/tools/bufferbloat
+
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Ndis\Parameters" /v "MaxNumRssCpus" /t REG_DWORD /d "4" /f	
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "MaxNumRssCpus" /t REG_DWORD /d "4" /f
 
@@ -51,7 +55,7 @@ rem # Intel Hyper-Threading enabled will increase latency
 rem # https://www.elevenforum.com/members/garlin.5387/
 rem # https://www.elevenforum.com/t/wmic-thread-count-command.30192/post-521969
 
-rem# for /f "tokens=2 delims=^=" %%t in ('wmic cpu get NumberOfLogicalProcessors /value ^| find "="') do set Threads=%%t
+rem # for /f "tokens=2 delims=^=" %%t in ('wmic cpu get NumberOfLogicalProcessors /value ^| find "="') do set Threads=%%t
 
 rem reg add "HKLM\SYSTEM\CurrentControlSet\Services\Ndis\Parameters" /v "MaxNumRssThreads" /t REG_DWORD /d "%Threads%" /f       
 rem reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "MaxNumRssThreads" /t REG_DWORD /d "%Threads%" /f
@@ -107,9 +111,13 @@ rem # NIC parameters are at HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\
 rem # Get the Sub ID of the Network Adapter
 for /f %%n in ('Reg query "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4D36E972-E325-11CE-BFC1-08002bE10318}" /v "*SpeedDuplex" /s ^| findstr  "HKEY"') do (
 
-rem # Set to how many cores your CPU has
-rem # 8+ Queues may cause laggy internet, test by running RemoveWindowsApps.bat and
-rem # https://www.waveform.com/tools/bufferbloat
+rem # Set value according to core amount
+rem # 4 cores = 4 Queues / 8+ = 8 Queues
+rem # 8+ Queues may cause loss of connection
+rem # 8+ Queues may cause laggy internet
+rem # Test by running 
+https://www.waveform.com/tools/bufferbloat
+
 reg add "%%n" /v "*NumRssQueues" /t REG_SZ /d "4" /f
 
 rem # MIMO Power Save Mode - 3 Disable
