@@ -1,6 +1,6 @@
 rem # DOES NOT SUPPORT DIGITAL STREAM COMPRESSION (DSC). Black screen will occur if used of DSC monitors
 
-rem # AMD USERS: if screen flickering occurs, remove the "DalDramClockChangeLatencyNs" option from the script (line 217)
+rem # AMD USERS: if screen flickering occurs, remove the "DalDramClockChangeLatencyNs" option from the script (line 232)
 
 PAUSE
 
