@@ -28,8 +28,8 @@ rem # Find correct MTU value and set below
 rem # open Command Prompt
 rem # ping www.google.com -f -l 1500 (keep lowering value until packets aren't fragmented)
 
-netsh interface ipv4 set subinterface "Wi-Fi" mtu=1472 store=persistent
-netsh interface ipv4 set subinterface "Ethernet" mtu=1472 store=persistent
+rem netsh interface ipv4 set subinterface "Wi-Fi" mtu=1472 store=persistent
+rem netsh interface ipv4 set subinterface "Ethernet" mtu=1472 store=persistent
 
 rem # FastSendDatagramThreshold should match MTU value in decimal, not hexadecimal (usually 1472)
 rem # https://docs.oracle.com/cd/E13924_01/coh.340/e13818/perftune.htm
