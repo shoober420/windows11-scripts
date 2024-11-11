@@ -126,6 +126,9 @@ https://www.waveform.com/tools/bufferbloat
 
 reg add "%%n" /v "*NumRssQueues" /t REG_SZ /d "4" /f
 
+rem # Speed & Duplex must be set to "Auto Negotiation" or internet borks unless you know correct value
+reg add "%%n" /v "*SpeedDuplex" /t REG_SZ /d "0" /f
+
 rem # MIMO Power Save Mode - 3 Disable
 reg add "%%n" /v "MIMOPowerSaveMode" /t REG_SZ /d "3" /f
 
@@ -141,11 +144,6 @@ reg add "%%n" /v "RoamingPreferredBandType" /t REG_SZ /d "3" /f
 reg add "%%n" /v "uAPSDSupport" /t REG_SZ /d "0" /f
 reg add "%%n" /v "RecommendedBeaconInterval" /t REG_DWORD /d "99999999" /f
 reg add "%%n" /v "*InterruptModeration" /t REG_SZ /d "0" /f
-
-
-rem # Speed & Duplex must be set to "Auto Negotiation" or internet borks
-reg add "%%n" /v "*SpeedDuplex" /t REG_SZ /d "0" /f
-
 reg add "%%n" /v "*FlowControl" /t REG_SZ /d "0" /f
 reg add "%%n" /v "*RSS" /t REG_SZ /d "1" /f
 reg add "%%n" /v "*TCPConnectionOffloadIPv4" /t REG_SZ /d "0" /f
