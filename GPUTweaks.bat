@@ -1,3 +1,7 @@
+rem # DOES NOT SUPPORT DIGITAL STREAM COMPRESSION (DSC). Black screen will occur if used of DSC monitors
+
+PAUSE
+
 rem # GPU tweaks for any graphics card
 
 rem # Affinity tweak
