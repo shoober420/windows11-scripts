@@ -296,7 +296,7 @@ ComputerName.bat (change computer name and Hostname)
 
 RAMTweaks.bat (script settings need tweaked to match users computer hardware)
 
-GPUTweaks.bat (script settings need tweaked to match users computer hardware)
+NVGPUTweaks.bat (script settings need tweaked to match users computer hardware)
 
 ThreadQuantum.bat
 
@@ -445,3 +445,5 @@ DisableDHCP.bat / EnableDHCP.bat
 DisablePowerManagement.ps1
 
 TestModeOn.bat / TestModeOff.bat
+
+AMDGPUTweaks.bat (script settings need tweaked to match users computer hardware)
