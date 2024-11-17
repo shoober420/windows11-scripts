@@ -123,5 +123,8 @@ REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\NVIDIA Corporation\NvTray" /v StartOnLogin 
 
 rem # Use Advanced 3D Settings
 REG ADD "HKEY_CURRENT_USER\Software\NVIDIA Corporation\Global\NVTweak" /v Gestalt /t REG_DWORD /d 2 /f
-		 
+
+rem # Use NVIDIA Old Sharpening Filter
+reg add "HKLM\SYSTEM\CurrentControlSet\services\nvlddmkm\FTS" /v EnableGR535 /t REG_DWORD /d 0 /f
+
 PAUSE
