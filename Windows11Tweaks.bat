@@ -12,6 +12,7 @@ rem # https://sites.google.com/site/tweakradje/windows/windows-tweaking
 rem # https://admx.help/
 rem # https://github.com/ancel1x/Ancels-Performance-Batch
 rem # https://github.com/Batlez/Batlez-Tweaks
+rem # https://sites.google.com/view/melodystweaks/basictweaks
 
 rem # -----------------------------------------------------------------------------------------
 
