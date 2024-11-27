@@ -2,6 +2,9 @@ rem # DOES NOT SUPPORT DIGITAL STREAM COMPRESSION (DSC). Black screen will occur
 
 PAUSE
 
+rem # Sources: https://sites.google.com/view/melodystweaks/basictweaks
+rem # https://github.com/sherifmagdy32/gaming_os_tweaker/blob/main/scripts/tweaks/gpu.cmd
+
 rem # https://www.elevenforum.com/members/garlin.5387/
 rem # https://www.elevenforum.com/t/gpu-tweaks-batch-script.30134/post-521530
 if not exist C:\Windows\System32\wbem\WMIC.exe (
@@ -116,5 +119,6 @@ reg add "HKLM\SOFTWARE\Microsoft\DirectDraw" /v "EmulationOnly" /t REG_DWORD /d 
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "AllowDeepCStates" /t REG_DWORD /d 0 /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "AdaptiveVsyncEnable" /t REG_DWORD /d 0 /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "BuffersInFlight" /t REG_DWORD /d 4096 /f
 
 PAUSE
