@@ -70,6 +70,114 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "ComputePreemptionL
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "ComputePreemption" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "DisableAcpPowerGating" /t REG_DWORD /d "1" /f
 
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v DisableAllClockGating /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v DisableAsyncPstates /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v DisableBlockWrite /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v DisableCpPowerGating /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v DisableCudaContextPreemption /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v DisableDMACopy /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v DisableDrmdmaPowerGating /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v DisableDynamicPstate /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v DisableGDIAcceleration /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v DisableGDSPowerGating /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v DisableGfxCGPowerGating /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v DisableGfxClockGating /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v DisableGFXPipelinePowerGating /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v DisableGmcPowerGating /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v DisableHdpClockPowerGating /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v DisableHdpMGClockGating /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v DisableKmRender /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v DisableKmRenderBoost /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v DisableOverclockedPstates /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v DisablePowerGating /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v DisablePreemption /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v DisablePreemptionOnS3S4 /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v DisableSamuClockGating /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v DisableSysClockGating /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v DisableUVDPowerGating /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v DisableVceClockGating /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v DisableWriteCombining /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v DisableXdmaPowerGating /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v DisableXdmaSclkGating /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v Disable_OverlayDSQualityEnhancement /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v DpiMapIommuContiguous /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v EnableAggressivePStateBoost /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v EnableAggressivePStateOnly /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v EnableAsyncMidBufferPreemption /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v EnableCEPreemption /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v EnableDirectFlip /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v EnableIndependentFlip /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v EnableMidBufferPreemption /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v EnableMidBufferPreemptionForHighTdrTimeout /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v EnableMidGfxPreemption /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v EnableMidGfxPreemptionVGPU /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v EnablePerformanceMode /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v EnablePreemption /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v EnableRuntimePowerManagement /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v EnableSCGMidBufferPreemption /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v EnableUlps /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v EnableVCNPreemption /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v FlTransitionLatency /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v GPUPreemptionLevel /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v KMD_EnableComputePreemption /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v KMD_EnableGfxMidCmdPreemption /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v KMD_EnablePreemptionLogging /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v KMD_EnableSDMAPreemption /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v KMD_PreemptionLevelLimit /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v MonitorLatencyTolerance /t REG_DWORD /d 1000 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v MonitorRefreshLatencyTolerance /t REG_DWORD /d 2710 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v PerfAnalyzeMidBufferPreemption /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v PowerSavingTweaks /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v PP_SclkDeepSleepDisable /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v PP_ThermalAutoThrottlingEnable /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v PrimaryPushBufferSize /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v RmClkPowerOffDramPllWhenUnused /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v RMDeepLlEntryLatencyUsec /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v RMDisablePostL2Compression /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v RmDisableRegistryCaching /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v RmFbsrPagedDMA /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v RmGpsPsEnablePerCpuCoreDpc /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v StutterMode /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v UseGpuTimer /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v DisableOverlay /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v EnableSystemMemoryTiling /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v EnableTiledDisplay /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v ENABLE_OCA_LOGGING /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v PCIEPowerControl /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v PCIEPowerControl_8086191f50001458 /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v RMClkSlowDown /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v RMDisableGpuASPMFlags /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v RmDisableHdcp22 /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v RMEnableASPMAtLoad /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v RMEnableASPMDT /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v RmMIONoPowerOff /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v RmPerfRatedTdpLimit /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v RMSkipHdcp22Init /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v RmWotHdcpEnable /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v F1TransitionLatency /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v RMDeepL1EntryLatencyUsec /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v EnableCoreSlowdown /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v EnableMClkSlowdown /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v EnableNVClkSlowdown /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v RmDisableHwFaultBuffer /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v KMD_EnableGDIAcceleration /t REG_DWORD /d 1 /f
+
+
+:: Keep k-boost limitation break disabled, otherwise it runs the GPU at full power even when idle
+:: If one were to enable k-boost, the PerfLevelSrc value would need to be 2222, as it would keep clocks freq at fixed maximum
+REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v PerfLevelSrc /t REG_DWORD /d 8738 /f
+REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v PowerMizerEnable /t REG_DWORD /d 0 /f
+REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v PowerMizerLevel /t REG_DWORD /d 1 /f
+REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v PowerMizerLevelAC /t REG_DWORD /d 1 /f
+
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%" /v TCCSupported /t REG_DWORD /d 0 /f
+
+
+
+:: Nvidia HD audio tweaks
+REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%\PowerSettings" /v ConservationIdleTime /t REG_DWORD /d 00000000 /f
+REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%\PowerSettings" /v IdlePowerState /t REG_DWORD /d 00000000 /f
+REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\%GPU_DEVICE_CLASS_GUID_WITH_KEY%\PowerSettings" /v PerformanceIdleTime /t REG_DWORD /d 00000000 /f
 
 
 
