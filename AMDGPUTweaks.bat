@@ -136,7 +136,5 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_RebarControlSu
                 )
              )
 
-rem # IGPU Dedicated Segment Size
-reg add "HKLM\SOFTWARE\Intel\GMM" /v "DedicatedSegmentSize" /t REG_DWORD /d "512"
 
 PAUSE
