@@ -1,10 +1,23 @@
 rem # Maximum Transmission Unit (MTU)
-rem # Auto-configs MTU size for network and applies value
+rem # Automatically finds MTU value and applies
 
-rem # Make sure "subinterface" matches network name
-rem # Find correct MTU value and set below
-rem # open Command Prompt
-rem # ping www.google.com -f -l 1500 (keep lowering value until packets aren't fragmented)
+rem # garlin: https://www.elevenforum.com/members/garlin.5387/
+rem # https://www.elevenforum.com/t/network-tweak-script.30284/#post-523372
 
-netsh interface ipv4 set subinterface "Wi-Fi" mtu=1472 store=persistent
-netsh interface ipv4 set subinterface "Ethernet" mtu=1472 store=persistent
+@echo off
+setlocal
+set /a MTU=1500
+
+:check_MTU_size
+    for /f %%f in ('ping -f -l %MTU% 1.1.1.1 -n 1 ^| find /c "fragmented"') do set result=%%f
+    if %result% equ 1 (
+        set /a MTU=MTU - 1
+        goto :check_MTU_size
+    )
+
+echo %MTU%
+
+netsh interface ipv4 set subinterface "Wi-Fi" mtu=%MTU% store=persistent
+netsh interface ipv4 set subinterface "Ethernet" mtu=%MTU% store=persistent
+
+PAUSE
