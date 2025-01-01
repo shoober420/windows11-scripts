@@ -1,4 +1,6 @@
 rem # AMD GPU Tweaks
+rem # Works on AMD/ATI GPUs ONLY
+rem # Also use on AMD/NVIDIA combo laptops
 
 rem # DOES NOT SUPPORT DIGITAL STREAM COMPRESSION (DSC). Black screen will occur if used of DSC monitors
 
