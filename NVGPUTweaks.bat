@@ -1,4 +1,6 @@
 rem # NVIDIA GPU Tweaks
+rem # Works only on NVIDIA GPUs
+rem # Also use on AMD/NVIDIA combo laptops
 
 rem # DOES NOT SUPPORT DIGITAL STREAM COMPRESSION (DSC). Black screen will occur if used of DSC monitors
 
