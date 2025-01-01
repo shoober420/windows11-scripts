@@ -36,7 +36,7 @@ echo C. Cancel
 echo.
 choice /c 1234C /m "Choose an option :"
 
-if 4 EQU %ERRORLEVEL% (
+if 5 EQU %ERRORLEVEL% (
    echo User chose to cancel.
 ) else if 4 EQU %ERRORLEVEL% (
    call :performancetheo
@@ -55,19 +55,23 @@ goto :eof
 :latencyxbit
 echo User chose Latency (xbitlabs article) (24 Hex = Short, Variable, No foreground boost).
 echo reg add "HKLM\SYSTEM\CurrentControlSet\Control\PriorityControl" /v "Win32PrioritySeparation" /t REG_DWORD /d "0x00000024" /f
+PAUSE
 exit /b
 
 :performancexbit
 echo User chose Performance (xbitlabs article) (26 Hex = Short, Variable, High foreground boost).
 echo reg add "HKLM\SYSTEM\CurrentControlSet\Control\PriorityControl" /v "Win32PrioritySeparation" /t REG_DWORD /d "0x00000026" /f
+PAUSE
 exit /b
 
 :latencytheo
 echo User chose Latency (theoretically) (28 Hex = Short, Fixed, No foreground boost).
 echo reg add "HKLM\SYSTEM\CurrentControlSet\Control\PriorityControl" /v "Win32PrioritySeparation" /t REG_DWORD /d "0x00000028" /f
+PAUSE
 exit /b
 
 :performancetheo
 echo User chose Performance (theoretically) (16 Hex = Long, Variable, High foreground boost).
 echo reg add "HKLM\SYSTEM\CurrentControlSet\Control\PriorityControl" /v "Win32PrioritySeparation" /t REG_DWORD /d "0x00000016" /f
+PAUSE
 exit /b
