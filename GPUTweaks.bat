@@ -1,4 +1,5 @@
 rem # GPU Tweaks
+rem # Works for any graphics card
 
 rem # DOES NOT SUPPORT DIGITAL STREAM COMPRESSION (DSC). Black screen will occur if used of DSC monitors
 
@@ -14,8 +15,6 @@ if not exist C:\Windows\System32\wbem\WMIC.exe (
     DISM /Online /Add-Capability /CapabilityName:WMIC~~~~
     echo Done.
 )
-
-rem # GPU tweaks for any graphics card
 
 rem # MAY CAUSE CRASHES
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "PlatformSupportMiracast" /t REG_DWORD /d "0" /f
