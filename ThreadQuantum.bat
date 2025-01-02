@@ -1,4 +1,5 @@
 rem # Thread Quantum Selector
+
 rem # https://www.xbitlabs.com/win32priorityseparation-performance/
 rem # https://smallvoid.com/article/winnt-process-scheduler-priority.html
 rem # https://forums.blurbusters.com/viewtopic.php?t=8535
@@ -30,6 +31,8 @@ rem # Best Input/Latency - 28 HEX: Short, Fixed, No foreground boost (theorectic
 rem # Best Performance/FPS - 16 HEX: Long, Variable, High foreground boost (theoretically)
 
 rem # Default - 2 HEX: Short, Variable, High foreground boost
+
+PAUSE
 
 @echo off
 
