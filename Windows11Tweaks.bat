@@ -3121,4 +3121,11 @@ powercfg -devicedisablewake "HID-complaint mouse (001)"
 powercfg -devicedisablewake "HID Keyboard Device"
 powercfg -devicedisablewake "HID Keyboard Device (001)"
 
+rem # Disable Wi-Fi Sense
+reg add "HKLM\SOFTWARE\Microsoft\wcmsvc\wifinetworkmanager" /v "WifiSenseCredShared" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\wcmsvc\wifinetworkmanager" /v "WifiSenseOpen" /t REG_DWORD /d "0" /f
+
+rem # Disable Hotspot 2.0 Networks
+reg add "HKLM\SOFTWARE\Microsoft\WlanSvc\AnqpCache" /v "OsuRegistrationStatus" /t REG_DWORD /d 0 /f
+
 PAUSE
