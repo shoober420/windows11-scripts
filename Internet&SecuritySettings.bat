@@ -8,6 +8,10 @@ rem # https://www.speedguide.net/articles/gaming-tweaks-5812
 
 rem # https://www.speedguide.net/articles/windows-2kxp-registry-tweaks-157/p-1/
 
+rem # https://learn.microsoft.com/en-us/powershell/module/netadapter/?view=windowsserver2025-ps
+
+rem # https://www.ibm.com/docs/en/was/9.0.5?topic=systems-tuning-windows
+
 rem # Enable and start WMI
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD /d "2" /f
@@ -30,19 +34,50 @@ powershell.exe Enable-WindowsOptionalFeature -Online -FeatureName MicrosoftWindo
 
 TIMEOUT /T 5
 
-PowerShell.exe Set-NetTCPSetting -SettingName internet -AutoTuningLevelLocal normal
-PowerShell.exe Set-NetTCPSetting -SettingName internet -ScalingHeuristics disabled
-PowerShell.exe Set-NetTCPSetting -SettingName internet -EcnCapability disabled
-PowerShell.exe Set-NetTCPSetting -SettingName internet -Timestamps disabled
-PowerShell.exe Set-NetTCPSetting -SettingName internet -MaxSynRetransmissions 2
-PowerShell.exe Set-NetTCPSetting -SettingName internet -NonSackRttResiliency disable
-PowerShell.exe Set-NetTCPSetting -SettingName internet -InitialRto 1000
-PowerShell.exe Set-NetTCPSetting -SettingName internet -MinRto 300
+PowerShell.exe Set-NetTCPSetting -SettingName "*" -AutoTuningLevelLocal normal
+PowerShell.exe Set-NetTCPSetting -SettingName "*" -ScalingHeuristics disabled
+PowerShell.exe Set-NetTCPSetting -SettingName "*" -EcnCapability disabled
+PowerShell.exe Set-NetTCPSetting -SettingName "*" -Timestamps disabled
+PowerShell.exe Set-NetTCPSetting -SettingName "*" -MaxSynRetransmissions 2
+PowerShell.exe Set-NetTCPSetting -SettingName "*" -NonSackRttResiliency disable
+PowerShell.exe Set-NetTCPSetting -SettingName "*" -InitialRto 1000
+PowerShell.exe Set-NetTCPSetting -SettingName "*" -MinRto 300
+powershell.exe Set-NetTCPSetting -SettingName "*" -InitialCongestionWindow 10
 powershell.exe Set-NetOffloadGlobalSetting -ReceiveSegmentCoalescing disabled
 powershell.exe Set-NetOffloadGlobalSetting -ReceiveSideScaling enable
 powershell.exe Set-NetOffloadGlobalSetting -Chimney disabled
-PowerShell.exe Disable-NetAdapterLso -Name *
-PowerShell.exe Enable-NetAdapterChecksumOffload -Name *
+powershell.exe Set-NetOffloadGlobalSetting -PacketCoalescingFilter Disabled
+powershell.exe Set-NetOffloadGlobalSetting -TaskOffload Disabled
+powershell.exe Set-NetOffloadGlobalSetting -ScalingHeuristics Disabled
+PowerShell.exe Disable-NetAdapterLso -Name "*"
+powershell.exe Disable-NetAdapterRsc -Name "*"
+powershell.exe Disable-NetAdapterIPsecOffload -Name "*"
+powershell.exe Disable-NetAdapterPowerManagement -Name "*"
+powershell.exe Disable-NetAdapterQos -Name "*"
+powershell.exe Disable-NetAdapterEncapsulatedPacketTaskOffload -Name "*"
+powershell.exe Disable-NetAdapterUso -Name "*"
+powershell.exe Disable-NetAdapterRdma -Name "*"
+powershell.exe Disable-NetAdapterSriov -Name "*"
+powershell.exe Disable-NetAdapterVmq -Name "*"
+PowerShell.exe Enable-NetAdapterChecksumOffload -Name "*"
+powershell.exe Enable-NetAdapterRss -Name "*"
+powershell.exe Set-NetIPv4Protocol -MulticastForwarding Disabled 
+powershell.exe Set-NetIPv4Protocol -MediaSenseEventLog Disabled
+
+powershell.exe Disable-NetAdapterBinding -Name "*" -ComponentID ms_lldp
+powershell.exe Disable-NetAdapterBinding -Name "*" -ComponentID ms_lltdio
+powershell.exe Disable-NetAdapterBinding -Name "*" -ComponentID ms_msclient
+powershell.exe Disable-NetAdapterBinding -Name "*" -ComponentID ms_rspndr
+powershell.exe Disable-NetAdapterBinding -Name "*" -ComponentID ms_server
+powershell.exe Disable-NetAdapterBinding -Name "*" -ComponentID ms_implat
+powershell.exe Disable-NetAdapterBinding -Name "*" -ComponentID ms_pacer
+powershell.exe Disable-NetAdapterBinding -Name "*" -ComponentID ms_pppoe
+powershell.exe Disable-NetAdapterBinding -Name "*" -ComponentID ms_rdma_ndk
+powershell.exe Disable-NetAdapterBinding -Name "*" -ComponentID ms_ndisuio
+powershell.exe Disable-NetAdapterBinding -Name "*" -ComponentID ms_wfplwf_upper
+powershell.exe Disable-NetAdapterBinding -Name "*" -ComponentID ms_wfplwf_lower
+powershell.exe Disable-NetAdapterBinding -Name "*" -ComponentID ms_netbt
+powershell.exe Disable-NetAdapterBinding -Name "*" -ComponentID ms_netbios
 
 powershell.exe Disable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol
 ECHO Y | powershell.exe Set-SmbServerConfiguration -EnableSMB1Protocol $false
@@ -280,6 +315,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "DisableLar
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\UDP\Parameters" /v "EnableUDPFastSend" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "DisableDynamicDiscovery" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Winsock" /v "UseDelayedAcceptance" /t REG_DWORD /d "0" /f
+
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\AFD\Parameters" /v "FastCopyReceiveThreshold" /t REG_DWORD /d "0x000005dc" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\AFD\Parameters" /v "DefaultSendWindow" /t REG_DWORD /d "0x00200000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\AFD\Parameters" /v "DefaultReceiveWindow" /t REG_DWORD /d "0x00200000" /f
@@ -290,6 +326,14 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\AFD\Parameters" /v "DisableAddre
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\AFD\Parameters" /v "DisableRawSecurity" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\AFD\Parameters" /v "DisableDirectAcceptEx" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\AFD\Parameters" /v "DisableChainedReceive" /t REG_DWORD /d "1" /f
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\AFD\Parameters" /v "IgnorePushBitOnReceives " /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\AFD\Parameters" /v "NonBlockingSendSpecialBuffering " /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\AFD\Parameters" /v "EnableDynamicBacklog" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\AFD\Parameters" /v "MinimumDynamicBacklog" /t REG_DWORD /d "20" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\AFD\Parameters" /v "MaximumDynamicBacklog" /t REG_DWORD /d "20000" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\AFD\Parameters" /v "DynamicBacklogGrowthDelta" /t REG_DWORD /d "10" /f
+
 reg add "HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp" /v "TcpAutotuning" /t REG_DWORD /d "1" /f
 reg add "HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Internet Settings" /v "TcpAutotuning" /t REG_DWORD /d "1" /f
 reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp" /v "TcpAutotuning" /t REG_DWORD /d "1" /f
