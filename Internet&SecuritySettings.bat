@@ -12,6 +12,8 @@ rem # https://learn.microsoft.com/en-us/powershell/module/netadapter/?view=windo
 
 rem # https://www.ibm.com/docs/en/was/9.0.5?topic=systems-tuning-windows
 
+rem # https://www.cyberdasm.com/publ/volume_2/computer_tips/how_to_reduce_lag_in_bdo/14-1-0-311
+
 rem # Enable and start WMI
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD /d "2" /f
