@@ -7,7 +7,7 @@ rem # https://www.elevenforum.com/t/network-tweak-script.30284/#post-523372
 netsh interface ipv4 set subinterface "Wi-Fi" mtu=1500 store=persistent
 netsh interface ipv4 set subinterface "Ethernet" mtu=1500 store=persistent
 
-TIMEOUT /5
+TIMEOUT 5
 
 @echo off
 setlocal
