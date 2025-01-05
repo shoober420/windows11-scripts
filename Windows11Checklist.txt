@@ -46,6 +46,7 @@ Download
  - Marvell Aqtion NIC Drivers (Marvell Public Drivers) (AQCxxx) (https://www.marvell.com/support/downloads.html)
  - NVIDIA PowerMizer Manager (https://nvidia-powermizer-manager.software.informer.com/)
  - Intel Integrated Graphics Driver: Arc, Iris, Xe (https://www.intel.com/content/www/us/en/download/785597/intel-arc-iris-xe-graphics-windows.html)
+ - Intel Iris Plus Graphics Driver (https://www.intel.com/content/www/us/en/support/products/211965/graphics/processor-graphics/intel-iris-plus-graphics-family.html)
 
 SAFE MODE: Press and hold F8, then power on system while holding down F8
 
