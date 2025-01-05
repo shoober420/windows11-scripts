@@ -25,5 +25,6 @@ rem # https://docs.oracle.com/cd/E13924_01/coh.340/e13818/perftune.htm
 rem # As opposed to NVIDIA saying to use a value of 64K, which is meant for jumbo packet enabled configurations
 rem # https://docs.nvidia.com/networking/display/winofv55054000/general+performance+optimization+and+tuning
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\AFD\Parameters" /v "FastSendDatagramThreshold" /t REG_DWORD /d "%MTU%" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\AFD\Parameters" /v "FastCopyReceiveThreshold" /t REG_DWORD /d "%MTU%" /f
 
 PAUSE
