@@ -31,12 +31,6 @@ rem # ping www.google.com -f -l 1500 (keep lowering value until packets aren't f
 rem netsh interface ipv4 set subinterface "Wi-Fi" mtu=1472 store=persistent
 rem netsh interface ipv4 set subinterface "Ethernet" mtu=1472 store=persistent
 
-rem # FastSendDatagramThreshold should match MTU value in decimal, not hexadecimal (usually 1472)
-rem # https://docs.oracle.com/cd/E13924_01/coh.340/e13818/perftune.htm
-rem # As opposed to NVIDIA saying to use a value of 64K
-rem # https://docs.nvidia.com/networking/display/winofv55054000/general+performance+optimization+and+tuning
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\AFD\Parameters" /v "FastSendDatagramThreshold" /t REG_DWORD /d "0x000005c0" /f
-
 rem # Set value according to core amount
 rem # 4 cores = 4 Queues / 8+ = 8 Queues
 rem # 8+ Queues may cause loss of connection
