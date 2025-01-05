@@ -53,6 +53,8 @@ Download
    ++ devmgmt
 msc > Display Adapters > Intel * > Properties > Driver tab > Uninstall device > Reboot
    +++ Install driver with "clean installation" option
+
+ - Intel Graphics Command Center (https://www.intel.com/content/www/us/en/products/docs/graphics/graphics-command-center.html)
    
 
 SAFE MODE: Press and hold F8, then power on system while holding down F8
