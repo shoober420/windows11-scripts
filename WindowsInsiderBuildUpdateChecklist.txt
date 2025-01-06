@@ -29,6 +29,8 @@ Make sure to disable any unused network adapters under Device Manager, or script
 
 Update BIOS
 
+Tweak BIOS
+
 RESTART
 
 Run Windows update
