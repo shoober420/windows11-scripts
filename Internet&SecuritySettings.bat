@@ -1,5 +1,9 @@
 rem # Internet and security settings (powershell requires WMI service)
 
+rem # !!! MUST RUN DNS.ps1 TO FIX INTERNET !!!
+
+PAUSE
+
 rem # Disable all offloading except Checksum Offloading for gaming
 
 rem # TCP Window Auto-Tuning does NOT cause bufferbloat, DONT disable to increase score
