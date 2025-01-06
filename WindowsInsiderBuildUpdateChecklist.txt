@@ -19,13 +19,41 @@ Right click > Run as administrator
 
 ----------------------------------------------------------
 
+# Minimal Install
+ - Internet&SecuritySettings.bat
+ - MouseAccelFix.bat
+ - NICProperties.ps1
+ - NetworkTweaks.bat
+ - PowerPlanUltra.bat
+ - PowerPlanSettings.bat
+ - DNS.ps1
+ - ThreadQuantum.bat
+ - MTU.bat
+
+# Standard Install
+ - CPUTweaks.bat
+ - GPUTweaks.bat / AMDGPUTweaks.bat / NVGPUTweaks.bat
+ - HighPriority.bat
+ - InputTweaks.bat
+ - Internet&SecuritySettings.bat
+ - MouseAccelFix.bat
+ - NICProperties.ps1
+ - NetworkTweaks.bat
+ - PowerPlanUltra.bat
+ - PowerPlanSettings.bat
+ - RAMTweaks.bat
+ - ThreadQuantum.bat
+ - UseLargePages.bat
+ - DNS.ps1
+ - MTU.bat
+
 NOTE:
 If at any point during the process you get stuck at "Just a moment..." screen before login, press CTRL+ALT+DEL to force login screen to show
 
 NOTE:
 Make sure to disable any unused network adapters under Device Manager, or scripts may run very slow
 
-# Instructions
+# Advanced Install Instructions
 
 Update BIOS
 
