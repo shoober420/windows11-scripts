@@ -56,10 +56,13 @@ msc > Display Adapters > Intel * > Properties > Driver tab > Uninstall device > 
 
  - Intel Graphics Command Center (https://www.intel.com/content/www/us/en/products/docs/graphics/graphics-command-center.html)
 
-- Windows N Canary ISO (https://uupdump.net/known.php)
- ++ Use N edition to remove media bloat
+- Windows N Canary ISO (no Microsoft account) (https://uupdump.net/known.php)
+ ++ Use N edition to remove media and app bloat
+
+- Windows N Canary ISO (with Microsoft account) (https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewiso)
+ ++ Use N edition to remove media and app bloat
    
-If Windows doesnt recognize a USB stick, format ot with Rufus
+If Windows doesnt recognize a USB stick, format it with Rufus
 
 SAFE MODE: Press and hold F8, then power on system while holding down F8
 
@@ -496,7 +499,7 @@ C:\Program Files (x86)\ASUS\ArmouryDevice\dll\ShareFromArmouryIII\Mouse\ROG STRI
 
 +++ MINIMAL C:\Windows\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\SearchHost.exe.bak (***) (removes Search process, needs done again after updates) (borks Search)
 
-+++ ULTRA MINIMAL C:\Windows\System32\ApplicationFrameHost.exe.bak (***) (removes "Application Frame Host" process, needs done again after updates) (displays UWP apps in separate frames/Windows) (borks Settings and windows key/alt+tab, Ctrl+alt+del needed to get back to desktop in Fullscreen games)
++++ ULTRA MINIMAL C:\Windows\System32\ApplicationFrameHost.exe.bak (***) (removes "Application Frame Host" process, needs done again after updates) (displays UWP apps in separate Windows) (borks Settings and windows key/alt+tab, Ctrl+alt+del needed to get back to desktop in Fullscreen games)
 
 Download shutup10++, open in downloads and disable most settings
 
@@ -701,9 +704,6 @@ Run windows update
  - Install-Module PSWindowsUpdate
  - Get-WindowsUpdate
  - Install-WindowsUpdate
-
-Windows Insider Canary ISO
- - https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewiso
 
 A newer build is available in windows update, but still says "You're up to date"
  - download latest build iso (https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewiso)
