@@ -55,6 +55,9 @@ msc > Display Adapters > Intel * > Properties > Driver tab > Uninstall device > 
    +++ Install driver with "clean installation" option
 
  - Intel Graphics Command Center (https://www.intel.com/content/www/us/en/products/docs/graphics/graphics-command-center.html)
+
+- Windows N Canary ISO (https://uupdump.net/known.php)
+ ++ Use N edition to remove media bloat
    
 If Windows doesnt recognize a USB stick, format ot with Rufus
 
