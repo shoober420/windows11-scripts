@@ -56,11 +56,11 @@ msc > Display Adapters > Intel * > Properties > Driver tab > Uninstall device > 
 
  - Intel Graphics Command Center (https://www.intel.com/content/www/us/en/products/docs/graphics/graphics-command-center.html)
 
-- Windows N Canary ISO (no Microsoft account) (https://uupdump.net/known.php)
+- Windows N Canary ISO
+ + NO Microsoft account: (https://uupdump.net/known.php)
+ + WITH Microsoft account: (https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewiso)
  ++ Use N edition to remove media and app bloat
-
-- Windows N Canary ISO (with Microsoft account) (https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewiso)
- ++ Use N edition to remove media and app bloat
+ ++ format USB stick to Large FAT32 before burning ISO to make sure it doesnt fail in Rufus
    
 If Windows doesnt recognize a USB stick, format it with Rufus
 
