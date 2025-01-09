@@ -1,7 +1,5 @@
 rem # Internet and security settings (powershell requires WMI service)
 
-PAUSE
-
 rem # Disable all offloading except Checksum Offloading for gaming
 
 rem # TCP Window Auto-Tuning does NOT cause bufferbloat, DONT disable to increase score
