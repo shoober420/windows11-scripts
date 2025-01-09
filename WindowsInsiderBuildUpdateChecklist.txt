@@ -46,6 +46,7 @@ Right click > Run as administrator
  - RAMTweaks.bat
  - ThreadQuantum.bat
  - UseLargePages.bat
+ - Windows11Tweaks.bat
  - DNS.ps1
  - MTU.bat
 
