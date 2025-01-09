@@ -28,7 +28,7 @@ rem # Removes and disables Microsoft Edge
 
 PAUSE
 
-rem # RUN DNS.ps1 TO FIX INTERNET
+rem # YOU MUST RECONFIGURE DNS OR RUN DNS.ps1 TO FIX INTERNET
 
 PAUSE
 
@@ -3135,5 +3135,7 @@ reg add "HKLM\SOFTWARE\Microsoft\WlanSvc\AnqpCache" /v "OsuRegistrationStatus" /
 rem # Launch DNS.ps1 to fix internet
 cd "%USERPROFILE%\Downloads\windows11-scripts-main"
 powershell.exe ./DNS.ps1
+
+rem # YOU MUST RECONFIGURE DNS OR RUN DNS.ps1 TO FIX INTERNET
 
 PAUSE
