@@ -159,13 +159,12 @@ RESTART (SAFE MODE) (hold SHIFT while restarting)
 
 RESTART
 
+ - DNS.ps1
  - MouseAccelFix.bat (Display > Scale: 100% required)
  - !!! PowerPlanUltra.bat (only if Ultimate Performance power plan profile is NOT present: powercfg -L)
  - PowerPlanSettings.bat
  - ThreadQuantum.bat
  - DisableWinHTTP.bat (WIRED CONNECTION ONLY)
-
- - DNS.ps1
  - NICProperties.ps1
 
  - NetworkTweaks.bat (script settings need tweaked to match users computer hardware)
