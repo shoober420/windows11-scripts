@@ -198,7 +198,7 @@ Steve Gibson ShieldsUp! firewall test
 
 Windows11Checklist.txt (information on tweaks)
 
-Windows11Tweaks.bat (Disables Telemetry required for Windows Insider Updates, run EnableWindowsUpdate.bat to fix) (Removes and disables Microsoft Edge) (recommended to run in SAFE MODE)
+Windows11Tweaks.bat (RUN DNS.ps1 TO FIX INTERNET) (Disables Telemetry required for Windows Insider Updates, run EnableWindowsUpdate.bat to fix) (Removes and disables Microsoft Edge) (recommended to run in SAFE MODE)
 
 DisableWindowsUpdate.bat / EnableWindowsUpdate.bat
 
@@ -322,7 +322,7 @@ Steam.bat (minimal and bloatless Steam launch script)
 
 MouseAccelFix.bat
 
-NetworkTweaks.bat (MUST RUN DNS.ps1 TO FIX INTERNET) (script settings need tweaked to match users computer hardware)
+NetworkTweaks.bat (script settings need tweaked to match users computer hardware)
 
 ComputerName.bat (change computer name and Hostname)
 
