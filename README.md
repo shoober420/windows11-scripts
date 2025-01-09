@@ -240,7 +240,7 @@ PowerPlanSettings.bat
 
 RemoveWindowsFeatures.bat (windows update services required for DISM)
 
-Internet&SecuritySettings.bat (MUST RUN DNS.ps1 TO FIX INTERNET) (powershell requires WMI service)
+Internet&SecuritySettings.bat (powershell requires WMI service)
 
 icons.bat
 
