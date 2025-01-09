@@ -64,6 +64,8 @@ msc > Display Adapters > Intel * > Properties > Driver tab > Uninstall device > 
    
 If Windows doesnt recognize a USB stick, format it with Rufus
 
+WMIC requires a genuine activated copy of Windows to install
+
 SAFE MODE: Press and hold F8, then power on system while holding down F8
 
 Windows 98 Icons: Original (https://win98icons.alexmeub.com) / HQ (https://github.com/nestoris/Win98SE)
