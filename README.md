@@ -200,7 +200,7 @@ Steve Gibson ShieldsUp! firewall test
 
 Windows11Checklist.txt (information on tweaks)
 
-Windows11Tweaks.bat (RUN DNS.ps1 TO FIX INTERNET) (Disables Telemetry required for Windows Insider Updates, run EnableWindowsUpdate.bat to fix) (Removes and disables Microsoft Edge) (recommended to run in SAFE MODE)
+Windows11Tweaks.bat (YOU MUST RECONFIGURE DNS OR RUN DNS.ps1 TO FIX INTERNET) (Disables Telemetry required for Windows Insider Updates, run EnableWindowsUpdate.bat to fix) (Removes and disables Microsoft Edge) (recommended to run in SAFE MODE)
 
 DisableWindowsUpdate.bat / EnableWindowsUpdate.bat
 
