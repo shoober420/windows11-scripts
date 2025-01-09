@@ -1,6 +1,6 @@
 rem # Disable PowerShell scripts
 rem # Prevent ps1 script execution
 
-Set-ExecutionPolicy Restricted
+powershell.exe Set-ExecutionPolicy Restricted
 
 PAUSE
