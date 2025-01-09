@@ -479,3 +479,5 @@ DisablePowerManagement.ps1
 TestModeOn.bat / TestModeOff.bat
 
 AMDGPUTweaks.bat (script settings need tweaked to match users computer hardware)
+
+DisableBitLocker.bat
