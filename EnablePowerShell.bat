@@ -14,11 +14,11 @@ rem # Powershell requires "Application Information" service to be running
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Appinfo" /v "Start" /t REG_DWORD /d "3" /f
 net start Appinfo
 
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowRun" /v "powershell.exe" /t REG_DWORD /d "0" /f
+reg del "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowRun\powershell.exe"
 
 powershell.exe Enable-WindowsOptionalFeature -Online -FeatureName MicrosoftWindowsPowerShellV2Root
 
 rem # Enable PowerShell scripts
-powershell.exe Set-ExecutionPolicy Bypass
+powershell.exe Set-ExecutionPolicy Unrestricted
 
 PAUSE
