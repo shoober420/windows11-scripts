@@ -19,6 +19,7 @@ Right click > Run as administrator
 ----------------------------------------------------------
 
 # Minimal Install
+ - PowerShellScriptsOn.bat
  - Internet&SecuritySettings.bat
  - MouseAccelFix.bat
  - NICProperties.ps1
@@ -30,6 +31,7 @@ Right click > Run as administrator
  - MTU.bat
 
 # Standard Install
+ - PowerShellScriptsOn.bat
  - CPUTweaks.bat
  - GPUTweaks.bat / AMDGPUTweaks.bat / NVGPUTweaks.bat
  - HighPriority.bat
