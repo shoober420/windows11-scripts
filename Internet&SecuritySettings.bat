@@ -28,12 +28,6 @@ rem # Powershell requires "Application Information" service to be running
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Appinfo" /v "Start" /t REG_DWORD /d "3" /f
 net start Appinfo
 
-rem # Enable PowerShell
-
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowRun" /v "powershell.exe" /t REG_DWORD /d "0" /f
-
-powershell.exe Enable-WindowsOptionalFeature -Online -FeatureName MicrosoftWindowsPowerShellV2Root
-
 TIMEOUT /T 5
 
 PowerShell.exe Set-NetTCPSetting -SettingName "*" -AutoTuningLevelLocal normal
