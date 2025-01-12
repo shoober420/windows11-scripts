@@ -62,6 +62,8 @@ msc > Display Adapters > Intel * > Properties > Driver tab > Uninstall device > 
  ++ Arch Linux: doas pacman -S cabextract wimlib chntpw cdrtools aria2
  ++ Arch Linux: sh uup_download_linux.sh
  ++ Arch Linux: auracle download woeusb
+ ++ Arch Linux: lsblk to find usb name
+ ++ Arch Linux: doas woeusb --device Windows.iso /dev/sdX
  +++ Windows: format USB stick to Large FAT32 before burning ISO to make sure it doesnt fail in Rufus
 
 Windows 11 Home keys cant be used with Windows 11 Home N edition
