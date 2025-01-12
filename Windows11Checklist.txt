@@ -56,12 +56,12 @@ msc > Display Adapters > Intel * > Properties > Driver tab > Uninstall device > 
 
  - Intel Graphics Command Center (https://www.intel.com/content/www/us/en/products/docs/graphics/graphics-command-center.html)
 
-- Windows N Canary ISO
+- Windows Canary ISO
  + NO Microsoft account: (https://uupdump.net/known.php)
- ++ doas pacman -S cabextract wimlib chntpw cdrtools
  + WITH Microsoft account: (https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewiso)
- ++ Use N edition to remove media and app bloat
- ++ format USB stick to Large FAT32 before burning ISO to make sure it doesnt fail in Rufus
+ ++ Arch Linux: doas pacman -S cabextract wimlib chntpw cdrtools
+ ++ Arch Linux: sh uup_download_linux.sh
+ +++ Windows: format USB stick to Large FAT32 before burning ISO to make sure it doesnt fail in Rufus
    
 If Windows doesnt recognize a USB stick, format it with Rufus
 
