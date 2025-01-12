@@ -58,6 +58,7 @@ msc > Display Adapters > Intel * > Properties > Driver tab > Uninstall device > 
 
 - Windows N Canary ISO
  + NO Microsoft account: (https://uupdump.net/known.php)
+ ++ doas pacman -S cabextract wimlib chntpw cdrtools
  + WITH Microsoft account: (https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewiso)
  ++ Use N edition to remove media and app bloat
  ++ format USB stick to Large FAT32 before burning ISO to make sure it doesnt fail in Rufus
