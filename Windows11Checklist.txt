@@ -59,7 +59,7 @@ msc > Display Adapters > Intel * > Properties > Driver tab > Uninstall device > 
 - Windows Canary ISO
  + NO Microsoft account: (https://uupdump.net/known.php)
  + WITH Microsoft account: (https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewiso)
- ++ Arch Linux: doas pacman -S cabextract wimlib chntpw cdrtools
+ ++ Arch Linux: doas pacman -S cabextract wimlib chntpw cdrtools aria2
  ++ Arch Linux: sh uup_download_linux.sh
  +++ Windows: format USB stick to Large FAT32 before burning ISO to make sure it doesnt fail in Rufus
    
