@@ -384,7 +384,7 @@ EnableDXVK_HUD.reg / RemoveDXVK_HUD.reg
 
 EnableRTXRemixVulkanBeta.reg / RemoveRTXRemixVulkanBeta.reg
 
-InstallWinget.bat
+InstallWinget.bat / InstallWinget.ps1
 
 InstallPowershell.bat
 
@@ -483,3 +483,5 @@ TestModeOn.bat / TestModeOff.bat
 AMDGPUTweaks.bat (script settings need tweaked to match users computer hardware)
 
 DisableBitLocker.bat
+
+DownloadFile.ps1
