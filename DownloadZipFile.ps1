@@ -15,4 +15,5 @@ $zipFile = "c:\temp\zipfiles" + $(Split-Path -Path $Url -Leaf)
 $extractPath = "c:\temp\zipfiles"
 
 # Download file
+# Change $zipFile to desired file name
 Invoke-WebRequest -Uri $url -OutFile $zipFile
