@@ -2,6 +2,8 @@
 
 # https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/LAST_CHANGE/chrome_win.zip
 
+# https://github.com/shoober420/windows11-scripts/archive/refs/heads/main.zip
+
 # URL and Destination
 # Enter URL inside the quotes
 $url = ""
