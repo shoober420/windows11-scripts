@@ -1,6 +1,6 @@
 # Download ZIP files with PowerShell
 
-# https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/LAST_CHANGE/chrome_win.zip
+# https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Win_x64%2F1406093%2Fchrome-win.zip?generation=1736872063088846&alt=media
 
 # https://github.com/shoober420/windows11-scripts/archive/refs/heads/main.zip
 
