@@ -1,5 +1,7 @@
 # Download ZIP files with PowerShell
 
+# https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/LAST_CHANGE/chrome_win.zip
+
 # URL and Destination
 # Enter URL inside the quotes
 $url = ""
