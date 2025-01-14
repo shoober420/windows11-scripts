@@ -485,3 +485,5 @@ AMDGPUTweaks.bat (script settings need tweaked to match users computer hardware)
 DisableBitLocker.bat
 
 DownloadFile.ps1
+
+DownloadZipFile.ps1
