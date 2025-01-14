@@ -1,7 +1,7 @@
-rem # Installs Winget with Powershell
+# Installs Winget with Powershell
 
-rem # https://stackoverflow.com/users/586898/vladan
-rem # https://stackoverflow.com/questions/74166150/install-winget-by-the-command-line-powershell/75334942#75334942
+# https://stackoverflow.com/users/586898/vladan
+# https://stackoverflow.com/questions/74166150/install-winget-by-the-command-line-powershell/75334942#75334942
 
 # get latest download url
 $URL = "https://api.github.com/repos/microsoft/winget-cli/releases/latest"
