@@ -484,7 +484,7 @@ TestModeOn.bat / TestModeOff.bat
 
 AMDGPUTweaks.bat (script settings need tweaked to match users computer hardware)
 
-DisableBitLocker.bat
+DisableBitLocker.bat (If asked for a recovery key when doing a WinRE "Refresh my PC", run this script)
 
 DownloadFile.ps1
 
