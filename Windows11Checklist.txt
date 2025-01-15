@@ -70,6 +70,8 @@ Windows 11 Home keys cant be used with Windows 11 Home N edition
 
 If Windows doesnt recognize a USB stick, format it with Rufus
 
+If asked to enter a recovery key when doing a WinRE "Refresh my PC", run DisableBitLocker.bat
+
 TLS1.2 required for Windows Update and DISM
 
 SAFE MODE: Press and hold F8, then power on system while holding down F8
