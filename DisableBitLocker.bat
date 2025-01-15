@@ -1,6 +1,6 @@
 rem # Disables BitLocker
 
-rem # If asked for a recovery key when doing a WinRE "Refresh my PC", run this script
+rem # Installing Windows 11 without TPM and SecureBoot in Rufus is required to fully disable BitLocker
 
 manage-bde -off C:
 powershell.exe Disable-BitLocker -MountPoint "C:"
