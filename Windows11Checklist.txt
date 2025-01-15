@@ -75,6 +75,8 @@ If asked to enter a recovery key when doing a WinRE "Refresh my PC", run Disable
 
 TLS1.2 required for Windows Update and DISM
 
+TPM AND SECUREBOOT ARE USED WITH WINDOWS PIN LOGIN, DONT TPM.MSC > CLEAR TPM, BORKS LOGIN
+
 SAFE MODE: Press and hold F8, then power on system while holding down F8
 
 Windows 98 Icons: Original (https://win98icons.alexmeub.com) / HQ (https://github.com/nestoris/Win98SE)
