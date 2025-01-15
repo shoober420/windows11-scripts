@@ -3139,6 +3139,12 @@ powershell.exe ./DNS.ps1
 cd "%USERPROFILE%\Downloads\windows11-scripts-main\windows11-scripts-main"
 powershell.exe ./DNS.ps1
 
+cd "%USERPROFILE%\Downloads\windows11-scripts\windows11-scripts"
+powershell.exe ./DNS.ps1
+
+cd "%USERPROFILE%\Downloads\windows11-scripts"
+powershell.exe ./DNS.ps1
+
 rem # YOU MUST RECONFIGURE DNS OR RUN DNS.ps1 TO FIX INTERNET
 
 PAUSE
