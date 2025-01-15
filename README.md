@@ -37,6 +37,7 @@ Right click > Run as administrator
  - HighPriority.bat
  - InputTweaks.bat
  - InternetSettings.bat
+ - SecuritySettings.bat
  - MouseAccelFix.bat
  - NICProperties.ps1
  - NetworkTweaks.bat
