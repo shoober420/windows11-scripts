@@ -65,6 +65,7 @@ msc > Display Adapters > Intel * > Properties > Driver tab > Uninstall device > 
  ++ Arch Linux: lsblk to find usb name
  ++ Arch Linux: doas woeusb --device Windows.iso /dev/sdX
  +++ Windows: format USB stick to Large FAT32 before burning ISO to make sure it doesnt fail in Rufus
+ +++ Windows: Disable TPM and SecureBoot in Rufus to allow WinRE "Reset This PC" without recovery key being needed
 
 Windows 11 Home keys cant be used with Windows 11 Home N edition
 
