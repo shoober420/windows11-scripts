@@ -487,3 +487,5 @@ DisableBitLocker.bat
 DownloadFile.ps1
 
 DownloadZipFile.ps1
+
+DisableTLS1.2.bat / EnableTLS1.2.bat
