@@ -22,7 +22,7 @@ Right click > Run as administrator
  - EnablePowerShell.bat
  - InternetSettings.bat
  - MouseAccelFix.bat
- - NICProperties.ps1
+ - NICProperties.bat
  - NetworkTweaks.bat
  - PowerPlanUltra.bat
  - PowerPlanSettings.bat
@@ -39,7 +39,7 @@ Right click > Run as administrator
  - InternetSettings.bat
  - SecuritySettings.bat
  - MouseAccelFix.bat
- - NICProperties.ps1
+ - NICProperties.bat
  - NetworkTweaks.bat
  - PowerPlanUltra.bat
  - PowerPlanSettings.bat
@@ -168,7 +168,7 @@ RESTART
  - PowerPlanSettings.bat
  - ThreadQuantum.bat
  - DisableWinHTTP.bat (WIRED CONNECTION ONLY)
- - NICProperties.ps1
+ - NICProperties.bat
 
  - NetworkTweaks.bat (script settings need tweaked to match users computer hardware)
  - RAMTweaks.bat (script settings need tweaked to match users computer hardware)
@@ -470,7 +470,7 @@ InputTweaks.bat (script settings need tweaked to match users computer hardware)
 
 DNS.ps1 (required to run after launching Windows11Tweaks.bat)
 
-NICProperties.ps1
+NICProperties.bat
 
 StaticIPConnection.bat
 
