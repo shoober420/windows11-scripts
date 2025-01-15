@@ -1,6 +1,6 @@
-rem # Disable SSL2.0 and SSL3.0
-rem # Disable TLS1.0, TLS1.1, and TLS1.2
-rem # Disable DTLS1.0, DTLS1.1, and DTLS1.2
+rem # Disable legacy SSL2.0 and SSL3.0
+rem # Disable legacy TLS1.0, TLS1.1, and TLS1.2
+rem # Disable legacy DTLS1.0, DTLS1.1, and DTLS1.2
 rem # Force Enable TLS1.3 and DTLS1.3
 
 rem # !!! WARNING !!!
