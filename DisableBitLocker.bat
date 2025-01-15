@@ -11,6 +11,10 @@ rem # - Remove requirement for 4GB+ RAM, Secure Boot and TPM 2.0
 rem # - Disable BitLocker automatic device encryption
 rem # REQUIRED TO FULLY DISABLE BITLOCKER
 
+rem # DISABLE TPM AND SECUREBOOT IN BIOS BEFORE MODIFIED RUFUS FRESH WINDOWS INSTALL
+
+PAUSE
+
 manage-bde -off C:
 powershell.exe Disable-BitLocker -MountPoint "C:"
 
