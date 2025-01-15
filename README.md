@@ -204,7 +204,7 @@ Windows11Checklist.txt (information on tweaks)
 
 Windows11Tweaks.bat (YOU MUST RECONFIGURE DNS OR RUN DNS.ps1 TO FIX INTERNET) (Disables Telemetry required for Windows Insider Updates, run EnableWindowsUpdate.bat to fix) (Removes and disables Microsoft Edge) (recommended to run in SAFE MODE)
 
-DisableWindowsUpdate.bat / EnableWindowsUpdate.bat
+DisableWindowsUpdate.bat / EnableWindowsUpdate.bat (required for DISM)
 
 DisableWMI.bat / EnableWMI.bat (needed for powershell and systeminfo)
 
@@ -242,7 +242,7 @@ StartGraphicsPerfSvc.bat
 
 PowerPlanSettings.bat
 
-RemoveWindowsFeatures.bat (windows update services required for DISM)
+RemoveWindowsFeatures.bat (Windows Update services required for DISM)
 
 InternetSettings.bat (powershell requires WMI service)
 
@@ -468,7 +468,7 @@ BlockRazerSynapse.bat (prevents Razer Synapse auto install rubber ducky attack)
 
 InputTweaks.bat (script settings need tweaked to match users computer hardware)
 
-DNS.ps1
+DNS.ps1 (required to run after launching Windows11Tweaks.bat)
 
 NICProperties.ps1
 
