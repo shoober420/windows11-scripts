@@ -18,4 +18,6 @@ PAUSE
 manage-bde -off C:
 powershell.exe Disable-BitLocker -MountPoint "C:"
 
+reg add "HKLM\System\CurrentControlSet\Control\BitLocker" /v "PreventDeviceEncryption" /t REG_DWORD /d "1" /f
+
 PAUSE
