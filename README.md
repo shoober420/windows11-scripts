@@ -20,7 +20,7 @@ Right click > Run as administrator
 
 # Minimal Install
  - EnablePowerShell.bat
- - Internet&SecuritySettings.bat
+ - InternetSettings.bat
  - MouseAccelFix.bat
  - NICProperties.ps1
  - NetworkTweaks.bat
@@ -36,7 +36,7 @@ Right click > Run as administrator
  - GPUTweaks.bat / AMDGPUTweaks.bat / NVGPUTweaks.bat
  - HighPriority.bat
  - InputTweaks.bat
- - Internet&SecuritySettings.bat
+ - InternetSettings.bat
  - MouseAccelFix.bat
  - NICProperties.ps1
  - NetworkTweaks.bat
@@ -128,7 +128,8 @@ Update Winget programs
  - WingetUpdateApps.bat
 
 - RemoveRemoteDesktopConnection.bat
-- Internet&SecuritySettings.bat
+- InternetSettings.bat
+- SecuritySettings.bat
 
 Install Intel Chipset INF Utility
  - Download (https://www.intel.com/content/www/us/en/download/19347/chipset-inf-utility.html)
@@ -242,7 +243,7 @@ PowerPlanSettings.bat
 
 RemoveWindowsFeatures.bat (windows update services required for DISM)
 
-Internet&SecuritySettings.bat (powershell requires WMI service)
+InternetSettings.bat (powershell requires WMI service)
 
 icons.bat
 
@@ -489,3 +490,5 @@ DownloadFile.ps1
 DownloadZipFile.ps1
 
 DisableTLS1.2.bat / EnableTLS1.2.bat (TLS1.2 required for Windows Update and DISM)
+
+SecuritySettings.bat
