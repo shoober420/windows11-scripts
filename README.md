@@ -484,7 +484,7 @@ TestModeOn.bat / TestModeOff.bat
 
 AMDGPUTweaks.bat (script settings need tweaked to match users computer hardware)
 
-DisableBitLocker.bat (If asked for a recovery key when doing a WinRE "Refresh my PC", run this script)
+DisableBitLocker.bat (Installing Windows 11 without TPM and SecureBoot in Rufus is required to fully disable BitLocker)
 
 DownloadFile.ps1
 
