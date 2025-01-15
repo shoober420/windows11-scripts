@@ -16,6 +16,7 @@ net start Appinfo
 
 rem # Csmc: https://www.elevenforum.com/members/csmc.38355/
 rem # Launches PowerShell scripts with admin privileges
+rem # Although the PowerShell path is in a directory called "v1.0", its still V2
 reg add "HKCR\Applications\powershell.exe\shell\open\command" /ve /t REG_SZ /d "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoLogo -ExecutionPolicy unrestricted -File \"%%1\"" /f >nul 2>&1
 
 reg del "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowRun\powershell.exe"
