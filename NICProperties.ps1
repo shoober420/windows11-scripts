@@ -1,4 +1,4 @@
-# Disable bloat NIC protocols and drivers
+rem # Disable bloat NIC protocols and drivers
 
 powershell Disable-NetAdapterBinding -Name * -DisplayName 'Client for Microsoft Networks'
 powershell Disable-NetAdapterBinding -Name * -DisplayName 'File and Printer Sharing for Microsoft Networks'
@@ -9,4 +9,4 @@ powershell Disable-NetAdapterBinding -Name * -ComponentID ms_tcpip6
 powershell Disable-NetAdapterBinding -Name * -DisplayName 'Link-Layer Topology Discovery Responder'
 powershell Disable-NetAdapterBinding -Name * -DisplayName 'Link-Layer Topology Discovery Mapper I/O Driver'
 
-cmd /c 'pause'
+PAUSE
