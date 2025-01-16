@@ -11,6 +11,8 @@ if not exist C:\Windows\System32\wbem\WMIC.exe (
     echo Done.
 )
 
+TIMEOUT /5
+
 rem # Go to Control Panel > Network and Sharing Center for network name
 
 rem # Receive Side Scaling requires Checksum Offloading to be enabled to work, disable all other offloading options for best latency
