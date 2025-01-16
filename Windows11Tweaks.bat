@@ -28,10 +28,6 @@ rem # Removes and disables Microsoft Edge
 
 PAUSE
 
-rem # YOU MUST RECONFIGURE DNS OR RUN DNS.ps1 TO FIX INTERNET
-
-PAUSE
-
 rem # Enable and start WMI
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD /d "2" /f
@@ -3131,20 +3127,5 @@ reg add "HKLM\SOFTWARE\Microsoft\wcmsvc\wifinetworkmanager" /v "WifiSenseOpen" /
 
 rem # Disable Hotspot 2.0 Networks
 reg add "HKLM\SOFTWARE\Microsoft\WlanSvc\AnqpCache" /v "OsuRegistrationStatus" /t REG_DWORD /d 0 /f
-
-rem # Launch DNS.ps1 to fix internet
-cd "%USERPROFILE%\Downloads\windows11-scripts-main"
-powershell.exe ./DNS.ps1
-
-cd "%USERPROFILE%\Downloads\windows11-scripts-main\windows11-scripts-main"
-powershell.exe ./DNS.ps1
-
-cd "%USERPROFILE%\Downloads\windows11-scripts\windows11-scripts"
-powershell.exe ./DNS.ps1
-
-cd "%USERPROFILE%\Downloads\windows11-scripts"
-powershell.exe ./DNS.ps1
-
-rem # YOU MUST RECONFIGURE DNS OR RUN DNS.ps1 TO FIX INTERNET
 
 PAUSE
