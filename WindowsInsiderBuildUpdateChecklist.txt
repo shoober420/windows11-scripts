@@ -25,9 +25,9 @@ Right click > Run as administrator
  - MouseAccelFix.bat
  - NICProperties.bat
  - NetworkTweaks.bat
+ - DNS.ps1
  - PowerPlanUltra.bat
  - PowerPlanSettings.bat
- - DNS.ps1
  - ThreadQuantum.bat
  - MTU.bat
 
@@ -42,13 +42,13 @@ Right click > Run as administrator
  - MouseAccelFix.bat
  - NICProperties.bat
  - NetworkTweaks.bat
+ - DNS.ps1
  - PowerPlanUltra.bat
  - PowerPlanSettings.bat
  - RAMTweaks.bat
  - ThreadQuantum.bat
  - UseLargePages.bat
  - Windows11Tweaks.bat
- - DNS.ps1
  - MTU.bat
 
 NOTE:
@@ -164,7 +164,6 @@ RESTART (SAFE MODE) (hold SHIFT while restarting)
 
 RESTART
 
- - DNS.ps1
  - MouseAccelFix.bat (Display > Scale: 100% required)
  - !!! PowerPlanUltra.bat (only if Ultimate Performance power plan profile is NOT present: powercfg -L)
  - PowerPlanSettings.bat
@@ -173,6 +172,7 @@ RESTART
  - NICProperties.bat
 
  - NetworkTweaks.bat (script settings need tweaked to match users computer hardware)
+ - DNS.ps1
  - RAMTweaks.bat (script settings need tweaked to match users computer hardware)
  - GPUTweaks.bat (script settings need tweaked to match users computer hardware)
  - CPUTweaks.bat (script settings need tweaked to match users computer hardware)
