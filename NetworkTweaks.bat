@@ -1,5 +1,7 @@
 rem # !!! SETTINGS REQUIRE ADJUSTING BEFORE BEING EXECUTED !!!
 
+rem # YOU MUST RECONFIGURE DNS OR RUN DNS.ps1 TO FIX INTERNET
+
 PAUSE
 
 rem # https://www.elevenforum.com/members/garlin.5387/
@@ -193,5 +195,20 @@ for /f %%i in ('wmic path Win32_NetworkAdapter get PNPDeviceID ^| findstr /l "PC
 	reg add "HKLM\SYSTEM\CurrentControlSet\Enum\%%i\Device Parameters\Interrupt Management\MessageSignaledInterruptProperties" /v "MSISupported" /t REG_DWORD /d "1" /f
 	reg add "HKLM\SYSTEM\CurrentControlSet\Enum\%%i\Device Parameters\Interrupt Management\Affinity Policy" /v "DevicePriority" /t REG_DWORD /d "0" /f
 )
+
+rem # Launch DNS.ps1 to fix internet
+cd "%USERPROFILE%\Downloads\windows11-scripts-main"
+powershell.exe ./DNS.ps1
+
+cd "%USERPROFILE%\Downloads\windows11-scripts-main\windows11-scripts-main"
+powershell.exe ./DNS.ps1
+
+cd "%USERPROFILE%\Downloads\windows11-scripts\windows11-scripts"
+powershell.exe ./DNS.ps1
+
+cd "%USERPROFILE%\Downloads\windows11-scripts"
+powershell.exe ./DNS.ps1
+
+rem # YOU MUST RECONFIGURE DNS OR RUN DNS.ps1 TO FIX INTERNET
 
 PAUSE
