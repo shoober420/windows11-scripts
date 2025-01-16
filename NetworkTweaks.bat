@@ -11,7 +11,7 @@ if not exist C:\Windows\System32\wbem\WMIC.exe (
     echo Done.
 )
 
-TIMEOUT /5
+TIMEOUT 5
 
 rem # Go to Control Panel > Network and Sharing Center for network name
 
