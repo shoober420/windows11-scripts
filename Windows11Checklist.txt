@@ -68,7 +68,7 @@ msc > Display Adapters > Intel * > Properties > Driver tab > Uninstall device > 
  +++ Windows: Disable TPM and SecureBoot in Rufus to allow WinRE "Reset This PC" without recovery key being needed
  +++ Windows: Disable BitLocker drive encryption in Rufus
  +++ Windows: DISABLE SECUREBOOT IN BIOS BEFORE MODIFIED RUFUS FRESH WINDOWS INSTALL
- +++ Windows: TPM MUST BE ON IN BIOS FOR NEW WINDOWS UPDATE CANARY BUILDS TO INSTALL
+ +++ Windows: TPM MUST BE ON IN BIOS FOR NEW WINDOWS UPDATE CANARY BUILDS TO INSTALL (SOME BIOS HAVE TPM ON, WHILE ALSO HAVING AN OPTION TO DISABLE WITH TPM SUPPORT ON)
 
 Windows 11 Home keys cant be used with Windows 11 Home N edition
 
