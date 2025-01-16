@@ -67,8 +67,9 @@ msc > Display Adapters > Intel * > Properties > Driver tab > Uninstall device > 
  +++ Windows: format USB stick to Large FAT32 before burning ISO to make sure it doesnt fail in Rufus
  +++ Windows: Disable TPM and SecureBoot in Rufus to allow WinRE "Reset This PC" without recovery key being needed
  +++ Windows: Disable BitLocker drive encryption in Rufus
- +++ Windows: DISABLE SECUREBOOT IN BIOS BEFORE MODIFIED RUFUS FRESH WINDOWS INSTALL
+ +++ Windows: DISABLE TPM AND SECUREBOOT IN BIOS BEFORE MODIFIED RUFUS FRESH WINDOWS INSTALL
  +++ Windows: TPM MUST BE ON IN BIOS FOR NEW WINDOWS UPDATE CANARY BUILDS TO INSTALL (SOME BIOS HAVE TPM ON, WHILE ALSO HAVING AN OPTION TO DISABLE WITH TPM SUPPORT ON)
+ +++ Windows: TURN OFF TPM IN BIOS AGAIN AFTER NEW CANARY BUILD INSTALL
 
 Windows 11 Home keys cant be used with Windows 11 Home N edition
 
