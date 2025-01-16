@@ -24,9 +24,9 @@ Right click > Run as administrator
  - MouseAccelFix.bat
  - NICProperties.bat
  - NetworkTweaks.bat
+ - DNS.ps1
  - PowerPlanUltra.bat
  - PowerPlanSettings.bat
- - DNS.ps1
  - ThreadQuantum.bat
  - MTU.bat
 
@@ -41,13 +41,13 @@ Right click > Run as administrator
  - MouseAccelFix.bat
  - NICProperties.bat
  - NetworkTweaks.bat
+ - DNS.ps1
  - PowerPlanUltra.bat
  - PowerPlanSettings.bat
  - RAMTweaks.bat
  - ThreadQuantum.bat
  - UseLargePages.bat
  - Windows11Tweaks.bat
- - DNS.ps1
  - MTU.bat
 
 NOTE:
@@ -162,7 +162,6 @@ RESTART (SAFE MODE) (hold SHIFT while restarting)
 
 RESTART
 
- - DNS.ps1
  - MouseAccelFix.bat (Display > Scale: 100% required)
  - !!! PowerPlanUltra.bat (only if Ultimate Performance power plan profile is NOT present: powercfg -L)
  - PowerPlanSettings.bat
@@ -171,6 +170,7 @@ RESTART
  - NICProperties.bat
 
  - NetworkTweaks.bat (script settings need tweaked to match users computer hardware)
+ - DNS.ps1
  - RAMTweaks.bat (script settings need tweaked to match users computer hardware)
  - NVGPUTweaks.bat / AMDGPUTweaks.bat (script settings need tweaked to match users computer hardware)
  - CPUTweaks.bat (script settings need tweaked to match users computer hardware)
@@ -202,7 +202,7 @@ Steve Gibson ShieldsUp! firewall test
 
 Windows11Checklist.txt (information on tweaks)
 
-Windows11Tweaks.bat (YOU MUST RECONFIGURE DNS OR RUN DNS.ps1 TO FIX INTERNET) (Disables Telemetry required for Windows Insider Updates, run EnableWindowsUpdate.bat to fix) (Removes and disables Microsoft Edge) (recommended to run in SAFE MODE)
+Windows11Tweaks.bat (Disables Telemetry required for Windows Insider Updates, run EnableWindowsUpdate.bat to fix) (Removes and disables Microsoft Edge) (recommended to run in SAFE MODE)
 
 DisableWindowsUpdate.bat / EnableWindowsUpdate.bat (required for DISM)
 
@@ -326,7 +326,7 @@ Steam.bat (minimal and bloatless Steam launch script)
 
 MouseAccelFix.bat
 
-NetworkTweaks.bat (script settings need tweaked to match users computer hardware)
+NetworkTweaks.bat (YOU MUST RECONFIGURE DNS OR RUN DNS.ps1 TO FIX INTERNET) (script settings need tweaked to match users computer hardware)
 
 ComputerName.bat (change computer name and Hostname)
 
