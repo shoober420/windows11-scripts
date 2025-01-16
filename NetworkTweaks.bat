@@ -114,8 +114,7 @@ rem # Set value according to core amount
 rem # 4 cores = 4 Queues / 8+ = 8 Queues
 rem # 8+ Queues may cause loss of connection
 rem # 8+ Queues may cause laggy internet
-rem # Test by running 
-https://www.waveform.com/tools/bufferbloat
+rem # Test by running https://www.waveform.com/tools/bufferbloat
 
 reg add "%%n" /v "*NumRssQueues" /t REG_SZ /d "4" /f
 
