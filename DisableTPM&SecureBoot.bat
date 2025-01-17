@@ -18,6 +18,8 @@ rem # - SOME BIOS HAVE TPM ON, WHILE ALSO HAVING AN OPTION TO DISABLE WITH TPM S
 
 rem # - TURN OFF TPM IN BIOS AGAIN AFTER NEW CANARY BUILD INSTALL
 
+rem # You can do a true TPM-free Windows install everytime by downlaoading the ISO and installing new Canary builds instead of going through Windows Update
+
 PAUSE
 
 reg add "HKLM\SYSTEM\Setup\LabConfig" /v "BypassTPMCheck" /t REG_DWORD /d "1" /f
