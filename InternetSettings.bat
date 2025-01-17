@@ -14,6 +14,10 @@ rem # https://www.ibm.com/docs/en/was/9.0.5?topic=systems-tuning-windows
 
 rem # https://www.cyberdasm.com/publ/volume_2/computer_tips/how_to_reduce_lag_in_bdo/14-1-0-311
 
+rem # RECOMMENDED TO RUN DNS.ps1 FOR OPTIMAL DNS SETTINGS
+
+PAUSE
+
 rem # Enable and start WMI
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD /d "2" /f
@@ -290,5 +294,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Winsock" /v "Mi
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Winsock" /v "MaxSockAddrLength" /t REG_DWORD /d "16" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "TcpMaxDupAcks" /t REG_DWORD /d "2" /f
+
+rem # RECOMMENDED TO RUN DNS.ps1 FOR OPTIMAL DNS SETTINGS
 
 PAUSE
