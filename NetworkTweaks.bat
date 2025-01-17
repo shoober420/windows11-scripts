@@ -197,6 +197,10 @@ for /f %%i in ('wmic path Win32_NetworkAdapter get PNPDeviceID ^| findstr /l "PC
 )
 
 rem # Launch DNS.ps1 for optimal DNS settings
+cd "%CD%"
+ECHO R | powershell.exe ./DNS.ps1
+cd "%USERPROFILE%\Downloads"
+
 cd "%USERPROFILE%\Downloads\windows11-scripts-main"
 ECHO R | powershell.exe ./DNS.ps1
 cd "%USERPROFILE%\Downloads"
