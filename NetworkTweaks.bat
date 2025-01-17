@@ -23,6 +23,10 @@ rem # Enables Cloudflare DNS
 netsh interface ip set dns Wi-Fi static 1.1.1.1 1.0.0.1
 netsh interface ip set dns Ethernet static 1.1.1.1 1.0.0.1
 
+rem # Enable DNS over HTTPS (DoH)
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters" /v "EnableAutoDoh" /t REG_DWORD /d "2" /f
+netsh dns set global doh=yes
+
 rem # Make sure "subinterface" matches network name
 rem # Find correct MTU value and set below
 rem # open Command Prompt
