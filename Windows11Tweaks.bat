@@ -3140,6 +3140,10 @@ netsh interface ip set dns name="Ethernet" static 1.1.1.1
 netsh interface ip add dns name="Ethernet" 1.0.0.1 index=2
 
 rem # Launch DNS.ps1 for optimal DNS settings
+cd "%CD%"
+ECHO R | powershell.exe ./DNS.ps1
+cd "%USERPROFILE%\Downloads"
+
 cd "%USERPROFILE%\Downloads\windows11-scripts-main"
 ECHO R | powershell.exe ./DNS.ps1
 cd "%USERPROFILE%\Downloads"
