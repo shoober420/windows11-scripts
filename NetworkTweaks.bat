@@ -21,10 +21,8 @@ rem # Receive Side Scaling requires Checksum Offloading to be enabled to work, d
 
 rem # Make sure "name=" matches network name, half of internet breaks unless DNS is specified
 rem # Enables Cloudflare DNS
-netsh interface ip set dns name="Wi-Fi" static 1.1.1.1
-netsh interface ip add dns name="Wi-Fi" 1.0.0.1 index=2
-netsh interface ip set dns name="Ethernet" static 1.1.1.1
-netsh interface ip add dns name="Ethernet" 1.0.0.1 index=2
+netsh interface ip set dns Wi-Fi static 1.1.1.1 1.0.0.1
+netsh interface ip set dns Ethernet static 1.1.1.1 1.0.0.1
 
 rem # Make sure "subinterface" matches network name
 rem # Find correct MTU value and set below
