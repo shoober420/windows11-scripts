@@ -25,6 +25,7 @@ netsh interface ip set dns Ethernet static 1.1.1.1 1.0.0.1
 
 rem # Enable DNS over HTTPS (DoH)
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters" /v "EnableAutoDoh" /t REG_DWORD /d "2" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters" /v "EnableDoh" /t REG_DWORD /d "2" /f
 netsh dns set global doh=yes
 
 rem # Make sure "subinterface" matches network name
