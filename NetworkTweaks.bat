@@ -1,6 +1,6 @@
 rem # !!! SETTINGS REQUIRE ADJUSTING BEFORE BEING EXECUTED !!!
 
-rem # YOU MUST RECONFIGURE DNS OR RUN DNS.ps1 TO FIX INTERNET
+rem # RECOMMENDED TO RUN DNS.ps1 FOR OPTIMAL DNS SETTINGS
 
 PAUSE
 
@@ -21,10 +21,10 @@ rem # Receive Side Scaling requires Checksum Offloading to be enabled to work, d
 
 rem # Make sure "name=" matches network name, half of internet breaks unless DNS is specified
 rem # Enables Cloudflare DNS
-rem netsh interface ip set dns name="Wi-Fi" static 1.1.1.1
-rem netsh interface ip add dns name="Wi-Fi" 1.0.0.1 index=2
-rem netsh interface ip set dns name="Ethernet" static 1.1.1.1
-rem netsh interface ip add dns name="Ethernet" 1.0.0.1 index=2
+netsh interface ip set dns name="Wi-Fi" static 1.1.1.1
+netsh interface ip add dns name="Wi-Fi" 1.0.0.1 index=2
+netsh interface ip set dns name="Ethernet" static 1.1.1.1
+netsh interface ip add dns name="Ethernet" 1.0.0.1 index=2
 
 rem # Make sure "subinterface" matches network name
 rem # Find correct MTU value and set below
@@ -196,7 +196,7 @@ for /f %%i in ('wmic path Win32_NetworkAdapter get PNPDeviceID ^| findstr /l "PC
 	reg add "HKLM\SYSTEM\CurrentControlSet\Enum\%%i\Device Parameters\Interrupt Management\Affinity Policy" /v "DevicePriority" /t REG_DWORD /d "0" /f
 )
 
-rem # Launch DNS.ps1 to fix internet
+rem # Launch DNS.ps1 for optimal DNS settings
 cd "%USERPROFILE%\Downloads\windows11-scripts-main"
 ECHO R | powershell.exe ./DNS.ps1
 cd "%USERPROFILE%\Downloads"
@@ -213,6 +213,6 @@ cd "%USERPROFILE%\Downloads\windows11-scripts"
 ECHO R | powershell.exe ./DNS.ps1
 cd "%USERPROFILE%\Downloads"
 
-rem # YOU MUST RECONFIGURE DNS OR RUN DNS.ps1 TO FIX INTERNET
+rem # RECOMMENDED TO RUN DNS.ps1 FOR OPTIMAL DNS SETTINGS
 
 PAUSE
