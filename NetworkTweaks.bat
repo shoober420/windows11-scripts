@@ -198,16 +198,20 @@ for /f %%i in ('wmic path Win32_NetworkAdapter get PNPDeviceID ^| findstr /l "PC
 
 rem # Launch DNS.ps1 to fix internet
 cd "%USERPROFILE%\Downloads\windows11-scripts-main"
-powershell.exe ./DNS.ps1
+ECHO R | powershell.exe ./DNS.ps1
+cd "%USERPROFILE%\Downloads"
 
 cd "%USERPROFILE%\Downloads\windows11-scripts-main\windows11-scripts-main"
-powershell.exe ./DNS.ps1
+ECHO R | powershell.exe ./DNS.ps1
+cd "%USERPROFILE%\Downloads"
 
 cd "%USERPROFILE%\Downloads\windows11-scripts\windows11-scripts"
-powershell.exe ./DNS.ps1
+ECHO R | powershell.exe ./DNS.ps1
+cd "%USERPROFILE%\Downloads"
 
 cd "%USERPROFILE%\Downloads\windows11-scripts"
-powershell.exe ./DNS.ps1
+ECHO R | powershell.exe ./DNS.ps1
+cd "%USERPROFILE%\Downloads"
 
 rem # YOU MUST RECONFIGURE DNS OR RUN DNS.ps1 TO FIX INTERNET
 
