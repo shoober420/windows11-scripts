@@ -19,7 +19,6 @@ rem # Go to Control Panel > Network and Sharing Center for network name
 
 rem # Receive Side Scaling requires Checksum Offloading to be enabled to work, disable all other offloading options for best latency
 
-rem # Make sure "name=" matches network name, half of internet breaks unless DNS is specified
 rem # Enables Cloudflare DNS
 netsh interface ip set dns Wi-Fi static 1.1.1.1 1.0.0.1
 netsh interface ip set dns Ethernet static 1.1.1.1 1.0.0.1
