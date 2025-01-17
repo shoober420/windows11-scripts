@@ -26,6 +26,8 @@ rem # Running EnableWindowsUpdate.bat is required to download Windows updates af
 
 rem # Removes and disables Microsoft Edge
 
+rem # REBOOT RECOMMENDED
+
 PAUSE
 
 rem # Enable and start WMI
@@ -3127,5 +3129,7 @@ reg add "HKLM\SOFTWARE\Microsoft\wcmsvc\wifinetworkmanager" /v "WifiSenseOpen" /
 
 rem # Disable Hotspot 2.0 Networks
 reg add "HKLM\SOFTWARE\Microsoft\WlanSvc\AnqpCache" /v "OsuRegistrationStatus" /t REG_DWORD /d 0 /f
+
+rem # REBOOT RECOMMENDED
 
 PAUSE
