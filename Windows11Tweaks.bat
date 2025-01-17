@@ -3132,6 +3132,13 @@ reg add "HKLM\SOFTWARE\Microsoft\wcmsvc\wifinetworkmanager" /v "WifiSenseOpen" /
 rem # Disable Hotspot 2.0 Networks
 reg add "HKLM\SOFTWARE\Microsoft\WlanSvc\AnqpCache" /v "OsuRegistrationStatus" /t REG_DWORD /d 0 /f
 
+rem # Make sure "name=" matches network name, half of internet breaks unless DNS is specified
+rem # Enables Cloudflare DNS
+netsh interface ip set dns name="Wi-Fi" static 1.1.1.1
+netsh interface ip add dns name="Wi-Fi" 1.0.0.1 index=2
+netsh interface ip set dns name="Ethernet" static 1.1.1.1
+netsh interface ip add dns name="Ethernet" 1.0.0.1 index=2
+
 rem # Run DNS.ps1 for optimal DNS settings
 
 rem # REBOOT RECOMMENDED
