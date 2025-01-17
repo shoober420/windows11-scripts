@@ -97,7 +97,7 @@ powershell.exe Remove-NetFirewallRule -All
 rem # Enable DNS over HTTPS (DoH)
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters" /v "EnableAutoDoh" /t REG_DWORD /d "2" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters" /v "EnableDoh" /t REG_DWORD /d "2" /f
-rem netsh dns set global doh=yes
+rem netsh dns set global doh=force
 
 rem # SG TCP Optimizer program tweaks
 rem # https://www.speedguide.net/downloads.php
