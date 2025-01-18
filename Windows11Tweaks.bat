@@ -3132,6 +3132,56 @@ reg add "HKLM\SOFTWARE\Microsoft\wcmsvc\wifinetworkmanager" /v "WifiSenseOpen" /
 rem # Disable Hotspot 2.0 Networks
 reg add "HKLM\SOFTWARE\Microsoft\WlanSvc\AnqpCache" /v "OsuRegistrationStatus" /t REG_DWORD /d 0 /f
 
+fsutil behavior set mftzone 2
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\FileSystem" /v NtfsEncryptPagingFile /t REG_DWORD /d 0 /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\FileSystem" /v NtfsMftZoneReservation /t REG_DWORD /d 4 /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\FileSystem" /v RefsDisableLastAccessUpdate /t REG_DWORD /d 1 /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\FileSystem" /v UdfsSoftwareDefectManagement /t REG_DWORD /d 0 /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\FileSystem" /v DontVerifyRandomDrivers /t REG_DWORD /d 1 /f
+
+rem# Disable disk power savings
+for %%i in (EnableHIPM EnableDIPM EnableHDDParking) do for /f %%a in ('REG QUERY "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services" /s /f "%%i" ^| findstr "HKEY"') do REG ADD "%%a" /v "%%i" /t REG_DWORD /d 0 /f >nul 2>&1
+for /f %%i in ('call "resources\smartctl.exe" --scan') do (
+    call "resources\smartctl.exe" -s apm,off %%i
+    call "resources\smartctl.exe" -s aam,off %%i
+) >nul 2>&1
+REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Storage" /v StorageD3InModernStandby /t REG_DWORD /d 0 /f
+REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device" /v IdlePowerMode /t REG_DWORD /d 0 /f
+
+rem # Disable IoLatencyCap
+for /F "eol=E" %%a in ('REG QUERY "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services" /S /F "IoLatencyCap"^| FINDSTR /V "IoLatencyCap"') DO (
+	REG ADD "%%a" /v IoLatencyCap /t REG_DWORD /d "0" /f >NUL 2>&1
+	for /F "tokens=*" %%z IN ("%%a") DO (
+		SET STR=%%z
+		SET STR=!STR:HKEY_LOCAL_MACHINE\System\CurrentControlSet\services\=!
+		SET STR=!STR:\Parameters=!
+	)
+)
+
+rem # Disable StorPort idle
+for /F "tokens=*" %%a in ('REG QUERY "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Enum" /S /F "StorPort"^| FINDSTR /E "StorPort"') DO (
+	REG ADD "%%a" /v EnableIdlePowerManagement /t REG_DWORD /d "0" /f >NUL 2>&1
+	for /F "tokens=*" %%z IN ("%%a") DO (
+		SET STR=%%z
+		SET STR=!STR:HKEY_LOCAL_MACHINE\System\CurrentControlSet\Enum\=!
+		SET STR=!STR:\Device Parameters\StorPort=!
+	)
+)
+
+rem # Disable HIPM and DIPM
+reg add "HKLM\SYSTEM\CurrentControlSet\services\iaStorA\Parameters\Device" /v Controller0Phy0HIPM /t REG_DWORD /d 0 /f
+reg add "HKLM\SYSTEM\CurrentControlSet\services\iaStorA\Parameters\Device" /v Controller0Phy0DIPM /t REG_DWORD /d 0 /f
+reg add "HKLM\SYSTEM\CurrentControlSet\services\iaStorA\Parameters\Device" /v Controller0Phy1HIPM /t REG_DWORD /d 0 /f
+reg add "HKLM\SYSTEM\CurrentControlSet\services\iaStorA\Parameters\Device" /v Controller0Phy1DIPM /t REG_DWORD /d 0 /f
+for /F "eol=E" %%a in ('REG QUERY "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services" /S /F "EnableHIPM"^| FINDSTR /V "EnableHIPM"') DO (
+	REG ADD "%%a" /v EnableHIPM /t REG_DWORD /d 0 /f >NUL 2>&1
+	REG ADD "%%a" /v EnableDIPM /t REG_DWORD /d 0 /f >NUL 2>&1
+	for /F "tokens=*" %%z IN ("%%a") DO (
+		SET STR=%%z
+		SET STR=!STR:HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\=!
+	)
+)
+
 rem # Enables Cloudflare DNS
 netsh interface ip set dns Wi-Fi static 1.1.1.1
 netsh interface ip set dns Ethernet static 1.1.1.1
