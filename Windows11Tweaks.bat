@@ -3142,7 +3142,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters" /v "EnableD
 rem netsh dns set global doh=force
 
 rem # Launch DNS.ps1 for optimal DNS settings
-cd "%CD%"
+cd "%~dp0"
 ECHO R | powershell.exe ./DNS.ps1
 cd "%USERPROFILE%\Downloads"
 
