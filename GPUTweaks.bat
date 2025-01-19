@@ -1,7 +1,7 @@
 rem # GPU Tweaks
 rem # Works for any graphics card
 
-rem # DOES NOT SUPPORT DIGITAL STREAM COMPRESSION (DSC). Black screen will occur if used of DSC monitors
+rem # DOES NOT SUPPORT DIGITAL STREAM COMPRESSION (DSC). Black screen will occur if used with DSC monitors
 
 PAUSE
 
