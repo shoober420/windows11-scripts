@@ -1,7 +1,7 @@
 rem # Disable Overlays for GPU
 
 rem # !!! WARNING !!!
-rem # MAY CAUSE CRASHES AND LOW FPS, USE EnableOverlays.bat TO FIX
+rem # MAY CAUSE CRASHES, FLICKERING, AND LOW FPS, USE EnableOverlays.bat TO FIX
 rem # !!! WARNING !!!
 
 PAUSE
