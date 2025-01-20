@@ -499,3 +499,5 @@ DisableTPM&SecureBoot.bat (MUST BE LAUNCHED BEFORE WINDOWS 11 INSTALLATION TO DI
 ShowFileExtensions.bat
 
 ReplaceFooWithFoo.ps1 (useful for debugging)
+
+DisableHighPerfAdapter.bat / EnableHighPerfAdapter (IF PERFORMANCE DECREASES,  RUN DisableHighPerfAdapter.bat)
