@@ -502,3 +502,5 @@ ShowFileExtensions.bat
 ReplaceFooWithFoo.ps1 (useful for debugging)
 
 DisableHighPerfAdapter.bat / EnableHighPerfAdapter (IF PERFORMANCE DECREASES,  RUN DisableHighPerfAdapter.bat)
+
+DisableOverlays.bat / EnableOverlays.bat (IF CRASHING, FLICKERING, AND PERFORMANCE DECREASES, RUN EnableOverlays.bat)
