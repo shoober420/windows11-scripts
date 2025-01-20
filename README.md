@@ -177,8 +177,9 @@ RESTART
  - InputTweaks.bat (script settings need tweaked to match users computer hardware)
  - UseLargePages.bat (add programs to enable Large Pages for them)
  - HighPriority.bat (add programs to enable High Priority for them)
+ - EnableHighPerfAdapter.bat (IF PERFORMANCE DECREASES, RUN DisableHighPerfAdapter.bat)
 
- - Disable*.bat (DisableAppX.bat causes File Explorer to crash when opening right click context menu) (DO NOT RUN DisableStateRepository.bat and DisableDNSClient.bat)
+ - Disable*.bat (DisableAppX.bat causes File Explorer to crash when opening right click context menu) (DO NOT RUN DisableStateRepository.bat and DisableDNSClient.bat) (Only run DisableHighPerfAdapter.bat if performance decreases when Enabled)
 
 RESTART
 
