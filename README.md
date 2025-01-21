@@ -34,6 +34,7 @@ Right click > Run as administrator
  - EnablePowerShell.bat
  - CPUTweaks.bat
  - GPUTweaks.bat / AMDGPUTweaks.bat / NVGPUTweaks.bat
+ - HardDrive&USBTweaks.bat
  - HighPriority.bat
  - InputTweaks.bat
  - InternetSettings.bat
