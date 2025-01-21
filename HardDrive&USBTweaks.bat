@@ -1,6 +1,18 @@
 rem # Hard Drive and USB Tweaks
 rem # Disables power saving features
 
+rem # MSI mode support for IDE controller
+for /f %%i in ('wmic path Win32_IDEController get PNPDeviceID ^| findstr /l "PCI\VEN_"') do (
+	reg add "HKLM\SYSTEM\CurrentControlSet\Enum\%%i\Device Parameters\Interrupt Management\MessageSignaledInterruptProperties" /v "MSISupported" /t REG_DWORD /d "1" /f
+	reg add "HKLM\SYSTEM\CurrentControlSet\Enum\%%i\Device Parameters\Interrupt Management\Affinity Policy" /v "DevicePriority" /t REG_DWORD /d "0" /f
+)
+
+rem # Disable "Allow this device to wake the computer"
+powercfg -devicedisablewake "HID-complaint mouse"
+powercfg -devicedisablewake "HID-complaint mouse (001)"
+powercfg -devicedisablewake "HID Keyboard Device"
+powercfg -devicedisablewake "HID Keyboard Device (001)"
+
 rem # Disable disk power savings
 for %%i in (EnableHIPM EnableDIPM EnableHDDParking) do for /f %%a in ('REG QUERY "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services" /s /f "%%i" ^| findstr "HKEY"') do REG ADD "%%a" /v "%%i" /t REG_DWORD /d 0 /f >nul 2>&1
 for /f %%i in ('call "resources\smartctl.exe" --scan') do (
