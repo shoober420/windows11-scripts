@@ -14,6 +14,8 @@ rem # https://www.ibm.com/docs/en/was/9.0.5?topic=systems-tuning-windows
 
 rem # https://www.cyberdasm.com/publ/volume_2/computer_tips/how_to_reduce_lag_in_bdo/14-1-0-311
 
+rem # software firewall is bloat, use router firewall
+
 rem # RECOMMENDED TO RUN DNS.ps1 FOR OPTIMAL DNS SETTINGS
 
 PAUSE
