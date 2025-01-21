@@ -74,6 +74,8 @@ Right click > Run as administrator
  - Windows11Tweaks.bat
  - DisableServices.bat
  - DisableComponents.bat
+ - RemoveWindowsApps.bat
+ - RemoveWindowsFeatures.bat
  - MTU.bat
 
 NOTE:
