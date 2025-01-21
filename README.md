@@ -509,7 +509,7 @@ ShowFileExtensions.bat
 
 ReplaceFooWithFoo.ps1 (useful for debugging)
 
-EnableHighPerfAdapter (DONT USE, DECREASED FPS)
+EnableHighPerfAdapter (DONT USE, DECREASES FPS) (run EnableDirectXUserGlobalSettings.bat to disable)
 
 DisableOverlays.bat / EnableOverlays.bat (IF CRASHING, FLICKERING, AND PERFORMANCE DECREASES, RUN EnableOverlays.bat)
 
