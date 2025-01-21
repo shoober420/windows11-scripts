@@ -179,8 +179,9 @@ RESTART
  - HardDrive&USBTweaks.bat
  - UseLargePages.bat (add programs to enable Large Pages for them)
  - HighPriority.bat (add programs to enable High Priority for them)
- - EnableHighPerfAdapter.bat (IF PERFORMANCE DECREASES, RUN DisableHighPerfAdapter.bat)
+
  - DisableOverlays.bat (IF CRASHING, FLICKERING, AND LOW FPS OCCUR, RUN EnableOverlays.bat)
+
  - EnableAMDGPU_DalDramClockChangeLatencyNs.bat (only for Radeon cards, disable if screen flickering occurs)
 
  - Disable*.bat (DisableAppX.bat causes File Explorer to crash when opening right click context menu) (DO NOT RUN DisableStateRepository.bat and DisableDNSClient.bat) (Only run DisableHighPerfAdapter.bat if performance decreases when Enabled)
