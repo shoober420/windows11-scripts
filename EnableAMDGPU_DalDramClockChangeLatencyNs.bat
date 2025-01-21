@@ -1,4 +1,4 @@
-rem # Enable AMD DalDramClockChangeLatencyNs tweak
+rem # Enable AMDGPU DalDramClockChangeLatencyNs tweak
 
 rem # !!! WARNING !!!
 rem # DalDramClockChangeLatencyNs below can cause screen flickering, run DisableAMD_DalDramClockChangeLatencyNs.bat to fix
