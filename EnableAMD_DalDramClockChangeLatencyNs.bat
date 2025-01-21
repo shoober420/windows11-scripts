@@ -1,6 +1,8 @@
 rem # Enable AMD DalDramClockChangeLatencyNs tweak
 
-rem # DalDramClockChangeLatencyNs below can cause screen flickering, delete reg key if flickering occurs
+rem # !!! WARNING !!!
+rem # DalDramClockChangeLatencyNs below can cause screen flickering, run DisableAMD_DalDramClockChangeLatencyNs.bat to fix
+rem # !!! WARNING !!!
 
 PAUSE
 
