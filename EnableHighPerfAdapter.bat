@@ -2,7 +2,7 @@ rem # Enable HighPerfAdapter
 
 rem # !!! WARNING !!!
 
-rem # IF PERFORMANCE DECREASES, run DisableHighPerfAdapter.bat
+rem # IF PERFORMANCE DECREASES, run EnableDirectXUserGlobalSettings.bat
 
 rem # HighPerfAdapter decreases performance and should NOT be enabled
 
