@@ -175,6 +175,7 @@ RESTART
  - NVGPUTweaks.bat / AMDGPUTweaks.bat (script settings need tweaked to match users computer hardware)
  - CPUTweaks.bat (script settings need tweaked to match users computer hardware)
  - InputTweaks.bat (script settings need tweaked to match users computer hardware)
+ - HardDrive&USBTweaks.bat
  - UseLargePages.bat (add programs to enable Large Pages for them)
  - HighPriority.bat (add programs to enable High Priority for them)
  - EnableHighPerfAdapter.bat (IF PERFORMANCE DECREASES, RUN DisableHighPerfAdapter.bat)
@@ -505,3 +506,5 @@ ReplaceFooWithFoo.ps1 (useful for debugging)
 DisableHighPerfAdapter.bat / EnableHighPerfAdapter (IF PERFORMANCE DECREASES,  RUN DisableHighPerfAdapter.bat)
 
 DisableOverlays.bat / EnableOverlays.bat (IF CRASHING, FLICKERING, AND PERFORMANCE DECREASES, RUN EnableOverlays.bat)
+
+HardDrive&USBTweaks.bat
