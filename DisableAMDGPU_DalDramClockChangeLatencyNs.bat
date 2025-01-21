@@ -1,4 +1,4 @@
-rem # Disable AMD DalDramClockChangeLatencyNs tweak
+rem # Disable AMDGPU DalDramClockChangeLatencyNs tweak
 
 rem # https://www.elevenforum.com/members/garlin.5387/
 rem # https://www.elevenforum.com/t/gpu-tweaks-batch-script.30134/post-521530
