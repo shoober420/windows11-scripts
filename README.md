@@ -76,6 +76,7 @@ Right click > Run as administrator
  - DisableComponents.bat
  - RemoveWindowsApps.bat
  - RemoveWindowsFeatures.bat
+ - RemoveRemoteDesktopConnection.bat
  - MTU.bat
 
 NOTE:
