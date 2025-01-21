@@ -3113,18 +3113,6 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\SystemSettings\AccountNo
 rem # Disable Location Override
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\CPSS\Store\UserLocationOverridePrivacySetting" /v "Value" /t REG_DWORD /d "0" /f
 
-rem # MSI mode support for IDE controller
-for /f %%i in ('wmic path Win32_IDEController get PNPDeviceID ^| findstr /l "PCI\VEN_"') do (
-	reg add "HKLM\SYSTEM\CurrentControlSet\Enum\%%i\Device Parameters\Interrupt Management\MessageSignaledInterruptProperties" /v "MSISupported" /t REG_DWORD /d "1" /f
-	reg add "HKLM\SYSTEM\CurrentControlSet\Enum\%%i\Device Parameters\Interrupt Management\Affinity Policy" /v "DevicePriority" /t REG_DWORD /d "0" /f
-)
-
-rem # Disable "Allow this device to wake the computer"
-powercfg -devicedisablewake "HID-complaint mouse"
-powercfg -devicedisablewake "HID-complaint mouse (001)"
-powercfg -devicedisablewake "HID Keyboard Device"
-powercfg -devicedisablewake "HID Keyboard Device (001)"
-
 rem # Disable Wi-Fi Sense
 reg add "HKLM\SOFTWARE\Microsoft\wcmsvc\wifinetworkmanager" /v "WifiSenseCredShared" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\wcmsvc\wifinetworkmanager" /v "WifiSenseOpen" /t REG_DWORD /d "0" /f
