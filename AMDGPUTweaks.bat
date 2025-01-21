@@ -4,8 +4,6 @@ rem # Also use on AMD/NVIDIA combo laptops
 
 rem # DOES NOT SUPPORT DIGITAL STREAM COMPRESSION (DSC). Black screen will occur if used with DSC monitors
 
-rem # AMD USERS: if screen flickering occurs, remove the "DalDramClockChangeLatencyNs" option from the script (line 31)
-
 PAUSE
 
 rem # Sources:
