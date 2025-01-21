@@ -509,3 +509,5 @@ DisableHighPerfAdapter.bat / EnableHighPerfAdapter (IF PERFORMANCE DECREASES,  R
 DisableOverlays.bat / EnableOverlays.bat (IF CRASHING, FLICKERING, AND PERFORMANCE DECREASES, RUN EnableOverlays.bat)
 
 HardDrive&USBTweaks.bat
+
+DisableAMD_DalDramClockChangeLatencyNs.bat / EnableAMD_DalDramClockChangeLatencyNs.bat (disable if screen flickering occurs)
