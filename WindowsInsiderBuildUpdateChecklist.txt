@@ -35,6 +35,7 @@ Right click > Run as administrator
  - EnablePowerShell.bat
  - CPUTweaks.bat
  - GPUTweaks.bat / AMDGPUTweaks.bat / NVGPUTweaks.bat
+ - HardDrive&USBTweaks.bat
  - HighPriority.bat
  - InputTweaks.bat
  - InternetSettings.bat
@@ -177,6 +178,7 @@ RESTART
  - GPUTweaks.bat (script settings need tweaked to match users computer hardware)
  - CPUTweaks.bat (script settings need tweaked to match users computer hardware)
  - InputTweaks.bat (script settings need tweaked to match users computer hardware)
+ - HardDrive&USBTweaks.bat
  - UseLargePages.bat (add programs to enable Large Pages for them)
  - HighPriority.bat (add programs to enable High Priority for them)
  - EnableHighPerfAdapter.bat (IF PERFORMANCE DECREASES, RUN DisableHighPerfAdapter.bat)
