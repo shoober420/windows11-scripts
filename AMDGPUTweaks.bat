@@ -34,6 +34,10 @@ rem reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\DalDramClockChan
 
                          reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "DalDramClockChangeLatencyNs" /t REG_DWORD /d "1" /f
 
+rem # Pre-rendered Frames / 3000=0 3100=1 3200=2
+rem # 0=BEST LATENCY 2+=BEST FPS
+                         reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "FlipQueueSize" /t REG_BINARY /d "3000" /f
+
                      reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "LTRSnoopL1Latency" /t REG_DWORD /d "1" /f
                          reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "LTRSnoopL0Latency" /t REG_DWORD /d "1" /f
                          reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "LTRNoSnoopL1Latency" /t REG_DWORD /d "1" /f
@@ -78,10 +82,6 @@ rem reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\DalDramClockChan
                          reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "PP_ThermalAutoThrottlingEnable" /t REG_DWORD /d "1" /f
                          reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "Main3D_DEF" /t REG_SZ /d "1" /f
                          reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "Main3D" /t REG_BINARY /d "3100" /f
-
-rem # Pre-rendered Frames / 3000=0 3100=1 3200=2
-rem # 0=BEST LATENCY 2+=BEST FPS
-                         reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "FlipQueueSize" /t REG_BINARY /d "3000" /f
 
 rem # Shader Cache / 3000=OFF 3100=OPTIMIZED 3200=ALWAYS ON
                          reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "ShaderCache" /t REG_BINARY /d "3200" /f
