@@ -179,12 +179,13 @@ RESTART
  - HardDrive&USBTweaks.bat
  - UseLargePages.bat (add programs to enable Large Pages for them)
  - HighPriority.bat (add programs to enable High Priority for them)
+ - EnableDirectXUserGlobalSettings.bat
 
  - DisableOverlays.bat (IF CRASHING, FLICKERING, AND LOW FPS OCCUR, RUN EnableOverlays.bat)
 
  - EnableAMDGPU_DalDramClockChangeLatencyNs.bat (only for Radeon cards, disable if screen flickering occurs)
 
- - Disable*.bat (DisableAppX.bat causes File Explorer to crash when opening right click context menu) (DO NOT RUN DisableStateRepository.bat and DisableDNSClient.bat) (Only run DisableHighPerfAdapter.bat if performance decreases when Enabled)
+ - Disable*.bat (DisableAppX.bat causes File Explorer to crash when opening right click context menu) (DO NOT RUN DisableStateRepository.bat and DisableDNSClient.bat)
 
 RESTART
 
@@ -506,10 +507,12 @@ ShowFileExtensions.bat
 
 ReplaceFooWithFoo.ps1 (useful for debugging)
 
-DisableHighPerfAdapter.bat / EnableHighPerfAdapter (DONT USE, DECREASED FPS)
+EnableHighPerfAdapter (DONT USE, DECREASED FPS)
 
 DisableOverlays.bat / EnableOverlays.bat (IF CRASHING, FLICKERING, AND PERFORMANCE DECREASES, RUN EnableOverlays.bat)
 
 HardDrive&USBTweaks.bat
 
 DisableAMDGPU_DalDramClockChangeLatencyNs.bat / EnableAMDGPU_DalDramClockChangeLatencyNs.bat (disable if screen flickering occurs)
+
+EnableDirectXUserGlobalSettings.bat
