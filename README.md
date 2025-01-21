@@ -518,3 +518,5 @@ HardDrive&USBTweaks.bat
 DisableAMDGPU_DalDramClockChangeLatencyNs.bat / EnableAMDGPU_DalDramClockChangeLatencyNs.bat (disable if screen flickering occurs)
 
 EnableDirectXUserGlobalSettings.bat
+
+DisableClearPageFileAtShutdown.bat / EnableClearPageFileAtShutdown.bat (long restarts and shut downs when enabled)
