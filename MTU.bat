@@ -4,6 +4,8 @@ rem # Automatically finds MTU value and applies
 rem # garlin: https://www.elevenforum.com/members/garlin.5387/
 rem # https://www.elevenforum.com/t/network-tweak-script.30284/#post-523372
 
+rem # Query MTU Size: netsh interface ipv4 show subinterfaces
+
 rem # Disables MTU Discovery, which auto sets MTU value randomly based on traffic, never enable
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "EnablePMTUDiscovery" /t REG_DWORD /d "0" /f
 
