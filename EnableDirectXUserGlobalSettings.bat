@@ -1,4 +1,4 @@
-rem # Disable HighPerfAdapter
+rem # Enable DirectXUserGlobalSettings
 
 rem # HighPerfAdapter decreases performance and should NOT be enabled
 
