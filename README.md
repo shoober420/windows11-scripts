@@ -73,6 +73,7 @@ Right click > Run as administrator
  - UseLargePages.bat
  - Windows11Tweaks.bat
  - DisableServices.bat
+ - DisableComponents.bat
  - MTU.bat
 
 NOTE:
