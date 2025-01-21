@@ -20,6 +20,7 @@ Right click > Run as administrator
 
 # Minimal Install
  - EnablePowerShell.bat
+ - EnableDirectXUserGlobalSettings.bat
  - InternetSettings.bat
  - MouseAccelFix.bat
  - NICProperties.bat
@@ -32,6 +33,7 @@ Right click > Run as administrator
 
 # Standard Install
  - EnablePowerShell.bat
+ - EnableDirectXUserGlobalSettings.bat
  - CPUTweaks.bat
  - GPUTweaks.bat / AMDGPUTweaks.bat / NVGPUTweaks.bat
  - HardDrive&USBTweaks.bat
