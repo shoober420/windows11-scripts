@@ -2,6 +2,8 @@ rem # !!! WARNING !!!
 rem # ADJUST SETTINGS TO CORRESPOND WITH YOUR HARDWARE BEFORE RUNNING
 rem # !!! WARNING !!!
 
+rem # Disable HyperThreading in BIOS, lowers FPS
+
 rem # Query CPU Core and Thread count
 rem # Get-WmiObject –class Win32_processor | ft NumberOfCores,NumberOfLogicalProcessors
 
