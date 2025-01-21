@@ -50,7 +50,29 @@ Right click > Run as administrator
  - RAMTweaks.bat
  - ThreadQuantum.bat
  - UseLargePages.bat
+ - MTU.bat
+
+# Advanced Install
+ - EnablePowerShell.bat
+ - EnableDirectXUserGlobalSettings.bat
+ - CPUTweaks.bat
+ - GPUTweaks.bat / AMDGPUTweaks.bat / NVGPUTweaks.bat
+ - HardDrive&USBTweaks.bat
+ - HighPriority.bat
+ - InputTweaks.bat
+ - InternetSettings.bat
+ - SecuritySettings.bat
+ - MouseAccelFix.bat
+ - NICProperties.bat
+ - NetworkTweaks.bat
+ - DNS.ps1
+ - PowerPlanUltra.bat
+ - PowerPlanSettings.bat
+ - RAMTweaks.bat
+ - ThreadQuantum.bat
+ - UseLargePages.bat
  - Windows11Tweaks.bat
+ - DisableServices.bat
  - MTU.bat
 
 NOTE:
@@ -59,7 +81,7 @@ If at any point during the process you get stuck at "Just a moment..." screen be
 NOTE:
 Make sure to disable any unused network adapters under Device Manager, or scripts may run very slow
 
-# Advanced Install Instructions
+# Expert Install Instructions
 
 Update BIOS
 
