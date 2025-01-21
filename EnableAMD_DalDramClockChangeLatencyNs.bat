@@ -21,3 +21,11 @@ for /f %%i in ('wmic path Win32_VideoController get PNPDeviceID^| findstr /L "PC
                          reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "DalDramClockChangeLatencyNs" /t REG_DWORD /d "1" /f
 
 rem reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\DalDramClockChangeLatencyNs"
+
+
+
+                   )
+                )
+             )
+
+PAUSE
