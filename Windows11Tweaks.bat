@@ -1229,9 +1229,6 @@ powercfg -delete a1841308-3541-4fab-bc81-f71556f20b4a
 rem # Delete "High Performance" power config plan (use Ultimate Performance instead, PowerPlanUltra.bat)
 powercfg -delete 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c
 
-rem # Delete page file on shutdown
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "ClearPageFileAtShutdown" /t REG_DWORD /d "1" /f
-
 rem # Pool sizes for page file 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "NonPagedPoolQuota" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "NonPagedPoolSize" /t REG_DWORD /d "0" /f
