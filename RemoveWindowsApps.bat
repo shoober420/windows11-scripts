@@ -9,7 +9,7 @@ rem # !!!WARNING!!!
 rem # This script may delete Windows Apps you use, do a back up in case anything is lost you need
 rem # !!!WARNING!!!
 
-rem # EnableStore.bat required for this script to function
+rem # EnableStore.bat required for this script to function if DisableServices.bat was executed
 
 PAUSE
 
