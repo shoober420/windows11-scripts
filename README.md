@@ -285,7 +285,7 @@ icons.bat
 
 WingetUpdateApps.bat (winget requires Application Information service)
 
-RemoveWindowsApps.bat (requires winget and powershell)
+RemoveWindowsApps.bat (requires winget and powershell) (EnableStore.bat required for this script to function if DisableServices.bat was executed)
 
 DisableAppInfo.bat / EnableAppInfo.bat
 
