@@ -71,11 +71,11 @@ Right click > Run as administrator
  - RAMTweaks.bat
  - ThreadQuantum.bat
  - UseLargePages.bat
+ - RemoveWindowsApps.bat
+ - RemoveWindowsFeatures.bat
  - Windows11Tweaks.bat
  - DisableServices.bat
  - DisableComponents.bat
- - RemoveWindowsApps.bat
- - RemoveWindowsFeatures.bat
  - RemoveRemoteDesktopConnection.bat
  - MTU.bat
 
