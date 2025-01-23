@@ -40,8 +40,7 @@ rem # Set value according to core amount
 rem # 4 cores = 4 Queues / 8+ = 8 Queues
 rem # 8+ Queues may cause loss of connection
 rem # 8+ Queues may cause laggy internet
-rem # Test by running 
-https://www.waveform.com/tools/bufferbloat
+rem # Test by running https://www.waveform.com/tools/bufferbloat
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Ndis\Parameters" /v "MaxNumRssCpus" /t REG_DWORD /d "4" /f	
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "MaxNumRssCpus" /t REG_DWORD /d "4" /f
