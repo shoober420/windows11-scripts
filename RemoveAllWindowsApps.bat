@@ -1,7 +1,8 @@
 rem # Remove all Windows apps
 
+rem # powershell "Get-AppxPackage | Remove-AppxPackage"
+
 rem # DONT UNINSTALL "Microsoft.UI.Xaml.CBS", causes constant desktop refresh flicker
-rem powershell "Get-AppxPackage | Remove-AppxPackage"
 
 rem # !!! WARNING !!!
 rem # Removes certain user installed apps (not Steam)
