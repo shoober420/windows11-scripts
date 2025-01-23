@@ -203,7 +203,7 @@ RESTART
  - DNS.ps1
  - RAMTweaks.bat
  - GPUTweaks.bat
- - NVGPUTweaks.bat / AMDGPUTweaks.bat (script settings need tweaked to match users computer hardware)
+ - NVGPUTweaks.bat / AMDGPUTweaks.bat
  - CPUTweaks.bat
  - InputTweaks.bat (script settings need tweaked to match users computer hardware)
  - HardDrive&USBTweaks.bat
@@ -369,7 +369,7 @@ ComputerName.bat (change computer name and Hostname)
 
 RAMTweaks.bat
 
-NVGPUTweaks.bat (script settings need tweaked to match users computer hardware)
+NVGPUTweaks.bat
 
 ThreadQuantum.bat
 
@@ -378,6 +378,8 @@ Date&TimeShow.bat / Date&TimeHide.bat (show or hide taskbar date and time on bot
 InstallChocolatey.bat
 
 CPUTweaks.bat
+
+GPUTweaks.bat
 
 UseLargePages.bat (add user programs to enable Large Pages for them)
 
@@ -519,7 +521,7 @@ DisablePowerManagement.ps1
 
 TestModeOn.bat / TestModeOff.bat
 
-AMDGPUTweaks.bat (script settings need tweaked to match users computer hardware)
+AMDGPUTweaks.bat
 
 DisableBitLocker.bat (Installing Windows 11 without TPM and SecureBoot in Rufus is required to fully disable BitLocker)
 
