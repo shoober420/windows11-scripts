@@ -377,7 +377,7 @@ Date&TimeShow.bat / Date&TimeHide.bat (show or hide taskbar date and time on bot
 
 InstallChocolatey.bat
 
-CPUTweaks.bat (script settings need tweaked to match users computer hardware)
+CPUTweaks.bat
 
 UseLargePages.bat (add user programs to enable Large Pages for them)
 
