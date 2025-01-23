@@ -549,3 +549,5 @@ EnableDirectXUserGlobalSettings.bat
 DisableClearPageFileAtShutdown.bat / EnableClearPageFileAtShutdown.bat (long restarts and shut downs with large page file sizes when enabled)
 
 RemoveAllWindowsApps.bat
+
+RemoveWebViewHost.bat
