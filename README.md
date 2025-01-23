@@ -128,6 +128,7 @@ Update Video Drivers
 RESTART
 
  - RemoveWindowsApps.bat
+ - RemoveAllWindowsApps.bat
  - RemoveWindowsFeatures.bat
 
 RESTART
