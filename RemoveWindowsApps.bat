@@ -167,7 +167,7 @@ powershell -command "Get-AppxPackage -AllUsers *microsoft.windowscommunicationsa
 
 powershell -command "Get-AppxPackage -AllUsers *Microsoft.WindowsTerminal* | Remove-AppxPackage"
 
-powershell -command "Get-AppxPackage -AllUsers *Microsoft.Windows.NarratorQuickStart* | Remove-AppxPackage"
+rem powershell -command "Get-AppxPackage -AllUsers *Microsoft.Windows.NarratorQuickStart* | Remove-AppxPackage"
 
 powershell -command "Get-AppxPackage -AllUsers *Microsoft.Windows.ContentDeliveryManager* | Remove-AppxPackage"
 
