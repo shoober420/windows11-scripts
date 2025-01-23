@@ -426,7 +426,7 @@ rem powershell "Get-AppPackage -Allusers *Microsoft.Win32WebViewHost* | Remove-A
 
 rem powershell "Get-AppPackage -Allusers *Microsoft.Windows.XGpuEjectDialog* | Remove-AppPackage"
 
-powershell "Get-AppPackage -Allusers *Windows.PrintDialog* | Remove-AppPackage"
+rem powershell "Get-AppPackage -Allusers *Windows.PrintDialog* | Remove-AppPackage"
 
 powershell "Get-AppPackage -Allusers *Microsoft.MicrosoftEdge* | Remove-AppPackage"
 
