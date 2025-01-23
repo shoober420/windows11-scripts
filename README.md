@@ -553,3 +553,5 @@ RemoveAllWindowsApps.bat
 RemoveWebViewHost.bat
 
 RemoveWindowsAppRuntime.bat
+
+RemoveWindowsClientCBS.bat
