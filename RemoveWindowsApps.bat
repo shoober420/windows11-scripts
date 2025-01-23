@@ -406,21 +406,21 @@ powershell "Get-WindowsCapability -Online | Where Name -like *App.StepsRecorder*
 
 powershell "Get-WindowsCapability -Online | Where Name -like *OneCoreUAP.OneSync* | Remove-WindowsCapability -Online | Out-Null"
 
-powershell "Get-AppPackage -Allusers *MicrosoftWindows.Client.CBS* | Remove-AppPackage"
+rem powershell "Get-AppPackage -Allusers *MicrosoftWindows.Client.CBS* | Remove-AppPackage"
 
 powershell "Get-AppPackage -Allusers *Microsoft.Windows.SecureAssessmentBrowser* | Remove-AppPackage"
 
-powershell "Get-AppPackage -Allusers *Microsoft.CredDialogHost* | Remove-AppPackage"
+rem powershell "Get-AppPackage -Allusers *Microsoft.CredDialogHost* | Remove-AppPackage"
 
-powershell "Get-AppPackage -Allusers *Microsoft.Windows.ParentalControls* | Remove-AppPackage"
+rem powershell "Get-AppPackage -Allusers *Microsoft.Windows.ParentalControls* | Remove-AppPackage"
 
-powershell "Get-AppPackage -Allusers *Microsoft.XboxGameCallableUI* | Remove-AppPackage"
+rem powershell "Get-AppPackage -Allusers *Microsoft.XboxGameCallableUI* | Remove-AppPackage"
 
-powershell "Get-AppPackage -Allusers *Microsoft.MicrosoftEdgeDevToolsClient* | Remove-AppPackage"
+rem powershell "Get-AppPackage -Allusers *Microsoft.MicrosoftEdgeDevToolsClient* | Remove-AppPackage"
 
-powershell "Get-AppPackage -Allusers *Microsoft.Windows.PeopleExperienceHost* | Remove-AppPackage"
+rem powershell "Get-AppPackage -Allusers *Microsoft.Windows.PeopleExperienceHost* | Remove-AppPackage"
 
-powershell "Get-AppPackage -Allusers *Microsoft.Windows.NarratorQuickStart* | Remove-AppPackage"
+rem powershell "Get-AppPackage -Allusers *Microsoft.Windows.NarratorQuickStart* | Remove-AppPackage"
 
 powershell "Get-AppPackage -Allusers *Microsoft.Win32WebViewHost* | Remove-AppPackage"
 
