@@ -204,7 +204,7 @@ RESTART
  - RAMTweaks.bat (script settings need tweaked to match users computer hardware)
  - GPUTweaks.bat
  - NVGPUTweaks.bat / AMDGPUTweaks.bat (script settings need tweaked to match users computer hardware)
- - CPUTweaks.bat (script settings need tweaked to match users computer hardware)
+ - CPUTweaks.bat
  - InputTweaks.bat (script settings need tweaked to match users computer hardware)
  - HardDrive&USBTweaks.bat
  - UseLargePages.bat (add programs to enable Large Pages for them)
