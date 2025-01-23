@@ -95,7 +95,7 @@ powershell -command "Get-AppxPackage -AllUsers *WCF-Services45* | Remove-AppxPac
 
 powershell -command "Get-AppxPackage -AllUsers *Microsoft.Todos* | Remove-AppxPackage"
 
-powershell -command "Get-AppxPackage -AllUsers *Microsoft.SecHealthUI* | Remove-AppxPackage"
+rem powershell -command "Get-AppxPackage -AllUsers *Microsoft.SecHealthUI* | Remove-AppxPackage"
 
 powershell -command "Get-AppxPackage -AllUsers *Microsoft.GamingApp* | Remove-AppxPackage"
 
