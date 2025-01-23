@@ -551,3 +551,5 @@ DisableClearPageFileAtShutdown.bat / EnableClearPageFileAtShutdown.bat (long res
 RemoveAllWindowsApps.bat
 
 RemoveWebViewHost.bat
+
+RemoveWindowsAppRuntime.bat
