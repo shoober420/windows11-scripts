@@ -171,7 +171,7 @@ rem powershell -command "Get-AppxPackage -AllUsers *Microsoft.Windows.NarratorQu
 
 rem powershell -command "Get-AppxPackage -AllUsers *Microsoft.Windows.ContentDeliveryManager* | Remove-AppxPackage"
 
-powershell -command "Get-AppxPackage -AllUsers *Microsoft.Win32WebViewHost* | Remove-AppxPackage"
+rem powershell -command "Get-AppxPackage -AllUsers *Microsoft.Win32WebViewHost* | Remove-AppxPackage"
 
 powershell -command "Get-AppxPackage -AllUsers *devhome* | Remove-AppxPackage"
 
