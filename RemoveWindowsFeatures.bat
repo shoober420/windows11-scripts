@@ -84,6 +84,12 @@ Dism /Online /Disable-Feature /FeatureName:DirectPlay /Quiet /NoRestart
 
 Dism /Online /Disable-Feature /FeatureName:Microsoft-Hyper-V-All /Quiet /NoRestart
 
+Dism /Online /Disable-Feature /FeatureName:Microsoft-HyperV-All /Quiet /NoRestart
+
+Dism /Online /Disable-Feature /FeatureName:Microsoft-Hyper-V /Quiet /NoRestart
+
+Dism /Online /Disable-Feature /FeatureName:Microsoft-HyperV /Quiet /NoRestart
+
 Dism /Online /Disable-Feature /FeatureName:Client-ProjFS /Quiet /NoRestart
 
 Dism /Online /Disable-Feature /FeatureName:TelnetClient /Quiet /NoRestart
