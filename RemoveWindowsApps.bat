@@ -169,7 +169,7 @@ powershell -command "Get-AppxPackage -AllUsers *Microsoft.WindowsTerminal* | Rem
 
 rem powershell -command "Get-AppxPackage -AllUsers *Microsoft.Windows.NarratorQuickStart* | Remove-AppxPackage"
 
-powershell -command "Get-AppxPackage -AllUsers *Microsoft.Windows.ContentDeliveryManager* | Remove-AppxPackage"
+rem powershell -command "Get-AppxPackage -AllUsers *Microsoft.Windows.ContentDeliveryManager* | Remove-AppxPackage"
 
 powershell -command "Get-AppxPackage -AllUsers *Microsoft.Win32WebViewHost* | Remove-AppxPackage"
 
