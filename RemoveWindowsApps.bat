@@ -77,7 +77,7 @@ powershell -command "Get-AppxPackage -AllUsers *Microsoft.MicrosoftEdgeStable* |
 
 rem powershell -command "Get-AppxPackage -AllUsers *Microsoft.MicrosoftEdgeDevToolsClient* | Remove-AppxPackage"
 
-powershell -command "Get-AppxPackage -AllUsers *Microsoft.Windows.ShellExperienceHost* | Remove-AppxPackage"
+rem powershell -command "Get-AppxPackage -AllUsers *Microsoft.Windows.ShellExperienceHost* | Remove-AppxPackage"
 
 powershell -command "Get-AppxPackage -AllUsers *Microsoft.Windows.StartMenuExperienceHost* | Remove-AppxPackage"
 
