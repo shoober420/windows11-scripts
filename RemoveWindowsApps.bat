@@ -428,7 +428,7 @@ rem powershell "Get-AppPackage -Allusers *Microsoft.Windows.XGpuEjectDialog* | R
 
 rem powershell "Get-AppPackage -Allusers *Windows.PrintDialog* | Remove-AppPackage"
 
-powershell "Get-AppPackage -Allusers *Microsoft.MicrosoftEdge* | Remove-AppPackage"
+rem powershell "Get-AppPackage -Allusers *Microsoft.MicrosoftEdge* | Remove-AppPackage"
 
 rem # Remove Provisioned packages through DISM
 rem # DISM /Online /Get-ProvisionedAppxPackages | select-string Packagename
