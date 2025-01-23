@@ -64,7 +64,7 @@ rem # https://stackoverflow.com/questions/79154160/cpu-thread-count-query-with-w
 @For /F "Tokens=2 Delims==" %%G In ('%SystemRoot%\System32\wbem\WMIC.exe CPU Get NumberOfLogicalProcessors /Value 2^>NUL ^| %SystemRoot%\System32\find.exe "="') Do @For /F %%H In ("%%G") Do @For %%I In (Ndis Tcpip) Do @%SystemRoot%\System32\reg.exe Add "HKLM\SYSTEM\CurrentControlSet\Services\%%I\Parameters" /V "MaxNumRssThreads" /T REG_DWORD /D %%H /F 1>NUL
 
 rem # Set RssBaseCpu to last Core on CPU
-@For /F "Tokens=2 Delims==" %%G In ('%SystemRoot%\System32\wbem\WMIC.exe CPU Get NumberOfCores /Value 2^>NUL ^| %SystemRoot%\System32\find.exe "="') Do @For /F %%H In ("%%G") Do @For %%I In (Ndis Tcpip) Do @%SystemRoot%\System32\reg.exe Add "HKLM\SYSTEM\CurrentControlSet\Services\Ndis\Parameters" /V "RssBaseCpu" /T REG_DWORD /D %%H /F 1>NUL
+@For /F "Tokens=2 Delims==" %%G In ('%SystemRoot%\System32\wbem\WMIC.exe CPU Get NumberOfCores /Value 2^>NUL ^| %SystemRoot%\System32\find.exe "="') Do @For /F %%H In ("%%G") Do @For %%I In (Ndis Tcpip) Do @%SystemRoot%\System32\reg.exe Add "HKLM\SYSTEM\CurrentControlSet\Services\%%I\Parameters" /V "RssBaseCpu" /T REG_DWORD /D %%H /F 1>NUL
 
 rem # Enable DNS over HTTPS
 rem # "wmic nic" to find NIC ID
