@@ -203,7 +203,7 @@ RESTART
 
  - NetworkTweaks.bat (script settings need tweaked to match users computer hardware)
  - DNS.ps1
- - RAMTweaks.bat (script settings need tweaked to match users computer hardware)
+ - RAMTweaks.bat
  - GPUTweaks.bat
  - NVGPUTweaks.bat / AMDGPUTweaks (script settings need tweaked to match users computer hardware)
  - CPUTweaks.bat
