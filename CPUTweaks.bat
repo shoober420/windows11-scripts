@@ -1,6 +1,4 @@
-rem # !!! WARNING !!!
-rem # ADJUST SETTINGS TO CORRESPOND WITH YOUR HARDWARE BEFORE RUNNING
-rem # !!! WARNING !!!
+rem # CPU Tweak script
 
 rem # Disable HyperThreading in BIOS, lowers FPS
 
@@ -13,7 +11,7 @@ rem # https://www.wilderssecurity.com/threads/increase-number-of-threads-per-pro
 
 PAUSE
 
-rem # Set AdditionalCriticalWorkerThreads reg key to match thread count listed below
+rem # Set AdditionalCriticalWorkerThreads to match your CPU thread count
 
 rem # 4 threads = 1 default critical thread , 2 additional critical threads and 1 thread left for background processes / AdditionalCriticalWorkerThreads = 2
 
@@ -25,7 +23,66 @@ rem # 16 threads = 4 default critical thread , 8 additional critical threads and
 
 rem # 32 threads = 8 default critical thread , 16 additional critical threads and 8 thread left for background processes / AdditionalCriticalWorkerThreads = 16
 
+PAUSE
+
+@echo off
+
+echo.
+echo 1. 4 threads
+echo 2. 8 threads
+echo 3. 12 threads
+echo 4. 16 threads
+echo 5. 32 threads
+echo C. Cancel
+echo.
+choice /c 12345C /m "Choose an option :"
+
+if 6 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 5 EQU %ERRORLEVEL% (
+   call :32threads
+) else if 4 EQU %ERRORLEVEL% (
+   call :16threads
+) else if 3 EQU %ERRORLEVEL% (
+   call :12threads
+) else if 2 EQU %ERRORLEVEL% (
+   call :8threads
+) else if 1 EQU %ERRORLEVEL% (
+   call :4threads
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:4threads
+echo User chose 4 threads
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Executive" /v "AdditionalCriticalWorkerThreads" /t REG_DWORD /d "2" /f
+goto :end
+
+:8threads
+echo User chose 8 threads
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Executive" /v "AdditionalCriticalWorkerThreads" /t REG_DWORD /d "4" /f
+goto :end
+
+:12threads
+echo User chose 12 threads
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Executive" /v "AdditionalCriticalWorkerThreads" /t REG_DWORD /d "6" /f
+goto :end
+
+:16threads
+echo User chose 16 threads
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Executive" /v "AdditionalCriticalWorkerThreads" /t REG_DWORD /d "8" /f
+goto :end
+
+:32threads
+echo User chose 32 threads
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Executive" /v "AdditionalCriticalWorkerThreads" /t REG_DWORD /d "16" /f
+goto :end
+
+:end
+
+
 
 rem # Delayed Worker Threads - Threads in this queue have a lower priority and therefore a higher latency because they must compete with other processing for CPU time
 
