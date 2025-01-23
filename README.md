@@ -555,3 +555,9 @@ RemoveWebViewHost.bat
 RemoveWindowsAppRuntime.bat
 
 RemoveWindowsClientCBS.bat
+
+RemoveCredDialogHost.bat
+
+RemoveXGpuEjectDialog.bat
+
+RemovePrintDialog.bat
