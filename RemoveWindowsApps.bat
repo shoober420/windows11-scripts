@@ -79,7 +79,7 @@ rem powershell -command "Get-AppxPackage -AllUsers *Microsoft.MicrosoftEdgeDevTo
 
 rem powershell -command "Get-AppxPackage -AllUsers *Microsoft.Windows.ShellExperienceHost* | Remove-AppxPackage"
 
-powershell -command "Get-AppxPackage -AllUsers *Microsoft.Windows.StartMenuExperienceHost* | Remove-AppxPackage"
+rem powershell -command "Get-AppxPackage -AllUsers *Microsoft.Windows.StartMenuExperienceHost* | Remove-AppxPackage"
 
 powershell -command "Get-AppxPackage -AllUsers *Client-ProjFS* | Remove-AppxPackage"
 
