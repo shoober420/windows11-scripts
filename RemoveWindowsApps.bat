@@ -53,7 +53,7 @@ powershell -command "Get-AppxPackage -AllUsers *Microsoft.WindowsNotepad* | Remo
 powershell -command "Get-AppxPackage -AllUsers *Microsoft.People* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage -AllUsers *Microsoft.549981C3F5F10* | Remove-AppxPackage"
 rem powershell -command "Get-AppxPackage -AllUsers *Microsoft.Windows.CloudExperienceHost* | Remove-AppxPackage"
-powershell -command "Get-AppxPackage -AllUsers *Microsoft.Windows.PeopleExperienceHost* | Remove-AppxPackage"
+rem powershell -command "Get-AppxPackage -AllUsers *Microsoft.Windows.PeopleExperienceHost* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage -AllUsers *Microsoft.XboxGameOverlay* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage -AllUsers *Microsoft.XboxGamingOverlay* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage -AllUsers *Microsoft.XboxIdentityProvider* | Remove-AppxPackage"
