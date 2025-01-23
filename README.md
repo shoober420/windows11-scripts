@@ -199,7 +199,7 @@ RESTART
  - DisableWinHTTP.bat (WIRED CONNECTION ONLY)
  - NICProperties.bat
 
- - NetworkTweaks.bat (script settings need tweaked to match users computer hardware)
+ - NetworkTweaks.bat
  - DNS.ps1
  - RAMTweaks.bat
  - GPUTweaks.bat
@@ -363,7 +363,7 @@ Steam.bat (minimal and bloatless Steam launch script)
 
 MouseAccelFix.bat
 
-NetworkTweaks.bat (Recommened to run DNS.ps1 for optimal DNS settings) (script settings need tweaked to match users computer hardware)
+NetworkTweaks.bat (Recommened to run DNS.ps1 for optimal DNS settings)
 
 ComputerName.bat (change computer name and Hostname)
 
