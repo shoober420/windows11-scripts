@@ -201,7 +201,7 @@ RESTART
 
  - NetworkTweaks.bat (script settings need tweaked to match users computer hardware)
  - DNS.ps1
- - RAMTweaks.bat (script settings need tweaked to match users computer hardware)
+ - RAMTweaks.bat
  - GPUTweaks.bat
  - NVGPUTweaks.bat / AMDGPUTweaks.bat (script settings need tweaked to match users computer hardware)
  - CPUTweaks.bat
@@ -367,7 +367,7 @@ NetworkTweaks.bat (Recommened to run DNS.ps1 for optimal DNS settings) (script s
 
 ComputerName.bat (change computer name and Hostname)
 
-RAMTweaks.bat (script settings need tweaked to match users computer hardware)
+RAMTweaks.bat
 
 NVGPUTweaks.bat (script settings need tweaked to match users computer hardware)
 
