@@ -424,7 +424,7 @@ rem powershell "Get-AppPackage -Allusers *Microsoft.Windows.NarratorQuickStart* 
 
 rem powershell "Get-AppPackage -Allusers *Microsoft.Win32WebViewHost* | Remove-AppPackage"
 
-powershell "Get-AppPackage -Allusers *Microsoft.Windows.XGpuEjectDialog* | Remove-AppPackage"
+rem powershell "Get-AppPackage -Allusers *Microsoft.Windows.XGpuEjectDialog* | Remove-AppPackage"
 
 powershell "Get-AppPackage -Allusers *Windows.PrintDialog* | Remove-AppPackage"
 
