@@ -4,8 +4,6 @@ rem # !!! WARNING !!!
 
 rem # IF PERFORMANCE DECREASES, run EnableDirectXUserGlobalSettings.bat
 
-rem # HighPerfAdapter decreases performance and should NOT be enabled
-
 rem # MUST DISABLE ONBOARD INTEGRATED GPU IN BIOS TO RUN PROPERLY
 
 rem # You will need to manually set values below if onboard integrated GPU is enabled
