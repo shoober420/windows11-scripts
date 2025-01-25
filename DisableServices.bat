@@ -5,7 +5,14 @@ rem # acl.txt file required to change certain registry keys
 rem # Ownership script required for certain registry keys
 REGINI %USERPROFILE%\Downloads\windows11-batch-scripts-main\acl.txt
 
-rem # Must run EnableUI.bat for working GUI
+rem # !!! WARNING !!!
+rem # DISABLES ALL NON-MANDATORY SERVICES
+rem # Enable*.bat scripts required to enable features needed
+rem # !!! WARNING !!!
+
+rem # EnableUI.bat needed to re-enable UI when needed
+
+rem # EnableWindowsUpdate.bat needed when updating system
 
 PAUSE
 
