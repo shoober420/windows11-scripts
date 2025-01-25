@@ -1,6 +1,6 @@
 rem # Disables bloat services
 
-rem # acl.txt file required to change certain registry keys
+rem # acl.txt file required to modify certain registry keys
 
 rem # !!! WARNING !!!
 rem # DISABLES ALL NON-MANDATORY SERVICES
