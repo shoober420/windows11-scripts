@@ -51,6 +51,7 @@ Right click > Run as administrator
  - ThreadQuantum.bat
  - UseLargePages.bat
  - MTU.bat
+ - DeviceManager.txt
 
 # Advanced Install
  - EnablePowerShell.bat
@@ -78,6 +79,7 @@ Right click > Run as administrator
  - DisableComponents.bat
  - RemoveRemoteDesktopConnection.bat
  - MTU.bat
+ - DeviceManager.txt
 
 NOTE:
 If at any point during the process you get stuck at "Just a moment..." screen before login, press CTRL+ALT+DEL to force login screen to show
