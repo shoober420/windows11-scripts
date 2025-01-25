@@ -29,6 +29,7 @@ Right click > Run as administrator
  - PowerPlanUltra.bat
  - PowerPlanSettings.bat
  - ThreadQuantum.bat
+ - RemoveRemoteDesktopConnection.bat
  - MTU.bat
 
 # Standard Install
@@ -51,6 +52,7 @@ Right click > Run as administrator
  - ThreadQuantum.bat
  - UseLargePages.bat
  - MTU.bat
+ - RemoveRemoteDesktopConnection.bat
  - DeviceManager.txt
 
 # Advanced Install
