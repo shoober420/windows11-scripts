@@ -9,6 +9,7 @@ rem # https://martin77s.wordpress.com/2010/04/05/performance-tuning-your-windows
 rem # https://www.thewindowsclub.com/improve-network-speed-using-smb-compression
 rem # https://james-rankin.com/features/the-ultimate-guide-to-windows-logon-optimizations-part-5/
 rem # https://www.wilderssecurity.com/threads/increase-number-of-threads-per-process.317532/
+rem # rem # https://notes.ponderworthy.com/additional-critical-worker-threads-in-windows-speed-tweak
 
 rem # AdditionalCriticalWorkerThreads value increases the number of critical worker threads created for a specified work queue
 
@@ -16,13 +17,14 @@ rem # By increasing the value of this one, you can get more additional worker th
 
 rem # Allow more I/O to queue in the storage subsystem
 
+rem # Value is determined by RAM size NOT thread or core count
+
 PAUSE
 
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Executive" /v "AdditionalCriticalWorkerThreads" /t REG_DWORD /d "32" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Executive" /v "AdditionalCriticalWorkerThreads" /t REG_DWORD /d "64" /f
 
 rem # Delayed Worker Threads
-rem # Threads in this queue have a lower priority and therefore are higher latency because they must compete with processes for CPU time
 
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Executive" /v "AdditionalDelayedWorkerThreads" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Executive" /v "AdditionalDelayedWorkerThreads" /t REG_DWORD /d "64" /f
 
 PAUSE
