@@ -84,7 +84,7 @@ goto :end
 
 
 
-rem # Delayed Worker Threads - Threads in this queue have a lower priority and therefore a higher latency because they must compete with other processing for CPU time
+rem # Delayed Worker Threads - Threads in this queue have a lower priority and therefore a higher latency because they must compete with other threads for CPU time
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Executive" /v "AdditionalDelayedWorkerThreads" /t REG_DWORD /d "0" /f
 
