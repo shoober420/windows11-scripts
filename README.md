@@ -20,7 +20,7 @@ Right click > Run as administrator
 
 NOTE: Reinstall Windows from USB ISO to fully restore apps, registry, and original settings
 
-NOTE: Doing a "Refresh your PC" and selecting "Local reinstall" will NOT install deleted Windows apps and NOT restore original registry
+NOTE: Doing a "Refresh your PC" will NOT install deleted Windows apps and NOT restore original registry
 
 # Minimal Install
  - EnablePowerShell.bat
