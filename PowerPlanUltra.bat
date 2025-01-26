@@ -8,6 +8,8 @@ rem # !!! ATTENTION !!!
 rem # New GUID is generated after "powercfg -duplicatescheme" command is executed, you must manually set randomly generated GUID using the "powercfg /setactive" command each time
 rem # !!! ATTENTION !!!
 
+rem # Using Ultimate Performance plan causes CPU Utilization to be at 100% at all times, this is normal
+
 rem # powercfg /setactive *GUID*
 
 PAUSE
