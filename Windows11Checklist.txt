@@ -72,6 +72,8 @@ msc > Display Adapters > Intel * > Properties > Driver tab > Uninstall device > 
  +++ Windows: TURN OFF TPM IN BIOS AGAIN AFTER NEW CANARY BUILD INSTALL
  +++ Windows: You can do a true TPM-free Windows install everytime by downlaoading the ISO and installing new Canary builds instead of going through Windows Update
 
+Doing a "Refresh your PC" and selecting "Local reinstall" will NOT install deleted apps from using RemoveWindowsApps.bat
+
 Windows 11 Home keys cant be used with Windows 11 Home N edition
 
 If Windows doesnt recognize a USB stick, format it with Rufus
