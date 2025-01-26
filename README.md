@@ -127,7 +127,7 @@ Update Video Drivers
  - NVCleanstall.txt
  - NVIDIA Control Panel: https://github.com/Aetopia/Install-NVCPL
 
- - AMD: https://www.amd.com/en/support
+ - AMD: https://www.amd.com/en/support/download/drivers.html
 
 RESTART
 
