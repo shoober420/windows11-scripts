@@ -18,7 +18,7 @@ rem # Allow more I/O to queue in the storage subsystem
 
 PAUSE
 
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Executive" /v "AdditionalCriticalWorkerThreads" /t REG_DWORD /d "20" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Executive" /v "AdditionalCriticalWorkerThreads" /t REG_DWORD /d "32" /f
 
 rem # Delayed Worker Threads
 rem # Threads in this queue have a lower priority and therefore are higher latency because they must compete with processes for CPU time
