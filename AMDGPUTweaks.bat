@@ -28,14 +28,15 @@ for /f %%i in ('wmic path Win32_VideoController get PNPDeviceID^| findstr /L "PC
         for /f "tokens=3" %%a in ('reg query "HKLM\SYSTEM\ControlSet001\Enum\%%i" /v "Driver"') do (
                 for /f %%i in ('echo %%a ^| findstr "{"') do (
 
-rem # Pre-rendered Frames=FlipQueueSize (DX9) | Main3D (DX10+) / 3100=1 3200=2 3300=3300 / DONT USE 0
+rem # Pre-rendered Frames=FlipQueueSize (DX9) | Main3D and Main3D_DEF (DX10+) / 3100=1 3200=2 3300=3300 (DEFAULT)
+rem # 3000=0 will use the default 3 value
 rem # 1=BEST LATENCY 2+=BEST FPS
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "FlipQueueSize" /t REG_BINARY /d "3100" /f
 
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "Main3D_DEF" /t REG_SZ /d "1" /f
-
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "Main3D" /t REG_BINARY /d "3100" /f
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "Main3D_DEF" /t REG_SZ /d "1" /f
 
                          reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "LTRSnoopL1Latency" /t REG_DWORD /d "1" /f
                          reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "LTRSnoopL0Latency" /t REG_DWORD /d "1" /f
