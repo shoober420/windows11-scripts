@@ -2,11 +2,12 @@ rem # Script for taking ownership of Windows Defender reg keys and other bloat
 
 rem # Requires SetACL.exe (https://helgeklein.com/download/)
 
-rem # Make sure SetACL.exe is extracted in your Downloads directory to work
+rem # Make sure SetACL zip archive is extracted correctly in your Downloads directory
 
 PAUSE
 
 cd "%USERPROFILE%\Downloads\SetACL (executable version)\64 bit"
+
 SetACL.exe -on "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\TrustedInstaller" -ot reg -actn setowner -ownr "n:Administrators"
 SetACL.exe -on "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\TrustedInstaller" -ot reg -actn ace -ace "n:Administrators;p:full"
 
