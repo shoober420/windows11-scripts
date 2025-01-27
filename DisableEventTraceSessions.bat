@@ -9,6 +9,27 @@ rem # Requires SetACL.bat script to be run first
 
 PAUSE
 
+rem # Launch SetACL.bat to take ownership of reg keys
+cd "%~dp0"
+ECHO R | powershell.exe ./SetACL.bat
+cd "%USERPROFILE%\Downloads"
+
+cd "%USERPROFILE%\Downloads\windows11-scripts-main"
+ECHO R | powershell.exe ./SetACL.bat
+cd "%USERPROFILE%\Downloads"
+
+cd "%USERPROFILE%\Downloads\windows11-scripts-main\windows11-scripts-main"
+ECHO R | powershell.exe ./SetACL.bat
+cd "%USERPROFILE%\Downloads"
+
+cd "%USERPROFILE%\Downloads\windows11-scripts\windows11-scripts"
+ECHO R | powershell.exe ./SetACL.bat
+cd "%USERPROFILE%\Downloads"
+
+cd "%USERPROFILE%\Downloads\windows11-scripts"
+ECHO R | powershell.exe ./SetACL.bat
+cd "%USERPROFILE%\Downloads"
+
 ECHO Yes | reg delete "HKLM\SYSTEM\ControlSet001\Control\WMI\Autologger\Circular Kernel Context Logger"
 ECHO Yes | reg delete "HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\Circular Kernel Context Logger"
 ECHO Yes | reg delete "HKLM\SYSTEM\ControlSet001\Control\WMI\Autologger\FilterMgr-Logger"
