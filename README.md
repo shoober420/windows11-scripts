@@ -189,8 +189,8 @@ RESTART (SAFE MODE) (hold SHIFT while restarting)
  - DisableWindowsFirewall.bat (use router firewall)
  - DisableWindowsSecurityCenter.bat
  - DisableEventTraceSessions.bat
-
  - DisableSAM.bat (black screen and unresponsive desktop if LanmanServer is enabled)
+
  - DisableLanmanServer.bat
  - DisableStartMenu.bat
  - DisableComponents.bat
