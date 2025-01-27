@@ -3,6 +3,8 @@ rem # Works for any graphics card
 
 rem # DOES NOT SUPPORT DIGITAL STREAM COMPRESSION (DSC). Black screen will occur if used with DSC monitors
 
+rem # IMPROVE LATENCY AT THE COST OF LITTLE LESS FPS
+
 PAUSE
 
 rem # Sources: https://sites.google.com/view/melodystweaks/basictweaks
