@@ -5,6 +5,27 @@ rem # Recommended to run in SAFE MODE
 rem # Requires SetACL.bat to be run first
 rem # Gives ownership to reg keys
 
+rem # Launch SetACL.bat to take overship of reg keys
+cd "%~dp0"
+ECHO R | powershell.exe ./SetACL.bat
+cd "%USERPROFILE%\Downloads"
+
+cd "%USERPROFILE%\Downloads\windows11-scripts-main"
+ECHO R | powershell.exe ./SetACL.bat
+cd "%USERPROFILE%\Downloads"
+
+cd "%USERPROFILE%\Downloads\windows11-scripts-main\windows11-scripts-main"
+ECHO R | powershell.exe ./SetACL.bat
+cd "%USERPROFILE%\Downloads"
+
+cd "%USERPROFILE%\Downloads\windows11-scripts\windows11-scripts"
+ECHO R | powershell.exe ./SetACL.bat
+cd "%USERPROFILE%\Downloads"
+
+cd "%USERPROFILE%\Downloads\windows11-scripts"
+ECHO R | powershell.exe ./SetACL.bat
+cd "%USERPROFILE%\Downloads"
+
 PAUSE
 
 net stop SecurityHealthService
