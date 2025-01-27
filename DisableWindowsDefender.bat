@@ -1,7 +1,9 @@
 rem # Disable all Windows Defender components
+
 rem # AV Software is bloat
 rem # Windows Firewall is bloat, use router firewall instead
-rem # Run in SAFE MODE
+
+rem # Recommended to run in SAFE MODE
 
 rem # Requires SetACL.bat to be run first
 rem # Gives ownership to reg keys
