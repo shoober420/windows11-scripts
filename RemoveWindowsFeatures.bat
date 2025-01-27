@@ -8,6 +8,8 @@ rem # "Get-WindowsOptionalFeature -Online" shows installed features
 
 rem # Possible AUTO-REBOOT if ran without admin privileges
 
+rem # REBOOT RECOMMENDED
+
 PAUSE
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\UsoSvc" /v "Start" /t REG_DWORD /d "2" /f
@@ -435,5 +437,7 @@ powershell Remove-WindowsCapability -Name LA57 -Online
 powershell Remove-WindowsCapability -Name Virtual -Online
 
 powershell Remove-WindowsCapability -Name Hello -Online
+
+rem # REBOOT RECOMMENDED
 
 PAUSE
