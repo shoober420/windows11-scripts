@@ -57,7 +57,7 @@ NOTE: Doing a "Refresh your PC" will NOT install deleted Windows apps and NOT re
  - UseLargePages.bat
  - MTU.bat
  - RemoveRemoteDesktopConnection.bat
- - DeviceManager.txt
+ - DeviceManager.bat
 
 # Advanced Install
  - EnablePowerShell.bat
@@ -85,7 +85,7 @@ NOTE: Doing a "Refresh your PC" will NOT install deleted Windows apps and NOT re
  - DisableComponents.bat
  - RemoveRemoteDesktopConnection.bat
  - MTU.bat
- - DeviceManager.txt
+ - DeviceManager.bat
 
 NOTE:
 If at any point during the process you get stuck at "Just a moment..." screen before login, press CTRL+ALT+DEL to force login screen to show
@@ -218,6 +218,7 @@ RESTART
  - UseLargePages.bat (add programs to enable Large Pages for them)
  - HighPriority.bat (add programs to enable High Priority for them)
  - EnableDirectXUserGlobalSettings.bat
+ - DeviceManager.bat
 
  - DisableOverlays.bat (IF CRASHING, FLICKERING, AND LOW FPS OCCUR, RUN EnableOverlays.bat)
 
