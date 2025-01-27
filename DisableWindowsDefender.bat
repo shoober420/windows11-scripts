@@ -3,6 +3,9 @@ rem # AV Software is bloat
 rem # Windows Firewall is bloat, use router firewall instead
 rem # Run in SAFE MODE
 
+rem # Requires SetACL.bat to be run first
+rem # Gives ownership to reg keys
+
 reg add "HKLM\System\CurrentControlSet\Services\WdBoot" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\System\CurrentControlSet\Services\WdFilter" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\System\CurrentControlSet\Services\WdNisDrv" /v "Start" /t REG_DWORD /d "4" /f
@@ -80,5 +83,8 @@ rem icacls "C:\ProgramData\Microsoft\Windows Defender\Platform\*\NisSrv.exe" /gr
 rem taskkill /im NisSrv.exe /f
 rem del "C:\ProgramData\Microsoft\Windows Defender\Platform\*\NisSrv.exe" /s /f /q
 rem ren "C:\ProgramData\Microsoft\Windows Defender\Platform\*\NisSrv.exe" "NisSrv.exe.bak"
+
+rem # Requires SetACL.bat to be run first
+rem # Gives ownership to reg keys
 
 PAUSE
