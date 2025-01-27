@@ -57,7 +57,7 @@ NOTE: Doing a "Refresh your PC" will NOT install deleted Windows apps and NOT re
  - UseLargePages.bat
  - MTU.bat
  - RemoveRemoteDesktopConnection.bat
- - DeviceManager.bat
+ - DisableHighPrecisionEventTimer.bat
 
 # Advanced Install
  - EnablePowerShell.bat
