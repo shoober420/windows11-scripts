@@ -14,6 +14,8 @@ rem # !!!WARNING!!!
 
 rem # EnableStore.bat required for this script to function if DisableServices.bat was executed
 
+rem # REBOOT RECOMMENDED
+
 PAUSE
 
 rem # winget requires "Application Information" service to be running
@@ -438,5 +440,7 @@ DISM /Online /Remove-ProvisionedAppxPackage /PackageName:Microsoft.XboxGamingOve
 DISM /Online /Remove-ProvisionedAppxPackage /PackageName:Microsoft.WindowsMaps_2019.716.2316.0_neutral_~_8wekyb3d8bbwe
 
 DISM /Online /Remove-ProvisionedAppxPackage /PackageName:Microsoft.WindowsCalculator_2021.2210.0.0_neutral_~_8wekyb3d8bbwe
+
+rem # REBOOT RECOMMENDED
 
 PAUSE
