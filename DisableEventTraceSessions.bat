@@ -4,6 +4,7 @@ rem # NEVER disable UBPM, required by Windows
 rem # Disables logs
 
 rem # Requires SAFE MODE
+
 rem # Requires SetACL.bat script to be run first
 
 PAUSE
