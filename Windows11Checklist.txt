@@ -84,6 +84,8 @@ TLS1.2 required for Windows Update and DISM
 
 TPM AND SECUREBOOT ARE USED WITH WINDOWS PIN LOGIN, DONT TPM.MSC > CLEAR TPM, BORKS LOGIN
 
+Intel SpeedStep required for TurboBoost speeds to be enabled in some BIOS (Dell)
+
 You must disable the main service to disable the secondary foo_9e2z7 from getting reenabled
 
 SAFE MODE: Press and hold F8, then power on system while holding down F8
