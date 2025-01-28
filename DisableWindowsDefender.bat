@@ -8,6 +8,8 @@ rem # Recommended to run in SAFE MODE
 rem # Requires SetACL.bat to be run first
 rem # Gives ownership to reg keys
 
+PAUSE
+
 rem # Launch SetACL.bat to take ownership of reg keys
 cd "%~dp0"
 ECHO R | powershell.exe ./SetACL.bat
