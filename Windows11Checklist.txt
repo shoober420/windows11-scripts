@@ -56,6 +56,9 @@ msc > Display Adapters > Intel * > Properties > Driver tab > Uninstall device > 
 
  - Intel Graphics Command Center (https://www.intel.com/content/www/us/en/products/docs/graphics/graphics-command-center.html)
 
+- Dell SupportAssist (https://www.dell.com/support/home/en-us?app=drivers)
+ + driver updates
+
 - Windows Canary ISO
  + NO Microsoft account: (https://uupdump.net/known.php)
  + WITH Microsoft account: (https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewiso)
