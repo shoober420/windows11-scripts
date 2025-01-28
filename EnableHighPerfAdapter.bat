@@ -4,7 +4,7 @@ rem # !!! WARNING !!!
 
 rem # IF PERFORMANCE DECREASES, run EnableDirectXUserGlobalSettings.bat
 
-rem # MUST DISABLE ONBOARD INTEGRATED GPU IN BIOS TO RUN PROPERLY
+rem # MUST DISABLE ONBOARD INTEGRATED GPU IN BIOS AND DEVICE MANAGER TO RUN PROPERLY
 
 rem # You will need to manually set values below if onboard integrated GPU is enabled
 
