@@ -74,7 +74,7 @@ msc > Display Adapters > Intel * > Properties > Driver tab > Uninstall device > 
 
 Reinstall Windows from USB ISO to fully restore apps, registry, and original settings
 
-Doing a "Refresh your PC: Local install" will NOT install deleted Windows apps and NOT restore original registry, "Cloud install" option recommended if USB ISO unavailable
+Doing a "Refresh your PC: Local reinstall" will NOT install deleted Windows apps and NOT restore original registry, "Cloud download" option recommended if USB ISO unavailable
 
 Windows 11 Home keys cant be used with Windows 11 Home N edition
 
