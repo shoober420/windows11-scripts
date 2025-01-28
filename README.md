@@ -578,3 +578,5 @@ CPUTweaksOLD.bat (TESTING ONLY)
 DeviceManager.bat
 
 DisableHighPrecisionEventTimer.bat
+
+DisableIntelPPM.bat / EnableIntelPPM.bat
