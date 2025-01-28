@@ -309,14 +309,6 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\dmwappushsvc" /v "Start" /t REG_
 rem # Distributed Link Tracking Client service FORCE DISABLE
 sc config TrkWks start= disabled
 
-rem # Intel SpeedStep Technology (Intel Processor Power Management)
-rem # Disable for constant CPU max frequency
-reg add
-rem # Causes "Code 32" error in Device Manager for CPU, this is safe and can be ignored
-rem # Shows wrong frequency in Task Manager, use CPU-Z or HWMonitor for true frequency
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\intelppm" /v "Start" /t REG_DWORD /d "4" /f
-rem sc config intelppm start= demand
-
 rem # Disable CCleaner Performance Optimizer Service
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\CCleanerPerformanceOptimizerService" /v "Start" /t REG_DWORD /d "4" /f
 
