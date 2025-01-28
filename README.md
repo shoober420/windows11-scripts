@@ -579,4 +579,4 @@ DeviceManager.bat
 
 DisableHighPrecisionEventTimer.bat
 
-DisableIntelPPM.bat / EnableIntelPPM.bat
+DisableIntelPPM.bat / EnableIntelPPM.bat (NEEDS TO BE ENABLED FOR MAX TURBOBOOST FREQUENCIES IN CERTAIN LIMITED BIOS)
