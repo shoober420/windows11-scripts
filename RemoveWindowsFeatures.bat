@@ -54,71 +54,71 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protoc
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\DTLS 1.2\Client" /v "Enabled" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\DTLS 1.2\Client" /v "DisabledByDefault" /t REG_DWORD /d "0" /f
 
-DISM /Online /Disable-Feature /FeatureName:MediaPlayback /Quiet /NoRestart
+DISM /Online /Disable-Feature /FeatureName:MediaPlayback /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:Microsoft-Windows-Subsystem-Linux /Quiet /NoRestart
+DISM /Online /Disable-Feature /FeatureName:Microsoft-Windows-Subsystem-Linux /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:MSRDC-Infrastructure /Quiet /NoRestart
+DISM /Online /Disable-Feature /FeatureName:MSRDC-Infrastructure /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:Printing-Foundation-Features /Quiet /NoRestart
+DISM /Online /Disable-Feature /FeatureName:Printing-Foundation-Features /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:Printing-Foundation-InternetPrinting-Client /Quiet /NoRestart
+DISM /Online /Disable-Feature /FeatureName:Printing-Foundation-InternetPrinting-Client /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:Printing-PrintToPDFServices-Features /Quiet /NoRestart
+DISM /Online /Disable-Feature /FeatureName:Printing-PrintToPDFServices-Features /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:Printing-XPSServices-Features /Quiet /NoRestart
+DISM /Online /Disable-Feature /FeatureName:Printing-XPSServices-Features /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:SMB1Protocol /Quiet /NoRestart
+DISM /Online /Disable-Feature /FeatureName:SMB1Protocol /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:SearchEngine-Client-Package /Quiet /NoRestart
+DISM /Online /Disable-Feature /FeatureName:SearchEngine-Client-Package /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:WCF-TCP-PortSharing45 /Quiet /NoRestart
+DISM /Online /Disable-Feature /FeatureName:WCF-TCP-PortSharing45 /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:Windows-Defender-Default-Definitions /Quiet /NoRestart
+DISM /Online /Disable-Feature /FeatureName:Windows-Defender-Default-Definitions /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:WorkFolders-Client /Quiet /NoRestart
+DISM /Online /Disable-Feature /FeatureName:WorkFolders-Client /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:NetFx3 /Quiet /NoRestart
+DISM /Online /Disable-Feature /FeatureName:NetFx3 /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:LegacyComponents /Quiet /NoRestart
+DISM /Online /Disable-Feature /FeatureName:LegacyComponents /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:DirectPlay /Quiet /NoRestart
+DISM /Online /Disable-Feature /FeatureName:DirectPlay /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:Microsoft-Hyper-V-All /Quiet /NoRestart
+DISM /Online /Disable-Feature /FeatureName:Microsoft-Hyper-V-All /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:Microsoft-HyperV-All /Quiet /NoRestart
+DISM /Online /Disable-Feature /FeatureName:Microsoft-HyperV-All /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:Microsoft-Hyper-V /Quiet /NoRestart
+DISM /Online /Disable-Feature /FeatureName:Microsoft-Hyper-V /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:Microsoft-HyperV /Quiet /NoRestart
+DISM /Online /Disable-Feature /FeatureName:Microsoft-HyperV /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:Client-ProjFS /Quiet /NoRestart
+DISM /Online /Disable-Feature /FeatureName:Client-ProjFS /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:TelnetClient /Quiet /NoRestart
+DISM /Online /Disable-Feature /FeatureName:TelnetClient /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:TFTP /Quiet /NoRestart
+DISM /Online /Disable-Feature /FeatureName:TFTP /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:TIFFIFilter /Quiet /NoRestart
+DISM /Online /Disable-Feature /FeatureName:TIFFIFilter /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:NetFx4-AdvSrvs /Quiet /NoRestart
+DISM /Online /Disable-Feature /FeatureName:NetFx4-AdvSrvs /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:WCF-Services45 /Quiet /NoRestart
+DISM /Online /Disable-Feature /FeatureName:WCF-Services45 /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:SimpleTCP /Quiet /NoRestart
+DISM /Online /Disable-Feature /FeatureName:SimpleTCP /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:Microsoft-RemoteDesktopConnection /Quiet /NoRestart
+DISM /Online /Disable-Feature /FeatureName:Microsoft-RemoteDesktopConnection /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:DirectoryServices-ADAM-Client /Quiet /NoRestart
+DISM /Online /Disable-Feature /FeatureName:DirectoryServices-ADAM-Client /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:SmbDirect /Quiet /NoRestart
+DISM /Online /Disable-Feature /FeatureName:SmbDirect /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:MSRDC-Infrastructure /Quiet /NoRestart
+DISM /Online /Disable-Feature /FeatureName:MSRDC-Infrastructure /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:Recall /Quiet /NoRestart
+DISM /Online /Disable-Feature /FeatureName:Recall /NoRestart
 
 DISM /Online /Disable-Feature /featurename:SNMP /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:WMISnmpProvider /Remove /Quiet /NoRestart
+DISM /Online /Disable-Feature /featurename:WMISnmpProvider /Remove /NoRestart
 
 DISM /Online /Disable-Feature /featurename:Windows-Identity-Foundation /Remove /NoRestart
 
