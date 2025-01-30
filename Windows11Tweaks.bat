@@ -3742,6 +3742,7 @@ reg add "HKLM\SYSTEM\ResourcePolicyStore\ResourceSets\PolicySets\WebAuthSignIn" 
 reg add "HKLM\SYSTEM\ResourcePolicyStore\ResourceSets\PolicySets\WebAuthSignIn" /v "Memory" /t REG_SZ /d "NoCap" /f
 
 
+
 rem # Enables Cloudflare DNS
 netsh interface ip set dns Wi-Fi static 1.1.1.1
 netsh interface ip set dns Ethernet static 1.1.1.1
