@@ -582,3 +582,5 @@ DisableHighPrecisionEventTimer.bat
 DisableIntelPPM.bat / EnableIntelPPM.bat (NEEDS TO BE ENABLED FOR MAX TURBOBOOST FREQUENCIES IN CERTAIN LIMITED BIOS)
 
 DisableLowQosTimerResolution.bat / EnableLowQosTimerResolution.bat (TESTING ONLY, CAUSES BLUE/GREEN SCREEN OF DEATH AT BOOT)
+
+KernelTweaks.bat
