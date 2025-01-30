@@ -64,6 +64,7 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - EnableDirectXUserGlobalSettings.bat
  - CPUTweaks.bat
  - GPUTweaks.bat / AMDGPUTweaks.bat / NVGPUTweaks.bat
+ - KernelTweaks.bat
  - HardDrive&USBTweaks.bat
  - HighPriority.bat
  - InputTweaks.bat
@@ -212,6 +213,7 @@ RESTART
  - RAMTweaks.bat
  - GPUTweaks.bat
  - NVGPUTweaks.bat / AMDGPUTweaks.bat
+ - KernelTweaks.bat
  - CPUTweaks.bat
  - InputTweaks.bat (script settings need tweaked to match users computer hardware)
  - HardDrive&USBTweaks.bat
