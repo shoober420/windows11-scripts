@@ -2,7 +2,7 @@ rem # Disable Kernel LowQosTimerResolution
 
 rem # !!! WARNING !!!
 rem # MAY CAUSE BLUE/GREEN SCREEN OF DEATH ON BOOT
-rem # ERROR: KERNAL SECIRITY CHECK FEATURE
+rem # ERROR: KERNAL SECURITY CHECK FAILURE
 rem # !!! WARNING !!!
 
 rem # TESTING ONLY
