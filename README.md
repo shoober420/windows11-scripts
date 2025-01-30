@@ -587,6 +587,8 @@ DisableLowQosTimerResolution.bat / EnableLowQosTimerResolution.bat (TESTING ONLY
 
 KernelTweaks.bat
 
+ResourceSetTweaks.bat (TESTING ONLY, BREAKS SYSTEM)
+
 # Credits
 - https://github.com/TairikuOokami
 - https://github.com/ionuttbara
