@@ -586,3 +586,19 @@ DisableIntelPPM.bat / EnableIntelPPM.bat (NEEDS TO BE ENABLED FOR MAX TURBOBOOST
 DisableLowQosTimerResolution.bat / EnableLowQosTimerResolution.bat (TESTING ONLY, CAUSES BLUE/GREEN SCREEN OF DEATH AT BOOT)
 
 KernelTweaks.bat
+
+# Credits
+https://github.com/TairikuOokami
+https://github.com/ionuttbara
+https://github.com/ChrisTitusTech
+https://github.com/raspi
+https://github.com/simeononsecurity/
+https://sites.google.com/site/tweakradje/windows/windows-tweaking
+https://admx.help/
+https://github.com/ancel1x/Ancels-Performance-Batch
+https://github.com/Batlez/Batlez-Tweaks
+https://sites.google.com/view/melodystweaks/basictweaks
+https://github.com/sherifmagdy32/gaming_os_tweaker
+https://github.com/HakanFly/Windows-Tweaks
+https://www.elevenforum.com/members/garlin.5387/
+https://www.elevenforum.com/members/csmc.38355/
