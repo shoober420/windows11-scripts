@@ -591,6 +591,8 @@ ResourceSetTweaks.bat (TESTING ONLY, BREAKS SYSTEM)
 
 DisableShellExperienceHost.bat / EnableShellExperienceHost.bat
 
+DisableEdge.bat / EnableEdge.bat
+
 # Credits
 - https://github.com/TairikuOokami
 - https://github.com/ionuttbara
