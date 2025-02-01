@@ -1,7 +1,10 @@
-REM Start Up Batch script
-REM Highly recommended to run after login
-REM Executes SetTimerResolution.exe
-REM Disables services launched after signing in
+rem # Start Up Batch script
+
+rem # Disables re-enabled services launched after sign in
+
+rem # RECOMMENDED TO LAUNCH ON EXPERT INSTALL
+
+rem # Executes SetTimerResolution.exe
 
 cd %USERPROFILE%\Downloads\windows11-scripts-main
 call SetTimerResolution.bat
@@ -23,5 +26,8 @@ call DisableSENS.bat
 
 cd %USERPROFILE%\Downloads\windows11-scripts-main
 call DisableAppX.bat
+
+cd %USERPROFILE%\Downloads\windows11-scripts-main
+call DisableWindowsConnectionManager.bat
 
 PAUSE
