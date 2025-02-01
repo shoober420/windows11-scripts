@@ -21,4 +21,7 @@ call DisableWMI.bat
 cd %USERPROFILE%\Downloads\windows11-scripts-main
 call DisableSENS.bat
 
+cd %USERPROFILE%\Downloads\windows11-scripts-main
+call DisableAppX.bat
+
 PAUSE
