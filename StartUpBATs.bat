@@ -16,7 +16,7 @@ cd %USERPROFILE%\Downloads\windows11-scripts-main
 call DisableWindowsUpdate.bat
 
 cd %USERPROFILE%\Downloads\windows11-scripts-main
-call DisableWindowsUpdate.bat
+call DisableWMI.bat
 
 cd %USERPROFILE%\Downloads\windows11-scripts-main
 call DisableSENS.bat
