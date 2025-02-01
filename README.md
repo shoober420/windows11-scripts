@@ -589,6 +589,8 @@ KernelTweaks.bat
 
 ResourceSetTweaks.bat (TESTING ONLY, BREAKS SYSTEM)
 
+DisableShellExperienceHost.bat / EnableShellExperienceHost.bat
+
 # Credits
 - https://github.com/TairikuOokami
 - https://github.com/ionuttbara
