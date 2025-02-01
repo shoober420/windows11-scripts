@@ -595,6 +595,8 @@ DisableEdge.bat / EnableEdge.bat
 
 DisableSENS.bat / EnableSENS.bat
 
+DisableWindowsConnectionManager.bat / EnableWindowsConnectionManager.bat
+
 # Credits
 - https://github.com/TairikuOokami
 - https://github.com/ionuttbara
