@@ -593,6 +593,8 @@ DisableShellExperienceHost.bat / EnableShellExperienceHost.bat
 
 DisableEdge.bat / EnableEdge.bat
 
+DisableSENS.bat / EnableSENS.bat
+
 # Credits
 - https://github.com/TairikuOokami
 - https://github.com/ionuttbara
