@@ -19,9 +19,6 @@ cd %USERPROFILE%\Downloads\windows11-scripts-main
 call DisableWindowsUpdate.bat
 
 cd %USERPROFILE%\Downloads\windows11-scripts-main
-call DisableThemes.bat
-
-cd %USERPROFILE%\Downloads\windows11-scripts-main
 call DisableSENS.bat
 
 PAUSE
