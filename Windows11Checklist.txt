@@ -23,7 +23,7 @@ Download
  - WinBin2ISO (https://www.softwareok.com/?seite=Freeware/WinBin2Iso)
  - NRGtoISO (http://www.nrgtoiso.com/)
  - MDFtoISO (http://www.mdftoiso.com/)
- - Rufus (https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewiso) (ISOtoUSB)
+ - Rufus (https://rufus.ie/en) (ISOtoUSB)
  - ImgBurn (https://www.majorgeeks.com/mg/getmirror/imgburn,1.html)
  - mpv (video player) (https://sourceforge.net/projects/mpv-player-windows/files)
  - FileTypesMan (https://www.nirsoft.net/utils/file_types_manager.html) (change default icons)
