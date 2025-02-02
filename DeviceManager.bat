@@ -90,7 +90,4 @@ pnputil /disable-device "ACPI\INT33A1\1"
 rem # AMD Controller Emulation
 pnputil /disable-device "ROOT\AMDXE\0000"
 
-rem # ACPI Processor Aggregator
-pnputil /disable-device "ACPI\ACPI000C\2&daba3ff&0"
-
 PAUSE
