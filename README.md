@@ -623,6 +623,8 @@ DisableServicesWindows.bat
 
 DisableServicesIntel.bat
 
+DisableServicesAMD.bat
+
 # Credits
 - https://github.com/TairikuOokami
 - https://github.com/ionuttbara
