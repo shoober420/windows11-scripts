@@ -599,6 +599,16 @@ DisableSENS.bat / EnableSENS.bat
 
 DisableWindowsConnectionManager.bat / EnableWindowsConnectionManager.bat
 
+DisableLanmanWorkstation.bat
+
+DisableIPHelper.bat
+
+DisableNetBIOSHelper.bat
+
+DisableUPnPDeviceHost.bat
+
+DisableSSDPDiscovery.bat
+
 # Credits
 - https://github.com/TairikuOokami
 - https://github.com/ionuttbara
