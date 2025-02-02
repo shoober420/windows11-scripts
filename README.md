@@ -133,6 +133,7 @@ Update Video Drivers
  - NVIDIA Control Panel: https://github.com/Aetopia/Install-NVCPL
 
  - AMD: https://www.amd.com/en/support/download/drivers.html
+  + AMD Vulkan Drivers: https://www.amd.com/en/resources/support-articles/release-notes/RN-RAD-WIN-VULKAN.html
 
 RESTART
 
