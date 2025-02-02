@@ -1,7 +1,8 @@
 rem # Disable DNS Client (Dnscache)
+
 rem # !!! WARNING !!!
 rem # Disabling DNS Client borks internet
-rem # !!! CAUTION !!!
+rem # !!! WARNING !!!
 
 rem # Was able to be disabled in Windows 7
 
