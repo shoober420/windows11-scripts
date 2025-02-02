@@ -1,9 +1,11 @@
-rem Disable State Repository Service
+rem # Disable State Repository Service
+
 rem # !!! WARNING !!!
 rem # Breaks system configuration settings, like power options
+
 rem # Breaks GUI, like taskbar, icons, and background
-rem # !!! CAUTION !!!
-rem # DO NOT USE 
+rem # !!! WARNING !!!
+
 rem # FOR TESTING PURPOSES ONLY
 
 PAUSE
