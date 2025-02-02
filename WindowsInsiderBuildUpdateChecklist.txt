@@ -53,6 +53,12 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - DNS.ps1
  - PowerPlanUltra.bat
  - PowerPlanSettings.bat
+ - DisableLanmanWorkstation.bat
+ - DisableLanmanServer.bat
+ - DisableIPHelper.bat
+ - DisableNetBIOSHelper.bat
+ - DisableUPnPDeviceHost.bat
+ - DisableSSDPDiscovery.bat
  - RAMTweaks.bat
  - ThreadQuantum.bat
  - UseLargePages.bat
