@@ -617,6 +617,12 @@ DisableSSDPDiscovery.bat
 
 DisableNVIDIAContainer.bat
 
+DisableServicesInternet.bat
+
+DisableServicesWindows.bat
+
+DisableServicesIntel.bat
+
 # Credits
 - https://github.com/TairikuOokami
 - https://github.com/ionuttbara
