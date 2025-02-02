@@ -5,6 +5,9 @@ rem # Disables re-enabled services launched after sign in
 rem # RECOMMENDED TO LAUNCH ON EXPERT INSTALL
 
 rem # Executes SetTimerResolution.exe
+rem # https://github.com/valleyofdoom/TimerResolution
+
+PAUSE
 
 cd %USERPROFILE%\Downloads\windows11-scripts-main
 call SetTimerResolution.bat
