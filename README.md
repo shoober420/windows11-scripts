@@ -289,8 +289,6 @@ acl.txt (ACL: Access Control List - needed to take ownership of registry keys fo
 
 PowerPlanUltra.bat (adds duplicate Ultra power plan everytime command is executed, so use PowerPlanUltra.bat only if Ultimate Performance power plan profile is NOT present)
 
-DisableServices.bat
-
 DisableThemes.bat / EnableThemes.bat
 
 StartGraphicsPerfSvc.bat
