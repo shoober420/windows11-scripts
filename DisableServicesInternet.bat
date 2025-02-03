@@ -1,5 +1,27 @@
 rem # Disable Bloat Internet Services
 
+rem # Launch SetACL.bat to take ownership of reg keys
+
+cd "%~dp0"
+ECHO R | powershell.exe ./SetACL.bat
+cd "%USERPROFILE%\Downloads"
+
+cd "%USERPROFILE%\Downloads\windows11-scripts-main"
+ECHO R | powershell.exe ./SetACL.bat
+cd "%USERPROFILE%\Downloads"
+
+cd "%USERPROFILE%\Downloads\windows11-scripts-main\windows11-scripts-main"
+ECHO R | powershell.exe ./SetACL.bat
+cd "%USERPROFILE%\Downloads"
+
+cd "%USERPROFILE%\Downloads\windows11-scripts\windows11-scripts"
+ECHO R | powershell.exe ./SetACL.bat
+cd "%USERPROFILE%\Downloads"
+
+cd "%USERPROFILE%\Downloads\windows11-scripts"
+ECHO R | powershell.exe ./SetACL.bat
+cd "%USERPROFILE%\Downloads"
+
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\AJRouter" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\ALG" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Dfsc" /v "Start" /t REG_DWORD /d "4" /f
