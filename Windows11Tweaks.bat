@@ -2267,12 +2267,6 @@ reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard" /v "Locked" /t RE
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard" /v "HypervisorEnforcedCodeIntegrity" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\default\DeviceGuard\EnableVirtualizationBasedSecurity" /v "value" /t REG_DWORD /d "0" /f
 
-rem # Timers
-bcdedit /deletevalue useplatformclock
-bcdedit /set useplatformtick yes
-bcdedit /set disabledynamictick yes
-bcdedit /set tscsyncpolicy enhanced
-
 rem # Disable 57-bits 5-level paging, also known as "Linear Address 57". Only 100% effective on 10th gen Intel. 256 TB of virtual memory per-disk is way much more than enough anyway
 bcdedit /set linearaddress57 OptOut
 bcdedit /set increaseuserva 268435328
@@ -2608,7 +2602,7 @@ reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\LocationAndSensors" /v "Disabl
 rem # Disable SMB2.0 and SMB3.0
 sc.exe config mrxsmb20 start= disabled
 sc.exe config mrxsmb30 start= disabled
-, c
+
 rem # Delete Task Scheduler tasks
 schtasks /delete /tn * /f
 
@@ -2670,12 +2664,6 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "U
 
 rem # Disable "Suggested" app notifications (Ads for MS services)
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Notifications\Settings\Windows.SystemToast.Suggested" /v "Enabled" /t REG_DWORD /d "0" /f
-
-rem # Enable TimerResolution program
-ECHO Yes | xcopy "%USERPROFILE%\Downloads\windows11-batch-scripts-main\SetTimerResolution.bat" "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
-
-rem # Start GraphicsPerfSvc (increases performance)
-ECHO Yes | xcopy "%USERPROFILE%\Downloads\windows11-batch-scripts-main\StartGraphicsPerfSvc.bat" "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
 
 rem # Disable Multi-Plane Overlay (MPO)
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "OverlayTestMode" /t REG_DWORD /d "5" /f
