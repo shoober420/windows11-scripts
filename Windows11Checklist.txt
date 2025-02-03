@@ -38,6 +38,7 @@ Download
  - NVIDIA Profile Inspector (https://github.com/neatchee/nvidiaProfileInspectorForkAIO) !!! OLD (https://github.com/Orbmu2k/nvidiaProfileInspector) OLD !!!
  - LatencyMon (https://www.resplendence.com/download/LatencyMon.exe)
  - SetACL (https://helgeklein.com/download/)
+ - SetTimerResolution (https://github.com/valleyofdoom/TimerResolution)
  - Microsoft Interrupt Affinity Tool (https://www.techpowerup.com/download/microsoft-interrupt-affinity-tool/)
  - Power Settings Explorer (http://www.mediafire.com/file/wt37sbsejk7iepm/PowerSettingsExplorer.zip)
  - WinCDEmu (https://wincdemu.sysprogs.org/) (mounts mds and other rare image extensions)
