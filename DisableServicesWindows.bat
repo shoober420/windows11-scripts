@@ -1,6 +1,6 @@
 rem # Disable Bloat Windows Services
 
-rem # acl.txt file required to modify certain registry keys
+rem # SetACL.bat / acl.txt files required to modify certain registry keys
 
 rem # !!! WARNING !!!
 rem # DISABLES ALL NON-MANDATORY SERVICES
@@ -13,9 +13,11 @@ rem # EnableWindowsUpdate.bat needed when updating system
 
 PAUSE
 
-rem # Ownership script required for certain registry keys
+rem # Launch acl.txt
 
 REGINI %USERPROFILE%\Downloads\windows11-scripts-main\acl.txt
+
+rem # Launch SetACL.bat
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\AarSvc" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\AppIDSvc" /v "Start" /t REG_DWORD /d "4" /f
