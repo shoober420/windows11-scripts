@@ -1,6 +1,8 @@
 rem # Disable Bloat Internet Services
 
+rem # SetACL.bat / acl.txt files required to modify certain registry keys
 
+PAUSE
 
 rem # Launch acl.txt
 
