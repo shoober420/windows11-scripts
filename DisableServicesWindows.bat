@@ -17,7 +17,29 @@ rem # Launch acl.txt
 
 REGINI %USERPROFILE%\Downloads\windows11-scripts-main\acl.txt
 
-rem # Launch SetACL.bat
+rem # Launch SetACL.bat to take ownership of reg keys
+
+cd "%~dp0"
+ECHO R | powershell.exe ./SetACL.bat
+cd "%USERPROFILE%\Downloads"
+
+cd "%USERPROFILE%\Downloads\windows11-scripts-main"
+ECHO R | powershell.exe ./SetACL.bat
+cd "%USERPROFILE%\Downloads"
+
+cd "%USERPROFILE%\Downloads\windows11-scripts-main\windows11-scripts-main"
+ECHO R | powershell.exe ./SetACL.bat
+cd "%USERPROFILE%\Downloads"
+
+cd "%USERPROFILE%\Downloads\windows11-scripts\windows11-scripts"
+ECHO R | powershell.exe ./SetACL.bat
+cd "%USERPROFILE%\Downloads"
+
+cd "%USERPROFILE%\Downloads\windows11-scripts"
+ECHO R | powershell.exe ./SetACL.bat
+cd "%USERPROFILE%\Downloads"
+
+
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\AarSvc" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\AppIDSvc" /v "Start" /t REG_DWORD /d "4" /f
