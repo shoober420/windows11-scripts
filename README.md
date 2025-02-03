@@ -157,6 +157,9 @@ Install SetACL
  - Download (https://helgeklein.com/download/)
  - Extract into %USERPROFILE%\Downloads
 
+Download SetTimerResolution
+ - https://github.com/valleyofdoom/TimerResolution
+
 Download Winget
  - InstallWinget.bat
 
