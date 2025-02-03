@@ -1,5 +1,11 @@
 rem # Disable Bloat Internet Services
 
+
+
+rem # Launch acl.txt
+
+REGINI %USERPROFILE%\Downloads\windows11-scripts-main\acl.txt
+
 rem # Launch SetACL.bat to take ownership of reg keys
 
 cd "%~dp0"
