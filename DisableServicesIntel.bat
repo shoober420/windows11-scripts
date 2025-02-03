@@ -14,7 +14,8 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\ESRV_SVC_QUEENCREEK" /t REG_DWOR
 sc config ESRV_SVC_QUEENCREEK start= disabled
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\USER_ESRV_SVC_QUEENCREEK" /t REG_DWORD /d "4" /f
 
-rem # Intel Dynamic Platform and Thermal Framework
+rem # Intel Dynamic Platform and Thermal Framework (DPTF)
+rem # Power Throttling
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\esifsvc" /v "Start" /t REG_DWORD /d "4" /f
 
 PAUSE
