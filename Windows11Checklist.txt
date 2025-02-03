@@ -16,7 +16,7 @@ Download
  - ShareX (screenshot tool)
  - HxD (hex editor)
  - MarkC mouse acceleration fix (Windows 10 Fixes/MouseFix_ItemsSize=100%)
- - DirectX End-User Runtime Web Installer (dxwebupdate.exe)
+ - DirectX End-User Runtime Web Installer (https://www.microsoft.com/en-us/download/details.aspx?id=35) (dxwebupdate.exe)
  - OpenAL software
  - dsoal (http://vaporeon.io/hosted/dsoal-builds/)
  - IMGtoISO (http://www.imgtoiso.com/)
