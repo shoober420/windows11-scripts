@@ -1,5 +1,7 @@
 rem # Timer Tweaks
 
+rem # https://sites.google.com/view/melodystweaks/misconceptions-about-timers-hpet-tsc-pmt
+
 rem # useplatformclock not found by default, setting not present unless enabled prior
 bcdedit /deletevalue useplatformclock
 
