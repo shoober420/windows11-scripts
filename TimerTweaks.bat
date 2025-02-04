@@ -4,7 +4,7 @@ rem # https://sites.google.com/view/melodystweaks/misconceptions-about-timers-hp
 
 rem # Leave HPET enabled in BIOS
 
-rem # Disable HPET
+rem # Disable HPET in Windows
 rem # useplatformclock not found by default, setting not present unless enabled prior
 bcdedit /deletevalue useplatformclock
 
