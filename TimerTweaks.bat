@@ -8,6 +8,7 @@ rem # Disable HPET in Windows
 rem # useplatformclock not found by default, setting not present unless enabled prior
 bcdedit /deletevalue useplatformclock
 
+rem # RTC (real time clock)
 rem # Disable synthetic timers
 bcdedit /set useplatformtick yes
 
