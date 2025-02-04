@@ -11,7 +11,10 @@ bcdedit /deletevalue useplatformclock
 rem # Disable synthetic timers
 bcdedit /set useplatformtick yes
 
+rem # Disable Power Saving Feature
 bcdedit /set disabledynamictick yes
+
+rem # TSC Sync Policy
 bcdedit /set tscsyncpolicy enhanced
 
 PAUSE
