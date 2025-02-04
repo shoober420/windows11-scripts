@@ -2,6 +2,8 @@ rem # Timer Tweaks
 
 rem # https://sites.google.com/view/melodystweaks/misconceptions-about-timers-hpet-tsc-pmt
 
+rem # https://www.xbitlabs.com/hpet-settings/
+
 rem # Leave HPET enabled in BIOS
 
 rem # Disable HPET in Windows
