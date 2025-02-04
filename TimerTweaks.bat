@@ -1,6 +1,6 @@
 rem # Timer Tweaks
 
-rem # useplatformclock should be not found by default, setting not present unless enabled prior
+rem # useplatformclock not found by default, setting not present unless enabled prior
 bcdedit /deletevalue useplatformclock
 
 bcdedit /set useplatformtick yes
