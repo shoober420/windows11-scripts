@@ -632,6 +632,8 @@ TimerTweaks.bat
 
 AMDAdrenalinSettings.txt
 
+DisableHDR.bat / EnableHDR.bat
+
 # Credits
 - https://github.com/TairikuOokami
 - https://github.com/ionuttbara
