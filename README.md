@@ -146,6 +146,8 @@ Update Video Drivers
  - AMD: https://www.amd.com/en/support/download/drivers.html
   + AMD Vulkan Drivers: https://www.amd.com/en/resources/support-articles/release-notes/RN-RAD-WIN-VULKAN.html
 
+ - Intel 7th-10th Gen Processor Video Drivers: https://www.intel.com/content/www/us/en/download/776137/intel-7th-10th-gen-processor-graphics-windows.html
+
 RESTART
 
  - RemoveWindowsApps.bat
