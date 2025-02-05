@@ -82,6 +82,7 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - DNS.ps1
  - PowerPlanUltra.bat
  - PowerPlanSettings.bat
+ - DisableFullscreenOptimizations.bat
  - DisableIntegratedGPU.ps1
  - DisableHDR.bat / EnableHDR.bat
  - RAMTweaks.bat
