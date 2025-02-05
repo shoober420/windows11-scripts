@@ -561,8 +561,6 @@ ShowFileExtensions.bat
 
 ReplaceFooWithFoo.ps1 (useful for debugging)
 
-EnableHighPerfAdapter.bat
-
 DisableOverlays.bat / EnableOverlays.bat (IF CRASHING, FLICKERING, AND PERFORMANCE DECREASES, RUN EnableOverlays.bat)
 
 HardDrive&USBTweaks.bat
