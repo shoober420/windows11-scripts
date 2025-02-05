@@ -1,0 +1,10 @@
+PERFORMANCE
+
+Gaming:
+ - Graphics
+  Radeon Super Resolution: Disabled
+
+  Radeon Anti-Lag: Disabled
+  + Lowers FPS
+
+  Radeon Image Sharpening: Disabled
