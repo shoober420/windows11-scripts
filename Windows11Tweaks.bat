@@ -2680,6 +2680,9 @@ rem # Disable more FSO, removes Color Management
 rem # 0 = Enable FSO / 1 = Disable FSO
 reg add "HKCU\System\GameConfigStore" /v "GameDVR_DXGIHonorFSEWindowsCompatible" /t REG_DWORD /d "1" /f
 
+rem # Honor User adjusted DSE value
+reg add "HKCU\System\GameConfigStore" /v "GameDVR_HonorUserDSEBehaviorMode" /t REG_DWORD /d "1" /f
+
 rem # Disable GameDVR features
 reg add "HKCU\System\GameConfigStore" /v "GameDVR_EFSEFeatureFlags" /t REG_DWORD /d "0" /f
 
