@@ -633,6 +633,8 @@ DisableHDR.bat / EnableHDR.bat
 
 DisableIntegratedGPU.ps1
 
+DisableFullscreenOptimizations.bat
+
 # Credits
 - https://github.com/TairikuOokami
 - https://github.com/ionuttbara
