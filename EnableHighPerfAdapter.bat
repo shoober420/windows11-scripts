@@ -6,7 +6,7 @@ rem # MUST DISABLE ONBOARD INTEGRATED GPU IN BIOS AND DEVICE MANAGER TO RUN PROP
 
 rem # You will need to manually set values below if onboard integrated GPU is enabled
 
-rem # Double check to make sure the correct dedicated GPU hardware ID was selected or performance will lower
+rem # Double check to make sure the correct dedicated GPU hardware ID was selected or performance will suffer
 
 rem # !!! WARNING !!!
 
@@ -24,7 +24,7 @@ rem # garlin: https://www.elevenforum.com/members/garlin.5387/
 rem # https://www.elevenforum.com/t/find-gpu-ven-dev-subsys-values-for-highperfadapter-option-using-wmic-or-other-method.30127/post-521164
 
 for /f "tokens=1-6 delims=_&" %%a in ('wmic path win32_videocontroller get PNPDeviceID ^| findstr PCI') do (
-    reg add "HKCU\Software\Microsoft\DirectX\UserGpuPreferences" /v "DirectXUserGlobalSettings" /t REG_SZ /d "HighPerfAdapter=%%b&%%d&%%f"
+    reg add "HKCU\Software\Microsoft\DirectX\UserGpuPreferences" /v "DirectXUserGlobalSettings" /t REG_SZ /d "HighPerfAdapter=%%b&%%d&%%f;AutoHDREnable=0;"
 )
 
 PAUSE
