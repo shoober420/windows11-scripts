@@ -32,6 +32,7 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - DNS.ps1
  - PowerPlanUltra.bat
  - PowerPlanSettings.bat
+ - DisableHDR.bat / EnableHDR.bat
  - ThreadQuantum.bat
  - RemoveRemoteDesktopConnection.bat
  - MTU.bat
@@ -52,6 +53,7 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - DNS.ps1
  - PowerPlanUltra.bat
  - PowerPlanSettings.bat
+ - DisableHDR.bat / EnableHDR.bat
  - DisableLanmanWorkstation.bat
  - DisableLanmanServer.bat
  - DisableIPHelper.bat
@@ -83,6 +85,7 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - DNS.ps1
  - PowerPlanUltra.bat
  - PowerPlanSettings.bat
+ - DisableHDR.bat / EnableHDR.bat
  - RAMTweaks.bat
  - ThreadQuantum.bat
  - UseLargePages.bat
