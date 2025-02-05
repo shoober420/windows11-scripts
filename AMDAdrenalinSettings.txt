@@ -22,6 +22,7 @@ Settings:
   Scaling Mode: Preserve aspect ratio
   Integer Scaling: Disabled
   Color Depth: 8 bpc (12 for HDR)
+  Pixel Format: RGB 4:4:4 Pixel Format PC Standard (Full RGB)
   Display Color Enhancement: Vivid Gaming
 
  - Preferences:
