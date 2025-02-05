@@ -24,7 +24,6 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
 
 # Minimal Install
  - EnablePowerShell.bat
- - EnableDirectXUserGlobalSettings.bat
  - InternetSettings.bat
  - MouseAccelFix.bat
  - NICProperties.bat
@@ -32,14 +31,12 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - DNS.ps1
  - PowerPlanUltra.bat
  - PowerPlanSettings.bat
- - DisableHDR.bat / EnableHDR.bat
  - ThreadQuantum.bat
  - RemoveRemoteDesktopConnection.bat
  - MTU.bat
 
 # Standard Install
  - EnablePowerShell.bat
- - EnableDirectXUserGlobalSettings.bat
  - CPUTweaks.bat
  - GPUTweaks.bat / AMDGPUTweaks.bat / NVGPUTweaks.bat
  - HardDrive&USBTweaks.bat
@@ -53,7 +50,6 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - DNS.ps1
  - PowerPlanUltra.bat
  - PowerPlanSettings.bat
- - DisableHDR.bat / EnableHDR.bat
  - DisableLanmanWorkstation.bat
  - DisableLanmanServer.bat
  - DisableIPHelper.bat
@@ -69,7 +65,6 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
 
 # Advanced Install
  - EnablePowerShell.bat
- - EnableDirectXUserGlobalSettings.bat
  - CPUTweaks.bat
  - GPUTweaks.bat / AMDGPUTweaks.bat / NVGPUTweaks.bat
  - KernelTweaks.bat
@@ -85,6 +80,7 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - DNS.ps1
  - PowerPlanUltra.bat
  - PowerPlanSettings.bat
+ - DisableIntegratedGPU.ps1
  - DisableHDR.bat / EnableHDR.bat
  - RAMTweaks.bat
  - ThreadQuantum.bat
