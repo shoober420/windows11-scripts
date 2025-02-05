@@ -639,6 +639,8 @@ AMDAdrenalinSettings.txt
 
 DisableHDR.bat / EnableHDR.bat
 
+DisableIntegratedGPU.ps1
+
 # Credits
 - https://github.com/TairikuOokami
 - https://github.com/ionuttbara
