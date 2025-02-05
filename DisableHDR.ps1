@@ -3,6 +3,10 @@ rem # Decreases FPS when enabled
 
 PAUSE
 
+foreach ($dev in (Get-PnpDevice -Class Display | Where-Object {$_.Name -like "*Intel*"})) {
+    &"pnputil" /remove-device $dev.InstanceId;
+}
+
 $RegistryPath = "HKCU:\Software\Microsoft\DirectX\UserGpuPreferences"
 $Name = "DirectXUserGlobalSettings"
 $Value = "AutoHDREnable=0"
