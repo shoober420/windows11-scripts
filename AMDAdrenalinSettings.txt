@@ -8,3 +8,27 @@ Gaming:
   + Lowers FPS
 
   Radeon Image Sharpening: Disabled
+
+Settings:
+ - System
+  Preferred Software Version: Recommended + Optional
+  Check For Updates: Manual
+  Issue Detection: Disabled
+
+ - Display:
+  AMD FreeSync: Disabled
+  Virtual Super Resolution: Disabled
+  GPU Scaling: Disabled
+  Scaling Mode: Preserve aspect ratio
+  Integer Scaling: Disabled
+  Color Depth: 8 bpc (12 for HDR)
+  Display Color Enhancement: Vivid Gaming
+
+ - Preferences:
+  In-Game Overlay: Disabled
+  Web Browser: Disabled
+  System Tray Menu: Disabled
+  Advertisements: Disabled
+  Toast Notifications: Disabled
+  Tutorials: Disabled
+  Animation & Effects: Disabled
