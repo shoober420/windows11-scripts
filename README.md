@@ -630,6 +630,8 @@ DisableServicesAMD.bat
 
 TimerTweaks.bat
 
+AMDAdrenalinSettings.txt
+
 # Credits
 - https://github.com/TairikuOokami
 - https://github.com/ionuttbara
