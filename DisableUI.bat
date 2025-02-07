@@ -1,4 +1,15 @@
-rem Ultra Minimal Disable UI
+rem # Disable UI
+
+rem # !!! WARNING !!!
+
+rem # Ultra Minimal, disables services required for Settings app and other various UI elements
+
+rem # !!! WARNING !!!
+
+rem # Run EnableUI.bat to restore UI apps
+
+PAUSE
+
 net stop AppXSvc
 net stop camsvc
 net stop UdkUserSvc
