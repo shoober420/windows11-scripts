@@ -1,12 +1,12 @@
 # Disable Integrated GPU
 
 # foreach ($dev in (Get-PnpDevice -Class Display | Where-Object {$_.Name -like "*Intel*"})) {
-rem #    &"pnputil" /disable-device $dev.InstanceId;
-rem # }
+#    &"pnputil" /disable-device $dev.InstanceId;
+# }
 
 # foreach ($dev in (Get-CimInstance win32_VideoController | Where-Object {$_.AdapterDACType -like "Internal"})) {
-rem #    &"pnputil" /disable-device $dev.PNPDeviceID;
-rem # }
+#    &"pnputil" /disable-device $dev.PNPDeviceID;
+# }
 
 # https://www.elevenforum.com/members/garlin.5387/
 # https://www.elevenforum.com/t/pnputil-uninstall-integrated-gpu.33072/#post-559670
