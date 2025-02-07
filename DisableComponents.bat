@@ -2,10 +2,9 @@ rem # Disable Components
 
 rem # !!! WARNING !!!
 rem # Disables Windows Store and UWP apps
+rem # Disables Settings app
 rem # Disables Windows Defender Anti-Malware service
-rem # !!! CAUTION !!!
-
-rem # recommended to run in SAFE MODE
+rem # !!! WARNING !!!
 
 PAUSE
 
@@ -37,6 +36,7 @@ rem ren "C:\Windows\SystemApps\ShellExperienceHost_cw5n1h2txyewy\ShellExperience
 
 rem # Disable Application Frame Host (to restore run "sfc /scannow")
 rem # Used for Windows Store UWP apps
+rem # Used for Settings app
 takeown /s %computername% /u %username% /f "%WinDir%\System32\ApplicationFrameHost.exe"
 icacls "%WinDir%\System32\ApplicationFrameHost.exe" /grant:r %username%:F
 taskkill /im ApplicationFrameHost.exe /f
