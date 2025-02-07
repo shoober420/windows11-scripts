@@ -1,5 +1,5 @@
-rem # Disable Windows Firewall (use router firewall instead)
-rem # Windows Firewall is bloat
+rem # Disable Windows Firewall
+rem # Windows Firewall is bloat, use router firewall
 
 net stop mpssvc
 net stop BFE
