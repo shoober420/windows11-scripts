@@ -1,7 +1,6 @@
 rem # Disable Microsoft SAM (Security Accounts Manager)
 rem # Causes black screen and unresponsive desktop if LanmanServer (Server service) is enabled
 
-rem # Requires SAFE MODE
 rem # Requires SetACL.bat script to be run first
 
 PAUSE
