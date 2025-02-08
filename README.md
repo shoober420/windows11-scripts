@@ -636,6 +636,8 @@ DisableIntegratedGPU.ps1
 
 DisableFullscreenOptimizations.bat
 
+DisableNETBIOS.ps1
+
 # Credits
 - https://github.com/TairikuOokami
 - https://github.com/ionuttbara
