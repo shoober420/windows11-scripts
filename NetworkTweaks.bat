@@ -20,10 +20,12 @@ rem # Go to Control Panel > Network and Sharing Center for network name
 rem # Receive Side Scaling requires Checksum Offloading to be enabled to work, disable all other offloading options for best latency
 
 rem # Enables Cloudflare DNS
+
 netsh interface ip set dns Wi-Fi static 1.1.1.1
 netsh interface ip set dns Ethernet static 1.1.1.1
 
 rem # Enable DNS over HTTPS (DoH)
+
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters" /v "EnableAutoDoh" /t REG_DWORD /d "2" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters" /v "EnableDoh" /t REG_DWORD /d "2" /f
 rem netsh dns set global doh=force
@@ -34,20 +36,25 @@ rem # open Command Prompt
 rem # ping www.google.com -f -l 1500 (keep lowering value until packets aren't fragmented)
 
 rem netsh interface ipv4 set subinterface "Wi-Fi" mtu=1472 store=persistent
+
 rem netsh interface ipv4 set subinterface "Ethernet" mtu=1472 store=persistent
 
 rem # Set value according to core amount
 rem # 4 cores = 4 Queues / 8+ = 8 Queues
 rem # 8+ Queues may cause loss of connection
 rem # 8+ Queues may cause laggy internet
+
 rem # Test by running https://www.waveform.com/tools/bufferbloat
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Ndis\Parameters" /v "MaxNumRssCpus" /t REG_DWORD /d "4" /f	
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "MaxNumRssCpus" /t REG_DWORD /d "4" /f
 
 rem # Intel P-Cores are 2 threads per core with Hyper-Threading enabled
+
 rem # With Intel Hyper-Threading disabled, P-Cores have 1 thread per core
+
 rem # Intel E-Cores always have 1 thread per core
+
 rem # Intel Hyper-Threading enabled will increase latency
 
 rem # https://www.elevenforum.com/members/garlin.5387/
@@ -69,7 +76,9 @@ rem # Set RssBaseCpu to last Core on CPU
 rem # Enable DNS over HTTPS
 rem # "wmic nic" to find NIC ID
 rem # HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\InterfaceSpecificParameters\{NIC ID}\DohInterfaceSettings\Doh\1.1.1.1
+
 rem reg add "HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\InterfaceSpecificParameters\{86ce1c79-20b9-4314-9c3f-356bccdd8a62}\DohInterfaceSettings\Doh\1.1.1.1" /v "DohFlags" /t REG_QWORD /d "0x00000011" /f
+
 rem reg add "HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\InterfaceSpecificParameters\{86ce1c79-20b9-4314-9c3f-356bccdd8a62}\DohInterfaceSettings\Doh\1.1.1.1" /v "DohTemplate" /t REG_SZ /d "https://cloudfare-dns.com/dns-query" /f
 
 
@@ -86,7 +95,9 @@ if %Cores% gtr 4 (
 rem # NIC Tweaks
 
 rem # Last key changes based on NIC card registry ID
+
 rem # Find "Class Guid" under Device Manager > Network adapters > Properties > Details tab
+
 rem # Go to "HKLM\SYSTEM\CurrentControlSet\Control\Network\"Class Guid"\<NIC ID>\Connection" to get NIC ID
 
 rem reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\{1B2AF3AC-865B-4B81-BFFA-790A51C634A6}" /v "TcpAckFrequency" /t REG_DWORD /d "1" /f
@@ -113,17 +124,20 @@ rem # NIC parameters are at HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\
 
 
 rem # Get the Sub ID of the Network Adapter
+
 for /f %%n in ('Reg query "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4D36E972-E325-11CE-BFC1-08002bE10318}" /v "*SpeedDuplex" /s ^| findstr  "HKEY"') do (
 
 rem # Set value according to core amount
 rem # 4 cores = 4 Queues / 8+ = 8 Queues
 rem # 8+ Queues may cause loss of connection
 rem # 8+ Queues may cause laggy internet
+
 rem # Test by running https://www.waveform.com/tools/bufferbloat
 
 reg add "%%n" /v "*NumRssQueues" /t REG_SZ /d "4" /f
 
 rem # Speed & Duplex must be set to "Auto Negotiation" or internet borks unless you know correct value
+
 reg add "%%n" /v "*SpeedDuplex" /t REG_SZ /d "0" /f
 
 rem # MIMO Power Save Mode - 3 Disable
