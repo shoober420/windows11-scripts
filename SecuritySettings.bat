@@ -5,10 +5,11 @@ rem # Turns off all security settings which cause stuttering in games
 PAUSE
 
 powershell.exe Disable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol
+
 ECHO Y | powershell.exe Set-SmbServerConfiguration -EnableSMB1Protocol $false
+
 ECHO Y | powershell.exe Set-SmbServerConfiguration -EnableSMB2Protocol $false
-powershell.exe $DisableLMHosts_Class=Get-WmiObject -list Win32_NetworkAdapterConfiguration
-powershell.exe $DisableLMHosts_Class.EnableWINS($false,$false)
+
 powershell.exe Disable-ScheduledTask -TaskName "Microsoft Compatibility Appraiser" -TaskPath "\Microsoft\Windows\Application Experience"
 
 rem # https://learn.microsoft.com/en-us/powershell/module/processmitigations/set-processmitigation?view=windowsserver2022-ps
