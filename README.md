@@ -54,6 +54,7 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - PowerPlanUltra.bat
  - PowerPlanSettings.bat
  - DisableFullscreenOptimizations.bat
+ - DisableScheduledTasks.ps1
  - DisableLanmanWorkstation.bat
  - DisableLanmanServer.bat
  - DisableIPHelper.bat
@@ -86,6 +87,7 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - PowerPlanUltra.bat
  - PowerPlanSettings.bat
  - DisableFullscreenOptimizations.bat
+ - DisableScheduledTasks.ps1
  - DisableIntegratedGPU.ps1
  - DisableHDR.bat / EnableHDR.bat
  - RAMTweaks.bat
@@ -640,6 +642,8 @@ DisableIntegratedGPU.ps1
 DisableFullscreenOptimizations.bat
 
 DisableNETBIOS.ps1
+
+DisableScheduledTasks.ps1
 
 # Credits
 - https://github.com/TairikuOokami
