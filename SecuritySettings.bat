@@ -10,7 +10,7 @@ ECHO Y | powershell.exe Set-SmbServerConfiguration -EnableSMB1Protocol $false
 
 ECHO Y | powershell.exe Set-SmbServerConfiguration -EnableSMB2Protocol $false
 
-powershell.exe Disable-ScheduledTask -TaskName "Microsoft Compatibility Appraiser" -TaskPath "\Microsoft\Windows\Application Experience"
+powershell.exe Disable-ScheduledTask -TaskName 'Microsoft Compatibility Appraiser' -TaskPath '\Microsoft\Windows\Application Experience'
 
 rem # https://learn.microsoft.com/en-us/powershell/module/processmitigations/set-processmitigation?view=windowsserver2022-ps
 rem # https://learn.microsoft.com/en-us/powershell/module/defender/set-mppreference?view=windowsserver2022-ps
