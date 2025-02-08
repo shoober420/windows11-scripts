@@ -49,6 +49,7 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - MouseAccelFix.bat
  - NICProperties.bat
  - NetworkTweaks.bat
+ - DisableNETBIOS.ps1
  - DNS.ps1
  - PowerPlanUltra.bat
  - PowerPlanSettings.bat
@@ -59,7 +60,6 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - DisableNetBIOSHelper.bat
  - DisableUPnPDeviceHost.bat
  - DisableSSDPDiscovery.bat
- - DisableNETBIOS.ps1
  - RAMTweaks.bat
  - ThreadQuantum.bat
  - UseLargePages.bat
