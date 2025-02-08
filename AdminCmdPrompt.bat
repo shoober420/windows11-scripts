@@ -1,9 +1,10 @@
-rem # Launch Powershell Admin Command Prompt
-rem # Will NOT work under SAFE MODE
-rem # requires EnableRunasAdmin.bat (Secondary Logon) (will NOT work under SAFE MODE)
+rem # Launch Admin Command Prompt
 
-REM runas /user:<adminaccount> cmd
+rem runas /user:%USER% cmd
 
-powershell start-process powershell -verb runas
+rem powershell start-process powershell -verb runas
+
+cd C:/Windows/System32
+cmd.exe
 
 PAUSE
