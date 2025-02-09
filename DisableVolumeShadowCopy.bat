@@ -6,6 +6,8 @@ rem # Glitches system when disabled
 
 rem # !!! WARNING !!!
 
+rem # TESTING ONLY
+
 PAUSE
 
 rem # Generic volume shadow copy
