@@ -95,6 +95,8 @@ Intel SpeedStep required for TurboBoost speeds to be enabled in some BIOS (Dell)
 
 You must disable the main service to disable the secondary foo_9e2z7 from getting reenabled
 
+Dont use & symbols in batch script names, breaks conventional launching
+
 SAFE MODE: Press and hold F8, then power on system while holding down F8
 
 Windows 98 Icons: Original (https://win98icons.alexmeub.com) / HQ (https://github.com/nestoris/Win98SE)
