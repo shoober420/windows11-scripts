@@ -8,6 +8,8 @@ rem # Breaks Windows Update and DISM
 rem # Windows Update and DISM require TLS1.2
 rem # !!! WARNING !!!
 
+rem # Launch EnableLegacyTLS.bat when running Windows Update
+
 PAUSE
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0\Client" /v "Enabled" /t REG_DWORD /d "0" /f	
