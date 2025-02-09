@@ -92,7 +92,4 @@ pnputil /disable-device "ACPI\INT33A1\1"
 rem # Microsoft Print to PDF
 pnputil /disable-device "SWD\PRINTENUM\{8C9B425C-5DD5-4DC1-AFDE-4EDFD21FFDAE}"
 
-rem # Generic volume shadow copy
-pnputil /disable-device "STORAGE\VolumeSnapshot\HarddiskVolumeSnapshot1"
-
 PAUSE
