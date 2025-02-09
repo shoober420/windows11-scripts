@@ -25,6 +25,9 @@ Settings:
   Pixel Format: RGB 4:4:4 Pixel Format PC Standard (Full RGB)
   Display Color Enhancement: Vivid Gaming
 
+ - Hotkeys
+  Use Hotkeys: Disabled
+
  - Preferences:
   In-Game Overlay: Disabled
   Web Browser: Disabled
