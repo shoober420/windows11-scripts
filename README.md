@@ -647,6 +647,8 @@ DisableNetBIOS.ps1
 
 DisableScheduledTasks.ps1
 
+DisableMIDI2.0.bat / EnableMIDI2.0.bat (Breaks Steam when disabled)
+
 # Credits
 - https://github.com/TairikuOokami
 - https://github.com/ionuttbara
