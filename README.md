@@ -24,6 +24,7 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
 
 # Minimal Install
  - EnablePowerShell.bat
+ - VCRedist.bat
  - InternetSettings.bat
  - MouseAccelFix.bat
  - NICProperties.bat
@@ -39,6 +40,7 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
 
 # Standard Install
  - EnablePowerShell.bat
+ - VCRedist.bat
  - CPUTweaks.bat
  - GPUTweaks.bat / AMDGPUTweaks.bat / NVGPUTweaks.bat
  - HardDrive&USBTweaks.bat
@@ -70,6 +72,7 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
 
 # Advanced Install
  - EnablePowerShell.bat
+ - VCRedist.bat
  - CPUTweaks.bat
  - GPUTweaks.bat / AMDGPUTweaks.bat / NVGPUTweaks.bat
  - KernelTweaks.bat
