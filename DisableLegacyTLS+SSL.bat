@@ -8,7 +8,7 @@ rem # Breaks Windows Update and DISM
 rem # Windows Update and DISM require TLS1.2
 rem # !!! WARNING !!!
 
-rem # Launch EnableLegacyTLS.bat when running Windows Update
+rem # Launch EnableTLS1.2.bat when running Windows Update
 
 PAUSE
 
