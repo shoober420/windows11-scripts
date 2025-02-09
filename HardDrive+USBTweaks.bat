@@ -72,7 +72,8 @@ powercfg -devicedisablewake "HID Keyboard Device"
 powercfg -devicedisablewake "HID Keyboard Device (001)"
 
 rem # Disable disk power savings
-for %%i in (EnableHIPM EnableDIPM EnableHDDParking) do for /f %%a in ('REG QUERY "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services" /s /f "%%i" ^| findstr "HKEY"') do REG ADD "%%a" /v "%%i" /t REG_DWORD /d 0 /f >nul 2>&1
+for %%i in (EnableHIPM EnableDIPM EnableHDDParking) do for /f %%a in ('REG QUERY "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services" /s /f "%%i" ^| findstr "HKEY"') do REG ADD "%%a" /v "%%i" /t REG_DWORD /d 0 /f
+)
 
 for /f %%i in ('call "resources\smartctl.exe" --scan') do (
     call "resources\smartctl.exe" -s apm,off %%i
