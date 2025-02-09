@@ -1,5 +1,7 @@
 rem # Disable Device Manager Services
 
+rem # "pnputil /enum-devices" shows all services
+
 rem # WAN Miniport (L2TP)
 pnputil /disable-device "SWD\MSRRAS\MS_L2TPMINIPORT"
 
@@ -87,7 +89,6 @@ pnputil /disable-device "SWD\DRIVERENUM\OEM_WMI_component&4&1402e39b&0"
 rem # Intel(R) Power Engine Plug-in
 pnputil /disable-device "ACPI\INT33A1\1"
 
-rem # AMD Controller Emulation
-pnputil /disable-device "ROOT\AMDXE\0000"
+rem # 
 
 PAUSE
