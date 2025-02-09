@@ -557,9 +557,9 @@ DownloadFile.ps1
 
 DownloadZipFile.ps1
 
-DisableLegacyTLS+SSL.bat (TLS1.2 required for Windows Update and DISM)
+DisableSSL+LegacyTLS.bat (TLS1.2 required for Windows Update and DISM)
 
-EnableLegacyTLS.bat (TLS1.2 required for Windows Update and DISM)
+DisableTLS1.2.bat / EnableTLS1.2.bat (TLS1.2 required for Windows Update and DISM)
 
 SecuritySettings.bat
 
