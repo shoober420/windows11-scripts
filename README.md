@@ -74,7 +74,7 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - GPUTweaks.bat / AMDGPUTweaks.bat / NVGPUTweaks.bat
  - KernelTweaks.bat
  - TimerTweaks.bat
- - HardDrive&USBTweaks.bat
+ - HardDrive+USBTweaks.bat
  - HighPriority.bat
  - InputTweaks.bat
  - InternetSettings.bat
@@ -238,7 +238,7 @@ RESTART
  - CPUTweaks.bat
  - TimerTweaks.bat
  - InputTweaks.bat (script settings need tweaked to match users computer hardware)
- - HardDrive&USBTweaks.bat
+ - HardDrive+USBTweaks.bat
  - UseLargePages.bat (add programs to enable Large Pages for them)
  - HighPriority.bat (add programs to enable High Priority for them)
  - EnableDirectXUserGlobalSettings.bat
