@@ -89,6 +89,25 @@ pnputil /disable-device "SWD\DRIVERENUM\OEM_WMI_component&4&1402e39b&0"
 rem # Intel(R) Power Engine Plug-in
 pnputil /disable-device "ACPI\INT33A1\1"
 
-rem # 
+rem # Microsoft Print to PDF
+pnputil /disable-device "SWD\PRINTENUM\{8C9B425C-5DD5-4DC1-AFDE-4EDFD21FFDAE}"
+
+rem # MIDI 2.0 Virtual Devices
+pnputil /disable-device "SWD\MIDISRV\MIDIU_APP_TRANSPORT"
+
+rem # Diagnostics Ping (Internal)
+pnputil /disable-device "SWD\MIDISRV\MIDIU_DIAG_PING"
+
+rem # Generic volume shadow copy
+pnputil /disable-device "STORAGE\VolumeSnapshot\HarddiskVolumeSnapshot1"
+
+rem # Diagnostics Loopback B
+pnputil /disable-device "SWD\MIDISRV\MIDIU_DIAG_LOOPBACK_B"
+
+rem # Diagnostics Loopback A
+pnputil /disable-device "SWD\MIDISRV\MIDIU_DIAG_LOOPBACK_A"
+
+rem # MIDI 2.0 Diagnostics Devices
+pnputil /disable-device "SWD\MIDISRV\MIDIU_DIAG_TRANSPORT"
 
 PAUSE
