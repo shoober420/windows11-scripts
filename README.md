@@ -375,7 +375,7 @@ EnableEssentialServices.bat
 
 DownloadFirefox.txt
 
-DeleteCache&Logs.bat
+DeleteCache+Logs.bat
 
 WindowsFix.bat (standard fixes to troubleshoot Windows systems with issues and bugs)
 
@@ -401,7 +401,7 @@ NVGPUTweaks.bat
 
 ThreadQuantum.bat
 
-Date&TimeShow.bat / Date&TimeHide.bat (show or hide taskbar date and time on bottom right)
+Date+TimeShow.bat / Date+TimeHide.bat (show or hide taskbar date and time on bottom right)
 
 InstallChocolatey.bat
 
@@ -561,7 +561,7 @@ DisableTLS1.2.bat / EnableTLS1.2.bat (TLS1.2 required for Windows Update and DIS
 
 SecuritySettings.bat
 
-DisableTPM&SecureBoot.bat (MUST BE LAUNCHED BEFORE WINDOWS 11 INSTALLATION TO DISABLE TPM AND SECUREBOOT) (TPM MUST BE ON IN BIOS FOR NEW WINDOWS UPDATE CANARY BUILDS TO INSTALL) (TPM AND SECUREBOOT MUST BE DISABLED TO DO A WINRE "RESET THIS PC" WITHOUT A RECOVERY KEY BEING NEEDED) (DISABLE TPM AND SECUREBOOT IN BIOS BEFORE MODIFIED RUFUS FRESH WINDOWS INSTALL) (TPM AND SECUREBOOT ARE USED WITH WINDOWS PIN LOGIN, DONT TPM.MSC > CLEAR TPM, BORKS LOGIN)
+DisableTPM+SecureBoot.bat (MUST BE LAUNCHED BEFORE WINDOWS 11 INSTALLATION TO DISABLE TPM AND SECUREBOOT) (TPM MUST BE ON IN BIOS FOR NEW WINDOWS UPDATE CANARY BUILDS TO INSTALL) (TPM AND SECUREBOOT MUST BE DISABLED TO DO A WINRE "RESET THIS PC" WITHOUT A RECOVERY KEY BEING NEEDED) (DISABLE TPM AND SECUREBOOT IN BIOS BEFORE MODIFIED RUFUS FRESH WINDOWS INSTALL) (TPM AND SECUREBOOT ARE USED WITH WINDOWS PIN LOGIN, DONT TPM.MSC > CLEAR TPM, BORKS LOGIN)
 
 ShowFileExtensions.bat
 
@@ -569,7 +569,7 @@ ReplaceFooWithFoo.ps1 (useful for debugging)
 
 DisableOverlays.bat / EnableOverlays.bat (IF CRASHING, FLICKERING, AND PERFORMANCE DECREASES, RUN EnableOverlays.bat)
 
-HardDrive&USBTweaks.bat
+HardDrive+USBTweaks.bat
 
 DisableAMDGPU_DalDramClockChangeLatencyNs.bat / EnableAMDGPU_DalDramClockChangeLatencyNs.bat (disable if screen flickering occurs)
 
