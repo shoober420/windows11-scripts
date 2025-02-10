@@ -10,7 +10,7 @@ rem # TESTING ONLY
 
 PAUSE
 
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\CLFS" /v "Start" /t REG_DWORD /d "4" /f
+rem reg add "HKLM\SYSTEM\CurrentControlSet\Services\CLFS" /v "Start" /t REG_DWORD /d "4" /f
 
 PAUSE
 
