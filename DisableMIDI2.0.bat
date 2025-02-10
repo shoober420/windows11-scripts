@@ -27,5 +27,6 @@ pnputil /disable-device "SWD\MIDISRV\MIDIU_DIAG_TRANSPORT"
 
 net stop midisrv
 
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\midisrv" /v "Start" /t REG_DWORD /d "4" /f
 
 PAUSE
