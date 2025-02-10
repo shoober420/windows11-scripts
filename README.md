@@ -651,9 +651,11 @@ DisableNetBIOS.ps1
 
 DisableScheduledTasks.ps1
 
-DisableMIDI2.0.bat / EnableMIDI2.0.bat (Breaks Steam when disabled)
+DisableMIDI2.0.bat / EnableMIDI2.0.bat
 
 DisableVolumeShadowCopy.bat / EnableVolumeShadowCopy.bat (Glitches system when disabled)
+
+DisableCommonLogFileSystem.bat / EnableCommonLogFileSystem.bat (breaks powershell and dism when disabled)
 
 # Credits
 - https://github.com/TairikuOokami
