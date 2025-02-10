@@ -1,14 +1,8 @@
 rem # Enable MIDI 2.0 services
 
-rem # !!! WARNING !!!
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\midisrv" /v "Start" /t REG_DWORD /d "3" /f
 
-rem # Breaks Steam when disabled
-
-rem # !!! WARNING !!!
-
-rem # TESTING ONLY
-
-PAUSE
+net start midisrv
 
 rem # MIDI 2.0 Virtual Devices
 pnputil /enable-device "SWD\MIDISRV\MIDIU_APP_TRANSPORT"
