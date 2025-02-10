@@ -12,6 +12,6 @@ PAUSE
 
 rem reg add "HKLM\SYSTEM\CurrentControlSet\Services\intelppm" /v "Start" /t REG_DWORD /d "2" /f
 
-sc config intelppm start= disabled
+rem sc config intelppm start= disabled
 
 PAUSE
