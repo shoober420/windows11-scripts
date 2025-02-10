@@ -1,15 +1,5 @@
 rem # Disable MIDI 2.0 services
 
-rem # !!! WARNING !!!
-
-rem # Breaks Steam when disabled
-
-rem # !!! WARNING !!!
-
-rem # TESTING ONLY
-
-PAUSE
-
 rem # MIDI 2.0 Virtual Devices
 pnputil /disable-device "SWD\MIDISRV\MIDIU_APP_TRANSPORT"
 
