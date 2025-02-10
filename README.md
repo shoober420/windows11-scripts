@@ -657,6 +657,8 @@ DisableVolumeShadowCopy.bat / EnableVolumeShadowCopy.bat (Glitches system when d
 
 DisableCommonLogFileSystem.bat / EnableCommonLogFileSystem.bat (breaks powershell and dism when disabled)
 
+AMDAdrenalinSettingsPERF.bat / AMDAdrenalinSettingsHQ.bat
+
 # Credits
 - https://github.com/TairikuOokami
 - https://github.com/ionuttbara
