@@ -35,6 +35,7 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - PowerPlanSettings.bat
  - DisableFullscreenOptimizations.bat
  - AMDAdrenalinSettingsPERF.bat / AMDAdrenalinSettingsHQ.bat
+ - NVIDIAPerformanceProfile.nip / NVIDIAHighQualityProfileOGL.nip / NVIDIAHighQualityProfileD3D.nip
  - ThreadQuantum.bat
  - RemoveRemoteDesktopConnection.bat
  - MTU.bat
@@ -58,6 +59,7 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - PowerPlanSettings.bat
  - DisableFullscreenOptimizations.bat
  - AMDAdrenalinSettingsPERF.bat / AMDAdrenalinSettingsHQ.bat
+ - NVIDIAPerformanceProfile.nip / NVIDIAHighQualityProfileOGL.nip / NVIDIAHighQualityProfileD3D.nip
  - DisableScheduledTasks.ps1
  - DisableLanmanWorkstation.bat
  - DisableLanmanServer.bat
@@ -93,6 +95,7 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - PowerPlanSettings.bat
  - DisableFullscreenOptimizations.bat
  - AMDAdrenalinSettingsPERF.bat / AMDAdrenalinSettingsHQ.bat
+ - NVIDIAPerformanceProfile.nip / NVIDIAHighQualityProfileOGL.nip / NVIDIAHighQualityProfileD3D.nip
  - DisableScheduledTasks.ps1
  - DisableIntegratedGPU.ps1
  - DisableBluetooth.bat / EnableBluetooth.bat
@@ -259,7 +262,7 @@ RESTART
 
 RESTART
 
-- nvidiaProfileInspectorForkAIO: load PerformanceProfile.nip or HighQualityProfileOGL.nip / HighQualityProfileD3D.nip (https://github.com/neatchee/nvidiaProfileInspectorForkAIO)
+- nvidiaProfileInspectorForkAIO: load NVIDIAPerformanceProfile.nip or NVIDIAHighQualityProfileOGL.nip / NVIDIAHighQualityProfileD3D.nip (https://github.com/neatchee/nvidiaProfileInspectorForkAIO)
 
 RESTART
 
