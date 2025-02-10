@@ -11,6 +11,7 @@ rem # TESTING ONLY
 PAUSE
 
 rem # Generic volume shadow copy
-pnputil /disable-device "STORAGE\VolumeSnapshot\HarddiskVolumeSnapshot1"
+
+rem pnputil /disable-device "STORAGE\VolumeSnapshot\HarddiskVolumeSnapshot1"
 
 PAUSE
