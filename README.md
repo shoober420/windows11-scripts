@@ -34,6 +34,7 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - PowerPlanUltra.bat
  - PowerPlanSettings.bat
  - DisableFullscreenOptimizations.bat
+ - AMDAdrenalinSettingsPERF.bat / AMDAdrenalinSettingsHQ.bat
  - ThreadQuantum.bat
  - RemoveRemoteDesktopConnection.bat
  - MTU.bat
@@ -56,6 +57,7 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - PowerPlanUltra.bat
  - PowerPlanSettings.bat
  - DisableFullscreenOptimizations.bat
+ - AMDAdrenalinSettingsPERF.bat / AMDAdrenalinSettingsHQ.bat
  - DisableScheduledTasks.ps1
  - DisableLanmanWorkstation.bat
  - DisableLanmanServer.bat
@@ -90,6 +92,7 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - PowerPlanUltra.bat
  - PowerPlanSettings.bat
  - DisableFullscreenOptimizations.bat
+ - AMDAdrenalinSettingsPERF.bat / AMDAdrenalinSettingsHQ.bat
  - DisableScheduledTasks.ps1
  - DisableIntegratedGPU.ps1
  - DisableBluetooth.bat / EnableBluetooth.bat
