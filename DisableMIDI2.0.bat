@@ -25,4 +25,7 @@ pnputil /disable-device "SWD\MIDISRV\MIDIU_DIAG_LOOPBACK_A"
 rem # MIDI 2.0 Diagnostics Devices
 pnputil /disable-device "SWD\MIDISRV\MIDIU_DIAG_TRANSPORT"
 
+net stop midisrv
+
+
 PAUSE
