@@ -10,8 +10,8 @@ rem # FOR TESTING PURPOSES ONLY
 
 PAUSE
 
-net stop StateRepository
+rem net stop StateRepository
 
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\StateRepository" /v "Start" /t REG_DWORD /d "4" /f
+rem reg add "HKLM\SYSTEM\CurrentControlSet\Services\StateRepository" /v "Start" /t REG_DWORD /d "4" /f
 
 PAUSE
