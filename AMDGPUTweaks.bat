@@ -132,6 +132,32 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_EnableReBarFor
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_RebarControlMode" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_RebarControlSupport" /t REG_DWORD /d "1" /f
 
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "DynamicContrast_NA" /t REG_SZ /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "hotkeys_ui_component_na" /t REG_SZ /d "false" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "imagesharpening_runtime_component_na" /t REG_SZ /d "false" /f
+
+rem # Radeon Chill Power Saving
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_ChillEnabled" /t REG_DWORD /d "0" /f
+
+rem # Radeon Anti-Lag
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_DeLagEnabled" /t REG_DWORD /d "0" /f
+
+rem # Image Sharpening
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_USUEnable" /t REG_DWORD /d "0" /f
+
+rem # Frame Limiter
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_FRTEnabled" /t REG_DWORD /d "0" /f
+
+rem # Radeon Boost
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_RadeonBoostEnabled" /t REG_DWORD /d "0" /f
+
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "powermanagement_delag_component_na" /t REG_SZ /d "false" /f
+
+rem # Super Resolution
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "radeon_superresolution_ui_component_na" /t REG_SZ /d "false" /f
+
+
                    )
                 )
              )
