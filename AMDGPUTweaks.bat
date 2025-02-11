@@ -158,6 +158,8 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "radeon_superresolu
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "CameraShakeMotionDetect_NA" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "chill_component_na" /t REG_SZ /d "false" /f
+
+rem # Vivid Gaming
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "color_enhancement_runtime_component_na" /t REG_SZ /d "false" /f
 
 
