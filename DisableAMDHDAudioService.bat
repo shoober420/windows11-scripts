@@ -2,7 +2,7 @@ rem # Disable AMD HD Audio Service
 
 rem # !!! WARNING !!!
 
-rem # Breaks sound coming from GPU HDMI to monitor
+rem # Breaks sound coming from GPU HDMI to monitor when disabled
 
 rem # !!! WARNING !!!
 
