@@ -665,6 +665,8 @@ DisableCommonLogFileSystem.bat / EnableCommonLogFileSystem.bat (breaks powershel
 
 AMDAdrenalinSettingsPERF.bat / AMDAdrenalinSettingsHQ.bat
 
+DisableAMDHDAudioService.bat / EnableAMDHDAudioService.bat (Breaks sound coming from GPU HDMI to monitor when disabled)
+
 # Credits
 - https://github.com/TairikuOokami
 - https://github.com/ionuttbara
