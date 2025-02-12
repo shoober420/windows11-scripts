@@ -1,4 +1,4 @@
-wrem # Disable Bloat Windows Services
+rem # Disable Bloat Windows Services
 
 rem # SetACL.bat / acl.txt files required to modify certain registry keys
 
