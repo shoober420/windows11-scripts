@@ -15,6 +15,7 @@ Download
  - IrfanView (picture viewer)
  - ShareX (screenshot tool)
  - HxD (hex editor)
+ - System Informer (https://sourceforge.net/projects/systeminformer)
  - MarkC mouse acceleration fix (Windows 10 Fixes/MouseFix_ItemsSize=100%)
  - DirectX End-User Runtime Web Installer (https://www.microsoft.com/en-us/download/details.aspx?id=35) (dxwebupdate.exe)
  - OpenAL software
