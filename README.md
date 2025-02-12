@@ -680,3 +680,4 @@ AMDAdrenalinSettingsPERF.bat / AMDAdrenalinSettingsHQ.bat
 - https://github.com/HakanFly/Windows-Tweaks
 - https://www.elevenforum.com/members/garlin.5387/
 - https://www.elevenforum.com/members/csmc.38355/
+- @foss-lover34
