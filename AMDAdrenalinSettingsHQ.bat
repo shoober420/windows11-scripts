@@ -1,5 +1,5 @@
 rem # AMD Adrenalin video card tweaks
-rem # PERFORMANCE
+rem # HIGH QUALITY
 
 rem # Last key may vary from 0000 to 0001 if dual NVIDIA/AMD machine is used
 
