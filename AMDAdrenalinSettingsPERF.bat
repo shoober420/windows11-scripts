@@ -89,8 +89,13 @@ rem # Surface Format Optimizations (LEGACY: DISABLE)
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "SurfaceFormatReplacements_NA" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "SurfaceFormatReplacements_DEF" /t REG_SZ /d "0" /f
 
+rem # 0 = AMD Optimized / 1 = Default On / 2 = Always On
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "Tessellation_OPTION_NA" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "Tessellation_OPTION_DEF" /t REG_SZ /d "0" /f
+
+rem # 1 = Off / 2 / 4 / 6 / 8 / 16 / 32 / 64
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "Tessellation_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "Tessellation_DEF" /t REG_SZ /d "1" /f
 
 rem # Texture Optimizations
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "TextureOpt_NA" /t REG_SZ /d "1" /f
