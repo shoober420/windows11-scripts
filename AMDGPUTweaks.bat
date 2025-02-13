@@ -189,13 +189,23 @@ reg add "HKCU\Software\AMD\CN" /v "CN_Hide_Toast_Notification" /t REG_SZ /d "tru
 reg add "HKCU\Software\AMD\CN" /v "SystemTray" /t REG_SZ /d "false" /f
 reg add "HKCU\Software\AMD\CN" /v "CN_Hide_Toast_Notification" /t REG_SZ /d "true" /f
 reg add "HKCU\Software\AMD\CN\Performance" /v "MetricsOverlayState" /t REG_DWORD /d "0" /f
-reg add "HKCU\Software\AMD\DVR" /v "DvrEnabled" /t REG_DWORD /d "0" /f
 reg add "HKCU\Software\AMD\DVR" /v "HotkeysDisabled" /t REG_DWORD /d "1" /f
 
+reg add "HKCU\Software\AMD\DVR" /v "DvrEnabled" /t REG_DWORD /d "0" /f
 reg add "HKLM\Software\AMD\DVR" /v "DvrEnabled" /t REG_DWORD /d "0" /f
 
+reg add "HKLM\SOFTWARE\ATI\ACE\Default\Settings\Runtime\Graphics\OverDrive5" /v "OverclockEnabled_NA" /t REG_SZ /d "True" /f
 reg add "HKLM\SOFTWARE\ATI\ACE\Default\Settings\Runtime\Graphics\OverDrive5" /v "OverclockEnabled_DEF" /t REG_SZ /d "True" /f
 
+
+reg add "HKCU\Software\AMD\AIM" /v "LaunchBugTool" /t REG_DWORD /d "0" /f
+reg add "HKCU\Software\AMD\CN" /v "BuildType" /t REG_DWORD /d "1" /f
+reg add "HKCU\Software\AMD\CN\OverlayNotification" /v "AlreadyNotified" /t REG_DWORD /d "1" /f
+reg add "HKCU\Software\AMD\CN\VirtualSuperResolution" /v "AlreadyNotified" /t REG_DWORD /d "1" /f
+reg add "HKCU\Software\AMD\SCENE\0" /v "CameraEnabled" /t REG_DWORD /d "0" /f
+reg add "HKCU\Software\AMD\SCENE\1" /v "CameraEnabled" /t REG_DWORD /d "0" /f
+reg add "HKCU\Software\AMD\DVR" /v "CameraEnabled" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\AMD\DVR\DefaultScene" /v "CameraEnabled" /t REG_DWORD /d "0" /f
 
 
 PAUSE
