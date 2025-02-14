@@ -163,6 +163,7 @@ RESTART
 
  - RemoveWindowsApps.bat
  - RemoveWindowsApps2.bat
+ - RemoveAllWindowsApps.bat
  - RemoveWindowsFeatures.bat
 
 RESTART
