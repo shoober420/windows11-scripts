@@ -60,10 +60,6 @@ powershell -command "Get-AppxPackage -AllUsers *Microsoft.People* | Remove-AppxP
 
 powershell -command "Get-AppxPackage -AllUsers *Microsoft.549981C3F5F10* | Remove-AppxPackage"
 
-rem powershell -command "Get-AppxPackage -AllUsers *Microsoft.Windows.CloudExperienceHost* | Remove-AppxPackage"
-
-rem powershell -command "Get-AppxPackage -AllUsers *Microsoft.Windows.PeopleExperienceHost* | Remove-AppxPackage"
-
 powershell -command "Get-AppxPackage -AllUsers *Microsoft.XboxGameOverlay* | Remove-AppxPackage"
 
 powershell -command "Get-AppxPackage -AllUsers *Microsoft.XboxGamingOverlay* | Remove-AppxPackage"
@@ -72,19 +68,11 @@ powershell -command "Get-AppxPackage -AllUsers *Microsoft.XboxIdentityProvider* 
 
 powershell -command "Get-AppxPackage -AllUsers *Microsoft.XboxSpeechToTextOverlay* | Remove-AppxPackage"
 
-rem powershell -command "Get-AppxPackage -AllUsers *Microsoft.XboxGameCallableUI* | Remove-AppxPackage"
-
 powershell -command "Get-AppxPackage -AllUsers *Microsoft.GamingServices* | Remove-AppxPackage"
 
 powershell -command "Get-AppxPackage -AllUsers *Microsoft.MicrosoftEdgeBeta* | Remove-AppxPackage"
 
 powershell -command "Get-AppxPackage -AllUsers *Microsoft.MicrosoftEdgeStable* | Remove-AppxPackage"
-
-rem powershell -command "Get-AppxPackage -AllUsers *Microsoft.MicrosoftEdgeDevToolsClient* | Remove-AppxPackage"
-
-rem powershell -command "Get-AppxPackage -AllUsers *Microsoft.Windows.ShellExperienceHost* | Remove-AppxPackage"
-
-rem powershell -command "Get-AppxPackage -AllUsers *Microsoft.Windows.StartMenuExperienceHost* | Remove-AppxPackage"
 
 powershell -command "Get-AppxPackage -AllUsers *Client-ProjFS* | Remove-AppxPackage"
 
@@ -99,8 +87,6 @@ powershell -command "Get-AppxPackage -AllUsers *NetFx4-AdvSrvs* | Remove-AppxPac
 powershell -command "Get-AppxPackage -AllUsers *WCF-Services45* | Remove-AppxPackage"
 
 powershell -command "Get-AppxPackage -AllUsers *Microsoft.Todos* | Remove-AppxPackage"
-
-rem powershell -command "Get-AppxPackage -AllUsers *Microsoft.SecHealthUI* | Remove-AppxPackage"
 
 powershell -command "Get-AppxPackage -AllUsers *Microsoft.GamingApp* | Remove-AppxPackage"
 
@@ -171,12 +157,6 @@ powershell -command "Get-AppxPackage -AllUsers *Microsoft.MicrosoftOfficeHub* | 
 powershell -command "Get-AppxPackage -AllUsers *microsoft.windowscommunicationsapps* | Remove-AppxPackage"
 
 powershell -command "Get-AppxPackage -AllUsers *Microsoft.WindowsTerminal* | Remove-AppxPackage"
-
-rem powershell -command "Get-AppxPackage -AllUsers *Microsoft.Windows.NarratorQuickStart* | Remove-AppxPackage"
-
-rem powershell -command "Get-AppxPackage -AllUsers *Microsoft.Windows.ContentDeliveryManager* | Remove-AppxPackage"
-
-rem powershell -command "Get-AppxPackage -AllUsers *Microsoft.Win32WebViewHost* | Remove-AppxPackage"
 
 powershell -command "Get-AppxPackage -AllUsers *devhome* | Remove-AppxPackage"
 
@@ -372,8 +352,6 @@ powershell -command "Get-AppxPackage -AllUsers *Microsoft.StorePurchaseApp* | Re
 
 powershell -command "Get-AppxPackage -AllUsers *Microsoft.StartExperiencesApp* | Remove-AppxPackage"
 
-rem powershell -command "Get-AppxPackage -AllUsers *Microsoft.WindowsAppRuntime.CBS* | Remove-AppxPackage"
-
 powershell "Get-WindowsPackage -Online | Where PackageName -like *QuickAssist* | Remove-WindowsPackage -Online -NoRestart"
 
 powershell "Get-WindowsPackage -Online | Where PackageName -like *Hello-Face* | Remove-WindowsPackage -Online -NoRestart"
@@ -408,29 +386,7 @@ powershell "Get-WindowsCapability -Online | Where Name -like *App.StepsRecorder*
 
 powershell "Get-WindowsCapability -Online | Where Name -like *OneCoreUAP.OneSync* | Remove-WindowsCapability -Online | Out-Null"
 
-rem powershell "Get-AppPackage -Allusers *MicrosoftWindows.Client.CBS* | Remove-AppPackage"
-
 powershell "Get-AppPackage -Allusers *Microsoft.Windows.SecureAssessmentBrowser* | Remove-AppPackage"
-
-rem powershell "Get-AppPackage -Allusers *Microsoft.CredDialogHost* | Remove-AppPackage"
-
-rem powershell "Get-AppPackage -Allusers *Microsoft.Windows.ParentalControls* | Remove-AppPackage"
-
-rem powershell "Get-AppPackage -Allusers *Microsoft.XboxGameCallableUI* | Remove-AppPackage"
-
-rem powershell "Get-AppPackage -Allusers *Microsoft.MicrosoftEdgeDevToolsClient* | Remove-AppPackage"
-
-rem powershell "Get-AppPackage -Allusers *Microsoft.Windows.PeopleExperienceHost* | Remove-AppPackage"
-
-rem powershell "Get-AppPackage -Allusers *Microsoft.Windows.NarratorQuickStart* | Remove-AppPackage"
-
-rem powershell "Get-AppPackage -Allusers *Microsoft.Win32WebViewHost* | Remove-AppPackage"
-
-rem powershell "Get-AppPackage -Allusers *Microsoft.Windows.XGpuEjectDialog* | Remove-AppPackage"
-
-rem powershell "Get-AppPackage -Allusers *Windows.PrintDialog* | Remove-AppPackage"
-
-rem powershell "Get-AppPackage -Allusers *Microsoft.MicrosoftEdge* | Remove-AppPackage"
 
 rem # Remove Provisioned packages through DISM
 rem # DISM /Online /Get-ProvisionedAppxPackages | select-string Packagename
