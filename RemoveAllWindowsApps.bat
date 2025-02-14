@@ -18,6 +18,10 @@ rem # !!! WARNING !!!
 
 PAUSE
 
+rem # EnableStore.bat required for this script to function if DisableServices.bat was executed
+
+PAUSE
+
 rem # Find and Remove for all existing user packages
 rem powershell "Get-AppxPackage -AllUsers | Remove-AppxPackage"
 
