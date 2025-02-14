@@ -661,6 +661,8 @@ AMDAdrenalinSettingsPERF.bat / AMDAdrenalinSettingsHQ.bat
 
 DisableAMDHDAudioService.bat / EnableAMDHDAudioService.bat (Breaks sound coming from GPU HDMI to monitor when disabled)
 
+RemoveNotepad.bat
+
 # Credits
 - https://github.com/TairikuOokami
 - https://github.com/ionuttbara
