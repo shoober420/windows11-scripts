@@ -147,7 +147,10 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "DynamicContrast_NA
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "DynamicContrast_DEF" /t REG_SZ /d "0" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "hotkeys_ui_component_na" /t REG_SZ /d "false" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "hotkeys_ui_component_def" /t REG_SZ /d "false" /f
+
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "imagesharpening_runtime_component_na" /t REG_SZ /d "false" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "imagesharpening_runtime_component_def" /t REG_SZ /d "false" /f
 
 rem # Radeon Chill Power Saving
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_ChillEnabled" /t REG_DWORD /d "0" /f
@@ -168,14 +171,20 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "OverclockEnabled_N
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "OverclockEnabled_DEF" /t REG_SZ /d "True" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "powermanagement_delag_component_na" /t REG_SZ /d "false" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "powermanagement_delag_component_def" /t REG_SZ /d "false" /f
 
 rem # Super Resolution
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "radeon_superresolution_ui_component_na" /t REG_SZ /d "false" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "radeon_superresolution_ui_component_def" /t REG_SZ /d "false" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "CameraShakeMotionDetect_NA" /t REG_SZ /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "CameraShakeMotionDetect_DEF" /t REG_SZ /d "0" /f
+
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "chill_component_na" /t REG_SZ /d "false" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "chill_component_def" /t REG_SZ /d "false" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "color_enhancement_runtime_component_na" /t REG_SZ /d "false" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "color_enhancement_runtime_component_def" /t REG_SZ /d "false" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "AutoTuneRequest_NA" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "AutoTuneRequest_DEF" /t REG_SZ /d "0" /f
