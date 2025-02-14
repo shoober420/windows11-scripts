@@ -162,7 +162,7 @@ Update Video Drivers
 RESTART
 
  - RemoveWindowsApps.bat
- - RemoveAllWindowsApps.bat
+ - RemoveWindowsApps2.bat
  - RemoveWindowsFeatures.bat
 
 RESTART
@@ -580,8 +580,6 @@ HardDrive+USBTweaks.bat
 DisableAMDGPU_DalDramClockChangeLatencyNs.bat / EnableAMDGPU_DalDramClockChangeLatencyNs.bat (disable if screen flickering occurs)
 
 DisableClearPageFileAtShutdown.bat / EnableClearPageFileAtShutdown.bat (long restarts and shut downs with large page file sizes when enabled)
-
-RemoveAllWindowsApps.bat
 
 RemoveWebViewHost.bat
 
