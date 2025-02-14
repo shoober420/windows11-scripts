@@ -662,6 +662,8 @@ DisableAMDHDAudioService.bat / EnableAMDHDAudioService.bat (Breaks sound coming 
 
 RemoveNotepad.bat
 
+RemoveAllWindowsApps.bat
+
 # Credits
 - https://github.com/TairikuOokami
 - https://github.com/ionuttbara
