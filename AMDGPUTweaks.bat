@@ -195,6 +195,31 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_DisableVariabl
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_EnableEventLog" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_TdrDelay" /t REG_DWORD /d "0" /f
 
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "enhanced_sync_ui_component_na" /t REG_SZ /d "false" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "enhanced_sync_ui_component_def" /t REG_SZ /d "false" /f
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "enhancedsync_ui_component_na" /t REG_SZ /d "false" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "enhancedsync_ui_component_def" /t REG_SZ /d "false" /f
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "freesync_runtime_component_na" /t REG_SZ /d "false" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "freesync_runtime_component_def" /t REG_SZ /d "false" /f
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "mobile_runtime_component_NA" /t REG_SZ /d "false" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "mobile_runtime_component_DEF" /t REG_SZ /d "false" /f
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "MobileLinkOverCloudAuth_NA" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "MobileLinkOverCloudAuth_DEF" /t REG_DWORD /d "0" /f
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "ogltriplebuffering_ui_component_na" /t REG_SZ /d "false" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "ogltriplebuffering_ui_component_def" /t REG_SZ /d "false" /f
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "PowerSaverAutoEnable_NA" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "PowerSaverAutoEnable_DEF" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "PowerSaverAutoEnable_DEF" /t REG_DWORD /d "0" /f
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD\DXC" "AllowDelag" /t REG_SZ /d "0" /f
+
+
 
                    )
                 )
