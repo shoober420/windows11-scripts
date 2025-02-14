@@ -33,7 +33,6 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - DisableNetBIOS.ps1
  - DNS.ps1
  - PowerPlanUltra.bat
- - PowerPlanSettings.bat
  - DisableFullscreenOptimizations.bat
  - AMDAdrenalinSettingsPERF.bat / AMDAdrenalinSettingsHQ.bat
  - NVIDIAPerformanceProfile.nip / NVIDIAHighQualityProfileOGL.nip / NVIDIAHighQualityProfileD3D.nip
@@ -57,7 +56,6 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - DisableNetBIOS.ps1
  - DNS.ps1
  - PowerPlanUltra.bat
- - PowerPlanSettings.bat
  - DisableFullscreenOptimizations.bat
  - AMDAdrenalinSettingsPERF.bat / AMDAdrenalinSettingsHQ.bat
  - NVIDIAPerformanceProfile.nip / NVIDIAHighQualityProfileOGL.nip / NVIDIAHighQualityProfileD3D.nip
@@ -93,7 +91,6 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - DisableNetBIOS.ps1
  - DNS.ps1
  - PowerPlanUltra.bat
- - PowerPlanSettings.bat
  - DisableFullscreenOptimizations.bat
  - AMDAdrenalinSettingsPERF.bat / AMDAdrenalinSettingsHQ.bat
  - NVIDIAPerformanceProfile.nip / NVIDIAHighQualityProfileOGL.nip / NVIDIAHighQualityProfileD3D.nip
@@ -235,8 +232,7 @@ RESTART (SAFE MODE) (hold SHIFT while restarting)
 RESTART
 
  - MouseAccelFix.bat (Display > Scale: 100% required)
- - !!! PowerPlanUltra.bat (only if Ultimate Performance power plan profile is NOT present: powercfg -L)
- - PowerPlanSettings.bat
+ - PowerPlanUltra.bat
  - ThreadQuantum.bat
  - DisableWinHTTP.bat (WIRED CONNECTION ONLY)
  - NICProperties.bat
