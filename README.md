@@ -32,7 +32,6 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - DisableNetBIOS.ps1
  - DNS.ps1
  - PowerPlanUltra.bat
- - PowerPlanSettings.bat
  - DisableFullscreenOptimizations.bat
  - AMDAdrenalinSettingsPERF.bat / AMDAdrenalinSettingsHQ.bat
  - NVIDIAPerformanceProfile.nip / NVIDIAHighQualityProfileOGL.nip / NVIDIAHighQualityProfileD3D.nip
@@ -56,7 +55,6 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - DisableNetBIOS.ps1
  - DNS.ps1
  - PowerPlanUltra.bat
- - PowerPlanSettings.bat
  - DisableFullscreenOptimizations.bat
  - AMDAdrenalinSettingsPERF.bat / AMDAdrenalinSettingsHQ.bat
  - NVIDIAPerformanceProfile.nip / NVIDIAHighQualityProfileOGL.nip / NVIDIAHighQualityProfileD3D.nip
@@ -92,7 +90,6 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - DisableNetBIOS.ps1
  - DNS.ps1
  - PowerPlanUltra.bat
- - PowerPlanSettings.bat
  - DisableFullscreenOptimizations.bat
  - AMDAdrenalinSettingsPERF.bat / AMDAdrenalinSettingsHQ.bat
  - NVIDIAPerformanceProfile.nip / NVIDIAHighQualityProfileOGL.nip / NVIDIAHighQualityProfileD3D.nip
@@ -233,8 +230,7 @@ RESTART (SAFE MODE) (hold SHIFT while restarting)
 RESTART
 
  - MouseAccelFix.bat (Display > Scale: 100% required)
- - !!! PowerPlanUltra.bat (only if Ultimate Performance power plan profile is NOT present: powercfg -L)
- - PowerPlanSettings.bat
+ - PowerPlanUltra.bat
  - ThreadQuantum.bat
  - DisableWinHTTP.bat (WIRED CONNECTION ONLY)
  - NICProperties.bat
@@ -311,13 +307,11 @@ run.bat
 
 acl.txt (ACL: Access Control List - needed to take ownership of registry keys for services)
 
-PowerPlanUltra.bat (adds duplicate Ultra power plan everytime command is executed, so use PowerPlanUltra.bat only if Ultimate Performance power plan profile is NOT present)
+PowerPlanUltra.bat
 
 DisableThemes.bat / EnableThemes.bat
 
 StartGraphicsPerfSvc.bat
-
-PowerPlanSettings.bat
 
 RemoveWindowsFeatures.bat (Windows Update services required for DISM)
 
