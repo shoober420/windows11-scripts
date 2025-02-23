@@ -54,7 +54,9 @@ foreach ($Monitor in @(Get-WmiObject -Namespace root\wmi -Class WmiMonitorID)) {
 
     $DisplayPath = "EDID_{0}_{1}_{2}_{3}" -f $Manufacturer, $ProductID, $Model, $DisplayPathDigit
 
-    $DisplayPath2 = "EDID_{0}_{1}" -f $Manufacturer, $ProductID
+    #"$DisplayPath2 = "EDID_{0}_{1}" -f $Manufacturer, $ProductID
+
+    $DisplayPath2 = 'EDID_{0:x4}_{1:x4}' -f $Manufacturer, $ProductID
 
     #$DisplayPath = $Manufacturer.ToString() + '_' + $ProductID.ToString() + '_' + $Model + '_' + $DisplayPathDigit.ToString()
     
