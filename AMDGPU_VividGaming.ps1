@@ -1,4 +1,5 @@
-# AMD Radeon Display Color Enhancement Vivid Gaming
+# AMD Radeon Display Color Enhancement 
+# Vivid Gaming
 
 # https://www.elevenforum.com/members/garlin.5387/
 # https://www.elevenforum.com/t/query-monitor-edid.33440/
