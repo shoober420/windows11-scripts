@@ -82,5 +82,7 @@ switch ($Which) {
      New-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Video\$VideoID\0000\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -Name "DAL_SCE_Settings" -Value ([byte[]]@(0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00)) -PropertyType Binary -Force
      New-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Video\$VideoID\0000\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -Name "DAL_SCE_Strength" -Value ([byte[]]@(0x00,0x00,0x00,0x00,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0x05,0x00,0x00,0x00)) -PropertyType Binary -Force
      New-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Video\$VideoID\0000\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -Name "DAL_SCE_Strength" -Value ([byte[]]@(0x00,0x00,0x00,0x00,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0x05,0x00,0x00,0x00)) -PropertyType Binary -Force}
+   default {'exiting'}
+}
 
 cmd /k 'pause'
