@@ -58,21 +58,26 @@ foreach ($Monitor in @(Get-WmiObject -Namespace root\wmi -Class WmiMonitorID)) {
     
 }
 
-    $Which = Read-Host '8bpc = 1 / 10bpc = 2 / 12bpc = 3 \ Enter Value'
+    $Which = Read-Host '6bpc = 1 / 8bpc = 2 / 10bpc = 3 / 12bpc = 4 \ Enter Value'
 switch ($Which) {
-  1 {New-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Class\$ClassGUID2\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x02,0x00,0x00,0x00)) -PropertyType Binary -Force
+  1 {New-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Class\$ClassGUID2\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x01,0x00,0x00,0x00)) -PropertyType Binary -Force
+     New-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Class\$ClassGUID2\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x01,0x00,0x00,0x00)) -PropertyType Binary -Force
+     New-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Video\$VideoID\0000\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x01,0x00,0x00,0x00)) -PropertyType Binary -Force
+     New-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Video\$VideoID\0000\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x01,0x00,0x00,0x00)) -PropertyType Binary -Force}
+
+
+  2 {New-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Class\$ClassGUID2\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x02,0x00,0x00,0x00)) -PropertyType Binary -Force
      New-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Class\$ClassGUID2\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x02,0x00,0x00,0x00)) -PropertyType Binary -Force
      New-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Video\$VideoID\0000\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x02,0x00,0x00,0x00)) -PropertyType Binary -Force
      New-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Video\$VideoID\0000\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x02,0x00,0x00,0x00)) -PropertyType Binary -Force}
 
 
-  2 {New-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Class\$ClassGUID2\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x03,0x00,0x00,0x00)) -PropertyType Binary -Force
+  3 {New-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Class\$ClassGUID2\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x03,0x00,0x00,0x00)) -PropertyType Binary -Force
      New-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Class\$ClassGUID2\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x03,0x00,0x00,0x00)) -PropertyType Binary -Force
      New-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Video\$VideoID\0000\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x03,0x00,0x00,0x00)) -PropertyType Binary -Force
      New-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Video\$VideoID\0000\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x03,0x00,0x00,0x00)) -PropertyType Binary -Force}
 
-
-  3 {New-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Class\$ClassGUID2\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x04,0x00,0x00,0x00)) -PropertyType Binary -Force
+  4 {New-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Class\$ClassGUID2\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x04,0x00,0x00,0x00)) -PropertyType Binary -Force
      New-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Class\$ClassGUID2\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x04,0x00,0x00,0x00)) -PropertyType Binary -Force
      New-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Video\$VideoID\0000\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x04,0x00,0x00,0x00)) -PropertyType Binary -Force
      New-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Video\$VideoID\0000\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x04,0x00,0x00,0x00)) -PropertyType Binary -Force}
