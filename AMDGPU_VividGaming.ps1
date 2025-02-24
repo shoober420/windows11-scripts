@@ -27,7 +27,9 @@ foreach ($HWID in @(Get-CimInstance win32_VideoController | Where-Object {$_.Ada
 
 $SearchPath = "HKLM:\SYSTEM\ControlSet001\Control\Video\$VideoID"
 
-foreach ($Path in @(Get-ChildItem $SearchPath -Recurse |% { Get-ItemProperty $_.PSPATH -Name *BestViewOption_Hdmi* | select PSPath } | Sort-Object -Unique | Convert-Path)) {
+$Which = Read-Host 'HDMI = 1 / DisplayPort = 2 \ Enter Value'
+switch ($Which) {
+1 {foreach ($Path in @(Get-ChildItem $SearchPath -Recurse |% { Get-ItemProperty $_.PSPATH -Name *BestViewOption_Hdmi* | select PSPath } | Sort-Object -Unique | Convert-Path)) {
     $Path
 
 $DisplayPathNumber = Select-String -InputObject $Path -Pattern "(?<=DisplayPath_).*?(?=\\Option)"
@@ -37,7 +39,21 @@ $DisplayPathNumber.Matches.Value
 $DisplayPathDigit = $DisplayPathNumber.Matches.Value
 
 $DisplayPathDigit
+}
+}
 
+2 {foreach ($Path in @(Get-ChildItem $SearchPath -Recurse |% { Get-ItemProperty $_.PSPATH -Name *BestViewOption* | select PSPath } | Sort-Object -Unique | Convert-Path | Where-Object { $_.Data -notlike ([byte[]]@(0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x08,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x09,0x00,0x00,0x00,0x00,0x00,0x00,0x00))})) {
+    $Path
+
+$DisplayPathNumber = Select-String -InputObject $Path -Pattern "(?<=DisplayPath_).*?(?=\\Option)"
+
+$DisplayPathNumber.Matches.Value
+
+$DisplayPathDigit = $DisplayPathNumber.Matches.Value
+
+$DisplayPathDigit
+}
+}
 }
 
 foreach ($Monitor in @(Get-WmiObject -Namespace root\wmi -Class WmiMonitorID)) {
