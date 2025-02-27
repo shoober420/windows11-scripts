@@ -664,6 +664,10 @@ RemoveNotepad.bat
 
 RemoveAllWindowsApps.bat
 
+AMDGPU_ColorDepth_BPC.ps1
+
+AMDGPU_VividGaming.ps1
+
 # Credits
 - https://github.com/TairikuOokami
 - https://github.com/ionuttbara
