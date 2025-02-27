@@ -32,7 +32,7 @@ $DisplayPortBinaryInactive = ([byte[]]@(0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
 
 $Which = Read-Host 'HDMI = 1 / DisplayPort = 2 \ Enter Value'
 switch ($Which) {
-1 {foreach ($Path in @(Get-ChildItem $SearchPath -Recurse |% { Get-ItemProperty $_.PSPATH -Name *BestViewOption_Hdmi* | select PSPath } | Sort-Object -Unique | Convert-Path)) {
+1 {foreach ($Path in @(Get-ChildItem $SearchPath -Recurse |% { Get-ItemProperty $_.PSPATH -Name BestViewOption_Hdmi | select PSPath } | Sort-Object -Unique | Convert-Path)) {
     $Path
 
 $DisplayPathNumber = Select-String -InputObject $Path -Pattern "(?<=DisplayPath_).*?(?=\\Option)"
@@ -45,7 +45,7 @@ $DisplayPathDigit
 }
 } 
 
-2 {foreach ($Path in @(Get-ChildItem $SearchPath -Recurse |% { Get-ItemProperty $_.PSPATH -Name *BestViewOption* | select PSPath } | Where-Object { $_.BestViewOption -match $DisplayPortBinaryActive } | Convert-Path)) {
+2 {foreach ($Path in @(Get-ChildItem $SearchPath -Recurse |% { Get-ItemProperty $_.PSPATH -Name BestViewOption } | Where-Object { (Compare-Object $_.BestViewOption $DisplayPortBinaryInactive -SyncWindow 0).Count -notlike 0 } )) {
     $Path
 
 $DisplayPathNumber = Select-String -InputObject $Path -Pattern "(?<=DisplayPath_).*?(?=\\Option)"
