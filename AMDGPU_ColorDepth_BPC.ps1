@@ -6,6 +6,34 @@
 # https://www.elevenforum.com/members/garlin.5387/
 # https://www.elevenforum.com/t/query-monitor-edid.33440/
 
+$Monitor_List = @(
+    Get-WmiObject WmiMonitorID -Namespace root\wmi | foreach {
+        [PSCustomObject]@{
+            Instance = $_.InstanceName
+            Manufacturer = [System.Text.Encoding]::ASCII.GetString($_.UserFriendlyName).Replace("$([char]0x00)","")
+            Serial = [System.Text.Encoding]::ASCII.GetString($_.SerialNumberID).Replace("$([char]0x00)","")
+        }
+    }
+)
+
+$index = 1
+foreach ($Monitor in $Monitor_List) {
+    '{0}. {1} - S/N: {2}' -f $index++, $Monitor.Manufacturer, $Monitor.Serial
+}
+Write-Host ''
+
+while ($true) {
+    $choice = Read-Host 'Please select a display by number'
+    if ([int]$choice -in 1..$Monitor_List.Count) {
+        break
+    }
+
+    Write-Host 'Invalid selection.'
+}
+
+$selectedDisplayPath = $Monitor_List[$choice - 1].Instance
+Write-Host "You selected: $selectedDisplayPath"
+
 function Convert-BigEndianToLittleEndian {
     param(
         [int]$BigEndianValue
