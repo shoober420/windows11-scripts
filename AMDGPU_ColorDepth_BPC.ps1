@@ -1,8 +1,6 @@
 # AMD Radeon Display Color Depth
 # BPC (bits per component, bits per channel, bits per color)
 
-# Multi-Monitor setups not supported
-
 # https://www.elevenforum.com/members/garlin.5387/
 # https://www.elevenforum.com/t/query-monitor-edid.33440/
 
