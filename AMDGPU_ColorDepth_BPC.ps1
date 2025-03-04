@@ -88,7 +88,7 @@ $DisplayPathDigit
 }
 }
 
-foreach ($Monitor in @(Get-WmiObject -Namespace root\wmi -Class WmiMonitorID)) {
+foreach ($Monitor in @(Get-WmiObject -Namespace root\wmi -Class WmiMonitorID | Where-Object {$_.InstanceName -like $selectedDisplayPath})) {   )) {
     $bigEndianInt32 = [Convert]::ToInt32(-join $Monitor.ManufacturerName[0..2].ForEach({[Convert]::ToString($_ - 64,2).PadLeft(5,'0')}),2)
     $Manufacturer = (Convert-BigEndianToLittleEndian $bigEndianInt32) -shr 16
 
