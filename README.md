@@ -670,6 +670,8 @@ AMDGPU_VividGaming.ps1
 
 DisableSysMain.bat / EnableSysMain.bat
 
+DisablePDC.bat / EnablePDC.bat (TESTING ONLY)
+
 # Credits
 - https://github.com/TairikuOokami
 - https://github.com/ionuttbara
