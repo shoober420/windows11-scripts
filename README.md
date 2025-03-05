@@ -668,6 +668,8 @@ AMDGPU_ColorDepth_BPC.ps1
 
 AMDGPU_VividGaming.ps1
 
+DisableSysMain.bat / EnableSysMain.bat
+
 # Credits
 - https://github.com/TairikuOokami
 - https://github.com/ionuttbara
