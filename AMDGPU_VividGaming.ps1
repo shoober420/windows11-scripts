@@ -5,6 +5,8 @@
 # https://www.elevenforum.com/t/query-monitor-edid.33440/
 # https://www.elevenforum.com/t/powershell-variable-multiple-output-choice.33844/
 
+Write-Output "!!! REBOOT REQUIRED !!!"
+
 $Monitor_List = @(
     Get-WmiObject WmiMonitorID -Namespace root\wmi | foreach {
         [PSCustomObject]@{
@@ -142,5 +144,7 @@ switch ($Which) {
 }
    default {'exiting'}
 }
+
+Write-Output "!!! REBOOT REQUIRED !!!"
 
 cmd /k 'pause'
