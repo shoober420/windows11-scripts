@@ -13,7 +13,7 @@ rem # TESTING ONLY
 
 PAUSE
 
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\pdc" /v "Start" /t REG_DWORD /d "2" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\pdc" /v "Start" /t REG_DWORD /d "0" /f
 net start pdc
 
 PAUSE
