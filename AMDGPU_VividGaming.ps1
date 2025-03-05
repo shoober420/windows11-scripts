@@ -52,6 +52,8 @@ foreach ($HWID in @(Get-CimInstance win32_VideoController | Where-Object {$_.Ada
     $ClassGUID2
     $VideoID
 
+# ClassGUID2 includes 000X in path
+
 }
 
 $SearchPath = "HKLM:\SYSTEM\ControlSet001\Control\Video\$VideoID"
