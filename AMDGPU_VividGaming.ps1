@@ -163,7 +163,7 @@ switch ($Which) {
      New-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Video\$VideoID\0001\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -Name "DAL_SCE_Strength" -Value ([byte[]]@(0x00,0x00,0x00,0x00,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0x05,0x00,0x00,0x00)) -PropertyType Binary -Force
 
      New-Item -Path "HKLM:SYSTEM\CurrentControlSet\Control\Video\$VideoID\0001\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -ItemType "Directory" -Force
-     New-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Video\$VideoID\0001\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -Name "DAL_SCE_Strength" -Value 
+     New-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Video\$VideoID\0001\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -Name "DAL_SCE_Strength" -Value ([byte[]]@(0x00,0x00,0x00,0x00,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0x05,0x00,0x00,0x00)) -PropertyType Binary -Force
 
 }
 
