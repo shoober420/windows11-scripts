@@ -674,6 +674,8 @@ DisablePDC.bat / EnablePDC.bat (TESTING ONLY)
 
 DisablePCW.bat / EnablePCW.bat (breaks Task Manager when disabled)
 
+RemoveFirewallRules.bat (Windows Firewall is bloat, use router firewall)
+
 # Credits
 - https://github.com/TairikuOokami
 - https://github.com/ionuttbara
