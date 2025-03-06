@@ -65,6 +65,7 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - DisableNetBIOSHelper.bat
  - DisableUPnPDeviceHost.bat
  - DisableSSDPDiscovery.bat
+ - DisableEdge.bat
  - RAMTweaks.bat
  - ThreadQuantum.bat
  - UseLargePages.bat
@@ -98,6 +99,7 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - DisableBluetooth.bat / EnableBluetooth.bat
  - DisableHDR.bat / EnableHDR.bat
  - RAMTweaks.bat
+ - DisableEdge.bat
  - ThreadQuantum.bat
  - UseLargePages.bat
  - RemoveRemoteDesktopConnection.bat
