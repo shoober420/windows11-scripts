@@ -4,8 +4,8 @@ rem # Manages security and user authentication for a Windows server's local doma
 
 rem # !!! WARNING !!!
 
-rem # causes sihost.exe error at sign in screen
-rem # breaks theme settings
+rem # causes sihost.exe error at sign in screen when disabled
+rem # breaks theme settings when disabled
 
 rem # !!! WARNING !!!
 
