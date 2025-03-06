@@ -672,6 +672,8 @@ DisableSysMain.bat / EnableSysMain.bat
 
 DisablePDC.bat / EnablePDC.bat (TESTING ONLY)
 
+DisablePCW.bat / EnablePCW.bat (breaks Task Manager when disabled)
+
 # Credits
 - https://github.com/TairikuOokami
 - https://github.com/ionuttbara
