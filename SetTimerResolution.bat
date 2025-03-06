@@ -1,7 +1,7 @@
 rem # Launches SetTimerResolution.exe
 rem # https://github.com/valleyofdoom/TimerResolution
 
-rem # Requires VCRedist.bat to be run
+rem # Requires VCRedist.bat packages
 
 PAUSE
 
