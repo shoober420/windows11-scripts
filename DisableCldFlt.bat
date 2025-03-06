@@ -2,7 +2,7 @@ rem # Disable Cloud Files Filter Driver (CldFlt)
 
 rem # !!! WARNING !!!
 
-rem # Breaks desktop files from opening and other OneDrive files
+rem # Breaks OneDrive desktop files from opening and other OneDrive files
 
 rem # !!! WARNING !!!
 
