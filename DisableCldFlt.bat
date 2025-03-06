@@ -1,4 +1,4 @@
-rem # Disable Cloud Files Filter Driver (CltFlt)
+rem # Disable Cloud Files Filter Driver (CldFlt)
 
 rem # !!! WARNING !!!
 
