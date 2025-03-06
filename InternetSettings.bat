@@ -84,7 +84,9 @@ powershell.exe Disable-NetAdapterBinding -Name "*" -ComponentID ms_netbios
 
 
 rem # Blocking all inbound connections can break certain Wi-Fi and Ethernet connections
+
 rem # Using "Block all connections" instead of "Block" option under firewall fixes loss of internet for some WiFi cards
+
 netsh advfirewall set domainprofile firewallpolicy blockinboundalways,allowoutbound
 netsh advfirewall set publicprofile firewallpolicy blockinboundalways,allowoutbound
 netsh advfirewall set privateprofile firewallpolicy blockinboundalways,allowoutbound
@@ -93,8 +95,7 @@ netsh advfirewall firewall set rule group="File and Printer Sharing" new enable=
 netsh advfirewall firewall set rule group="remote desktop" new enable=No
 netsh advfirewall set allprofiles settings unicastresponsetomulticast disable
 
-rem # Deleting all inbound firewall rules may break internet for certain Wi-Fi cards
-powershell.exe Remove-NetFirewallRule -All
+
 
 rem # Enable DNS over HTTPS (DoH)
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters" /v "EnableAutoDoh" /t REG_DWORD /d "2" /f
