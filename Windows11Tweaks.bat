@@ -2629,9 +2629,6 @@ schtasks /delete /tn * /f
 rem # Disable slide shows on the lock screen
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Personalization" /v "NoLockScreenSlideshow" /t REG_DWORD /d "1" /f
 
-rem # Timer Resolution Tweak
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "GlobalTimeResolutionRequests" /t REG_DWORD /d "1" /f
-
 rem # Delete Windows Defender user account
 net user WDAGUtilityAccount /active:no
 net user "WDAGUtilityAccount" /delete
