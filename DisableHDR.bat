@@ -20,8 +20,7 @@ rem # HighPerfAdapter="VEN&DEV&SUBSYS" / PCI\VEN_10DE&DEV_2684&SUBSYS_89321043 /
 
 rem # reg add "HKCU\Software\Microsoft\DirectX\UserGpuPreferences" /v "DirectXUserGlobalSettings" /t REG_SZ /d "HighPerfAdapter=10DE&2684&89321043"
 
-rem # SwapEffectUpgradeEnable = "Optimizations" for windowed and borderless windowed games
-rem # Only enable when playing in windowed mode
+rem # AutoHDR requires SwapEffectUpgradeEnable to be turned on
 
 PAUSE
 
