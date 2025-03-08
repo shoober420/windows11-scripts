@@ -1522,9 +1522,6 @@ rem # Turn On or Off Hardware Accelerated GPU Scheduling
 rem # 1 = Off / 2 = On
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "HwSchMode" /t REG_DWORD /d "2" /f
 
-rem # Turn On or Off Optimizations for Windowed Games
-reg add "HKCU\Software\Microsoft\DirectX\GraphicsSettings" /v "SwapEffectUpgradeCache" /t REG_DWORD /d "1" /f
-
 rem # Disable Physical Camera LED
 reg add "HKLM\SOFTWARE\Microsoft\OEM\Device\Capture" /v "NoPhysicalCameraLED" /t REG_DWORD /d "0" /f
 
