@@ -1903,7 +1903,7 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\DWM\ExtendedComposition" /v "ExclusiveM
 
 rem # Running Low on Virtual Memory and Excessive Page File Usage
 rem # https://techcommunity.microsoft.com/t5/windows-server-essentials-and/running-low-on-virtual-memory-and-excessive-page-file-usage/ba-p/395847
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager" /v "HeapDeCommitFreeBlockThreshold" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager" /v "HeapDeCommitFreeBlockThreshold" /t REG_DWORD /d "262144" /f
 
 rem # Disable File System Compression
 fsutil.exe behavior set DisableCompression 1
