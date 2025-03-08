@@ -680,6 +680,8 @@ RemoveFirewallRules.bat (Windows Firewall is bloat, use router firewall)
 
 DisableCldFlt.bat / EnableCldFlt.bat (breaks deskop files from opening when disabled)
 
+MaxPendingInterrupts.bat
+
 # Credits
 - https://github.com/TairikuOokami
 - https://github.com/ionuttbara
