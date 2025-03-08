@@ -251,5 +251,7 @@ reg add "HKCU\Software\AMD\SCENE\1" /v "CameraEnabled" /t REG_DWORD /d "0" /f
 reg add "HKCU\Software\AMD\DVR" /v "CameraEnabled" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\AMD\DVR\DefaultScene" /v "CameraEnabled" /t REG_DWORD /d "0" /f
 
+reg add "HKCU\Software\AMD\DVR" /v "ShowRSOverlay" /t REG_SZ /d "false" /f
+
 
 PAUSE
