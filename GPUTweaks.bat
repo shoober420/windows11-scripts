@@ -7,6 +7,8 @@ rem # RECOMMENDED TO DISABLE ONBOARD INTEGRATED GPU IN BIOS AND DEVICE MANAGER A
 
 rem # IMPROVE LATENCY AT THE COST OF LITTLE LESS FPS
 
+rem # https://forums.blurbusters.com/viewtopic.php?t=13323
+
 PAUSE
 
 rem # Sources: https://sites.google.com/view/melodystweaks/basictweaks
