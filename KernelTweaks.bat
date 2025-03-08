@@ -1,5 +1,7 @@
 rem # Kernel Tweaks
 
+rem # https://forums.blurbusters.com/viewtopic.php?t=13323
+
 rem # Disable ThreadDpcEnable for lower latency
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "ThreadDpcEnable" /t REG_DWORD /d "0" /f
 
