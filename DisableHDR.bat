@@ -32,6 +32,9 @@ for /f "tokens=1-6 delims=_&" %%a in ('wmic path win32_videocontroller where "no
     reg add "HKCU\Software\Microsoft\DirectX\UserGpuPreferences" /v "DirectXUserGlobalSettings" /t REG_SZ /d "HighPerfAdapter=%%b&%%d&%%f;AutoHDREnable=0;VRROptimizeEnable=0;SwapEffectUpgradeEnable=0"
 )
 
+rem # Turn On or Off Optimizations for Windowed Games
+reg add "HKCU\Software\Microsoft\DirectX\GraphicsSettings" /v "SwapEffectUpgradeCache" /t REG_DWORD /d "0" /f
+
 wmic path win32_videocontroller get PNPDeviceID,Name
 
 PAUSE
