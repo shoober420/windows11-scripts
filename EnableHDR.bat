@@ -23,13 +23,13 @@ rem # reg add "HKCU\Software\Microsoft\DirectX\UserGpuPreferences" /v "DirectXUs
 rem # SwapEffectUpgradeEnable = "Optimizations" for windowed and borderless windowed games
 rem # Only enable when playing in windowed mode
 
+rem # AutoHDR requires SwapEffectUpgradeEnable to be turned on
+
 PAUSE
 
 rem # garlin: https://www.elevenforum.com/members/garlin.5387/
 rem # https://www.elevenforum.com/t/find-gpu-ven-dev-subsys-values-for-highperfadapter-option-using-wmic-or-other-method.30127/post-521164
 rem # https://www.elevenforum.com/t/pnputil-uninstall-integrated-gpu.33072/
-
-rem # AutoHDR requires SwapEffectUpgradeEnable to be turned on
 
 for /f "tokens=1-6 delims=_&" %%a in ('wmic path win32_videocontroller where "not AdapterDACType like 'Internal'" get PNPDeviceID ^| find "PCI"') do (
     reg add "HKCU\Software\Microsoft\DirectX\UserGpuPreferences" /v "DirectXUserGlobalSettings" /t REG_SZ /d "HighPerfAdapter=%%b&%%d&%%f;AutoHDREnable=1;VRROptimizeEnable=0;SwapEffectUpgradeEnable=1"
