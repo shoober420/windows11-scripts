@@ -2,8 +2,11 @@ rem # NVIDIA GPU Tweaks
 rem # Works only on NVIDIA GPUs
 rem # Also use on AMD/NVIDIA combo laptops
 
-rem # Deferred Procedure Call
+rem # Deferred Procedure Call (DPC)
 rem # Allows high-priority tasks to defer required but lower-priority tasks for later execution
+
+rem # Timeout Detection and Recovery (TDR)
+rem # Monitors and resets graphics cards that aren't responding quickly enough
 
 rem # DOES NOT SUPPORT DIGITAL STREAM COMPRESSION (DSC). Black screen will occur if used with DSC monitors
 
