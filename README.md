@@ -100,6 +100,7 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - DisableHDR.bat / EnableHDR.bat
  - DisableSysMain.bat
  - DisableCPUMitigations.bat
+ - RemoveFirewallRules.bat
  - RAMTweaks.bat
  - DisableEdge.bat
  - ThreadQuantum.bat
