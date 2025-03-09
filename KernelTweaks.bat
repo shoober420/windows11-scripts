@@ -1,5 +1,7 @@
 rem # Kernel Tweaks
 
+rem # Deferred Procedure Call
+
 rem # https://forums.blurbusters.com/viewtopic.php?t=13323
 
 rem # https://www.tenforums.com/performance-maintenance/146774-cacheawarescheduling-what-how-does-windows-benefit.html
