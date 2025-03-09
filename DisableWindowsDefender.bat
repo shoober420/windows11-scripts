@@ -31,6 +31,36 @@ cd "%USERPROFILE%\Downloads\windows11-scripts"
 ECHO R | powershell.exe ./SetACL.bat
 cd "%USERPROFILE%\Downloads"
 
+rem =========================== Windows Defender Security Centre ===========================
+rem -------------------------------- App & browser control ---------------------------------
+
+rem Off - Disable Windows SmartScreen / On - Enable Windows SmartScreen 
+reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Explorer" /v "SmartScreenEnabled" /t REG_SZ /d "Off" /f
+
+rem 0 - Disable SmartScreen Filter in Microsoft Edge / 1 - Enable
+reg add "HKCU\Software\Microsoft\Edge\SmartScreenEnabled" /ve /t REG_DWORD /d "0" /f
+
+rem 0 - Disable SmartScreen PUA in Microsoft Edge / 1 - Enable
+reg add "HKCU\Software\Microsoft\Edge\SmartScreenPuaEnabled" /ve /t REG_DWORD /d "0" /f
+
+rem 0 - Disable Windows SmartScreen for Windows Store Apps / 1 - Enable
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\AppHost" /v "EnableWebContentEvaluation" /t "REG_DWORD" /d "0" /f
+
+rem ________________________________________________________________________________________
+reg add "HKLM\Software\Policies\Microsoft\Windows\System" /v "EnableSmartScreen" /t "REG_DWORD" /d "0" /f
+reg add "HKLM\Software\Policies\Microsoft\Windows Defender\SmartScreen" /v "ConfigureAppInstallControl" /t REG_SZ /d "Anywhere" /f
+reg add "HKLM\Software\Policies\Microsoft\Windows Defender\SmartScreen" /v "ConfigureAppInstallControlEnabled" /t "REG_DWORD" /d "0" /f
+
+rem 1 - Enable Microsoft Defender SmartScreen DNS requests
+reg add "HKLM\Software\Policies\Microsoft\Edge" /v "SmartScreenDnsRequestsEnabled" /t REG_DWORD /d "0" /f
+
+rem Remove Smartscreen (to restore run "sfc /scannow")
+takeown /s %computername% /u %username% /f "%WinDir%\System32\smartscreen.exe"
+icacls "%WinDir%\System32\smartscreen.exe" /grant:r %username%:F
+taskkill /im smartscreen.exe /f
+rem del "%WinDir%\System32\smartscreen.exe" /s /f /q
+ren "%WinDir%\System32\smartscreen.exe" "smartscreen.exe.bak"
+
 reg add "HKLM\System\CurrentControlSet\Services\WdBoot" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\System\CurrentControlSet\Services\WdFilter" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\System\CurrentControlSet\Services\WdNisDrv" /v "Start" /t REG_DWORD /d "4" /f
