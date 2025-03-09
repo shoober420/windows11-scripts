@@ -2,6 +2,9 @@ rem # NVIDIA GPU Tweaks
 rem # Works only on NVIDIA GPUs
 rem # Also use on AMD/NVIDIA combo laptops
 
+rem # Deferred Procedure Call
+rem # Allows high-priority tasks to defer required but lower-priority tasks for later execution
+
 rem # DOES NOT SUPPORT DIGITAL STREAM COMPRESSION (DSC). Black screen will occur if used with DSC monitors
 
 rem # RECOMMENDED TO DISABLE ONBOARD INTEGRATED GPU IN BIOS AND DEVICE MANAGER AND USE DEDICATED GPU ONLY
