@@ -2,6 +2,9 @@ rem # AMD GPU Tweaks
 rem # Works on AMD/ATI GPUs ONLY
 rem # Also use on AMD/NVIDIA combo laptops
 
+rem # Timeout Detection and Recovery (TDR)
+rem # Monitors and resets graphics cards that aren't responding quickly enough
+
 rem # DOES NOT SUPPORT DIGITAL STREAM COMPRESSION (DSC). Black screen will occur if used with DSC monitors
 
 rem # RECOMMENDED TO DISABLE ONBOARD INTEGRATED GPU IN BIOS AND DEVICE MANAGER AND USE DEDICATED GPU ONLY
