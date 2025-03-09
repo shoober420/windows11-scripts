@@ -3,6 +3,9 @@ rem # Works for any graphics card
 
 rem # DOES NOT SUPPORT DIGITAL STREAM COMPRESSION (DSC). Black screen will occur if used with DSC monitors
 
+rem # Timeout Detection and Recovery (TDR)
+rem # Monitors and resets graphics cards that aren't responding quickly enough
+
 rem # RECOMMENDED TO DISABLE ONBOARD INTEGRATED GPU IN BIOS AND DEVICE MANAGER AND USE DEDICATED GPU ONLY
 
 rem # IMPROVE LATENCY AT THE COST OF LITTLE LESS FPS
