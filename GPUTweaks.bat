@@ -9,6 +9,9 @@ rem # IMPROVE LATENCY AT THE COST OF LITTLE LESS FPS
 
 rem # https://forums.blurbusters.com/viewtopic.php?t=13323
 
+rem # Deferred Procedure Call
+rem # Allows high-priority tasks to defer required but lower-priority tasks for later execution
+
 PAUSE
 
 rem # Sources: https://sites.google.com/view/melodystweaks/basictweaks
