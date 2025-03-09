@@ -1,6 +1,7 @@
 rem # Kernel Tweaks
 
 rem # Deferred Procedure Call
+rem # Allows high-priority tasks to defer required but lower-priority tasks for later execution
 
 rem # https://forums.blurbusters.com/viewtopic.php?t=13323
 
