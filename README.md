@@ -682,6 +682,10 @@ DisableCldFlt.bat / EnableCldFlt.bat (breaks deskop files from opening when disa
 
 MaxPendingInterrupts.bat
 
+KernelMitigationOptions.reg
+
+DisableCPUMitigations.bat / EnableCPUMitigations.bat (GAMING PCS ONLY)
+
 # Credits
 - https://github.com/TairikuOokami
 - https://github.com/ionuttbara
