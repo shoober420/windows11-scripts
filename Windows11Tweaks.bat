@@ -1492,10 +1492,6 @@ reg add "HKLM\SYSTEM\Setup\MoSetup" /v "AllowUpgradesWithUnsupportedTPMOrCPU" /t
 rem # Disable Show More Options Context Menu
 reg add "HKCU\SOFTWARE\CLASSES\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /ve /d "" /f
 
-rem # Disable Spectre mitigations
-rem # https://www.askwoody.com/forums/topic/on-security-patch-lady-susan-bradley-explains-why-you-might-or-might-not-want-to-protect-your-machine-from-spectre-and-meltdown/
-reg add "HKLM\System\CurrentControlSet\Control\Session Manager\Memory Management" /v "FeatureSettings" /t REG_DWORD /d "3" /f
-
 rem # Disable Desktop Stickers
 reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\Stickers" /v "EnableStickers" /t REG_DWORD /d "0" /f
 
