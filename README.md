@@ -101,6 +101,7 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - DisableSysMain.bat
  - DisableEdge.bat
  - DisableTPM+SecureBoot.bat
+ - DisableSSL+LegacyTLS.bat
  - DisableBitLocker.bat
  - DisableCPUMitigations.bat
  - RemoveFirewallRules.bat
