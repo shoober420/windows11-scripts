@@ -693,6 +693,8 @@ DisableKernelMitigationOptions.reg / EnableKernelMitigationOptions.reg
 
 DisableCPUMitigations.bat / EnableCPUMitigations.bat (GAMING PCS ONLY)
 
+DisableScheduledTasks.bat
+
 # Credits
 - https://github.com/TairikuOokami
 - https://github.com/ionuttbara
