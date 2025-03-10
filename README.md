@@ -97,6 +97,7 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - DisableScheduledTasks.ps1 / DisableScheduledTasks.bat
  - DisableIntegratedGPU.ps1
  - DisableBluetooth.bat
+ - DisableTouchPad.bat
  - DisableHDR.bat / EnableHDR.bat
  - DisableSysMain.bat
  - DisableEdge.bat
