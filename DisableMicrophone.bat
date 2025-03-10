@@ -1,4 +1,4 @@
-REM Disable Microphone
+rem # Disable Microphone
 
 rem =================================== Windows Settings ===================================
 rem ---------------------------------- Privacy & security ----------------------------------
