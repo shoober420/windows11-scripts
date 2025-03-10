@@ -58,7 +58,7 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - DisableFullscreenOptimizations.bat
  - AMDAdrenalinSettingsPERF.bat / AMDAdrenalinSettingsHQ.bat
  - NVIDIAPerformanceProfile.nip / NVIDIAHighQualityProfileOGL.nip / NVIDIAHighQualityProfileD3D.nip
- - DisableScheduledTasks.ps1
+ - DisableScheduledTasks.ps1 / DisableScheduledTasks.bat
  - DisableLanmanWorkstation.bat
  - DisableLanmanServer.bat
  - DisableIPHelper.bat
@@ -94,7 +94,7 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - DisableFullscreenOptimizations.bat
  - AMDAdrenalinSettingsPERF.bat / AMDAdrenalinSettingsHQ.bat
  - NVIDIAPerformanceProfile.nip / NVIDIAHighQualityProfileOGL.nip / NVIDIAHighQualityProfileD3D.nip
- - DisableScheduledTasks.ps1
+ - DisableScheduledTasks.ps1 / DisableScheduledTasks.bat
  - DisableIntegratedGPU.ps1
  - DisableBluetooth.bat / EnableBluetooth.bat
  - DisableHDR.bat / EnableHDR.bat
