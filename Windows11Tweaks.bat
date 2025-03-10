@@ -1395,10 +1395,6 @@ bcdedit /set nolowmem Yes
 rem # Enable Physical Address Extension (PAE)
 bcdedit /set pae ForceEnable
 
-rem # Application Control for Windows
-rem # 0 = Off / 1 = Enforce / 2 = Evaluation
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\CI\Policy" /v "VerifiedAndReputablePolicyState" /t REG_DWORD /d "0" /f
-
 rem # Enable or Disable Advanced Indexing Options in Windows
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Search" /v "PreventUsingAdvancedIndexingOptions" /t REG_DWORD /d "1" /f
 
