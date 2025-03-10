@@ -97,7 +97,7 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - NVIDIAPerformanceProfile.nip / NVIDIAHighQualityProfileOGL.nip / NVIDIAHighQualityProfileD3D.nip
  - DisabledScheduledTasks.ps1 / DisableScheduledTasks.bat
  - DisableIntegratedGPU.ps1
- - DisableBluetooth.bat / EnableBluetooth.bat
+ - DisableBluetooth.bat
  - DisableHDR.bat / EnableHDR.bat
  - DisableSysMain.bat
  - DisableEdge.bat
