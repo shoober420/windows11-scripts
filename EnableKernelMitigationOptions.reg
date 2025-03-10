@@ -1,9 +1,9 @@
 Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\kernel]
-"MitigationOptions"=hex:00,01,21,00,00,00,00,00,00,00,00,00,00,00,00,00
+"MitigationOptions"=hex:11,11,11,00,00,01,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00
 
-; Block Untrusted Fonts
-; Mandatory ASLR ON
+; Enable all exploit protection and mitigation options
 ; https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/block-untrusted-fonts-in-enterprise
 ; https://sourceware.org/pipermail/cygwin/2018-February/236013.html
