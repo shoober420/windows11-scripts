@@ -104,6 +104,7 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - DisableBitLocker.bat
  - DisableCPUMitigations.bat
  - RemoveFirewallRules.bat
+ - DisableDHCP.bat / StaticIPConnection.bat
  - RAMTweaks.bat
  - DisableEdge.bat
  - ThreadQuantum.bat
@@ -265,6 +266,8 @@ RESTART
 
  - Disable*.bat (DisableAppX.bat causes File Explorer to crash when opening right click context menu) (DO NOT RUN DisableStateRepository.bat and DisableDNSClient.bat)
  - Remove*.bat
+
+ - StaticIPConnection.bat
 
 RESTART
 
