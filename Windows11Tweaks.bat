@@ -165,10 +165,6 @@ rem 0 - Enables 8dot3 name creation for all volumes on the system / 1 - Disables
 rem fsutil 8dot3name scan c:\
 fsutil behavior set disable8dot3 1
 
-rem 1 - Disable Bitlocker and Encrypting File System (EFS)
-reg add "HKLM\System\CurrentControlSet\Control\BitLocker" /v "PreventDeviceEncryption" /t REG_DWORD /d "1" /f
-fsutil behavior set disableencryption 1
-
 rem 1 - When listing directories, NTFS does not update the last-access timestamp, and it does not record time stamp updates in the NTFS log
 rem fsutil behavior query disablelastaccess
 fsutil behavior set disablelastaccess 1
