@@ -2457,9 +2457,6 @@ rem # Disable SMB2.0 and SMB3.0
 sc.exe config mrxsmb20 start= disabled
 sc.exe config mrxsmb30 start= disabled
 
-rem # Delete Task Scheduler tasks
-schtasks /delete /tn * /f
-
 rem # Disable slide shows on the lock screen
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Personalization" /v "NoLockScreenSlideshow" /t REG_DWORD /d "1" /f
 
