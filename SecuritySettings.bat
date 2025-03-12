@@ -2,6 +2,8 @@ rem # Disables security settings
 
 rem # Turns off all security settings which cause stuttering in games
 
+rem # Use EnableKernelMitigationOptions.reg to turn on exploit protection settings
+
 PAUSE
 
 powershell.exe Disable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol
