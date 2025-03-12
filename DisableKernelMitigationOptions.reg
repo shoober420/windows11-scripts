@@ -1,9 +1,0 @@
-Windows Registry Editor Version 5.00
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\kernel]
-"MitigationOptions"=hex:22,22,22,00,00,02,00,00,00,02,00,00,00,00,00,00,00,00,\
-  00,00,00,00,00,00
-
-; Disable all exploit protection and mitigation options
-; https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/block-untrusted-fonts-in-enterprise
-; https://sourceware.org/pipermail/cygwin/2018-February/236013.html
