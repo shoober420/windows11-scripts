@@ -702,6 +702,9 @@ DisableCPUMitigations.bat / EnableCPUMitigations.bat (GAMING PCS ONLY)
 DisableScheduledTasks.bat
 
 # Credits
+- https://www.elevenforum.com/members/garlin.5387/
+- https://www.elevenforum.com/members/csmc.38355/
+- foss-lover34
 - https://github.com/TairikuOokami
 - https://github.com/ionuttbara
 - https://github.com/ChrisTitusTech
@@ -714,6 +717,3 @@ DisableScheduledTasks.bat
 - https://sites.google.com/view/melodystweaks/basictweaks
 - https://github.com/sherifmagdy32/gaming_os_tweaker
 - https://github.com/HakanFly/Windows-Tweaks
-- https://www.elevenforum.com/members/garlin.5387/
-- https://www.elevenforum.com/members/csmc.38355/
-- foss-lover34
