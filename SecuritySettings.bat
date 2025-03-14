@@ -6,6 +6,11 @@ rem # Use EnableKernelMitigationOptions.reg to turn on exploit protection settin
 
 PAUSE
 
+rem # Disable Kernel security features
+rem # Causes stuttering in games
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "DisableExceptionChainValidation" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "KernelSEHOPEnabled" /t REG_DWORD /d "0" /f
+
 powershell.exe Disable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol
 
 ECHO Y | powershell.exe Set-SmbServerConfiguration -EnableSMB1Protocol $false
