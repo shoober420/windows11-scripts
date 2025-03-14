@@ -11,6 +11,12 @@ rem # Causes stuttering in games
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "DisableExceptionChainValidation" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "KernelSEHOPEnabled" /t REG_DWORD /d "0" /f
 
+rem # Disable Address Space Layout Randomization (ASLR)
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "MoveImages" /t REG_DWORD /d "0" /f
+
+rem # Disable DEP
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Internet Explorer\Main" /v "DEPOff" /t REG_DWORD /d "1" /f
+
 powershell.exe Disable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol
 
 ECHO Y | powershell.exe Set-SmbServerConfiguration -EnableSMB1Protocol $false
