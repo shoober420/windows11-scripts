@@ -1378,23 +1378,6 @@ reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" 
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SubscribedContent-202914Enabled" /t REG_DWORD /d "0" /f
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SubscribedContent-353698Enabled" /t REG_DWORD /d "0" /f
 
-rem # Processor x2APIC Support helps operating systems run more efficiently on high core count configurations
-bcdedit /set x2apicpolicy Enable
-
-rem # Enable MSI
-bcdedit /set configaccesspolicy Default
-bcdedit /set MSI Default
-bcdedit /set usephysicaldestination No
-bcdedit /set usefirmwarepcisettings No
-
-rem # Avoid the use of uncontiguous portions of low-memory from the OS
-bcdedit /set firstmegabytepolicy UseAll
-bcdedit /set avoidlowmemory 0x8000000
-bcdedit /set nolowmem Yes
-
-rem # Enable Physical Address Extension (PAE)
-bcdedit /set pae ForceEnable
-
 rem # Enable or Disable Advanced Indexing Options in Windows
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Search" /v "PreventUsingAdvancedIndexingOptions" /t REG_DWORD /d "1" /f
 
@@ -2118,10 +2101,6 @@ rem # Disable RCP
 rem # https://learn.microsoft.com/en-us/windows/win32/services/services-and-rpc-tcp
 reg add "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Schedule" /v "DisableRpcOverTcp" /t REG_DWORD /d "1" /f
 
-rem # Disable 57-bits 5-level paging, also known as "Linear Address 57". Only 100% effective on 10th gen Intel. 256 TB of virtual memory per-disk is way much more than enough anyway
-bcdedit /set linearaddress57 OptOut
-bcdedit /set increaseuserva 268435328
-
 
 
 rem =================================== Windows Settings ===================================
@@ -2769,16 +2748,6 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management
 
 rem # Disable DEP
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Internet Explorer\Main" /v "DEPOff" /t REG_DWORD /d "1" /f
-
-rem # BCDEDIT Tweaks
-bcdedit /set disableelamdrivers Yes
-bcdedit /set highestmode Yes
-bcdedit /set forcefipscrypto No
-bcdedit /set noumex Yes
-bcdedit /set uselegacyapicmode No
-bcdedit /set ems No
-bcdedit /set extendedinput Yes
-bcdedit /set debug No
 
 rem # Disable Telemetry
 reg add "HKLM\SYSTEM\DriverDatabase\Policies\Settings" /v "DisableSendGenericDriverNotFoundToWER" /t REG_DWORD /d "1" /f
