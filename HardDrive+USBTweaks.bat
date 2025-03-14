@@ -154,6 +154,9 @@ for /L %%V in (0,1,32) do (
         )
 )
 
+rem # Disk Optimization
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Executive" /v "MaxTimeSeparationBeforeCorrect" /t REG_DWORD /d "1" /f
+
 rem # NVMe Tweaks
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\stornvme\Parameters" /v "StorNVMeAllowZeroLatency" /t REG_DWORD /d "1" /f
