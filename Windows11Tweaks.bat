@@ -2405,15 +2405,6 @@ rem # Delete controversial default0 user
 net user defaultuser0 /active:no
 net user defaultuser0 /delete 2>nul
 
-rem # Disable DEP
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Explorer" /v "NoDataExecutionPrevention" /t REG_DWORD /d "1" /f
-
-rem # Turn off heap termination on corruption
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Explorer" /v "NoHeapTerminationOnCorruption" /t REG_DWORD /d "0" /f
-
-rem # Turn off shell protocol protected mode
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "PreXPSP2ShellProtocolBehavior" /t REG_DWORD /d "0" /f
-
 rem # Windows Connection Manager Minimize Connections
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WcmSvc\GroupPolicy" /v "fMinimizeConnections" /t REG_DWORD /d "1" /f
 
