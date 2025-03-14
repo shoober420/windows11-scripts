@@ -702,6 +702,8 @@ DisableCPUMitigations.bat / EnableCPUMitigations.bat (GAMING PCS ONLY)
 
 DisableScheduledTasks.bat
 
+BCDEDIT_Tweaks.bat
+
 # Credits
 - https://www.elevenforum.com/members/garlin.5387/
 - https://www.elevenforum.com/members/csmc.38355/
