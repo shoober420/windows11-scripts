@@ -17,6 +17,15 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management
 rem # Disable DEP
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Internet Explorer\Main" /v "DEPOff" /t REG_DWORD /d "1" /f
 
+rem # Disable DEP
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Explorer" /v "NoDataExecutionPrevention" /t REG_DWORD /d "1" /f
+
+rem # Turn off heap termination on corruption
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Explorer" /v "NoHeapTerminationOnCorruption" /t REG_DWORD /d "0" /f
+
+rem # Turn off shell protocol protected mode
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "PreXPSP2ShellProtocolBehavior" /t REG_DWORD /d "0" /f
+
 powershell.exe Disable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol
 
 ECHO Y | powershell.exe Set-SmbServerConfiguration -EnableSMB1Protocol $false
