@@ -2494,9 +2494,6 @@ reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\System" /v "AllowL
 rem # Disable Leap Second Information
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\LeapSecondInformation" /v "Enabled" /t REG_DWORD /d "0" /f
 
-rem # Disable NVME Throttling
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Classpnp" /v "NVMeDisablePerfThrottling" /t REG_DWORD /d "1" /f
-
 rem # Swap File Control
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "SwapfileControl" /t REG_DWORD /d "0" /f
 
