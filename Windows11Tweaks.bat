@@ -2507,9 +2507,6 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Communications" /v "Conf
 rem # Disable Windows Platform Binary Table Execution
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager" /v "DisableWpbtExecution" /t REG_DWORD /d "1" /f
 
-rem # Disk Optimization
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Executive" /v "MaxTimeSeparationBeforeCorrect" /t REG_DWORD /d "1" /f
-
 rem # Windows Mixed Reality / Holographic tweaks
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Holographic" /v "PreallocateVirtualMonitors" /t REG_DWORD /d "0" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Holographic" /v "DesktopAppLaunchEnabled" /t REG_DWORD /d "0" /f
