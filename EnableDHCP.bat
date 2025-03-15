@@ -4,4 +4,6 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\Dhcp" /v "Start" /t REG_DWORD /d
 
 sc start dhcp
 
+bcdedit /set dhcp On
+
 PAUSE
