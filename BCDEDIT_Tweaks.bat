@@ -30,6 +30,7 @@ bcdedit /set ems No
 bcdedit /set extendedinput Yes
 bcdedit /set debug No
 bcdedit /set debugstart disable
+bcdedit /set bootdebug Off
 bcdedit /bootdebug Off
 bcdedit /bootems Off
 bcdedit /debug Off
