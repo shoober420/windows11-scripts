@@ -11,7 +11,7 @@ bcdedit /set usefirmwarepcisettings No
 
 rem # Avoid the use of uncontiguous portions of low-memory from the OS
 bcdedit /set firstmegabytepolicy UseAll
-rem bcdedit /set avoidlowmemory 0x8000000
+bcdedit /set avoidlowmemory 0x8000000
 bcdedit /set nolowmem Yes
 
 rem # Enable Physical Address Extension (PAE)
