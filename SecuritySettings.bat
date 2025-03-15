@@ -75,6 +75,8 @@ rem # Disable Hyper-V
 bcdedit /set vsmlaunchtype Off
 bcdedit /set vm No
 bcdedit /set hypervisorlaunchtype Off
+bcdedit /set hypervisordebug Off
+bcdedit /set hypervisoriommupolicy disable
 
 rem # Disable some of the kernel memory mitigations
 bcdedit /set allowedinmemorysettings 0x0
