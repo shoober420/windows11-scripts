@@ -32,5 +32,6 @@ bcdedit /set debug No
 bcdedit /bootdebug Off
 bcdedit /bootems Off
 bcdedit /debug Off
+bcdedit /ems Off
 
 PAUSE
