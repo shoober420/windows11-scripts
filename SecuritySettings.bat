@@ -76,7 +76,7 @@ bcdedit /set vsmlaunchtype Off
 bcdedit /set vm No
 bcdedit /set hypervisorlaunchtype Off
 bcdedit /set hypervisordebug Off
-bcdedit /set hypervisoriommupolicy disable
+bcdedit /set hypervisoriommupolicy Disable
 
 rem # Disable some of the kernel memory mitigations
 bcdedit /set allowedinmemorysettings 0x0
