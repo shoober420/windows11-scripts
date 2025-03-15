@@ -30,5 +30,6 @@ bcdedit /set ems No
 bcdedit /set extendedinput Yes
 bcdedit /set debug No
 bcdedit /bootdebug Off
+bcdedit /bootems Off
 
 PAUSE
