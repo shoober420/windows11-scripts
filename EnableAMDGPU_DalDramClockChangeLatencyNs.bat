@@ -1,7 +1,10 @@
 rem # Enable AMDGPU DalDramClockChangeLatencyNs tweak
 
 rem # !!! WARNING !!!
-rem # DalDramClockChangeLatencyNs below can cause screen flickering, run DisableAMD_DalDramClockChangeLatencyNs.bat to fix
+
+rem # DalDramClockChangeLatencyNs tweak can cause screen flickering
+rem # Run DisableAMD_DalDramClockChangeLatencyNs.bat to fix
+
 rem # !!! WARNING !!!
 
 PAUSE
@@ -20,11 +23,7 @@ for /f %%i in ('wmic path Win32_VideoController get PNPDeviceID^| findstr /L "PC
         for /f "tokens=3" %%a in ('reg query "HKLM\SYSTEM\ControlSet001\Enum\%%i" /v "Driver"') do (
                 for /f %%i in ('echo %%a ^| findstr "{"') do (
 
-                         reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "DalDramClockChangeLatencyNs" /t REG_DWORD /d "1" /f
-
-rem reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\DalDramClockChangeLatencyNs"
-
-
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "DalDramClockChangeLatencyNs" /t REG_DWORD /d "1" /f
 
                    )
                 )
