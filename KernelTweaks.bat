@@ -3,7 +3,7 @@ rem # Kernel Tweaks
 rem # Deferred Procedure Call (DPC)
 rem # Allows high-priority tasks to defer required but lower-priority tasks for later execution
 
-https://www.youtube.com/watch?v=4OrEytGFdK4
+rem # https://www.youtube.com/watch?v=4OrEytGFdK4
 
 rem # https://forums.blurbusters.com/viewtopic.php?t=13323
 
