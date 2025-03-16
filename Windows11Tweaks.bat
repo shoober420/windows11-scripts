@@ -4,22 +4,22 @@ rem # --------------------------------------------------------------------------
 
 rem # Credits:
 
-- https://www.elevenforum.com/members/garlin.5387/
-- https://www.elevenforum.com/members/csmc.38355/
-- foss-lover34
-- https://youtube.com/@Alchemytweaks
-- https://github.com/TairikuOokami
-- https://github.com/ionuttbara
-- https://github.com/ChrisTitusTech
-- https://github.com/raspi
-- https://github.com/simeononsecurity/
-- https://sites.google.com/site/tweakradje/windows/windows-tweaking
-- https://admx.help/
-- https://github.com/ancel1x/Ancels-Performance-Batch
-- https://github.com/Batlez/Batlez-Tweaks
-- https://sites.google.com/view/melodystweaks/basictweaks
-- https://github.com/sherifmagdy32/gaming_os_tweaker
-- https://github.com/HakanFly/Windows-Tweaks
+rem # https://www.elevenforum.com/members/garlin.5387
+rem # https://www.elevenforum.com/members/csmc.38355
+rem # foss-lover34
+rem # https://youtube.com/@Alchemytweaks
+rem # https://github.com/TairikuOokami
+rem # https://github.com/ionuttbara
+rem # https://github.com/ChrisTitusTech
+rem # https://github.com/raspi
+rem # https://github.com/simeononsecurity
+rem # https://sites.google.com/site/tweakradje/windows/windows-tweaking
+rem # https://admx.help
+rem # https://github.com/ancel1x/Ancels-Performance-Batch
+rem # https://github.com/Batlez/Batlez-Tweaks
+rem # https://sites.google.com/view/melodystweaks/basictweaks
+rem # https://github.com/sherifmagdy32/gaming_os_tweaker
+rem # https://github.com/HakanFly/Windows-Tweaks
 
 rem # -----------------------------------------------------------------------------------------
 
