@@ -1,6 +1,10 @@
 rem # Enable ThreadDpcEnable
+
 rem # Deferred Procedure Call (DPC)
 rem # Allows high-priority tasks to defer required but lower-priority tasks for later execution
+
+rem # Thread DPC
+rem # Prioritizes critial tasks to execute first
 
 rem # https://forums.blurbusters.com/viewtopic.php?t=13323
 
