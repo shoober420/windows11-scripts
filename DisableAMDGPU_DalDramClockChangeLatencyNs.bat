@@ -16,8 +16,6 @@ for /f %%i in ('wmic path Win32_VideoController get PNPDeviceID^| findstr /L "PC
 
 reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\" /v "DalDramClockChangeLatencyNs" /f
 
-
-
                    )
                 )
              )
