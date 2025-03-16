@@ -2,27 +2,33 @@ rem # --------------------------------------------------------------------------
 rem # _______________________shoober420's Windows 11 Tweaks Batch Script_______________________
 rem # -----------------------------------------------------------------------------------------
 
-rem # Additional settings and format used from:
-rem # https://github.com/TairikuOokami
-rem # https://github.com/ionuttbara
-rem # https://github.com/ChrisTitusTech
-rem # https://github.com/raspi
-rem # https://github.com/simeononsecurity/
-rem # https://sites.google.com/site/tweakradje/windows/windows-tweaking
-rem # https://admx.help/
-rem # https://github.com/ancel1x/Ancels-Performance-Batch
-rem # https://github.com/Batlez/Batlez-Tweaks
-rem # https://sites.google.com/view/melodystweaks/basictweaks
-rem # https://github.com/sherifmagdy32/gaming_os_tweaker
-rem # https://github.com/HakanFly/Windows-Tweaks
+rem # Credits:
+
+- https://www.elevenforum.com/members/garlin.5387/
+- https://www.elevenforum.com/members/csmc.38355/
+- foss-lover34
+- https://youtube.com/@Alchemytweaks
+- https://github.com/TairikuOokami
+- https://github.com/ionuttbara
+- https://github.com/ChrisTitusTech
+- https://github.com/raspi
+- https://github.com/simeononsecurity/
+- https://sites.google.com/site/tweakradje/windows/windows-tweaking
+- https://admx.help/
+- https://github.com/ancel1x/Ancels-Performance-Batch
+- https://github.com/Batlez/Batlez-Tweaks
+- https://sites.google.com/view/melodystweaks/basictweaks
+- https://github.com/sherifmagdy32/gaming_os_tweaker
+- https://github.com/HakanFly/Windows-Tweaks
 
 rem # -----------------------------------------------------------------------------------------
 
-rem # Run this batch script in SAFE MODE
+rem # Recommended to run this batch script in SAFE MODE
 
-rem # SAFE MODE required for admin privileges tweaks
+rem # SAFE MODE required for certain admin privileges tweaks
 
 rem # Disables Telemetry required for Windows Update to function on Windows Insider builds
+
 rem # Running EnableWindowsUpdate.bat is required to download Windows updates after running this batch script
 
 rem # Removes and disables Microsoft Edge
