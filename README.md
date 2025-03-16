@@ -717,7 +717,7 @@ DisableThreadDpcEnable.bat / EnableThreadDpcEnable.bat
 - https://www.elevenforum.com/members/garlin.5387
 - https://www.elevenforum.com/members/csmc.38355
 - foss-lover34
-- https://youtube.com/@Alchemytweaks
+- https://github.com/AlchemyTweaks
 - https://github.com/TairikuOokami
 - https://github.com/ionuttbara
 - https://github.com/ChrisTitusTech
