@@ -6,6 +6,8 @@ rem # Allows high-priority tasks to defer required but lower-priority tasks for 
 rem # Thread DPC
 rem # Prioritizes critial tasks to execute first
 
+https://www.youtube.com/watch?v=-z7iBgm1hec
+
 rem # https://forums.blurbusters.com/viewtopic.php?t=13323
 
 rem # https://www.tenforums.com/performance-maintenance/146774-cacheawarescheduling-what-how-does-windows-benefit.html
