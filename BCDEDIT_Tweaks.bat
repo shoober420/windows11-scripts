@@ -4,6 +4,8 @@ rem # https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/bcdedit
 
 rem # https://learn.microsoft.com/en-us/windows/security/operating-system-security/data-protection/bitlocker/bcd-settings-and-bitlocker
 
+rem # https://sites.google.com/view/melodystweaks/basictweaks
+
 rem # Processor x2APIC Support helps operating systems run more efficiently on high core count configurations
 bcdedit /set x2apicpolicy Enable
 
