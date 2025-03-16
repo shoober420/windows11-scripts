@@ -7,7 +7,7 @@ rem # Credits:
 rem # https://www.elevenforum.com/members/garlin.5387
 rem # https://www.elevenforum.com/members/csmc.38355
 rem # foss-lover34
-rem # https://youtube.com/@Alchemytweaks
+rem # https://github.com/AlchemyTweaks
 rem # https://github.com/TairikuOokami
 rem # https://github.com/ionuttbara
 rem # https://github.com/ChrisTitusTech
