@@ -14,7 +14,7 @@ for /f %%i in ('wmic path Win32_VideoController get PNPDeviceID^| findstr /L "PC
         for /f "tokens=3" %%a in ('reg query "HKLM\SYSTEM\ControlSet001\Enum\%%i" /v "Driver"') do (
                 for /f %%i in ('echo %%a ^| findstr "{"') do (
 
-reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\DalDramClockChangeLatencyNs"
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\" /v "DalDramClockChangeLatencyNs" /f
 
 
 
