@@ -714,17 +714,17 @@ DisableSerializeTimerExpiration.bat / EnableSerializeTimerExpiration.bat
 DisableThreadDpcEnable.bat / EnableThreadDpcEnable.bat
 
 # Credits
-- https://www.elevenforum.com/members/garlin.5387/
-- https://www.elevenforum.com/members/csmc.38355/
+- https://www.elevenforum.com/members/garlin.5387
+- https://www.elevenforum.com/members/csmc.38355
 - foss-lover34
 - https://youtube.com/@Alchemytweaks
 - https://github.com/TairikuOokami
 - https://github.com/ionuttbara
 - https://github.com/ChrisTitusTech
 - https://github.com/raspi
-- https://github.com/simeononsecurity/
+- https://github.com/simeononsecurity
 - https://sites.google.com/site/tweakradje/windows/windows-tweaking
-- https://admx.help/
+- https://admx.help
 - https://github.com/ancel1x/Ancels-Performance-Batch
 - https://github.com/Batlez/Batlez-Tweaks
 - https://sites.google.com/view/melodystweaks/basictweaks
