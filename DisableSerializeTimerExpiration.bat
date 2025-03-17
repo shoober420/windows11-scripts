@@ -1,5 +1,7 @@
 rem # Disable Serialize Timer Expiration kernel tweak
 
+rem # https://www.youtube.com/watch?v=wil-09_5H0M
+
 rem # Enable Serialization Standby
 rem # Allows the kernel to make the decision based on non-Modern Standby systems
 
