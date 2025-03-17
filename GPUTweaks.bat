@@ -18,13 +18,14 @@ rem # https://www.youtube.com/watch?v=itTcqcJxtbo
 
 rem # https://forums.blurbusters.com/viewtopic.php?t=13323
 
+rem # https://sites.google.com/view/melodystweaks/basictweaks
+
+rem # https://github.com/sherifmagdy32/gaming_os_tweaker/blob/main/scripts/tweaks/gpu.cmd
+
 rem # Deferred Procedure Call
 rem # Allows high-priority tasks to defer required but lower-priority tasks for later execution
 
 PAUSE
-
-rem # Sources: https://sites.google.com/view/melodystweaks/basictweaks
-rem # https://github.com/sherifmagdy32/gaming_os_tweaker/blob/main/scripts/tweaks/gpu.cmd
 
 rem # https://www.elevenforum.com/members/garlin.5387/
 rem # https://www.elevenforum.com/t/gpu-tweaks-batch-script.30134/post-521530
