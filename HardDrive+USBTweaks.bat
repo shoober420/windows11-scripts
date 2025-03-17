@@ -1,4 +1,7 @@
 rem # Hard Drive and USB Tweaks
+
+rem # https://www.youtube.com/watch?v=ajM7Nelf6Uc
+
 rem # Disables power saving features
 
 rem # MSI Mode support for USB Controller
