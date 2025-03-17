@@ -1,9 +1,14 @@
 rem # Thread Quantum Selector
 
 rem # https://www.xbitlabs.com/win32priorityseparation-performance/
+
 rem # https://smallvoid.com/article/winnt-process-scheduler-priority.html
+
 rem # https://forums.blurbusters.com/viewtopic.php?t=8535
+
 rem # https://www.tenforums.com/performance-maintenance/130775-win32priorityseparation-value-decimal-26-a.html#post1614519
+
+rem # https://www.youtube.com/watch?v=bqDMG1ZS-Yw
 
 rem # garlin: https://www.elevenforum.com/members/garlin.5387/
 rem # https://www.elevenforum.com/t/batch-script-choose-1-or-2-registry-setting.30348/#post-524139
