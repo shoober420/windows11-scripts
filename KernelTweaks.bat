@@ -7,6 +7,10 @@ rem # https://www.youtube.com/watch?v=4OrEytGFdK4
 
 rem # https://www.youtube.com/watch?v=k2Vljto4WYk
 
+rem # https://www.youtube.com/watch?v=YaIVoqRo5-g
+
+rem # https://www.youtube.com/watch?v=omg_EnxUJv4
+
 rem # https://forums.blurbusters.com/viewtopic.php?t=13323
 
 rem # https://www.tenforums.com/performance-maintenance/146774-cacheawarescheduling-what-how-does-windows-benefit.html
