@@ -80,7 +80,6 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - CPUTweaks.bat
  - GPUTweaks.bat / AMDGPUTweaks.bat / NVGPUTweaks.bat
  - KernelTweaks.bat
- - DisableLowQosTimerResolution.bat
  - TimerTweaks.bat
  - HardDrive+USBTweaks.bat
  - HighPriority.bat
