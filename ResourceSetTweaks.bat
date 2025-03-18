@@ -8,6 +8,8 @@ rem # !!! WARNING !!!
 
 rem # TESTING ONLY
 
+rem # https://www.youtube.com/watch?v=HL8v7bhqiiM
+
 PAUSE
 
 reg add "HKLM\SYSTEM\ResourcePolicyStore\ResourceSets\PolicySets\ApplicationService" /v "CPU" /t REG_SZ /d "UnmanagedAboveNormal" /f
