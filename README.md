@@ -117,6 +117,7 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - RemoveRemoteDesktopConnection.bat
  - RemoveWindowsApps.bat
  - RemoveWindowsFeatures.bat
+ - MaxPendingInterrupts.reg
  - BCDEDIT_Tweaks.bat
  - DWM_Tweaks.bat
  - Windows11Tweaks.bat
