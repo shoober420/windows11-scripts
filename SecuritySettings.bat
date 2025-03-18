@@ -4,6 +4,13 @@ rem # Turns off all security settings which cause stuttering in games
 
 rem # Use EnableKernelMitigationOptions.reg to turn on exploit protection settings
 
+rem # !!! WARNING !!!
+
+rem # NOT COMPATIBLE WITH THESE ANTICHEATS
+rem # VALORANT / VANGUARD
+
+rem # !!! WARNING !!!
+
 PAUSE
 
 rem # Disable Kernel security features
