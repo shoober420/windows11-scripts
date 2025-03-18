@@ -6,6 +6,8 @@ rem # Credits:
 
 rem # https://www.elevenforum.com/members/garlin.5387
 rem # https://www.elevenforum.com/members/csmc.38355
+rem # jdallmann
+rem # Kizzimo
 rem # foss-lover34
 rem # https://github.com/AlchemyTweaks
 rem # https://github.com/TairikuOokami
