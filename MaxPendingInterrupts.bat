@@ -1,73 +1,88 @@
-rem # Max Pending Interrupts
+Windows Registry Editor Version 5.00
 
-rem # kizzimo
+;Founder by kizzimo
 
-rem # !!! WARNING !!!
+; CPU Performance Tuning
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment]
+"CPU_MAX_PENDING_INTERRUPTS"="0"  ; Minimizes the number of interrupts waiting, reducing latency.
+"CPU_MAX_PENDING_IO"="0"           ; Keeps I/O processing instant, minimizing wait times.
+"CPU_IDLE_POLICY"="0"              ; Prevents CPU from idling to maintain maximum performance.
+"CPU_BOOST_POLICY"="2"             ; Always allows the CPU to boost for better performance.
+"CPU_MAX_FREQUENCY"="100"          ; Allows the CPU to reach maximum frequency.
+"CPU_INTERRUPT_BALANCE_POLICY"="1" ; Ensures interrupts are balanced across all CPU cores.
+"MKL_DEBUG_CPU_TYPE"="10"
 
-rem # INCREASES LATENCY
+; I/O Performance Tuning
+"IO_COMPLETION_POLICY"="0"         ; Immediate completion of I/O requests to minimize latency.
+"IO_REQUEST_LIMIT"="1024"          ; Increases the number of simultaneous I/O requests.
+"DISK_MAX_PENDING_IO"="0"          ; No pending I/O for disk operations, reducing read/write latency.
+"IO_PRIORITY"="0"                  ; Maximize I/O priority for all operations to minimize bottlenecks.
+"DISK_MAX_PENDING_INTERRUPTS"="0"
+"IO_MAX_PENDING_INTERRUPTS"="0"
 
-rem # !!! WARNING !!!
+; Power Management and Performance
+"POWER_THROTTLE_POLICY"="0"        ; Disables power throttling, ensuring high performance at all times.
+"POWER_IDLE_TIMEOUT"="0"           ; Disables idle timeout to maintain continuous high performance.
+"CPU_POWER_POLICY"="1"             ; Enforces high-performance power policy, disabling all power-saving features.
+"DISABLE_DYNAMIC_TICK"="yes"
 
-rem # https://www.youtube.com/watch?v=WIRBvYpjPiI
+; Memory and Latency Tuning
+"MEMORY_MAX_ALLOCATION"="0"     ; Increase memory allocation to allow more data in memory for faster access.
+"MEMORY_LATENCY_POLICY"="0"        ; Minimizes memory latency, optimizing for faster memory access.
+"MEMORY_PREFETCH_POLICY"="2"       ; Enables memory prefetch to speed up data access in memory.
+"MEMORY_MAX_PENDING_INTERRUPTS"="0"
+"DWM_MAX_PENDING_INTERRUPTS"="0"
+"DWM_COMPOSITOR_MAX_PENDING_INTERRUPTS"="0"
 
-PAUSE
+; Network and Connectivity Tuning
+"NETWORK_BUFFER_SIZE"="512"       ; Increases network buffer size for faster throughput.
+"NETWORK_INTERRUPT_COALESCING"="0" ; Disables interrupt coalescing for lower network latency.
+"NETWORK_MAX_PENDING_INTERRUPTS"="0"
 
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "CPU_MAX_PENDING_INTERRUPTS" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "CPU_MAX_PENDING_IO" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "CPU_IDLE_POLICY" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "CPU_BOOST_POLICY" /t REG_DWORD /d "2" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "CPU_MAX_FREQUENCY" /t REG_DWORD /d "100" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "CPU_INTERRUPT_BALANCE_POLICY" /t REG_DWORD /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "MKL_DEBUG_CPU_TYPE" /t REG_DWORD /d "10" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "IO_COMPLETION_POLICY" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "IO_REQUEST_LIMIT" /t REG_DWORD /d "1024" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "DISK_MAX_PENDING_IO" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "IO_PRIORITY" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "DISK_MAX_PENDING_INTERRUPTS" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "IO_MAX_PENDING_INTERRUPTS" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "POWER_THROTTLE_POLICY" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "POWER_IDLE_TIMEOUT" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "CPU_POWER_POLICY" /t REG_DWORD /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "DISABLE_DYNAMIC_TICK" /t REG_SZ /d "yes" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "MEMORY_MAX_ALLOCATION" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "MEMORY_LATENCY_POLICY" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "MEMORY_PREFETCH_POLICY" /t REG_DWORD /d "2" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "MEMORY_MAX_PENDING_INTERRUPTS" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "DWM_MAX_PENDING_INTERRUPTS" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "DWM_COMPOSITOR_MAX_PENDING_INTERRUPTS" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "NETWORK_BUFFER_SIZE" /t REG_DWORD /d "512" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "NETWORK_INTERRUPT_COALESCING" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "NETWORK_MAX_PENDING_INTERRUPTS" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "TIMER_RESOLUTION" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "THREAD_SCHEDULER_POLICY" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "GPU_MAX_PENDING_INTERRUPTS" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "NETWORK_ADAPTER_PENDING_INTERRUPTS" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "NETWORK_ADAPTER_MAX_PENDING_IO" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "NETWORK_ADAPTER_INTERRUPT_MODERATION" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "NETWORK_ADAPTER_MAX_PENDING_INTERRUPTS" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "STORAGE_DEVICE_PENDING_INTERRUPTS" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "STORAGE_DEVICE_MAX_PENDING_IO" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "STORAGE_DEVICE_COMPLETION_POLICY" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "STORAGE_MAX_PENDING_INTERRUPTS" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "STORAGE_DEVICE_MAX_PENDING_INTERRUPTS" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "USB_DEVICE_PENDING_INTERRUPTS" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "USB_DEVICE_MAX_PENDING_IO" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "USB_MAX_PENDING_INTERRUPTS" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "USB_DEVICE_MAX_PENDING_INTERRUPTS" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "PCIE_DEVICE_PENDING_INTERRUPTS" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "PCIE_DEVICE_MAX_PENDING_IO" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "PCIE_MAX_PENDING_INTERRUPTS" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "PCIE_DEVICE_MAX_PENDING_INTERRUPTS" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "GPU_PENDING_INTERRUPTS" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "GPU_MAX_PENDING_COMPUTE" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "GPU_MAX_PENDING_RENDER" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "AUDIO_DEVICE_PENDING_INTERRUPTS" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "AUDIO_DEVICE_BUFFER_SIZE" /t REG_DWORD /d "512" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "AUDIO_MAX_PENDING_INTERRUPTS" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "AUDIO_DEVICE_MAX_PENDING_INTERRUPTS" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "DEVICE_PENDING_INTERRUPTS" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "DEVICE_MAX_PENDING_IO" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "DEVICE_COMPLETION_POLICY" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "DEVICE_MAX_PENDING_INTERRUPTS" /t REG_DWORD /d "0" /f
+; Miscellaneous Performance Tuning
+"TIMER_RESOLUTION"="0"             ; Sets the smallest possible timer resolution for the highest responsiveness.
+"THREAD_SCHEDULER_POLICY"="0"      ; Prioritizes immediate thread scheduling to reduce latency.
+"GPU_MAX_PENDING_INTERRUPTS"="0"   ; Minimizes GPU interrupts for faster rendering.
 
-PAUSE
+; Network Adapter Performance Tuning
+"NETWORK_ADAPTER_PENDING_INTERRUPTS"="0"        ; Ensures no pending interrupts for network devices.
+"NETWORK_ADAPTER_MAX_PENDING_IO"="0"            ; Ensures instant I/O processing for network operations.
+"NETWORK_ADAPTER_INTERRUPT_MODERATION"="0"      ; Disables interrupt moderation for lower network latency.
+"NETWORK_ADAPTER_MAX_PENDING_INTERRUPTS"="0"
+
+; Storage Device (HDD/SSD) Performance Tuning
+"STORAGE_DEVICE_PENDING_INTERRUPTS"="0"         ; Ensures no pending interrupts for storage devices.
+"STORAGE_DEVICE_MAX_PENDING_IO"="0"             ; Ensures storage I/O operations are processed immediately.
+"STORAGE_DEVICE_COMPLETION_POLICY"="0"          ; Forces immediate completion of storage I/O tasks.
+"STORAGE_MAX_PENDING_INTERRUPTS"="0"
+"STORAGE_DEVICE_MAX_PENDING_INTERRUPTS"="0" 
+
+; USB Device Performance Tuning
+"USB_DEVICE_PENDING_INTERRUPTS"="0"             ; No pending interrupts for USB devices.
+"USB_DEVICE_MAX_PENDING_IO"="0"                 ; Processes USB I/O instantly, reducing latency.
+"USB_MAX_PENDING_INTERRUPTS"="0"
+"USB_DEVICE_MAX_PENDING_INTERRUPTS"="0" 
+
+; PCIe Device Performance Tuning
+"PCIE_DEVICE_PENDING_INTERRUPTS"="0"            ; No pending interrupts for PCIe devices.
+"PCIE_DEVICE_MAX_PENDING_IO"="0"                ; Ensures PCIe I/O operations are processed immediately.
+"PCIE_MAX_PENDING_INTERRUPTS"="0"
+"PCIE_DEVICE_MAX_PENDING_INTERRUPTS"="0"
+
+; GPU Performance Tuning
+"GPU_PENDING_INTERRUPTS"="0"                    ; Reduces GPU interrupt queue to zero for immediate processing.
+"GPU_MAX_PENDING_COMPUTE"="0"                   ; Ensures compute operations are processed without delay.
+"GPU_MAX_PENDING_RENDER"="0"                    ; Forces immediate rendering tasks processing.
+
+; Audio Device Performance Tuning
+"AUDIO_DEVICE_PENDING_INTERRUPTS"="0"           ; Ensures no pending interrupts for sound cards.
+"AUDIO_DEVICE_BUFFER_SIZE"="512"                ; Keeps audio buffer size low to reduce latency in sound processing.
+"AUDIO_MAX_PENDING_INTERRUPTS"="0"
+"AUDIO_DEVICE_MAX_PENDING_INTERRUPTS"="0" 
+
+; General Device Tuning
+"DEVICE_PENDING_INTERRUPTS"="0"                 ; Generic setting to ensure no pending interrupts for all devices.
+"DEVICE_MAX_PENDING_IO"="0"                     ; Ensures immediate I/O operations across all devices.
+"DEVICE_COMPLETION_POLICY"="0"                  ; Forces devices to complete tasks instantly.
+"DEVICE_MAX_PENDING_INTERRUPTS"="0"
+
