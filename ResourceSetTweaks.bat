@@ -1,5 +1,8 @@
 rem # Resource Set Tweaks
 
+rem # kizzimo
+rem # Alchemy_Tweaks
+
 rem # !!! WARNING !!!
 
 rem # BREAKS SYSTEM
@@ -9,6 +12,8 @@ rem # !!! WARNING !!!
 rem # TESTING ONLY
 
 rem # https://www.youtube.com/watch?v=HL8v7bhqiiM
+
+rem # https://www.youtube.com/watch?v=U1xFWbJBEMk
 
 PAUSE
 
