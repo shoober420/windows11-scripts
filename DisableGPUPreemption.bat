@@ -6,6 +6,8 @@ rem # INCREASES LATENCY
 
 rem # !!! WARNING !!!
 
+rem # https://www.youtube.com/watch?v=B-3JgtuurhQ
+
 PAUSE
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "EnablePreemption" /t REG_DWORD /d "0" /f
