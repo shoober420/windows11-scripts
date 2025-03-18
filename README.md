@@ -722,6 +722,10 @@ DisableDistributeTimers.bat / EnableDistributeTimers.bat
 
 DisableGPUPreemption.bat / EnableGPUPreemption.bat
 
+ResourceSets.reg
+
+Base+OverTargetPriorities.reg
+
 # Credits
 - https://www.elevenforum.com/members/garlin.5387
 - https://www.elevenforum.com/members/csmc.38355
