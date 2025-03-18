@@ -111,7 +111,6 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - DisableDHCP.bat / StaticIPConnection.bat
  - DisablePowerManagement.ps1
  - RAMTweaks.bat
- - DisableEdge.bat
  - ThreadQuantum.bat
  - UseLargePages.bat
  - RemoveRemoteDesktopConnection.bat
