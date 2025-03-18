@@ -30,7 +30,7 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\DWM" /v "InteractionOutputPredictionDis
 reg add "HKLM\SOFTWARE\Microsoft\Windows\DWM" /v "MPCInputRouterWaitForDebugger" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\DWM" /v "OneCoreNoDWMRawGameController" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\DWM" /v "ResampleInLinearSpace" /t REG_DWORD /d "1" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\DWM" /v "SDRBoostPercentOverride" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\DWM" /v "SDRBoostPercentOverride" /t REG_DWORD /d "1" /f
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\DWM" /v "AnimationAttributionEnabled" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\DWM" /v "AnimationsShiftKey" /t REG_DWORD /d "0" /f
