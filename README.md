@@ -718,6 +718,8 @@ DisableDistributeTimers.bat / EnableDistributeTimers.bat
 # Credits
 - https://www.elevenforum.com/members/garlin.5387
 - https://www.elevenforum.com/members/csmc.38355
+- jdallmann
+- Kizzimo
 - foss-lover34
 - https://github.com/AlchemyTweaks
 - https://github.com/TairikuOokami
