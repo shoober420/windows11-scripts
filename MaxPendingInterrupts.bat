@@ -1,4 +1,17 @@
 rem # Max Pending Interrupts
+
+rem # kizzimo
+
+rem # !!! WARNING !!!
+
+rem # INCREASES LATENCY
+
+rem # !!! WARNING !!!
+
+rem # https://www.youtube.com/watch?v=WIRBvYpjPiI
+
+PAUSE
+
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "CPU_MAX_PENDING_INTERRUPTS" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "CPU_MAX_PENDING_IO" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "CPU_IDLE_POLICY" /t REG_DWORD /d "0" /f
