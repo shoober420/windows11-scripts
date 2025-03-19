@@ -166,4 +166,9 @@ deltree /y c:\windows\cookies
 deltree /y c:\windows\recent
 deltree /y c:\windows\spool\printers
 
+rem # Deletes Temp and Cache
+rmdir /s /q "C:\Windows\Temp"
+rmdir /s /q "%USERPROFILE%\AppData\Local\Temp"
+DEL /F /S /Q /A %LocalAppData%\Microsoft\Windows\Explorer\thumbcache_*.db
+
 PAUSE
