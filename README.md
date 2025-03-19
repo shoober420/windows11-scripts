@@ -92,7 +92,7 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - DNS.ps1
  - PowerPlanUltra.bat
  - DisableFullscreenOptimizations.bat
- - AMDAdrenalinSettingsPERF.bat / AMDAdrenalinSettingsHQ.bat
+ - AMDAdrenalinSettingsPERF.bat / AMDAdrenalinSettingsHQ.bat / EnableAMDGPU_DalDramClockChangeLatencyNs.bat
  - NVIDIAPerformanceProfile.nip / NVIDIAHighQualityProfileOGL.nip / NVIDIAHighQualityProfileD3D.nip
  - DisableScheduledTasks.ps1 / DisableScheduledTasks.bat
  - DisableIntegratedGPU.ps1
