@@ -113,6 +113,11 @@ foreach ($Monitor in @(Get-WmiObject -Namespace root\wmi -Class WmiMonitorID | W
     $Which = Read-Host '6bpc = 1 / 8bpc = 2 / 10bpc = 3 / 12bpc = 4 \ Enter Value'
 switch ($Which) {
   1 {
+     New-Item -Path "HKLM:SYSTEM\ControlSet001\Control\Class\$ClassGUID2\DAL3_DATA\common\$DisplayPath" -ItemType Directory -Force
+     New-Item -Path "HKLM:SYSTEM\CurrentControlSet\Control\Class\$ClassGUID2\DAL3_DATA\common\$DisplayPath" -ItemType Directory -Force
+     New-Item -Path "HKLM:SYSTEM\ControlSet001\Control\Video\$VideoID\0000\DAL3_DATA\common\$DisplayPath" -ItemType Directory -Force
+     New-Item -Path "HKLM:SYSTEM\CurrentControlSet\Control\Video\$VideoID\0000\DAL3_DATA\common\$DisplayPath" -ItemType Directory -Force
+
      New-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Class\$ClassGUID2\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x01,0x00,0x00,0x00)) -PropertyType Binary -Force
      New-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Class\$ClassGUID2\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x01,0x00,0x00,0x00)) -PropertyType Binary -Force
      New-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Video\$VideoID\0000\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x01,0x00,0x00,0x00)) -PropertyType Binary -Force
@@ -121,6 +126,11 @@ switch ($Which) {
 
 
   2 {
+     New-Item -Path "HKLM:SYSTEM\ControlSet001\Control\Class\$ClassGUID2\DAL3_DATA\common\$DisplayPath" -ItemType Directory -Force
+     New-Item -Path "HKLM:SYSTEM\CurrentControlSet\Control\Class\$ClassGUID2\DAL3_DATA\common\$DisplayPath" -ItemType Directory -Force
+     New-Item -Path "HKLM:SYSTEM\ControlSet001\Control\Video\$VideoID\0000\DAL3_DATA\common\$DisplayPath" -ItemType Directory -Force
+     New-Item -Path "HKLM:SYSTEM\CurrentControlSet\Control\Video\$VideoID\0000\DAL3_DATA\common\$DisplayPath" -ItemType Directory -Force
+
      New-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Class\$ClassGUID2\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x02,0x00,0x00,0x00)) -PropertyType Binary -Force
      New-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Class\$ClassGUID2\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x02,0x00,0x00,0x00)) -PropertyType Binary -Force
      New-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Video\$VideoID\0000\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x02,0x00,0x00,0x00)) -PropertyType Binary -Force
@@ -129,6 +139,11 @@ switch ($Which) {
 
 
   3 {
+     New-Item -Path "HKLM:SYSTEM\ControlSet001\Control\Class\$ClassGUID2\DAL3_DATA\common\$DisplayPath" -ItemType Directory -Force
+     New-Item -Path "HKLM:SYSTEM\CurrentControlSet\Control\Class\$ClassGUID2\DAL3_DATA\common\$DisplayPath" -ItemType Directory -Force
+     New-Item -Path "HKLM:SYSTEM\ControlSet001\Control\Video\$VideoID\0000\DAL3_DATA\common\$DisplayPath" -ItemType Directory -Force
+     New-Item -Path "HKLM:SYSTEM\CurrentControlSet\Control\Video\$VideoID\0000\DAL3_DATA\common\$DisplayPath" -ItemType Directory -Force
+
      New-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Class\$ClassGUID2\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x03,0x00,0x00,0x00)) -PropertyType Binary -Force
      New-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Class\$ClassGUID2\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x03,0x00,0x00,0x00)) -PropertyType Binary -Force
      New-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Video\$VideoID\0000\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x03,0x00,0x00,0x00)) -PropertyType Binary -Force
@@ -136,6 +151,11 @@ switch ($Which) {
 }
 
   4 {
+     New-Item -Path "HKLM:SYSTEM\ControlSet001\Control\Class\$ClassGUID2\DAL3_DATA\common\$DisplayPath" -ItemType Directory -Force
+     New-Item -Path "HKLM:SYSTEM\CurrentControlSet\Control\Class\$ClassGUID2\DAL3_DATA\common\$DisplayPath" -ItemType Directory -Force
+     New-Item -Path "HKLM:SYSTEM\ControlSet001\Control\Video\$VideoID\0000\DAL3_DATA\common\$DisplayPath" -ItemType Directory -Force
+     New-Item -Path "HKLM:SYSTEM\CurrentControlSet\Control\Video\$VideoID\0000\DAL3_DATA\common\$DisplayPath" -ItemType Directory -Force
+
      New-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Class\$ClassGUID2\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x04,0x00,0x00,0x00)) -PropertyType Binary -Force
      New-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Class\$ClassGUID2\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x04,0x00,0x00,0x00)) -PropertyType Binary -Force
      New-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Video\$VideoID\0000\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x04,0x00,0x00,0x00)) -PropertyType Binary -Force
