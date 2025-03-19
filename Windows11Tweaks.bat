@@ -1202,15 +1202,6 @@ rem # Page Table Entries amount
 rem # 0 = System Default
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "SystemPages" /t REG_DWORD /d "0" /f
 
-
-
-rem # Deletes Temp and Cache
-rmdir /s /q "C:\Windows\Temp"
-rmdir /s /q "%USERPROFILE%\AppData\Local\Temp"
-DEL /F /S /Q /A %LocalAppData%\Microsoft\Windows\Explorer\thumbcache_*.db
-
-
-
 rem # Visual effects options BEST PERFORMANCE
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AlwaysHibernateThumbnails" /t REG_DWORD /d "0" /f
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "EnableAeroPeek" /t REG_DWORD /d "0" /f
