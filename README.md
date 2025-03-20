@@ -125,6 +125,8 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - Windows11Tweaks.bat
  - DisableServicesInternet.bat
  - DisableComponents.bat
+ - DisableStartMenu.bat
+ - DisableShellExperienceHost.bat
  - MTU.bat
  - DeviceManager.bat
 
