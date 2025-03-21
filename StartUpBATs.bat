@@ -31,6 +31,9 @@ cd %USERPROFILE%\Downloads\windows11-scripts-main
 call DisableAppX.bat
 
 cd %USERPROFILE%\Downloads\windows11-scripts-main
-call DisableWindowsConnectionManager.bat
+call DisableindowsConnectionManager.bat
+
+cd %USERPROFILE%\Downloads\windows11-scripts-main
+call DWM_ExclusiveModeFramerateAveragingPeriodMs.bat
 
 PAUSE
