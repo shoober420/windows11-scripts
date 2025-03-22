@@ -131,7 +131,7 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - DisableShellExperienceHost.bat
  - MTU.bat
  - DeviceManager.bat
- - WallpaperWindows98Teal.bat
+ - WallpaperSolidColor.bat
 
 NOTE:
 If at any point during the process you get stuck at "Just a moment..." screen before login, press CTRL+ALT+DEL to force login screen to show
@@ -737,7 +737,7 @@ DisableShellInfrastructureHost.bat / EnableShellInfrastructureHost.bat
 
 DWM_ExclusiveModeFramerateAveragingPeriodMs.bat
 
-WallpaperWindows98Teal.bat
+WallpaperSolidColor.bat
 
 # Credits
 - https://www.elevenforum.com/members/garlin.5387
