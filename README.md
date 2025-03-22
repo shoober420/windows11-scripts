@@ -122,7 +122,7 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - Base+OverTargetPriorities.reg
  - BCDEDIT_Tweaks.bat
  - SetTimerResolution.bat
- - DWM_ExclusiveModeFramerateAveragingPeriodMs tweak.bat
+ - DWM_ExclusiveModeFramerateAveragingPeriodMs.bat
  - DWM_Tweaks.bat
  - Windows11Tweaks.bat
  - DisableServicesInternet.bat
