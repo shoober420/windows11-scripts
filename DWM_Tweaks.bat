@@ -65,7 +65,11 @@ rem # Disable DWM Input
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Windows" /v "DwmInputUsesIoCompletionPort" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Windows" /v "EnableDwmInputProcessing" /t REG_DWORD /d "0" /f
 
-rem # Too low of a value can cause game freezing (default 0x3e8 / 1000)
+rem # rem # https://sites.google.com/site/tweakradje/windows/windows-tweaking
+
+rem # Too low of a value can cause game freezing
+rem # Default 0x3e8 = 1000
+rem # 0xfa = 250
 rem # Can be set lower when using SetTimerResolution -5000 (0.5ms)
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm\ExtendedComposition" /v "ExclusiveModeFramerateAveragingPeriodMs" /t REG_DWORD /d "0x3e8" /f
 
