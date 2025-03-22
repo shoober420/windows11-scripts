@@ -12,6 +12,12 @@ rem # !!! WARNING !!!
 
 PAUSE
 
+rem # Executes SetTimerResolution.exe
+rem # https://github.com/valleyofdoom/TimerResolution
+
+cd %USERPROFILE%\Downloads\windows11-scripts-main
+call SetTimerResolution.bat
+
 rem # Default 1000
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm\ExtendedComposition" /v "ExclusiveModeFramerateAveragingPeriodMs" /t REG_DWORD /d "100" /f
 
