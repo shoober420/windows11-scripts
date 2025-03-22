@@ -20,6 +20,11 @@ rem # HEX: #008080
 rem # RGB: (0 128 128)
 reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "0 128 128" /f
 
+rem # Windows 95/98 Blue
+rem # HEX: #000082
+rem # RGB: (0 0 130)
+rem reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "0 0 130" /f
+
 rem # Windows 2000/XP Light Blue
 rem # HEX: #3A6EA5
 rem # RGB: (58 110 165)
