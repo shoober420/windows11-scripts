@@ -18,7 +18,9 @@ rem # https://github.com/valleyofdoom/TimerResolution
 cd %USERPROFILE%\Downloads\windows11-scripts-main
 call SetTimerResolution.bat
 
-rem # Default 0x3e8 / 1000
+rem # Default 0x3e8 = 1000
+rem # 0xfa = 250
+rem # 0x64 = 100
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm\ExtendedComposition" /v "ExclusiveModeFramerateAveragingPeriodMs" /t REG_DWORD /d "0x64" /f
 
 PAUSE
