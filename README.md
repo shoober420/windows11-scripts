@@ -748,6 +748,7 @@ WallpaperSolidColor.bat
 - https://github.com/AlchemyTweaks
 - https://github.com/TairikuOokami
 - https://github.com/ionuttbara
+- https://github.com/rahilpathan
 - https://github.com/ChrisTitusTech
 - https://github.com/raspi
 - https://github.com/simeononsecurity
