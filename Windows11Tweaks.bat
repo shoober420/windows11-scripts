@@ -2823,6 +2823,8 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurePipeServers\winreg" /v "Rem
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "EnableCooling" /t REG_DWORD /d "0" /f
 
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\Xaml" /v "AllowFailFastOnAnyFailure" /t REG_DWORD /d "0" /f
+
 
 
 rem # Enables Cloudflare DNS
