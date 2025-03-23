@@ -2671,6 +2671,8 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer" /v "AltTabSett
 rem # Disable Scroll Inactive Windows
 reg add "HKCU\Control Panel\Desktop" /v "MouseWheelRouting" /t REG_DWORD /d "0" /f
 
+reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v "DelayedDesktopSwitchTimeout" /t REG_DWORD /d "0" /f
+
 
 
 rem # Enables Cloudflare DNS
