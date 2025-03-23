@@ -2665,6 +2665,9 @@ reg delete "HKLM\SOFTWARE\Microsoft\Ole" /v "MachineLaunchRestriction" /f
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Reliability" /v "TimeStampInterval" /t REG_DWORD /d "0" /f
 
+rem # Old Alt Tab
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer" /v "AltTabSettings" /t REG_DWORD /d "1" /f
+
 
 
 rem # Enables Cloudflare DNS
