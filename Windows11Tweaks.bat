@@ -2668,6 +2668,9 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Reliability" /v "TimeSta
 rem # Old Alt Tab
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer" /v "AltTabSettings" /t REG_DWORD /d "1" /f
 
+rem # Disable Scroll Inactive Windows
+reg add "HKCU\Control Panel\Desktop" /v "MouseWheelRouting" /t REG_DWORD /d "0" /f
+
 
 
 rem # Enables Cloudflare DNS
