@@ -240,7 +240,7 @@ reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD\DXVA" /v "Fleshtone
 reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD\DXVA" /v "Fleshtone" /t REG_BINARY /d "350030000000" /f
 reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD\DXVA" /v "ColorVibrance_ENABLE" /t REG_BINARY /d "31000000" /f
 reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD\DXVA" /v "ColorVibrance" /t REG_BINARY /d "340030000000" /f
-reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\DXVA" /v "Detail_ENABLE" /t REG_BINARY /d "30000000" /f
+reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD\DXVA" /v "Detail_ENABLE" /t REG_BINARY /d "30000000" /f
 reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD\DXVA" /v "Detail" /t REG_BINARY /d "310030000000" /f
 reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD\DXVA" /v "Denoise_ENABLE" /t REG_BINARY /d "30000000" /f
 reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD\DXVA" /v "Denoise" /t REG_BINARY /d "360034000000" /f
