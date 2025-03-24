@@ -246,7 +246,7 @@ reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD\DXVA" /v "Denoise_E
 reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD\DXVA" /v "Denoise" /t REG_BINARY /d "360034000000" /f
 reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD\DXVA" /v "TrueWhite" /t REG_BINARY /d "30000000" /f
 reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD\DXVA" /v "OvlTheaterMode" /t REG_BINARY /d "30000000" /f
-reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\DXVA" /v "StaticGamma" /t REG_BINARY /d "3100300030000000" /f
+reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD\DXVA" /v "StaticGamma" /t REG_BINARY /d "3100300030000000" /f
 reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD\DXVA" /v "InternetVideo" /t REG_BINARY /d "30000000" /f
 )
 )
