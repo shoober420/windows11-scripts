@@ -2854,6 +2854,9 @@ rem # Disable News & Interests
 reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\default\Feeds" /v "FeedsEnabled" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Feeds" /v "EnableFeeds" /t REG_DWORD /d "0" /f
 
+rem # Disable Bluetooth swift pair notifications
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Bluetooth" /v "QuickPair" /t REG_DWORD /d "0" /f
+
 
 
 rem # Enables Cloudflare DNS
