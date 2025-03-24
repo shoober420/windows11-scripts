@@ -5,6 +5,10 @@ rem # Last key may vary from 0000 to 0001 if dual NVIDIA/AMD machine is used
 
 rem # https://forums.guru3d.com/threads/radeonmod-tweak-utility.403389/page-12
 
+rem # REBOOT REQUIRED
+
+PAUSE
+
 reg add "HKCU\Software\AMD\CN" /v "WizardProfile" /t REG_SZ /d "PROFILE_CUSTOM" /f
 
 for /f %%i in ('wmic path Win32_VideoController get PNPDeviceID^| findstr /L "PCI\VEN_"') do (
