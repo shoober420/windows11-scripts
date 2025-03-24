@@ -1,4 +1,4 @@
-rem Enable Bluetooth
+rem # Enable Bluetooth
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\bthserv" /v "Start" /t REG_DWORD /d "2" /f
 net start bthserv
@@ -47,5 +47,7 @@ net start BthMini
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\BTHMODEM" /v "Start" /t REG_DWORD /d "2" /f
 net start BTHMODEM
+
+reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\Bluetooth" /v "AllowAdvertising" /t REG_DWORD /d "1" /f
 
 PAUSE
