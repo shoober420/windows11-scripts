@@ -1,5 +1,13 @@
 rem # Disable WMI (Windows Management Instrumentation)
 
+rem # !!! WARNING !!!
+
+rem # Breaks shell script code from running
+
+rem # !!! WARNING !!!
+
+PAUSE
+
 net stop Winmgmt
 sc config Winmgmt start= disabled
 
