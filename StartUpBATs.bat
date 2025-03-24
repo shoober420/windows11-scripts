@@ -22,9 +22,6 @@ cd %USERPROFILE%\Downloads\windows11-scripts-main
 call DisableWindowsUpdate.bat
 
 cd %USERPROFILE%\Downloads\windows11-scripts-main
-call DisableWMI.bat
-
-cd %USERPROFILE%\Downloads\windows11-scripts-main
 call DisableSENS.bat
 
 cd %USERPROFILE%\Downloads\windows11-scripts-main
@@ -35,5 +32,8 @@ call DisableindowsConnectionManager.bat
 
 cd %USERPROFILE%\Downloads\windows11-scripts-main
 call DWM_ExclusiveModeFramerateAveragingPeriodMs.bat
+
+rem cd %USERPROFILE%\Downloads\windows11-scripts-main
+rem call DisableWMI.bat
 
 PAUSE
