@@ -222,7 +222,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "PowerSaverAuto
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD\DXC" "AllowDelag" /t REG_SZ /d "0" /f
 
 reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD\DXVA" /v "LRTCEnable" /t REG_BINARY /d "30000000" /f
-reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD\DXVA" /v "3to2Pulldown" /t REG_BINARY /d "31000000" /f
+reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD\DXVA" /v "3to2Pulldown" /t REG_BINARY /d "30000000" /f
 reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD\DXVA" /v "MosquitoNoiseRemoval_ENABLE" /t REG_BINARY /d "30000000" /f
 reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD\DXVA" /v "MosquitoNoiseRemoval" /t REG_BINARY /d "350030000000" /f
 reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD\DXVA" /v "Deblocking_ENABLE" /t REG_BINARY /d "30000000" /f
@@ -231,8 +231,8 @@ reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD\DXVA" /v "DemoMode"
 reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD\DXVA" /v "OverridePA" /t REG_BINARY /d "30000000" /f
 reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD\DXVA" /v "DynamicRange" /t REG_BINARY /d "30000000" /f
 reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD\DXVA" /v "StaticGamma_ENABLE" /t REG_BINARY /d "30000000" /f
-reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD\DXVA" /v "BlueStretch_ENABLE" /t REG_BINARY /d "31000000" /f
-reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD\DXVA" /v "BlueStretch" /t REG_BINARY /d "31000000" /f
+reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD\DXVA" /v "BlueStretch_ENABLE" /t REG_BINARY /d "30000000" /f
+reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD\DXVA" /v "BlueStretch" /t REG_BINARY /d "30000000" /f
 reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD\DXVA" /v "LRTCCoef" /t REG_BINARY /d "3100300030000000" /f
 reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD\DXVA" /v "DynamicContrast_ENABLE" /t REG_BINARY /d "30000000" /f
 reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD\DXVA" /v "WhiteBalanceCorrection" /t REG_BINARY /d "30000000" /f
