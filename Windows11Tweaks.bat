@@ -13,6 +13,7 @@ rem # https://github.com/AlchemyTweaks
 rem # https://github.com/TairikuOokami
 rem # https://github.com/ionuttbara
 rem # https://github.com/Hyyote
+rem # https://github.com/NicholasBly
 rem # https://github.com/rahilpathan
 rem # https://github.com/ChrisTitusTech
 rem # https://github.com/raspi
