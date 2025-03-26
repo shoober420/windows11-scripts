@@ -112,6 +112,8 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - RAMTweaks.bat
  - ThreadQuantum.bat
  - UseLargePages.bat
+ - EnableClearPageFileAtShutdown.bat
+ - DisablePageFile.bat
  - RemoveRemoteDesktopConnection.bat
  - RemoveWindowsApps.bat
  - RemoveWindowsFeatures.bat
