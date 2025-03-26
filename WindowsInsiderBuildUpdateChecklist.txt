@@ -216,6 +216,9 @@ Download Notepad++
 Download Microsoft Visual C++ Redistributables
  - VCRedist.bat
 
+Download Chromium
+ - https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/
+
 Download Chrome Canary
  - InstallChromeCanary.bat
 
