@@ -3,6 +3,9 @@ rem # Enable AMDGPU DalDramClockChangeLatencyNs tweak
 rem # !!! WARNING !!!
 
 rem # DalDramClockChangeLatencyNs tweak can cause screen flickering
+
+rem # NOT RECOMMENDED FOR 60HZ OR LOW REFRESH RATE MONITORS, FEELS CHOPPY
+
 rem # Run DisableAMD_DalDramClockChangeLatencyNs.bat to fix
 
 rem # !!! WARNING !!!
