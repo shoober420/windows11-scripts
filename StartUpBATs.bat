@@ -16,7 +16,10 @@ cd %USERPROFILE%\Downloads\windows11-scripts-main
 call StartGraphicsPerfSvc.bat
 
 cd %USERPROFILE%\Downloads\windows11-scripts-main
-call DisableServices.bat
+call DisableServicesInternet.bat
+
+cd %USERPROFILE%\Downloads\windows11-scripts-main
+call DisableServicesWindows.bat
 
 cd %USERPROFILE%\Downloads\windows11-scripts-main
 call DisableWindowsUpdate.bat
