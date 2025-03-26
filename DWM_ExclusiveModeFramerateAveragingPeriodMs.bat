@@ -20,10 +20,11 @@ call SetTimerResolution.bat
 
 rem # https://sites.google.com/site/tweakradje/windows/windows-tweaking
 
-rem # Default 0x3e8 = 1000
+rem # Default (Hex to Decimal) 0x3e8 = 1000
+rem # 0x2ee = 750
 rem # 0x1f4 = 500
 rem # 0xfa = 250
 rem # 0x64 = 100
-reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm\ExtendedComposition" /v "ExclusiveModeFramerateAveragingPeriodMs" /t REG_DWORD /d "0x1f4" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm\ExtendedComposition" /v "ExclusiveModeFramerateAveragingPeriodMs" /t REG_DWORD /d "0x3e8" /f
 
 PAUSE
