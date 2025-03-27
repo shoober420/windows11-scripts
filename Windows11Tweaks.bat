@@ -2855,6 +2855,12 @@ compact /compactos:never
 rem # Disable WER Passive Polling
 reg add "HKLM\Software\Policies\Microsoft\Windows\NetworkConnectivityStatusIndicator" /v "DisablePassivePolling" /t REG_DWORD /d "1" /f
 
+rem # Disable Reserve Storage
+rem # https://www.elevenforum.com/t/enable-or-disable-reserved-storage-in-windows-11.21389/
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\ReserveManager" /v "MiscPolicyInfo" /t REG_DWORD /d "2" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\ReserveManager" /v "PassedPolicy" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\ReserveManager" /v "ShippedWithReserves" /t REG_DWORD /d "0" /f
+
 
 
 rem # Enables Cloudflare DNS
