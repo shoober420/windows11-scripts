@@ -2846,6 +2846,15 @@ reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Feeds" /v "EnableFeeds
 rem # Disable Bluetooth swift pair notifications
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Bluetooth" /v "QuickPair" /t REG_DWORD /d "0" /f
 
+rem # Decrypt C:
+cipher /d /s:C:\
+
+rem # Disable OS Compression
+compact /compactos:never
+
+rem # Disable WER Passive Polling
+reg add "HKLM\Software\Policies\Microsoft\Windows\NetworkConnectivityStatusIndicator" /v "DisablePassivePolling" /t REG_DWORD /d "1" /f
+
 
 
 rem # Enables Cloudflare DNS
