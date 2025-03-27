@@ -438,6 +438,9 @@ powershell Remove-WindowsCapability -Name Virtual -Online
 
 powershell Remove-WindowsCapability -Name Hello -Online
 
+rem # Disable Reserved Storage
+DISM /Online /Set-ReservedStorageState /State:Disabled /Quiet /NoRestart
+
 rem # REBOOT RECOMMENDED
 
 PAUSE
