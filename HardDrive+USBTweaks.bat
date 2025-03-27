@@ -216,4 +216,9 @@ reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "CopyFileOverlapped
 
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "CopyFileBufferedSynchronousIo" /t REG_DWORD /d "0x40" /f
 
+rem # USB Io Queue Work Item Tweaks
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\xusb22\Parameters" /v "IoQueueWorkItem" /t REG_DWORD /d "0xa" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\USBXHCI\Parameters" /v "IoQueueWorkItem" /t REG_DWORD /d "0xa" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\usbhub\Parameters" /v "IoQueueWorkItem" /t REG_DWORD /d "0xa" /f
+
 PAUSE
