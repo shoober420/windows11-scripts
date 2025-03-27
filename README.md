@@ -133,6 +133,7 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - DisableShellExperienceHost.bat
  - MTU.bat
  - DeviceManager.bat
+ - Decrypt+OSCompression.bat
  - WallpaperSolidColor.bat
 
 NOTE:
@@ -743,6 +744,10 @@ DisableShellInfrastructureHost.bat / EnableShellInfrastructureHost.bat
 DWM_ExclusiveModeFramerateAveragingPeriodMs.bat
 
 WallpaperSolidColor.bat
+
+DisableWLAN_AutoConfig.bat / EnableWLAN_AutoConfig.bat
+
+Decrypt+OSCompression.bat
 
 # Credits
 - https://www.elevenforum.com/members/garlin.5387
