@@ -63,6 +63,8 @@ msc > Display Adapters > Intel * > Properties > Driver tab > Uninstall device > 
 
  - AMD Vulkan Drivers: https://www.amd.com/en/resources/support-articles/release-notes/RN-RAD-WIN-VULKAN.html
 
+- Dell Command Update (https://www.dell.com/support/kbdoc/en-us/000177325/dell-command-update) (Update BIOS and drivers)
+
 - NEVER INSTALL Dell SupportAssist (https://www.dell.com/support/home/en-us?app=drivers)
 
 - Windows Canary ISO
