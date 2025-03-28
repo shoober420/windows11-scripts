@@ -147,6 +147,8 @@ Make sure to disable any unused network adapters under Device Manager, or script
 
 Update BIOS
 
+Update TPM
+
 Tweak BIOS
 
 RESTART
