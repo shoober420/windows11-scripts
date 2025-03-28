@@ -59,6 +59,8 @@ msc > Display Adapters > Intel * > Properties > Driver tab > Uninstall device > 
 
  - Intel Graphics Command Center (https://www.intel.com/content/www/us/en/products/docs/graphics/graphics-command-center.html)
 
+ - Dell TPM 2.0 Firmware Update (fixes "Alert! TPM Device is not Detected")
+
  - AMD BETA: https://www.techpowerup.com/download/amd-radeon-graphics-drivers/
 
  - AMD Vulkan Drivers: https://www.amd.com/en/resources/support-articles/release-notes/RN-RAD-WIN-VULKAN.html
