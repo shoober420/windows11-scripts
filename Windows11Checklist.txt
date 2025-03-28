@@ -64,6 +64,8 @@ msc > Display Adapters > Intel * > Properties > Driver tab > Uninstall device > 
  - AMD Vulkan Drivers: https://www.amd.com/en/resources/support-articles/release-notes/RN-RAD-WIN-VULKAN.html
 
 - Dell Command Update (https://www.dell.com/support/kbdoc/en-us/000177325/dell-command-update) (Update BIOS and drivers)
+ +++ Use BIOS Flash Update at boot options if BIOS doesnt upgrade in Dell Command
+ +++ Legacy Options ROMs and Legacy boot may need enabled for OTHER OPTIONS to show at F12 Boot Menu
 
 - NEVER INSTALL Dell SupportAssist (https://www.dell.com/support/home/en-us?app=drivers)
 
