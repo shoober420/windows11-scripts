@@ -1,7 +1,8 @@
  Run windows update
 
 Download
- - BIOS for motherboard
+ - BIOS update for motherboard
+ - TPM update for motherboard
  - Nvidia vulkan beta driver
  - AMD Adrenalin Software
  - Intel Driver & support assistant (Intel DSA) / Intel Wireless Bluetooth - Intel PROSet/Wireless WiFi
