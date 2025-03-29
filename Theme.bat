@@ -20,6 +20,9 @@ rem # Transparency Effects
 rem # 1 = Enabled \ 0 = Disabled
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "EnableTransparency" /t REG_DWORD /d "0" /f
 
+rem # Show accent color on title bars and window borders
+reg add "HKCU\Software\Microsoft\Windows\DWM" /v "EnableWindowColorization" /t REG_DWORD /d "0" /f
+
 rem # Taskbar Alignment / 0 - Left / 1 - Center
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "TaskbarAl" /t REG_DWORD /d "0" /f
 
