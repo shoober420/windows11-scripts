@@ -11,6 +11,11 @@ PAUSE
 rem # Windows Standard Mouse Cursor (None)
 reg add "HKCU\Control Panel\Cursors" /ve /d "" /f
 
+rem # Windows 98 Recycle Bin
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\DefaultIcon" /ve /d "%SystemRoot%\System32\SHELL32.dll,101" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\DefaultIcon" /v "empty" /t REG_SZ /d "%SystemRoot%\System32\SHELL32.dll,101" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\DefaultIcon" /v "full" /t REG_SZ /d "%SystemRoot%\System32\SHELL32.dll,102" /f
+
 rem # Enable Dark mode
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AppsUseLightTheme" /t REG_DWORD /d "0" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "ColorPrevalence" /t REG_DWORD /d "0" /f
