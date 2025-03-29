@@ -8,6 +8,9 @@ rem # !!! WARNING !!!
 
 PAUSE
 
+rem # Windows Standard Mouse Cursor (None)
+reg add "HKCU\Control Panel\Cursors" /ve /d "" /f
+
 rem # Enable Dark mode
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AppsUseLightTheme" /t REG_DWORD /d "0" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "ColorPrevalence" /t REG_DWORD /d "0" /f
