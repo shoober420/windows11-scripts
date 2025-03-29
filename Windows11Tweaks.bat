@@ -577,17 +577,6 @@ rem reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /
 rem Disable specific Windows Key Hotkeys only (like R = Win+R)
 rem reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "DisabledHotkeys" /t REG_EXPAND_SZ /d "R" /f
 
-
-
-rem =================================== Windows Settings ===================================
-rem ----------------------------------- Personalization ------------------------------------
-rem ....................................... Colors .........................................
-
-rem - Transparency Effects \ 1 = Enabled \ 0 = Disabled
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "EnableTransparency" /t REG_DWORD /d "0" /f
-
-
-
 rem =================================== Windows Settings ===================================
 rem ----------------------------------- Personalization ------------------------------------
 rem ..................................... Lock screen ......................................
