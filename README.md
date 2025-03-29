@@ -134,6 +134,7 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - MTU.bat
  - DeviceManager.bat
  - WallpaperSolidColor.bat
+ - Theme.bat
 
   - Decrypt+OSCompression.bat
 
@@ -751,6 +752,8 @@ WallpaperSolidColor.bat
 DisableWLAN_AutoConfig.bat / EnableWLAN_AutoConfig.bat
 
 Decrypt+OSCompression.bat
+
+Theme.bat
 
 # Credits
 - https://www.elevenforum.com/members/garlin.5387
