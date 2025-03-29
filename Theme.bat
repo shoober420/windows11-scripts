@@ -16,8 +16,8 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\CLSID\{645FF040
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\DefaultIcon" /v "empty" /t REG_SZ /d "%SystemRoot%\System32\SHELL32.dll,101" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\DefaultIcon" /v "full" /t REG_SZ /d "%SystemRoot%\System32\SHELL32.dll,102" /f
 
-rem # Windows 98 Control Panel Icon
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\CLSID"\{5399E694-6CE5-4D6C-8FCE-1D8870FDCBA0}\DefaultIcon" /ve /d "%SystemRoot%\System32\SHELL32.dll,35" /f
+rem # Windows 98 Desktop Control Panel Icon
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\CLSID\{21EC2020-3AEA-1069-A2DD-08002B30309D}\DefaultIcon" /ve /d "%SystemRoot%\System32\SHELL32.dll,35" /f
 
 rem # Enable Dark mode
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AppsUseLightTheme" /t REG_DWORD /d "0" /f
