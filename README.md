@@ -135,6 +135,7 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - DeviceManager.bat
  - WallpaperSolidColor.bat
  - Theme.bat
+ - AccentColor.bat
 
   - Decrypt+OSCompression.bat
 
