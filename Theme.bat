@@ -37,8 +37,9 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\DesktopSpotlight\Setting
 rem # Accent color
 rem # Default (Windows 11 Blue / RGB: 0 0 0) = 0xff0078d7
 rem # Navy (Windows 95 Titlebar Blue / RGB: 0 0 95) = 0xff5f0000
-rem # Seafoam (0xffc3b700)
-reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentColor" /t REG_DWORD /d 0xff0078d7" /f
+rem # Seafoam (RGB: 0 183 195) = 0xffc3b700
+rem # Teal (RGB: 0 128 128) = 0xff808000
+reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentColor" /t REG_DWORD /d "0xff808000" /f
 
 rem # Transparency Effects
 rem # 1 = Enabled \ 0 = Disabled
