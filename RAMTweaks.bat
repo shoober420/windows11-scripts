@@ -48,8 +48,9 @@ goto :eof
 
 :8gb
 echo User chose 16GB RAM
-wmic computersystem where name="%computername%" set AutomaticManagedPagefile=False
-wmic pagefileset where name="C:\\pagefile.sys" set InitialSize=8192,MaximumSize=8192
+
+rem wmic computersystem where name="%computername%" set AutomaticManagedPagefile=False
+rem wmic pagefileset where name="C:\\pagefile.sys" set InitialSize=8192,MaximumSize=8192
 
 reg add "HKLM\SYSTEM\ControlSet001\Control" /v "SvcHostSplitThresholdInKB" /t REG_DWORD /d "800000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control" /v "SvcHostSplitThresholdInKB" /t REG_DWORD /d "800000" /f
@@ -63,8 +64,9 @@ goto :end
 
 :16gb
 echo User chose 16GB RAM
-wmic computersystem where name="%computername%" set AutomaticManagedPagefile=False
-wmic pagefileset where name="C:\\pagefile.sys" set InitialSize=16384,MaximumSize=16384
+
+rem wmic computersystem where name="%computername%" set AutomaticManagedPagefile=False
+rem wmic pagefileset where name="C:\\pagefile.sys" set InitialSize=16384,MaximumSize=16384
 
 reg add "HKLM\SYSTEM\ControlSet001\Control" /v "SvcHostSplitThresholdInKB" /t REG_DWORD /d "1000000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control" /v "SvcHostSplitThresholdInKB" /t REG_DWORD /d "1000000" /f
@@ -78,8 +80,9 @@ goto :end
 
 :32gb
 echo User chose 32GB RAM
-wmic computersystem where name="%computername%" set AutomaticManagedPagefile=False
-wmic pagefileset where name="C:\\pagefile.sys" set InitialSize=32768,MaximumSize=32768
+
+rem wmic computersystem where name="%computername%" set AutomaticManagedPagefile=False
+rem wmic pagefileset where name="C:\\pagefile.sys" set InitialSize=32768,MaximumSize=32768
 
 reg add "HKLM\SYSTEM\ControlSet001\Control" /v "SvcHostSplitThresholdInKB" /t REG_DWORD /d "2000000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control" /v "SvcHostSplitThresholdInKB" /t REG_DWORD /d "2000000" /f
@@ -93,8 +96,9 @@ goto :end
 
 :64gb
 echo User chose 64GB RAM
-wmic computersystem where name="%computername%" set AutomaticManagedPagefile=False
-wmic pagefileset where name="C:\\pagefile.sys" set InitialSize=65536,MaximumSize=65536
+
+rem wmic computersystem where name="%computername%" set AutomaticManagedPagefile=False
+rem wmic pagefileset where name="C:\\pagefile.sys" set InitialSize=65536,MaximumSize=65536
 
 reg add "HKLM\SYSTEM\ControlSet001\Control" /v "SvcHostSplitThresholdInKB" /t REG_DWORD /d "4000000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control" /v "SvcHostSplitThresholdInKB" /t REG_DWORD /d "4000000" /f
