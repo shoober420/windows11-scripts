@@ -30,6 +30,7 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "
 rem # Accent color
 rem # Default (Windows 11 Blue / RGB: 0 0 0) = 0xff0078d7
 rem # Navy (Windows 95 Titlebar Blue / RGB: 0 0 95) = 0xff5f0000
+rem # Seafoam (0xffc3b700)
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentColor" /t REG_DWORD /d 0xff0078d7" /f
 
 rem # Transparency Effects
