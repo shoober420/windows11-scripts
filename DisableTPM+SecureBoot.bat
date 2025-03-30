@@ -1,4 +1,5 @@
 rem # Disable TPM and SecureBoot
+rem # Trusted Platform Module
 
 rem # MUST BE LAUNCHED BEFORE WINDOWS 11 INSTALLATION TO DISABLE TPM AND SECUREBOOT
 
