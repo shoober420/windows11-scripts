@@ -18,7 +18,7 @@ echo 4. Teal (Windows 98 Green)
 echo 5. Seafoam
 echo C. Cancel
 echo.
-choice /c 1234C /m "Choose an option :"
+choice /c 12345C /m "Choose an option :"
 
 if 6 EQU %ERRORLEVEL% (
    echo User chose to cancel.
