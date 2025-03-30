@@ -29,8 +29,7 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "
 
 rem # Accent color
 rem # Navy (Windows 95 Titlebar Blue / RGB: 0 0 95) = 0xff5f0000
-rem # Seafoam (Teal) (0xffc3b700)
-reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentColor" /t REG_DWORD /d "0xffc3b700" /f
+reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentColor" /t REG_DWORD /d "0xff5f0000" /f
 
 rem # Transparency Effects
 rem # 1 = Enabled \ 0 = Disabled
