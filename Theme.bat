@@ -27,6 +27,13 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "ColorPrevalence" /t REG_DWORD /d "0" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "SystemUsesLightTheme" /t REG_DWORD /d "0" /f
 
+rem # Background Type
+rem # 0 = Picture / 1 = Solid Color / 2 = Slideshow / 3 = Windows Spotlight
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Wallpapers" /v "BackgroundType" /t REG_DWORD /d "1" /f
+
+rem # Disable Desktop Spotlight
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\DesktopSpotlight\Settings" /v "EnabledState" /t REG_DWORD /d "0" /f
+
 rem # Accent color
 rem # Default (Windows 11 Blue / RGB: 0 0 0) = 0xff0078d7
 rem # Navy (Windows 95 Titlebar Blue / RGB: 0 0 95) = 0xff5f0000
