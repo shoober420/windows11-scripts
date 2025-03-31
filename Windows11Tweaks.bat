@@ -3038,6 +3038,9 @@ reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Search" /v "DisableRem
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Search" /v "BingSearchEnabled" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Search" /v "DisableSearchBoxSuggestions" /t REG_DWORD /d "1" /f
 
+rem # Disable Edge Prelaunch
+reg add "HKCU\Software\Policies\Microsoft\MicrosoftEdge\Main" /v "AllowPrelaunch" /t REG_DWORD /d "0" /f
+
 
 
 rem # Enables Cloudflare DNS
