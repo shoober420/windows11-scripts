@@ -304,8 +304,6 @@ DISM /Online /Disable-Feature /FeatureName:Microsoft-Hyper-V-Management-PowerShe
 
 DISM /Online /Disable-Feature /FeatureName:MFaxServicesClientPackage /Remove /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:MediaPlayback /Remove /NoRestart
-
 DISM /Online /Disable-Feature /FeatureName:LegacyComponents /Remove /NoRestart
 
 DISM /Online /Disable-Feature /FeatureName:Printing-PrintToPDFServices-Features /Remove /NoRestart
