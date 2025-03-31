@@ -2850,6 +2850,46 @@ reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\default\System\AllowTelemetry" /v
 rem # Disable Microsoft Managed Desktop Processing
 reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\default\System\AllowMicrosoftManagedDesktopProcessing" /v "value" /t REG_DWORD /d "0" /f
 
+rem # Disable DiagTrack
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\PwdlessAggregator\{fb3cd94d-95ef-5a73-b35c-6c78451095ef}" /v "Enabled" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{025d2741-697b-5e0e-7e77-9a36140251f7}" /v "Enabled" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{2504bc27-0e8b-5fed-7a9f-d86972086285}" /v "Enabled" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{46b13027-2dfd-46e1-832d-e41e2810e6e5}" /v "Enabled" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{59dd67cc-7ce1-52f8-cf74-fe8a257a2b6b}" /v "Enabled" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{a8b932c2-51ec-5c22-63fc-0115fd79b9e0}" /v "Enabled" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{cee50f59-e321-4691-9bb7-9b75494f6aab}" /v "Enabled" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateHeartbeatScan\{d48679eb-8aa3-4138-be24-f1648C874e49}" /v "Enabled" /t REG_DWORD /d "0" /f
+
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdatePolicyScenarioReliabilityAggregator\{025d2741-697b-5e0e-7e77-9a36140251f7}" /v "Enabled" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdatePolicyScenarioReliabilityAggregator\{59dd67cc-7ce1-52f8-cf74-fe8a257a2b6b}" /v "Enabled" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdatePolicyScenarioReliabilityAggregator\{a8b932c2-51ec-5c22-63fc-0115fd79b9e0}" /v "Enabled" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdatePolicyScenarioReliabilityAggregator\{e77a560c-3696-4ac0-911c-545ceca6be3c}" /v "Enabled" /t REG_DWORD /d "0" /f
+
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateReboot\{18D6CBEB-1E21-500A-27E2-8BA2BEAC7C00}" /v "Enabled" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateReboot\{3D6120A6-0986-51C4-213A-E2975903051D}" /v "Enabled" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateReboot\{59DD67CC-7CE1-52F8-CF74-FE8A257A2B6B}" /v "Enabled" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateReboot\{8BE48F34-1F58-4180-8C12-DBE6E6E71A81}" /v "Enabled" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateReboot\{AC8D9176-9E0-5047-9B60-1AABC45281B8}" /v "Enabled" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateReboot\{B39B8CEA-EAAA-5A74-5794-4948E222C663}" /v "Enabled" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateReboot\{BBC9A2C9-EEED-58D4-9483-6C87118F9EC6}" /v "Enabled" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateReboot\{CEE50F59-E321-4691-9BB7-9B75494F6AAB}" /v "Enabled" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UpdateReboot\{D059A021-6947-44FB-976A-B18C9B73D1D8}" /v "Enabled" /t REG_DWORD /d "0" /f
+
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusFailover\{1377561d-9312-452c-ad13-c4a1c9c906e0}" /v "Enabled" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusFailover\{1a1dfad0-6d37-5521-1d72-1f87dd20423c}" /v "Enabled" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusFailover\{3E0D88DE-AE5C-438A-BB1C-C2E627F8AECB}" /v "Enabled" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusFailover\{76AD4308-DF7C-5F43-E668-FCEA4FA1179D}" /v "Enabled" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusFailover\{b6acef34-fab6-5909-6b6b-b1c2cc84057f}" /v "Enabled" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusFailover\{D1094A14-063E-7A21-A301-F2FE3BA23F62}" /v "Enabled" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\ControlGroups\UusFailover\{EC4BA041-1DFE-5F76-EF6D-0251DA19D178}" /v "Enabled" /t REG_DWORD /d "0" /f
+
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\Host\0" /v "Status" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\Instrumentation\PwdlessAggregator" /v "HbStart" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\Instrumentation\UpdateHeartbeatScan" /v "HbStart" /t REG_DWORD /d "0" /f
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\Instrumentation\UpdatePolicyScenarioReliabilityAggregator" /v "HbStart" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\Instrumentation\UpdateReboot" /v "HbStart" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\Aggregation\Instrumentation\UusFailover" /v "HbStart" /t REG_DWORD /d "0" /f
+
 
 
 rem # Enables Cloudflare DNS
