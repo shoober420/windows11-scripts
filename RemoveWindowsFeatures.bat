@@ -460,7 +460,72 @@ DISM /Online /Remove-Package /PackageName:Microsoft-Windows-ClientForNFS-Infrast
 
 DISM /Online /Remove-Package /PackageName:Microsoft-Windows-TFTP-Client /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:HyperV /NoRestart
+DISM /Online /Disable-Feature /FeatureName:HyperV /Remove /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-ApiSetSchemaExtension-HyperV /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-HyperV-OptionalFeature /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-OneCore-UtilityVm /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-OneCore-Containers /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-OneCore-UtilityVM-Containers /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-UtilityVM-Containers /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-OneCore-Containers /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-Lxss /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-ConfigCI /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-hyper-v-all /NoRestart
+
+DISM /Online /Remove-Package /PackageName:LanguageFeatures-WordBreaking /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-LanguageFeatures /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-WinOcr-Opt /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-TextPrediction-Dictionaries /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-Spelling /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-Hyphenation /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-HgsClient /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Onecore-Identity-TenantRestrictions /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-SearchEngine /NoRestart
+
+DISM /Online /Remove-Package /PackageName:WindowsSearchEngineSKU /NoRestart
+
+
+DISM /Online /Remove-Package /PackageName:RemoteDesktopServices /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-RDC /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-Remote /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-IIS /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-CoreSystem-RemoteFS-Client /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-msmq /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-MSMQ /NoRestart
+
+DISM /Online /Remove-Package /PackageName:MSMQ-Driver /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-COM-MSMQ /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-Help /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-Internet /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-Browser /NoRestart
 
 rem # Disable Reserved Storage
 DISM /Online /Set-ReservedStorageState /State:Disabled /NoRestart
