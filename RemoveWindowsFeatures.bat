@@ -525,6 +525,104 @@ DISM /Online /Remove-Package /PackageName:Microsoft-Windows-Internet /NoRestart
 
 DISM /Online /Remove-Package /PackageName:Microsoft-Windows-Browser /NoRestart
 
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-CEIPEnable /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-FodMetadata /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-ErrorReporting /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-EnterpriseClientSync /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-DiagnosticInfrastructure /NoRestart
+
+DISM /Online /Remove-Package /PackageName:DiskIo-QoS /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-TerminalServices-RemoteApplications-Client-Package /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-TerminalServices-AppCompat-Opt /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-TerminalServices-AppServerClient-Opt /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-MediaPlayback-OC /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Composable-PlatformExtension-DragDropCommon /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Networking-MPSSVC /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-Management-SecureAssessment /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-WinSATMediaFiles /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-FlipGridPWA /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-OutlookPWA /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-ScreenSavers /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-RecoveryDrive /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-RecDisc /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-DirectoryServices-ADAM-Tools-Opt /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-SensorDataService /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-NewTabPageHost /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-TabShellExperience /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-Identity-Foundation /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-PhotoBasic /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-WinOcr /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-Holographic /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-OneCore-Fonts /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-Accessories /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-Media-Streaming /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-Embedded /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-Client-EmbeddedExp /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-DeviceGuard /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-OneCore-VirtualizationBasedSecurity /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-Printing /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-OneCore-WindowsIoT /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-IoTUAP-ShellExt-Tools /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-OneCore-DeviceUpdateCenter /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-DataCenterBridging /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-FCI-Client /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-Dedup-ChunkLibrary /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-AppManagement-UEV /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-AppManagement-AppV /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-DirectoryServices-ADAM-Client /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-PAW /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-ProjFS-OptionalFeature /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-ProjFS /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-MobilePC-Client-Premium /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Server-Help /NoRestart
+
 rem # Disable Reserved Storage
 DISM /Online /Set-ReservedStorageState /State:Disabled /NoRestart
 
