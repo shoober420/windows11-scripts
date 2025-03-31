@@ -54,267 +54,267 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protoc
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\DTLS 1.2\Client" /v "Enabled" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\DTLS 1.2\Client" /v "DisabledByDefault" /t REG_DWORD /d "0" /f
 
-DISM /Online /Disable-Feature /FeatureName:MediaPlayback /NoRestart
+DISM /Online /Disable-Feature /FeatureName:MediaPlayback /Remove /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:Microsoft-Windows-Subsystem-Linux /NoRestart
+DISM /Online /Disable-Feature /FeatureName:Microsoft-Windows-Subsystem-Linux /Remove /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:MSRDC-Infrastructure /NoRestart
+DISM /Online /Disable-Feature /FeatureName:MSRDC-Infrastructure /Remove /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:Printing-Foundation-Features /NoRestart
+DISM /Online /Disable-Feature /FeatureName:Printing-Foundation-Features /Remove /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:Printing-Foundation-InternetPrinting-Client /NoRestart
+DISM /Online /Disable-Feature /FeatureName:Printing-Foundation-InternetPrinting-Client /Remove /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:Printing-PrintToPDFServices-Features /NoRestart
+DISM /Online /Disable-Feature /FeatureName:Printing-PrintToPDFServices-Features /Remove /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:Printing-XPSServices-Features /NoRestart
+DISM /Online /Disable-Feature /FeatureName:Printing-XPSServices-Features /Remove /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:SMB1Protocol /NoRestart
+DISM /Online /Disable-Feature /FeatureName:SMB1Protocol /Remove /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:SearchEngine-Client-Package /NoRestart
+DISM /Online /Disable-Feature /FeatureName:SearchEngine-Client-Package /Remove /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:WCF-TCP-PortSharing45 /NoRestart
+DISM /Online /Disable-Feature /FeatureName:WCF-TCP-PortSharing45 /Remove /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:Windows-Defender-Default-Definitions /NoRestart
+DISM /Online /Disable-Feature /FeatureName:Windows-Defender-Default-Definitions /Remove /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:WorkFolders-Client /NoRestart
+DISM /Online /Disable-Feature /FeatureName:WorkFolders-Client /Remove /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:NetFx3 /NoRestart
+DISM /Online /Disable-Feature /FeatureName:NetFx3 /Remove /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:LegacyComponents /NoRestart
+DISM /Online /Disable-Feature /FeatureName:LegacyComponents /Remove /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:DirectPlay /NoRestart
+DISM /Online /Disable-Feature /FeatureName:DirectPlay /Remove /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:Microsoft-Hyper-V-All /NoRestart
+DISM /Online /Disable-Feature /FeatureName:Microsoft-Hyper-V-All /Remove /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:Microsoft-HyperV-All /NoRestart
+DISM /Online /Disable-Feature /FeatureName:Microsoft-HyperV-All /Remove /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:Microsoft-Hyper-V /NoRestart
+DISM /Online /Disable-Feature /FeatureName:Microsoft-Hyper-V /Remove /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:Microsoft-HyperV /NoRestart
+DISM /Online /Disable-Feature /FeatureName:Microsoft-HyperV /Remove /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:Client-ProjFS /NoRestart
+DISM /Online /Disable-Feature /FeatureName:Client-ProjFS /Remove /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:TelnetClient /NoRestart
+DISM /Online /Disable-Feature /FeatureName:TelnetClient /Remove /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:TFTP /NoRestart
+DISM /Online /Disable-Feature /FeatureName:TFTP /Remove /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:TIFFIFilter /NoRestart
+DISM /Online /Disable-Feature /FeatureName:TIFFIFilter /Remove /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:NetFx4-AdvSrvs /NoRestart
+DISM /Online /Disable-Feature /FeatureName:NetFx4-AdvSrvs /Remove /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:WCF-Services45 /NoRestart
+DISM /Online /Disable-Feature /FeatureName:WCF-Services45 /Remove /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:SimpleTCP /NoRestart
+DISM /Online /Disable-Feature /FeatureName:SimpleTCP /Remove /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:Microsoft-RemoteDesktopConnection /NoRestart
+DISM /Online /Disable-Feature /FeatureName:Microsoft-RemoteDesktopConnection /Remove /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:DirectoryServices-ADAM-Client /NoRestart
+DISM /Online /Disable-Feature /FeatureName:DirectoryServices-ADAM-Client /Remove /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:SmbDirect /NoRestart
+DISM /Online /Disable-Feature /FeatureName:SmbDirect /Remove /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:MSRDC-Infrastructure /NoRestart
+DISM /Online /Disable-Feature /FeatureName:MSRDC-Infrastructure /Remove /NoRestart
 
-DISM /Online /Disable-Feature /FeatureName:Recall /NoRestart
+DISM /Online /Disable-Feature /FeatureName:Recall /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:SNMP /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:SNMP /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:WMISnmpProvider /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:WMISnmpProvider /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:Windows-Identity-Foundation /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:Windows-Identity-Foundation /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:DirectoryServices-ADAM-Client /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:DirectoryServices-ADAM-Client /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-WebServerRole /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-WebServerRole /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-WebServer /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-WebServer /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-CommonHttpFeatures /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-CommonHttpFeatures /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-HttpErrors /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-HttpErrors /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-HttpRedirect /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-HttpRedirect /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-ApplicationDevelopment /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-ApplicationDevelopment /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-NetFxExtensibility /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-NetFxExtensibility /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-NetFxExtensibility45 /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-NetFxExtensibility45 /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-HealthAndDiagnostics /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-HealthAndDiagnostics /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-HttpLogging /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-HttpLogging /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-LoggingLibraries /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-LoggingLibraries /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-RequestMonitor /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-RequestMonitor /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-HttpTracing  /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-HttpTracing  /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-Security /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-Security /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-URLAuthorization /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-URLAuthorization /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-RequestFiltering /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-RequestFiltering /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-IPSecurity /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-IPSecurity /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-Performance /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-Performance /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-HttpCompressionDynamic /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-HttpCompressionDynamic /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-WebServerManagementTools /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-WebServerManagementTools /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-ManagementScriptingTools /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-ManagementScriptingTools /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-IIS6ManagementCompatibility /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-IIS6ManagementCompatibility /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-Metabase /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-Metabase /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:WAS-WindowsActivationService /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:WAS-WindowsActivationService /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:WAS-ProcessModel /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:WAS-ProcessModel /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:WAS-ConfigurationAPI /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:WAS-ConfigurationAPI /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-HostableWebCore /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-HostableWebCore /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-CertProvider /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-CertProvider /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-WindowsAuthentication /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-WindowsAuthentication /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-DigestAuthentication /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-DigestAuthentication /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-ClientCertificateMappingAuthentication /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-ClientCertificateMappingAuthentication /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-IISCertificateMappingAuthentication /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-IISCertificateMappingAuthentication /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-ODBCLogging /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-ODBCLogging /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-StaticContent /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-StaticContent /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-DefaultDocument /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-DefaultDocument /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-DirectoryBrowsing /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-DirectoryBrowsing /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-WebDAV /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-WebDAV /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-WebSockets /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-WebSockets /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-ApplicationInit /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-ApplicationInit /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-ASPNET /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-ASPNET /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-ASPNET45 /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-ASPNET45 /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-ASP /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-ASP /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-CGI /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-CGI /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-ISAPIExtensions /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-ISAPIExtensions /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-ISAPIFilter /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-ISAPIFilter /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-ServerSideIncludes /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-ServerSideIncludes /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-CustomLogging /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-CustomLogging /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-BasicAuthentication /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-BasicAuthentication /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-HttpCompressionStatic /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-HttpCompressionStatic /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-ManagementConsole /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-ManagementConsole /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-ManagementService /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-ManagementService /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-WMICompatibility /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-WMICompatibility /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-LegacyScripts /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-LegacyScripts /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-LegacySnapIn /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-LegacySnapIn /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-FTPServer /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-FTPServer /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-FTPSvc /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-FTPSvc /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:IIS-FTPExtensibility /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:IIS-FTPExtensibility /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:MSMQ-Container /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:MSMQ-Container /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:MSMQ-Server /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:MSMQ-Server /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:MSMQ-Triggers /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:MSMQ-Triggers /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:MSMQ-ADIntegration /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:MSMQ-ADIntegration /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:MSMQ-HTTP /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:MSMQ-HTTP /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:MSMQ-Multicast /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:MSMQ-Multicast /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:MSMQ-DCOMProxy /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:MSMQ-DCOMProxy /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:WCF-HTTP-Activation45 /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:WCF-HTTP-Activation45 /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:WCF-TCP-Activation45 /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:WCF-TCP-Activation45 /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:WCF-Pipe-Activation45 /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:WCF-Pipe-Activation45 /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:WCF-MSMQ-Activation45 /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:WCF-MSMQ-Activation45 /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:WCF-HTTP-Activation /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:WCF-HTTP-Activation /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:WCF-NonHTTP-Activation /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:WCF-NonHTTP-Activation /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:Microsoft-Windows-MobilePC-Client-Premium-Package-net /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:Microsoft-Windows-MobilePC-Client-Premium-Package-net /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:Printing-XPSServices-Features /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:Printing-XPSServices-Features /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:RasCMAK /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:RasCMAK /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:RasRip /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:RasRip /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:MSRDC-Infrastructure /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:MSRDC-Infrastructure /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:TelnetClient /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:TelnetClient /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:TelnetServer /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:TelnetServer /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:TFTP /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:TFTP /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:TIFFIFilter /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:TIFFIFilter /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:WorkFolders-Client /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:WorkFolders-Client /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:SMB1Protocol /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:SMB1Protocol /Remove /NoRestart
 
 DISM /Online /Disable-Feature /FeatureName:SMB1Protocol-Client /Remove /NoRestart
 
 DISM /Online /Disable-Feature /FeatureName:SMB1Protocol-Server /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:SMB2Protocol /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:SMB2Protocol /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:Microsoft-Hyper-V-All /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:Microsoft-Hyper-V-All /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:Microsoft-Hyper-V-Tools-All /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:Microsoft-Hyper-V-Tools-All /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:Microsoft-Hyper-V /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:Microsoft-Hyper-V /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:Microsoft-Hyper-V-Management-Clients /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:Microsoft-Hyper-V-Management-Clients /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:Microsoft-Hyper-V-Management-PowerShell /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:Microsoft-Hyper-V-Management-PowerShell /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:MFaxServicesClientPackage /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:MFaxServicesClientPackage /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:MediaPlayback /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:MediaPlayback /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:LegacyComponents /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:LegacyComponents /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:Printing-PrintToPDFServices-Features /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:Printing-PrintToPDFServices-Features /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:Printing-Foundation-Features /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:Printing-Foundation-Features /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:Printing-Foundation-InternetPrinting-Client /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:Printing-Foundation-InternetPrinting-Client /Remove /NoRestart
 
-DISM /Online /Disable-Feature /featurename:SmbDirect /Remove /NoRestart
+DISM /Online /Disable-Feature /FeatureName:SmbDirect /Remove /NoRestart
 
 DISM /Online /Remove-Package /PackageName:Microsoft-Windows-HVSI-Components-Package /NoRestart
 
@@ -439,7 +439,7 @@ powershell Remove-WindowsCapability -Name Virtual -Online
 powershell Remove-WindowsCapability -Name Hello -Online
 
 rem # Disable Reserved Storage
-DISM /Online /Set-ReservedStorageState /State:Disabled /Quiet /NoRestart
+DISM /Online /Set-ReservedStorageState /State:Disabled /NoRestart
 
 rem # REBOOT RECOMMENDED
 
