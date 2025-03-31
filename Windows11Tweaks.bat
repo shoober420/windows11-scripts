@@ -3102,6 +3102,38 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\intelppm\Parameters" /v "AmliWat
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\intelppm\Parameters" /v "AmliWatchdogTimeout" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\intelppm\Parameters" /v "WatchdogTimeout" /t REG_DWORD /d "0" /f
 
+rem # Disable Zoom
+reg add "HKLM\SOFTWARE\Policies\Zoom\Zoom Meetings\General" /v "EnableClientAutoUpdate" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Policies\Zoom\Zoom Meetings\General" /v "EnableSilentAutoUpdate" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Policies\Zoom\Zoom Meetings\General" /v "EnableAutoUploadMemlogs" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Policies\Zoom\Zoom Meetings\General" /v "EnableAutoUploadDumps" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Policies\Zoom\Zoom Meetings\General" /v "KeepSignedIn" /t REG_DWORD /d "0" /f
+reg add "HKCU\SOFTWARE\Policies\Zoom\Zoom Meetings\General" /v "EnableClientAutoUpdate" /t REG_DWORD /d "0" /f
+reg add "HKCU\SOFTWARE\Policies\Zoom\Zoom Meetings\General" /v "EnableSilentAutoUpdate" /t REG_DWORD /d "0" /f
+reg add "HKCU\SOFTWARE\Policies\Zoom\Zoom Meetings\General" /v "EnableAutoUploadMemlogs" /t REG_DWORD /d "0" /f
+reg add "HKCU\SOFTWARE\Policies\Zoom\Zoom Meetings\General" /v "EnableAutoUploadDumps" /t REG_DWORD /d "0" /f
+reg add "HKCU\SOFTWARE\Policies\Zoom\Zoom Meetings\General" /v "KeepSignedIn" /t REG_DWORD /d "0" /f
+
+rem # Disable Java Update
+reg add "HKLM\SOFTWARE\JavaSoft\Java Update\Policy" /v "EnableJavaUpdate" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\WOW6432Node\JavaSoft\Java Update\Policy" /v "EnableJavaUpdate" /t REG_DWORD /d "0" /f
+
+rem # Disable Jre Metrics
+reg add "HKLM\SOFTWARE\JreMetrics" /v "DisableSponsors" /t REG_SZ /d "Y" /f
+reg add "HKLM\SOFTWARE\WOW6432Node\JreMetrics" /v "DisableSponsors" /t REG_SZ /d "Y" /f
+
+rem # Disable Auto Workspace Join
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WorkplaceJoin" /v "autoWorkplaceJoin" /t REG_DWORD /d "0" /f
+
+rem # Disable Quiet Hours Notification Mirroring
+reg add "HKCU\Software\Policies\Microsoft\Windows\CurrentVersion\QuietHours" /v "DisallowNotificationMirroring" /t REG_DWORD /d "1" /f
+
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "NoSystraySystemPromotion" /t REG_DWORD /d "1" /f
+
+rem # Disable Personalized Menus
+rem # 0 = adds and enables personalized menus as an option / 1 = disables personalized menus and removes the option \ 2 = enables personalized menus and removes the option
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "Intellimenus" /t REG_DWORD /d "1" /f
+
 
 
 rem # Enables Cloudflare DNS
