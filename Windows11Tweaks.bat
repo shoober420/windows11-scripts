@@ -2633,7 +2633,7 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProf
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Low Latency" /v "Latency Sensitive" /t REG_SZ /d "True" /f
 
 rem # Disable One Setting Downloads
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection /v "DisableOneSettingsDownloads" /t REG_DWORD /d "1" /f
+ECHO Y | reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection /v "DisableOneSettingsDownloads" /t REG_DWORD /d "1" /f
 
 rem # Virtual Device Driver MSTCP Server Query Timeout
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\VxD\MSTCP" /v "NameSrvQueryTimeout" /t REG_DWORD /d "0" /f
