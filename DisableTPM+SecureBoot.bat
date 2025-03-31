@@ -47,6 +47,15 @@ reg add "HKLM\SOFTWARE\Policies\Microsoft\FVE" /v "UsePartialEncryptionKey" /t R
 reg add "HKLM\SOFTWARE\Policies\Microsoft\FVE" /v "UsePIN" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Policies\Microsoft\FVE" /v "TPMAutoReseal" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Policies\Microsoft\FVE" /v "DisableExternalDMAUnderLock" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\FVE" /v "OSManageNKP" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\FVE" /v "OSAllowSecureBootForIntegrity" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\FVE" /v "OSManageDRA" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\FVE" /v "OSRecoveryPassword" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\FVE" /v "OSRecoveryKey" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\FVE" /v "OSActiveDirectoryBackup" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\FVE" /v "FDVNoBitLockerToGoReader" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\FVE" /v "RequireActiveDirectoryBackup" /t REG_DWORD /d "0" /f
+
 reg add "HKLM\SOFTWARE\Policies\Microsoft\FVE\PlatformValidation" /v "Enabled" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Policies\Microsoft\FVE\OSPlatformValidation_BIOS" /v "Enabled" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Policies\Microsoft\FVE\OSPlatformValidation_UEFI" /v "Enabled" /t REG_DWORD /d "0" /f
