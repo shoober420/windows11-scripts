@@ -623,6 +623,14 @@ DISM /Online /Remove-Package /PackageName:Microsoft-Windows-MobilePC-Client-Prem
 
 DISM /Online /Remove-Package /PackageName:Server-Help /NoRestart
 
+DISM /Online /Remove-Capability /CapabilityName:Language.Handwriting
+
+DISM /Online /Remove-Capability /CapabilityName:Language.OCR
+
+DISM /Online /Remove-Capability /CapabilityName:Language.Speech
+
+DISM /Online /Remove-Capability /CapabilityName:Language.TextToSpeech
+
 rem # Disable Reserved Storage
 DISM /Online /Set-ReservedStorageState /State:Disabled /NoRestart
 
