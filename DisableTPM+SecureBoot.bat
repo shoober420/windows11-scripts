@@ -21,6 +21,8 @@ rem # - TURN OFF TPM IN BIOS AGAIN AFTER NEW CANARY BUILD INSTALL
 
 rem # You can do a true TPM-free Windows install everytime by downlaoading the ISO and installing new Canary builds instead of going through Windows Update
 
+rem # Unplugging machine and holding power button for 15 seconds fixes "Alert! TPM Device is not Detected" if TPM ever gets erased and is missing from BIOS
+
 PAUSE
 
 reg add "HKLM\SYSTEM\Setup\LabConfig" /v "BypassTPMCheck" /t REG_DWORD /d "1" /f
