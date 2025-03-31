@@ -3001,9 +3001,6 @@ reg add "HKCU\SOFTWARE\Microsoft\InputPersonalization\TrainedDataStore" /v "Insi
 rem # Disable Speech
 reg add "HKLM\Software\Policies\Microsoft\Speech" /v "AllowSpeechModelUpdate" /t REG_DWORD /d "0" /f
 
-rem # Disable External DMA UnderLock
-reg add "HKLM\SOFTWARE\Policies\Microsoft\FVE" /v "DisableExternalDMAUnderLock" /t REG_DWORD /d "1" /f
-
 rem # Disable GameBar
 reg add "HKLM\SOFTWARE\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Gaming.UI.GameBar" /v "ActivationType" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Gaming.UI.GameChatOverlay" /v "ActivationType" /t REG_DWORD /d "0" /f
