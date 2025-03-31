@@ -438,6 +438,30 @@ powershell Remove-WindowsCapability -Name Virtual -Online
 
 powershell Remove-WindowsCapability -Name Hello -Online
 
+DISM /Online /Remove-Package /PackageName:Microsoft-WindowsCore-Network-FlowSteering /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-TFTP-Client-Opt /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-OfflineFile /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-NFS /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-NetworkDiagnostics /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-Telnet /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-PeerDist /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-MultiPoint /NoRestart
+
+DISM /Online /Remove-Package /PackageName:MultiPoint /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-ClientForNFS-Infrastructure-OptGroup /NoRestart
+
+DISM /Online /Remove-Package /PackageName:Microsoft-Windows-TFTP-Client /NoRestart
+
+DISM /Online /Disable-Feature /FeatureName:HyperV /NoRestart
+
 rem # Disable Reserved Storage
 DISM /Online /Set-ReservedStorageState /State:Disabled /NoRestart
 
