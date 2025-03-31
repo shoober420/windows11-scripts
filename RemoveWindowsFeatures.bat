@@ -386,7 +386,7 @@ DISM /Online /Remove-Package /PackageName:Microsoft-Windows-Internet-Browser-Pac
 
 DISM /Online /Remove-Package /PackageName:Microsoft-Windows-MicrosoftEdgeDevToolsClient-Package /NoRestart
 
-DISM /Online /Remove-Package /PackageName:Microsoft-hyper-v-all /NoRestart
+DISM /Online /Remove-Package /PackageName:Microsoft-Hyper-V-All /NoRestart
 
 DISM /Online /Remove-Package /PackageName:Client-ProjFS /NoRestart
 
