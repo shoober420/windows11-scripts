@@ -519,4 +519,44 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdwddmg" /v "KMD_EnableHWCursor
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdgpuv" /v "KMD_EnableHWCursor" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\atikmdag" /v "KMD_EnableHWCursor" /t REG_DWORD /d "0" /f
 
+reg add "HKLM\SOFTWARE\AMD\AMDAnalytics" /v "AnalyticsAccepted" /t REG_SZ /d "false" /f
+reg add "HKLM\SOFTWARE\WOW6432Node\AMD\AMDAnalytics" /v "AnalyticsAccepted" /t REG_SZ /d "false" /f
+
+reg add "HKLM\SOFTWARE\AMD\Chill" /v "ProfileEnableDefault" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\AMD\Chill" /v "GlobalEnable" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\WOW6432Node\AMD\Chill" /v "ProfileEnableDefault" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\WOW6432Node\AMD\Chill" /v "GlobalEnable" /t REG_DWORD /d "0" /f
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdag" /v "CpuAffinityOptimization" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdag\UMD\DXX" /v "CpuAffinityOptimization" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdag\UMD\DXC" /v "CpuAffinityOptimization" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdap" /v "CpuAffinityOptimization" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdap\UMD\DXX" /v "CpuAffinityOptimization" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdap\UMD\DXC" /v "CpuAffinityOptimization" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmpfd" /v "CpuAffinityOptimization" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmpfd\UMD\DXX" /v "CpuAffinityOptimization" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmpfd\UMD\DXC" /v "CpuAffinityOptimization" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdwddmg" /v "CpuAffinityOptimization" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdwddmg\UMD\DXX" /v "CpuAffinityOptimization" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdwddmg\UMD\DXC" /v "CpuAffinityOptimization" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdgpuv" /v "CpuAffinityOptimization" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdgpuv\UMD\DXX" /v "CpuAffinityOptimization" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdgpuv\UMD\DXC" /v "CpuAffinityOptimization" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\atikmdag" /v "CpuAffinityOptimization" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\atikmdag\UMD\DXX" /v "CpuAffinityOptimization" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\atikmdag\UMD\DXC" /v "CpuAffinityOptimization" /t REG_SZ /d "1" /f
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdag" /v "KMD_EnableHsa" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdag" /v "KMD_EnableHsaHws" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdap" /v "KMD_EnableHsa" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdap" /v "KMD_EnableHsaHws" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmpfd" /v "KMD_EnableHsa" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmpfd" /v "KMD_EnableHsaHws" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdwddmg" /v "KMD_EnableHsa" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdwddmg" /v "KMD_EnableHsaHws" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdgpuv" /v "KMD_EnableHsa" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdgpuv" /v "KMD_EnableHsaHws" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\atikmdag" /v "KMD_EnableHsa" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\atikmdag" /v "KMD_EnableHsaHws" /t REG_DWORD /d "1" /f
+
 PAUSE
