@@ -114,6 +114,10 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "PP_ForceHighDPMLev
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "PP_ForceHighUVDState" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "PP_ForceMCLKHigh" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "PP_ForceSCLKHigh" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_OSControlsGPUPower" /t REG_DWORD /d "0" /f
+
+rem # DirectPlay Acceleration (Deprecated)
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_EnableHWCursor" /t REG_DWORD /d "0" /f
 
 rem # Disable Radeon Upscaling
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "RADEON_UPSCALING" /t REG_SZ /d "0" /f
