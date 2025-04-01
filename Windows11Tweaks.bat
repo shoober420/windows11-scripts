@@ -3231,6 +3231,25 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Configuration Man
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Configuration Manager" /v "SelfHealingEnabled" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Configuration Manager" /v "EnablePeriodicBackup" /t REG_DWORD /d "0" /f
 
+rem # Disable Printer bloat
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Print\Monitors\Standard TCP/IP Port\Ports" /v "StatusUpdateEnabled" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Print" /v "EnableModernPrintDialog" /t REG_DWORD /d "0" /f
+
+rem # Realtek Audio tweaks
+reg add "HKLM\SOFTWARE\Realtek\AECBF\icrcAudioProcessingDemo" /v "AcousticEchoCancellation" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Realtek\AECBF\icrcAudioProcessingDemo" /v "AcousticSourceTracking" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Realtek\AECBF\icrcAudioProcessingDemo" /v "Beamforming" /t REG_DWORD /d "0" /f
+
+rem # Audio tweaks
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Audio" /v "EnableCaptureMonitor" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Audio" /v "EnableLogonHIDControls" /t REG_DWORD /d "0" /f
+
+rem # iSCSI tweaks
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\iSCSI" /v "RestrictAdditionalLogins" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\iSCSI" /v "RequireIPSec" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\iSCSI" /v "RequireMutualCHAP" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\iSCSI" /v "RequireOneWayCHAP" /t REG_DWORD /d "1" /f
+
 
 
 rem # Enables Cloudflare DNS
