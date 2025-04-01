@@ -370,4 +370,18 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\atikmdag" /v "FSAAPerfMode" /t R
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\atikmdag" /v "FSAAPerfMode_DEF" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\atikmdag" /v "FSAAPerfMode_NA" /t REG_SZ /d "0" /f
 
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdag" /v "KMD_DVRSupport" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdap" /v "KMD_DVRSupport" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmpfd" /v "KMD_DVRSupport" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdwddmg" /v "KMD_DVRSupport" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdgpuv" /v "KMD_DVRSupport" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\atikmdag" /v "KMD_DVRSupport" /t REG_DWORD /d "0" /f
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdag" /v "StutterMode" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdap" /v "StutterMode" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmpfd" /v "StutterMode" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdwddmg" /v "StutterMode" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdgpuv" /v "StutterMode" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\atikmdag" /v "StutterMode" /t REG_DWORD /d "0" /f
+
 PAUSE
