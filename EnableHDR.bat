@@ -35,6 +35,10 @@ for /f "tokens=1-6 delims=_&" %%a in ('wmic path win32_videocontroller where "no
 rem # Turn On or Off Optimizations for Windowed Games
 reg add "HKCU\Software\Microsoft\DirectX\GraphicsSettings" /v "SwapEffectUpgradeCache" /t REG_DWORD /d "1" /f
 
+rem # Enable HDR Video Streaming
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\VideoSettings" /v "EnableHDRForPlayback" /t REG_DWORD /d "1" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\VideoSettings" /v "DisableHDROnBattery" /t REG_DWORD /d "0" /f
+
 wmic path win32_videocontroller get PNPDeviceID,Name
 
 PAUSE
