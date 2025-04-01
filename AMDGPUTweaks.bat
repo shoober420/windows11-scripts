@@ -116,6 +116,16 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "PP_ForceMCLKHigh" 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "PP_ForceSCLKHigh" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_OSControlsGPUPower" /t REG_DWORD /d "0" /f
 
+rem # Enable GPU Scheduler
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_EnableHsa" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_EnableHsaHws" /t REG_DWORD /d "1" /f
+
+rem # Enable CPU Affinity Optimization for GPU
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "CpuAffinityOptimization" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD\DXX" /v "CpuAffinityOptimization" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD\DXC" /v "CpuAffinityOptimization" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\OpenGL\Private" /v "CpuAffinityOptimization" /t REG_DWORD /d "1" /f
+
 rem # DirectPlay Acceleration (Deprecated)
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_EnableHWCursor" /t REG_DWORD /d "0" /f
 
