@@ -115,6 +115,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "PP_ForceHighUVDSta
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "PP_ForceMCLKHigh" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "PP_ForceSCLKHigh" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_OSControlsGPUPower" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "DalDramClockChangeLatencyNs" /t REG_DWORD /d "1" /f
 
 rem # Enable GPU Scheduler
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_EnableHsa" /t REG_DWORD /d "1" /f
