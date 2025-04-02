@@ -559,4 +559,29 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdgpuv" /v "KMD_EnableHsaHws" /
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\atikmdag" /v "KMD_EnableHsa" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\atikmdag" /v "KMD_EnableHsaHws" /t REG_DWORD /d "1" /f
 
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdag\Device0\OpenGL\Private" /v "CpuAffinityOptimization" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdag\Device1\OpenGL\Private" /v "CpuAffinityOptimization" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdag\Device2\OpenGL\Private" /v "CpuAffinityOptimization" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdag\Device3\OpenGL\Private" /v "CpuAffinityOptimization" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdap\Device0\OpenGL\Private" /v "CpuAffinityOptimization" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdap\Device1\OpenGL\Private" /v "CpuAffinityOptimization" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdap\Device2\OpenGL\Private" /v "CpuAffinityOptimization" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdap\Device3\OpenGL\Private" /v "CpuAffinityOptimization" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmpfd\Device0\OpenGL\Private" /v "CpuAffinityOptimization" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmpfd\Device1\OpenGL\Private" /v "CpuAffinityOptimization" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmpfd\Device2\OpenGL\Private" /v "CpuAffinityOptimization" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmpfd\Device3\OpenGL\Private" /v "CpuAffinityOptimization" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdwddmg\Device0\OpenGL\Private" /v "CpuAffinityOptimization" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdwddmg\Device1\OpenGL\Private" /v "CpuAffinityOptimization" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdwddmg\Device2\OpenGL\Private" /v "CpuAffinityOptimization" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdwddmg\Device3\OpenGL\Private" /v "CpuAffinityOptimization" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdgpuv\Device0\OpenGL\Private" /v "CpuAffinityOptimization" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdgpuv\Device1\OpenGL\Private" /v "CpuAffinityOptimization" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdgpuv\Device2\OpenGL\Private" /v "CpuAffinityOptimization" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdgpuv\Device3\OpenGL\Private" /v "CpuAffinityOptimization" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\atikmdag\Device0\OpenGL\Private" /v "CpuAffinityOptimization" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\atikmdag\Device1\OpenGL\Private" /v "CpuAffinityOptimization" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\atikmdag\Device2\OpenGL\Private" /v "CpuAffinityOptimization" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\atikmdag\Device3\OpenGL\Private" /v "CpuAffinityOptimization" /t REG_DWORD /d "1" /f
+
 PAUSE
