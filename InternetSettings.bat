@@ -301,6 +301,20 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Winsock" /v "Ma
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "TcpMaxDupAcks" /t REG_DWORD /d "2" /f
 
+rem # https://docs.oracle.com/en/middleware/fusion-middleware/coherence/12.2.1.4/administer/performance-tuning.html#GUID-6FBC0DC7-6BB8-45E0-AF9D-DDB218570AA3
+rem # https://community.rti.com/static/documentation/perftest/2.2/optimizing.html
+rem # https://docs.nvidia.com/networking/display/winof2v241/performance+tuning
+rem # https://steamcommunity.com/sharedfiles/filedetails/?id=476760198
+rem # 0xx5c0 = 1472
+rem # 0x5dc = 1500
+rem # 0x10000 = 65535
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\AFD\Parameters" /v "FastSendDatagramThreshold" /t REG_DWORD /d "0x10000" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\AFD\Parameters" /v "FastCopyReceiveThreshold" /t REG_DWORD /d "0x10000" /f
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\AFD\Parameters" /v "BufferMultiplier" /t REG_DWORD /d "400" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\AFD\Parameters" /v "KeepAliveInterval" /t REG_DWORD /d "1" /f
+
 rem # RECOMMENDED TO RUN DNS.ps1 FOR OPTIMAL DNS SETTINGS
 
 PAUSE
