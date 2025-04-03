@@ -3250,6 +3250,24 @@ reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\iSCSI" /v "RequireIPSec" /t RE
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\iSCSI" /v "RequireMutualCHAP" /t REG_DWORD /d "1" /f
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\iSCSI" /v "RequireOneWayCHAP" /t REG_DWORD /d "1" /f
 
+rem # Disable Touch Keyboard
+reg add "HKCU\Software\Microsoft\TabletTip\1.7" /v "TipbandDesiredVisibility" /t REG_DWORD /d "0" /f
+
+rem # Disable Touch Screen Swipe
+reg add "HKCU\SOFTWARE\Policies\Microsoft\Windows\EdgeUI" /v "AllowEdgeSwipe" /t REG_DWORD /d "0" /f
+
+rem # Disable Gesture Input Delay
+reg add "HKCU\Control Panel\Desktop" /v "GestureExecutionDelay" /t REG_DWORD /d "0" /f
+
+rem # Disable Palm Check (accidental touch)
+reg add "HKLM\SOFTWARE\Microsoft\Wisp\Touch" /v "PalmCheck" /t REG_DWORD /d "0" /f
+
+rem # Disable Color Filtering Hotkey
+reg add "HKCU\Software\Microsoft\ColorFiltering" /v "HotkeyEnabled" /t REG_DWORD /d "0" /f
+
+rem # Disable Screen Magnifier Invert Color
+reg add "HKCU\Software\Microsoft\ScreenMagnifier" /v "Invert" /t REG_DWORD /d "0" /f
+
 
 
 rem # Enables Cloudflare DNS
