@@ -138,4 +138,17 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\KernelVelocity" /v "DisableFGBoos
 rem # Kernel Deadlock Detection
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager" /v "EnableDeadGwdTimers" /t REG_DWORD /d "1" /f
 
+rem # https://sites.google.com/site/tweakradje/windows/windows-tweaking
+
+rem # Copy Buffer Size
+rem # 0x40000/256Kb - 0x2000/8Kb - 0x100000/1Mb
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "CopyBufferSize" /t REG_DWORD /d "0x100000" /f
+
+rem # 32KB blocks
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "CopyFileChunkSize" /t REG_DWORD /d "0x8000" /f
+
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "CopyFileOverlappedCount" /t REG_DWORD /d "0x20" /f
+
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "CopyFileBufferedSynchronousIo" /t REG_DWORD /d "0x40" /f
+
 PAUSE
