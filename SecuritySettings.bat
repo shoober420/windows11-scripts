@@ -49,6 +49,12 @@ reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "DisableHHDEP" /t R
 rem # Enable svchost.exe mitigation options
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\SCMConfig" /v "EnableSvchostMitigationPolicy" /t REG_DWORD /d "0" /f
 
+rem # Disable Administrator, LSA, Tamper, and Network Protection
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager" /v "ProtectionMode" /t REG_DWORD /d "0" /f
+
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager" /v "ObjectSecurityMode" /t REG_DWORD /d "0" /f
+
 powershell.exe Disable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol
 
 ECHO Y | powershell.exe Set-SmbServerConfiguration -EnableSMB1Protocol $false
