@@ -3261,6 +3261,18 @@ reg add "HKCU\Software\Microsoft\ColorFiltering" /v "HotkeyEnabled" /t REG_DWORD
 rem # Disable Screen Magnifier Invert Color
 reg add "HKCU\Software\Microsoft\ScreenMagnifier" /v "Invert" /t REG_DWORD /d "0" /f
 
+rem # Disable Embedded Inking Control (handwriting panel)
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Pen" /v "EnableEmbeddedInkControl" /t REG_DWORD /d "0" /f
+
+rem # Windows Input experience tweaks
+reg add "HKLM\SOFTWARE\Microsoft\Input\Settings" /v "DictationEnabled" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Input\Settings" /v "HarvestContacts" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Input\Settings" /v "IsVoiceTypingKeyEnabled" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Input\Settings" /v "MaxCorrections" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Input\Settings" /v "PeriodShortcut" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Input\Settings" /v "ProofDataSources" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Input\Settings" /v "SearchDataSources" /t REG_DWORD /d "0" /f
+
 
 
 rem # Enables Cloudflare DNS
