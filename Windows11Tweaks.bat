@@ -3307,6 +3307,22 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\NetworkProvider" /v "WakeUp" /t R
 
 reg add "HKLM\SOFTWARE\Microsoft\MSMQ\Parameters\Security" /v "SecureDSCommunication" /t REG_DWORD /d "0" /f
 
+rem # Disable Use Cellular Failover
+reg add "HKLM\SOFTWARE\Microsoft\WcmSvc\CellularFailover" /v "AllowFailover" /t REG_DWORD /d "0" /f
+
+reg add "HKLM\SOFTWARE\Microsoft\WcmSvc\wifinetworkmanager\SocialNetworks\ABCH" /v "OptInStatus" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\WcmSvc\wifinetworkmanager\SocialNetworks\ABCH-SKYPE" /v "OptInStatus" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\WcmSvc\wifinetworkmanager\SocialNetworks\FACEBOOK" /v "OptInStatus" /t REG_DWORD /d "0" /f
+
+reg add "HKLM\Software\Policies\Microsoft\Windows\WcmSvc\GroupPolicy" /v "fSoftDisconnectConnections" /t REG_DWORD /d "1" /f
+
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\HotspotAuthentication" /v "Enabled" /t REG_DWORD /d "0" /f
+
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\NcdAutoSetup\Private" /v "AutoSetup" /t REG_DWORD /d "0" /f
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\WebClient\Parameters" /v "ServiceDebug" /t REG_DWORD /d "0" /f
+
+
 
 rem # Enables Cloudflare DNS
 netsh interface ip set dns Wi-Fi static 1.1.1.1
