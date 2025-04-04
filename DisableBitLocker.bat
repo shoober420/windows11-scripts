@@ -29,4 +29,6 @@ rem 1 - Disable Bitlocker and Encrypting File System (EFS)
 reg add "HKLM\System\CurrentControlSet\Control\BitLocker" /v "PreventDeviceEncryption" /t REG_DWORD /d "1" /f
 fsutil behavior set disableencryption 1
 
+reg add "HKLM\SOFTWARE\Policies\Microsoft\FVE" /v "DisableExternalDMAUnderLock" /t REG_DWORD /d "1" /f
+
 PAUSE
