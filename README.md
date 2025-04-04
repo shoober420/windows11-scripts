@@ -151,6 +151,8 @@ Update BIOS
 
 Update TPM
 
+Update NVMe / SSD Firmware
+
 Tweak BIOS
 
 RESTART
