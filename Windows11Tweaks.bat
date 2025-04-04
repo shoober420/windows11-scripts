@@ -3295,6 +3295,15 @@ reg add "HKLM\SOFTWARE\Microsoft\PlayToReceiver" /v "AutoEnabled" /t REG_SZ /d "
 
 reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\default\Connectivity\DisallowNetworkConnectivityActiveTests" /v "value" /t REG_SZ /d "1" /f
 
+rem # Disable IPv6 Peernet
+reg add "HKLM\Software\policies\Microsoft\Peernet\Pnrp\IPv6-Global" /v "DisableMulticastBootstrap" /t REG_DWORD /d "1" /f
+reg add "HKLM\Software\policies\Microsoft\Peernet\Pnrp\IPv6-Global" /v "Disabled" /t REG_DWORD /d "1" /f
+reg add "HKLM\Software\policies\Microsoft\Peernet\Pnrp\IPv6-Local" /v "DisableMulticastBootstrap" /t REG_DWORD /d "1" /f
+reg add "HKLM\Software\policies\Microsoft\Peernet\Pnrp\IPv6-Local" /v "Disabled" /t REG_DWORD /d "1" /f
+reg add "HKLM\Software\policies\Microsoft\Peernet\Pnrp\IPv6-SiteLocal" /v "DisableMulticastBootstrap" /t REG_DWORD /d "1" /f
+reg add "HKLM\Software\policies\Microsoft\Peernet\Pnrp\IPv6-SiteLocal" /v "Disabled" /t REG_DWORD /d "1" /f
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\NetworkProvider" /v "WakeUp" /t REG_DWORD /d "0" /f
 
 
 rem # Enables Cloudflare DNS
