@@ -141,6 +141,8 @@ rem # Disable Memory Compression
 PowerShell -Command "Disable-MMAgent -MemoryCompression"
 
 rem # Disable Page Combining
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "DisablePageCombining" /t REG_DWORD /d "1" /f
+
 PowerShell -Command "Disable-MMAgent -PageCombining"
 
 PAUSE
