@@ -3414,6 +3414,40 @@ reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services\Client" /
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services\Client" /v "fEnableUsbNoAckIsochWriteToDevice" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services\Client" /v "fEnableUsbSelectDeviceByInterface" /t REG_DWORD /d "0" /f
 
+rem # Disable Search via Policy
+reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\default\Search\DisableSearch" /v "value" /t REG_DWORD /d "1" /f
+
+rem # Disable Tablet features
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer" /v "TabletPostureTaskbar" /t REG_DWORD /d "0" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "TaskbarAutoHideInTabletMode" /t REG_DWORD /d "0" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Taskband" /v "NumThumbnails" /t REG_DWORD /d "0" /f
+
+rem # Disable Pins
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Taskband\AuxilliaryPins" /v "TFLPin" /t REG_DWORD /d "0" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Taskband\AuxilliaryPins" /v "CopilotPWAPin" /t REG_DWORD /d "0" /f
+
+rem # Hide Learn About This Picture desktop icon
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel" /v "{2cc5ca98-6485-489a-920e-b3e88a6ccce3}" /t REG_DWORD /d "1" /f
+
+rem # Taskbar tweaks
+rem # Remove Start Menu Recommended Section
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Explorer" /v "HideRecommendedSection" /t REG_DWORD /d "1" /f
+reg add "HKLM\Software\Policies\Microsoft\Windows\Explorer" /v "ServerAdminUI" /t REG_DWORD /d "0" /f
+reg add "HKLM\Software\Policies\Microsoft\Windows\Explorer" /v "ShellViewReentered" /t REG_DWORD /d "1" /f
+reg add "HKLM\Software\Policies\Microsoft\Windows\Explorer" /v "NavPaneShowAllFolders" /t REG_DWORD /d "0" /f
+reg add "HKLM\Software\Policies\Microsoft\Windows\Explorer" /v "DisableGraphRecentItems" /t REG_DWORD /d "1" /f
+reg add "HKLM\Software\Policies\Microsoft\Windows\Explorer" /v "CheckSameSourceAndTargetForFRAndDFS" /t REG_DWORD /d "0" /f
+reg add "HKLM\Software\Policies\Microsoft\Windows\Explorer" /v "EnableShellShortcutIconRemotePath" /t REG_DWORD /d "0" /f
+reg add "HKCU\Software\Policies\Microsoft\Windows\Explorer" /v "DisableGraphRecentItems" /t REG_DWORD /d "1" /f
+reg add "HKCU\Software\Policies\Microsoft\Windows\Explorer" /v "CheckSameSourceAndTargetForFRAndDFS" /t REG_DWORD /d "0" /f
+reg add "HKCU\Software\Policies\Microsoft\Windows\Explorer" /v "EnableShellShortcutIconRemotePath" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\default\Start\HideFrequentlyUsedApps" /v "value" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\default\Start\HideRecentlyAddedApps" /v "value" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\default\Start\HideRecommendedSection" /v "value" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\default\Start\ShowOrHideMostUsedApps" /v "value" /t REG_DWORD /d "2" /f
+reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\default\Start\HideFrequentlyUsedApps" /v "value" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\default\Start\HideFrequentlyUsedApps" /v "value" /t REG_DWORD /d "1" /f
+
 
 
 rem # Enables Cloudflare DNS
