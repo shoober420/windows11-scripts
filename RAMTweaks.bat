@@ -137,6 +137,12 @@ reg add "HKLM\SYSTEM\ControlSet001\Control\Session Manager\Memory Management" /v
 reg add "HKLM\SYSTEM\ControlSet001\Control\Session Manager\Memory Management" /v "DontVerifyRandomDrivers" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\ControlSet001\Control\Session Manager\Memory Management" /v "EnableLowVaAccess" /t REG_DWORD /d "1" /f
 
+rem # Disable Memory Compression
+PowerShell -Command "Disable-MMAgent -MemoryCompression"
+
+rem # Disable Page Combining
+PowerShell -Command "Disable-MMAgent -PageCombining"
+
 PAUSE
 
 rem # SvcHostSplitThresholdInKB value is amount of RAM in KiloBytes (KB)
