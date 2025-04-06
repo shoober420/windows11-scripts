@@ -26,6 +26,7 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - EnablePowerShell.bat
  - VCRedist.bat
  - InternetSettings.bat
+ - DisablePerProcessSystemDPI.bat
  - MouseAccelFix.bat
  - NICProperties.bat
  - NetworkTweaks.bat
@@ -49,6 +50,7 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - InputTweaks.bat
  - InternetSettings.bat
  - SecuritySettings.bat
+ - DisablePerProcessSystemDPI.bat
  - MouseAccelFix.bat
  - NICProperties.bat
  - NetworkTweaks.bat
@@ -85,6 +87,7 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - InputTweaks.bat
  - InternetSettings.bat
  - SecuritySettings.bat
+ - DisablePerProcessSystemDPI.bat
  - MouseAccelFix.bat
  - NICProperties.bat
  - NetworkTweaks.bat
