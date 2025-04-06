@@ -2620,7 +2620,7 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProf
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Low Latency" /v "Latency Sensitive" /t REG_SZ /d "True" /f
 
 rem # Disable One Setting Downloads
-ECHO Yes | reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection /v "DisableOneSettingsDownloads" /t REG_DWORD /d "1" /f
+ECHO Yes | reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection" /v "DisableOneSettingsDownloads" /t REG_DWORD /d "1" /f
 
 rem # Virtual Device Driver MSTCP Server Query Timeout
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\VxD\MSTCP" /v "NameSrvQueryTimeout" /t REG_DWORD /d "0" /f
@@ -3042,7 +3042,6 @@ rem # Disable Grey MSI Ads
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "GreyMSIAds" /t REG_DWORD /d "0" /f
 
 rem # System tweaks
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "DisableHHDEP" /t REG_DWORD /d "1" /f
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "EnableMmx" /t REG_DWORD /d "0" /f
 
 rem # Disable Enhanced Storage Device Security
