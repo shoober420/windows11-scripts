@@ -3493,6 +3493,10 @@ reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\default\System\AllowEmbeddedMode"
 reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\default\System\AllowFontProviders" /v "value" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\UnattendSettings\SQMClient" /v "CEIPEnabled" /t REG_DWORD /d "0" /f
 
+rem # Enable HTTP2
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\HTTP\Parameters" /v "EnableHttp2Tls" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\HTTP\Parameters" /v "EnableHttp2Cleartext" /t REG_DWORD /d "1" /f
+
 
 
 rem # Enables Cloudflare DNS
