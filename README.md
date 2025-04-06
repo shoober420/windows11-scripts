@@ -772,6 +772,7 @@ AccentColor.bat
 - https://github.com/TairikuOokami
 - https://github.com/ionuttbara
 - https://github.com/Hyyote
+- https://github.com/MoriEdan
 - https://github.com/NicholasBly
 - https://github.com/rahilpathan
 - https://github.com/ChrisTitusTech
