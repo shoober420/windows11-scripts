@@ -13,6 +13,7 @@ rem # https://github.com/AlchemyTweaks
 rem # https://github.com/TairikuOokami
 rem # https://github.com/ionuttbara
 rem # https://github.com/Hyyote
+rem # https://github.com/MoriEdan
 rem # https://github.com/NicholasBly
 rem # https://github.com/rahilpathan
 rem # https://github.com/ChrisTitusTech
@@ -3553,6 +3554,24 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\DeviceGuard\Scenarios\CredentialG
 reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\default\DeviceGuard\EnableVirtualizationBasedSecurity" /v "value" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\default\DeviceGuard\RequirePlatformSecurityFeature" /v "value" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\default\VirtualizationBasedTechnology\HypervisorEnforcedCodeIntegrity" /v "value" /t REG_DWORD /d "0" /f
+
+rem # Disable Immersive Shell
+reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ImmersiveShell" /v "TabletMode" /t REG_DWORD /d "0" /f
+reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ImmersiveShell" /v "SignInMode" /t REG_DWORD /d "1" /f
+reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ImmersiveShell" /v "ConvertibleSlateModePromptPreference" /t REG_DWORD /d "0" /f
+
+rem # Disable Auto Dismiss Action Center
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\ImmersiveShell\Launcher" /v "DisableLightDismiss" /t REG_DWORD /d "1" /f
+
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\FlightedFeatures" /v "ComponentUIForWinRTPicker" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\FlightedFeatures" /v "ImmersiveContextMenu" /t REG_DWORD /d "0" /f
+
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Syncmgr" /t REG_DWORD /v "Installed" /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server" /t REG_DWORD /v "RDPVGCInstalled" /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\COM3" /t REG_DWORD /v "RemoteAccessEnabled" /d "0" /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\SettingSync" /t REG_DWORD /v "EnableBackupForWin8Apps" /d "0" /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\NvCache" /t REG_DWORD /v "EnableNvCache" /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Assistance\Client\1.0\Settings" /t REG_DWORD /v "GlobalOnlineAssist" /d "0" /f
 
 
 
