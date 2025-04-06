@@ -3590,6 +3590,26 @@ reg add "HKEY_USERS\.DEFAULT\Control Panel\Sound" /v "ExtendedSounds" /t REG_SZ 
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ResourceTimers" /v "EnableResourceAwareTimers" /t REG_DWORD /d "0" /f
 
+reg add "HKCU\Control Panel\International\User Profile" /v "ShowAutoCorrection" /t REG_DWORD /d "0" /f
+reg add "HKCU\Control Panel\International\User Profile" /v "ShowTextPrediction" /t REG_DWORD /d "0" /f
+reg add "HKCU\Control Panel\International\User Profile" /v "ShowCasing" /t REG_DWORD /d "0" /f
+reg add "HKCU\Control Panel\International\User Profile" /v "ShowShiftLock" /t REG_DWORD /d "0" /f
+reg add "HKCU\Control Panel\International\User Profile" /v "DiagTrackAuthorization" /t REG_DWORD /d "0" /f
+
+rem # Disable Active Desktop
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "SlowLinkUIEnabled" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\Windows.delete" /v "SkipCloudDownload" /t REG_DWORD /d "1" /f
+
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\AutoComplete" /v "AutoSuggest" /t REG_SZ /d "no" /f
+
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "NoEncryptOnMove" /t REG_DWORD /d "1" /f
+
+rem # Disable Iris Refresh
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer" /v "ExcludedFromStableAnaheimDownloadPromotionSL" /t REG_DWORD /d "1" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer" /v "IrisClientRefresh" /t REG_DWORD /d "1" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer" /v "ExplorerStartupTraceRecorded" /t REG_DWORD /d "1" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer" /v "SIDUpdatedOnLibraries" /t REG_DWORD /d "1" /f
+
 
 
 rem # Enables Cloudflare DNS
