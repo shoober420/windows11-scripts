@@ -2942,9 +2942,6 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\FileSystem" /v "Win95TruncatedExt
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\FileSystem" /v "NtfsMemoryUsage" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\FileSystem" /v "NtfsDisableSpotCorruptionHandling" /t REG_DWORD /d "1" /f
 
-rem # Disable Win8 DPI Scaling
-reg add "HKCU\Control Panel\Desktop" /v "Win8DpiScaling" /t REG_DWORD /d "0" /f
-
 rem # Disable Perf Metadata
 reg add "HKLM\SYSTEM\ControlSet001\Services\PerfNet\Performance" /v "Collect Supports Metadata" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\ControlSet001\Services\PerfNet\Performance" /v "Collect Timeout" /t REG_DWORD /d "0" /f
