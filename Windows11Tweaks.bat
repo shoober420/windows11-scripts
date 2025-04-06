@@ -3583,6 +3583,13 @@ reg add "HKCU\Control Panel\Desktop" /v "JPEGImportQuality" /t REG_DWORD /d "1" 
 
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Lock Screen\Creative" /v "LockImageFlags" /t REG_DWORD /d "0" /f
 
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\DelayedApps" /v "Delay_Sec" /t REG_DWORD /d "0" /f
+
+reg add "HKEY_USERS\.DEFAULT\Control Panel\Sound" /v "Beep" /t REG_SZ /d "no" /f
+reg add "HKEY_USERS\.DEFAULT\Control Panel\Sound" /v "ExtendedSounds" /t REG_SZ /d "no" /f
+
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ResourceTimers" /v "EnableResourceAwareTimers" /t REG_DWORD /d "0" /f
+
 
 
 rem # Enables Cloudflare DNS
