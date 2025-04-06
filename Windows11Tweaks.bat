@@ -2742,7 +2742,7 @@ rem # Disable Interactive Services Detection (UI0Detect)
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Windows" /v "NoInteractiveServices" /t REG_DWORD /d "1" /f
 
 rem # Disable Event Log
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\EventLog\Setup" /v "Enabled" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\EventLog\Setup" /v "Enabled" /t REG_SZ /d "0" /f
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Installer" /v "DisableLoggingFromPackage" /t REG_DWORD /d "1" /f
 
 rem # Disable Cloud Optimized Content
