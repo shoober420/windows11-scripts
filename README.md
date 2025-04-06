@@ -762,6 +762,8 @@ InstallWMIC.bat
 
 AccentColor.bat
 
+DisablePerProcessSystemDPI.bat / EnablePerProcessSystemDPI.bat
+
 # Credits
 - https://www.elevenforum.com/members/garlin.5387
 - https://www.elevenforum.com/members/csmc.38355
