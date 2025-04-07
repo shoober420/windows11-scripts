@@ -43,4 +43,10 @@ bcdedit /bootems Off
 bcdedit /debug Off
 bcdedit /ems Off
 
+bcdedit.exe /set sos On
+bcdedit.exe /set onecpu No
+bcdedit.exe /set halbreakpoint No
+bcdedit.exe /set bootmenupolicy Legacy
+bcdedit.exe /set graphicsmodedisabled No
+
 PAUSE
