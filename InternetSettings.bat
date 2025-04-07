@@ -45,6 +45,7 @@ PowerShell.exe Set-NetTCPSetting -SettingName "*" -Timestamps disabled
 PowerShell.exe Set-NetTCPSetting -SettingName "*" -MaxSynRetransmissions 2
 PowerShell.exe Set-NetTCPSetting -SettingName "*" -NonSackRttResiliency disable
 PowerShell.exe Set-NetTCPSetting -SettingName "*" -InitialRto 1000
+powershell.exe Set-NetTCPSetting -ScalingHeuristics Disabled
 powershell.exe Set-NetOffloadGlobalSetting -ReceiveSegmentCoalescing disabled
 powershell.exe Set-NetOffloadGlobalSetting -ReceiveSideScaling enable
 powershell.exe Set-NetOffloadGlobalSetting -Chimney disabled
@@ -344,8 +345,6 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "MaxHashTab
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "MaxFreeTWTcbs" /t REG_DWORD /d "10000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "EnableFastRouteLookup" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "DelayedAckFrequency" /t REG_DWORD /d "1" /f
-
-powershell.exe Set-NetTCPSetting -ScalingHeuristics Disabled
 
 rem # RECOMMENDED TO RUN DNS.ps1 FOR OPTIMAL DNS SETTINGS
 
