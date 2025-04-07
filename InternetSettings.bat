@@ -18,6 +18,8 @@ rem # https://www.cyberdasm.com/publ/volume_2/computer_tips/how_to_reduce_lag_in
 
 rem # https://github.com/DeDf/afd/blob/master/registry.txt
 
+rem # Get-NetAdapterBinding -Name * -AllBindings -IncludeHidden
+
 rem # software firewall is bloat, use router firewall
 
 rem # RECOMMENDED TO RUN DNS.ps1 FOR OPTIMAL DNS SETTINGS
