@@ -45,7 +45,6 @@ PowerShell.exe Set-NetTCPSetting -SettingName "*" -Timestamps disabled
 PowerShell.exe Set-NetTCPSetting -SettingName "*" -MaxSynRetransmissions 2
 PowerShell.exe Set-NetTCPSetting -SettingName "*" -NonSackRttResiliency disable
 PowerShell.exe Set-NetTCPSetting -SettingName "*" -InitialRto 1000
-PowerShell.exe Set-NetTCPSetting -SettingName "*" -MinRto 300
 powershell.exe Set-NetTCPSetting -SettingName "*" -InitialCongestionWindow 10
 powershell.exe Set-NetOffloadGlobalSetting -ReceiveSegmentCoalescing disabled
 powershell.exe Set-NetOffloadGlobalSetting -ReceiveSideScaling enable
@@ -111,7 +110,10 @@ netsh int tcp set global autotuninglevel=normal
 netsh int tcp set global timestamps=disabled
 netsh int tcp set global chimney=disabled
 netsh int tcp set global initialRto=1000
+
+rem PowerShell.exe Set-NetTCPSetting -SettingName "*" -MinRto 300
 netsh int tcp set global minRto=300
+
 netsh int tcp set global nonsackrttresiliency=disabled
 netsh int tcp set global maxsynretransmissions=2
 netsh int tcp set global rss=enabled
