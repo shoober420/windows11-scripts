@@ -8,6 +8,8 @@ rem # https://www.speedguide.net/articles/gaming-tweaks-5812
 
 rem # https://www.speedguide.net/articles/windows-2kxp-registry-tweaks-157/p-1/
 
+rem # https://www.speedguide.net/articles/windows-1011-tcpip-tweaks-5077
+
 rem # https://learn.microsoft.com/en-us/powershell/module/netadapter/?view=windowsserver2025-ps
 
 rem # https://www.ibm.com/docs/en/was/9.0.5?topic=systems-tuning-windows
