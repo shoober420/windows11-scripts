@@ -190,6 +190,8 @@ netsh int tcp set global dca=enabled
 netsh int tcp set global netdma=enabled 
 
 rem # enable BBR2 Congestion Control Provider
+rem # Get-NetTCPSetting | Select SettingName, CongestionProvider
+netsh int tcp set supplemental Template=Automatic CongestionProvider=bbr2
 netsh int tcp set supplemental Template=Internet CongestionProvider=bbr2
 netsh int tcp set supplemental Template=Datacenter CongestionProvider=bbr2
 netsh int tcp set supplemental Template=Compat CongestionProvider=bbr2
