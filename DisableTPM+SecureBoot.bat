@@ -70,4 +70,6 @@ reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\default\DeviceGuard\EnableVirtual
 reg add "HKLM\SOFTWARE\Policies\Microsoft\TPM" /v "OSManagedAuthLevel" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Policies\Microsoft\TPM" /v "ActiveDirectoryBackup" /t REG_DWORD /d "0" /f
 
+bcdedit.exe /set tpmbootentropy ForceDisable
+
 PAUSE
