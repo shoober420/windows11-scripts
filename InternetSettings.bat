@@ -45,7 +45,6 @@ PowerShell.exe Set-NetTCPSetting -SettingName "*" -Timestamps disabled
 PowerShell.exe Set-NetTCPSetting -SettingName "*" -MaxSynRetransmissions 2
 PowerShell.exe Set-NetTCPSetting -SettingName "*" -NonSackRttResiliency disable
 PowerShell.exe Set-NetTCPSetting -SettingName "*" -InitialRto 1000
-powershell.exe Set-NetTCPSetting -SettingName "*" -InitialCongestionWindow 10
 powershell.exe Set-NetOffloadGlobalSetting -ReceiveSegmentCoalescing disabled
 powershell.exe Set-NetOffloadGlobalSetting -ReceiveSideScaling enable
 powershell.exe Set-NetOffloadGlobalSetting -Chimney disabled
@@ -111,6 +110,7 @@ netsh int tcp set global timestamps=disabled
 netsh int tcp set global chimney=disabled
 netsh int tcp set global initialRto=1000
 
+rem # Retransmission Timeout can only be changed via registry
 rem PowerShell.exe Set-NetTCPSetting -SettingName "*" -MinRto 300
 netsh int tcp set global minRto=300
 
@@ -175,6 +175,10 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "IGMPLevel"
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "DisableIPSourceRouting" /t REG_DWORD /d "2" /f
 
 reg add "HKLM\SOFTWARE\Microsoft\MSMQ\Parameters" /v "TCPNoDelay" /t REG_DWORD /d "1" /f
+
+rem # Initial Congestion Window can only be changed via registry
+rem powershell.exe Set-NetTCPSetting -SettingName "*" -InitialCongestionWindow 10
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "TcpInitialCWND" /t REG_DWORD /d "10" /f
 
 netsh int isatap set state disable
 netsh int tcp set global ecn=disabled
