@@ -50,7 +50,6 @@ powershell.exe Set-NetOffloadGlobalSetting -ReceiveSideScaling enable
 powershell.exe Set-NetOffloadGlobalSetting -Chimney disabled
 powershell.exe Set-NetOffloadGlobalSetting -PacketCoalescingFilter Disabled
 powershell.exe Set-NetOffloadGlobalSetting -TaskOffload Disabled
-powershell.exe Set-NetOffloadGlobalSetting -ScalingHeuristics Disabled
 PowerShell.exe Disable-NetAdapterLso -Name "*"
 powershell.exe Disable-NetAdapterRsc -Name "*"
 powershell.exe Disable-NetAdapterIPsecOffload -Name "*"
@@ -345,6 +344,8 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "MaxHashTab
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "MaxFreeTWTcbs" /t REG_DWORD /d "10000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "EnableFastRouteLookup" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "DelayedAckFrequency" /t REG_DWORD /d "1" /f
+
+powershell.exe Set-NetTCPSetting -ScalingHeuristics Disabled
 
 rem # RECOMMENDED TO RUN DNS.ps1 FOR OPTIMAL DNS SETTINGS
 
