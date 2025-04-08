@@ -1,5 +1,6 @@
 rem # Standard Installation script
 
+cd "%~dp0"
 
 ./EnablePowerShell.bat
 ./VCRedist.bat
