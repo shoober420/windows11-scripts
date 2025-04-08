@@ -22,7 +22,9 @@ NOTE: Reinstall Windows from USB ISO to fully restore apps, registry, and origin
 
 NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Windows apps and NOT restore original registry fully, "Cloud download" option recommended if USB ISO unavailable
 
-# Minimal Install
+**Each installation choice has its own batch script for easy setup**
+
+# Minimal_Install.bat
  - EnablePowerShell.bat
  - VCRedist.bat
  - InternetSettings.bat
@@ -40,7 +42,7 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - RemoveRemoteDesktopConnection.bat
  - MTU.bat
 
-# Standard Install
+# Standard_Install.bat
  - EnablePowerShell.bat
  - VCRedist.bat
  - CPUTweaks.bat
@@ -76,7 +78,7 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - RemoveRemoteDesktopConnection.bat
  - DisableHighPrecisionEventTimer.bat
 
-# Advanced Install
+# Advanced_Install.bat
  - EnablePowerShell.bat
  - VCRedist.bat
  - CPUTweaks.bat
@@ -771,6 +773,8 @@ InstallWMIC.bat
 AccentColor.bat
 
 DisablePerProcessSystemDPI.bat / EnablePerProcessSystemDPI.bat
+
+Minimal_Install.bat / Standard_Install.bat / Advanced_Install.bat
 
 # Credits
 - https://www.elevenforum.com/members/garlin.5387
