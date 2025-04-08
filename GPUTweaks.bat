@@ -276,7 +276,7 @@ reg add "HKLM\SYSTEM\ControlSet001\Control\GraphicsDrivers" /v "DxgkWaitForIdle"
 
 reg add "HKLM\SOFTWARE\Microsoft\Direct3D" /v "MMX Fast Path" /t REG_DWORD /d "1" /f
 
-rem # IGPU Dedicated Segment Size
+rem # Intel iGPU Dedicated Segment Size
 rem reg add "HKLM\SOFTWARE\Intel\GMM" /v "DedicatedSegmentSize" /t REG_DWORD /d "512"
 
 PAUSE
