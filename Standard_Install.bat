@@ -16,11 +16,11 @@ cd "%~dp0"
 ./MouseAccelFix.bat
 ./NICProperties.bat
 ./NetworkTweaks.bat
-./DisableNetBIOS.ps1
-./DNS.ps1
+ECHO R | powershell.exe ./DisableNetBIOS.ps1
+ECHO R | powershell.exe ./DNS.ps1
 ./PowerPlanUltra.bat
 ./DisableFullscreenOptimizations.bat
-./DisableScheduledTasks.ps1
+ECHO R | powershell.exe ./DisableScheduledTasks.ps1
 ./DisableScheduledTasks.bat
 ./DisableLanmanWorkstation.bat
 ./DisableLanmanServer.bat
