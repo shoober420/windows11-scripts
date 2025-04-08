@@ -1,4 +1,7 @@
 rem # Disable Per-Process System DPI
+rem # Force 96 DPI
+
+rem # 96 DPI required for mouse accel fix
 
 reg add "HKCU\Software\Policies\Microsoft\Windows\Control Panel\Desktop" /v "EnablePerProcessSystemDPI" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Control Panel\Desktop" /v "EnablePerProcessSystemDPI" /t REG_DWORD /d "0" /f
