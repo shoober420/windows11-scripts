@@ -45,7 +45,8 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - VCRedist.bat
  - CPUTweaks.bat
  - GPUTweaks.bat / AMDGPUTweaks.bat / NVGPUTweaks.bat
- - HardDrive&USBTweaks.bat
+ - HardDrive_Tweaks.bat
+ - USBTweaks.bat
  - HighPriority.bat
  - InputTweaks.bat
  - InternetSettings.bat
@@ -82,7 +83,8 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - GPUTweaks.bat / AMDGPUTweaks.bat / NVGPUTweaks.bat
  - KernelTweaks.bat
  - TimerTweaks.bat
- - HardDrive+USBTweaks.bat
+ - HardDrive_Tweaks.bat
+ - USBTweaks.bat
  - HighPriority.bat
  - InputTweaks.bat
  - InternetSettings.bat
@@ -285,7 +287,8 @@ RESTART
  - CPUTweaks.bat
  - TimerTweaks.bat
  - InputTweaks.bat (script settings need tweaked to match users computer hardware)
- - HardDrive+USBTweaks.bat
+ - HardDrive_Tweaks.bat
+ - USBTweaks.bat
  - UseLargePages.bat (add programs to enable Large Pages for them)
  - HighPriority.bat (add programs to enable High Priority for them)
  - EnableDirectXUserGlobalSettings.bat
@@ -619,7 +622,9 @@ ReplaceFooWithFoo.ps1 (useful for debugging)
 
 DisableOverlays.bat / EnableOverlays.bat (IF CRASHING, FLICKERING, AND PERFORMANCE DECREASES, RUN EnableOverlays.bat)
 
-HardDrive+USBTweaks.bat
+HardDrive_Tweaks.bat
+
+USBTweaks.bat
 
 DisableAMDGPU_DalDramClockChangeLatencyNs.bat / EnableAMDGPU_DalDramClockChangeLatencyNs.bat (disable if screen flickering occurs)
 
