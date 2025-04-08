@@ -47,7 +47,7 @@ if 5 EQU %ERRORLEVEL% (
 goto :eof
 
 :8gb
-echo User chose 16GB RAM
+echo User chose 8GB RAM
 
 rem wmic computersystem where name="%computername%" set AutomaticManagedPagefile=False
 rem wmic pagefileset where name="C:\\pagefile.sys" set InitialSize=8192,MaximumSize=8192
