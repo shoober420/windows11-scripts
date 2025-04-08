@@ -1,8 +1,13 @@
 rem # MarkC Acceleration Fix
 
 rem # !!! WARNING !!!
+
 rem # Scale items size must be 100%
 rem # System > Display > Scale & layout > Scale: 100% required
+
+rem # Scale 100% = 96 DPI
+
+rem !!! WARNING !!!
 
 PAUSE
 
@@ -34,6 +39,7 @@ reg add "HKU\.DEFAULT\Control Panel\Mouse" /f /v "SmoothMouseYCurve" /t REG_BINA
 reg add "HKU\.DEFAULT\Control Panel\Mouse" /f /v "MouseSensitivity" /t REG_SZ /d "10"
 
 reg add "HKCU\Control Panel\Mouse" /v RawInput /t REG_SZ /d 1 /f
+
 reg add "HKCU\Control Panel\Mouse" /v ActiveWindowTracking /t REG_DWORD /d 0 /f
 
 PAUSE
