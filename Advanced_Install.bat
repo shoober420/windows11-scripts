@@ -18,13 +18,13 @@ cd "%~dp0"
 ./MouseAccelFix.bat
 ./NICProperties.bat
 ./NetworkTweaks.bat
-./DisableNetBIOS.ps1
-./DNS.ps1
+ECHO R | powershell.exe ./DisableNetBIOS.ps1
+ECHO R | powershell.exe ./DNS.ps1
 ./PowerPlanUltra.bat
 ./DisableFullscreenOptimizations.bat
-./DisableScheduledTasks.ps1
+ECHO R | powershell.exe ./DisableScheduledTasks.ps1
 ./DisableScheduledTasks.bat
-./DisableIntegratedGPU.ps1
+ECHO R | powershell.exe ./DisableIntegratedGPU.ps1
 ./DisableBluetooth.bat
 ./DisableTouchPad.bat
 ./DisableSysMain.bat
@@ -35,7 +35,7 @@ cd "%~dp0"
 ./DisableCPUMitigations.bat
 ./DisableMIDI2.0.bat
 ./RemoveFirewallRules.bat
-./DisablePowerManagement.ps1
+ECHO R | powershell.exe ./DisablePowerManagement.ps1
 ./RAMTweaks.bat
 ./ThreadQuantum.bat
 ./UseLargePages.bat
