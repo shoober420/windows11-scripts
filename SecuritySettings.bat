@@ -55,8 +55,8 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\SCMConfig" /v "EnableSvchostMitig
 rem # Disable Administrator, LSA, Tamper, and Network Protection
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager" /v "ProtectionMode" /t REG_DWORD /d "0" /f
 
-
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager" /v "ObjectSecurityMode" /t REG_DWORD /d "0" /f
+rem # 0 cripples FPS
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager" /v "ObjectSecurityMode" /t REG_DWORD /d "1" /f
 
 powershell.exe Disable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol
 
