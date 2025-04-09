@@ -766,6 +766,8 @@ DisableWLAN_AutoConfig.bat / EnableWLAN_AutoConfig.bat
 
 Decrypt+OSCompression.bat
 
+DisablePageFile.bat
+
 Theme.bat
 
 InstallWMIC.bat
