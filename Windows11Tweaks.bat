@@ -26,6 +26,7 @@ rem # https://github.com/Batlez/Batlez-Tweaks
 rem # https://sites.google.com/view/melodystweaks/basictweaks
 rem # https://github.com/sherifmagdy32/gaming_os_tweaker
 rem # https://github.com/HakanFly/Windows-Tweaks
+rem # http://bbs.c3.wuyou.net/forum.php?mod=viewthread&tid=437913
 
 rem # -----------------------------------------------------------------------------------------
 
