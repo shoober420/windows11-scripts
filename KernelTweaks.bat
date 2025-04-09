@@ -32,6 +32,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "XMMIZ
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "DisableAutoBoost" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "AdjustDpcThreshold" /t REG_DWORD /d "0" /f
 
+rem # Maximum Shared Ready Queue Size
 rem # Limits the amount of memory that can be used to store pages that are ready to be used by the system
 rem # Default value is 0, meaning the system uses its own heuristics to determine the optimal size for the ready queue
 rem # 0 and 1 lower FPS
