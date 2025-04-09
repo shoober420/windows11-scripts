@@ -801,3 +801,4 @@ Minimal_Install.bat / Standard_Install.bat / Advanced_Install.bat
 - https://sites.google.com/view/melodystweaks/basictweaks
 - https://github.com/sherifmagdy32/gaming_os_tweaker
 - https://github.com/HakanFly/Windows-Tweaks
+- http://bbs.c3.wuyou.net/forum.php?mod=viewthread&tid=437913
