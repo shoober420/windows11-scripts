@@ -17,7 +17,7 @@ rem # Copying another font and naming it segoeui.ttf will not change the default
 
 rem # Deleting fonts via entering the C:\Windows\Fonts directory does NOT delete the actual font files inside the directory, it only disables the font and leaves the files behind
 
-rem # Seleting fonts manually using cmd will delete the font, but still show up when entering the C:\Windows\Fonts directory
+rem # Deleting fonts manually using cmd will delete the font, but still show up when entering the C:\Windows\Fonts directory
 
 rem # Both "%WINDIR%\Fonts" and "%USERPROFILE%\AppData\Local\Microsoft\Windows\Fonts" are linked together
 
