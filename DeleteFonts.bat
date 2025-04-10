@@ -1,7 +1,7 @@
-REM Rename Fonts directory
-REM Debloat extra fonts
+rem # Rename Fonts directory
+rem # Debloat extra fonts
 
-REM Windows 95/98 uses Microsoft Sans Serif
+rem # Windows 95/98 uses Microsoft Sans Serif
 REM Windows 95/98/2000 use "Marlett" for GUI icons
 REM Windows XP/7 uses Tahoma
 REM Windows 10 uses Segoe UI
