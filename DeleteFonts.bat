@@ -2,70 +2,70 @@ rem # Rename Fonts directory
 rem # Debloat extra fonts
 
 rem # Windows 95/98 uses Microsoft Sans Serif
-REM Windows 95/98/2000 use "Marlett" for GUI icons
-REM Windows XP/7 uses Tahoma
-REM Windows 10 uses Segoe UI
-REM Windows 10 uses "Segoe MDL2 Assets" for GUI icons
-REM Windows 11 uses Segoe UI Variable
-REM Windows 11 uses "Segoe Fluent Icons" for GUI icons
+rem # Windows 95/98/2000 use "Marlett" for GUI icons
+rem # Windows XP/7 uses Tahoma
+rem # Windows 10 uses Segoe UI
+rem # Windows 10 uses "Segoe MDL2 Assets" for GUI icons
+rem # Windows 11 uses Segoe UI Variable
+rem # Windows 11 uses "Segoe Fluent Icons" for GUI icons
 
-REM You must have segoeui.ttf in the "C:\Windows\Fonts" directory, or Windows black screens at login
+rem # You must have segoeui.ttf in the "C:\Windows\Fonts" directory, or Windows black screens at login
 
-REM Manually delete the Segoe font family via entering the C:\Windows\Fonts directory to change Windows default font (Login screen and certain GUI fonts are unchangable)
+rem # Manually delete the Segoe font family via entering the C:\Windows\Fonts directory to change Windows default font (Login screen and certain GUI fonts are unchangable)
 
-REM Copying another font and naming it segoeui.ttf will not change the default Windows font, and results in black screen at login
+rem # Copying another font and naming it segoeui.ttf will not change the default Windows font, and results in black screen at login
 
-REM Deleting fonts via entering the C:\Windows\Fonts directory does NOT delete the actual font files inside the directory, it only disables the font and leaves the files behind
+rem # Deleting fonts via entering the C:\Windows\Fonts directory does NOT delete the actual font files inside the directory, it only disables the font and leaves the files behind
 
-REM Deleting fonts manually using cmd will delete the font, but still show up when entering the C:\Windows\Fonts directory
+rem # Seleting fonts manually using cmd will delete the font, but still show up when entering the C:\Windows\Fonts directory
 
-REM Both "%WINDIR%\Fonts" and "%USERPROFILE%\AppData\Local\Microsoft\Windows\Fonts" are linked together
+rem # Both "%WINDIR%\Fonts" and "%USERPROFILE%\AppData\Local\Microsoft\Windows\Fonts" are linked together
 
-REM Monospaced fonts (IBM Plex Mono) use up too much space in GUI and cut off text, NOT RECOMMENDED
+rem # Monospaced fonts (IBM Plex Mono) use up too much space in GUI and cut off text, NOT RECOMMENDED
 
-REM Microsoft Sans Serif Regular (micross.ttf) is the new TrueType version
-REM MS Sans Serif Regular (ssee1257.fon) is the old bitmap version
+rem # Microsoft Sans Serif Regular (micross.ttf) is the new TrueType version
+rem # MS Sans Serif Regular (ssee1257.fon) is the old bitmap version
 
-REM If segoeui.ttf is removed which creates black screen at login, boot into WinRE and open cmd prompt
-REM notepad then open
-REM you must copy and paste the Fonts folder using the mouse, using keyboard shortcuts will cause an out of memory error and not copy the files
-REM if Windows.old\Fonts is not found, copy X:\Windows\Fonts into C:\Windows\Fonts (uses same font scheme as WinRE shell such as italic desktop icons) (missing lots of fonts like Arial)
+rem # If segoeui.ttf is deleted which creates black screen at login, boot into WinRE and open cmd prompt
+rem # notepad then open
+rem # you must copy and paste the Fonts folder using the mouse, using keyboard shortcuts will cause an out of memory error and not copy the files
+rem # if Windows.old\Fonts is not found, copy X:\Windows\Fonts into C:\Windows\Fonts (uses same font scheme as WinRE shell such as italic desktop icons) (missing lots of fonts like Arial)
 
 
 
 copy "%WINDIR%\Fonts\micross.ttf" "%USERPROFILE%\Downloads"
 copy "%WINDIR%\Fonts\arial.ttf" "%USERPROFILE%\Downloads"
 
-REM Manual removal of fonts needed
-REM Deleting certain fonts breaks games like CS1.6, find out what fonts games use
-REM takeown /s %computername% /u %username% /f "%WINDIR%\Fonts"
-REM icacls "%WINDIR%\Fonts" /grant:r %username%:F
-REM ren "%WINDIR%\Fonts" "Fonts.bak"
-REM rmdir /s /q "%WINDIR%\Fonts"
-REM rmdir /s /q "%USERPROFILE%\AppData\Local\Microsoft\Windows\Fonts"
-REM copy "%USERPROFILE%\Downloads\micross.ttf" "%WINDIR%\Fonts"
-REM copy "%USERPROFILE%\Downloads\arial.ttf" "%WINDIR%\Fonts"
+rem # Manual removal of fonts needed
+rem # Deleting certain fonts breaks games like CS1.6, find out what fonts games use
+rem takeown /s %computername% /u %username% /f "%WINDIR%\Fonts"
+rem icacls "%WINDIR%\Fonts" /grant:r %username%:F
+rem ren "%WINDIR%\Fonts" "Fonts.bak"
+rem rmdir /s /q "%WINDIR%\Fonts"
+rem rmdir /s /q "%USERPROFILE%\AppData\Local\Microsoft\Windows\Fonts"
+rem copy "%USERPROFILE%\Downloads\micross.ttf" "%WINDIR%\Fonts"
+rem copy "%USERPROFILE%\Downloads\arial.ttf" "%WINDIR%\Fonts"
 
-REM Remove bloat Segoe* fonts (except Segoe UI, segoeui.ttf is required or black screen occurs at login)
+rem # Remove bloat Segoe* fonts (except Segoe UI, segoeui.ttf is required or black screen occurs at login)
 
-REM Windows 11 uses "Segoe Fluent Icons" for GUI icons
-REM Segoe Fluent Icons Regular
+rem # Windows 11 uses "Segoe Fluent Icons" for GUI icons
+rem # Segoe Fluent Icons Regular
 del "%WINDIR%\Fonts\SegoeIcons.ttf"
 
-REM Windows 10 uses "Segoe MDL2 Assets" for GUI icons
-REM Segoe MDL2 Assets Regular
+rem # Windows 10 uses "Segoe MDL2 Assets" for GUI icons
+rem # Segoe MDL2 Assets Regular
 del "%WINDIR%\Fonts\segmdl2.ttf"
 
-REM Segoe Print
+rem # Segoe Print
 del "%WINDIR%\Fonts\segoepr.ttf"
 del "%WINDIR%\Fonts\segoeprb.ttf"
 
-REM Segoe Script
+rem # Segoe Script
 del "%WINDIR%\Fonts\segoesc.ttf"
 del "%WINDIR%\Fonts\segoescb.ttf"
 
-REM Segoe UI (segoeui.ttf is required or black screen occurs at login)
-REM del "%WINDIR%\Fonts\segoeui.ttf"
+rem # Segoe UI (segoeui.ttf is required or black screen occurs at login)
+rem del "%WINDIR%\Fonts\segoeui.ttf"
 del "%WINDIR%\Fonts\segoeuib.ttf"
 del "%WINDIR%\Fonts\segoeuii.ttf"
 del "%WINDIR%\Fonts\segoeuil.ttf"
@@ -78,24 +78,24 @@ del "%WINDIR%\Fonts\seguisb.ttf"
 del "%WINDIR%\Fonts\seguisbi.ttf"
 del "%WINDIR%\Fonts\seguisli.ttf"
 
-REM Segoe UI Emoji Regular
+rem # Segoe UI Emoji Regular
 del "%WINDIR%\Fonts\seguiemj.ttf"
 
-REM Segoe UI Historic Regular
+rem # Segoe UI Historic Regular
 del "%WINDIR%\Fonts\seguihis.ttf"
 
-REM Segoe UI Symbol Regular
+rem # Segoe UI Symbol Regular
 del "%WINDIR%\Fonts\seguisym.ttf"
 
-REM Segoe UI Variable
+rem # Segoe UI Variable
 del "%WINDIR%\Fonts\SegUIVar.ttf"
 
-REM Remove bloat fonts
+rem # Remove bloat fonts
 
-REM app fonts
+rem # App fonts
 del "%WINDIR%\Fonts\app*"
 
-REM 8514oem Regular
+rem # 8514oem Regular
 del "%WINDIR%\Fonts\8514oemt.fon"
 
 del "%WINDIR%\Fonts\c8514fix.fon"
@@ -113,151 +113,151 @@ del "%WINDIR%\Fonts\s8514sys.fon"
 
 del "%WINDIR%\Fonts\85*"
 
-REM cga fonts
+rem # CGA fonts
 del "%WINDIR%\Fonts\cga*"
 
-REM ega fonts
+rem # EGA fonts
 del "%WINDIR%\Fonts\ega*"
 
-REM vga fonts
+rem # VGA fonts
 del "%WINDIR%\Fonts\vga*"
 
-REM svga fonts
+rem # SVGA fonts
 del "%WINDIR%\Fonts\svgafix.fon"
 del "%WINDIR%\Fonts\svgasys.fon"
 
-REM jvga fonts
+rem # JVGA fonts
 del "%WINDIR%\Fonts\jvgafix.fon"
 del "%WINDIR%\Fonts\jvgasys.fon"
 
-REM hvga fonts
+rem # HVGA fonts
 del "%WINDIR%\Fonts\hvgafix.fon"
 del "%WINDIR%\Fonts\hvgasys.fon"
 
-REM Yu Gothic / Yu Gothic UI
+rem # Yu Gothic / Yu Gothic UI
 del "%WINDIR%\Fonts\YuGothB.ttc"
 del "%WINDIR%\Fonts\YuGothL.ttc"
 del "%WINDIR%\Fonts\YuGothM.ttc"
 del "%WINDIR%\Fonts\YuGothR.ttc"
 
-REM Wingdings Regular
+rem # Wingdings Regular
 del "%WINDIR%\Fonts\wingding.ttf"
 
-REM Webdings Regular
+rem # Webdings Regular
 del "%WINDIR%\Fonts\webdings.ttf"
 
-REM Terminal Greek 869 Bold
+rem # Terminal Greek 869 Bold
 del "%WINDIR%\Fonts\dos869.fon"
 
-REM Terminal Greek 737 (437G) Regular
+rem # Terminal Greek 737 (437G) Regular
 del "%WINDIR%\Fonts\8514oemg.fon"
 
-REM Symbol Regular
+rem # Symbol Regular
 del "%WINDIR%\Fonts\symbol.ttf"
 
-REM Sylfaen Regular
+rem # Sylfaen Regular
 del "%WINDIR%\Fonts\sylfaen.ttf"
 
-REM Sitka
+rem # Sitka
 del "%WINDIR%\Fonts\SitkaVF.ttf"
 del "%WINDIR%\Fonts\SitkaVF-Italic.ttf"
 
-REM SimSun-ExtB Regular
+rem # SimSun-ExtB Regular
 del "%WINDIR%\Fonts\simsunb.ttf"
 
-REM SimSun Regular / NSimSun Regular
+rem # SimSun Regular / NSimSun Regular
 del "%WINDIR%\Fonts\simsun.ttc"
 
-REM Script Regular
+rem # Script Regular
 del "%WINDIR%\Fonts\script.fon"
 
-REM MingLiU-ExtB Regular  / MingLiU_HKSCS-ExtB Regular / MingLiU_MSCS-ExtB Regular / PMingLiU-ExtB Regular
+rem # MingLiU-ExtB Regular  / MingLiU_HKSCS-ExtB Regular / MingLiU_MSCS-ExtB Regular / PMingLiU-ExtB Regular
 del "%WINDIR%\Fonts\mingliub.ttc"
 
-REM Palatino Linotype
+rem # Palatino Linotype
 del "%WINDIR%\Fonts\pala.ttf"
 del "%WINDIR%\Fonts\palab.ttf"
 del "%WINDIR%\Fonts\palabi.ttf"
 del "%WINDIR%\Fonts\palai.ttf"
 
-REM Nirmala UI / Nirmala Text
+rem # Nirmala UI / Nirmala Text
 del "%WINDIR%\Fonts\Nirmala.ttc"
 
-REM Myanmar Text
+rem # Myanmar Text
 del "%WINDIR%\Fonts\mmrtext.ttf"
 del "%WINDIR%\Fonts\mmrtextb.ttf"
 
-REM MV Boli Reuglar
+rem # MV Boli Reuglar
 del "%WINDIR%\Fonts\mvboli.ttf"
 
-REM Mongolian Baiti Regular
+rem # Mongolian Baiti Regular
 del "%WINDIR%\Fonts\monbaiti.ttf"
 
-REM Modern Regular
+rem # Modern Regular
 del "%WINDIR%\Fonts\modern.fon"
 
-REM Microsoft Yi Baiti Regular
+rem # Microsoft Yi Baiti Regular
 del "%WINDIR%\Fonts\msyi.ttf"
 
-REM Microsoft YaHei / Microsoft YaHei UI
+rem # Microsoft YaHei / Microsoft YaHei UI
 del "%WINDIR%\Fonts\msyh.ttc"
 del "%WINDIR%\Fonts\msyhbd.ttc"
 del "%WINDIR%\Fonts\msyhl.ttc"
 
-REM Microsoft Tai Le
+rem # Microsoft Tai Le
 del "%WINDIR%\Fonts\taile.ttf
 del "%WINDIR%\Fonts\taileb.ttf"
 
-REM Microsoft PhagsPa
+rem # Microsoft PhagsPa
 del "%WINDIR%\Fonts\phagspa.ttf"
 del "%WINDIR%\Fonts\phagspab.ttf"
 
-REM Microsoft New Tai Lue
+rem # Microsoft New Tai Lue
 del "%WINDIR%\Fonts\ntailu.ttf"
 del "%WINDIR%\Fonts\ntailub.ttf"
 
-REM Microsoft JhengHei / Microsoft JhengHei UI
+rem # Microsoft JhengHei / Microsoft JhengHei UI
 del "%WINDIR%\Fonts\msjh.ttc"
 del "%WINDIR%\Fonts\msjhbd.ttc"
 del "%WINDIR%\Fonts\msjhl.ttc"
 
-REM Microsoft Himalaya Regular
+rem # Microsoft Himalaya Regular
 del "%WINDIR%\Fonts\himalaya.ttf"
 
-REM Malgun Gothic
+rem # Malgun Gothic
 del "%WINDIR%\Fonts\malgun.ttf"
 del "%WINDIR%\Fonts\malgunbd.ttf"
 del "%WINDIR%\Fonts\malgunsl.ttf"
 
-REM Leelawadee UI
+rem # Leelawadee UI
 del "%WINDIR%\Fonts\LeelaUIb.ttf"
 del "%WINDIR%\Fonts\LeelawUI.ttf"
 del "%WINDIR%\Fonts\LeelUIsl.ttf"
 
-REM Javanese Text Regular
+rem # Javanese Text Regular
 del "%WINDIR%\Fonts\javatext.ttf"
 
-REM Ink Free Regular
+rem # Ink Free Regular
 del "%WINDIR%\Fonts\Inkfree.ttf"
 
-REM Impact Regular
+rem # Impact Regular
 del "%WINDIR%\Fonts\impact.ttf"
 
-REM HoloLens MDL2 Assets Regular
+rem # HoloLens MDL2 Assets Regular
 del "%WINDIR%\Fonts\holomdl2.ttf"
 
-REM Gadugi
+rem # Gadugi
 del "%WINDIR%\Fonts\gadugi.ttf"
 del "%WINDIR%\Fonts\gadugib.ttf"
 
-REM Ebrima
+rem # Ebrima
 del "%WINDIR%\Fonts\ebrima.ttf"
 del "%WINDIR%\Fonts\ebrimabd.ttf"
 
-REM Bahnschrift
+rem # Bahnschrift
 del "%WINDIR%\Fonts\bahnschrift.ttf"
 
-REM Calibri
+rem # Calibri
 del "%WINDIR%\Fonts\calibri.ttf"
 del "%WINDIR%\Fonts\calibrib.ttf"
 del "%WINDIR%\Fonts\calibrii.ttf"
@@ -265,13 +265,13 @@ del "%WINDIR%\Fonts\calibril.ttf"
 del "%WINDIR%\Fonts\calibrili.ttf"
 del "%WINDIR%\Fonts\calibriz.ttf"
 
-REM Cambria / Cambria Math Regular
+rem # Cambria / Cambria Math Regular
 del "%WINDIR%\Fonts\cambria.ttf"
 del "%WINDIR%\Fonts\cambriab.ttf"
 del "%WINDIR%\Fonts\cambriai.ttf"
 del "%WINDIR%\Fonts\cambriaz.ttf"
 
-REM Candara
+rem # Candara
 del "%WINDIR%\Fonts\Candara.ttf"
 del "%WINDIR%\Fonts\Candarab.ttf"
 del "%WINDIR%\Fonts\Candarai.ttf"
@@ -279,13 +279,13 @@ del "%WINDIR%\Fonts\Candaral.ttf"
 del "%WINDIR%\Fonts\Candarali.ttf"
 del "%WINDIR%\Fonts\Candaraz.ttf"
 
-REM Constantia
+rem # Constantia
 del "%WINDIR%\Fonts\constan.ttf"
 del "%WINDIR%\Fonts\constanb.ttf"
 del "%WINDIR%\Fonts\constani.ttf"
 del "%WINDIR%\Fonts\constanz.ttf"
 
-REM Corbel
+rem # Corbel
 del "%WINDIR%\Fonts\corbel.ttf"
 del "%WINDIR%\Fonts\corbelb.ttf"
 del "%WINDIR%\Fonts\corbeli.ttf"
@@ -293,7 +293,7 @@ del "%WINDIR%\Fonts\corbell.ttf"
 del "%WINDIR%\Fonts\corbelli.ttf"
 del "%WINDIR%\Fonts\corbelz.ttf"
 
-REM Gabriola Regular
+rem # Gabriola Regular
 del "%WINDIR%\Fonts\Gabriola.ttf"
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "Segoe UI (TrueType)" /t REG_SZ /d "" /f
@@ -313,7 +313,7 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "Segoe UI S
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "Segoe UI Symbol (TrueType)" /t REG_SZ /d "" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "Segoe UI Variable (TrueType)" /t REG_SZ /d "" /f
 
-REM .FON fonts are not supported (MS Sans Serif Regular)
+rem # .FON fonts are not supported (MS Sans Serif Regular)
 reg delete "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes" /v "Segoe UI" /t REG_SZ /d "Microsoft Sans Serif Regular" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes" /v "Segoe UI Variable" /t REG_SZ /d "Microsoft Sans Serif Regular" /f
