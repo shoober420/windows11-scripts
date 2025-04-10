@@ -9,6 +9,7 @@ rmdir %systemroot%\SoftwareDistribution /S /Q
 rmdir %systemroot%\system32\catroot2 /S /Q
 
 ren c:\windows\winsxs\pending.xml pending.old
+
 bitsadmin.exe /reset /allusers
 
 PAUSE
