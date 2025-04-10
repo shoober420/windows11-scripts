@@ -289,6 +289,13 @@ reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "L
 rem # Disable Quick Access Navigation Panel Directories
 reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace\DelegateFolders\{3936E9E4-D92C-4EEE-A85A-BC16D5EA0819}" /f
 
+rem # Hide bloat directories in Users Files (My Documents)
+attrib +r +s +h %USERPROFILE%\Contacts /S /D
+attrib +r +s +h %USERPROFILE%\Favorites /S /D
+attrib +r +s +h %USERPROFILE%\Links /S /D
+attrib +r +s +h %USERPROFILE%\OneDrive /S /D
+attrib +r +s +h %USERPROFILE%\Searches /S /D
+
 
 
 rem # Disable Theme Changes
