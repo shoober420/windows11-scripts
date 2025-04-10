@@ -22,6 +22,9 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\CLSID\{20D04FE0
 rem # Windows 95 similar desktop Control Panel icon
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\CLSID\{5399E694-6CE5-4D6C-8FCE-1D8870FDCBA0}\DefaultIcon" /ve /d "%SystemRoot%\System32\shell32.dll,90" /f
 
+rem # Windows 95 double gear desktop Control Panel icon
+rem reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\CLSID\{5399E694-6CE5-4D6C-8FCE-1D8870FDCBA0}\DefaultIcon" /ve /d "%SystemRoot%\System32\mmcndmgr.dll,75" /f
+
 rem # Windows 95 similar Hard Drive icon
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\DriveIcons\C\DefaultIcon" /ve /d "%SystemRoot%\System32\compstui.dll,61" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\DriveIcons\D\DefaultIcon" /ve /d "%SystemRoot%\System32\compstui.dll,61" /f
