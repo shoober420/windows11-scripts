@@ -287,6 +287,9 @@ reg add "HKEY_CLASSES_ROOT\CLSID\{f86fa3ab-70d2-4fc7-9c99-fcbf05467f3a}" /v "Sys
 reg add "HKEY_CLASSES_ROOT\Wow6432Node\CLSID\{A0953C92-50DC-43bf-BE83-3742FED03C9C}" /v "System.IsPinnedToNameSpaceTree" /t REG_DWORD /d "0" /f
 reg add "HKEY_CLASSES_ROOT\Wow6432Node\CLSID\{f86fa3ab-70d2-4fc7-9c99-fcbf05467f3a}" /v "System.IsPinnedToNameSpaceTree" /t REG_DWORD /d "0" /f
 
+rem # Disable Quick Access Navigation Panel
+reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "LaunchTo" /t REG_DWORD /d "0" /f
+
 
 
 rem # Disable Theme Changes
