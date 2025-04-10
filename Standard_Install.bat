@@ -61,6 +61,40 @@ ECHO R | powershell.exe ./DisableScheduledTasks.ps1
 ./RemoveRemoteDesktopConnection.bat
 ./DisableHighPrecisionEventTimer.bat
 
+@echo off
+
+echo.
+echo 1. HDR ENABLED
+echo 2. HDR DISABLED
+echo C. Cancel
+echo.
+choice /c 12C /m "Choose an option :"
+
+if 3 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 2 EQU %ERRORLEVEL% (
+   call :HDROFF
+) else if 1 EQU %ERRORLEVEL% (
+   call :HDRON
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+
+goto :eof
+
+:HDRON
+echo User chose HDR ENABLED
+
+./EnableHDR.bat
+goto :end
+
+:HDROFF
+echo User chose HDR DISABLED
+
+./DisableHDR.bat
+goto :end
+
+:end
+
 rem # Launch GPU option scripts to finish installation (NVProfileInspector required for NVIDIA)
 
 rem #
