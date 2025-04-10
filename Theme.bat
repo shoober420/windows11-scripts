@@ -58,13 +58,6 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\DriveIcons\E\De
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\DriveIcons\F\DefaultIcon" /ve /d "%SystemRoot%\System32\compstui.dll,61" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\DriveIcons\G\DefaultIcon" /ve /d "%SystemRoot%\System32\compstui.dll,61" /f
 
-rem # Change Removable Device File Explorer Icon to Windows 95 CD
-reg add "HKCU\Software\Classes\Applications\Explorer.exe\Drives\D\DefaultIcon" /ve /d "%SystemRoot%\System32\mmcndmgr.dll,74" /f
-reg add "HKCU\Software\Classes\Applications\Explorer.exe\Drives\E\DefaultIcon" /ve /d "%SystemRoot%\System32\mmcndmgr.dll,74" /f
-reg add "HKCU\Software\Classes\Applications\Explorer.exe\Drives\F\DefaultIcon" /ve /d "%SystemRoot%\System32\mmcndmgr.dll,74" /f
-reg add "HKCU\Software\Classes\Applications\Explorer.exe\Drives\G\DefaultIcon" /ve /d "%SystemRoot%\System32\mmcndmgr.dll,74" /f
-
-
 rem # Rename "This PC" to "My Computer"
 rem # My Computer is one line when using 4:3 resolutions
 rem # My Computer is two lines when using 16:9 resolutions
