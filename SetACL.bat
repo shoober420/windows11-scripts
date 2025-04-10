@@ -179,4 +179,19 @@ SetACL.exe -on "HKCR\CLSID\{679f85cb-0220-4080-b29b-5540cc05aab6}\ShellFolder" -
 SetACL.exe -on "HKEY_CLASSES_ROOT\CLSID\{1CF1260C-4DD0-4ebb-811F-33C572699FDE}" -ot reg -actn setowner -ownr "n:Administrators"
 SetACL.exe -on "HKEY_CLASSES_ROOT\CLSID\{1CF1260C-4DD0-4ebb-811F-33C572699FDE}" -ot reg -actn ace -ace "n:Administrators;p:full"
 
+SetACL.exe -on "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace\{f8278c54-a712-415b-b593-b77a2be0dda9}" -ot reg -actn setowner -ownr "n:Administrators"
+SetACL.exe -on "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace\{f8278c54-a712-415b-b593-b77a2be0dda9}" -ot reg -actn ace -ace "n:Administrators;p:full"
+
+SetACL.exe -on "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace\{EDC978D6-4D53-4b2f-A265-5805674BE568}" -ot reg -actn setowner -ownr "n:Administrators"
+SetACL.exe -on "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace\{EDC978D6-4D53-4b2f-A265-5805674BE568}" -ot reg -actn ace -ace "n:Administrators;p:full"
+
+SetACL.exe -on "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace\{8FD8B88D-30E1-4F25-AC2B-553D3D65F0EA}" -ot reg -actn setowner -ownr "n:Administrators"
+SetACL.exe -on "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace\{8FD8B88D-30E1-4F25-AC2B-553D3D65F0EA}" -ot reg -actn ace -ace "n:Administrators;p:full"
+
+SetACL.exe -on "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace\{5b934b42-522b-4c34-bbfe-37a3ef7b9c90}" -ot reg -actn setowner -ownr "n:Administrators"
+SetACL.exe -on "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace\{5b934b42-522b-4c34-bbfe-37a3ef7b9c90}" -ot reg -actn ace -ace "n:Administrators;p:full"
+
+SetACL.exe -on "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace\{2F6CE85C-F9EE-43CA-90C7-8A9BD53A2467}" -ot reg -actn setowner -ownr "n:Administrators"
+SetACL.exe -on "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace\{2F6CE85C-F9EE-43CA-90C7-8A9BD53A2467}" -ot reg -actn ace -ace "n:Administrators;p:full"
+
 PAUSE
