@@ -237,14 +237,14 @@ rem # Music
 reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace\{1CF1260C-4DD0-4ebb-811F-33C572699FDE}" /f
 
 rem # Unpin Music Folder from File Explorer Navigation Panel
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FolderDescriptions\{1CF1260C-4DD0-4ebb-811F-33C572699FDE}" /v "ThisPCPolicy" /t REG_DSZ /d "Hide" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FolderDescriptions\{a0c69a99-21c8-4671-8703-7934162fcf1d}" /v "ThisPCPolicy" /t REG_DSZ /d "Hide" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FolderDescriptions\{1CF1260C-4DD0-4ebb-811F-33C572699FDE}" /v "ThisPCPolicy" /t REG_SZ /d "Hide" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FolderDescriptions\{a0c69a99-21c8-4671-8703-7934162fcf1d}" /v "ThisPCPolicy" /t REG_SZ /d "Hide" /f
 
 rem # Unpin Pictures from File Explorer Navigation Panel
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FolderDescriptions\{0ddd015d-b06c-45d5-8c4c-f59713854639}" /v "ThisPCPolicy" /t REG_DSZ /d "Hide" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FolderDescriptions\{0ddd015d-b06c-45d5-8c4c-f59713854639}" /v "ThisPCPolicy" /t REG_SZ /d "Hide" /f
 
 rem # Unpin Video from File Explorer Navigation Panel
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FolderDescriptions\{35286a68-3c57-41a1-bbb1-0eae73d76c95}" /v "ThisPCPolicy" /t REG_DSZ /d "Hide" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FolderDescriptions\{35286a68-3c57-41a1-bbb1-0eae73d76c95}" /v "ThisPCPolicy" /t REG_SZ /d "Hide" /f
 
 rem # Unpin Music from File Explorer Navigation Panel
 reg add "HKEY_CLASSES_ROOT\CLSID\{1CF1260C-4DD0-4ebb-811F-33C572699FDE}" /v "System.IsPinnedToNameSpaceTree" /t REG_DWORD /d "0" /f
