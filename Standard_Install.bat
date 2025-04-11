@@ -27,39 +27,40 @@ rem # https://github.com/HakanFly/Windows-Tweaks
 
 cd "%~dp0"
 
-./EnablePowerShell.bat
-./VCRedist.bat
-./CPUTweaks.bat
-./GPUTweaks.bat
-./HardDrive_Tweaks.bat
-./USBTweaks.bat
-./HighPriority.bat
-./InputTweaks.bat
-./InternetSettings.bat
-./SecuritySettings.bat
-./DisablePerProcessSystemDPI.bat
-./MouseAccelFix.bat
-./NICProperties.bat
-./NetworkTweaks.bat
+< NUL call EnablePowerShell.bat
+< NUL call VCRedist.bat
+< NUL call CPUTweaks.bat
+< NUL call GPUTweaks.bat
+< NUL call HardDrive_Tweaks.bat
+< NUL call USBTweaks.bat
+rem < NUL call HighPriority.bat
+< NUL call InputTweaks.bat
+< NUL call InternetSettings.bat
+< NUL call SecuritySettings.bat
+< NUL call DisablePerProcessSystemDPI.bat
+< NUL call MouseAccelFix.bat
+< NUL call NICProperties.bat
+< NUL call PowerPlanUltra.bat
+< NUL call DisableFullscreenOptimizations.bat
+< NUL call DisableScheduledTasks.bat
+< NUL call DisableLanmanWorkstation.bat
+< NUL call DisableLanmanServer.bat
+< NUL call DisableIPHelper.bat
+< NUL call DisableNetBIOSHelper.bat
+< NUL call DisableUPnPDeviceHost.bat
+< NUL call DisableSSDPDiscovery.bat
+< NUL DisableEdge.bat
+call RAMTweaks.bat
+call ThreadQuantum.bat
+< NUL call UseLargePages.bat
+< NUL call MTU.bat
+< NUL call RemoveRemoteDesktopConnection.bat
+< NUL call DisableHighPrecisionEventTimer.bat
+< NUL call NetworkTweaks.bat
+
 ECHO R | powershell.exe ./DisableNetBIOS.ps1
 ECHO R | powershell.exe ./DNS.ps1
-./PowerPlanUltra.bat
-./DisableFullscreenOptimizations.bat
 ECHO R | powershell.exe ./DisableScheduledTasks.ps1
-./DisableScheduledTasks.bat
-./DisableLanmanWorkstation.bat
-./DisableLanmanServer.bat
-./DisableIPHelper.bat
-./DisableNetBIOSHelper.bat
-./DisableUPnPDeviceHost.bat
-./DisableSSDPDiscovery.bat
-./DisableEdge.bat
-./RAMTweaks.bat
-./ThreadQuantum.bat
-./UseLargePages.bat
-./MTU.bat
-./RemoveRemoteDesktopConnection.bat
-./DisableHighPrecisionEventTimer.bat
 
 rem # Launch GPU option scripts to finish installation (NVProfileInspector required for NVIDIA)
 
