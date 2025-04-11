@@ -34,12 +34,13 @@ call DisablePerProcessSystemDPI.bat
 call MouseAccelFix.bat
 call NICProperties.bat
 call NetworkTweaks.bat
-ECHO R | powershell.exe ./DisableNetBIOS.ps1
-ECHO R | powershell.exe ./DNS.ps1
 call PowerPlanUltra.bat
 call DisableFullscreenOptimizations.bat
 call ThreadQuantum.bat
 call RemoveRemoteDesktopConnection.bat
 call MTU.bat
+
+ECHO R | powershell.exe ./DisableNetBIOS.ps1
+ECHO R | powershell.exe ./DNS.ps1
 
 PAUSE
