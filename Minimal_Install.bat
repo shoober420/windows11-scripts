@@ -40,6 +40,8 @@ call ThreadQuantum.bat
 < NUL call MTU.bat
 < NUL call NetworkTweaks.bat
 
+cd "%~dp0"
+
 ECHO R | powershell.exe ./DisableNetBIOS.ps1
 ECHO R | powershell.exe ./DNS.ps1
 
