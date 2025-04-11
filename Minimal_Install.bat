@@ -35,7 +35,7 @@ cd "%~dp0"
 < NUL call NICProperties.bat
 < NUL call PowerPlanUltra.bat
 < NUL call DisableFullscreenOptimizations.bat
-< NUL call ThreadQuantum.bat
+call ThreadQuantum.bat
 < NUL call RemoveRemoteDesktopConnection.bat
 < NUL call MTU.bat
 < NUL call NetworkTweaks.bat
