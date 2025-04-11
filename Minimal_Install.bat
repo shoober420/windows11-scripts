@@ -27,19 +27,19 @@ rem # https://github.com/HakanFly/Windows-Tweaks
 
 cd "%~dp0"
 
-./EnablePowershell.bat
-./VCRedist.bat
-./InternetSettings
-./DisablePerProcessSystemDPI.bat
-./MouseAccelFix.bat
-./NICProperties.bat
-./NetworkTweaks.bat
+call EnablePowershell.bat
+call VCRedist.bat
+call InternetSettings
+call DisablePerProcessSystemDPI.bat
+call MouseAccelFix.bat
+call NICProperties.bat
+call NetworkTweaks.bat
 ECHO R | powershell.exe ./DisableNetBIOS.ps1
 ECHO R | powershell.exe ./DNS.ps1
-./PowerPlanUltra.bat
-./DisableFullscreenOptimizations.bat
-./ThreadQuantum.bat
-./RemoveRemoteDesktopConnection.bat
-./MTU.bat
+call PowerPlanUltra.bat
+call DisableFullscreenOptimizations.bat
+call ThreadQuantum.bat
+call RemoveRemoteDesktopConnection.bat
+call MTU.bat
 
 PAUSE
