@@ -58,6 +58,11 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\DriveIcons\E\De
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\DriveIcons\F\DefaultIcon" /ve /d "%SystemRoot%\System32\compstui.dll,61" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\DriveIcons\G\DefaultIcon" /ve /d "%SystemRoot%\System32\compstui.dll,61" /f
 
+rem # https://winaero.com/change-icons-folders-pc-windows-10/
+
+rem # silly downloads folder icon
+reg add "HKEY_CLASSES_ROOT\CLSID\{088e3905-0323-4b02-9826-5d99428e115f}\DefaultIcon" /ve /d "%SystemRoot%\System32\moricons.dll,22" /f
+
 rem # Rename "This PC" to "My Computer"
 rem # My Computer is one line when using 4:3 resolutions
 rem # My Computer is two lines when using 16:9 resolutions
