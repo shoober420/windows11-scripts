@@ -4,6 +4,7 @@ rem # Launch in SAFE MODE
 
 cd "%~dp0"
 
+< NUL call SetACL.bat
 < NUL call DisableWindowsDefender.bat
 < NUL call DisableWindowsFirewall.bat
 < NUL call DisableWindowsSecurityCenter.bat
