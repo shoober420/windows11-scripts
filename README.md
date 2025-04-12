@@ -776,7 +776,7 @@ AccentColor.bat
 
 DisablePerProcessSystemDPI.bat / EnablePerProcessSystemDPI.bat
 
-Minimal_Install.bat / Standard_Install.bat / Advanced_Install.bat
+Minimal_Install.bat / Standard_Install.bat / Advanced_Install.bat / Expert_Install.bat
 
 # Credits
 - https://www.elevenforum.com/members/garlin.5387
