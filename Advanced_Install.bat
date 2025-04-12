@@ -229,6 +229,41 @@ goto :end
 
 :end
 
+echo.
+echo 1. Static IP ENABLED
+echo 2. DHCP ENABLED
+echo C. Cancel
+echo.
+choice /c 12C /m "Choose an option :"
+
+if 3 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 2 EQU %ERRORLEVEL% (
+   call :DHCPON
+) else if 1 EQU %ERRORLEVEL% (
+   call :STATICON
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+
+goto :eof
+
+:DHCPON
+echo User chose DHCP ENABLED
+
+goto :end
+
+:STATICON
+echo User chose Static IP ENABLED
+
+call DisableDHCP.bat
+call StaticIPConnection.bat
+call DisableWinHTTP.bat
+call DisableWLAN_AutoConfig.bat
+
+goto :end
+
+:end
+
 rem # Launch GPU option scripts to finish installation (NVProfileInspector required for NVIDIA)
 
 rem #
