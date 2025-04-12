@@ -260,19 +260,20 @@ Install and open CCleaner (optional)
 
 RESTART (SAFE MODE) (hold SHIFT while restarting)
 
- - SetACL.bat (required for taking ownership of Windows Defender services and other bloat)
- - DisableWindowsDefender.bat (AV software is bloat)
- - DisableWindowsFirewall.bat (use router firewall)
- - DisableWindowsSecurityCenter.bat
- - DisableEventTraceSessions.bat
- - DisableSAM.bat (black screen and unresponsive desktop if LanmanServer is enabled)
+ - Expert_Install.bat
+  + SetACL.bat (required for taking ownership of Windows Defender services and other bloat)
+  + DisableWindowsDefender.bat (AV software is bloat)
+  + DisableWindowsFirewall.bat (use router firewall)
+  + DisableWindowsSecurityCenter.bat
+  + DisableEventTraceSessions.bat
+  + DisableSAM.bat (black screen and unresponsive desktop if LanmanServer is enabled)
 
- - DisableLanmanServer.bat
- - DisableStartMenu.bat
- - DisableComponents.bat
- - DisableWindowsSearch.bat (if skipped, file explorer and system will hang and freeze)
- - DeleteFonts.bat
- - Windows11Tweaks.bat (if skipped, admin privileges are borked)
+  + DisableLanmanServer.bat
+  + DisableStartMenu.bat
+  + DisableComponents.bat
+  + DisableWindowsSearch.bat (if skipped, file explorer and system will hang and freeze)
+  + DeleteFonts.bat
+  + Windows11Tweaks.bat (if skipped, admin privileges are borked)
 
 RESTART
 
