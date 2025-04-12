@@ -66,8 +66,7 @@ ECHO R | powershell.exe ./DisableScheduledTasks.ps1
 
 rem # Launch GPU option scripts to finish installation (NVProfileInspector required for NVIDIA)
 
-rem #
-NVIDIAPerformanceProfile.nip / NVIDIAHighQualityProfileOGL.nip / NVIDIAHighQualityProfileD3D.nip
+rem # NVIDIAPerformanceProfile.nip / NVIDIAHighQualityProfileOGL.nip / NVIDIAHighQualityProfileD3D.nip
 
 rem # AMDAdrenalinSettingsPERF.bat / AMDAdrenalinSettingsHQ.bat
 
