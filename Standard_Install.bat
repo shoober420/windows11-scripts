@@ -64,6 +64,8 @@ ECHO R | powershell.exe ./DisableNetBIOS.ps1
 ECHO R | powershell.exe ./DNS.ps1
 ECHO R | powershell.exe ./DisableScheduledTasks.ps1
 
+@echo off
+
 echo.
 echo 1. NVIDIA GPU
 echo 2. AMD GPU
