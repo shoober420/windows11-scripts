@@ -49,7 +49,7 @@ rem < NUL call HighPriority.bat
 < NUL call DisableNetBIOSHelper.bat
 < NUL call DisableUPnPDeviceHost.bat
 < NUL call DisableSSDPDiscovery.bat
-< NUL DisableEdge.bat
+< NUL call DisableEdge.bat
 call RAMTweaks.bat
 call ThreadQuantum.bat
 < NUL call UseLargePages.bat
