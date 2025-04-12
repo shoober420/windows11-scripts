@@ -27,68 +27,71 @@ rem # https://github.com/HakanFly/Windows-Tweaks
 
 cd "%~dp0"
 
-./EnablePowerShell.bat
-./VCRedist.bat
-./CPUTweaks.bat
-./GPUTweaks.bat
-./KernelTweaks.bat
-./TimerTweaks.bat
-./HardDrive_Tweaks.bat
-./USBTweaks.bat
-./HighPriority.bat
-./InputTweaks.bat
-./InternetSettings.bat
-./SecuritySettings.bat
-./DisablePerProcessSystemDPI.bat
-./MouseAccelFix.bat
-./NICProperties.bat
-./NetworkTweaks.bat
+< NUL call EnablePowerShell.bat
+< NUL call VCRedist.bat
+< NUL call CPUTweaks.bat
+< NUL call GPUTweaks.bat
+< NUL call KernelTweaks.bat
+< NUL call TimerTweaks.bat
+< NUL call HardDrive_Tweaks.bat
+< NUL call USBTweaks.bat
+rem < NUL call HighPriority.bat
+< NUL call InputTweaks.bat
+< NUL call InternetSettings.bat
+< NUL call SecuritySettings.bat
+< NUL call DisablePerProcessSystemDPI.bat
+< NUL call MouseAccelFix.bat
+< NUL call NICProperties.bat
+< NUL call PowerPlanUltra.bat
+< NUL call DisableFullscreenOptimizations.bat
+< NUL call DisableScheduledTasks.bat
+rem < NUL call DisableBluetooth.bat
+< NUL call DisableTouchPad.bat
+< NUL call DisableSysMain.bat
+< NUL call DisableEdge.bat
+< NUL call DisableTPM+SecureBoot.bat
+< NUL call DisableSSL+LegacyTLS.bat
+< NUL call DisableBitLocker.bat
+< NUL call DisableCPUMitigations.bat
+< NUL call DisableMIDI2.0.bat
+< NUL call RemoveFirewallRules.bat
+call RAMTweaks.bat
+call ThreadQuantum.bat
+< NUL call UseLargePages.bat
+< NUL call EnableClearPageFileAtShutdown.bat
+< NUL call DisablePageFile.bat
+< NUL call RemoveRemoteDesktopConnection.bat
+< NUL call RemoveWindowsApps.bat
+< NUL call RemoveWindowsFeatures.bat
+< NUL call EnableSerializeTimerExpiration.bat
+< NUL call DisableThreadDpcEnable.bat
+< NUL call MaxPendingInterrupts.reg
+< NUL call ResourceSets.reg
+< NUL call Base+OverTargetPriorities.reg
+< NUL call BCDEDIT_Tweaks.bat
+< NUL call SetTimerResolution.bat
+< NUL call DWM_ExclusiveModeFramerateAveragingPeriodMs.bat
+< NUL call DWM_Tweaks.bat
+< NUL call Windows11Tweaks.bat
+< NUL call DisableServicesInternet.bat
+< NUL call DisableComponents.bat
+< NUL call DisableStartMenu.bat
+< NUL call DisableShellExperienceHost.bat
+< NUL call MTU.bat
+< NUL call DeviceManager.bat
+call WallpaperSolidColor.bat
+< NUL call Theme.bat
+call AccentColor.bat
+< NUL call Decrypt+OSCompression.bat
+< NUL call NetworkTweaks.bat
+
+cd "%~dp0"
+
 ECHO R | powershell.exe ./DisableNetBIOS.ps1
 ECHO R | powershell.exe ./DNS.ps1
-./PowerPlanUltra.bat
-./DisableFullscreenOptimizations.bat
 ECHO R | powershell.exe ./DisableScheduledTasks.ps1
-./DisableScheduledTasks.bat
 ECHO R | powershell.exe ./DisableIntegratedGPU.ps1
-./DisableBluetooth.bat
-./DisableTouchPad.bat
-./DisableSysMain.bat
-./DisableEdge.bat
-./DisableTPM+SecureBoot.bat
-./DisableSSL+LegacyTLS.bat
-./DisableBitLocker.bat
-./DisableCPUMitigations.bat
-./DisableMIDI2.0.bat
-./RemoveFirewallRules.bat
 ECHO R | powershell.exe ./DisablePowerManagement.ps1
-./RAMTweaks.bat
-./ThreadQuantum.bat
-./UseLargePages.bat
-./EnableClearPageFileAtShutdown.bat
-./DisablePageFile.bat
-./RemoveRemoteDesktopConnection.bat
-./RemoveWindowsApps.bat
-./RemoveWindowsFeatures.bat
-./EnableSerializeTimerExpiration.bat
-./DisableThreadDpcEnable.bat
-./MaxPendingInterrupts.reg
-./ResourceSets.reg
-./Base+OverTargetPriorities.reg
-./BCDEDIT_Tweaks.bat
-./SetTimerResolution.bat
-./DWM_ExclusiveModeFramerateAveragingPeriodMs.bat
-./DWM_Tweaks.bat
-./Windows11Tweaks.bat
-./DisableServicesInternet.bat
-./DisableComponents.bat
-./DisableStartMenu.bat
-./DisableShellExperienceHost.bat
-./MTU.bat
-./DeviceManager.bat
-./WallpaperSolidColor.bat
-./Theme.bat
-./AccentColor.bat
-./Decrypt+OSCompression.bat
 
 @echo off
 
