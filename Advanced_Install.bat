@@ -264,6 +264,40 @@ goto :end
 
 :end
 
+echo.
+echo 1. NVIDIA GPU
+echo 2. AMD GPU
+echo C. Cancel
+echo.
+choice /c 12C /m "Choose an option :"
+
+if 3 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 2 EQU %ERRORLEVEL% (
+   call :AMD
+) else if 1 EQU %ERRORLEVEL% (
+   call :NV
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+
+goto :eof
+
+:AMD
+echo User chose AMD GPU
+
+call AMDGPUTweaks.bat
+
+goto :end
+
+:NV
+echo User chose NVIDIA GPU
+
+call NVGPUTweaks.bat
+
+goto :end
+
+:end
+
 rem # Launch GPU option scripts to finish installation (NVProfileInspector required for NVIDIA)
 
 rem #
