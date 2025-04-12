@@ -197,6 +197,38 @@ goto :end
 
 :end
 
+echo.
+echo 1. Windows Services ENABLED
+echo 2. Windows Services DISABLED
+echo C. Cancel
+echo.
+choice /c 12C /m "Choose an option :"
+
+if 3 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 2 EQU %ERRORLEVEL% (
+   call :SVCOFF
+) else if 1 EQU %ERRORLEVEL% (
+   call :SVCON
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+
+goto :eof
+
+:SVCON
+echo User chose Windows Services ENABLED
+
+goto :end
+
+:SVCOFF
+echo User chose Windows Services DISABLED
+
+call DisableServicesWindows.bat
+
+goto :end
+
+:end
+
 rem # Launch GPU option scripts to finish installation (NVProfileInspector required for NVIDIA)
 
 rem #
