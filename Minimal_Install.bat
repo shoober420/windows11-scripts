@@ -29,7 +29,7 @@ cd "%~dp0"
 
 < NUL call EnablePowershell.bat
 < NUL call VCRedist.bat
-< NUL call InternetSettings
+< NUL call InternetSettings.bat
 < NUL call DisablePerProcessSystemDPI.bat
 < NUL call MouseAccelFix.bat
 < NUL call NICProperties.bat
