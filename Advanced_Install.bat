@@ -62,9 +62,9 @@ call ThreadQuantum.bat
 < NUL call RemoveWindowsFeatures.bat
 < NUL call EnableSerializeTimerExpiration.bat
 < NUL call DisableThreadDpcEnable.bat
-< NUL call MaxPendingInterrupts.reg
-< NUL call ResourceSets.reg
-< NUL call Base+OverTargetPriorities.reg
+regedit.exe /s MaxPendingInterrupts.reg
+regedit.exe /s ResourceSets.reg
+regedit.exe /s Base+OverTargetPriorities.reg
 < NUL call BCDEDIT_Tweaks.bat
 < NUL call SetTimerResolution.bat
 < NUL call DWM_ExclusiveModeFramerateAveragingPeriodMs.bat
