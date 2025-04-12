@@ -45,13 +45,10 @@ rem < NUL call HighPriority.bat
 < NUL call PowerPlanUltra.bat
 < NUL call DisableFullscreenOptimizations.bat
 < NUL call DisableScheduledTasks.bat
-rem < NUL call DisableBluetooth.bat
 < NUL call DisableTouchPad.bat
 < NUL call DisableSysMain.bat
 < NUL call DisableEdge.bat
-< NUL call DisableTPM+SecureBoot.bat
 < NUL call DisableSSL+LegacyTLS.bat
-< NUL call DisableBitLocker.bat
 < NUL call DisableCPUMitigations.bat
 < NUL call DisableMIDI2.0.bat
 < NUL call RemoveFirewallRules.bat
@@ -72,7 +69,6 @@ call ThreadQuantum.bat
 < NUL call SetTimerResolution.bat
 < NUL call DWM_ExclusiveModeFramerateAveragingPeriodMs.bat
 < NUL call DWM_Tweaks.bat
-< NUL call Windows11Tweaks.bat
 < NUL call DisableServicesInternet.bat
 < NUL call DisableComponents.bat
 < NUL call DisableStartMenu.bat
@@ -82,8 +78,12 @@ call ThreadQuantum.bat
 call WallpaperSolidColor.bat
 < NUL call Theme.bat
 call AccentColor.bat
-< NUL call Decrypt+OSCompression.bat
+
 < NUL call NetworkTweaks.bat
+
+cd "%~dp0"
+
+< NUL call Windows11Tweaks.bat
 
 cd "%~dp0"
 
@@ -116,13 +116,83 @@ goto :eof
 :HDRON
 echo User chose HDR ENABLED
 
-./EnableHDR.bat
+call EnableHDR.bat
+
 goto :end
 
 :HDROFF
 echo User chose HDR DISABLED
 
-./DisableHDR.bat
+call DisableHDR.bat
+
+goto :end
+
+:end
+
+echo.
+echo 1. BLUETOOTH ENABLED
+echo 2. BLUETOOTH DISABLED
+echo C. Cancel
+echo.
+choice /c 12C /m "Choose an option :"
+
+if 3 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 2 EQU %ERRORLEVEL% (
+   call :BTOFF
+) else if 1 EQU %ERRORLEVEL% (
+   call :BTON
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+
+goto :eof
+
+:BTON
+echo User chose BLUETOOTH ENABLED
+
+call EnableBluetooth.bat
+
+goto :end
+
+:BTOFF
+echo User chose BLUETOOTH DISABLED
+
+call DisableBluetooth.bat
+
+goto :end
+
+:end
+
+echo.
+echo 1. TPM + BitLocker ENABLED
+echo 2. TPM + BitLocker DISABLED
+echo C. Cancel
+echo.
+choice /c 12C /m "Choose an option :"
+
+if 3 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 2 EQU %ERRORLEVEL% (
+   call :TPMOFF
+) else if 1 EQU %ERRORLEVEL% (
+   call :TPMON
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+
+goto :eof
+
+:TPMON
+echo User chose TPM ENABLED
+
+goto :end
+
+:TPMOFF
+echo User chose TPM DISABLED
+
+call DisableTPM+SecureBoot.bat
+call DisableBitLocker.bat
+call Decrypt+OSCompression.bat
+
 goto :end
 
 :end
