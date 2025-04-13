@@ -67,6 +67,9 @@ regedit.exe /s "%~dp0\ResourceSets.reg"
 regedit.exe /s "%~dp0\Base+OverTargetPriorities.reg"
 < NUL call BCDEDIT_Tweaks.bat
 < NUL call SetTimerResolution.bat
+
+cd "%~dp0"
+
 < NUL call DWM_ExclusiveModeFramerateAveragingPeriodMs.bat
 < NUL call DWM_Tweaks.bat
 < NUL call DisableServicesInternet.bat
