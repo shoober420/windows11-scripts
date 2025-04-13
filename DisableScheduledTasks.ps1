@@ -4,4 +4,4 @@
 
 Get-ScheduledTask | Disable-ScheduledTask
 
-cms /k 'pause'
+cmd /k 'pause'
