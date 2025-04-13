@@ -71,6 +71,9 @@ regedit.exe /s "%~dp0\Base+OverTargetPriorities.reg"
 cd "%~dp0"
 
 < NUL call DWM_ExclusiveModeFramerateAveragingPeriodMs.bat
+
+cd "%~dp0"
+
 < NUL call DWM_Tweaks.bat
 < NUL call DisableServicesInternet.bat
 < NUL call DisableComponents.bat
