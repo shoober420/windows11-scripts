@@ -49,7 +49,6 @@ rem < NUL call HighPriority.bat
 < NUL call DisableSysMain.bat
 < NUL call DisableEdge.bat
 < NUL call DisableSSL+LegacyTLS.bat
-< NUL call DisableCPUMitigations.bat
 < NUL call DisableMIDI2.0.bat
 < NUL call RemoveFirewallRules.bat
 call RAMTweaks.bat
@@ -302,6 +301,41 @@ goto :end
 echo User chose NVIDIA GPU
 
 call NVGPUTweaks.bat
+
+goto :end
+
+:end
+
+echo.
+echo 1. CPU Mitigations ON
+echo 2. CPU Mitigations OFF
+echo C. Cancel
+echo.
+choice /c 12C /m "Choose an option :"
+
+if 3 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 2 EQU %ERRORLEVEL% (
+   call :CPUOFF
+) else if 1 EQU %ERRORLEVEL% (
+   call :CPUON
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:CPUOFF
+echo User chose CPU Mitigations OFF
+
+call DisableCPUMitigations.bat
+
+goto :end
+
+:CPUON
+echo User chose CPU Mitigations ON
+
+call EnableCPUMitigations.bat
 
 goto :end
 
