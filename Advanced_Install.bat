@@ -76,6 +76,9 @@ cd "%~dp0"
 
 < NUL call DWM_Tweaks.bat
 < NUL call DisableServicesInternet.bat
+
+cd "%~dp0"
+
 < NUL call DisableComponents.bat
 < NUL call DisableStartMenu.bat
 < NUL call DisableShellExperienceHost.bat
