@@ -87,12 +87,6 @@ cd "%~dp0"
 
 cd "%~dp0"
 
-ECHO R | powershell.exe ./DisableNetBIOS.ps1
-ECHO R | powershell.exe ./DNS.ps1
-ECHO R | powershell.exe ./DisableScheduledTasks.ps1
-ECHO R | powershell.exe ./DisableIntegratedGPU.ps1
-ECHO R | powershell.exe ./DisablePowerManagement.ps1
-
 @echo off
 
 echo.
@@ -110,6 +104,7 @@ if 3 EQU %ERRORLEVEL% (
    call :HDRON
 ) else if 0 EQU %ERRORLEVEL% (
    echo User bailed out.
+)
 
 goto :eof
 
@@ -144,6 +139,7 @@ if 3 EQU %ERRORLEVEL% (
    call :BTON
 ) else if 0 EQU %ERRORLEVEL% (
    echo User bailed out.
+)
 
 goto :eof
 
@@ -178,6 +174,7 @@ if 3 EQU %ERRORLEVEL% (
    call :TPMON
 ) else if 0 EQU %ERRORLEVEL% (
    echo User bailed out.
+)
 
 goto :eof
 
@@ -212,6 +209,7 @@ if 3 EQU %ERRORLEVEL% (
    call :SVCON
 ) else if 0 EQU %ERRORLEVEL% (
    echo User bailed out.
+)
 
 goto :eof
 
@@ -244,6 +242,7 @@ if 3 EQU %ERRORLEVEL% (
    call :STATICON
 ) else if 0 EQU %ERRORLEVEL% (
    echo User bailed out.
+)
 
 goto :eof
 
@@ -279,6 +278,7 @@ if 3 EQU %ERRORLEVEL% (
    call :NV
 ) else if 0 EQU %ERRORLEVEL% (
    echo User bailed out.
+)
 
 goto :eof
 
@@ -297,6 +297,16 @@ call NVGPUTweaks.bat
 goto :end
 
 :end
+
+cd "%~dp0"
+
+ECHO R | powershell.exe ./DisableNetBIOS.ps1
+ECHO R | powershell.exe ./DNS.ps1
+ECHO R | powershell.exe ./DisableScheduledTasks.ps1
+ECHO R | powershell.exe ./DisableIntegratedGPU.ps1
+ECHO R | powershell.exe ./DisablePowerManagement.ps1
+
+cd "%~dp0"
 
 rem # Launch GPU option scripts to finish installation (NVProfileInspector required for NVIDIA)
 
