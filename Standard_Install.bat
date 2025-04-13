@@ -60,10 +60,6 @@ call ThreadQuantum.bat
 
 cd "%~dp0"
 
-ECHO R | powershell.exe ./DisableNetBIOS.ps1
-ECHO R | powershell.exe ./DNS.ps1
-ECHO R | powershell.exe ./DisableScheduledTasks.ps1
-
 @echo off
 
 echo.
@@ -81,6 +77,7 @@ if 3 EQU %ERRORLEVEL% (
    call :NV
 ) else if 0 EQU %ERRORLEVEL% (
    echo User bailed out.
+)
 
 goto :eof
 
@@ -99,6 +96,10 @@ call NVGPUTweaks.bat
 goto :end
 
 :end
+
+ECHO R | powershell.exe ./DisableNetBIOS.ps1
+ECHO R | powershell.exe ./DNS.ps1
+ECHO R | powershell.exe ./DisableScheduledTasks.ps1
 
 rem # Launch GPU option scripts to finish installation (NVProfileInspector required for NVIDIA)
 
