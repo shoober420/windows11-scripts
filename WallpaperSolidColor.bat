@@ -16,7 +16,13 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Wallpapers" /v 
 rem # 10 = Fill (default) / 4,5,1 = Center / 2 = Stretch / 6 = Fit
 reg add "HKCU\Control Panel\Desktop" /v "WallpaperStyle" /t REG_SZ /d "1" /f
 
-reg add "HKCU\Control Panel\Desktop" /v "Wallpaper" /t REG_SZ /d "" /f
+reg add "HKCU\Control Panel\Desktop" /v "TileWallpaper" /t REG_SZ /d "0" /f
+
+reg add "HKCU\Control Panel\Desktop" /v "WallpaperOriginX" /t REG_DWORD /d "0" /f
+reg add "HKCU\Control Panel\Desktop" /v "WallpaperOriginY" /t REG_DWORD /d "0" /f
+
+rem reg add "HKCU\Control Panel\Desktop" /v "Wallpaper" /t REG_SZ /d "%USERPROFILE%\Downloads\wallpaper.jpg" /f
+reg delete "HKCU\Control Panel\Desktop" /v "Wallpaper" /f
 
 reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Wallpapers" /v "BackgroundHistoryPath0" /f
 reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Wallpapers" /v "BackgroundHistoryPath1" /f
