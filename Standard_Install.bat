@@ -27,73 +27,73 @@ rem # https://github.com/HakanFly/Windows-Tweaks
 
 cd "%~dp0"
 
-< NUL call EnablePowerShell.bat
+call EnablePowerShell.bat
 cd "%~dp0"
 
-< NUL call VCRedist.bat
+call VCRedist.bat
 cd "%~dp0"
 
-< NUL call CPUTweaks.bat
+call CPUTweaks.bat
 cd "%~dp0"
 
-< NUL call GPUTweaks.bat
+call GPUTweaks.bat
 cd "%~dp0"
 
-< NUL call HardDrive_Tweaks.bat
+call HardDrive_Tweaks.bat
 cd "%~dp0"
 
-< NUL call USBTweaks.bat
+call USBTweaks.bat
 cd "%~dp0"
 
-rem < NUL call HighPriority.bat
+rem call HighPriority.bat
 cd "%~dp0"
 
-< NUL call InputTweaks.bat
+call InputTweaks.bat
 cd "%~dp0"
 
-< NUL call InternetSettings.bat
+call InternetSettings.bat
 cd "%~dp0"
 
-< NUL call SecuritySettings.bat
+call SecuritySettings.bat
 cd "%~dp0"
 
-< NUL call DisablePerProcessSystemDPI.bat
+call DisablePerProcessSystemDPI.bat
 cd "%~dp0"
 
-< NUL call MouseAccelFix.bat
+call MouseAccelFix.bat
 cd "%~dp0"
 
-< NUL call NICProperties.bat
+call NICProperties.bat
 cd "%~dp0"
 
-< NUL call PowerPlanUltra.bat
+call PowerPlanUltra.bat
 cd "%~dp0"
 
-< NUL call DisableFullscreenOptimizations.bat
+call DisableFullscreenOptimizations.bat
 cd "%~dp0"
 
-< NUL call DisableScheduledTasks.bat
+call DisableScheduledTasks.bat
 cd "%~dp0"
 
-< NUL call DisableLanmanWorkstation.bat
+call DisableLanmanWorkstation.bat
 cd "%~dp0"
 
-< NUL call DisableLanmanServer.bat
+call DisableLanmanServer.bat
 cd "%~dp0"
 
-< NUL call DisableIPHelper.bat
+call DisableIPHelper.bat
 cd "%~dp0"
 
-< NUL call DisableNetBIOSHelper.bat
+call DisableNetBIOSHelper.bat
 cd "%~dp0"
 
-< NUL call DisableUPnPDeviceHost.bat
+call DisableUPnPDeviceHost.bat
 cd "%~dp0"
 
-< NUL call DisableSSDPDiscovery.bat
+call DisableSSDPDiscovery.bat
 cd "%~dp0"
 
-< NUL call DisableEdge.bat
+call DisableEdge.bat
 cd "%~dp0"
 
 call RAMTweaks.bat
@@ -102,19 +102,19 @@ cd "%~dp0"
 call ThreadQuantum.bat
 cd "%~dp0"
 
-< NUL call UseLargePages.bat
+call UseLargePages.bat
 cd "%~dp0"
 
-< NUL call MTU.bat
+call MTU.bat
 cd "%~dp0"
 
-< NUL call RemoveRemoteDesktopConnection.bat
+call RemoveRemoteDesktopConnection.bat
 cd "%~dp0"
 
-< NUL call DisableHighPrecisionEventTimer.bat
+call DisableHighPrecisionEventTimer.bat
 cd "%~dp0"
 
-< NUL call NetworkTweaks.bat
+call NetworkTweaks.bat
 
 cd "%~dp0"
 
