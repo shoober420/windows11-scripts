@@ -27,76 +27,73 @@ rem # https://github.com/HakanFly/Windows-Tweaks
 
 cd "%~dp0"
 
-< NUL call EnablePowerShell.bat
+call EnablePowerShell.bat
 cd "%~dp0"
 
-< NUL call VCRedist.bat
+call VCRedist.bat
 cd "%~dp0"
 
-< NUL call CPUTweaks.bat
+call CPUTweaks.bat
 cd "%~dp0"
 
-< NUL call GPUTweaks.bat
+call GPUTweaks.bat
 cd "%~dp0"
 
-< NUL call KernelTweaks.bat
+call KernelTweaks.bat
 cd "%~dp0"
 
-< NUL call TimerTweaks.bat
+call TimerTweaks.bat
 cd "%~dp0"
 
-< NUL call HardDrive_Tweaks.bat
+call HardDrive_Tweaks.bat
 cd "%~dp0"
 
-< NUL call USBTweaks.bat
+call USBTweaks.bat
 cd "%~dp0"
 
-rem < NUL call HighPriority.bat
+rem call HighPriority.bat
 cd "%~dp0"
 
-< NUL call InputTweaks.bat
+call InputTweaks.bat
 cd "%~dp0"
 
-< NUL call InternetSettings.bat
+call InternetSettings.bat
 cd "%~dp0"
 
-< NUL call SecuritySettings.bat
+call SecuritySettings.bat
 cd "%~dp0"
 
-< NUL call DisablePerProcessSystemDPI.bat
+call DisablePerProcessSystemDPI.bat
 cd "%~dp0"
 
-< NUL call MouseAccelFix.bat
+call MouseAccelFix.bat
 cd "%~dp0"
 
-< NUL call NICProperties.bat
+call NICProperties.bat
 cd "%~dp0"
 
-< NUL call PowerPlanUltra.bat
+call PowerPlanUltra.bat
 cd "%~dp0"
 
-< NUL call DisableFullscreenOptimizations.bat
+call DisableFullscreenOptimizations.bat
 cd "%~dp0"
 
-< NUL call DisableScheduledTasks.bat
+call DisableScheduledTasks.bat
 cd "%~dp0"
 
-< NUL call DisableTouchPad.bat
+call DisableSysMain.bat
 cd "%~dp0"
 
-< NUL call DisableSysMain.bat
+call DisableEdge.bat
 cd "%~dp0"
 
-< NUL call DisableEdge.bat
+call DisableSSL+LegacyTLS.bat
 cd "%~dp0"
 
-< NUL call DisableSSL+LegacyTLS.bat
+call DisableMIDI2.0.bat
 cd "%~dp0"
 
-< NUL call DisableMIDI2.0.bat
-cd "%~dp0"
-
-< NUL call RemoveFirewallRules.bat
+call RemoveFirewallRules.bat
 cd "%~dp0"
 
 call RAMTweaks.bat
@@ -105,86 +102,86 @@ cd "%~dp0"
 call ThreadQuantum.bat
 cd "%~dp0"
 
-< NUL call UseLargePages.bat
+call UseLargePages.bat
 cd "%~dp0"
 
-< NUL call EnableClearPageFileAtShutdown.bat
+call EnableClearPageFileAtShutdown.bat
 cd "%~dp0"
 
-< NUL call DisablePageFile.bat
+call DisablePageFile.bat
 cd "%~dp0"
 
-< NUL call RemoveRemoteDesktopConnection.bat
+call RemoveRemoteDesktopConnection.bat
 cd "%~dp0"
 
-< NUL call RemoveWindowsApps.bat
+call RemoveWindowsApps.bat
 cd "%~dp0"
 
-< NUL call RemoveWindowsFeatures.bat
+call RemoveWindowsFeatures.bat
 cd "%~dp0"
 
-< NUL call EnableSerializeTimerExpiration.bat
+call EnableSerializeTimerExpiration.bat
 cd "%~dp0"
 
-< NUL call DisableThreadDpcEnable.bat
+call DisableThreadDpcEnable.bat
 cd "%~dp0"
 
-regedit.exe /s "%~dp0\MaxPendingInterrupts.reg"
+regedit.exe "%~dp0\MaxPendingInterrupts.reg"
 cd "%~dp0"
 
-regedit.exe /s "%~dp0\ResourceSets.reg"
+regedit.exe "%~dp0\ResourceSets.reg"
 cd "%~dp0"
 
-regedit.exe /s "%~dp0\Base+OverTargetPriorities.reg"
+regedit.exe "%~dp0\Base+OverTargetPriorities.reg"
 cd "%~dp0"
 
-< NUL call BCDEDIT_Tweaks.bat
+call BCDEDIT_Tweaks.bat
 cd "%~dp0"
 
-< NUL call SetTimerResolution.bat
+call SetTimerResolution.bat
 cd "%~dp0"
 
-< NUL call DWM_ExclusiveModeFramerateAveragingPeriodMs.bat
-
-cd "%~dp0"
-
-< NUL call DWM_Tweaks.bat
-cd "%~dp0"
-
-< NUL call DisableServicesInternet.bat
+call DWM_ExclusiveModeFramerateAveragingPeriodMs.bat
 
 cd "%~dp0"
 
-< NUL call DisableComponents.bat
+call DWM_Tweaks.bat
 cd "%~dp0"
 
-< NUL call DisableStartMenu.bat
+call DisableServicesInternet.bat
+
 cd "%~dp0"
 
-< NUL call DisableShellExperienceHost.bat
+call DisableComponents.bat
 cd "%~dp0"
 
-< NUL call MTU.bat
+call DisableStartMenu.bat
 cd "%~dp0"
 
-< NUL call DeviceManager.bat
+call DisableShellExperienceHost.bat
+cd "%~dp0"
+
+call MTU.bat
+cd "%~dp0"
+
+call DeviceManager.bat
 cd "%~dp0"
 
 call WallpaperSolidColor.bat
 cd "%~dp0"
 
-< NUL call Theme.bat
+call Theme.bat
 
 cd "%~dp0"
 
 call AccentColor.bat
 cd "%~dp0"
 
-< NUL call NetworkTweaks.bat
+call NetworkTweaks.bat
 
 cd "%~dp0"
 
-< NUL call Windows11Tweaks.bat
+call Windows11Tweaks.bat
 
 cd "%~dp0"
 
@@ -429,6 +426,41 @@ goto :end
 echo User chose CPU Mitigations ON
 
 call EnableCPUMitigations.bat
+
+goto :end
+
+:end
+
+echo.
+echo 1. TouchPad ENABLED
+echo 2. TouchPad DISABLED
+echo C. Cancel
+echo.
+choice /c 12C /m "Choose an option :"
+
+if 3 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 2 EQU %ERRORLEVEL% (
+   call :TPOFF
+) else if 1 EQU %ERRORLEVEL% (
+   call :TPON
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:CPUOFF
+echo User chose TouchPad DISABLED
+
+call DisableTouchPad.bat
+
+goto :end
+
+:CPUON
+echo User chose TouchPad ENABLED
+
+call EnableTouchPad.bat
 
 goto :end
 
