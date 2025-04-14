@@ -42,6 +42,8 @@ reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Wallpapers" 
 @echo off
 
 echo.
+echo Background Color
+echo.
 echo 1. Win95/98 Teal Green
 echo 2. Win95/98 Navy Blue
 echo 3. Win2000/XP Light Blue
