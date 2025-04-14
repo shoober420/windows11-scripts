@@ -13,6 +13,9 @@ PAUSE
 rem # BackgroundType: 0 = Picture / 1 = Solid color / 2 = Slideshow
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Wallpapers" /v BackgroundType /t REG_DWORD /d 1 /f
 
+rem # 10 = Fill (default) / 4,5,1 = Center / 2 = Stretch / 6 = Fit
+reg add "HKCU\Control Panel\Desktop" /v "WallpaperStyle" /t REG_SZ /d "1" /f
+
 reg add "HKCU\Control Panel\Desktop" /v "Wallpaper" /t REG_SZ /d "" /f
 
 reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Wallpapers" /v "BackgroundHistoryPath0" /f
