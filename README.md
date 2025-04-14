@@ -109,7 +109,6 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - DisableSysMain.bat
  - DisableEdge.bat
  - DisableTPM+SecureBoot.bat
- - DisableSSL+LegacyTLS.bat
  - DisableBitLocker.bat
  - DisableCPUMitigations.bat
  - DisableMIDI2.0.bat
@@ -143,6 +142,7 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
  - WallpaperSolidColor.bat
  - Theme.bat
  - AccentColor.bat
+ - DisableSSL+LegacyTLS.bat
 
   - Decrypt+OSCompression.bat
 
