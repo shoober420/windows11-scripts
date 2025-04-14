@@ -45,15 +45,18 @@ echo.
 echo 1. Win95/98 Teal Green
 echo 2. Win95/98 Navy Blue
 echo 3. Win2000/XP Light Blue
-echo 4. Win11 Black (default)
+echo 4. Win11 Blue
+echo 5. Win11 Black (default)
 echo C. Cancel
 echo.
 choice /c 1234C /m "Choose an option :"
 
-if 5 EQU %ERRORLEVEL% (
+if 6 EQU %ERRORLEVEL% (
    echo User chose to cancel.
-) else if 4 EQU %ERRORLEVEL% (
+) else if 5 EQU %ERRORLEVEL% (
    call :black
+) else if 4 EQU %ERRORLEVEL% (
+   call :blue
 ) else if 3 EQU %ERRORLEVEL% (
    call :lblue
 ) else if 2 EQU %ERRORLEVEL% (
@@ -90,6 +93,15 @@ rem # Windows 2000/XP Light Blue
 rem # HEX: #3A6EA5
 rem # RGB: (58 110 165)
 reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "58 110 165" /f
+
+goto :end
+
+:lblue
+echo User chose Win11 Blue
+rem # Win11 Blue
+rem # HEX: #3A6EA5
+rem # RGB: (0 120 215)
+reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "0 120 215" /f
 
 goto :end
 
