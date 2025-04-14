@@ -28,45 +28,120 @@ rem # https://github.com/HakanFly/Windows-Tweaks
 cd "%~dp0"
 
 < NUL call EnablePowerShell.bat
-< NUL call VCRedist.bat
-< NUL call CPUTweaks.bat
-< NUL call GPUTweaks.bat
-< NUL call KernelTweaks.bat
-< NUL call TimerTweaks.bat
-< NUL call HardDrive_Tweaks.bat
-< NUL call USBTweaks.bat
-rem < NUL call HighPriority.bat
-< NUL call InputTweaks.bat
-< NUL call InternetSettings.bat
-< NUL call SecuritySettings.bat
-< NUL call DisablePerProcessSystemDPI.bat
-< NUL call MouseAccelFix.bat
-< NUL call NICProperties.bat
-< NUL call PowerPlanUltra.bat
-< NUL call DisableFullscreenOptimizations.bat
-< NUL call DisableScheduledTasks.bat
-< NUL call DisableTouchPad.bat
-< NUL call DisableSysMain.bat
-< NUL call DisableEdge.bat
-< NUL call DisableSSL+LegacyTLS.bat
-< NUL call DisableMIDI2.0.bat
-< NUL call RemoveFirewallRules.bat
-call RAMTweaks.bat
-call ThreadQuantum.bat
-< NUL call UseLargePages.bat
-< NUL call EnableClearPageFileAtShutdown.bat
-< NUL call DisablePageFile.bat
-< NUL call RemoveRemoteDesktopConnection.bat
-< NUL call RemoveWindowsApps.bat
-< NUL call RemoveWindowsFeatures.bat
-< NUL call EnableSerializeTimerExpiration.bat
-< NUL call DisableThreadDpcEnable.bat
-regedit.exe /s "%~dp0\MaxPendingInterrupts.reg"
-regedit.exe /s "%~dp0\ResourceSets.reg"
-regedit.exe /s "%~dp0\Base+OverTargetPriorities.reg"
-< NUL call BCDEDIT_Tweaks.bat
-< NUL call SetTimerResolution.bat
+cd "%~dp0"
 
+< NUL call VCRedist.bat
+cd "%~dp0"
+
+< NUL call CPUTweaks.bat
+cd "%~dp0"
+
+< NUL call GPUTweaks.bat
+cd "%~dp0"
+
+< NUL call KernelTweaks.bat
+cd "%~dp0"
+
+< NUL call TimerTweaks.bat
+cd "%~dp0"
+
+< NUL call HardDrive_Tweaks.bat
+cd "%~dp0"
+
+< NUL call USBTweaks.bat
+cd "%~dp0"
+
+rem < NUL call HighPriority.bat
+cd "%~dp0"
+
+< NUL call InputTweaks.bat
+cd "%~dp0"
+
+< NUL call InternetSettings.bat
+cd "%~dp0"
+
+< NUL call SecuritySettings.bat
+cd "%~dp0"
+
+< NUL call DisablePerProcessSystemDPI.bat
+cd "%~dp0"
+
+< NUL call MouseAccelFix.bat
+cd "%~dp0"
+
+< NUL call NICProperties.bat
+cd "%~dp0"
+
+< NUL call PowerPlanUltra.bat
+cd "%~dp0"
+
+< NUL call DisableFullscreenOptimizations.bat
+cd "%~dp0"
+
+< NUL call DisableScheduledTasks.bat
+cd "%~dp0"
+
+< NUL call DisableTouchPad.bat
+cd "%~dp0"
+
+< NUL call DisableSysMain.bat
+cd "%~dp0"
+
+< NUL call DisableEdge.bat
+cd "%~dp0"
+
+< NUL call DisableSSL+LegacyTLS.bat
+cd "%~dp0"
+
+< NUL call DisableMIDI2.0.bat
+cd "%~dp0"
+
+< NUL call RemoveFirewallRules.bat
+cd "%~dp0"
+
+call RAMTweaks.bat
+cd "%~dp0"
+
+call ThreadQuantum.bat
+cd "%~dp0"
+
+< NUL call UseLargePages.bat
+cd "%~dp0"
+
+< NUL call EnableClearPageFileAtShutdown.bat
+cd "%~dp0"
+
+< NUL call DisablePageFile.bat
+cd "%~dp0"
+
+< NUL call RemoveRemoteDesktopConnection.bat
+cd "%~dp0"
+
+< NUL call RemoveWindowsApps.bat
+cd "%~dp0"
+
+< NUL call RemoveWindowsFeatures.bat
+cd "%~dp0"
+
+< NUL call EnableSerializeTimerExpiration.bat
+cd "%~dp0"
+
+< NUL call DisableThreadDpcEnable.bat
+cd "%~dp0"
+
+regedit.exe /s "%~dp0\MaxPendingInterrupts.reg"
+cd "%~dp0"
+
+regedit.exe /s "%~dp0\ResourceSets.reg"
+cd "%~dp0"
+
+regedit.exe /s "%~dp0\Base+OverTargetPriorities.reg"
+cd "%~dp0"
+
+< NUL call BCDEDIT_Tweaks.bat
+cd "%~dp0"
+
+< NUL call SetTimerResolution.bat
 cd "%~dp0"
 
 < NUL call DWM_ExclusiveModeFramerateAveragingPeriodMs.bat
@@ -74,21 +149,36 @@ cd "%~dp0"
 cd "%~dp0"
 
 < NUL call DWM_Tweaks.bat
+cd "%~dp0"
+
 < NUL call DisableServicesInternet.bat
 
 cd "%~dp0"
 
 < NUL call DisableComponents.bat
+cd "%~dp0"
+
 < NUL call DisableStartMenu.bat
+cd "%~dp0"
+
 < NUL call DisableShellExperienceHost.bat
+cd "%~dp0"
+
 < NUL call MTU.bat
+cd "%~dp0"
+
 < NUL call DeviceManager.bat
+cd "%~dp0"
+
 call WallpaperSolidColor.bat
+cd "%~dp0"
+
 < NUL call Theme.bat
 
 cd "%~dp0"
 
 call AccentColor.bat
+cd "%~dp0"
 
 < NUL call NetworkTweaks.bat
 
@@ -347,9 +437,17 @@ goto :end
 cd "%~dp0"
 
 ECHO R | powershell.exe ./DisableNetBIOS.ps1
+cd "%~dp0"
+
 ECHO R | powershell.exe ./DNS.ps1
+cd "%~dp0"
+
 ECHO R | powershell.exe ./DisableScheduledTasks.ps1
+cd "%~dp0"
+
 ECHO R | powershell.exe ./DisableIntegratedGPU.ps1
+cd "%~dp0"
+
 ECHO R | powershell.exe ./DisablePowerManagement.ps1
 
 cd "%~dp0"
