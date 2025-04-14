@@ -85,6 +85,9 @@ cd "%~dp0"
 < NUL call DeviceManager.bat
 call WallpaperSolidColor.bat
 < NUL call Theme.bat
+
+cd "%~dp0"
+
 call AccentColor.bat
 
 < NUL call NetworkTweaks.bat
