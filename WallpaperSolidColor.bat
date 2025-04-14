@@ -43,7 +43,7 @@ reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Wallpapers" 
 
 echo.
 echo 1. Win95/98 Teal Green
-echo 2. Win95/98 Blue
+echo 2. Win95/98 Navy Blue
 echo 3. Win2000/XP Light Blue
 echo 4. Win11 Black (default)
 echo C. Cancel
@@ -57,7 +57,7 @@ if 5 EQU %ERRORLEVEL% (
 ) else if 3 EQU %ERRORLEVEL% (
    call :lblue
 ) else if 2 EQU %ERRORLEVEL% (
-   call :blue
+   call :navy
 ) else if 1 EQU %ERRORLEVEL% (
    call :teal
 ) else if 0 EQU %ERRORLEVEL% (
@@ -75,9 +75,9 @@ reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "0 128 128" /f
 
 goto :end
 
-:blue
-echo User chose Win95/98 Blue
-rem # Windows 95/98 Blue
+:navy
+echo User chose Win95/98 Navy Blue
+rem # Windows 95/98 Navy Blue
 rem # HEX: #00005f
 rem # RGB: (0 0 95)
 reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "0 0 95" /f
