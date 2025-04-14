@@ -96,10 +96,10 @@ reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "58 110 165" /f
 
 goto :end
 
-:lblue
+:blue
 echo User chose Win11 Blue
 rem # Win11 Blue
-rem # HEX: #3A6EA5
+rem # HEX: #0078D7
 rem # RGB: (0 120 215)
 reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "0 120 215" /f
 
