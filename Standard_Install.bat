@@ -28,34 +28,92 @@ rem # https://github.com/HakanFly/Windows-Tweaks
 cd "%~dp0"
 
 < NUL call EnablePowerShell.bat
+cd "%~dp0"
+
 < NUL call VCRedist.bat
+cd "%~dp0"
+
 < NUL call CPUTweaks.bat
+cd "%~dp0"
+
 < NUL call GPUTweaks.bat
+cd "%~dp0"
+
 < NUL call HardDrive_Tweaks.bat
+cd "%~dp0"
+
 < NUL call USBTweaks.bat
+cd "%~dp0"
+
 rem < NUL call HighPriority.bat
+cd "%~dp0"
+
 < NUL call InputTweaks.bat
+cd "%~dp0"
+
 < NUL call InternetSettings.bat
+cd "%~dp0"
+
 < NUL call SecuritySettings.bat
+cd "%~dp0"
+
 < NUL call DisablePerProcessSystemDPI.bat
+cd "%~dp0"
+
 < NUL call MouseAccelFix.bat
+cd "%~dp0"
+
 < NUL call NICProperties.bat
+cd "%~dp0"
+
 < NUL call PowerPlanUltra.bat
+cd "%~dp0"
+
 < NUL call DisableFullscreenOptimizations.bat
+cd "%~dp0"
+
 < NUL call DisableScheduledTasks.bat
+cd "%~dp0"
+
 < NUL call DisableLanmanWorkstation.bat
+cd "%~dp0"
+
 < NUL call DisableLanmanServer.bat
+cd "%~dp0"
+
 < NUL call DisableIPHelper.bat
+cd "%~dp0"
+
 < NUL call DisableNetBIOSHelper.bat
+cd "%~dp0"
+
 < NUL call DisableUPnPDeviceHost.bat
+cd "%~dp0"
+
 < NUL call DisableSSDPDiscovery.bat
+cd "%~dp0"
+
 < NUL call DisableEdge.bat
+cd "%~dp0"
+
 call RAMTweaks.bat
+cd "%~dp0"
+
 call ThreadQuantum.bat
+cd "%~dp0"
+
 < NUL call UseLargePages.bat
+cd "%~dp0"
+
 < NUL call MTU.bat
+cd "%~dp0"
+
 < NUL call RemoveRemoteDesktopConnection.bat
+cd "%~dp0"
+
 < NUL call DisableHighPrecisionEventTimer.bat
+cd "%~dp0"
+
 < NUL call NetworkTweaks.bat
 
 cd "%~dp0"
@@ -97,9 +155,17 @@ goto :end
 
 :end
 
+cd "%~dp0"
+
 ECHO R | powershell.exe ./DisableNetBIOS.ps1
+cd "%~dp0"
+
 ECHO R | powershell.exe ./DNS.ps1
+cd "%~dp0"
+
 ECHO R | powershell.exe ./DisableScheduledTasks.ps1
+
+cd "%~dp0"
 
 rem # Launch GPU option scripts to finish installation (NVProfileInspector required for NVIDIA)
 
