@@ -27,40 +27,40 @@ rem # https://github.com/HakanFly/Windows-Tweaks
 
 cd "%~dp0"
 
-< NUL call EnablePowershell.bat
+call EnablePowershell.bat
 cd "%~dp0"
 
-< NUL call VCRedist.bat
+call VCRedist.bat
 cd "%~dp0"
 
-< NUL call InternetSettings.bat
+call InternetSettings.bat
 cd "%~dp0"
 
-< NUL call DisablePerProcessSystemDPI.bat
+call DisablePerProcessSystemDPI.bat
 cd "%~dp0"
 
-< NUL call MouseAccelFix.bat
+call MouseAccelFix.bat
 cd "%~dp0"
 
-< NUL call NICProperties.bat
+call NICProperties.bat
 cd "%~dp0"
 
-< NUL call PowerPlanUltra.bat
+call PowerPlanUltra.bat
 cd "%~dp0"
 
-< NUL call DisableFullscreenOptimizations.bat
+call DisableFullscreenOptimizations.bat
 cd "%~dp0"
 
 call ThreadQuantum.bat
 cd "%~dp0"
 
-< NUL call RemoveRemoteDesktopConnection.bat
+call RemoveRemoteDesktopConnection.bat
 cd "%~dp0"
 
-< NUL call MTU.bat
+call MTU.bat
 cd "%~dp0"
 
-< NUL call NetworkTweaks.bat
+call NetworkTweaks.bat
 
 cd "%~dp0"
 
