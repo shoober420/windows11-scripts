@@ -30,6 +30,9 @@ cd "%~dp0"
 call EnablePowershell.bat
 cd "%~dp0"
 
+call EnableTLS1.2.bat
+cd "%~dp0"
+
 call VCRedist.bat
 cd "%~dp0"
 
