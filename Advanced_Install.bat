@@ -30,6 +30,9 @@ cd "%~dp0"
 call EnablePowerShell.bat
 cd "%~dp0"
 
+call EnableTLS1.2.bat
+cd "%~dp0"
+
 call VCRedist.bat
 cd "%~dp0"
 
@@ -85,9 +88,6 @@ call DisableSysMain.bat
 cd "%~dp0"
 
 call DisableEdge.bat
-cd "%~dp0"
-
-call DisableSSL+LegacyTLS.bat
 cd "%~dp0"
 
 call DisableMIDI2.0.bat
@@ -183,6 +183,9 @@ cd "%~dp0"
 
 call Windows11Tweaks.bat
 
+cd "%~dp0"
+
+call DisableSSL+LegacyTLS.bat
 cd "%~dp0"
 
 @echo off
