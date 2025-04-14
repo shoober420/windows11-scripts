@@ -81,7 +81,7 @@ goto :end
 :navy
 echo User chose Win95/98 Navy Blue
 rem # Windows 95/98 Navy Blue
-rem # HEX: #00005f
+rem # HEX: #00005F
 rem # RGB: (0 0 95)
 reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "0 0 95" /f
 
