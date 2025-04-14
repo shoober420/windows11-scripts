@@ -11,6 +11,8 @@ rem # Seafoam (RGB: 0 183 195) = 0xff00b6c3 / 0xffc3b700
 @echo off
 
 echo.
+echo Accent Color
+echo.
 echo 1. Default (Windows 11 Blue)
 echo 2. Win2000/WinXP Light Blue
 echo 3. Navy (Windows 95 Blue)
