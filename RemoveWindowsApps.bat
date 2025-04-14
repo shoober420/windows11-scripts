@@ -55,6 +55,8 @@ winget uninstall "Microsoft.Clipchamp"
 winget uninstall "Microsoft.Clipchamp.Clipchamp"
 winget uninstall "Microsoft.Windows.Clipchamp"
 winget uninstall "Microsoft.Windows.Clipchamp.Clipchamp"
+winget uninstall "Microsoft.Copilot_8wekyb3d8bbwe"
+winget uninstall "Microsoft.Copilot"
 
 powershell -command "Get-AppxPackage -AllUsers *Microsoft.WindowsNotepad* | Remove-AppxPackage"
 
