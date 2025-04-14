@@ -11,10 +11,13 @@ rem # Restart explorer, re-sign in, or reboot required
 PAUSE
 
 rem # BackgroundType: 0 = Picture / 1 = Solid color / 2 = Slideshow
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Wallpapers" /v BackgroundType /t REG_DWORD /d 1 /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Wallpapers" /v "BackgroundType" /t REG_DWORD /d "1" /f
 
-rem # 10 = Fill (default) / 4,5,1 = Center / 2 = Stretch / 6 = Fit
-reg add "HKCU\Control Panel\Desktop" /v "WallpaperStyle" /t REG_SZ /d "1" /f
+rem # 10 = Fill (default) / 4,5,1,0 = Center / 2 = Stretch / 6 = Fit
+reg add "HKCU\Control Panel\Desktop" /v "WallpaperStyle" /t REG_SZ /d "0" /f
+
+rem # 0 = Center / 1 = Tile / 2 = Stretch / 3 = Fit / 4 = Fill / 5 = Span
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v "WallpaperStyle" /t REG_SZ /d "0" /f
 
 reg add "HKCU\Control Panel\Desktop" /v "TileWallpaper" /t REG_SZ /d "0" /f
 
