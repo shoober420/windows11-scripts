@@ -326,8 +326,8 @@ goto :end
 :end
 
 echo.
-echo 1. Static IP ENABLED
-echo 2. DHCP ENABLED
+echo 1. Static IP Connection
+echo 2. DHCP Connection
 echo C. Cancel
 echo.
 choice /c 12C /m "Choose an option :"
@@ -345,12 +345,12 @@ if 3 EQU %ERRORLEVEL% (
 goto :eof
 
 :DHCPON
-echo User chose DHCP ENABLED
+echo User chose DHCP Connection
 
 goto :end
 
 :STATICON
-echo User chose Static IP ENABLED
+echo User chose Static IP Connection
 
 call DisableDHCP.bat
 call StaticIPConnection.bat
@@ -397,8 +397,8 @@ goto :end
 :end
 
 echo.
-echo 1. CPU Mitigations ON
-echo 2. CPU Mitigations OFF
+echo 1. CPU Mitigations ENABLED
+echo 2. CPU Mitigations DISABLED
 echo C. Cancel
 echo.
 choice /c 12C /m "Choose an option :"
@@ -416,14 +416,14 @@ if 3 EQU %ERRORLEVEL% (
 goto :eof
 
 :CPUOFF
-echo User chose CPU Mitigations OFF
+echo User chose CPU Mitigations DISABLED
 
 call DisableCPUMitigations.bat
 
 goto :end
 
 :CPUON
-echo User chose CPU Mitigations ON
+echo User chose CPU Mitigations ENABLED
 
 call EnableCPUMitigations.bat
 
@@ -450,14 +450,14 @@ if 3 EQU %ERRORLEVEL% (
 
 goto :eof
 
-:CPUOFF
+:TPOFF
 echo User chose TouchPad DISABLED
 
 call DisableTouchPad.bat
 
 goto :end
 
-:CPUON
+:TPON
 echo User chose TouchPad ENABLED
 
 call EnableTouchPad.bat
