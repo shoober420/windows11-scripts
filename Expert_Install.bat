@@ -4,16 +4,37 @@ rem # Launch in SAFE MODE
 
 cd "%~dp0"
 
-< NUL call SetACL.bat
-< NUL call DisableWindowsDefender.bat
-< NUL call DisableWindowsFirewall.bat
-< NUL call DisableWindowsSecurityCenter.bat
-< NUL call DisableEventTraceSessions.bat
-< NUL call DisableSAM.bat
-< NUL call DisableLanmanServer.bat
-< NUL call DisableStartMenu.bat
-< NUL call DisableComponents.bat
-< NUL call DisableWindowsSearch.bat
-< NUL call DeleteFonts.bat
+call SetACL.bat
+cd "%~dp0"
+
+call DisableWindowsDefender.bat
+cd "%~dp0"
+
+call DisableWindowsFirewall.bat
+cd "%~dp0"
+
+call DisableWindowsSecurityCenter.bat
+cd "%~dp0"
+
+call DisableEventTraceSessions.bat
+cd "%~dp0"
+
+call DisableSAM.bat
+cd "%~dp0"
+
+call DisableLanmanServer.bat
+cd "%~dp0"
+
+call DisableStartMenu.bat
+cd "%~dp0"
+
+call DisableComponents.bat
+cd "%~dp0"
+
+call DisableWindowsSearch.bat
+cd "%~dp0"
+
+call DeleteFonts.bat
+cd "%~dp0"
 
 PAUSE
