@@ -1,10 +1,6 @@
-REM Disables maintenance services for adding and removing windows features and various tweaks
+rem # Disables maintenance services for adding and removing windows features and various tweaks
 
-REM "Get-WindowsOptionalFeature -Online" shows enabled features
-
-rem # Disable WMI
-net stop winmgmt
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD /d "4" /f
+rem # "Get-WindowsOptionalFeature -Online" shows enabled features
 
 net stop ClipSVC
 
