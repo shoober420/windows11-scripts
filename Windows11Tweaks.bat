@@ -3593,6 +3593,9 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Search" /v "WebControlSe
 rem # Disable Search Index
 reg add "HKLM\SOFTWARE\Policies\Microsoft\SearchCompanion" /v "DisableContentFileUpdate" /t REG_DWORD /d "1" /f
 
+rem # Disable Snap Sizing
+reg add "HKCU\Control Panel\Desktop" /v "SnapSizing" /t REG_SZ /d "0" /f
+
 
 
 rem # Enables Cloudflare DNS
