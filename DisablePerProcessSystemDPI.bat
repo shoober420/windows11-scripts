@@ -23,7 +23,7 @@ rem # Remove DPI Scaling Reg Keys
 reg delete "HKCU\Control Panel\Desktop\WindowMetrics" /v "AppliedDPI" /f
 rem reg add "HKCU\Control Panel\Desktop\WindowMetrics" /v "AppliedDPI" /t REG_DWORD /d "0x60" /f
 
-reg delete "HKCU\Control Panel\Desktop\WindowMetrics" /v "DpiScalingVer" /f
-rem reg add "HKCU\Control Panel\Desktop\WindowMetrics" /v "DpiScalingVer" /t REG_DWORD /d "0x1000" /f
+reg delete "HKCU\Control Panel\Desktop" /v "DpiScalingVer" /f
+rem reg add "HKCU\Control Panel\Desktop" /v "DpiScalingVer" /t REG_DWORD /d "0x1000" /f
 
 PAUSE
