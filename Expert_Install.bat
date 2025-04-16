@@ -37,4 +37,10 @@ cd "%~dp0"
 call DeleteFonts.bat
 cd "%~dp0"
 
+call DisableServicesIntel.bat
+cd "%~dp0"
+
+call DisableServicesAMD.bat
+cd "%~dp0"
+
 PAUSE
