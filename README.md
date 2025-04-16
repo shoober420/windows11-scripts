@@ -467,6 +467,8 @@ UseLargePages.bat (add user programs to enable Large Pages for them)
 
 AboveNormalPriority.bat (add user programs to enable Above Normal Priority for them)
 
+HighPriority.bat (add user programs to enable High Priority for them)
+
 DisableStartMenu.bat / EnableStartMenu.bat (recommended to run in SAFE MODE)
 
 DisablePowerShell.bat / EnablePowerShell.bat
