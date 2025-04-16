@@ -4,7 +4,7 @@ rem # !!! WARNING !!!
 
 rem # USING HIGH LOWERS PERFORMANCE
 
-rem # AboveNormalPriority.bat recommended
+rem # AboveNormalPriority.bat RECOMMENDED
 
 rem # !!! WARNING !!!
 
