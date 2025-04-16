@@ -3597,6 +3597,10 @@ reg add "HKLM\SOFTWARE\Policies\Microsoft\SearchCompanion" /v "DisableContentFil
 rem # Disable Snap Sizing
 reg add "HKCU\Control Panel\Desktop" /v "SnapSizing" /t REG_SZ /d "0" /f
 
+rem # File Explorer launches to Downloads
+rem # 1 = Home / 2 = This PC (My Computer) / 3 = Downloads
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "LaunchTo" /t REG_DWORD /d "3" /f
+
 
 
 rem # Enables Cloudflare DNS
