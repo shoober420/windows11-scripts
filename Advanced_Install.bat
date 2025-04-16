@@ -54,7 +54,7 @@ cd "%~dp0"
 call USBTweaks.bat
 cd "%~dp0"
 
-rem call HighPriority.bat
+call AboveNormalPriority.bat
 cd "%~dp0"
 
 call InputTweaks.bat
