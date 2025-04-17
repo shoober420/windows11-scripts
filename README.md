@@ -781,6 +781,8 @@ DisablePerProcessSystemDPI.bat / EnablePerProcessSystemDPI.bat
 
 Minimal_Install.bat / Standard_Install.bat / Advanced_Install.bat / Expert_Install.bat
 
+DisableActivateWindows.bat / EnableActivateWindows.bat
+
 # Credits
 - https://www.elevenforum.com/members/garlin.5387
 - https://www.elevenforum.com/members/csmc.38355
