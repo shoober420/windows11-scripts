@@ -120,27 +120,59 @@ foreach ($Monitor in @(Get-WmiObject -Namespace root\wmi -Class WmiMonitorID | W
     $Which = Read-Host 'Vivid Gaming = 1 / Disabled = 2 \ Enter Value'
 switch ($Which) {
   1 {
+     New-Item -Path "HKLM:SYSTEM\ControlSet001\Control\Class\$ClassGUID2\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -ItemType Directory
+     New-Item -Path "HKLM:SYSTEM\CurrentControlSet\Control\Class\$ClassGUID2\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -ItemType Directory
+
      New-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Class\$ClassGUID2\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -Name "DAL_SCE_Settings" -Value ([byte[]]@(0x00,0x00,0x00,0x00,0x01,0x00,0x00,0x00)) -PropertyType Binary -Force
      New-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Class\$ClassGUID2\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -Name "DAL_SCE_Settings" -Value ([byte[]]@(0x00,0x00,0x00,0x00,0x01,0x00,0x00,0x00)) -PropertyType Binary -Force
      New-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Class\$ClassGUID2\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -Name "DAL_SCE_Strength" -Value ([byte[]]@(0x00,0x00,0x00,0x00,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0x05,0x00,0x00,0x00)) -PropertyType Binary -Force
      New-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Class\$ClassGUID2\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -Name "DAL_SCE_Strength" -Value ([byte[]]@(0x00,0x00,0x00,0x00,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0x05,0x00,0x00,0x00)) -PropertyType Binary -Force
 
+     # Set-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Class\$ClassGUID2\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -Name "DAL_SCE_Settings" -Value ([byte[]]@(0x00,0x00,0x00,0x00,0x01,0x00,0x00,0x00)) -Force
+     # Set-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Class\$ClassGUID2\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -Name "DAL_SCE_Settings" -Value ([byte[]]@(0x00,0x00,0x00,0x00,0x01,0x00,0x00,0x00)) -Force
+     # Set-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Class\$ClassGUID2\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -Name "DAL_SCE_Strength" -Value ([byte[]]@(0x00,0x00,0x00,0x00,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0x05,0x00,0x00,0x00)) -Force
+     # Set-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Class\$ClassGUID2\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -Name "DAL_SCE_Strength" -Value ([byte[]]@(0x00,0x00,0x00,0x00,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0x05,0x00,0x00,0x00)) -Force
+
+     New-Item -Path "HKLM:SYSTEM\ControlSet001\Control\Video\$VideoID\0000\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -ItemType Directory
+     New-Item -Path "HKLM:SYSTEM\CurrentControlSet\Control\Video\$VideoID\0000\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -ItemType Directory
+
      New-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Video\$VideoID\0000\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -Name "DAL_SCE_Settings" -Value ([byte[]]@(0x00,0x00,0x00,0x00,0x01,0x00,0x00,0x00)) -PropertyType Binary -Force
      New-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Video\$VideoID\0000\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -Name "DAL_SCE_Settings" -Value ([byte[]]@(0x00,0x00,0x00,0x00,0x01,0x00,0x00,0x00)) -PropertyType Binary -Force
      New-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Video\$VideoID\0000\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -Name "DAL_SCE_Strength" -Value ([byte[]]@(0x00,0x00,0x00,0x00,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0x05,0x00,0x00,0x00)) -PropertyType Binary -Force
      New-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Video\$VideoID\0000\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -Name "DAL_SCE_Strength" -Value ([byte[]]@(0x00,0x00,0x00,0x00,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0x05,0x00,0x00,0x00)) -PropertyType Binary -Force
+
+     # Set-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Video\$VideoID\0000\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -Name "DAL_SCE_Settings" -Value ([byte[]]@(0x00,0x00,0x00,0x00,0x01,0x00,0x00,0x00)) -Force
+     # Set-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Video\$VideoID\0000\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -Name "DAL_SCE_Settings" -Value ([byte[]]@(0x00,0x00,0x00,0x00,0x01,0x00,0x00,0x00)) -Force
+     # Set-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Video\$VideoID\0000\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -Name "DAL_SCE_Strength" -Value ([byte[]]@(0x00,0x00,0x00,0x00,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0x05,0x00,0x00,0x00)) -Force
+     # Set-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Video\$VideoID\0000\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -Name "DAL_SCE_Strength" -Value ([byte[]]@(0x00,0x00,0x00,0x00,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0x05,0x00,0x00,0x00)) -Force
 }
 
   2 {
+     New-Item -Path "HKLM:SYSTEM\ControlSet001\Control\Class\$ClassGUID2\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -ItemType Directory
+     New-Item -Path "HKLM:SYSTEM\CurrentControlSet\Control\Class\$ClassGUID2\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -ItemType Directory
+
      New-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Class\$ClassGUID2\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -Name "DAL_SCE_Settings" -Value ([byte[]]@(0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00)) -PropertyType Binary -Force
      New-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Class\$ClassGUID2\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -Name "DAL_SCE_Settings" -Value ([byte[]]@(0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00)) -PropertyType Binary -Force
      New-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Class\$ClassGUID2\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -Name "DAL_SCE_Strength" -Value ([byte[]]@(0x00,0x00,0x00,0x00,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0x05,0x00,0x00,0x00)) -PropertyType Binary -Force
      New-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Class\$ClassGUID2\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -Name "DAL_SCE_Strength" -Value ([byte[]]@(0x00,0x00,0x00,0x00,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0x05,0x00,0x00,0x00)) -PropertyType Binary -Force
 
+     # Set-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Class\$ClassGUID2\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -Name "DAL_SCE_Settings" -Value ([byte[]]@(0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00)) -Force
+     # Set-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Class\$ClassGUID2\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -Name "DAL_SCE_Settings" -Value ([byte[]]@(0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00)) -Force
+     # Set-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Class\$ClassGUID2\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -Name "DAL_SCE_Strength" -Value ([byte[]]@(0x00,0x00,0x00,0x00,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0x05,0x00,0x00,0x00)) -Force
+     # Set-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Class\$ClassGUID2\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -Name "DAL_SCE_Strength" -Value ([byte[]]@(0x00,0x00,0x00,0x00,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0x05,0x00,0x00,0x00)) -Force
+
+     New-Item -Path "HKLM:SYSTEM\ControlSet001\Control\Video\$VideoID\0000\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -ItemType Directory
+     New-Item -Path "HKLM:SYSTEM\CurrentControlSet\Control\Video\$VideoID\0000\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -ItemType Directory
+
      New-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Video\$VideoID\0000\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -Name "DAL_SCE_Settings" -Value ([byte[]]@(0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00)) -PropertyType Binary -Force
      New-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Video\$VideoID\0000\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -Name "DAL_SCE_Settings" -Value ([byte[]]@(0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00)) -PropertyType Binary -Force
      New-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Video\$VideoID\0000\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -Name "DAL_SCE_Strength" -Value ([byte[]]@(0x00,0x00,0x00,0x00,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0x05,0x00,0x00,0x00)) -PropertyType Binary -Force
      New-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Video\$VideoID\0000\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -Name "DAL_SCE_Strength" -Value ([byte[]]@(0x00,0x00,0x00,0x00,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0x05,0x00,0x00,0x00)) -PropertyType Binary -Force
+
+     # Set-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Video\$VideoID\0000\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -Name "DAL_SCE_Settings" -Value ([byte[]]@(0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00)) -Force
+     # Set-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Video\$VideoID\0000\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -Name "DAL_SCE_Settings" -Value ([byte[]]@(0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00)) -Force
+     # Set-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Video\$VideoID\0000\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -Name "DAL_SCE_Strength" -Value ([byte[]]@(0x00,0x00,0x00,0x00,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0x05,0x00,0x00,0x00)) -Force
+     # Set-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Video\$VideoID\0000\DAL2_DATA__2_0\DisplayPath_$DisplayPathDigit\$DisplayPath2\Adjustment" -Name "DAL_SCE_Strength" -Value ([byte[]]@(0x00,0x00,0x00,0x00,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0x05,0x00,0x00,0x00)) -Force
 }
    default {'exiting'}
 }
