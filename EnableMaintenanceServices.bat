@@ -48,6 +48,8 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\DiagTrack" /v "Start" /t REG_DWO
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\NetSetupSvc" /v "Start" /t REG_DWORD /d "3" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\DsmSvc" /v "Start" /t REG_DWORD /d "2" /f
 
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\sppsvc" /v "Start" /t REG_DWORD /d "2" /f
+
 net start ClipSVC
 
 net start Themes
@@ -74,5 +76,6 @@ net start DoSvc
 net start DiagTrack
 net start NetSetupSvc
 net start DsmSvc
+net start sppsvc
 
 PAUSE
