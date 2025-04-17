@@ -122,6 +122,11 @@ switch ($Which) {
      New-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Class\$ClassGUID2\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x01,0x00,0x00,0x00)) -PropertyType Binary -Force
      New-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Video\$VideoID\0000\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x01,0x00,0x00,0x00)) -PropertyType Binary -Force
      New-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Video\$VideoID\0000\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x01,0x00,0x00,0x00)) -PropertyType Binary -Force
+
+     # Set-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Class\$ClassGUID2\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x01,0x00,0x00,0x00)) -Force
+     # Set-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Class\$ClassGUID2\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x01,0x00,0x00,0x00)) -Force
+     # Set-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Video\$VideoID\0000\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x01,0x00,0x00,0x00)) -Force
+     # Set-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Video\$VideoID\0000\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x01,0x00,0x00,0x00)) -Force
 }
 
 
@@ -135,6 +140,11 @@ switch ($Which) {
      New-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Class\$ClassGUID2\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x02,0x00,0x00,0x00)) -PropertyType Binary -Force
      New-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Video\$VideoID\0000\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x02,0x00,0x00,0x00)) -PropertyType Binary -Force
      New-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Video\$VideoID\0000\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x02,0x00,0x00,0x00)) -PropertyType Binary -Force
+
+     # Set-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Class\$ClassGUID2\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x02,0x00,0x00,0x00)) -Force
+     # Set-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Class\$ClassGUID2\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x02,0x00,0x00,0x00)) -Force
+     # Set-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Video\$VideoID\0000\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x02,0x00,0x00,0x00)) -Force
+     # Set-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Video\$VideoID\0000\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x02,0x00,0x00,0x00)) -Force
 }
 
 
@@ -148,6 +158,11 @@ switch ($Which) {
      New-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Class\$ClassGUID2\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x03,0x00,0x00,0x00)) -PropertyType Binary -Force
      New-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Video\$VideoID\0000\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x03,0x00,0x00,0x00)) -PropertyType Binary -Force
      New-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Video\$VideoID\0000\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x03,0x00,0x00,0x00)) -PropertyType Binary -Force
+
+     # Set-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Class\$ClassGUID2\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x03,0x00,0x00,0x00)) -Force
+     # Set-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Class\$ClassGUID2\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x03,0x00,0x00,0x00)) -Force
+     # Set-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Video\$VideoID\0000\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x03,0x00,0x00,0x00)) -Force
+     # Set-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Video\$VideoID\0000\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x03,0x00,0x00,0x00)) -Force
 }
 
   4 {
@@ -160,6 +175,11 @@ switch ($Which) {
      New-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Class\$ClassGUID2\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x04,0x00,0x00,0x00)) -PropertyType Binary -Force
      New-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Video\$VideoID\0000\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x04,0x00,0x00,0x00)) -PropertyType Binary -Force
      New-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Video\$VideoID\0000\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x04,0x00,0x00,0x00)) -PropertyType Binary -Force
+
+     # Set-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Class\$ClassGUID2\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x04,0x00,0x00,0x00)) -Force
+     # Set-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Class\$ClassGUID2\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x04,0x00,0x00,0x00)) -Force
+     # Set-ItemProperty -Path "HKLM:SYSTEM\ControlSet001\Control\Video\$VideoID\0000\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x04,0x00,0x00,0x00)) -Force
+     # Set-ItemProperty -Path "HKLM:SYSTEM\CurrentControlSet\Control\Video\$VideoID\0000\DAL3_DATA\common\$DisplayPath" -Name "color_depth" -Value ([byte[]]@(0x04,0x00,0x00,0x00)) -Force
 }
   default {'exiting'}
 }
