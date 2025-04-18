@@ -31,7 +31,12 @@ cd "%USERPROFILE%\Downloads"
 
 TIMEOUT /T 5
 
-rem # Windows Standard Mouse Cursor (None)
+rem # Mouse Cursor Theme
+rem # Windows Default = Modern Cursor
+rem # Windows Standard = Classic Cursor
+rem # (None) = Windows Standard (system scheme)
+
+rem # (None)
 reg add "HKCU\Control Panel\Cursors" /ve /d "" /f
 reg add "HKCU\Control Panel\Cursors" /v "Scheme Source" /t REG_DWORD /d "0" /f
 reg add "HKCU\Control Panel\Cursors" /v "CursorBaseSize" /t REG_DWORD /d "0x20" /f
