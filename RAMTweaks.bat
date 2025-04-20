@@ -3,6 +3,12 @@ rem # RAM Tweaks
 rem # https://www.elevenforum.com/members/garlin.5387/
 rem # https://www.elevenforum.com/t/gpu-tweaks-batch-script.30134/post-521530
 
+rem # Pagefile Size in MB 
+rem # 8GB = 8192 / 16GB = 16384 / 32GB = 32768 / 64GB = 65536
+
+rem # InitialSize=65536,MaximumSize=65536
+
+rem # Disable Page File
 rem reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "PagingFiles" /t REG_MULTI_SZ /d "c:\pagefile.sys 0 0" /f
 
 if not exist C:\Windows\System32\wbem\WMIC.exe (
@@ -11,13 +17,9 @@ if not exist C:\Windows\System32\wbem\WMIC.exe (
     echo Done.
 )
 
-rem # Sets Pagefile Size, SvcHostSplitThresholdInKB, IoPageLockLimit, CacheUnmapBehindLengthInMB, and ModifiedWriteMaximum according to RAM size
+rem # Sets SvcHostSplitThresholdInKB, IoPageLockLimit, CacheUnmapBehindLengthInMB, and ModifiedWriteMaximum according to RAM size
 
 @echo off
-
-rem # Pagefile Size in MB (16GB = 16384) (32GB = 32768) (64GB = 65536)
-
-rem # InitialSize=65536,MaximumSize=65536
 
 @echo off
 
