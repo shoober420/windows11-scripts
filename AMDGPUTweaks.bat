@@ -128,7 +128,9 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD\DXC" /v "CpuAffinit
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\OpenGL\Private" /v "CpuAffinityOptimization" /t REG_DWORD /d "1" /f
 
 rem # DirectPlay Acceleration (Deprecated)
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_EnableHWCursor" /t REG_DWORD /d "0" /f
+rem # Invisible mouse cursor in CS2 when set to 0
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_EnableHWCursor" /f
+rem reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_EnableHWCursor" /t REG_DWORD /d "0" /f
 
 rem # Disable Radeon Upscaling
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "RADEON_UPSCALING" /t REG_SZ /d "0" /f
