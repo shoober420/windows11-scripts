@@ -2,9 +2,10 @@ rem # Accent color
 
 rem # Default (Windows 11 Blue / RGB: 0 120 215) = 0xff0078d7 / 0xffd77800
 rem # Win2000/WinXP Light Blue (RGB: 58 110 165) = 0xff3a6ea5 / 0xffa56e3a
-rem # Navy (Windows 95 Titlebar Blue / RGB: 0 0 95) = 0xff00005f / 0xff7f0000
+rem # Navy (Win95 Titlebar Blue / RGB: 0 0 95) = 0xff00005f / 0xff7f0000
 rem # Teal (RGB: 0 128 128) = 0xff008080 / 0xff808000
 rem # Seafoam (RGB: 0 183 195) = 0xff00b6c3 / 0xffc3b700
+rem # Win95/98 Start Menu Grey (RGB: 128 128 128) = 0xff808080 / 0x
 
 @echo off
 
@@ -17,15 +18,18 @@ echo 1. Default (Windows 11 Blue)
 echo 2. Win2000/WinXP Light Blue
 echo 3. Navy (Windows 95 Blue)
 echo 4. Teal (Windows 98 Green)
-echo 5. Seafoam
+echo 5. Grey (Windows 95/98 Start Menu)
+echo 6. Seafoam
 echo C. Cancel
 echo.
 choice /c 12345C /m "Choose an option :"
 
 if 6 EQU %ERRORLEVEL% (
    echo User chose to cancel.
-) else if 5 EQU %ERRORLEVEL% (
+) else if 6 EQU %ERRORLEVEL% (
    call :seafoam
+) else if 5 EQU %ERRORLEVEL% (
+   call :grey
 ) else if 4 EQU %ERRORLEVEL% (
    call :win98
 ) else if 3 EQU %ERRORLEVEL% (
@@ -102,6 +106,21 @@ goto :end
 
 :seafoam
 echo User chose Seafoam
+
+reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentColor" /t REG_DWORD /d "0xffc3b700" /f
+
+reg add "HKCU\Software\Microsoft\Windows\DWM" /v "StartColor" /t REG_DWORD /d "0xffc3b700" /f
+
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentPalette" /t REG_BINARY /d "69fcff0029f7ff0000d5e10000b7c300009faa000067700000343b004a545900" /f
+
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentColorMenu" /t REG_DWORD /d "0xffc3b700" /f
+
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "StartColorMenu" /t REG_DWORD /d "0xffc3b700" /f
+
+goto :end
+
+:grey
+echo User chose Grey (Windows 95/98 Start Menu)
 
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentColor" /t REG_DWORD /d "0xffc3b700" /f
 
