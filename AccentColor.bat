@@ -16,7 +16,7 @@ rem # Show accent color on title bars and window borders
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "EnableWindowColorization" /t REG_DWORD /d "1" /f
 
 rem # Windows 95 Grey Inactive Title Bar
-reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentColor" /t REG_DWORD /d "0xff808080" /f
+reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentColorInactive" /t REG_DWORD /d "0xff808080" /f
 
 @echo off
 
