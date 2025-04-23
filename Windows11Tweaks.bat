@@ -2201,9 +2201,6 @@ reg add "HKLM\Software\Policies\Microsoft\Windows\WindowsAI" /v "DisableAIDataAn
 rem # Disable "Suggested" app notifications (Ads for MS services)
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Notifications\Settings\Windows.SystemToast.Suggested" /v "Enabled" /t REG_DWORD /d "0" /f
 
-rem # Disable DPI Scaling
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\SideBySide" /v "PreferExternalManifest" /t REG_DWORD /d "1" /f
-
 rem # Disable Fullscreen Optimizations (FSO)
 rem # 0 = Enabled / 2 = Disabled
 reg add "HKCU\System\GameConfigStore" /v "GameDVR_DSEBehavior" /t REG_DWORD /d "2" /f
