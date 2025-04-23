@@ -99,6 +99,10 @@ rem # Background Type
 rem # 0 = Picture / 1 = Solid Color / 2 = Slideshow / 3 = Windows Spotlight
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Wallpapers" /v "BackgroundType" /t REG_DWORD /d "1" /f
 
+rem # Task view button on start menu
+rem # 0 = Off / 1 = On
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "ShowTaskViewButton" /t REG_DWORD /d "0" /f
+
 rem # Disable Thumbnails
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "DisableThumbnails" /t REG_DWORD /d "1" /f
 
