@@ -11,6 +11,7 @@ reg add "HKLM\Software\Policies\Microsoft\Windows\Display" /v "EnablePerProcessS
 rem # Disable DPI Scaling
 rem # https://thegeekpage.com/disable-display-scaling-on-high-dpi-settings/
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion" /v "PreferExternalManifest" /t REG_DWORD /d "1" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\SideBySide" /v "PreferExternalManifest" /t REG_DWORD /d "1" /f
 
 rem # Win8DpiScaling when set to 1 is used in conjunction with LogPixels to adjust scaling factor
 rem # 0x60 = 100% Scaling (default) (96DPI)
