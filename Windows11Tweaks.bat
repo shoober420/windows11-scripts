@@ -614,9 +614,6 @@ rem =================================== Windows Settings =======================
 rem ----------------------------------- Personalization ------------------------------------
 rem ....................................... Taskbar ........................................
 
-rem Task view / 0 - Off / 1 - On
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "ShowTaskViewButton" /t REG_DWORD /d "0" /f
-
 rem Widgets / 0 - Off / 1 - On
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "TaskbarDa" /t REG_DWORD /d "0" /f
 
