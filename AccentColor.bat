@@ -31,7 +31,7 @@ echo 6. Light Grey (Windows 95/98 Start Menu)
 echo 7. Seafoam
 echo C. Cancel
 echo.
-choice /c 12345C /m "Choose an option :"
+choice /c 1234567C /m "Choose an option :"
 
 if 6 EQU %ERRORLEVEL% (
    echo User chose to cancel.
