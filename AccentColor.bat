@@ -33,7 +33,7 @@ echo C. Cancel
 echo.
 choice /c 1234567C /m "Choose an option :"
 
-if 6 EQU %ERRORLEVEL% (
+if 8 EQU %ERRORLEVEL% (
    echo User chose to cancel.
 ) else if 7 EQU %ERRORLEVEL% (
    call :seafoam
