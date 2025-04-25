@@ -93,9 +93,6 @@ cd "%~dp0"
 call DisableMIDI2.0.bat
 cd "%~dp0"
 
-call RemoveFirewallRules.bat
-cd "%~dp0"
-
 call RAMTweaks.bat
 cd "%~dp0"
 
@@ -165,16 +162,6 @@ call MTU.bat
 cd "%~dp0"
 
 call DeviceManager.bat
-cd "%~dp0"
-
-call WallpaperSolidColor.bat
-cd "%~dp0"
-
-call Theme.bat
-
-cd "%~dp0"
-
-call AccentColor.bat
 cd "%~dp0"
 
 call NetworkTweaks.bat
@@ -488,6 +475,147 @@ goto :end
 :end
 
 cd "%~dp0"
+
+echo.
+echo 1. Keep Firewall Rules
+echo 2. Remove Firewall Rules
+echo C. Cancel
+echo.
+choice /c 12C /m "Choose an option :"
+
+if 3 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 2 EQU %ERRORLEVEL% (
+   call :FWOFF
+) else if 1 EQU %ERRORLEVEL% (
+   call :FWON
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:FWON
+echo User chose Keep Firewall Rules
+
+goto :end
+
+:FWOFF
+echo User chose Remove Firewall Rules
+
+call RemoveFirewallRules.bat
+
+goto :end
+
+:end
+
+cd "%~dp0"
+
+echo.
+echo 1. Enable Windows 95 Theme
+echo 2. Keep Current Theme
+echo C. Cancel
+echo.
+choice /c 12C /m "Choose an option :"
+
+if 3 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 2 EQU %ERRORLEVEL% (
+   call :FWOFF
+) else if 1 EQU %ERRORLEVEL% (
+   call :FWON
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:KEEPTHEME
+echo User chose Keep Current Theme
+
+goto :end
+
+:WIN95ON
+echo User chose Enable Windows 95 Theme
+
+call Theme.bat
+
+goto :end
+
+:end
+
+cd "%~dp0"
+
+echo.
+echo 1. Enable Solid Color Background
+echo 2. Keep Current Wallpaper
+echo C. Cancel
+echo.
+choice /c 12C /m "Choose an option :"
+
+if 3 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 2 EQU %ERRORLEVEL% (
+   call :WALLPAPER
+) else if 1 EQU %ERRORLEVEL% (
+   call :SOLID
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:WALLPAPER
+echo User chose Keep Current Wallpaper
+
+goto :end
+
+:SOLID
+echo User chose Solid Color Background
+
+call WallpaperSolidColor.bat
+
+goto :end
+
+:end
+
+cd "%~dp0"
+
+echo.
+echo 1. Enable Windows 95 Vaporwave Accent Colors
+echo 2. Keep Current Accent Color
+echo C. Cancel
+echo.
+choice /c 12C /m "Choose an option :"
+
+if 3 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 2 EQU %ERRORLEVEL% (
+   call :VAPORWAVE
+) else if 1 EQU %ERRORLEVEL% (
+   call :KEEPACCENT
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:KEEPACCENT
+echo User chose Keep Current Accent Color
+
+goto :end
+
+:VAPORWAVE
+echo User chose Enable Windows 95 Vaporwave Accent Colors
+
+call AccentColor.bat
+
+goto :end
+
+:end
+
+cd "%~dp0"
+
 
 rem # Launch GPU option scripts to finish installation (NVProfileInspector required for NVIDIA)
 
