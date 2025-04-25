@@ -345,6 +345,9 @@ attrib +r +s +h %USERPROFILE%\Searches /S /D
 
 
 
+rem # Hide Desktop Icons
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "HideIcons" /t REG_DWORD /d "0" /f
+
 rem # Visual effects options BEST PERFORMANCE
 rem # UserPreferenceMask also controls "Hide Pointer While Typing"
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AlwaysHibernateThumbnails" /t REG_DWORD /d "0" /f
