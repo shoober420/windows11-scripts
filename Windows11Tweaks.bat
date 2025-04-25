@@ -3570,6 +3570,13 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "L
 rem # Disable File Compression Color
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "ShowCompColor" /t REG_DWORD /d "0" /f
 
+rem # Disable fair sharing of the disk
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\TSFairShare\NetFS" /v "EnableFairShare" /t REG_DWORD /d "0" /f
+
+rem # Disable Name Lookup
+reg add "HKLM\System\CurrentControlSet\Control\Lsa" /v "LsaLookupRestrictIsolatedNameLevel" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Lsa" /v "AnonymousNameLookup" /t REG_DWORD /d "0" /f
+
 
 
 rem # Enables Cloudflare DNS
