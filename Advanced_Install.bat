@@ -66,9 +66,6 @@ cd "%~dp0"
 call SecuritySettings.bat
 cd "%~dp0"
 
-call DisablePerProcessSystemDPI.bat
-cd "%~dp0"
-
 call MouseAccelFix.bat
 cd "%~dp0"
 
@@ -521,9 +518,9 @@ choice /c 12C /m "Choose an option :"
 if 3 EQU %ERRORLEVEL% (
    echo User chose to cancel.
 ) else if 2 EQU %ERRORLEVEL% (
-   call :KEEPTHEME
+   call :FWOFF
 ) else if 1 EQU %ERRORLEVEL% (
-   call :WIN95ON
+   call :FWON
 ) else if 0 EQU %ERRORLEVEL% (
    echo User bailed out.
 )
@@ -591,9 +588,9 @@ choice /c 12C /m "Choose an option :"
 if 3 EQU %ERRORLEVEL% (
    echo User chose to cancel.
 ) else if 2 EQU %ERRORLEVEL% (
-   call :KEEPACCENT
-) else if 1 EQU %ERRORLEVEL% (
    call :VAPORWAVE
+) else if 1 EQU %ERRORLEVEL% (
+   call :KEEPACCENT
 ) else if 0 EQU %ERRORLEVEL% (
    echo User bailed out.
 )
@@ -615,6 +612,40 @@ goto :end
 :end
 
 cd "%~dp0"
+
+echo.
+echo 1. Force 96 Monitor DPI (Better mouse movement) (MAY CAUSE BLURRY TEXT IN CERTAIN APPS)
+echo 2. Keep Current Monitor DPI
+echo C. Cancel
+echo.
+choice /c 12C /m "Choose an option :"
+
+if 3 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 2 EQU %ERRORLEVEL% (
+   call :DEFDPI
+) else if 1 EQU %ERRORLEVEL% (
+   call :96DPI
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:DEFDPI
+echo User chose Keep Current Monitor DPI
+
+goto :end
+
+:96DPI
+echo User chose Force 96 Monitor DPI
+
+call DisablePerProcessSystemDPI.bat
+
+goto :end
+
+:end
+
 
 
 rem # Launch GPU option scripts to finish installation (NVProfileInspector required for NVIDIA)
