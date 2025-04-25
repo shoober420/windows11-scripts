@@ -521,9 +521,9 @@ choice /c 12C /m "Choose an option :"
 if 3 EQU %ERRORLEVEL% (
    echo User chose to cancel.
 ) else if 2 EQU %ERRORLEVEL% (
-   call :FWOFF
+   call :KEEPTHEME
 ) else if 1 EQU %ERRORLEVEL% (
-   call :FWON
+   call :WIN95ON
 ) else if 0 EQU %ERRORLEVEL% (
    echo User bailed out.
 )
@@ -591,9 +591,9 @@ choice /c 12C /m "Choose an option :"
 if 3 EQU %ERRORLEVEL% (
    echo User chose to cancel.
 ) else if 2 EQU %ERRORLEVEL% (
-   call :VAPORWAVE
-) else if 1 EQU %ERRORLEVEL% (
    call :KEEPACCENT
+) else if 1 EQU %ERRORLEVEL% (
+   call :VAPORWAVE
 ) else if 0 EQU %ERRORLEVEL% (
    echo User bailed out.
 )
