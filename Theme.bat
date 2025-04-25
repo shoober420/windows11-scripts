@@ -100,7 +100,11 @@ rem # 0 = Picture / 1 = Solid Color / 2 = Slideshow / 3 = Windows Spotlight
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Wallpapers" /v "BackgroundType" /t REG_DWORD /d "1" /f
 
 rem # Turn On or Off Use Compact Mode
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "UseCompactMode" /t REG_DWORD /d "1" /f 
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "UseCompactMode" /t REG_DWORD /d "1" /f
+
+rem # Disable File Explorer Grouping
+reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "UseAutoGrouping" /t REG_DWORD /d "0" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "UseAutoGrouping" /t REG_DWORD /d "0" /f
 
 rem # Task view button on start menu
 rem # 0 = Off / 1 = On
