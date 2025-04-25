@@ -140,13 +140,13 @@ rem ForegroundLockTimeout specifies the time in milliseconds, following user inp
 reg add "HKCU\Control Panel\Desktop" /v "ForegroundLockTimeout" /t REG_DWORD /d "0" /f
 
 rem Specifies in milliseconds how long the System waits for user processes to end after the user clicks the End Task command button in Task Manager
-reg add "HKCU\Control Panel\Desktop" /v "HungAppTimeout" /t REG_SZ /d "25000" /f
+reg add "HKCU\Control Panel\Desktop" /v "HungAppTimeout" /t REG_SZ /d "1000" /f
 
 rem Determines how long the System waits for user processes to end after the user attempts to log off or to shut down
-reg add "HKCU\Control Panel\Desktop" /v "WaitToKillAppTimeout" /t REG_SZ /d "25000" /f
+reg add "HKCU\Control Panel\Desktop" /v "WaitToKillAppTimeout" /t REG_SZ /d "1000" /f
 
 rem Determines in milliseconds how long the System waits for services to stop after notifying the service that the System is shutting down
-reg add "HKLM\System\CurrentControlSet\Control" /v "WaitToKillServiceTimeout" /t REG_SZ /d "25000" /f
+reg add "HKLM\System\CurrentControlSet\Control" /v "WaitToKillServiceTimeout" /t REG_SZ /d "1000" /f
 
 rem Determines in milliseconds the interval from the time the cursor is pointed at a menu until the menu items are displayed
 reg add "HKCU\Control Panel\Desktop" /v "MenuShowDelay" /t REG_SZ /d "0" /f
