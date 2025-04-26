@@ -21,6 +21,9 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v "Wal
 
 reg add "HKCU\Control Panel\Desktop" /v "TileWallpaper" /t REG_SZ /d "0" /f
 
+rem # Compress Wallpaper
+reg add "HKCU\Control Panel\Desktop" /v "JPEGImportQuality" /t REG_DWORD /d "1" /f
+
 reg add "HKCU\Control Panel\Desktop" /v "WallpaperOriginX" /t REG_DWORD /d "0" /f
 reg add "HKCU\Control Panel\Desktop" /v "WallpaperOriginY" /t REG_DWORD /d "0" /f
 
