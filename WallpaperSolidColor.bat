@@ -49,21 +49,24 @@ echo Background Color
 echo.
 echo 1. Win95/98 Teal Green
 echo 2. Win95/98 Navy Blue
-echo 3. Win2000/XP Light Blue
-echo 4. Win11 Blue
-echo 5. Win11 Black (default)
+echo 3. Win95/98 Blue
+echo 4. Win2000/XP Light Blue
+echo 5. Win11 Blue
+echo 6. Win11 Black (default)
 echo C. Cancel
 echo.
 choice /c 1234C /m "Choose an option :"
 
-if 6 EQU %ERRORLEVEL% (
+if 7 EQU %ERRORLEVEL% (
    echo User chose to cancel.
-) else if 5 EQU %ERRORLEVEL% (
+) else if 6 EQU %ERRORLEVEL% (
    call :black
-) else if 4 EQU %ERRORLEVEL% (
+) else if 5 EQU %ERRORLEVEL% (
    call :blue
-) else if 3 EQU %ERRORLEVEL% (
+) else if 4 EQU %ERRORLEVEL% (
    call :lblue
+) else if 3 EQU %ERRORLEVEL% (
+   call :win95
 ) else if 2 EQU %ERRORLEVEL% (
    call :navy
 ) else if 1 EQU %ERRORLEVEL% (
@@ -80,6 +83,7 @@ rem # Windows 95/98 Teal Green
 rem # HEX: #008080
 rem # RGB: (0 128 128)
 reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "0 128 128" /f
+reg add "HKCU\Control Panel\Colors" /v "Desktop" /t REG_SZ /d "0 128 128" /d
 
 goto :end
 
@@ -89,6 +93,17 @@ rem # Windows 95/98 Navy Blue
 rem # HEX: #00005F
 rem # RGB: (0 0 95)
 reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "0 0 95" /f
+reg add "HKCU\Control Panel\Colors" /v "Desktop" /t REG_SZ /d "0 0 95" /f
+
+goto :end
+
+:win95
+echo User chose Win95/98 Blue
+rem # Windows 95/98 Blue
+rem # HEX: #000080
+rem # RGB: (0 0 128)
+reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "0 0 128" /f
+reg add "HKCU\Control Panel\Colors" /v "Desktop" /t REG_SZ /d "0 0 128" /f
 
 goto :end
 
@@ -98,6 +113,7 @@ rem # Windows 2000/XP Light Blue
 rem # HEX: #3A6EA5
 rem # RGB: (58 110 165)
 reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "58 110 165" /f
+reg add "HKCU\Control Panel\Colors" /v "Desktop" /t REG_SZ /d "58 110 165" /f
 
 goto :end
 
@@ -107,6 +123,7 @@ rem # Win11 Blue
 rem # HEX: #0078D7
 rem # RGB: (0 120 215)
 reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "0 120 215" /f
+reg add "HKCU\Control Panel\Colors" /v "Desktop" /t REG_SZ /d "0 120 215" /f
 
 goto :end
 
@@ -116,6 +133,7 @@ rem # Black (default)
 rem # HEX: #000000
 rem # RGB: (0 0 0)
 reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "0 0 0" /f
+reg add "HKCU\Control Panel\Colors" /v "Desktop" /t REG_SZ /d "0 0 0" /f
 
 goto :end
 
