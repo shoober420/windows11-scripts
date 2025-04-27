@@ -20,6 +20,9 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "Ena
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "EnableWindowColorization" /t REG_DWORD /d "1" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "EnableWindowColorization" /t REG_DWORD /d "1" /f
 
+rem # Automatically pick an Accent Color from my background
+reg add "HKCU\Control Panel\Desktop" /v "AutoColorization" /t REG_DWORD /d "0" /f
+
 rem # Windows 95/98 Light Grey Taskbar / Start Menu
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "StartColorMenu" /t REG_DWORD /d "0xffc3c3c3" /f
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "StartColorMenu" /t REG_DWORD /d "0xffc3c3c3" /f
