@@ -67,6 +67,7 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "A
 reg add "HKCU\Control Panel\Colors" /v "InactiveTitleText" /t REG_SZ /d "195 195 195" /d
 
 rem # Windows 95 Navy Blue Hilight
+rem # Highlighted Menu Color
 reg add "HKCU\Control Panel\Colors" /v "Hilight" /t REG_SZ /d "0 0 95" /d
 reg add "HKCU\Control Panel\Colors" /v "HilightText" /t REG_SZ /d "0 0 95" /d
 
