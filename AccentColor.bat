@@ -2,6 +2,7 @@ rem # Accent color
 
 rem # Default (Windows 11 Blue / RGB: 0 120 215) = 0xff0078d7 / 0xffd77800
 rem # Win2000/WinXP Light Blue (RGB: 58 110 165) = 0xff3a6ea5 / 0xffa56e3a
+rem # Win95 Blue (RGB: 0 0 255) = 0xff0000ff / 0xffff0000
 rem # Navy (Win95 Titlebar Blue / RGB: 0 0 128) = 0xff000080 / 0xff800000
 rem # Teal (RGB: 0 128 128) = 0xff008080 / 0xff808000
 rem # Seafoam (RGB: 0 183 195) = 0xff00b6c3 / 0xffc3b600
@@ -83,27 +84,30 @@ echo Accent Color
 echo.
 echo 1. Default (Windows 11 Blue)
 echo 2. Windows2000/XP Light Blue
-echo 3. Navy (Windows 95 Blue)
-echo 4. Teal (Windows 98 Green)
-echo 5. Grey (Windows 95/98 Taskbar / Start Menu)
-echo 6. Light Grey (Windows 95/98)
-echo 7. Seafoam
+echo 3. Blue (Windows 95)
+echo 4. Navy (Windows 95 Navy Blue)
+echo 5. Teal (Windows 98 Green)
+echo 6. Grey (Windows 95/98 Taskbar / Start Menu)
+echo 7. Light Grey (Windows 95/98)
+echo 8. Seafoam
 echo C. Cancel
 echo.
-choice /c 1234567C /m "Choose an option :"
+choice /c 12345678C /m "Choose an option :"
 
-if 8 EQU %ERRORLEVEL% (
+if 9 EQU %ERRORLEVEL% (
    echo User chose to cancel.
-) else if 7 EQU %ERRORLEVEL% (
+) else if 8 EQU %ERRORLEVEL% (
    call :seafoam
-) else if 6 EQU %ERRORLEVEL% (
+) else if 7 EQU %ERRORLEVEL% (
    call :lgrey
-) else if 5 EQU %ERRORLEVEL% (
+) else if 6 EQU %ERRORLEVEL% (
    call :grey
-) else if 4 EQU %ERRORLEVEL% (
+) else if 5 EQU %ERRORLEVEL% (
    call :win98
-) else if 3 EQU %ERRORLEVEL% (
+) else if 4 EQU %ERRORLEVEL% (
    call :win95
+) else if 3 EQU %ERRORLEVEL% (
+   call :95blue
 ) else if 2 EQU %ERRORLEVEL% (
    call :win2000
 ) else if 1 EQU %ERRORLEVEL% (
@@ -152,6 +156,29 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentColor" /t REG_DWORD /d "0xffa56e3a" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "StartColor" /t REG_DWORD /d "0xffa56e3a" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "ColorizationColor" /t REG_DWORD /d "0xc4a56e3a" /f
+
+rem reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentPalette" /t REG_BINARY /d "bce7f10099c6dd005a8dbe004577af00365e9400233e72000c194a0088179800" /f
+rem reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentPalette" /t REG_BINARY /d "bce7f10099c6dd005a8dbe004577af00365e9400233e72000c194a0088179800" /f
+rem reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentPalette" /t REG_BINARY /d "bce7f10099c6dd005a8dbe004577af00365e9400233e72000c194a0088179800" /f
+rem reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentPalette" /t REG_BINARY /d "bce7f10099c6dd005a8dbe004577af00365e9400233e72000c194a0088179800" /f
+
+goto :end
+
+:95blue
+echo User chose Blue (Windows 95)
+
+reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentColor" /t REG_DWORD /d "0xffff0000" /f
+reg add "HKCU\Software\Microsoft\Windows\DWM" /v "StartColor" /t REG_DWORD /d "0xffff0000" /f
+reg add "HKCU\Software\Microsoft\Windows\DWM" /v "ColorizationColor" /t REG_DWORD /d "0xc4ff0000" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentColor" /t REG_DWORD /d "0xffff0000" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "StartColor" /t REG_DWORD /d "0xffff0000" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "ColorizationColor" /t REG_DWORD /d "0xc4ff0000" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentColor" /t REG_DWORD /d "0xffff0000" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "StartColor" /t REG_DWORD /d "0xffff0000" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "ColorizationColor" /t REG_DWORD /d "0xc4ff0000" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentColor" /t REG_DWORD /d "0xffff0000" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "StartColor" /t REG_DWORD /d "0xffff0000" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "ColorizationColor" /t REG_DWORD /d "0xc4ff0000" /f
 
 rem reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentPalette" /t REG_BINARY /d "bce7f10099c6dd005a8dbe004577af00365e9400233e72000c194a0088179800" /f
 rem reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentPalette" /t REG_BINARY /d "bce7f10099c6dd005a8dbe004577af00365e9400233e72000c194a0088179800" /f
@@ -281,13 +308,16 @@ echo.
 echo Title Bar Color
 echo.
 echo 1. Windows2000/XP Light Blue
-echo 2. Navy (Windows 95 Blue)
+echo 2. Navy (Windows 95)
+echo 3. Blue (Windows 95)
 echo C. Cancel
 echo.
 choice /c 12C /m "Choose an option :"
 
-if 3 EQU %ERRORLEVEL% (
+if 4 EQU %ERRORLEVEL% (
    echo User chose to cancel.
+) else if 3 EQU %ERRORLEVEL% (
+   call :blue95
 ) else if 2 EQU %ERRORLEVEL% (
    call :navy95
 ) else if 1 EQU %ERRORLEVEL% (
@@ -308,13 +338,23 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "A
 
 goto :end
 
-:navy95
-echo User chose Navy (Windows 95 Blue)
+:blue95
+echo User chose Blue (Windows 95)
 
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentColorMenu" /t REG_DWORD /d "0xff7f0000" /f
-reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentColorMenu" /t REG_DWORD /d "0xff7f0000" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentColorMenu" /t REG_DWORD /d "0xff7f0000" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentColorMenu" /t REG_DWORD /d "0xff7f0000" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentColorMenu" /t REG_DWORD /d "0xffff0000" /f
+reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentColorMenu" /t REG_DWORD /d "0xffff0000" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentColorMenu" /t REG_DWORD /d "0xffff0000" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentColorMenu" /t REG_DWORD /d "0xffff0000" /f
+
+goto :end
+
+:navy95
+echo User chose Navy (Windows 95)
+
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentColorMenu" /t REG_DWORD /d "0xff800000" /f
+reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentColorMenu" /t REG_DWORD /d "0xff800000" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentColorMenu" /t REG_DWORD /d "0xff800000" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentColorMenu" /t REG_DWORD /d "0xff800000" /f
 
 goto :end
 
