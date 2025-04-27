@@ -55,7 +55,7 @@ echo 5. Win11 Blue
 echo 6. Win11 Black (default)
 echo C. Cancel
 echo.
-choice /c 1234C /m "Choose an option :"
+choice /c 123456C /m "Choose an option :"
 
 if 7 EQU %ERRORLEVEL% (
    echo User chose to cancel.
@@ -90,20 +90,20 @@ goto :end
 :navy
 echo User chose Win95/98 Navy Blue
 rem # Windows 95/98 Navy Blue
-rem # HEX: #00005F
-rem # RGB: (0 0 95)
-reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "0 0 95" /f
-reg add "HKCU\Control Panel\Colors" /v "Desktop" /t REG_SZ /d "0 0 95" /f
+rem # HEX: #000080
+rem # RGB: (0 0 128)
+reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "0 0 128" /f
+reg add "HKCU\Control Panel\Colors" /v "Desktop" /t REG_SZ /d "0 0 128" /f
 
 goto :end
 
 :win95
 echo User chose Win95/98 Blue
 rem # Windows 95/98 Blue
-rem # HEX: #000080
-rem # RGB: (0 0 128)
-reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "0 0 128" /f
-reg add "HKCU\Control Panel\Colors" /v "Desktop" /t REG_SZ /d "0 0 128" /f
+rem # HEX: #0000FF
+rem # RGB: (0 0 255)
+reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "0 0 255" /f
+reg add "HKCU\Control Panel\Colors" /v "Desktop" /t REG_SZ /d "0 0 255" /f
 
 goto :end
 
