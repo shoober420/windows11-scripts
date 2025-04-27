@@ -64,7 +64,7 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "Acc
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentColorInactive" /t REG_DWORD /d "0xff808080" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentColorInactive" /t REG_DWORD /d "0xff808080" /f
 
-reg add "HKCU\Control Panel\Colors" /v "InactiveTitleText" /t REG_SZ /d "195 195 195" /d
+reg add "HKCU\Control Panel\Colors" /v "InactiveTitleText" /t REG_SZ /d "192 192 192" /d
 
 rem # Windows 95 Navy Blue Hilight
 rem # Highlighted Menu Color
