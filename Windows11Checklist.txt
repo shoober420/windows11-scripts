@@ -18,6 +18,8 @@ Download
  - HxD (hex editor)
  - System Informer (https://sourceforge.net/projects/systeminformer)
  - RegScanner (https://www.nirsoft.net/utils/regscanner.html)
+ - Superfly's Mouse Assisted Color Chooser (SMACC) (https://github.com/Superfly-Inc/SMACC)
+ - WinPaletter (https://github.com/Abdelrhman-AK/WinPaletter)
  - MarkC mouse acceleration fix (Windows 10 Fixes/MouseFix_ItemsSize=100%)
  - DirectX End-User Runtime Web Installer (https://www.microsoft.com/en-us/download/details.aspx?id=35) (dxwebupdate.exe)
  - OpenAL software
