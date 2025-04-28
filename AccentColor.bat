@@ -10,7 +10,6 @@ rem #  80,80,80,aa,\                     ; Start button hover
 rem #  80,80,80,aa,\                     ; Settings icons and links [Gray]
 rem #  80,80,80,aa,\                     ; Startmenu background / Active taskbar button - IF "EnableTransparency"=dword:00000000
 rem #  80,80,80,aa,\                     ; Taskbar front and Folders on start list background [None]
-
 rem #  00,00,00,aa,\                     ; Taskbar background - IF "EnableTransparency"=dword:00000001
 rem #  00,00,00,aa                       ; Unused
 
@@ -61,7 +60,7 @@ reg add "HKCU\Software\Microsoft\Windows\DWM" /v "TaskbarColorOverride" /t REG_D
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "TaskbarColorOverride" /t REG_DWORD /d "0xff808080" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "TaskbarColorOverride" /t REG_DWORD /d "0xff808080" /f
 
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentPalette" /t REG_BINARY /d "808080ff808080ff808080ff808080ff7f7f7fff7f7f7fff7f7f7fff88179800" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentPalette" /t REG_BINARY /d "808080ff808080ff808080ff808080ff808080ff7f7f7fff7f7f7fff88179800" /f
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentPalette" /t REG_BINARY /d "808080ff808080ff808080ff808080ff7f7f7fff7f7f7fff7f7f7fff88179800" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentPalette" /t REG_BINARY /d "808080ff808080ff808080ff808080ff7f7f7fff7f7f7fff7f7f7fff88179800" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentPalette" /t REG_BINARY /d "808080ff808080ff808080ff808080ff7f7f7fff7f7f7fff7f7f7fff88179800" /f
