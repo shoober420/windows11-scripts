@@ -634,6 +634,8 @@ reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes" /v "LastHighC
 reg delete "HKCU\Control Panel\Appearance" /v "Current" /f
 reg delete "HKCU\Control Panel\Appearance" /v "NewCurrent" /f
 
+reg add "HKCU\Control Panel\Colors" /v "Window" /t REG_SZ /d "255 255 255" /f
+
 goto :end
 
 :hcon
@@ -647,6 +649,11 @@ reg add "HKCU\Control Panel\Accessibility\HighContrast" /v "Previous High Contra
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes" /v "LastHighContrastTheme" /t REG_SZ /d "%LocalAppData%\Microsoft\Windows\Themes\Custom.theme" /f
 reg add "HKCU\Control Panel\Appearance" /v "Current" /t REG_SZ /d "@themeui.dll,-852" /f
 reg add "HKCU\Control Panel\Appearance" /v "NewCurrent" /t REG_SZ /d "@themeui.dll,-852" /f
+
+rem # Enable Silver Start Menu / Taskbar
+rem # Changes Window Background to Silver as well
+rem # There is no way to change just the start menu / taskbar color
+reg add "HKCU\Control Panel\Colors" /v "Window" /t REG_SZ /d "192 192 192" /f
 
 :end
 
