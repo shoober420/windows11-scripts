@@ -626,9 +626,13 @@ goto :eof
 echo User chose Disable High Contrast Windows 95 Theme
 
 reg add "HKCU\Control Panel\Accessibility\HighContrast" /v "Flags" /t REG_SZ /d "0" /f
+reg add "HKCU\Control Panel\Accessibility\HighContrast" /v "LastUpdatedThemeId" /t REG_DWORD /d "0" /f
 reg delete "HKCU\Control Panel\Accessibility\HighContrast" /v "High Contrast Scheme" /f
+reg delete "HKCU\Control Panel\Accessibility\HighContrast" /v "Previous High Contrast Scheme MUI Ptr" /f
 reg delete "HKCU\Control Panel\Accessibility\HighContrast" /v "Previous High Contrast Scheme MUI Value" /f
 reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes" /v "LastHighContrastTheme" /f
+reg delete "HKCU\Control Panel\Appearance" /v "Current" /f
+reg delete "HKCU\Control Panel\Appearance" /v "NewCurrent" /f
 
 goto :end
 
@@ -636,9 +640,13 @@ goto :end
 echo User chose Enable High Contrast Windows 95 Theme
 
 reg add "HKCU\Control Panel\Accessibility\HighContrast" /v "Flags" /t REG_SZ /d "1" /f
+reg add "HKCU\Control Panel\Accessibility\HighContrast" /v "LastUpdatedThemeId" /t REG_DWORD /d "1" /f
 reg add "HKCU\Control Panel\Accessibility\HighContrast" /v "High Contrast Scheme" /t REG_SZ /d "High Contrast Black" /f
+reg add "HKCU\Control Panel\Accessibility\HighContrast" /v "Previous High Contrast Scheme MUI Ptr" /t REG_SZ /d "@themeui.dll,-852" /f
 reg add "HKCU\Control Panel\Accessibility\HighContrast" /v "Previous High Contrast Scheme MUI Value" /t REG_SZ /d "High Contrast Black" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes" /v "LastHighContrastTheme" /t REG_SZ /d "%LocalAppData%\Microsoft\Windows\Themes\Custom.theme" /f
+reg add "HKCU\Control Panel\Appearance" /v "Current" /t REG_SZ /d "@themeui.dll,-852" /f
+reg add "HKCU\Control Panel\Appearance" /v "NewCurrent" /t REG_SZ /d "@themeui.dll,-852" /f
 
 :end
 
