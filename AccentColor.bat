@@ -74,7 +74,7 @@ reg add "HKCU\Control Panel\Colors" /v "InactiveTitleText" /t REG_SZ /d "192 192
 rem # Windows 95 Navy Hilight
 rem # Highlighted Menu Color
 reg add "HKCU\Control Panel\Colors" /v "Hilight" /t REG_SZ /d "0 0 128" /f
-reg add "HKCU\Control Panel\Colors" /v "HilightText" /t REG_SZ /d "0 0 128" /f
+reg add "HKCU\Control Panel\Colors" /v "HilightText" /t REG_SZ /d "255 255 255" /f
 
 rem # Windows 95 Silver Scrollbar
 reg add "HKCU\Control Panel\Colors" /v "Scrollbar" /t REG_SZ /d "192 192 192" /f
@@ -111,7 +111,7 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "SystemUsesLightTheme" /t REG_DWORD /d "1" /f
 rem reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "ColorPrevalence" /t REG_DWORD /d "0" /f
 
-reg add "HKCU\Control Panel\Colors" /v "Window" /t REG_SZ /d "242 242 242" /f
+rem reg add "HKCU\Control Panel\Colors" /v "Window" /t REG_SZ /d "242 242 242" /f
 
 goto :end
 
@@ -121,8 +121,6 @@ echo User chose Dark Theme
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AppsUseLightTheme" /t REG_DWORD /d "0" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "SystemUsesLightTheme" /t REG_DWORD /d "0" /f
 rem reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "ColorPrevalence" /t REG_DWORD /d "1" /f
-
-reg add "HKCU\Control Panel\Colors" /v "Window" /t REG_SZ /d "18 18 18" /f
 
 goto :end
 
