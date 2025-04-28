@@ -6,6 +6,8 @@ rem # Windows 95 used HTML 3.0 Web Colors
 
 rem # http://franck.kiechel.free.fr/dbr_eng/Shell.htm
 
+rem # rem # https://www.neowin.net/forum/topic/624901-windows-colors-explained/
+
 PAUSE
 
 rem # Accent Palette Binary Example (Teal)
@@ -75,6 +77,8 @@ reg add "HKCU\Control Panel\Colors" /v "ActiveTitle" /t REG_SZ /d "0 0 128" /f
 reg add "HKCU\Control Panel\Colors" /v "InactiveTitle" /t REG_SZ /d "128 128 128" /f
 reg add "HKCU\Control Panel\Colors" /v "TitleText" /t REG_SZ /d "255 255 255" /f
 reg add "HKCU\Control Panel\Colors" /v "InactiveTitleText" /t REG_SZ /d "192 192 192" /f
+reg add "HKCU\Control Panel\Colors" /v "GradientActiveTitle" /t REG_SZ /d "0 0 128" /f
+reg add "HKCU\Control Panel\Colors" /v "GradientInactiveTitle" /t REG_SZ /d "128 128 128" /f
 
 rem # Windows 95 Borders
 reg add "HKCU\Control Panel\Colors" /v "ActiveBorder" /t REG_SZ /d "192 192 192" /f
@@ -89,9 +93,12 @@ reg add "HKCU\Control Panel\Colors" /v "WindowFrame" /t REG_SZ /d "0 0 0" /f
 rem # Windows 95 Menus
 reg add "HKCU\Control Panel\Colors" /v "GrayText" /t REG_SZ /d "128 128 128" /f
 reg add "HKCU\Control Panel\Colors" /v "Menu" /t REG_SZ /d "192 192 192" /f
+reg add "HKCU\Control Panel\Colors" /v "MenuBar" /t REG_SZ /d "192 192 192" /f
+reg add "HKCU\Control Panel\Colors" /v "MenuHilight" /t REG_SZ /d "0 0 128" /f
 
 rem # Windows 95 Buttons
 rem # Light Golden Rod Yellow - RGB: 223 223 223 / BGR: 223 223 223 = 0xffdfdfdf / 0xffdfdfdf
+reg add "HKCU\Control Panel\Colors" /v "ButtonAlternateFace" /t REG_SZ /d "192 192 192" /f
 reg add "HKCU\Control Panel\Colors" /v "ButtonDkShadow" /t REG_SZ /d "0 0 0" /f
 reg add "HKCU\Control Panel\Colors" /v "ButtonFace" /t REG_SZ /d "192 192 192" /f
 reg add "HKCU\Control Panel\Colors" /v "ButtonHilight" /t REG_SZ /d "255 255 255" /f
@@ -105,6 +112,9 @@ reg add "HKCU\Control Panel\Colors" /v "HilightText" /t REG_SZ /d "255 255 255" 
 
 rem # Windows 95 Silver Scrollbar
 reg add "HKCU\Control Panel\Colors" /v "Scrollbar" /t REG_SZ /d "192 192 192" /f
+
+rem # Windows 95 App Workspace Color
+reg add "HKCU\Control Panel\Colors" /v "AppWorkspace" /t REG_SZ /d "128 128 128" /f
 
 @echo off
 
