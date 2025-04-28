@@ -4,7 +4,7 @@ rem # Using Light Theme will NOT allow you to change titlebar color
 
 rem # Windows 95 used HTML 3.0 Web Colors
 
-rem # Accent Palette Binary Example (Grey)
+rem # Accent Palette Binary Example (Gray)
 rem # https://gist.github.com/AveYo/80fc6677b9f34939e44364880fbf3768
 
 rem # ff = 255 alpha (disabled)
@@ -55,7 +55,7 @@ reg add "HKCU\Control Panel\Colors" /v "MenuText" /t REG_SZ /d "0 0 0" /d
 rem # Windows 95/98 Black Font for Info Text
 reg add "HKCU\Control Panel\Colors" /v "InfoText" /t REG_SZ /d "0 0 0" /d
 
-rem # Windows 95/98 Grey Taskbar / Start Menu
+rem # Windows 95 Gray Taskbar / Start Menu
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "StartColorMenu" /t REG_DWORD /d "0xff808080" /f
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "StartColorMenu" /t REG_DWORD /d "0xff808080" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "StartColorMenu" /t REG_DWORD /d "0xff808080" /f
@@ -78,7 +78,7 @@ rem reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v 
 rem reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "StartColor" /t REG_DWORD /d "0xff808080" /f
 rem reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "StartColor" /t REG_DWORD /d "0xff808080" /f
 
-rem # Windows 95 Grey Inactive Title Bar
+rem # Windows 95 Gray Inactive Title Bar
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentColorInactive" /t REG_DWORD /d "0xff808080" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentColorInactive" /t REG_DWORD /d "0xff808080" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentColorInactive" /t REG_DWORD /d "0xff808080" /f
@@ -86,12 +86,12 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "A
 
 reg add "HKCU\Control Panel\Colors" /v "InactiveTitleText" /t REG_SZ /d "192 192 192" /d
 
-rem # Windows 95 Navy Blue Hilight
+rem # Windows 95 Navy Hilight
 rem # Highlighted Menu Color
-reg add "HKCU\Control Panel\Colors" /v "Hilight" /t REG_SZ /d "0 0 95" /d
-reg add "HKCU\Control Panel\Colors" /v "HilightText" /t REG_SZ /d "0 0 95" /d
+reg add "HKCU\Control Panel\Colors" /v "Hilight" /t REG_SZ /d "0 0 128" /d
+reg add "HKCU\Control Panel\Colors" /v "HilightText" /t REG_SZ /d "0 0 128" /d
 
-rem # Windows 95 Scrollbar Color
+rem # Windows 95 Gray Scrollbar
 reg add "HKCU\Control Panel\Colors" /v "Scrollbar" /t REG_SZ /d "128 128 128" /d
 
 @echo off
