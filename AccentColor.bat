@@ -631,6 +631,7 @@ reg delete "HKCU\Control Panel\Accessibility\HighContrast" /v "High Contrast Sch
 reg delete "HKCU\Control Panel\Accessibility\HighContrast" /v "Previous High Contrast Scheme MUI Ptr" /f
 reg delete "HKCU\Control Panel\Accessibility\HighContrast" /v "Previous High Contrast Scheme MUI Value" /f
 reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes" /v "LastHighContrastTheme" /f
+reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes" /v "CurrentTheme" /f
 reg delete "HKCU\Control Panel\Appearance" /v "Current" /f
 reg delete "HKCU\Control Panel\Appearance" /v "NewCurrent" /f
 
@@ -647,6 +648,7 @@ reg add "HKCU\Control Panel\Accessibility\HighContrast" /v "High Contrast Scheme
 reg add "HKCU\Control Panel\Accessibility\HighContrast" /v "Previous High Contrast Scheme MUI Ptr" /t REG_SZ /d "@themeui.dll,-852" /f
 reg add "HKCU\Control Panel\Accessibility\HighContrast" /v "Previous High Contrast Scheme MUI Value" /t REG_SZ /d "High Contrast Black" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes" /v "LastHighContrastTheme" /t REG_SZ /d "%LocalAppData%\Microsoft\Windows\Themes\Custom.theme" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes" /v "CurrentTheme" /t REG_SZ /d "%LocalAppData%\Microsoft\Windows\Themes\Custom.theme" /f
 reg add "HKCU\Control Panel\Appearance" /v "Current" /t REG_SZ /d "@themeui.dll,-852" /f
 reg add "HKCU\Control Panel\Appearance" /v "NewCurrent" /t REG_SZ /d "@themeui.dll,-852" /f
 
