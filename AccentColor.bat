@@ -330,7 +330,7 @@ echo 3. Win95 Navy
 echo 4. Win95 Blue
 echo C. Cancel
 echo.
-choice /c 12C /m "Choose an option :"
+choice /c 1234C /m "Choose an option :"
 
 if 5 EQU %ERRORLEVEL% (
    echo User chose to cancel.
