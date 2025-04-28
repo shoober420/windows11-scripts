@@ -116,6 +116,9 @@ reg add "HKCU\Control Panel\Colors" /v "Scrollbar" /t REG_SZ /d "192 192 192" /f
 rem # Windows 95 App Workspace Color
 reg add "HKCU\Control Panel\Colors" /v "AppWorkspace" /t REG_SZ /d "128 128 128" /f
 
+rem # Windows 95 Hot Tracking Color
+reg add "HKCU\Control Panel\Colors" /v "HotTrackingColor" /t REG_SZ /d "0 0 128" /f
+
 @echo off
 
 @echo off
