@@ -1,5 +1,7 @@
 rem # Accent color
 
+rem # Using Light Theme will NOT allow you to change titlebar color
+
 rem # Windows 95 used HTML 3.0 Web Colors
 
 rem # Accent Palette Binary Example (Grey)
