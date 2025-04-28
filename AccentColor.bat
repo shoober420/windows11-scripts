@@ -48,16 +48,16 @@ rem # Automatically pick an Accent Color from my background
 reg add "HKCU\Control Panel\Desktop" /v "AutoColorization" /t REG_DWORD /d "0" /f
 
 rem # Windows 95/98 Black Font for Start Menu
-reg add "HKCU\Control Panel\Colors" /v "ButtonText" /t REG_SZ /d "0 0 0" /d
+reg add "HKCU\Control Panel\Colors" /v "ButtonText" /t REG_SZ /d "0 0 0" /f
 
 rem # Windows 95/98 Black Font for Taskbar
-reg add "HKCU\Control Panel\Colors" /v "WindowText" /t REG_SZ /d "0 0 0" /d
+reg add "HKCU\Control Panel\Colors" /v "WindowText" /t REG_SZ /d "0 0 0" /f
 
 rem # Windows 95/98 Black Font for Menu Text
-reg add "HKCU\Control Panel\Colors" /v "MenuText" /t REG_SZ /d "0 0 0" /d
+reg add "HKCU\Control Panel\Colors" /v "MenuText" /t REG_SZ /d "0 0 0" /f
 
 rem # Windows 95/98 Black Font for Info Text
-reg add "HKCU\Control Panel\Colors" /v "InfoText" /t REG_SZ /d "0 0 0" /d
+reg add "HKCU\Control Panel\Colors" /v "InfoText" /t REG_SZ /d "0 0 0" /f
 
 rem # Windows 95 Gray Inactive Title Bar
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentColorInactive" /t REG_DWORD /d "0xff808080" /f
@@ -65,15 +65,15 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "Acc
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentColorInactive" /t REG_DWORD /d "0xff808080" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentColorInactive" /t REG_DWORD /d "0xff808080" /f
 
-reg add "HKCU\Control Panel\Colors" /v "InactiveTitleText" /t REG_SZ /d "192 192 192" /d
+reg add "HKCU\Control Panel\Colors" /v "InactiveTitleText" /t REG_SZ /d "192 192 192" /f
 
 rem # Windows 95 Navy Hilight
 rem # Highlighted Menu Color
-reg add "HKCU\Control Panel\Colors" /v "Hilight" /t REG_SZ /d "0 0 128" /d
-reg add "HKCU\Control Panel\Colors" /v "HilightText" /t REG_SZ /d "0 0 128" /d
+reg add "HKCU\Control Panel\Colors" /v "Hilight" /t REG_SZ /d "0 0 128" /f
+reg add "HKCU\Control Panel\Colors" /v "HilightText" /t REG_SZ /d "0 0 128" /f
 
 rem # Windows 95 Gray Scrollbar
-reg add "HKCU\Control Panel\Colors" /v "Scrollbar" /t REG_SZ /d "128 128 128" /d
+reg add "HKCU\Control Panel\Colors" /v "Scrollbar" /t REG_SZ /d "128 128 128" /f
 
 @echo off
 
@@ -131,12 +131,15 @@ echo 5. Win95/98 Teal
 echo 6. Win95/98 Gray
 echo 7. Win95/98 Silver
 echo 8. Seafoam/Dark Turquoise
+echo A. Windows 95 Theme
 echo C. Cancel
 echo.
 choice /c 12345678C /m "Choose an option :"
 
 if 9 EQU %ERRORLEVEL% (
    echo User chose to cancel.
+) else if a EQU %ERRORLEVEL% (
+   call :win95t
 ) else if 8 EQU %ERRORLEVEL% (
    call :seafoam
 ) else if 7 EQU %ERRORLEVEL% (
@@ -176,7 +179,7 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "S
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "ColorizationColor" /t REG_DWORD /d "0xffd77800" /f
 
 rem # Start Menu / Taskbar
-reg add "HKCU\Control Panel\Colors" /v "Window" /t REG_SZ /d "0 120 215" /d
+reg add "HKCU\Control Panel\Colors" /v "Window" /t REG_SZ /d "0 120 215" /f
 
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "StartColorMenu" /t REG_DWORD /d "0xffd77800" /f
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "StartColorMenu" /t REG_DWORD /d "0xffd77800" /f
@@ -212,7 +215,7 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "S
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "ColorizationColor" /t REG_DWORD /d "0xffa56e3a" /f
 
 rem # Start Menu / Taskbar
-reg add "HKCU\Control Panel\Colors" /v "Window" /t REG_SZ /d "58 110 165" /d
+reg add "HKCU\Control Panel\Colors" /v "Window" /t REG_SZ /d "58 110 165" /f
 
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "StartColorMenu" /t REG_DWORD /d "0xffa56e3a" /f
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "StartColorMenu" /t REG_DWORD /d "0xffa56e3a" /f
@@ -248,7 +251,7 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "S
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "ColorizationColor" /t REG_DWORD /d "0xffff0000" /f
 
 rem # Start Menu / Taskbar
-reg add "HKCU\Control Panel\Colors" /v "Window" /t REG_SZ /d "0 0 255" /d
+reg add "HKCU\Control Panel\Colors" /v "Window" /t REG_SZ /d "0 0 255" /f
 
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "StartColorMenu" /t REG_DWORD /d "0xffff0000" /f
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "StartColorMenu" /t REG_DWORD /d "0xffff0000" /f
@@ -284,7 +287,7 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "S
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "ColorizationColor" /t REG_DWORD /d "0xff800000" /f
 
 rem # Start Menu / Taskbar
-reg add "HKCU\Control Panel\Colors" /v "Window" /t REG_SZ /d "0 0 128" /d
+reg add "HKCU\Control Panel\Colors" /v "Window" /t REG_SZ /d "0 0 128" /f
 
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "StartColorMenu" /t REG_DWORD /d "0xff800000" /f
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "StartColorMenu" /t REG_DWORD /d "0xff800000" /f
@@ -320,7 +323,7 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "S
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "ColorizationColor" /t REG_DWORD /d "0xff808000" /f
 
 rem # Start Menu / Taskbar
-reg add "HKCU\Control Panel\Colors" /v "Window" /t REG_SZ /d "0 128 128" /d
+reg add "HKCU\Control Panel\Colors" /v "Window" /t REG_SZ /d "0 128 128" /f
 
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "StartColorMenu" /t REG_DWORD /d "0xff808000" /f
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "StartColorMenu" /t REG_DWORD /d "0xff808000" /f
@@ -356,7 +359,7 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "S
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "ColorizationColor" /t REG_DWORD /d "0xffc3b700" /f
 
 rem # Start Menu / Taskbar
-reg add "HKCU\Control Panel\Colors" /v "Window" /t REG_SZ /d "0 183 195" /d
+reg add "HKCU\Control Panel\Colors" /v "Window" /t REG_SZ /d "0 183 195" /f
 
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "StartColorMenu" /t REG_DWORD /d "0xffc3b700" /f
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "StartColorMenu" /t REG_DWORD /d "0xffc3b700" /f
@@ -392,7 +395,7 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "S
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "ColorizationColor" /t REG_DWORD /d "0xff808080" /f
 
 rem # Start Menu / Taskbar
-reg add "HKCU\Control Panel\Colors" /v "Window" /t REG_SZ /d "128 128 128" /d
+reg add "HKCU\Control Panel\Colors" /v "Window" /t REG_SZ /d "128 128 128" /f
 
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "StartColorMenu" /t REG_DWORD /d "0xff808080" /f
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "StartColorMenu" /t REG_DWORD /d "0xff808080" /f
@@ -428,7 +431,7 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "S
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "ColorizationColor" /t REG_DWORD /d "0xffc0c0c0" /f
 
 rem # Start Menu / Taskbar
-reg add "HKCU\Control Panel\Colors" /v "Window" /t REG_SZ /d "192 192 192" /d
+reg add "HKCU\Control Panel\Colors" /v "Window" /t REG_SZ /d "192 192 192" /f
 
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "StartColorMenu" /t REG_DWORD /d "0xffc0c0c0" /f
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "StartColorMenu" /t REG_DWORD /d "0xffc0c0c0" /f
@@ -444,6 +447,42 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "Acc
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentPalette" /t REG_BINARY /d "c0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ff" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentPalette" /t REG_BINARY /d "c0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ff" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentPalette" /t REG_BINARY /d "c0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ff" /f
+
+goto :end
+
+:win95t
+echo User chose Windows 95 Theme
+
+reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentColor" /t REG_DWORD /d "0xff808080" /f
+reg add "HKCU\Software\Microsoft\Windows\DWM" /v "StartColor" /t REG_DWORD /d "0xff808080" /f
+reg add "HKCU\Software\Microsoft\Windows\DWM" /v "ColorizationColor" /t REG_DWORD /d "0xff808080" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentColor" /t REG_DWORD /d "0xff808080" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "StartColor" /t REG_DWORD /d "0xff808080" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "ColorizationColor" /t REG_DWORD /d "0xff808080" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentColor" /t REG_DWORD /d "0xff808080" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "StartColor" /t REG_DWORD /d "0xff808080" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "ColorizationColor" /t REG_DWORD /d "0xff808080" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentColor" /t REG_DWORD /d "0xff808080" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "StartColor" /t REG_DWORD /d "0xff808080" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "ColorizationColor" /t REG_DWORD /d "0xff808080" /f
+
+rem # Start Menu / Taskbar
+reg add "HKCU\Control Panel\Colors" /v "Window" /t REG_SZ /d "128 128 128" /f
+
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "StartColorMenu" /t REG_DWORD /d "0xff808080" /f
+reg add "HKCU\Software\Microsoft\Windows\DWM" /v "StartColorMenu" /t REG_DWORD /d "0xff808080" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "StartColorMenu" /t REG_DWORD /d "0xff808080" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "StartColorMenu" /t REG_DWORD /d "0xff808080" /f
+
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "TaskbarColorOverride" /t REG_DWORD /d "0xff808080" /f
+reg add "HKCU\Software\Microsoft\Windows\DWM" /v "TaskbarColorOverride" /t REG_DWORD /d "0xff808080" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "TaskbarColorOverride" /t REG_DWORD /d "0xff808080" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "TaskbarColorOverride" /t REG_DWORD /d "0xff808080" /f
+
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentPalette" /t REG_BINARY /d "808080ff000080ff808080ff808080ff808080ff808080ff808080ff808080ff" /f
+reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentPalette" /t REG_BINARY /d "808080ff000080ff808080ff808080ff808080ff808080ff808080ff808080ff" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentPalette" /t REG_BINARY /d "808080ff000080ff808080ff808080ff808080ff808080ff808080ff808080ff" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentPalette" /t REG_BINARY /d "808080ff000080ff808080ff808080ff808080ff808080ff808080ff808080ff" /f
 
 goto :end
 
