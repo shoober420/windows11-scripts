@@ -3,6 +3,8 @@ rem # Accent color
 rem # Accent Palette Binary Example (Grey)
 rem # https://gist.github.com/AveYo/80fc6677b9f34939e44364880fbf3768
 
+rem # ff = 255 alpha (disabled)
+
 rem #  "AccentPalette"=hex:\
 rem #  80,80,80,aa,\                     ; Links in action center and apps, where [rr,gg,bb,aa] aa = alpha, ignored
 rem #  80,80,80,aa,\                     ; Taskbar icons underline
@@ -10,8 +12,8 @@ rem #  80,80,80,aa,\                     ; Start button hover
 rem #  80,80,80,aa,\                     ; Settings icons and links [Gray]
 rem #  80,80,80,aa,\                     ; Startmenu background / Active taskbar button - IF "EnableTransparency"=dword:00000000
 rem #  80,80,80,aa,\                     ; Taskbar front and Folders on start list background [None]
-rem #  00,00,00,aa,\                     ; Taskbar background - IF "EnableTransparency"=dword:00000001
-rem #  00,00,00,aa                       ; Unused
+rem #  80,80,80,aa,\                     ; Taskbar background - IF "EnableTransparency"=dword:00000001
+rem #  80,80,80,aa                       ; Unused
 
 rem # Default (Windows 11 Blue / RGB: 0 120 215) = 0xff0078d7 / 0xffd77800
 rem # Win2000/WinXP Light Blue (RGB: 58 110 165) = 0xff3a6ea5 / 0xffa56e3a
