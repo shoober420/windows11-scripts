@@ -76,8 +76,8 @@ rem # Highlighted Menu Color
 reg add "HKCU\Control Panel\Colors" /v "Hilight" /t REG_SZ /d "0 0 128" /f
 reg add "HKCU\Control Panel\Colors" /v "HilightText" /t REG_SZ /d "0 0 128" /f
 
-rem # Windows 95 Gray Scrollbar
-reg add "HKCU\Control Panel\Colors" /v "Scrollbar" /t REG_SZ /d "128 128 128" /f
+rem # Windows 95 Silver Scrollbar
+reg add "HKCU\Control Panel\Colors" /v "Scrollbar" /t REG_SZ /d "192 192 192" /f
 
 @echo off
 
