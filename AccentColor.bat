@@ -4,6 +4,8 @@ rem # Using Light Theme will NOT allow you to change titlebar color
 
 rem # Windows 95 used HTML 3.0 Web Colors
 
+rem # http://franck.kiechel.free.fr/dbr_eng/Shell.htm
+
 PAUSE
 
 rem # Accent Palette Binary Example (Teal)
