@@ -4,20 +4,20 @@ rem # Using Light Theme will NOT allow you to change titlebar color
 
 rem # Windows 95 used HTML 3.0 Web Colors
 
-rem # Accent Palette Binary Example (Gray)
+rem # Accent Palette Binary Example (Teal)
 rem # https://gist.github.com/AveYo/80fc6677b9f34939e44364880fbf3768
 
-rem # ff = 255 alpha (disabled)
+rem # aa = alpha / ff = alpha 255 (disabled)
 
-rem #  "AccentPalette"=hex:\
-rem #  80,80,80,aa,\                     ; Links in action center and apps, where [rr,gg,bb,aa] aa = alpha, ignored
-rem #  80,80,80,aa,\                     ; Taskbar icons underline
-rem #  80,80,80,aa,\                     ; Start button hover
-rem #  80,80,80,aa,\                     ; Settings icons and links [Gray]
-rem #  80,80,80,aa,\                     ; Startmenu background / Active taskbar button - IF "EnableTransparency"=dword:00000000
-rem #  80,80,80,aa,\                     ; Taskbar front and Folders on start list background [None]
-rem #  80,80,80,aa,\                     ; Taskbar background - IF "EnableTransparency"=dword:00000001
-rem #  80,80,80,aa                       ; Unused
+rem #    "AccentPalette"=hex:\
+rem #    00,80,80,aa,\                     ; Links in action center and apps
+rem #    00,80,80,aa,\                     ; Taskbar icons underline
+rem #    00,80,80,aa,\                     ; Start button hover
+rem #    00,80,80,aa,\                     ; Settings icons and links [Teal]
+rem #    00,80,80,aa,\                     ; Startmenu background / Active taskbar button - IF "EnableTransparency"=dword:00000000
+rem #    00,80,80,aa,\                     ; Taskbar front and Folders on start list background [None]
+rem #    00,80,80,aa,\                     ; Taskbar background - IF "EnableTransparency"=dword:00000001
+rem #    00,80,80,aa                       ; Unused
 
 rem # Win10/11 Dodger Blue (RGB: 0 120 215 / BGR: 215 120 0) = 0xff0078d7 / 0xffd77800
 rem # Win2000/WinXP Steel Blue (RGB: 58 110 165 / BGR: 165 110 58) = 0xff3a6ea5 / 0xffa56e3a
