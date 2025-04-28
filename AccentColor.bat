@@ -134,7 +134,7 @@ echo 8. Seafoam/Dark Turquoise
 echo A. Windows 95 Theme
 echo C. Cancel
 echo.
-choice /c 12345678C /m "Choose an option :"
+choice /c 12345678AC /m "Choose an option :"
 
 if 9 EQU %ERRORLEVEL% (
    echo User chose to cancel.
