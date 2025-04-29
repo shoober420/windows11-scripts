@@ -1,8 +1,8 @@
-rem # Windows 98 Teal Green Solid Color Background
+rem # Windows Solid Color Backgrounds
 
 rem # !!! WARNING !!!
 
-rem # DELETES CURRENT WALLPAPER FOR SOLID COLOR BACKGROUND
+rem # REPLACES CURRENT WALLPAPER FOR SOLID COLOR BACKGROUND
 
 rem # !!! WARNING !!!
 
@@ -47,11 +47,11 @@ reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Wallpapers" 
 echo.
 echo Background Color
 echo.
-echo 1. Win95/98 Teal Green
-echo 2. Win95/98 Navy Blue
-echo 3. Win95/98 Blue
-echo 4. Win2000/XP Light Blue
-echo 5. Win11 Blue
+echo 1. Win95/98 Teal
+echo 2. Win95 Navy
+echo 3. Win95 Blue
+echo 4. Win2000/XP Steel Blue
+echo 5. Win11 Dodger Blue
 echo 6. Win11 Black (default)
 echo C. Cancel
 echo.
@@ -78,8 +78,8 @@ if 7 EQU %ERRORLEVEL% (
 goto :eof
 
 :teal
-echo User chose Win95/98 Teal Green
-rem # Windows 95/98 Teal Green
+echo User chose Win95/98 Teal
+rem # Windows 95/98 Teal
 rem # HEX: #008080
 rem # RGB: (0 128 128)
 reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "0 128 128" /f
@@ -88,8 +88,8 @@ reg add "HKCU\Control Panel\Colors" /v "Desktop" /t REG_SZ /d "0 128 128" /d
 goto :end
 
 :navy
-echo User chose Win95/98 Navy Blue
-rem # Windows 95/98 Navy Blue
+echo User chose Win95 Navy
+rem # Windows 95 Navy
 rem # HEX: #000080
 rem # RGB: (0 0 128)
 reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "0 0 128" /f
@@ -98,8 +98,8 @@ reg add "HKCU\Control Panel\Colors" /v "Desktop" /t REG_SZ /d "0 0 128" /f
 goto :end
 
 :win95
-echo User chose Win95/98 Blue
-rem # Windows 95/98 Blue
+echo User chose Win95 Blue
+rem # Windows 95 Blue
 rem # HEX: #0000FF
 rem # RGB: (0 0 255)
 reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "0 0 255" /f
@@ -108,8 +108,8 @@ reg add "HKCU\Control Panel\Colors" /v "Desktop" /t REG_SZ /d "0 0 255" /f
 goto :end
 
 :lblue
-echo User chose Win2000/XP Light Blue
-rem # Windows 2000/XP Light Blue
+echo User chose Win2000/XP Steel Blue
+rem # Windows 2000/XP Steel Blue
 rem # HEX: #3A6EA5
 rem # RGB: (58 110 165)
 reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "58 110 165" /f
@@ -118,8 +118,8 @@ reg add "HKCU\Control Panel\Colors" /v "Desktop" /t REG_SZ /d "58 110 165" /f
 goto :end
 
 :blue
-echo User chose Win11 Blue
-rem # Win11 Blue
+echo User chose Win11 Dodger Blue
+rem # Win11 Dodger Blue
 rem # HEX: #0078D7
 rem # RGB: (0 120 215)
 reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "0 120 215" /f
