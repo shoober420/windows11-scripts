@@ -130,7 +130,7 @@ echo 1. Dark Theme
 echo 2. Light Theme
 echo C. Cancel
 echo.
-choice /c 123C /m "Choose an option :"
+choice /c 12C /m "Choose an option :"
 
 if 3 EQU %ERRORLEVEL% (
    echo User chose to cancel.
@@ -179,7 +179,7 @@ echo 7. Win95/98 Silver
 echo 8. Seafoam/Dark Turquoise
 echo C. Cancel
 echo.
-choice /c 0123456789C /m "Choose an option :"
+choice /c 12345678C /m "Choose an option :"
 
 if 9 EQU %ERRORLEVEL% (
    echo User chose to cancel.
@@ -571,7 +571,7 @@ echo 1. Enable High Contrast Windows 95 Theme
 echo 2. Disable High Contrast Windows 95 Theme
 echo C. Cancel
 echo.
-choice /c 0123C /m "Choose an option :"
+choice /c 12C /m "Choose an option :"
 
 if 3 EQU %ERRORLEVEL% (
    echo User chose to cancel.
@@ -589,7 +589,7 @@ goto :eof
 echo User chose Disable High Contrast Windows 95 Theme
 
 reg add "HKCU\Control Panel\Accessibility\HighContrast" /v "Flags" /t REG_SZ /d "0" /f
-rem reg add "HKCU\Control Panel\Accessibility\HighContrast" /v "LastUpdatedThemeId" /t REG_DWORD /d "0" /f
+reg add "HKCU\Control Panel\Accessibility\HighContrast" /v "LastUpdatedThemeId" /t REG_DWORD /d "0" /f
 rem reg delete "HKCU\Control Panel\Accessibility\HighContrast" /v "High Contrast Scheme" /f
 rem reg delete "HKCU\Control Panel\Accessibility\HighContrast" /v "Previous High Contrast Scheme MUI Ptr" /f
 rem reg delete "HKCU\Control Panel\Accessibility\HighContrast" /v "Previous High Contrast Scheme MUI Value" /f
