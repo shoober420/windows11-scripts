@@ -130,7 +130,7 @@ echo 1. Dark Theme
 echo 2. Light Theme
 echo C. Cancel
 echo.
-choice /c 12C /m "Choose an option :"
+choice /c 123C /m "Choose an option :"
 
 if 3 EQU %ERRORLEVEL% (
    echo User chose to cancel.
@@ -177,13 +177,12 @@ echo 5. Win95/98 Teal
 echo 6. Win95/98 Gray
 echo 7. Win95/98 Silver
 echo 8. Seafoam/Dark Turquoise
-echo 9. Windows 95 Theme
 echo C. Cancel
 echo.
-choice /c 123456789C /m "Choose an option :"
+choice /c 0123456789C /m "Choose an option :"
 
 if 9 EQU %ERRORLEVEL% (
-   call :win95t
+   echo User chose to cancel.
 ) else if 8 EQU %ERRORLEVEL% (
    call :seafoam
 ) else if 7 EQU %ERRORLEVEL% (
@@ -494,42 +493,6 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "A
 
 goto :end
 
-:win95t
-echo User chose Windows 95 Theme
-
-reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentColor" /t REG_DWORD /d "0xff808080" /f
-reg add "HKCU\Software\Microsoft\Windows\DWM" /v "StartColor" /t REG_DWORD /d "0xff808080" /f
-reg add "HKCU\Software\Microsoft\Windows\DWM" /v "ColorizationColor" /t REG_DWORD /d "0xff808080" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentColor" /t REG_DWORD /d "0xff808080" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "StartColor" /t REG_DWORD /d "0xff808080" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "ColorizationColor" /t REG_DWORD /d "0xff808080" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentColor" /t REG_DWORD /d "0xff808080" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "StartColor" /t REG_DWORD /d "0xff808080" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "ColorizationColor" /t REG_DWORD /d "0xff808080" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentColor" /t REG_DWORD /d "0xff808080" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "StartColor" /t REG_DWORD /d "0xff808080" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "ColorizationColor" /t REG_DWORD /d "0xff808080" /f
-
-rem # Start Menu / Taskbar
-rem reg add "HKCU\Control Panel\Colors" /v "Window" /t REG_SZ /d "128 128 128" /f
-
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "StartColorMenu" /t REG_DWORD /d "0xff808080" /f
-reg add "HKCU\Software\Microsoft\Windows\DWM" /v "StartColorMenu" /t REG_DWORD /d "0xff808080" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "StartColorMenu" /t REG_DWORD /d "0xff808080" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "StartColorMenu" /t REG_DWORD /d "0xff808080" /f
-
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "TaskbarColorOverride" /t REG_DWORD /d "0xff808080" /f
-reg add "HKCU\Software\Microsoft\Windows\DWM" /v "TaskbarColorOverride" /t REG_DWORD /d "0xff808080" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "TaskbarColorOverride" /t REG_DWORD /d "0xff808080" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "TaskbarColorOverride" /t REG_DWORD /d "0xff808080" /f
-
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentPalette" /t REG_BINARY /d "808080ff000080ff808080ff808080ff808080ff808080ff808080ff808080ff" /f
-reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentPalette" /t REG_BINARY /d "808080ff000080ff808080ff808080ff808080ff808080ff808080ff808080ff" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentPalette" /t REG_BINARY /d "808080ff000080ff808080ff808080ff808080ff808080ff808080ff808080ff" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentPalette" /t REG_BINARY /d "808080ff000080ff808080ff808080ff808080ff808080ff808080ff808080ff" /f
-
-goto :end
-
 :end
 
 echo.
@@ -541,7 +504,7 @@ echo 3. Win95 Navy
 echo 4. Win95 Blue
 echo C. Cancel
 echo.
-choice /c 1234C /m "Choose an option :"
+choice /c 012345C /m "Choose an option :"
 
 if 5 EQU %ERRORLEVEL% (
    echo User chose to cancel.
@@ -608,7 +571,7 @@ echo 1. Enable High Contrast Windows 95 Theme
 echo 2. Disable High Contrast Windows 95 Theme
 echo C. Cancel
 echo.
-choice /c 12C /m "Choose an option :"
+choice /c 0123C /m "Choose an option :"
 
 if 3 EQU %ERRORLEVEL% (
    echo User chose to cancel.
