@@ -573,9 +573,9 @@ goto :end
 :end
 
 echo.
-echo Gray Start Menu / Taskbar for High Contrast Theme
+echo High Contrast Theme Silver Gray Start Menu / Taskbar
 echo.
-echo 1. Gray Start Menu / Taskbar for High Contrast Theme
+echo 1. Silver Gray Start Menu / Taskbar for High Contrast Theme
 echo 2. Default for Accent Theme
 echo C. Cancel
 echo.
@@ -594,7 +594,7 @@ if 3 EQU %ERRORLEVEL% (
 goto :eof
 
 :highc
-echo User chose Gray Start Menu / Taskbar for High Contrast Theme
+echo User chose Silver Gray Start Menu / Taskbar for High Contrast Theme
 
 reg add "HKCU\Control Panel\Colors" /v "Window" /t REG_SZ /d "192 192 192" /f
 
