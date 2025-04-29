@@ -594,7 +594,7 @@ rem reg delete "HKCU\Control Panel\Accessibility\HighContrast" /v "High Contrast
 rem reg delete "HKCU\Control Panel\Accessibility\HighContrast" /v "Previous High Contrast Scheme MUI Ptr" /f
 rem reg delete "HKCU\Control Panel\Accessibility\HighContrast" /v "Previous High Contrast Scheme MUI Value" /f
 rem reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes" /v "LastHighContrastTheme" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes" /v "CurrentTheme" /t REG_SZ /d "" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes" /v "CurrentTheme" /t REG_SZ /d "C:\WINDOWS\resources\Themes\aero.theme" /f
 reg add "HKCU\Control Panel\Appearance" /v "Current" /t REG_SZ /d "" /f
 reg add "HKCU\Control Panel\Appearance" /v "NewCurrent" /t REG_SZ /d "" /f
 
