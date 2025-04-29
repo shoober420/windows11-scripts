@@ -83,7 +83,7 @@ rem # Windows 95/98 Teal
 rem # HEX: #008080
 rem # RGB: (0 128 128)
 reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "0 128 128" /f
-reg add "HKCU\Control Panel\Colors" /v "Desktop" /t REG_SZ /d "0 128 128" /d
+reg add "HKCU\Control Panel\Colors" /v "Desktop" /t REG_SZ /d "0 128 128" /f
 
 goto :end
 
