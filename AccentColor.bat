@@ -1,12 +1,20 @@
 rem # Accent color
 
-rem # Using Light Theme will NOT allow you to change titlebar color
+rem # Using Light Theme will NOT allow you to change startmenu and titlebar color
 
 rem # Windows 95 used HTML 3.0 Web Colors
+
+rem # Windows 95 used Silver Gray for Start Menu / Taskbar (192 192 192)
+rem # Windows 95 used Navy Blue for Titlebars (0 0 128)
 
 rem # http://franck.kiechel.free.fr/dbr_eng/Shell.htm
 
 rem # rem # https://www.neowin.net/forum/topic/624901-windows-colors-explained/
+
+rem # ENABLE HIGH CONTRAST WINDOWS 95 THEME
+rem # 1. Settings < Personalization < Colors < Contrast themes < Night sky < Apply
+rem # 2. Re-run this script with High Contrast enabled
+rem # 3. Restart
 
 PAUSE
 
@@ -504,7 +512,7 @@ echo 3. Win95 Navy
 echo 4. Win95 Blue
 echo C. Cancel
 echo.
-choice /c 012345C /m "Choose an option :"
+choice /c 1234C /m "Choose an option :"
 
 if 5 EQU %ERRORLEVEL% (
    echo User chose to cancel.
@@ -565,10 +573,10 @@ goto :end
 :end
 
 echo.
-echo High Contrast Windows 95 Theme
+echo Gray Start Menu / Taskbar for High Contrast Theme
 echo.
-echo 1. Enable High Contrast Windows 95 Theme
-echo 2. Disable High Contrast Windows 95 Theme
+echo 1. Gray Start Menu / Taskbar for High Contrast Theme
+echo 2. Default for Accent Theme
 echo C. Cancel
 echo.
 choice /c 12C /m "Choose an option :"
@@ -576,49 +584,28 @@ choice /c 12C /m "Choose an option :"
 if 3 EQU %ERRORLEVEL% (
    echo User chose to cancel.
 ) else if 2 EQU %ERRORLEVEL% (
-   call :hcoff
+   call :accent
 ) else if 1 EQU %ERRORLEVEL% (
-   call :hcon
+   call :highc
 ) else if 0 EQU %ERRORLEVEL% (
    echo User bailed out.
 )
 
 goto :eof
 
-:hcoff
-echo User chose Disable High Contrast Windows 95 Theme
+:highc
+echo User chose Gray Start Menu / Taskbar for High Contrast Theme
 
-reg add "HKCU\Control Panel\Accessibility\HighContrast" /v "Flags" /t REG_SZ /d "0" /f
-reg add "HKCU\Control Panel\Accessibility\HighContrast" /v "LastUpdatedThemeId" /t REG_DWORD /d "0" /f
-rem reg delete "HKCU\Control Panel\Accessibility\HighContrast" /v "High Contrast Scheme" /f
-rem reg delete "HKCU\Control Panel\Accessibility\HighContrast" /v "Previous High Contrast Scheme MUI Ptr" /f
-rem reg delete "HKCU\Control Panel\Accessibility\HighContrast" /v "Previous High Contrast Scheme MUI Value" /f
-rem reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes" /v "LastHighContrastTheme" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes" /v "CurrentTheme" /t REG_SZ /d "C:\WINDOWS\resources\Themes\aero.theme" /f
-reg add "HKCU\Control Panel\Appearance" /v "Current" /t REG_SZ /d "" /f
-reg add "HKCU\Control Panel\Appearance" /v "NewCurrent" /t REG_SZ /d "" /f
+reg add "HKCU\Control Panel\Colors" /v "Window" /t REG_SZ /d "192 192 192" /f
+
+goto :end
+
+:accent
+echo User chose Default for Accent Theme
 
 reg add "HKCU\Control Panel\Colors" /v "Window" /t REG_SZ /d "255 255 255" /f
 
 goto :end
-
-:hcon
-echo User chose Enable High Contrast Windows 95 Theme
-
-reg add "HKCU\Control Panel\Accessibility\HighContrast" /v "Flags" /t REG_SZ /d "1" /f
-reg add "HKCU\Control Panel\Accessibility\HighContrast" /v "LastUpdatedThemeId" /t REG_DWORD /d "1" /f
-reg add "HKCU\Control Panel\Accessibility\HighContrast" /v "High Contrast Scheme" /t REG_SZ /d "High Contrast Black" /f
-reg add "HKCU\Control Panel\Accessibility\HighContrast" /v "Previous High Contrast Scheme MUI Ptr" /t REG_SZ /d "@themeui.dll,-852" /f
-reg add "HKCU\Control Panel\Accessibility\HighContrast" /v "Previous High Contrast Scheme MUI Value" /t REG_SZ /d "High Contrast Black" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes" /v "LastHighContrastTheme" /t REG_SZ /d "%LocalAppData%\Microsoft\Windows\Themes\Custom.theme" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes" /v "CurrentTheme" /t REG_SZ /d "%LocalAppData%\Microsoft\Windows\Themes\Custom.theme" /f
-reg add "HKCU\Control Panel\Appearance" /v "Current" /t REG_SZ /d "@themeui.dll,-852" /f
-reg add "HKCU\Control Panel\Appearance" /v "NewCurrent" /t REG_SZ /d "@themeui.dll,-852" /f
-
-rem # Enable Silver Start Menu / Taskbar
-rem # Changes Window Background to Silver as well
-rem # There is no way to change just the start menu / taskbar color
-reg add "HKCU\Control Panel\Colors" /v "Window" /t REG_SZ /d "192 192 192" /f
 
 :end
 
