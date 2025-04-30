@@ -66,24 +66,24 @@ if 9 EQU %ERRORLEVEL% (
 ) else if 7 EQU %ERRORLEVEL% (
    call :microb
 ) else if 6 EQU %ERRORLEVEL% (
-   call :corn
+   call :w10blue
 ) else if 5 EQU %ERRORLEVEL% (
-   call :lblue
+   call :w2000blue
 ) else if 4 EQU %ERRORLEVEL% (
-   call :win95
+   call :win95blue
 ) else if 3 EQU %ERRORLEVEL% (
    call :bsod
 ) else if 2 EQU %ERRORLEVEL% (
-   call :navy
+   call :win95navy
 ) else if 1 EQU %ERRORLEVEL% (
-   call :teal
+   call :win95teal
 ) else if 0 EQU %ERRORLEVEL% (
    echo User bailed out.
 )
 
 goto :eof
 
-:teal
+:win95teal
 echo User chose Win95/98 Teal
 rem # Windows 95/98 Teal
 rem # HEX: #008080
@@ -93,7 +93,7 @@ reg add "HKCU\Control Panel\Colors" /v "Desktop" /t REG_SZ /d "0 128 128" /f
 
 goto :end
 
-:navy
+:win95navy
 echo User chose Win95 Navy
 rem # Windows 95 Navy
 rem # HEX: #000080
@@ -111,7 +111,7 @@ rem # RGB: (0 0 168)
 reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "0 0 168" /f
 reg add "HKCU\Control Panel\Colors" /v "Desktop" /t REG_SZ /d "0 0 168" /f
 
-:win95
+:win95blue
 echo User chose Win95 Blue
 rem # Windows 95 Blue
 rem # HEX: #0000FF
@@ -121,7 +121,7 @@ reg add "HKCU\Control Panel\Colors" /v "Desktop" /t REG_SZ /d "0 0 255" /f
 
 goto :end
 
-:lblue
+:w2000blue
 echo User chose Win2000/XP Blue
 rem # Windows 2000/XP Blue
 rem # HEX: #3A6EA5
@@ -131,7 +131,7 @@ reg add "HKCU\Control Panel\Colors" /v "Desktop" /t REG_SZ /d "58 110 165" /f
 
 goto :end
 
-:corn
+:w10blue
 echo User chose Win10 Blue (Windows Blue)
 rem # Windows 10 (Windows Blue)
 rem # HEX: #357EC7
