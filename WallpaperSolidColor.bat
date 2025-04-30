@@ -49,24 +49,30 @@ echo Background Color
 echo.
 echo 1. Win95/98 Teal
 echo 2. Win95 Navy
-echo 3. Win95 Blue
-echo 4. Win2000/XP Steel Blue
-echo 5. Win11 Dodger Blue
-echo 6. Win11 Black (default)
+echo 3. Win95 Dark Blue (BSoD) (VGA Blue)
+echo 4. Win95 Blue
+echo 5. Win2000/XP Blue
+echo 6. Win10 Blue (Windows Blue)
+echo 7. Microsoft Blue
+echo 8. Black
 echo C. Cancel
 echo.
-choice /c 123456C /m "Choose an option :"
+choice /c 12345678C /m "Choose an option :"
 
-if 7 EQU %ERRORLEVEL% (
+if 9 EQU %ERRORLEVEL% (
    echo User chose to cancel.
-) else if 6 EQU %ERRORLEVEL% (
+) else if 8 EQU %ERRORLEVEL% (
    call :black
+) else if 7 EQU %ERRORLEVEL% (
+   call :microb
+) else if 6 EQU %ERRORLEVEL% (
+   call :corn
 ) else if 5 EQU %ERRORLEVEL% (
-   call :blue
-) else if 4 EQU %ERRORLEVEL% (
    call :lblue
-) else if 3 EQU %ERRORLEVEL% (
+) else if 4 EQU %ERRORLEVEL% (
    call :win95
+) else if 3 EQU %ERRORLEVEL% (
+   call :bsod
 ) else if 2 EQU %ERRORLEVEL% (
    call :navy
 ) else if 1 EQU %ERRORLEVEL% (
@@ -97,6 +103,14 @@ reg add "HKCU\Control Panel\Colors" /v "Desktop" /t REG_SZ /d "0 0 128" /f
 
 goto :end
 
+:bsod
+echo User chose Win95 Dark Blue (BSoD) (VGA Blue)
+rem # Windows 95 Dark Blue (Blue Screen of Death) (VGA Blue)
+rem # HEX: #0000A8
+rem # RGB: (0 0 168)
+reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "0 0 168" /f
+reg add "HKCU\Control Panel\Colors" /v "Desktop" /t REG_SZ /d "0 0 168" /f
+
 :win95
 echo User chose Win95 Blue
 rem # Windows 95 Blue
@@ -108,8 +122,8 @@ reg add "HKCU\Control Panel\Colors" /v "Desktop" /t REG_SZ /d "0 0 255" /f
 goto :end
 
 :lblue
-echo User chose Win2000/XP Steel Blue
-rem # Windows 2000/XP Steel Blue
+echo User chose Win2000/XP Blue
+rem # Windows 2000/XP Blue
 rem # HEX: #3A6EA5
 rem # RGB: (58 110 165)
 reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "58 110 165" /f
@@ -117,19 +131,29 @@ reg add "HKCU\Control Panel\Colors" /v "Desktop" /t REG_SZ /d "58 110 165" /f
 
 goto :end
 
-:blue
-echo User chose Win11 Dodger Blue
-rem # Win11 Dodger Blue
-rem # HEX: #0078D7
-rem # RGB: (0 120 215)
-reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "0 120 215" /f
-reg add "HKCU\Control Panel\Colors" /v "Desktop" /t REG_SZ /d "0 120 215" /f
+:corn
+echo User chose Win10 Blue (Windows Blue)
+rem # Windows 10 (Windows Blue)
+rem # HEX: #357EC7
+rem # RGB: (53 126 199)
+reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "53 126 199" /f
+reg add "HKCU\Control Panel\Colors" /v "Desktop" /t REG_SZ /d "53 126 199" /f
+
+goto :end
+
+:microb
+echo User chose Microsoft Blue
+rem # Microsoft Blue
+rem # HEX: #00A2ED
+rem # RGB: (0 162 237)
+reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "0 162 237" /f
+reg add "HKCU\Control Panel\Colors" /v "Desktop" /t REG_SZ /d "0 162 237" /f
 
 goto :end
 
 :black
-echo User chose Win11 Black (default)
-rem # Black (default)
+echo User chose Black
+rem # Black
 rem # HEX: #000000
 rem # RGB: (0 0 0)
 reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "0 0 0" /f
