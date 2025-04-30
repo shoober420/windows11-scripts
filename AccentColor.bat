@@ -11,8 +11,6 @@ rem # http://franck.kiechel.free.fr/dbr_eng/Shell.htm
 
 rem # rem # https://www.neowin.net/forum/topic/624901-windows-colors-explained/
 
-rem # https://gist.github.com/zaxbux/64b5a88e2e390fb8f8d24eb1736f71e0
-
 rem # ENABLE HIGH CONTRAST WINDOWS 95 THEME
 rem # 1. Settings < Personalization < Colors < Contrast themes < Night sky < Apply
 rem # 2. Re-run this script with High Contrast enabled
@@ -37,12 +35,12 @@ rem #    00,80,80,aa                       ; Unused
 
 rem # reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentPalette" /t REG_BINARY /d "008080ff008080ff008080ff008080ff008080ff008080ff008080ff008080ff" /f
 
-rem # Win10/11 Dodger Blue (RGB: 0 120 215 / BGR: 215 120 0) = 0xff0078d7 / 0xffd77800
-rem # Win2000/WinXP Steel Blue (RGB: 58 110 165 / BGR: 165 110 58) = 0xff3a6ea5 / 0xffa56e3a
+rem # Win10 Blue (RGB: 53 126 199 / BGR: 199 126 53) = 0xff357ec7 / 0xffc77e35
+rem # Win2000/WinXP Blue (RGB: 58 110 165 / BGR: 165 110 58) = 0xff3a6ea5 / 0xffa56e3a
 rem # Win95 Blue (RGB: 0 0 255 / BGR: 255 0 0) = 0xff0000ff / 0xffff0000
 rem # Win95 Navy (RGB: 0 0 128 / BGR: 128 0 0) = 0xff000080 / 0xff800000
 rem # Win95/98 Teal (RGB: 0 128 128 / BGR: 128 128 0) = 0xff008080 / 0xff808000
-rem # Seafoam/Dark Turquoise (RGB: 0 183 195 / BGR: 195 183 00) = 0xff00b6c3 / 0xffc3b600
+rem # Seafoam (RGB: 0 183 195 / BGR: 195 183 00) = 0xff00b6c3 / 0xffc3b600
 rem # Win95/98 Gray (RGB: 128 128 128 / BGR: 128 128 128) = 0xff808080 / 0xff808080
 rem # Win95/98 Silver (RGB: 192 192 192 / BGR: 192 192 192) = 0xffc0c0c0 / 0xffc0c0c0
 rem # Win11 Black Dark Theme (RGB: 18 18 18 / BGR: 18 18 18) = 0xff121212 / 0xff121212
@@ -145,16 +143,16 @@ choice /c 12C /m "Choose an option :"
 if 3 EQU %ERRORLEVEL% (
    echo User chose to cancel.
 ) else if 2 EQU %ERRORLEVEL% (
-   call :lightt
+   call :light
 ) else if 1 EQU %ERRORLEVEL% (
-   call :darkt
+   call :dark
 ) else if 0 EQU %ERRORLEVEL% (
    echo User bailed out.
 )
 
 goto :eof
 
-:lightt
+:light
 echo User chose Light Theme
 
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AppsUseLightTheme" /t REG_DWORD /d "1" /f
@@ -165,7 +163,7 @@ rem reg add "HKCU\Control Panel\Colors" /v "Window" /t REG_SZ /d "242 242 242" /
 
 goto :end
 
-:darkt
+:dark
 echo User chose Dark Theme
 
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AppsUseLightTheme" /t REG_DWORD /d "0" /f
@@ -179,14 +177,14 @@ goto :end
 echo.
 echo Accent Color
 echo.
-echo 1. Win10/11 Dodger Blue
-echo 2. Win2000/WinXP Steel Blue
+echo 1. Win10 Blue
+echo 2. Win2000/WinXP Blue
 echo 3. Win95 Blue
 echo 4. Win95 Navy
 echo 5. Win95/98 Teal
 echo 6. Win95/98 Gray
 echo 7. Win95/98 Silver
-echo 8. Seafoam/Dark Turquoise
+echo 8. Seafoam
 echo C. Cancel
 echo.
 choice /c 12345678C /m "Choose an option :"
@@ -196,27 +194,27 @@ if 9 EQU %ERRORLEVEL% (
 ) else if 8 EQU %ERRORLEVEL% (
    call :seafoam
 ) else if 7 EQU %ERRORLEVEL% (
-   call :lgray
+   call :silver
 ) else if 6 EQU %ERRORLEVEL% (
    call :gray
 ) else if 5 EQU %ERRORLEVEL% (
-   call :win98
+   call :teal
 ) else if 4 EQU %ERRORLEVEL% (
-   call :win95
+   call :navy
 ) else if 3 EQU %ERRORLEVEL% (
    call :95blue
 ) else if 2 EQU %ERRORLEVEL% (
-   call :win2000
+   call :win2000b
 ) else if 1 EQU %ERRORLEVEL% (
-   call :win11
+   call :win10blue
 ) else if 0 EQU %ERRORLEVEL% (
    echo User bailed out.
 )
 
 goto :eof
 
-:win11
-echo User chose Win10/11 Dodger Blue
+:win10blue
+echo User chose Win10 Blue
 
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentColor" /t REG_DWORD /d "0xffd77800" /f
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "StartColor" /t REG_DWORD /d "0xffd77800" /f
@@ -251,8 +249,8 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "A
 
 goto :end
 
-:win2000
-echo User chose Win2000/WinXP Steel Blue
+:win2000b
+echo User chose Win2000/WinXP Blue
 
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentColor" /t REG_DWORD /d "0xffa56e3a" /f
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "StartColor" /t REG_DWORD /d "0xffa56e3a" /f
@@ -323,7 +321,7 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "A
 
 goto :end
 
-:win95
+:navy
 echo User chose Win95 Navy
 
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentColor" /t REG_DWORD /d "0xff800000" /f
@@ -359,7 +357,7 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "A
 
 goto :end
 
-:win98
+:teal
 echo User chose Win95/98 Teal
 
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentColor" /t REG_DWORD /d "0xff808000" /f
@@ -396,7 +394,7 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "A
 goto :end
 
 :seafoam
-echo User chose Seafoam/Dark Turquoise
+echo User chose Seafoam
 
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentColor" /t REG_DWORD /d "0xffc3b700" /f
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "StartColor" /t REG_DWORD /d "0xffc3b700" /f
@@ -467,7 +465,7 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "A
 
 goto :end
 
-:lgray
+:silver
 echo User chose Win95/98 Silver
 
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentColor" /t REG_DWORD /d "0xffc0c0c0" /f
@@ -508,8 +506,8 @@ goto :end
 echo.
 echo Title Bar Color
 echo.
-echo 1. Win2000/WinXP Steel Blue
-echo 2. Win10/11 Dodger Blue
+echo 1. Win2000/WinXP Blue
+echo 2. Win10 Blue
 echo 3. Win95 Navy
 echo 4. Win95 Blue
 echo C. Cancel
@@ -523,17 +521,17 @@ if 5 EQU %ERRORLEVEL% (
 ) else if 3 EQU %ERRORLEVEL% (
    call :navy95
 ) else if 2 EQU %ERRORLEVEL% (
-   call :dodger
+   call :win10b
 ) else if 1 EQU %ERRORLEVEL% (
-   call :lightb
+   call :win2kb
 ) else if 0 EQU %ERRORLEVEL% (
    echo User bailed out.
 )
 
 goto :eof
 
-:lightb
-echo User chose Win2000/WinXP Steel Blue
+:win2kb
+echo User chose Win2000/WinXP Blue
 
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentColorMenu" /t REG_DWORD /d "0xffa56e3a" /f
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentColorMenu" /t REG_DWORD /d "0xffa56e3a" /f
@@ -542,8 +540,8 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "A
 
 goto :end
 
-:dodger
-echo User chose Win10/11 Dodger Blue
+:win10b
+echo User chose Win10 Blue
 
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentColorMenu" /t REG_DWORD /d "0xffd77800" /f
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentColorMenu" /t REG_DWORD /d "0xffd77800" /f
@@ -575,9 +573,9 @@ goto :end
 :end
 
 echo.
-echo High Contrast Theme Silver Gray Start Menu / Taskbar
+echo Windows 95 Gray Start Menu / Taskbar for High Contrast Theme
 echo.
-echo 1. Silver Gray Start Menu / Taskbar for High Contrast Theme
+echo 1. Enable Win95 Gray Start Menu / Taskbar for High Contrast Theme
 echo 2. Default for Accent Theme
 echo C. Cancel
 echo.
@@ -596,7 +594,7 @@ if 3 EQU %ERRORLEVEL% (
 goto :eof
 
 :highc
-echo User chose Silver Gray Start Menu / Taskbar for High Contrast Theme
+echo User chose Enable Win95 Gray Start Menu / Taskbar for High Contrast Theme
 
 reg add "HKCU\Control Panel\Colors" /v "Window" /t REG_SZ /d "192 192 192" /f
 
