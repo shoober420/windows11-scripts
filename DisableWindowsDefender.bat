@@ -122,7 +122,7 @@ rem # Disable Anti-malware and Network Realtime Inspection Services
 takeown /s %computername% /u %username% /f "C:\ProgramData\Microsoft\Windows Defender\Platform"
 icacls "C:\ProgramData\Microsoft\Windows Defender\Platform" /grant:r %username%:F
 taskkill /im MsMpEng.exe /f
-taskkill /im NisSrv.exe
+taskkill /im NisSrv.exe /f
 rem # del "C:\ProgramData\Microsoft\Windows Defender\Platform" /s /f /q
 ren "C:\ProgramData\Microsoft\Windows Defender\Platform" "Platform.bak"
 
