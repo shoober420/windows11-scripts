@@ -11,7 +11,7 @@ rem # http://franck.kiechel.free.fr/dbr_eng/Shell.htm
 
 rem # rem # https://www.neowin.net/forum/topic/624901-windows-colors-explained/
 
-https://gist.github.com/zaxbux/64b5a88e2e390fb8f8d24eb1736f71e0
+rem # https://gist.github.com/zaxbux/64b5a88e2e390fb8f8d24eb1736f71e0
 
 rem # ENABLE HIGH CONTRAST WINDOWS 95 THEME
 rem # 1. Settings < Personalization < Colors < Contrast themes < Night sky < Apply
