@@ -6,6 +6,8 @@ rem # REBOOT REQUIRED
 
 rem # It takes a couple minutes after reboot for the activation sync to occur and Windows being activated again
 
+rem # Activate Windows watermark and taskbar always visible in fullscreen when genuine windows sync is stopped
+
 PAUSE
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\LicenseManager" /v "Start" /t REG_DWORD /d "2" /f
