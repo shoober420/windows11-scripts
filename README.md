@@ -24,6 +24,9 @@ NOTE: Doing a "Refresh your PC: Local reinstall" will NOT install deleted Window
 
 **Each installation choice has its own batch script for easy setup**
 
+**Installation Video Tutorial**
+https://youtu.be/YNqtGV2IZqc?si=1cAnEc_uCMp0Yho6
+
 # Minimal_Install.bat
  - EnablePowerShell.bat
  - VCRedist.bat
