@@ -22,7 +22,7 @@ rem # 3. Restart
 
 rem # There is a bug when enabling High Contrast theme using "Settings < Personalization < Colors < Contrast themes < Night sky < Apply" method that will revert theme to Accent theme when pressing CTRL+ALT+DEL and going back to desktop
 
-rem # There is a bug with using Win95 High Contrast Theme when using CTRL+ALT+DEL and going back to desktop, theme colors are changed. Reboot fixes colors and returns them to Win95 theme
+rem # There is a bug with using Win95 High Contrast Theme when pressing CTRL+ALT+DEL and going back to desktop, theme colors are changed
 
 PAUSE
 
