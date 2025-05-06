@@ -179,7 +179,7 @@ goto :end
 :end
 
 echo.
-echo Accent Color
+echo Title Bar Color
 echo.
 echo 1. Win10 Blue
 echo 2. Win2000/WinXP Blue
@@ -247,10 +247,15 @@ reg add "HKCU\Software\Microsoft\Windows\DWM" /v "TaskbarColorOverride" /t REG_D
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "TaskbarColorOverride" /t REG_DWORD /d "0xffc77e35" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "TaskbarColorOverride" /t REG_DWORD /d "0xffc77e35" /f
 
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentPalette" /t REG_BINARY /d "357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff" /f
-reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentPalette" /t REG_BINARY /d "357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentPalette" /t REG_BINARY /d "357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentPalette" /t REG_BINARY /d "357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentColorMenu" /t REG_DWORD /d "0xffc77e35" /f
+reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentColorMenu" /t REG_DWORD /d "0xffc77e35" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentColorMenu" /t REG_DWORD /d "0xffc77e35" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentColorMenu" /t REG_DWORD /d "0xffc77e35" /f
+
+rem reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentPalette" /t REG_BINARY /d "357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff" /f
+rem reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentPalette" /t REG_BINARY /d "357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff" /f
+rem reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentPalette" /t REG_BINARY /d "357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff" /f
+rem reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentPalette" /t REG_BINARY /d "357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff" /f
 
 goto :end
 
@@ -283,10 +288,15 @@ reg add "HKCU\Software\Microsoft\Windows\DWM" /v "TaskbarColorOverride" /t REG_D
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "TaskbarColorOverride" /t REG_DWORD /d "0xffa56e3a" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "TaskbarColorOverride" /t REG_DWORD /d "0xffa56e3a" /f
 
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentPalette" /t REG_BINARY /d "3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff" /f
-reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentPalette" /t REG_BINARY /d "3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentPalette" /t REG_BINARY /d "3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentPalette" /t REG_BINARY /d "3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentColorMenu" /t REG_DWORD /d "0xffa56e3a" /f
+reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentColorMenu" /t REG_DWORD /d "0xffa56e3a" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentColorMenu" /t REG_DWORD /d "0xffa56e3a" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentColorMenu" /t REG_DWORD /d "0xffa56e3a" /f
+
+rem reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentPalette" /t REG_BINARY /d "3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff" /f
+rem reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentPalette" /t REG_BINARY /d "3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff" /f
+rem reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentPalette" /t REG_BINARY /d "3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff" /f
+rem reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentPalette" /t REG_BINARY /d "3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff" /f
 
 goto :end
 
@@ -319,10 +329,15 @@ reg add "HKCU\Software\Microsoft\Windows\DWM" /v "TaskbarColorOverride" /t REG_D
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "TaskbarColorOverride" /t REG_DWORD /d "0xffff0000" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "TaskbarColorOverride" /t REG_DWORD /d "0xffff0000" /f
 
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentPalette" /t REG_BINARY /d "0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff" /f
-reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentPalette" /t REG_BINARY /d "0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentPalette" /t REG_BINARY /d "0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentPalette" /t REG_BINARY /d "0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentColorMenu" /t REG_DWORD /d "0xffff0000" /f
+reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentColorMenu" /t REG_DWORD /d "0xffff0000" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentColorMenu" /t REG_DWORD /d "0xffff0000" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentColorMenu" /t REG_DWORD /d "0xffff0000" /f
+
+rem reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentPalette" /t REG_BINARY /d "0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff" /f
+rem reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentPalette" /t REG_BINARY /d "0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff" /f
+rem reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentPalette" /t REG_BINARY /d "0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff" /f
+rem reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentPalette" /t REG_BINARY /d "0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff" /f
 
 goto :end
 
@@ -355,10 +370,15 @@ reg add "HKCU\Software\Microsoft\Windows\DWM" /v "TaskbarColorOverride" /t REG_D
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "TaskbarColorOverride" /t REG_DWORD /d "0xff800000" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "TaskbarColorOverride" /t REG_DWORD /d "0xff800000" /f
 
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentPalette" /t REG_BINARY /d "000080ff000080ff000080ff000080ff000080ff000080ff000080ff000080ff" /f
-reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentPalette" /t REG_BINARY /d "000080ff000080ff000080ff000080ff000080ff000080ff000080ff000080ff" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentPalette" /t REG_BINARY /d "000080ff000080ff000080ff000080ff000080ff000080ff000080ff000080ff" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentPalette" /t REG_BINARY /d "000080ff000080ff000080ff000080ff000080ff000080ff000080ff000080ff" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentColorMenu" /t REG_DWORD /d "0xff800000" /f
+reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentColorMenu" /t REG_DWORD /d "0xff800000" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentColorMenu" /t REG_DWORD /d "0xff800000" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentColorMenu" /t REG_DWORD /d "0xff800000" /f
+
+rem reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentPalette" /t REG_BINARY /d "000080ff000080ff000080ff000080ff000080ff000080ff000080ff000080ff" /f
+rem reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentPalette" /t REG_BINARY /d "000080ff000080ff000080ff000080ff000080ff000080ff000080ff000080ff" /f
+rem reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentPalette" /t REG_BINARY /d "000080ff000080ff000080ff000080ff000080ff000080ff000080ff000080ff" /f
+rem reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentPalette" /t REG_BINARY /d "000080ff000080ff000080ff000080ff000080ff000080ff000080ff000080ff" /f
 
 goto :end
 
@@ -391,10 +411,15 @@ reg add "HKCU\Software\Microsoft\Windows\DWM" /v "TaskbarColorOverride" /t REG_D
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "TaskbarColorOverride" /t REG_DWORD /d "0xff808000" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "TaskbarColorOverride" /t REG_DWORD /d "0xff808000" /f
 
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentPalette" /t REG_BINARY /d "008080ff008080ff008080ff008080ff008080ff008080ff008080ff008080ff" /f
-reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentPalette" /t REG_BINARY /d "008080ff008080ff008080ff008080ff008080ff008080ff008080ff008080ff" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentPalette" /t REG_BINARY /d "008080ff008080ff008080ff008080ff008080ff008080ff008080ff008080ff" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentPalette" /t REG_BINARY /d "008080ff008080ff008080ff008080ff008080ff008080ff008080ff008080ff" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentColorMenu" /t REG_DWORD /d "0xff808000" /f
+reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentColorMenu" /t REG_DWORD /d "0xff808000" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentColorMenu" /t REG_DWORD /d "0xff808000" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentColorMenu" /t REG_DWORD /d "0xff808000" /f
+
+rem reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentPalette" /t REG_BINARY /d "008080ff008080ff008080ff008080ff008080ff008080ff008080ff008080ff" /f
+rem reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentPalette" /t REG_BINARY /d "008080ff008080ff008080ff008080ff008080ff008080ff008080ff008080ff" /f
+rem reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentPalette" /t REG_BINARY /d "008080ff008080ff008080ff008080ff008080ff008080ff008080ff008080ff" /f
+rem reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentPalette" /t REG_BINARY /d "008080ff008080ff008080ff008080ff008080ff008080ff008080ff008080ff" /f
 
 goto :end
 
@@ -427,10 +452,15 @@ reg add "HKCU\Software\Microsoft\Windows\DWM" /v "TaskbarColorOverride" /t REG_D
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "TaskbarColorOverride" /t REG_DWORD /d "0xffc3b700" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "TaskbarColorOverride" /t REG_DWORD /d "0xffc3b700" /f
 
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentPalette" /t REG_BINARY /d "00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff" /f
-reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentPalette" /t REG_BINARY /d "00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentPalette" /t REG_BINARY /d "00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentPalette" /t REG_BINARY /d "00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentColorMenu" /t REG_DWORD /d "0xffc3b700" /f
+reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentColorMenu" /t REG_DWORD /d "0xffc3b700" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentColorMenu" /t REG_DWORD /d "0xffc3b700" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentColorMenu" /t REG_DWORD /d "0xffc3b700" /f
+
+rem reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentPalette" /t REG_BINARY /d "00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff" /f
+rem reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentPalette" /t REG_BINARY /d "00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff" /f
+rem reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentPalette" /t REG_BINARY /d "00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff" /f
+rem reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentPalette" /t REG_BINARY /d "00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff" /f
 
 goto :end
 
@@ -463,10 +493,15 @@ reg add "HKCU\Software\Microsoft\Windows\DWM" /v "TaskbarColorOverride" /t REG_D
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "TaskbarColorOverride" /t REG_DWORD /d "0xff808080" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "TaskbarColorOverride" /t REG_DWORD /d "0xff808080" /f
 
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentPalette" /t REG_BINARY /d "808080ff808080ff808080ff808080ff808080ff808080ff808080ff808080ff" /f
-reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentPalette" /t REG_BINARY /d "808080ff808080ff808080ff808080ff808080ff808080ff808080ff808080ff" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentPalette" /t REG_BINARY /d "808080ff808080ff808080ff808080ff808080ff808080ff808080ff808080ff" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentPalette" /t REG_BINARY /d "808080ff808080ff808080ff808080ff808080ff808080ff808080ff808080ff" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentColorMenu" /t REG_DWORD /d "0xff808080" /f
+reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentColorMenu" /t REG_DWORD /d "0xff808080" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentColorMenu" /t REG_DWORD /d "0xff808080" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentColorMenu" /t REG_DWORD /d "0xff808080" /f
+
+rem reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentPalette" /t REG_BINARY /d "808080ff808080ff808080ff808080ff808080ff808080ff808080ff808080ff" /f
+rem reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentPalette" /t REG_BINARY /d "808080ff808080ff808080ff808080ff808080ff808080ff808080ff808080ff" /f
+rem reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentPalette" /t REG_BINARY /d "808080ff808080ff808080ff808080ff808080ff808080ff808080ff808080ff" /f
+rem reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentPalette" /t REG_BINARY /d "808080ff808080ff808080ff808080ff808080ff808080ff808080ff808080ff" /f
 
 goto :end
 
@@ -499,10 +534,15 @@ reg add "HKCU\Software\Microsoft\Windows\DWM" /v "TaskbarColorOverride" /t REG_D
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "TaskbarColorOverride" /t REG_DWORD /d "0xffc0c0c0" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "TaskbarColorOverride" /t REG_DWORD /d "0xffc0c0c0" /f
 
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentPalette" /t REG_BINARY /d "c0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ff" /f
-reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentPalette" /t REG_BINARY /d "c0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ff" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentPalette" /t REG_BINARY /d "c0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ff" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentPalette" /t REG_BINARY /d "c0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ff" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentColorMenu" /t REG_DWORD /d "0xffc0c0c0" /f
+reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentColorMenu" /t REG_DWORD /d "0xffc0c0c0" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentColorMenu" /t REG_DWORD /d "0xffc0c0c0" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentColorMenu" /t REG_DWORD /d "0xffc0c0c0" /f
+
+rem reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentPalette" /t REG_BINARY /d "c0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ff" /f
+rem reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentPalette" /t REG_BINARY /d "c0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ff" /f
+rem reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentPalette" /t REG_BINARY /d "c0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ff" /f
+rem reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentPalette" /t REG_BINARY /d "c0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ff" /f
 
 goto :end
 
@@ -535,92 +575,147 @@ reg add "HKCU\Software\Microsoft\Windows\DWM" /v "TaskbarColorOverride" /t REG_D
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "TaskbarColorOverride" /t REG_DWORD /d "0xff000000" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "TaskbarColorOverride" /t REG_DWORD /d "0xff000000" /f
 
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentPalette" /t REG_BINARY /d "808080ff808080ff808080ff808080ff000000ff000000ff000000ff000000ff" /f
-reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentPalette" /t REG_BINARY /d "808080ff000000ff808080ff808080ff000000ff000000ff000000ff000000ff" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentPalette" /t REG_BINARY /d "808080ff000000ff808080ff808080ff000000ff000000ff000000ff000000ff" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentPalette" /t REG_BINARY /d "808080ff000000ff808080ff808080ff000000ff000000ff000000ff000000ff" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentColorMenu" /t REG_DWORD /d "0xff000000" /f
+reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentColorMenu" /t REG_DWORD /d "0xff000000" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentColorMenu" /t REG_DWORD /d "0xff000000" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentColorMenu" /t REG_DWORD /d "0xff000000" /f
+
+rem reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentPalette" /t REG_BINARY /d "808080ff808080ff808080ff808080ff000000ff000000ff000000ff000000ff" /f
+rem reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentPalette" /t REG_BINARY /d "808080ff000000ff808080ff808080ff000000ff000000ff000000ff000000ff" /f
+rem reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentPalette" /t REG_BINARY /d "808080ff000000ff808080ff808080ff000000ff000000ff000000ff000000ff" /f
+rem reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentPalette" /t REG_BINARY /d "808080ff000000ff808080ff808080ff000000ff000000ff000000ff000000ff" /f
 
 goto :end
 
 :end
 
 echo.
-echo Title Bar Color
+echo Start Menu / Taskbar Color
 echo.
-echo 1. Win2000/WinXP Blue
-echo 2. Win10 Blue
-echo 3. Win95 Navy
-echo 4. Win95 Blue
-echo 5. Black
+echo 1. Win10 Blue
+echo 2. Win2000/WinXP Blue
+echo 3. Win95 Blue
+echo 4. Win95 Navy
+echo 5. Win95/98 Teal
+echo 6. Win95/98 Gray
+echo 7. Win95/98 Silver
+echo 8. Seafoam
+echo 9. Black
 echo C. Cancel
 echo.
-choice /c 12345C /m "Choose an option :"
+choice /c 123456789C /m "Choose an option :"
 
-if 6 EQU %ERRORLEVEL% (
-   echo User chose to cancel.
-) else if 5 EQU %ERRORLEVEL% (
+if 9 EQU %ERRORLEVEL% (
    call :pblack
+) else if 8 EQU %ERRORLEVEL% (
+   call :seaf
+) else if 7 EQU %ERRORLEVEL% (
+   call :sil
+) else if 6 EQU %ERRORLEVEL% (
+   call :gra
+) else if 5 EQU %ERRORLEVEL% (
+   call :tea
 ) else if 4 EQU %ERRORLEVEL% (
-   call :blue95
+   call :nav
 ) else if 3 EQU %ERRORLEVEL% (
-   call :navy95
+   call :95b
 ) else if 2 EQU %ERRORLEVEL% (
-   call :win10b
+   call :win2000blue
 ) else if 1 EQU %ERRORLEVEL% (
-   call :win2kb
+   call :winxblue
 ) else if 0 EQU %ERRORLEVEL% (
    echo User bailed out.
 )
 
 goto :eof
 
-:win2kb
+:win2000blue
 echo User chose Win2000/WinXP Blue
 
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentColorMenu" /t REG_DWORD /d "0xffa56e3a" /f
-reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentColorMenu" /t REG_DWORD /d "0xffa56e3a" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentColorMenu" /t REG_DWORD /d "0xffa56e3a" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentColorMenu" /t REG_DWORD /d "0xffa56e3a" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentPalette" /t REG_BINARY /d "3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff" /f
+reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentPalette" /t REG_BINARY /d "3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentPalette" /t REG_BINARY /d "3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentPalette" /t REG_BINARY /d "3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff3a6ea5ff" /f
 
 goto :end
 
-:win10b
+:seaf
+echo User chose Seafoam
+
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentPalette" /t REG_BINARY /d "00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff" /f
+reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentPalette" /t REG_BINARY /d "00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentPalette" /t REG_BINARY /d "00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentPalette" /t REG_BINARY /d "00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff00b6c3ff" /f
+
+goto :end
+
+:sil
+echo User chose Win95/98 Silver
+
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentPalette" /t REG_BINARY /d "c0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ff" /f
+reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentPalette" /t REG_BINARY /d "c0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ff" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentPalette" /t REG_BINARY /d "c0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ff" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentPalette" /t REG_BINARY /d "c0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ffc0c0c0ff" /f
+
+goto :end
+
+:gra
+echo User chose Win95/98 Gray
+
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentPalette" /t REG_BINARY /d "808080ff808080ff808080ff808080ff808080ff808080ff808080ff808080ff" /f
+reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentPalette" /t REG_BINARY /d "808080ff808080ff808080ff808080ff808080ff808080ff808080ff808080ff" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentPalette" /t REG_BINARY /d "808080ff808080ff808080ff808080ff808080ff808080ff808080ff808080ff" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentPalette" /t REG_BINARY /d "808080ff808080ff808080ff808080ff808080ff808080ff808080ff808080ff" /f
+
+goto :end
+
+:tea
+echo User chose Win95/98 Teal
+
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentPalette" /t REG_BINARY /d "008080ff008080ff008080ff008080ff008080ff008080ff008080ff008080ff" /f
+reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentPalette" /t REG_BINARY /d "008080ff008080ff008080ff008080ff008080ff008080ff008080ff008080ff" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentPalette" /t REG_BINARY /d "008080ff008080ff008080ff008080ff008080ff008080ff008080ff008080ff" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentPalette" /t REG_BINARY /d "008080ff008080ff008080ff008080ff008080ff008080ff008080ff008080ff" /f
+
+goto :end
+
+:winxblue
 echo User chose Win10 Blue
 
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentColorMenu" /t REG_DWORD /d "0xffc77e35" /f
-reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentColorMenu" /t REG_DWORD /d "0xffc77e35" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentColorMenu" /t REG_DWORD /d "0xffc77e35" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentColorMenu" /t REG_DWORD /d "0xffc77e35" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentPalette" /t REG_BINARY /d "357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff" /f
+reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentPalette" /t REG_BINARY /d "357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentPalette" /t REG_BINARY /d "357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentPalette" /t REG_BINARY /d "357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff357ec7ff" /f
 
 goto :end
 
-:blue95
+:95b
 echo User chose Win95 Blue
 
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentColorMenu" /t REG_DWORD /d "0xffff0000" /f
-reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentColorMenu" /t REG_DWORD /d "0xffff0000" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentColorMenu" /t REG_DWORD /d "0xffff0000" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentColorMenu" /t REG_DWORD /d "0xffff0000" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentPalette" /t REG_BINARY /d "0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff" /f
+reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentPalette" /t REG_BINARY /d "0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentPalette" /t REG_BINARY /d "0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentPalette" /t REG_BINARY /d "0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff" /f
 
 goto :end
 
-:navy95
+:nav
 echo User chose Win95 Navy
 
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentColorMenu" /t REG_DWORD /d "0xff800000" /f
-reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentColorMenu" /t REG_DWORD /d "0xff800000" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentColorMenu" /t REG_DWORD /d "0xff800000" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentColorMenu" /t REG_DWORD /d "0xff800000" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentPalette" /t REG_BINARY /d "000080ff000080ff000080ff000080ff000080ff000080ff000080ff000080ff" /f
+reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentPalette" /t REG_BINARY /d "000080ff000080ff000080ff000080ff000080ff000080ff000080ff000080ff" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentPalette" /t REG_BINARY /d "000080ff000080ff000080ff000080ff000080ff000080ff000080ff000080ff" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentPalette" /t REG_BINARY /d "000080ff000080ff000080ff000080ff000080ff000080ff000080ff000080ff" /f
 
 goto :end
 
 :pblack
 echo User chose Black
 
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentColorMenu" /t REG_DWORD /d "0xff000000" /f
-reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentColorMenu" /t REG_DWORD /d "0xff000000" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentColorMenu" /t REG_DWORD /d "0xff000000" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentColorMenu" /t REG_DWORD /d "0xff000000" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentPalette" /t REG_BINARY /d "808080ff808080ff808080ff808080ff000000ff000000ff000000ff000000ff" /f
+reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentPalette" /t REG_BINARY /d "808080ff000000ff808080ff808080ff000000ff000000ff000000ff000000ff" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentPalette" /t REG_BINARY /d "808080ff000000ff808080ff808080ff000000ff000000ff000000ff000000ff" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentPalette" /t REG_BINARY /d "808080ff000000ff808080ff808080ff000000ff000000ff000000ff000000ff" /f
 
 goto :end
 
