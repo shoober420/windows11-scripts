@@ -91,7 +91,7 @@ rem # RGB: (0 128 128)
 reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "0 128 128" /f
 reg add "HKCU\Control Panel\Colors" /v "Desktop" /t REG_SZ /d "0 128 128" /f
 reg add "HKLM\Software\Policies\Microsoft\Windows\Personalization" /v "PersonalColors_Background" /t REG_SZ /d "#008080" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" "Background" /t REG_SZ /d "0 128 128" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v "Background" /t REG_SZ /d "0 128 128" /f
 
 goto :end
 
@@ -103,7 +103,7 @@ rem # RGB: (0 0 128)
 reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "0 0 128" /f
 reg add "HKCU\Control Panel\Colors" /v "Desktop" /t REG_SZ /d "0 0 128" /f
 reg add "HKLM\Software\Policies\Microsoft\Windows\Personalization" /v "PersonalColors_Background" /t REG_SZ /d "#000080" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" "Background" /t REG_SZ /d "0 0 128" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v "Background" /t REG_SZ /d "0 0 128" /f
 
 goto :end
 
@@ -115,7 +115,7 @@ rem # RGB: (0 0 168)
 reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "0 0 168" /f
 reg add "HKCU\Control Panel\Colors" /v "Desktop" /t REG_SZ /d "0 0 168" /f
 reg add "HKLM\Software\Policies\Microsoft\Windows\Personalization" /v "PersonalColors_Background" /t REG_SZ /d "#0000A8" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" "Background" /t REG_SZ /d "0 0 168" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v "Background" /t REG_SZ /d "0 0 168" /f
 
 :win95blue
 echo User chose Win95 Blue
@@ -125,7 +125,7 @@ rem # RGB: (0 0 255)
 reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "0 0 255" /f
 reg add "HKCU\Control Panel\Colors" /v "Desktop" /t REG_SZ /d "0 0 255" /f
 reg add "HKLM\Software\Policies\Microsoft\Windows\Personalization" /v "PersonalColors_Background" /t REG_SZ /d "#0000FF" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" "Background" /t REG_SZ /d "0 0 255" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v "Background" /t REG_SZ /d "0 0 255" /f
 
 goto :end
 
@@ -137,7 +137,7 @@ rem # RGB: (58 110 165)
 reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "58 110 165" /f
 reg add "HKCU\Control Panel\Colors" /v "Desktop" /t REG_SZ /d "58 110 165" /f
 reg add "HKLM\Software\Policies\Microsoft\Windows\Personalization" /v "PersonalColors_Background" /t REG_SZ /d "#3A6EA5" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" "Background" /t REG_SZ /d "58 110 165" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v "Background" /t REG_SZ /d "58 110 165" /f
 
 goto :end
 
@@ -149,7 +149,7 @@ rem # RGB: (53 126 199)
 reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "53 126 199" /f
 reg add "HKCU\Control Panel\Colors" /v "Desktop" /t REG_SZ /d "53 126 199" /f
 reg add "HKLM\Software\Policies\Microsoft\Windows\Personalization" /v "PersonalColors_Background" /t REG_SZ /d "#357EC7" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" "Background" /t REG_SZ /d "53 126 199" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v "Background" /t REG_SZ /d "53 126 199" /f
 
 goto :end
 
@@ -161,7 +161,7 @@ rem # RGB: (0 162 237)
 reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "0 162 237" /f
 reg add "HKCU\Control Panel\Colors" /v "Desktop" /t REG_SZ /d "0 162 237" /f
 reg add "HKLM\Software\Policies\Microsoft\Windows\Personalization" /v "PersonalColors_Background" /t REG_SZ /d "#00A2ED" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" "Background" /t REG_SZ /d "0 162 237" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v "Background" /t REG_SZ /d "0 162 237" /f
 
 goto :end
 
@@ -173,7 +173,7 @@ rem # RGB: (0 0 0)
 reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "0 0 0" /f
 reg add "HKCU\Control Panel\Colors" /v "Desktop" /t REG_SZ /d "0 0 0" /f
 reg add "HKLM\Software\Policies\Microsoft\Windows\Personalization" /v "PersonalColors_Background" /t REG_SZ /d "#000000" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" "Background" /t REG_SZ /d "0 0 0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v "Background" /t REG_SZ /d "0 0 0" /f
 
 goto :end
 
