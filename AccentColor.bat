@@ -535,7 +535,7 @@ reg add "HKCU\Software\Microsoft\Windows\DWM" /v "TaskbarColorOverride" /t REG_D
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "TaskbarColorOverride" /t REG_DWORD /d "0xff000000" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "TaskbarColorOverride" /t REG_DWORD /d "0xff000000" /f
 
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentPalette" /t REG_BINARY /d "808080ff000000ff808080ff808080ff000000ff000000ff000000ff000000ff" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentPalette" /t REG_BINARY /d "808080ff808080ff808080ff808080ff000000ff000000ff000000ff000000ff" /f
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentPalette" /t REG_BINARY /d "808080ff000000ff808080ff808080ff000000ff000000ff000000ff000000ff" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentPalette" /t REG_BINARY /d "808080ff000000ff808080ff808080ff000000ff000000ff000000ff000000ff" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentPalette" /t REG_BINARY /d "808080ff000000ff808080ff808080ff000000ff000000ff000000ff000000ff" /f
