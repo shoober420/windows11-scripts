@@ -189,7 +189,7 @@ echo 5. Win95/98 Teal
 echo 6. Win95/98 Gray
 echo 7. Win95/98 Silver
 echo 8. Seafoam
-echo 9. Pitch Black
+echo 9. Black
 echo C. Cancel
 echo.
 choice /c 123456789C /m "Choose an option :"
@@ -507,7 +507,7 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "A
 goto :end
 
 :pitchb
-echo User chose Pitch Black
+echo User chose Black
 
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentColor" /t REG_DWORD /d "0xff000000" /f
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "StartColor" /t REG_DWORD /d "0xff000000" /f
@@ -551,12 +551,15 @@ echo 1. Win2000/WinXP Blue
 echo 2. Win10 Blue
 echo 3. Win95 Navy
 echo 4. Win95 Blue
+echo 5. Black
 echo C. Cancel
 echo.
 choice /c 1234C /m "Choose an option :"
 
-if 5 EQU %ERRORLEVEL% (
+if 6 EQU %ERRORLEVEL% (
    echo User chose to cancel.
+) else if 5 EQU %ERRORLEVEL% (
+   call :pblack
 ) else if 4 EQU %ERRORLEVEL% (
    call :blue95
 ) else if 3 EQU %ERRORLEVEL% (
@@ -608,6 +611,16 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "Acc
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentColorMenu" /t REG_DWORD /d "0xff800000" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentColorMenu" /t REG_DWORD /d "0xff800000" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentColorMenu" /t REG_DWORD /d "0xff800000" /f
+
+goto :end
+
+:pblack
+echo User chose Black
+
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "AccentColorMenu" /t REG_DWORD /d "0xff000000" /f
+reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AccentColorMenu" /t REG_DWORD /d "0xff000000" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AccentColorMenu" /t REG_DWORD /d "0xff000000" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "AccentColorMenu" /t REG_DWORD /d "0xff000000" /f
 
 goto :end
 
