@@ -14,7 +14,6 @@ rem # rem # https://www.neowin.net/forum/topic/624901-windows-colors-explained/
 rem # https://gist.github.com/zaxbux/64b5a88e2e390fb8f8d24eb1736f71e0
 
 rem # Pitch Black by AveYo, AccentPalette idea by /u/Egg-Tricky
-rem # https://gist.github.com/AveYo/80fc6677b9f34939e44364880fbf3768
 
 rem # ENABLE HIGH CONTRAST WINDOWS 95 THEME
 rem # 1. Settings < Personalization < Colors < Contrast themes < Night sky < Apply
