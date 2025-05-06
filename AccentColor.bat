@@ -16,9 +16,11 @@ rem # https://gist.github.com/zaxbux/64b5a88e2e390fb8f8d24eb1736f71e0
 rem # Pitch Black by AveYo, AccentPalette idea by /u/Egg-Tricky
 
 rem # ENABLE HIGH CONTRAST WINDOWS 95 THEME
-rem # 1. Settings < Personalization < Colors < Contrast themes < Night sky < Apply
+rem # 1. CTRL+ALT+DEL < Accessibility < Contrast themes: On
 rem # 2. Re-run this script with High Contrast enabled
 rem # 3. Restart
+
+rem # There is a bug with using Win95 High Contrast Theme when using CTRL+ALT+DEL and going back to desktop, theme colors are changed. Reboot fixes colors and returns them to Win95 theme
 
 PAUSE
 
