@@ -54,6 +54,27 @@ rem # Win95/98 Silver (RGB: 192 192 192 / BGR: 192 192 192) = 0xffc0c0c0 / 0xffc
 rem # Win11 Black Dark Theme (RGB: 18 18 18 / BGR: 18 18 18) = 0xff121212 / 0xff121212
 rem # Win11 White Smoke Light Theme (RGB: 242 242 242 / BGR: 242 242 242) = 0xfff2f2f2 / 0xfff2f2f2
 
+rem # Remove High Contrast Themes (to restore run "sfc /scannow")
+takeown /s %computername% /u %username% /f "C:\Windows\Resources\Ease of Access Themes\hc1.theme"
+takeown /s %computername% /u %username% /f "C:\Windows\Resources\Ease of Access Themes\hc2.theme"
+takeown /s %computername% /u %username% /f "C:\Windows\Resources\Ease of Access Themes\hcblack.theme"
+takeown /s %computername% /u %username% /f "C:\Windows\Resources\Ease of Access Themes\hcwhite.theme"
+
+icacls "C:\Windows\Resources\Ease of Access Themes\hc1.theme" /grant:r %username%:F
+icacls "C:\Windows\Resources\Ease of Access Themes\hc2.theme" /grant:r %username%:F
+icacls "C:\Windows\Resources\Ease of Access Themes\hcblack.theme" /grant:r %username%:F
+icacls "C:\Windows\Resources\Ease of Access Themes\hcwhite.theme" /grant:r %username%:F
+
+del "C:\Windows\Resources\Ease of Access Themes\hc1.theme" /s /f /q
+del "C:\Windows\Resources\Ease of Access Themes\hc2.theme" /s /f /q
+del "C:\Windows\Resources\Ease of Access Themes\hcblack.theme" /s /f /q
+del "C:\Windows\Resources\Ease of Access Themes\hcwhite.theme" /s /f /q
+
+rem ren "C:\Windows\Resources\Ease of Access Themes\hc1.theme" "hc1.theme.bak"
+rem ren "C:\Windows\Resources\Ease of Access Themes\hc2.theme" "hc2.theme.bak"
+rem ren "C:\Windows\Resources\Ease of Access Themes\hcblack.theme" "hcblack.theme.bak"
+rem ren "C:\Windows\Resources\Ease of Access Themes\hcwhite.theme" "hcwhite.theme.bak"
+
 rem # Show accent color on Start and Taskbar
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "ColorPrevalence" /t REG_DWORD /d "1" /f
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "ColorPrevalence" /t REG_DWORD /d "1" /f
