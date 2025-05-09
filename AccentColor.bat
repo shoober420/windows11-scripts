@@ -156,6 +156,16 @@ reg add "HKCU\Control Panel\Colors" /v "AppWorkspace" /t REG_SZ /d "128 128 128"
 rem # Windows 95 Hot Tracking Color
 reg add "HKCU\Control Panel\Colors" /v "HotTrackingColor" /t REG_SZ /d "0 0 128" /f
 
+rem # Delete Accent Color History
+reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\History\Colors" /v "ColorHistory0" /f
+reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\History\Colors" /v "ColorHistory1" /f
+reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\History\Colors" /v "ColorHistory2" /f
+reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\History\Colors" /v "ColorHistory3" /f
+reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\History\Colors" /v "ColorHistory4" /f
+reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\History\Colors" /v "ColorHistory5" /f
+
+
+
 @echo off
 
 @echo off
