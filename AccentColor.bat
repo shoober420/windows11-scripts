@@ -249,6 +249,7 @@ reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\History\Colors
 reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\History\Colors" /v "ColorHistory3" /f
 reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\History\Colors" /v "ColorHistory4" /f
 reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\History\Colors" /v "ColorHistory5" /f
+reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\History\Colors" /f
 
 
 
