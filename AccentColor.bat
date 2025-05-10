@@ -7,6 +7,8 @@ rem # Windows 95 used HTML 3.0 Web Colors
 rem # Windows 95 used Silver Gray for Start Menu / Taskbar (192 192 192)
 rem # Windows 95 used Navy Blue for Titlebars (0 0 128)
 
+rem # HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors reg keys needed for CTRL+ALT+DEL bug that reverts theme when pressed
+
 rem # http://franck.kiechel.free.fr/dbr_eng/Shell.htm
 
 rem # rem # https://www.neowin.net/forum/topic/624901-windows-colors-explained/
