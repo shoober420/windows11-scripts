@@ -2,7 +2,7 @@ rem # Disable and remove Windows features
 
 rem # Windows update services required for DISM
 
-rem # "DISM /online /get-features /format:table" shows installed features
+rem # "DISM /Online /Get-Features /format:table" shows installed features
 
 rem # "Get-WindowsOptionalFeature -Online" shows installed features
 
@@ -630,6 +630,22 @@ DISM /Online /Remove-Capability /CapabilityName:Language.OCR
 DISM /Online /Remove-Capability /CapabilityName:Language.Speech
 
 DISM /Online /Remove-Capability /CapabilityName:Language.TextToSpeech
+
+DISM /Online /Remove-Capability /CapabilityName:Browser.InternetExplorer~~~~0.0.11.0
+
+DISM /Online /Remove-Capability /CapabilityName:Browser.InternetExplorer
+
+DISM /Online /Remove-Capability /CapabilityName:VBSCRIPT~~~~
+
+DISM /Online /Remove-Capability /CapabilityName:VBSCRIPT
+
+DISM /Online /Remove-Capability /CapabilityName:Microsoft.Windows.Ethernet.Client.Vmware.Vmxnet3~~~~0.0.1.0
+
+DISM /Online /Remove-Capability /CapabilityName:Microsoft.Windows.Ethernet.Client.Vmware.Vmxnet3
+
+DISM /Online /Remove-Capability /CapabilityName:Microsoft.Wallpapers.Extended~~~~0.0.1.0
+
+DISM /Online /Remove-Capability /CapabilityName:Microsoft.Wallpapers.Extended
 
 rem # Disable Reserved Storage
 DISM /Online /Set-ReservedStorageState /State:Disabled /NoRestart
