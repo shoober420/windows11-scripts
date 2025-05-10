@@ -4,8 +4,9 @@ rem # Requires EnableStore.bat script to run
 
 PAUSE
 
+rem winget --info
+
 rem cd C:\Program Files\WindowsApps\Microsoft.DesktopAppInstaller_1.20.1081.0_x64__8wekyb3d8bbwe
-winget --info
 
 ECHO Y | winget install --id=Microsoft.VCRedist.2005.x86 -e
 winget install --id=Microsoft.VCRedist.2005.x64 -e
