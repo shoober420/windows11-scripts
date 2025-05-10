@@ -28,6 +28,12 @@ if not exist C:\Windows\System32\wbem\WMIC.exe (
     echo Done.
 )
 
+rem # Enable and start WMI
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD /d "2" /f
+sc config winmgmt start= auto
+net start winmgmt
+
 rem # NVIDIA video card tweaks, last key may vary from 0000 to 0001 if dual NVIDIA/AMD machine is used
 rem # Second to last key is the "Class Guid"
 rem # Find "Class Guid" under Device Manager > Display adapters > Properties > Details tab
