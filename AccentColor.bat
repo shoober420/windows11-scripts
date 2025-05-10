@@ -214,16 +214,27 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Sta
 rem # Windows 95 Navy Hilight
 rem # Highlighted Menu Color
 reg add "HKCU\Control Panel\Colors" /v "Hilight" /t REG_SZ /d "0 0 128" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Hilight" /t REG_SZ /d "0 0 128" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Hilight" /t REG_SZ /d "0 0 128" /f
+
 reg add "HKCU\Control Panel\Colors" /v "HilightText" /t REG_SZ /d "255 255 255" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "HilightText" /t REG_SZ /d "255 255 255" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "HilightText" /t REG_SZ /d "255 255 255" /f
 
 rem # Windows 95 Silver Scrollbar
 reg add "HKCU\Control Panel\Colors" /v "Scrollbar" /t REG_SZ /d "192 192 192" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Scrollbar" /t REG_SZ /d "192 192 192" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Scrollbar" /t REG_SZ /d "192 192 192" /f
 
 rem # Windows 95 App Workspace Color
 reg add "HKCU\Control Panel\Colors" /v "AppWorkspace" /t REG_SZ /d "128 128 128" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "AppWorkspace" /t REG_SZ /d "128 128 128" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "AppWorkspace" /t REG_SZ /d "128 128 128" /f
 
 rem # Windows 95 Hot Tracking Color
 reg add "HKCU\Control Panel\Colors" /v "HotTrackingColor" /t REG_SZ /d "0 0 128" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "HotTrackingColor" /t REG_SZ /d "0 0 128" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "HotTrackingColor" /t REG_SZ /d "0 0 128" /f
 
 rem # Delete Accent Color History
 reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\History\Colors" /v "ColorHistory0" /f
