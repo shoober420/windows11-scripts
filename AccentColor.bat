@@ -75,6 +75,10 @@ rem ren "C:\Windows\Resources\Ease of Access Themes\hc2.theme" "hc2.theme.bak"
 rem ren "C:\Windows\Resources\Ease of Access Themes\hcblack.theme" "hcblack.theme.bak"
 rem ren "C:\Windows\Resources\Ease of Access Themes\hcwhite.theme" "hcwhite.theme.bak"
 
+rem # Remove Default Colors
+reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /f
+reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /f
+
 rem # Show accent color on Start and Taskbar
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "ColorPrevalence" /t REG_DWORD /d "1" /f
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "ColorPrevalence" /t REG_DWORD /d "1" /f
