@@ -151,19 +151,39 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Sta
 
 rem # Windows 95 Borders
 reg add "HKCU\Control Panel\Colors" /v "ActiveBorder" /t REG_SZ /d "192 192 192" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "ActiveBorder" /t REG_SZ /d "192 192 192" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "ActiveBorder" /t REG_SZ /d "192 192 192" /f
+
 reg add "HKCU\Control Panel\Colors" /v "InactiveBorder" /t REG_SZ /d "192 192 192" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "InactiveBorder" /t REG_SZ /d "192 192 192" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "InactiveBorder" /t REG_SZ /d "192 192 192" /f
 
 rem # Windows 95 White Window Background
 reg add "HKCU\Control Panel\Colors" /v "Window" /t REG_SZ /d "255 255 255" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Window" /t REG_SZ /d "255 255 255" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Window" /t REG_SZ /d "255 255 255" /f
 
 rem # Windows 95 Menu Border Color
 reg add "HKCU\Control Panel\Colors" /v "WindowFrame" /t REG_SZ /d "0 0 0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "WindowFrame" /t REG_SZ /d "0 0 0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "WindowFrame" /t REG_SZ /d "0 0 0" /f
 
 rem # Windows 95 Menus
 reg add "HKCU\Control Panel\Colors" /v "GrayText" /t REG_SZ /d "128 128 128" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "GrayText" /t REG_SZ /d "128 128 128" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "GrayText" /t REG_SZ /d "128 128 128" /f
+
 reg add "HKCU\Control Panel\Colors" /v "Menu" /t REG_SZ /d "192 192 192" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Menu" /t REG_SZ /d "192 192 192" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Menu" /t REG_SZ /d "192 192 192" /f
+
 reg add "HKCU\Control Panel\Colors" /v "MenuBar" /t REG_SZ /d "192 192 192" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "MenuBar" /t REG_SZ /d "192 192 192" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "MenuBar" /t REG_SZ /d "192 192 192" /f
+
 reg add "HKCU\Control Panel\Colors" /v "MenuHilight" /t REG_SZ /d "0 0 128" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "MenuHilight" /t REG_SZ /d "0 0 128" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "MenuHilight" /t REG_SZ /d "0 0 128" /f
 
 rem # Windows 95 Buttons
 rem # Light Golden Rod Yellow - RGB: 223 223 223 / BGR: 223 223 223 = 0xffdfdfdf / 0xffdfdfdf
