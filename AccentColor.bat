@@ -7,7 +7,9 @@ rem # Windows 95 used HTML 3.0 Web Colors
 rem # Windows 95 used Silver Gray for Start Menu / Taskbar (192 192 192)
 rem # Windows 95 used Navy Blue for Titlebars (0 0 128)
 
-rem # HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors reg keys needed for CTRL+ALT+DEL bug that reverts theme when pressed
+rem # HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors controls CTRL+ALT+DEL theme colors
+
+rem # HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast and HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard reg paths (empty directory) needed to fix CTRL+ALT+DEL bug that reverts theme when pressed
 
 rem # http://franck.kiechel.free.fr/dbr_eng/Shell.htm
 
@@ -80,6 +82,8 @@ rem ren "C:\Windows\Resources\Ease of Access Themes\hcwhite.theme" "hcwhite.them
 rem # Remove Default Colors
 rem reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /f
 rem reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /f
+rem reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /f
+rem reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /f
 
 rem # Show accent color on Start and Taskbar
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "ColorPrevalence" /t REG_DWORD /d "1" /f
