@@ -633,6 +633,8 @@ DISM /Online /Remove-Capability /CapabilityName:Language.TextToSpeech
 
 DISM /Online /Remove-Capability /CapabilityName:Browser.InternetExplorer~~~~0.0.11.0
 
+DISM /Online /Remove-Capability /CapabilityName:Browser.InternetExplorer~~~~0.0.1.0
+
 DISM /Online /Remove-Capability /CapabilityName:Browser.InternetExplorer
 
 DISM /Online /Remove-Capability /CapabilityName:VBSCRIPT~~~~
