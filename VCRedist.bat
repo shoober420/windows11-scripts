@@ -1,6 +1,6 @@
 rem # Installs all VCRedist packages
 
-rem # Requires EnableStore.bat script to run
+rem # Requires EnableStore.bat script to run if DisableServicesWindows.bat was executed
 
 PAUSE
 
