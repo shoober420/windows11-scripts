@@ -13,6 +13,8 @@ PAUSE
 rem # BackgroundType: 0 = Picture / 1 = Solid color / 2 = Slideshow
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Wallpapers" /v "BackgroundType" /t REG_DWORD /d "1" /f
 
+reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Themes\Wallpaper" /v "WallpaperSurfaceProvidedToDwm" /t REG_DWORD /d "1" /f
+
 rem # Disable Wallpaper changes
 rem # Fixes wallpaper switching to default when pressing CTRL+ALT+DEL in high contrast mode
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\ActiveDesktop" /v "NoChangingWallPaper" /t REG_DWORD /d "1" /f
