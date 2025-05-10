@@ -19,6 +19,8 @@ rem # Allow more I/O to queue in the storage subsystem
 
 rem # Value is determined by RAM size NOT thread or core count
 
+rem # DISABLES CORE PARKING
+
 PAUSE
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Executive" /v "AdditionalCriticalWorkerThreads" /t REG_DWORD /d "64" /f
@@ -26,6 +28,9 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Executive" /v "Ad
 rem # Delayed Worker Threads
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Executive" /v "AdditionalDelayedWorkerThreads" /t REG_DWORD /d "64" /f
+
+rem # Disable Core Parking
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power" /v "CoreParkingDisabled" /t REG_DWORD /d "1" /f
 
 PAUSE
 
