@@ -59,6 +59,8 @@ rem # Win11 Black Dark Theme (RGB: 18 18 18 / BGR: 18 18 18) = 0xff121212 / 0xff
 rem # Win11 White Smoke Light Theme (RGB: 242 242 242 / BGR: 242 242 242) = 0xfff2f2f2 / 0xfff2f2f2
 rem # White (RGB: 255 255 255 / BGR: 255 255 255) = 0x00ffffff / 0x00ffffff
 rem # Black (RGB: 0 0 0 / BGR: 0 0 0) = 0x00000000 / 0x00000000
+rem # Win95 BSoD (RGB: 0 0 168 / BGR: 168 0 0) = 0xff0000a8 / 0xffa80000
+rem # Microsoft Blue (RGB: 0 162 237 / BGR: 237 162 0) = 0xff00a2ed / 0xffeda200
 
 rem # Remove High Contrast Themes (to restore run "sfc /scannow")
 takeown /s %computername% /u %username% /f "C:\Windows\Resources\Ease of Access Themes\hc1.theme"
