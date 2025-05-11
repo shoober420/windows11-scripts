@@ -104,23 +104,23 @@ reg add "HKCU\Control Panel\Desktop" /v "AutoColorization" /t REG_DWORD /d "0" /
 
 rem # Windows 95/98 Black Font for Start Menu
 reg add "HKCU\Control Panel\Colors" /v "ButtonText" /t REG_SZ /d "0 0 0" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "ButtonText" /t REG_DWORD /d "0 0 0" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "ButtonText" /t REG_DWORD /d "0 0 0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "ButtonText" /t REG_DWORD /d "0x00000000" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "ButtonText" /t REG_DWORD /d "0x00000000" /f
 
 rem # Windows 95/98 Black Font for Taskbar
 reg add "HKCU\Control Panel\Colors" /v "WindowText" /t REG_SZ /d "0 0 0" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "WindowText" /t REG_DWORD /d "0 0 0" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "WindowText" /t REG_DWORD /d "0 0 0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "WindowText" /t REG_DWORD /d "0x00000000" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "WindowText" /t REG_DWORD /d "0x00000000" /f
 
 rem # Windows 95/98 Black Font for Menu Text
 reg add "HKCU\Control Panel\Colors" /v "MenuText" /t REG_SZ /d "0 0 0" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "MenuText" /t REG_DWORD /d "0 0 0" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "MenuText" /t REG_DWORD /d "0 0 0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "MenuText" /t REG_DWORD /d "0x00000000" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "MenuText" /t REG_DWORD /d "0x00000000" /f
 
 rem # Windows 95/98 Black Font and White Background for Info Text
 reg add "HKCU\Control Panel\Colors" /v "InfoText" /t REG_SZ /d "0 0 0" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "InfoText" /t REG_DWORD /d "0 0 0" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "InfoText" /t REG_DWORD /d "0 0 0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "InfoText" /t REG_DWORD /d "0x00000000" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "InfoText" /t REG_DWORD /d "0x00000000" /f
 
 reg add "HKCU\Control Panel\Colors" /v "InfoWindow" /t REG_SZ /d "255 255 255" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "InfoWindow" /t REG_DWORD /d "0x00ffffff" /f
@@ -173,8 +173,8 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Sta
 
 rem # Windows 95 Menu Border Color
 reg add "HKCU\Control Panel\Colors" /v "WindowFrame" /t REG_SZ /d "0 0 0" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "WindowFrame" /t REG_DWORD /d "0 0 0" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "WindowFrame" /t REG_DWORD /d "0 0 0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "WindowFrame" /t REG_DWORD /d "0x00000000" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "WindowFrame" /t REG_DWORD /d "0x00000000" /f
 
 rem # Windows 95 Menus
 reg add "HKCU\Control Panel\Colors" /v "GrayText" /t REG_SZ /d "128 128 128" /f
@@ -200,8 +200,8 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Hig
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "ButtonAlternateFace" /t REG_DWORD /d "192 192 192" /f
 
 reg add "HKCU\Control Panel\Colors" /v "ButtonDkShadow" /t REG_SZ /d "0 0 0" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "ButtonDkShadow" /t REG_DWORD /d "0 0 0" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "ButtonDkShadow" /t REG_DWORD /d "0 0 0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "ButtonDkShadow" /t REG_DWORD /d "0x00000000" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "ButtonDkShadow" /t REG_DWORD /d "0x00000000" /f
 
 reg add "HKCU\Control Panel\Colors" /v "ButtonFace" /t REG_SZ /d "192 192 192" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "ButtonFace" /t REG_DWORD /d "192 192 192" /f
