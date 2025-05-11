@@ -286,6 +286,8 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "
 rem reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "ColorPrevalence" /t REG_DWORD /d "0" /f
 
 rem reg add "HKCU\Control Panel\Colors" /v "Window" /t REG_SZ /d "242 242 242" /f
+rem reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Window" /t REG_DWORD /d "" /f
+rem reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Window" /t REG_DWORD /d "" /f
 
 goto :end
 
@@ -358,6 +360,8 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "C
 
 rem # Start Menu / Taskbar
 rem reg add "HKCU\Control Panel\Colors" /v "Window" /t REG_SZ /d "53 126 199" /f
+rem reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Window" /t REG_DWORD /d "" /f
+rem reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Window" /t REG_DWORD /d "" /f
 
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "StartColorMenu" /t REG_DWORD /d "0xffc77e35" /f
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "StartColorMenu" /t REG_DWORD /d "0xffc77e35" /f
@@ -399,6 +403,8 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "C
 
 rem # Start Menu / Taskbar
 rem reg add "HKCU\Control Panel\Colors" /v "Window" /t REG_SZ /d "58 110 165" /f
+rem reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Window" /t REG_DWORD /d "" /f
+rem reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Window" /t REG_DWORD /d "" /f
 
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "StartColorMenu" /t REG_DWORD /d "0xffa56e3a" /f
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "StartColorMenu" /t REG_DWORD /d "0xffa56e3a" /f
@@ -440,6 +446,8 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "C
 
 rem # Start Menu / Taskbar
 rem reg add "HKCU\Control Panel\Colors" /v "Window" /t REG_SZ /d "0 0 255" /f
+rem reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Window" /t REG_DWORD /d "" /f
+rem reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Window" /t REG_DWORD /d "" /f
 
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "StartColorMenu" /t REG_DWORD /d "0xffff0000" /f
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "StartColorMenu" /t REG_DWORD /d "0xffff0000" /f
@@ -481,6 +489,8 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "C
 
 rem # Start Menu / Taskbar
 rem reg add "HKCU\Control Panel\Colors" /v "Window" /t REG_SZ /d "0 0 128" /f
+rem reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Window" /t REG_DWORD /d "" /f
+rem reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Window" /t REG_DWORD /d "" /f
 
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "StartColorMenu" /t REG_DWORD /d "0xff800000" /f
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "StartColorMenu" /t REG_DWORD /d "0xff800000" /f
@@ -522,6 +532,8 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "C
 
 rem # Start Menu / Taskbar
 rem reg add "HKCU\Control Panel\Colors" /v "Window" /t REG_SZ /d "0 128 128" /f
+rem reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Window" /t REG_DWORD /d "" /f
+rem reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Window" /t REG_DWORD /d "" /f
 
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "StartColorMenu" /t REG_DWORD /d "0xff808000" /f
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "StartColorMenu" /t REG_DWORD /d "0xff808000" /f
@@ -563,6 +575,8 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "C
 
 rem # Start Menu / Taskbar
 rem reg add "HKCU\Control Panel\Colors" /v "Window" /t REG_SZ /d "0 183 195" /f
+rem reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Window" /t REG_DWORD /d "" /f
+rem reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Window" /t REG_DWORD /d "" /f
 
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "StartColorMenu" /t REG_DWORD /d "0xffc3b700" /f
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "StartColorMenu" /t REG_DWORD /d "0xffc3b700" /f
@@ -604,6 +618,8 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "C
 
 rem # Start Menu / Taskbar
 rem reg add "HKCU\Control Panel\Colors" /v "Window" /t REG_SZ /d "128 128 128" /f
+rem reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Window" /t REG_DWORD /d "" /f
+rem reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Window" /t REG_DWORD /d "" /f
 
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "StartColorMenu" /t REG_DWORD /d "0xff808080" /f
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "StartColorMenu" /t REG_DWORD /d "0xff808080" /f
@@ -645,6 +661,8 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "C
 
 rem # Start Menu / Taskbar
 rem reg add "HKCU\Control Panel\Colors" /v "Window" /t REG_SZ /d "192 192 192" /f
+rem reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Window" /t REG_DWORD /d "" /f
+rem reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Window" /t REG_DWORD /d "" /f
 
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "StartColorMenu" /t REG_DWORD /d "0xffc0c0c0" /f
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "StartColorMenu" /t REG_DWORD /d "0xffc0c0c0" /f
@@ -686,6 +704,8 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "C
 
 rem # Start Menu / Taskbar
 rem reg add "HKCU\Control Panel\Colors" /v "Window" /t REG_SZ /d "0 0 0" /f
+rem reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Window" /t REG_DWORD /d "" /f
+rem reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Window" /t REG_DWORD /d "" /f
 
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "StartColorMenu" /t REG_DWORD /d "0xff000000" /f
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "StartColorMenu" /t REG_DWORD /d "0xff000000" /f
