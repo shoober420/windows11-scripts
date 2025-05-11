@@ -138,8 +138,8 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Hig
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "ActiveTitle" /t REG_DWORD /d "0 0 128" /f
 
 reg add "HKCU\Control Panel\Colors" /v "InactiveTitle" /t REG_SZ /d "128 128 128" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "InactiveTitle" /t REG_DWORD /d "128 128 128" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "InactiveTitle" /t REG_DWORD /d "128 128 128" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "InactiveTitle" /t REG_DWORD /d "0x00808080" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "InactiveTitle" /t REG_DWORD /d "0x00808080" /f
 
 reg add "HKCU\Control Panel\Colors" /v "TitleText" /t REG_SZ /d "255 255 255" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "TitleText" /t REG_DWORD /d "0x00ffffff" /f
@@ -154,8 +154,8 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Hig
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "GradientActiveTitle" /t REG_DWORD /d "0 0 128" /f
 
 reg add "HKCU\Control Panel\Colors" /v "GradientInactiveTitle" /t REG_SZ /d "128 128 128" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "GradientInactiveTitle" /t REG_DWORD /d "128 128 128" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "GradientInactiveTitle" /t REG_DWORD /d "128 128 128" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "GradientInactiveTitle" /t REG_DWORD /d "0x00808080" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "GradientInactiveTitle" /t REG_DWORD /d "0x00808080" /f
 
 rem # Windows 95 Borders
 reg add "HKCU\Control Panel\Colors" /v "ActiveBorder" /t REG_SZ /d "192 192 192" /f
@@ -178,8 +178,8 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Sta
 
 rem # Windows 95 Menus
 reg add "HKCU\Control Panel\Colors" /v "GrayText" /t REG_SZ /d "128 128 128" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "GrayText" /t REG_DWORD /d "128 128 128" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "GrayText" /t REG_DWORD /d "128 128 128" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "GrayText" /t REG_DWORD /d "0x00808080" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "GrayText" /t REG_DWORD /d "0x00808080" /f
 
 reg add "HKCU\Control Panel\Colors" /v "Menu" /t REG_SZ /d "192 192 192" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Menu" /t REG_DWORD /d "0x00c0c0c0" /f
@@ -216,8 +216,8 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Hig
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "ButtonLight" /t REG_DWORD /d "223 223 223" /f
 
 reg add "HKCU\Control Panel\Colors" /v "ButtonShadow" /t REG_SZ /d "128 128 128" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "ButtonShadow" /t REG_DWORD /d "128 128 128" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "ButtonShadow" /t REG_DWORD /d "128 128 128" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "ButtonShadow" /t REG_DWORD /d "0x00808080" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "ButtonShadow" /t REG_DWORD /d "0x00808080" /f
 
 rem # Windows 95 Navy Hilight
 rem # Highlighted Menu Color
@@ -236,8 +236,8 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Sta
 
 rem # Windows 95 App Workspace Color
 reg add "HKCU\Control Panel\Colors" /v "AppWorkspace" /t REG_SZ /d "128 128 128" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "AppWorkspace" /t REG_DWORD /d "128 128 128" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "AppWorkspace" /t REG_DWORD /d "128 128 128" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "AppWorkspace" /t REG_DWORD /d "0x00808080" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "AppWorkspace" /t REG_DWORD /d "0x00808080" /f
 
 rem # Windows 95 Hot Tracking Color
 reg add "HKCU\Control Panel\Colors" /v "HotTrackingColor" /t REG_SZ /d "0 0 128" /f
@@ -620,8 +620,8 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "C
 
 rem # Start Menu / Taskbar
 rem reg add "HKCU\Control Panel\Colors" /v "Window" /t REG_SZ /d "128 128 128" /f
-rem reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Window" /t REG_DWORD /d "" /f
-rem reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Window" /t REG_DWORD /d "" /f
+rem reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Window" /t REG_DWORD /d "0x00808080" /f
+rem reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Window" /t REG_DWORD /d "0x00808080" /f
 
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" /v "StartColorMenu" /t REG_DWORD /d "0xff808080" /f
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "StartColorMenu" /t REG_DWORD /d "0xff808080" /f
