@@ -10,6 +10,21 @@ rem # HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors contro
 
 rem # HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast and HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard reg paths (empty directory) needed to fix CTRL+ALT+DEL bug that reverts theme when pressed
 
+rem # Win10 Blue (RGB: 53 126 199 / BGR: 199 126 53) = 0xff357ec7 / 0xffc77e35
+rem # Win2000/WinXP Blue (RGB: 58 110 165 / BGR: 165 110 58) = 0xff3a6ea5 / 0xffa56e3a
+rem # Win95 Blue (RGB: 0 0 255 / BGR: 255 0 0) = 0xff0000ff / 0xffff0000
+rem # Win95 Navy (RGB: 0 0 128 / BGR: 128 0 0) = 0xff000080 / 0xff800000
+rem # Win95/98 Teal (RGB: 0 128 128 / BGR: 128 128 0) = 0xff008080 / 0xff808000
+rem # Seafoam (RGB: 0 183 195 / BGR: 195 183 00) = 0xff00b6c3 / 0xffc3b600
+rem # Win95/98 Gray (RGB: 128 128 128 / BGR: 128 128 128) = 0xff808080 / 0xff808080
+rem # Win95/98 Silver (RGB: 192 192 192 / BGR: 192 192 192) = 0xffc0c0c0 / 0xffc0c0c0
+rem # Win11 Black Dark Theme (RGB: 18 18 18 / BGR: 18 18 18) = 0xff121212 / 0xff121212
+rem # Win11 White Smoke Light Theme (RGB: 242 242 242 / BGR: 242 242 242) = 0xfff2f2f2 / 0xfff2f2f2
+rem # White (RGB: 255 255 255 / BGR: 255 255 255) = 0x00ffffff / 0x00ffffff
+rem # Black (RGB: 0 0 0 / BGR: 0 0 0) = 0x00000000 / 0x00000000
+rem # Win95 BSoD (RGB: 0 0 168 / BGR: 168 0 0) = 0xff0000a8 / 0xffa80000
+rem # Microsoft Blue (RGB: 0 162 237 / BGR: 237 162 0) = 0xff00a2ed / 0xffeda200
+
 rem # Restart explorer, re-sign in, or reboot required
 
 PAUSE
@@ -104,10 +119,10 @@ reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "0 128 128" /f
 reg add "HKCU\Control Panel\Colors" /v "Desktop" /t REG_SZ /d "0 128 128" /f
 reg add "HKLM\Software\Policies\Microsoft\Windows\Personalization" /v "PersonalColors_Background" /t REG_SZ /d "#008080" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v "Background" /t REG_SZ /d "0 128 128" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Background" /t REG_DWORD /d "0 128 128" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Background" /t REG_DWORD /d "0 128 128" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Desktop" /t REG_DWORD /d "0 128 128" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Desktop" /t REG_DWORD /d "0 128 128" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Background" /t REG_DWORD /d "0x00808000" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Background" /t REG_DWORD /d "0x00808000" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Desktop" /t REG_DWORD /d "0x00808000" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Desktop" /t REG_DWORD /d "0x00808000" /f
 
 goto :end
 
@@ -120,10 +135,10 @@ reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "0 0 128" /f
 reg add "HKCU\Control Panel\Colors" /v "Desktop" /t REG_SZ /d "0 0 128" /f
 reg add "HKLM\Software\Policies\Microsoft\Windows\Personalization" /v "PersonalColors_Background" /t REG_SZ /d "#000080" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v "Background" /t REG_SZ /d "0 0 128" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Background" /t REG_DWORD /d "0 0 128" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Background" /t REG_DWORD /d "0 0 128" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Desktop" /t REG_DWORD /d "0 0 128" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Desktop" /t REG_DWORD /d "0 0 128" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Background" /t REG_DWORD /d "0x00800000" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Background" /t REG_DWORD /d "0x00800000" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Desktop" /t REG_DWORD /d "0x00800000" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Desktop" /t REG_DWORD /d "0x00800000" /f
 
 goto :end
 
@@ -136,10 +151,10 @@ reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "0 0 168" /f
 reg add "HKCU\Control Panel\Colors" /v "Desktop" /t REG_SZ /d "0 0 168" /f
 reg add "HKLM\Software\Policies\Microsoft\Windows\Personalization" /v "PersonalColors_Background" /t REG_SZ /d "#0000A8" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v "Background" /t REG_SZ /d "0 0 168" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Background" /t REG_DWORD /d "0 0 168" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Background" /t REG_DWORD /d "0 0 168" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Desktop" /t REG_DWORD /d "0 0 168" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Desktop" /t REG_DWORD /d "0 0 168" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Background" /t REG_DWORD /d "0x00a80000" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Background" /t REG_DWORD /d "0x00a80000" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Desktop" /t REG_DWORD /d "0x00a80000" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Desktop" /t REG_DWORD /d "0x00a80000" /f
 
 goto :end
 
@@ -152,10 +167,10 @@ reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "0 0 255" /f
 reg add "HKCU\Control Panel\Colors" /v "Desktop" /t REG_SZ /d "0 0 255" /f
 reg add "HKLM\Software\Policies\Microsoft\Windows\Personalization" /v "PersonalColors_Background" /t REG_SZ /d "#0000FF" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v "Background" /t REG_SZ /d "0 0 255" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Background" /t REG_DWORD /d "0 0 255" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Background" /t REG_DWORD /d "0 0 255" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Desktop" /t REG_DWORD /d "0 0 255" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Desktop" /t REG_DWORD /d "0 0 255" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Background" /t REG_DWORD /d "0x00ff0000" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Background" /t REG_DWORD /d "0x00ff0000" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Desktop" /t REG_DWORD /d "0x00ff0000" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Desktop" /t REG_DWORD /d "0x00ff0000" /f
 
 goto :end
 
@@ -168,10 +183,10 @@ reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "58 110 165" /f
 reg add "HKCU\Control Panel\Colors" /v "Desktop" /t REG_SZ /d "58 110 165" /f
 reg add "HKLM\Software\Policies\Microsoft\Windows\Personalization" /v "PersonalColors_Background" /t REG_SZ /d "#3A6EA5" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v "Background" /t REG_SZ /d "58 110 165" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Background" /t REG_DWORD /d "58 110 165" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Background" /t REG_DWORD /d "58 110 165" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Desktop" /t REG_DWORD /d "58 110 165" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Desktop" /t REG_DWORD /d "58 110 165" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Background" /t REG_DWORD /d "0x00a56e3a" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Background" /t REG_DWORD /d "0x00a56e3a" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Desktop" /t REG_DWORD /d "0x00a56e3a" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Desktop" /t REG_DWORD /d "0x00a56e3a" /f
 
 goto :end
 
@@ -184,10 +199,10 @@ reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "53 126 199" /f
 reg add "HKCU\Control Panel\Colors" /v "Desktop" /t REG_SZ /d "53 126 199" /f
 reg add "HKLM\Software\Policies\Microsoft\Windows\Personalization" /v "PersonalColors_Background" /t REG_SZ /d "#357EC7" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v "Background" /t REG_SZ /d "53 126 199" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Background" /t REG_DWORD /d "53 126 199" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Background" /t REG_DWORD /d "53 126 199" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Desktop" /t REG_DWORD /d "53 126 199" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Desktop" /t REG_DWORD /d "53 126 199" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Background" /t REG_DWORD /d "0x00c77e35" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Background" /t REG_DWORD /d "0x00c77e35" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Desktop" /t REG_DWORD /d "0x00c77e35" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Desktop" /t REG_DWORD /d "0x00c77e35" /f
 
 goto :end
 
@@ -200,10 +215,10 @@ reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "0 162 237" /f
 reg add "HKCU\Control Panel\Colors" /v "Desktop" /t REG_SZ /d "0 162 237" /f
 reg add "HKLM\Software\Policies\Microsoft\Windows\Personalization" /v "PersonalColors_Background" /t REG_SZ /d "#00A2ED" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v "Background" /t REG_SZ /d "0 162 237" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Background" /t REG_DWORD /d "0 162 237" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Background" /t REG_DWORD /d "0 162 237" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Desktop" /t REG_DWORD /d "0 162 237" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Desktop" /t REG_DWORD /d "0 162 237" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Background" /t REG_DWORD /d "0x00eda200" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Background" /t REG_DWORD /d "0x00eda200" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Desktop" /t REG_DWORD /d "0x00eda200" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Desktop" /t REG_DWORD /d "0x00eda200" /f
 
 goto :end
 
@@ -216,10 +231,10 @@ reg add "HKCU\Control Panel\Colors" /v "Background" /t REG_SZ /d "0 0 0" /f
 reg add "HKCU\Control Panel\Colors" /v "Desktop" /t REG_SZ /d "0 0 0" /f
 reg add "HKLM\Software\Policies\Microsoft\Windows\Personalization" /v "PersonalColors_Background" /t REG_SZ /d "#000000" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v "Background" /t REG_SZ /d "0 0 0" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Background" /t REG_DWORD /d "0 0 0" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Background" /t REG_DWORD /d "0 0 0" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Desktop" /t REG_DWORD /d "0 0 0" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Desktop" /t REG_DWORD /d "0 0 0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Background" /t REG_DWORD /d "0x00000000" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Background" /t REG_DWORD /d "0x00000000" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Desktop" /t REG_DWORD /d "0x00000000" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Desktop" /t REG_DWORD /d "0x00000000" /f
 
 goto :end
 
