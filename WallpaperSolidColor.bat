@@ -6,6 +6,10 @@ rem # REPLACES CURRENT WALLPAPER FOR SOLID COLOR BACKGROUND
 
 rem # !!! WARNING !!!
 
+rem # HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors controls CTRL+ALT+DEL theme colors
+
+rem # HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast and HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard reg paths (empty directory) needed to fix CTRL+ALT+DEL bug that reverts theme when pressed
+
 rem # Restart explorer, re-sign in, or reboot required
 
 PAUSE
