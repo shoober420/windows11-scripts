@@ -29,7 +29,8 @@ rem # Restart explorer, re-sign in, or reboot required
 
 PAUSE
 
-rem # BackgroundType: 0 = Picture / 1 = Solid color / 2 = Slideshow
+rem # Background Type
+rem # 0 = Picture / 1 = Solid Color / 2 = Slideshow / 3 = Windows Spotlight
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Wallpapers" /v "BackgroundType" /t REG_DWORD /d "1" /f
 
 reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Themes\Wallpaper" /v "WallpaperSurfaceProvidedToDwm" /t REG_DWORD /d "0" /f
