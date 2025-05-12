@@ -83,6 +83,36 @@ rem ren "C:\Windows\Resources\Ease of Access Themes\hc2.theme" "hc2.theme.bak"
 rem ren "C:\Windows\Resources\Ease of Access Themes\hcblack.theme" "hcblack.theme.bak"
 rem ren "C:\Windows\Resources\Ease of Access Themes\hcwhite.theme" "hcwhite.theme.bak"
 
+rem # Remove Default Accent Themes (to restore run "sfc /scannow")
+takeown /s %computername% /u %username% /f "C:\Windows\Resources\Themes\aero.theme"
+takeown /s %computername% /u %username% /f "C:\Windows\Resources\Themes\dark.theme"
+takeown /s %computername% /u %username% /f "C:\Windows\Resources\Themes\spotlight.theme"
+takeown /s %computername% /u %username% /f "C:\Windows\Resources\Themes\themeA.theme"
+takeown /s %computername% /u %username% /f "C:\Windows\Resources\Themes\themeB.theme"
+takeown /s %computername% /u %username% /f "C:\Windows\Resources\Themes\themeC.theme"
+takeown /s %computername% /u %username% /f "C:\Windows\Resources\Themes\themeD.theme"
+
+icacls "C:\Windows\Resources\Themes\aero.theme" /grant:r %username%:F
+icacls "C:\Windows\Resources\Themes\dark.theme" /grant:r %username%:F
+icacls "C:\Windows\Resources\Themes\spotlight.theme" /grant:r %username%:F
+icacls "C:\Windows\Resources\Themes\themeA.theme" /grant:r %username%:F
+icacls "C:\Windows\Resources\Themes\themeB.theme" /grant:r %username%:F
+icacls "C:\Windows\Resources\Themes\themeC.theme" /grant:r %username%:F
+icacls "C:\Windows\Resources\Themes\themeD.theme" /grant:r %username%:F
+
+del "C:\Windows\Resources\Themes\aero.theme" /s /f /q
+del "C:\Windows\Resources\Themes\dark.theme" /s /f /q
+del "C:\Windows\Resources\Themes\spotlight.theme" /s /f /q
+del "C:\Windows\Resources\Themes\themeA.theme" /s /f /q
+del "C:\Windows\Resources\Themes\themeB.theme" /s /f /q
+del "C:\Windows\Resources\Themes\themeC.theme" /s /f /q
+del "C:\Windows\Resources\Themes\themeD.theme" /s /f /q
+
+rem ren "C:\Windows\Resources\Ease of Access Themes\hc1.theme" "hc1.theme.bak"
+rem ren "C:\Windows\Resources\Ease of Access Themes\hc2.theme" "hc2.theme.bak"
+rem ren "C:\Windows\Resources\Ease of Access Themes\hcblack.theme" "hcblack.theme.bak"
+rem ren "C:\Windows\Resources\Ease of Access Themes\hcwhite.theme" "hcwhite.theme.bak"
+
 rem # Remove Default Colors
 rem reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /f
 rem reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /f
