@@ -197,7 +197,7 @@ SetACL.exe -on "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\
 SetACL.exe -on "HKEY_CLASSES_ROOT\CLSID\{088e3905-0323-4b02-9826-5d99428e115f}\DefaultIcon" -ot reg -actn setowner -ownr "n:Administrators"
 SetACL.exe -on "HKEY_CLASSES_ROOT\CLSID\{088e3905-0323-4b02-9826-5d99428e115f}\DefaultIcon" -ot reg -actn ace -ace "n:Administrators;p:full"
 
-SetACL.exe -on "HKLM\Software\Microsoft\Windows\CurrentVersion\Themes\Wallpaper\WallpaperSurfaceProvidedToDwm" -ot reg -actn setowner -ownr "n:Administrators"
-SetACL.exe -on "HKLM\Software\Microsoft\Windows\CurrentVersion\Themes\Wallpaper\WallpaperSurfaceProvidedToDwm" -ot reg -actn ace -ace "n:Administrators;p:full"
+SetACL.exe -on "HKLM\Software\Microsoft\Windows\CurrentVersion\Themes\Wallpaper" -ot reg -actn setowner -ownr "n:Administrators"
+SetACL.exe -on "HKLM\Software\Microsoft\Windows\CurrentVersion\Themes\Wallpaper" -ot reg -actn ace -ace "n:Administrators;p:full"
 
 PAUSE
