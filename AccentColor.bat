@@ -108,10 +108,13 @@ del "C:\Windows\Resources\Themes\themeB.theme" /s /f /q
 del "C:\Windows\Resources\Themes\themeC.theme" /s /f /q
 del "C:\Windows\Resources\Themes\themeD.theme" /s /f /q
 
-rem ren "C:\Windows\Resources\Ease of Access Themes\hc1.theme" "hc1.theme.bak"
-rem ren "C:\Windows\Resources\Ease of Access Themes\hc2.theme" "hc2.theme.bak"
-rem ren "C:\Windows\Resources\Ease of Access Themes\hcblack.theme" "hcblack.theme.bak"
-rem ren "C:\Windows\Resources\Ease of Access Themes\hcwhite.theme" "hcwhite.theme.bak"
+rem ren "C:\Windows\Resources\Themes\aero.theme" "aero.theme.bak"
+rem ren "C:\Windows\Resources\Themes\dark.theme" "dark.theme.bak"
+rem ren "C:\Windows\Resources\Themes\spotlight.theme" "spotlight.theme.bak"
+rem ren "C:\Windows\Resources\Themes\themeA.theme" "themeA.theme.bak"
+rem ren "C:\Windows\Resources\Themes\themeB.theme" "themeB.theme.bak"
+rem ren "C:\Windows\Resources\Themes\themeC.theme" "themeC.theme.bak"
+rem ren "C:\Windows\Resources\Themes\themeD.theme" "themeD.theme.bak"
 
 rem # Remove Default Colors
 rem reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /f
