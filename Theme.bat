@@ -354,10 +354,10 @@ attrib +r +s +h %USERPROFILE%\Links /S /D
 attrib +r +s +h %USERPROFILE%\OneDrive /S /D
 attrib +r +s +h %USERPROFILE%\Searches /S /D
 
-
-
 rem # Hide Desktop Icons
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "HideIcons" /t REG_DWORD /d "0" /f
+
+
 
 @echo off
 
@@ -406,14 +406,16 @@ reg add "HKCU\Control Panel\Accessibility\HighContrast" /v "Flags" /t REG_SZ /d 
 
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes" /v "ThemeMRU" /t REG_SZ /d "%LOCALAPPDATA%\Microsoft\Windows\Themes\Custom.theme" /f
 
-goto:end
+goto :end
 
 :defaults
 echo User chose Defaults
 
-goto:end
+goto :end
 
 :end
+
+
 
 rem # Disable Theme Changes
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes" /v "ThemeChangesDesktopIcons" /t REG_DWORD /d "0" /f
