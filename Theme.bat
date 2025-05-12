@@ -359,8 +359,36 @@ attrib +r +s +h %USERPROFILE%\Searches /S /D
 rem # Hide Desktop Icons
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "HideIcons" /t REG_DWORD /d "0" /f
 
+@echo off
+
+@echo off
+
+echo.
+echo Visual effects options
+echo.
+echo 1. Best Performance
+echo 2. Default
+echo C. Cancel
+echo.
+choice /c 12C /m "Choose an option :"
+
+if 3 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 2 EQU %ERRORLEVEL% (
+   call :defaults
+) else if 1 EQU %ERRORLEVEL% (
+   call :bperf
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:bperf
+echo User chose Best Performance
+
 rem # Visual effects options BEST PERFORMANCE
-rem # UserPreferenceMask also controls "Hide Pointer While Typing"
+rem # UserPreferenceMask also controls "Hide Pointer While Typing" and "Remove background images (where available)"
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "AlwaysHibernateThumbnails" /t REG_DWORD /d "0" /f
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "EnableAeroPeek" /t REG_DWORD /d "0" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "IconsOnly" /t REG_DWORD /d "1" /f
@@ -377,6 +405,15 @@ reg add "HKCU\Control Panel\Desktop\WindowMetrics" /v "MinAnimate" /t REG_DWORD 
 reg add "HKCU\Control Panel\Accessibility\HighContrast" /v "Flags" /t REG_SZ /d "4121" /f
 
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes" /v "ThemeMRU" /t REG_SZ /d "%LOCALAPPDATA%\Microsoft\Windows\Themes\Custom.theme" /f
+
+goto:end
+
+:defaults
+echo User chose Defaults
+
+goto:end
+
+:end
 
 rem # Disable Theme Changes
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes" /v "ThemeChangesDesktopIcons" /t REG_DWORD /d "0" /f
