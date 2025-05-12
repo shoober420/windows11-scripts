@@ -367,7 +367,7 @@ echo.
 echo Visual effects options
 echo.
 echo 1. Best Performance
-echo 2. Default
+echo 2. SKIP
 echo C. Cancel
 echo.
 choice /c 12C /m "Choose an option :"
@@ -409,7 +409,7 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes" /v "ThemeMRU" /t
 goto :end
 
 :defaults
-echo User chose Defaults
+echo User chose SKIP
 
 goto :end
 
