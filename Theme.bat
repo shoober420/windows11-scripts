@@ -112,6 +112,11 @@ rem # Disable File Explorer Grouping
 reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "UseAutoGrouping" /t REG_DWORD /d "0" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "UseAutoGrouping" /t REG_DWORD /d "0" /f
 
+rem # Disable Taskbar Thumbnail Preview
+rem # 1000ms = 1sec / 30000ms = 30sec
+reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "ExtendedUIHoverTime" /t REG_DWORD /d "30000" /f
+reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "DesktopLivePreviewHoverTime" /t REG_DWORD /d "30000" /f
+
 rem # Task view button on start menu
 rem # 0 = Off / 1 = On
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "ShowTaskViewButton" /t REG_DWORD /d "0" /f
