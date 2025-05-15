@@ -3558,6 +3558,21 @@ rem # Disable Name Lookup
 reg add "HKLM\System\CurrentControlSet\Control\Lsa" /v "LsaLookupRestrictIsolatedNameLevel" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Lsa" /v "AnonymousNameLookup" /t REG_DWORD /d "0" /f
 
+rem # Disable Audit Logs
+Auditpol /set /subcategory:"Process Termination" /success:disable /failure:enable
+Auditpol /set /subcategory:"RPC Events" /success:disable /failure:enable
+Auditpol /set /subcategory:"Filtering Platform Connection" /success:disable /failure:enable
+Auditpol /set /subcategory:"DPAPI Activity" /success:disable /failure:disable
+Auditpol /set /subcategory:"IPsec Driver" /success:disable /failure:enable
+Auditpol /set /subcategory:"Other System Events" /success:disable /failure:enable
+Auditpol /set /subcategory:"Security State Change" /success:disable /failure:enable
+Auditpol /set /subcategory:"Security System Extension" /success:disable /failure:enable
+Auditpol /set /subcategory:"System Integrity" /success:disable /failure:enable
+
+rem # Legacy BIOS tweaks
+reg add "HKLM\System\CurrentControlSet\Services\VxD\BIOS" /v "CPUPriority" /t REG_DWORD /d "1" /f
+reg add "HKLM\System\CurrentControlSet\Services\VxD\BIOS" /v "FastDRAM" /t REG_DWORD /d "1" /f
+
 
 
 rem # Enables Cloudflare DNS
