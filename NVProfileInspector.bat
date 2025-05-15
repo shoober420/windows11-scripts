@@ -12,11 +12,11 @@ echo 2. High Quality OGL
 echo 3. High Quality D3D
 echo C. Cancel
 echo.
-choice /c 12C /m "Choose an option :"
+choice /c 123C /m "Choose an option :"
 
 if 4 EQU %ERRORLEVEL% (
    echo User chose to cancel.
-) else if 2 EQU %ERRORLEVEL% (
+) else if 3 EQU %ERRORLEVEL% (
    call :d3d
 ) else if 2 EQU %ERRORLEVEL% (
    call :ogl
@@ -31,10 +31,24 @@ goto :eof
 :perf
 echo User chose Performance
 
-start "%USERPROFILE%\Downloads\NvidiaProfileInspector\nvidiaProfileInspector.exe" "%~dp0\Performance.nip"
+start "%USERPROFILE%\Downloads\NvidiaProfileInspector\nvidiaProfileInspector.exe" "%~dp0\NVIDIAPerformanceProfile.nip"
 
 goto :end
 
+:ogl
+echo User chose High Quality OGL
 
+start "%USERPROFILE%\Downloads\NvidiaProfileInspector\nvidiaProfileInspector.exe" "%~dp0\NVIDIAPerformanceProfile.nip"
+
+goto :end
+
+:d3d
+echo User chose High Quality D3D
+
+start "%USERPROFILE%\Downloads\NvidiaProfileInspector\nvidiaProfileInspector.exe" "%~dp0\NVIDIAPerformanceProfile.nip"
+
+goto :end
+
+:end
 
 PAUSE
