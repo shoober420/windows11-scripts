@@ -8,6 +8,8 @@ rem # Using Ultimate Performance plan causes CPU Utilization to be at 100% perce
 
 rem # powercfg /setactive *GUID*
 
+rem # DISABLES CPU PARKING
+
 PAUSE
 
 rem # https://www.elevenforum.com/members/garlin.5387/
