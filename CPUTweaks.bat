@@ -11,6 +11,8 @@ rem # https://james-rankin.com/features/the-ultimate-guide-to-windows-logon-opti
 rem # https://www.wilderssecurity.com/threads/increase-number-of-threads-per-process.317532/
 rem # rem # https://notes.ponderworthy.com/additional-critical-worker-threads-in-windows-speed-tweak
 
+rem # https://github.com/CrackedStuffEZ
+
 rem # AdditionalCriticalWorkerThreads value increases the number of critical worker threads created for a specified work queue
 
 rem # By increasing the value of this one, you can get more additional worker threads which will allow for more queued I/O in the storage subsystem
