@@ -814,3 +814,4 @@ DisableWindowsWatermark.bat / EnableWindowsWatermark.bat
 - https://github.com/sherifmagdy32/gaming_os_tweaker
 - https://github.com/HakanFly/Windows-Tweaks
 - http://bbs.c3.wuyou.net/forum.php?mod=viewthread&tid=437913
+- https://github.com/CrackedStuffEZ
