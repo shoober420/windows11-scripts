@@ -6,6 +6,12 @@ rem # https://learn.microsoft.com/en-us/windows/security/operating-system-securi
 
 rem # https://sites.google.com/view/melodystweaks/basictweaks
 
+if not exist C:\Windows\System32\wbem\WMIC.exe (
+    echo Installing WMIC...
+    DISM /Online /Add-Capability /CapabilityName:WMIC~~~~
+    echo Done.
+)
+
 rem # Processor x2APIC Support helps operating systems run more efficiently on high core count configurations
 bcdedit /set x2apicpolicy Enable
 
