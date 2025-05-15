@@ -38,14 +38,14 @@ goto :end
 :ogl
 echo User chose High Quality OGL
 
-start "%USERPROFILE%\Downloads\NvidiaProfileInspector\nvidiaProfileInspector.exe" "%~dp0\NVIDIAPerformanceProfile.nip"
+start "%USERPROFILE%\Downloads\NvidiaProfileInspector\nvidiaProfileInspector.exe" "%~dp0\NVIDIAHighQualityProfileOGL.nip"
 
 goto :end
 
 :d3d
 echo User chose High Quality D3D
 
-start "%USERPROFILE%\Downloads\NvidiaProfileInspector\nvidiaProfileInspector.exe" "%~dp0\NVIDIAPerformanceProfile.nip"
+start "%USERPROFILE%\Downloads\NvidiaProfileInspector\nvidiaProfileInspector.exe" "%~dp0\NVIDIAHighQualityProfileD3D.nip"
 
 goto :end
 
