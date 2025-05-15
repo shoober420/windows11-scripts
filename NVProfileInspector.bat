@@ -31,7 +31,7 @@ goto :eof
 :perf
 echo User chose Performance
 
-start "%USERPROFILE%\Downloads\NvidiaProfileInspector\nvidiaProfileInspector.exe" "%USERPROFILE%\Downloads\NvidiaProfileInspector\Performance.nip"
+start "%USERPROFILE%\Downloads\NvidiaProfileInspector\nvidiaProfileInspector.exe" "%~dp0\Performance.nip"
 
 goto :end
 
