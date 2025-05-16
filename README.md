@@ -162,6 +162,8 @@ Update BIOS
 Update TPM
 
 Update NVMe / SSD Firmware
+- Samsung Magician: (https://semiconductor.samsung.com/consumer-storage/magician)
+- Western Digital: SanDisk Dashboard (https://support-en.sandisk.com/app/answers/detailweb/a_id/31759)
 
 Tweak BIOS
 
