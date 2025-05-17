@@ -175,6 +175,9 @@ cd "%~dp0"
 call DisableSSL+LegacyTLS.bat
 cd "%~dp0"
 
+call RefreshRate.bat
+cd "%~dp0"
+
 @echo off
 
 echo.
