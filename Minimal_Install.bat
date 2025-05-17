@@ -36,6 +36,9 @@ cd "%~dp0"
 call VCRedist.bat
 cd "%~dp0"
 
+call WingetUpdateApps.bat
+cd "%~dp0"
+
 call InternetSettings.bat
 cd "%~dp0"
 
