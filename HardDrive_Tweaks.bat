@@ -5,6 +5,19 @@ rem # https://www.youtube.com/watch?v=ajM7Nelf6Uc
 rem # Enable TRIM for SSD / NVMe
 fsutil behavior set DisableDeleteNotify 0
 
+
+
+rem # Enable Write-Behind Caching
+rem # Cache Power Protection
+rem # 0 = Disabled / 1 = Enabled
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\FileSystem" /v "UserWriteCacheSetting" /t REG_DWORD /d "1" /f
+
+for /f "Delims=" %%k in ('reg query HKLM\SYSTEM\CurrentControlSet\Enum /f "{4d36e967-e325-11ce-bfc1-08002be10318}" /d /s^|Find "HKEY"') do (
+  reg add "%%k\Device Parameters\Disk" /v "UserWriteCacheSetting" /t REG_DWORD /d "1" /f
+)
+
+
+
 rem # Disables power saving features
 
 reg add "HKLM\SYSTEM\CurrentControlSet\services\iaStor\Parameters\Port0" /v "LPM" /t REG_DWORD /d "0" /f
