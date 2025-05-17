@@ -32,6 +32,10 @@ rem # Power Plan Settings
 
 TIMEOUT 5
 
+rem # NVMe Power State Transition Latency Tolerance
+powercfg -setacvalueindex scheme_current SUB_DISK dbc9e238-6de9-49e3-92cd-8c2b4946b472 1
+powercfg -setacvalueindex scheme_current SUB_DISK fc95af4d-40e7-4b6d-835a-56d131dbc80e 1
+
 rem # Mouse Latency Boost
 reg add "HKLM\SYSTEM\ControlSet001\Control\Power\Profile\Events\{54533251-82be-4824-96c1-47b60b740d00}\{0DA965DC-8FCF-4c0b-8EFE-8DD5E7BC959A}\{7E01ADEF-81E6-4e1b-8075-56F373584694}" /v "TimeLimitInSeconds" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\Profile\Events\{54533251-82be-4824-96c1-47b60b740d00}\{0DA965DC-8FCF-4c0b-8EFE-8DD5E7BC959A}\{7E01ADEF-81E6-4e1b-8075-56F373584694}" /v "TimeLimitInSeconds" /t REG_DWORD /d "1" /f
@@ -407,5 +411,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\4f971e89-eebd
 reg add "HKLM\SYSTEM\ControlSet001\Control\Power\PowerSettings\4f971e89-eebd-4455-a8de-9e59040e7347\a7066653-8d6c-40a8-910e-a1f54b84c7e5" /v "ValueMin" /t REG_DWORD /d "2" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\4f971e89-eebd-4455-a8de-9e59040e7347\a7066653-8d6c-40a8-910e-a1f54b84c7e5" /v "ValueMin" /t REG_DWORD /d "2" /f
 powercfg /SETACVALUEINDEX SCHEME_CURRENT 4f971e89-eebd-4455-a8de-9e59040e7347 a7066653-8d6c-40a8-910e-a1f54b84c7e5 2
+
+powercfg /setactive 00000000-0000-0000-0000-000000001234
 
 PAUSE
