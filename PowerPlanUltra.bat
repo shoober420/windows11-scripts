@@ -36,6 +36,13 @@ rem # NVMe Power State Transition Latency Tolerance
 powercfg -setacvalueindex scheme_current SUB_DISK dbc9e238-6de9-49e3-92cd-8c2b4946b472 1
 powercfg -setacvalueindex scheme_current SUB_DISK fc95af4d-40e7-4b6d-835a-56d131dbc80e 1
 
+rem # Dont restrict core boost
+powercfg -setacvalueindex scheme_current sub_processor PERFEPP 0
+
+rem # Enable Turbo Boost
+powercfg -setacvalueindex scheme_current sub_processor PERFBOOSTMODE 1
+powercfg -setacvalueindex scheme_current sub_processor PERFBOOSTPOL 100
+
 rem # Mouse Latency Boost
 reg add "HKLM\SYSTEM\ControlSet001\Control\Power\Profile\Events\{54533251-82be-4824-96c1-47b60b740d00}\{0DA965DC-8FCF-4c0b-8EFE-8DD5E7BC959A}\{7E01ADEF-81E6-4e1b-8075-56F373584694}" /v "TimeLimitInSeconds" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\Profile\Events\{54533251-82be-4824-96c1-47b60b740d00}\{0DA965DC-8FCF-4c0b-8EFE-8DD5E7BC959A}\{7E01ADEF-81E6-4e1b-8075-56F373584694}" /v "TimeLimitInSeconds" /t REG_DWORD /d "1" /f
