@@ -18,6 +18,9 @@ for /f "Delims=" %%k in ('reg query HKLM\SYSTEM\CurrentControlSet\Enum /f "{4d36
 
 
 
+rem # Low Latency Scaling Percentage
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power" /v "LowLatencyScalingPercentage" /t REG_DWORD /d "100" /f
+
 rem # Disables power saving features
 
 reg add "HKLM\SYSTEM\CurrentControlSet\services\iaStor\Parameters\Port0" /v "LPM" /t REG_DWORD /d "0" /f
