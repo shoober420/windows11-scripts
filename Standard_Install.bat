@@ -161,6 +161,51 @@ goto :end
 
 :end
 
+echo.
+echo 1. Vim
+echo 2. Notepad++
+echo 3. SKIP
+echo C. Cancel
+echo.
+choice /c 123C /m "Choose an option :"
+
+if 4 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 3 EQU %ERRORLEVEL% (
+   call :skippy
+) else if 2 EQU %ERRORLEVEL% (
+   call :note
+) else if 1 EQU %ERRORLEVEL% (
+   call :vim
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:vim
+echo User chose Vim
+
+call InstallVim.bat
+
+goto :end
+
+:vim
+echo User chose Notepad++
+
+call InstallNotepad++.bat
+
+goto :end
+
+:skippy
+echo User chose SKIP
+
+goto :end
+
+:end
+
+
+
 cd "%~dp0"
 
 ECHO R | powershell.exe ./DisableNetBIOS.ps1
@@ -172,6 +217,8 @@ cd "%~dp0"
 ECHO R | powershell.exe ./DisableScheduledTasks.ps1
 
 cd "%~dp0"
+
+
 
 rem # Launch GPU option scripts to finish installation (NVProfileInspector required for NVIDIA)
 
