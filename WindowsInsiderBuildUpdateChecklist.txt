@@ -315,7 +315,8 @@ RESTART
 
 RESTART
 
-- nvidiaProfileInspectorForkAIO: load NVIDIAPerformanceProfile.nip or NVIDIAHighQualityProfileOGL.nip / NVIDIAHighQualityProfileD3D.nip (https://github.com/neatchee/nvidiaProfileInspectorForkAIO)
+- https://github.com/xHybred/NvidiaProfileInspectorRevamped
+- load NVIDIAPerformanceProfile.nip or NVIDIAHighQualityProfileOGL.nip / NVIDIAHighQualityProfileD3D.nip
 
 RESTART
 
