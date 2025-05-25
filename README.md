@@ -799,6 +799,8 @@ Defrag+TRIM.bat
 
 InstallVim.bat
 
+DisableNull.bat / EnableNull.bat (required for Android Debug Bridge: ADB)
+
 # Credits
 - https://www.elevenforum.com/members/garlin.5387
 - https://www.elevenforum.com/members/csmc.38355
