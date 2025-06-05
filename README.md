@@ -807,6 +807,7 @@ DisableNull.bat / EnableNull.bat (required for Android Debug Bridge: ADB)
 - jdallmann
 - Kizzimo
 - foss-lover34
+- brusk9060
 - https://github.com/AlchemyTweaks
 - https://github.com/TairikuOokami
 - https://github.com/ionuttbara
