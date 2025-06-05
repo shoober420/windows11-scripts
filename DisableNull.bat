@@ -1,6 +1,15 @@
 rem # Disable Null service
 
-rem # required for Android Debug Bridge (ADB)
+rem # !!! WARNING !!!
+
+rem # REQUIRED FOR:
+
+rem # Discord
+rem # Android Debug Bridge (ADB)
+
+rem # !!! WARNING !!!
+
+PAUSE
 
 net stop Null
 
