@@ -808,6 +808,7 @@ DisableNull.bat / EnableNull.bat (required for Discord and Android Debug Bridge:
 - Kizzimo
 - foss-lover34
 - brusk9060
+- dersk111y
 - https://github.com/AlchemyTweaks
 - https://github.com/TairikuOokami
 - https://github.com/ionuttbara
