@@ -10,6 +10,7 @@ rem # jdallmann
 rem # Kizzimo
 rem # foss-lover34
 rem # brusk9060
+rem # dersk111y
 rem # https://github.com/AlchemyTweaks
 rem # https://github.com/TairikuOokami
 rem # https://github.com/ionuttbara
