@@ -113,10 +113,14 @@ cd "%~dp0"
 
 rem # TO AVOID TERMINAL CLOSING, LAUNCH IN SEPERATE WINDOW AND RUN TWICE
 start cmd /k RemoveWindowsApps.bat
+PAUSE
+cd "%~dp0"
 start cmd /k RemoveWindowsApps.bat
+PAUSE
 cd "%~dp0"
 
 start cmd /k RemoveWindowsFeatures.bat
+PAUSE
 cd "%~dp0"
 
 call EnableSerializeTimerExpiration.bat
