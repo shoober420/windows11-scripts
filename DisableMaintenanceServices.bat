@@ -22,8 +22,6 @@ net stop DsmSvc
 net stop sppsvc
 net stop Dhcp
 
-reg add "HKLM\Software\Policies\Microsoft\PushToInstall" /v "DisablePushToInstall" /t REG_DWORD /d "1" /f
-
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\ClipSVC" /v "Start" /t REG_DWORD /d "4" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\SENS" /t REG_DWORD /d "4" /f
