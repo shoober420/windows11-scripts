@@ -605,7 +605,7 @@ StaticIPConnection.bat
 
 DHCPConnection.bat
 
-DisableDHCP.bat / EnableDHCP.bat
+DisableDHCP.bat (BREAKS EPIC GAMES LAUNCHER) / EnableDHCP.bat
 
 DisablePowerManagement.ps1
 
