@@ -20,6 +20,7 @@ net stop DoSvc
 net stop DiagTrack
 net stop DsmSvc
 net stop sppsvc
+net stop Dhcp
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\ClipSVC" /v "Start" /t REG_DWORD /d "4" /f
 
@@ -49,5 +50,9 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protoc
 rem # Telemetry and Diagnostic Data must be enabled for Insider updates
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack" /v "ShowedToastAtLevel" /t REG_DWORD /d "1" /f
 reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\DataCollection" /v "AllowTelemetry" /t REG_DWORD /d "0" /f
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Dhcp" /v "Start" /t REG_DWORD /d "4" /f
+
+bcdedit /set dhcp Off
 
 PAUSE
