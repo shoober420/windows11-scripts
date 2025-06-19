@@ -50,6 +50,10 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\DsmSvc" /v "Start" /t REG_DWORD 
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\sppsvc" /v "Start" /t REG_DWORD /d "2" /f
 
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Dhcp" /v "Start" /t REG_DWORD /d "2" /f
+
+bcdedit /set dhcp On
+
 net start ClipSVC
 
 net start Themes
@@ -77,5 +81,6 @@ net start DiagTrack
 net start NetSetupSvc
 net start DsmSvc
 net start sppsvc
+net start Dhcp
 
 PAUSE
