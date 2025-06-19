@@ -22,6 +22,8 @@ rem # Enable and start WMI
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD /d "2" /f
 net start winmgmt
 
+reg add "HKLM\Software\Policies\Microsoft\PushToInstall" /v "DisablePushToInstall" /t REG_DWORD /d "0" /f
+
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\ClipSVC" /v "Start" /t REG_DWORD /d "2" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Themes" /t REG_DWORD /d "2" /f
