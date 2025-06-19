@@ -111,10 +111,7 @@ cd "%~dp0"
 call RemoveRemoteDesktopConnection.bat
 cd "%~dp0"
 
-rem # TO AVOID TERMINAL CLOSING, LAUNCH IN SEPERATE WINDOW AND RUN TWICE
-start cmd /k RemoveWindowsApps.bat
-PAUSE
-cd "%~dp0"
+rem # TO AVOID TERMINAL CLOSING, LAUNCH IN SEPERATE WINDOW
 start cmd /k RemoveWindowsApps.bat
 PAUSE
 cd "%~dp0"
