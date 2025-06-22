@@ -16,7 +16,7 @@ rem # REBOOT RECOMMENDED
 
 PAUSE
 
-rem # EnableStore.bat required for this script to function if DisableServices.bat was executed
+rem # EnableStore.bat and EnableMaintenanceServices.bat required for this script to function if DisableServices.bat was executed
 
 PAUSE
 
