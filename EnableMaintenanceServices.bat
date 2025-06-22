@@ -22,6 +22,9 @@ rem # Enable and start WMI
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD /d "2" /f
 net start winmgmt
 
+rem # Required for Epic Games Launcher Installation
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\seclogon" /v "Start" /t REG_DWORD /d "2" /f
+
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\ClipSVC" /v "Start" /t REG_DWORD /d "2" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Themes" /t REG_DWORD /d "2" /f
@@ -82,5 +85,6 @@ net start NetSetupSvc
 net start DsmSvc
 net start sppsvc
 net start Dhcp
+net start seclogon
 
 PAUSE
