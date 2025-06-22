@@ -21,6 +21,10 @@ net stop DiagTrack
 net stop DsmSvc
 net stop sppsvc
 net stop Dhcp
+net stop seclogon
+
+rem # Required for Epic Games Launcher Installation
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\seclogon" /v "Start" /t REG_DWORD /d "4" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\ClipSVC" /v "Start" /t REG_DWORD /d "4" /f
 
