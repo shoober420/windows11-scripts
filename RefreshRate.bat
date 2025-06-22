@@ -1,5 +1,7 @@
 rem # Force Refresh Rate in game
 
+@echo off
+
 echo.
 echo Refresh Rate
 echo.
