@@ -60,9 +60,6 @@ cd "%~dp0"
 call InternetSettings.bat
 cd "%~dp0"
 
-call SecuritySettings.bat
-cd "%~dp0"
-
 call DisablePerProcessSystemDPI.bat
 cd "%~dp0"
 
