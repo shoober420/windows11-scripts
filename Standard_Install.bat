@@ -159,6 +159,41 @@ goto :end
 :end
 
 echo.
+echo 1. HDR ENABLED
+echo 2. HDR DISABLED
+echo C. Cancel
+echo.
+choice /c 12C /m "Choose an option :"
+
+if 3 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 2 EQU %ERRORLEVEL% (
+   call :HDROFF
+) else if 1 EQU %ERRORLEVEL% (
+   call :HDRON
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:HDRON
+echo User chose HDR ENABLED
+
+call EnableHDR.bat
+
+goto :end
+
+:HDROFF
+echo User chose HDR DISABLED
+
+call DisableHDR.bat
+
+goto :end
+
+:end
+
+echo.
 echo 1. Vim
 echo 2. Notepad++
 echo 3. SKIP
