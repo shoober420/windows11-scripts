@@ -33,13 +33,15 @@ rem # if Windows.old\Fonts is not found, copy X:\Windows\Fonts into C:\Windows\F
 
 
 
-copy "%WINDIR%\Fonts\micross.ttf" "%USERPROFILE%\Downloads"
-copy "%WINDIR%\Fonts\arial.ttf" "%USERPROFILE%\Downloads"
+rem copy "%WINDIR%\Fonts\micross.ttf" "%USERPROFILE%\Downloads"
+rem copy "%WINDIR%\Fonts\arial.ttf" "%USERPROFILE%\Downloads"
 
 rem # Manual removal of fonts needed
 rem # Deleting certain fonts breaks games like CS1.6, find out what fonts games use
-rem takeown /s %computername% /u %username% /f "%WINDIR%\Fonts"
-rem icacls "%WINDIR%\Fonts" /grant:r %username%:F
+
+takeown /s %computername% /u %username% /f "%WINDIR%\Fonts"
+icacls "%WINDIR%\Fonts" /grant:r %username%:F
+
 rem ren "%WINDIR%\Fonts" "Fonts.bak"
 rem rmdir /s /q "%WINDIR%\Fonts"
 rem rmdir /s /q "%USERPROFILE%\AppData\Local\Microsoft\Windows\Fonts"
@@ -50,7 +52,7 @@ rem # Remove bloat Segoe* fonts (except Segoe UI, segoeui.ttf is required or bla
 
 rem # Windows 11 uses "Segoe Fluent Icons" for GUI icons
 rem # Segoe Fluent Icons Regular
-del "%WINDIR%\Fonts\SegoeIcons.ttf"
+rem del "%WINDIR%\Fonts\SegoeIcons.ttf"
 
 rem # Windows 10 uses "Segoe MDL2 Assets" for GUI icons
 rem # Segoe MDL2 Assets Regular
@@ -295,6 +297,9 @@ del "%WINDIR%\Fonts\corbelz.ttf"
 
 rem # Gabriola Regular
 del "%WINDIR%\Fonts\Gabriola.ttf"
+
+rem # SimSun-ExtG Regular
+del "%WINDIR%\Fonts\SimsunExtG.ttf"
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "Segoe UI (TrueType)" /t REG_SZ /d "" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "Segoe UI Black (TrueType)" /t REG_SZ /d "" /f
