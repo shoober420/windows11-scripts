@@ -125,11 +125,11 @@ SetACL.exe -on "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Feed
 SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Communications\ConfigureChatAutoInstall" -ot reg -actn setowner -ownr "n:Administrators"
 SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Communications\ConfigureChatAutoInstall" -ot reg -actn ace -ace "n:Administrators;p:full"
 
-SetACL.exe -on "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\WMI\Autologger\DefenderApiLogger\Start" -ot reg -actn setowner -ownr "n:Administrators"
-SetACL.exe -on "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\WMI\Autologger\DefenderApiLogger\Start" -ot reg -actn ace -ace "n:Administrators;p:full"
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\WMI\Autologger\DefenderApiLogger" -ot reg -actn setowner -ownr "n:Administrators"
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\WMI\Autologger\DefenderApiLogger" -ot reg -actn ace -ace "n:Administrators;p:full"
 
-SetACL.exe -on "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\WMI\Autologger\DefenderAuditLogger\Start" -ot reg -actn setowner -ownr "n:Administrators"
-SetACL.exe -on "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\WMI\Autologger\DefenderAuditLogger\Start" -ot reg -actn ace -ace "n:Administrators;p:full"
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\WMI\Autologger\DefenderAuditLogger" -ot reg -actn setowner -ownr "n:Administrators"
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\WMI\Autologger\DefenderAuditLogger" -ot reg -actn ace -ace "n:Administrators;p:full"
 
 SetACL.exe -on "HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\Policies\Settings\DisableSendGenericDriverNotFoundToWER" -ot reg -actn setowner -ownr "n:Administrators"
 SetACL.exe -on "HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\Policies\Settings\DisableSendGenericDriverNotFoundToWER" -ot reg -actn ace -ace "n:Administrators;p:full"
