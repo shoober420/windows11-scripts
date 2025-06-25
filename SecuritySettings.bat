@@ -6,11 +6,17 @@ rem # Use EnableKernelMitigationOptions.reg to turn on exploit protection settin
 
 rem # !!! WARNING !!!
 
-rem # NOT COMPATIBLE WITH THESE ANTICHEATS
-rem # CS2 / FACEIT (VAC IS OK)
-rem # VALORANT / VANGUARD
+rem # NOT COMPATIBLE WITH THESE ANTICHEATS:
+
+rem # FACEIT
+rem # VANGUARD (Valorant)
 
 rem # !!! WARNING !!!
+
+rem # SUPPORTS:
+rem # ----------
+rem # VAC
+rem # EasyAntiCheat
 
 PAUSE
 
