@@ -200,7 +200,7 @@ SetACL.exe -on "HKEY_CLASSES_ROOT\CLSID\{088e3905-0323-4b02-9826-5d99428e115f}\D
 SetACL.exe -on "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Themes\Wallpaper" -ot reg -actn setowner -ownr "n:Administrators"
 SetACL.exe -on "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Themes\Wallpaper" -ot reg -actn ace -ace "n:Administrators;p:full"
 
-SetACL.exe -on "C:\WINDOWS\Fonts" -ot reg -actn setowner -ownr "n:Administrators"
-SetACL.exe -on "C:\WINDOWS\Fonts" -ot reg -actn ace -ace "n:Administrators;p:full"
+SetACL.exe -on "C:\WINDOWS\Fonts" -ot file -actn setowner -ownr "n:Administrators"
+SetACL.exe -on "C:\WINDOWS\Fonts" -ot file -actn ace -ace "n:Administrators;p:full"
 
 PAUSE
