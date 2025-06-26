@@ -27,5 +27,6 @@ takeown /s %computername% /u %username% /f "C:\Windows.old"
 icacls "C:\Windows.old" /grant:r %username%:F
 rem ren "C:\Windows.old" "C:\Windows.old.bak"
 del "C:\Windows.old" /s /f /q
+rmdir "C:\Windows.old" /s /q
 
 PAUSE
