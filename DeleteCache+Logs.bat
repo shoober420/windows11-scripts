@@ -171,4 +171,15 @@ rmdir /s /q "C:\Windows\Temp"
 rmdir /s /q "%USERPROFILE%\AppData\Local\Temp"
 DEL /F /S /Q /A %LocalAppData%\Microsoft\Windows\Explorer\thumbcache_*.db
 
+
+
+rem # Launch Disk Cleanup
+
+rem # "cleanmgr /lowdisk" selects all options as default
+rem # "cleanmgr /verylowdisk" selects all options and deletes files without prompt
+
+cleanmgr /verylowdisk
+
+
+
 PAUSE
