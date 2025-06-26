@@ -803,7 +803,9 @@ DisableNull.bat / EnableNull.bat (required for Discord and Android Debug Bridge:
 
 TCP_AutoTuning.bat
 
-EnableServices.reg (turn on default services) 
+EnableServices.reg (turn on default services)
+
+DeleteWindowsOLD.bat (removes Windows.old directory)
 
 # Credits
 - https://www.elevenforum.com/members/garlin.5387
