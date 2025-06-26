@@ -203,4 +203,7 @@ SetACL.exe -on "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\The
 SetACL.exe -on "C:\WINDOWS\Fonts" -ot file -actn setowner -ownr "n:Administrators"
 SetACL.exe -on "C:\WINDOWS\Fonts" -ot file -actn ace -ace "n:Administrators;p:full"
 
+SetACL.exe -on "C:\Windows.old" -ot file -actn setowner -ownr "n:Administrators"
+SetACL.exe -on "C:\Windows.old" -ot file -actn ace -ace "n:Administrators;p:full"
+
 PAUSE
