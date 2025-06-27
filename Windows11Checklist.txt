@@ -98,6 +98,10 @@ Doing a "Refresh your PC: Local reinstall" will NOT install deleted Windows apps
 
 Windows 11 Home keys cant be used with Windows 11 Home N edition
 
+Delete Microsoft Cloud backups:
+ - Login to Microsoft page (https://account.microsoft.com)
+ - Devices > Cloud synced settings > Clear stored settings > Clear
+
 If Windows doesnt recognize a USB stick, format it with Rufus
 
 TLS1.2 required for Windows Update and DISM
