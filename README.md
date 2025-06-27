@@ -809,7 +809,7 @@ DeleteWindowsOLD.bat (removes Windows.old directory)
 
 DeleteWindowsBackups.bat
 
-DisableVolumeShadowCopy.bat / EnableVolumeShadowCopy.bat
+DisableVSS.bat / EnableVSS.bat
 
 # Credits
 - https://www.elevenforum.com/members/garlin.5387
