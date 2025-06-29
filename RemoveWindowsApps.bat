@@ -8,15 +8,17 @@ rem # Add-AppxPackage installs apps
 
 rem # Do NOT uninstall "Microsoft.UI.Xaml.CBS", causes constant screen flickering and blinking
 
-rem # !!!WARNING!!!
+rem # !!! WARNING !!!
+
 rem # This script may delete Windows Apps you use, do a back up in case anything is lost you need
-rem # !!!WARNING!!!
+
+rem # !!! WARNING !!!
 
 rem # REBOOT RECOMMENDED
 
 PAUSE
 
-rem # EnableStore.bat and EnableMaintenanceServices.bat required for this script to function if DisableServices.bat was executed
+rem # EnableStore.bat, EnableMaintenanceServices.bat, and EnableTLS1.2.bat required for this script to function if DisableServices*.bat and DisableSSL+LegacyTLS.bat was executed
 
 PAUSE
 
