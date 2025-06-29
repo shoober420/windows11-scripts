@@ -162,7 +162,7 @@ powershell -command "Get-AppxPackage -AllUsers *Microsoft.MicrosoftOfficeHub* | 
 
 powershell -command "Get-AppxPackage -AllUsers *microsoft.windowscommunicationsapps* | Remove-AppxPackage"
 
-powershell -command "Get-AppxPackage -AllUsers *Microsoft.WindowsTerminal* | Remove-AppxPackage"
+rem powershell -command "Get-AppxPackage -AllUsers *Microsoft.WindowsTerminal* | Remove-AppxPackage"
 
 powershell -command "Get-AppxPackage -AllUsers *devhome* | Remove-AppxPackage"
 
