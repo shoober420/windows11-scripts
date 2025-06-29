@@ -1,6 +1,10 @@
 rem # Disable TLS 1.2
 
-rem # TLS 1.2 or lower is required for Windows Update and DISM to work, TLS 1.3 not supported yet
+rem # !!! WARNING !!!
+
+rem # TLS 1.2 or lower is required for Windows Update, DISM, and Discord to work, TLS 1.3 not supported yet
+
+rem # !!! WARNING !!!
 
 PAUSE
 
