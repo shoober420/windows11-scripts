@@ -43,4 +43,39 @@ cd "%~dp0"
 call DisableServicesAMD.bat
 cd "%~dp0"
 
+@echo off
+
+echo.
+echo 1. Uninstall Windows Terminal
+echo 2. SKIP
+echo C. Cancel
+echo.
+choice /c 12C /m "Choose an option :"
+
+if 3 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 2 EQU %ERRORLEVEL% (
+   call :skipster
+) else if 1 EQU %ERRORLEVEL% (
+   call :delterm
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:delterm
+echo User chose Uninstall Windows Terminal
+
+call RemoveWindowsTerminal.bat
+
+goto :end
+
+:skipster
+echo User chose SKIP
+
+goto :end
+
+:end
+
 PAUSE
