@@ -1,6 +1,10 @@
 rem # Expert Installation script
+
 rem # Launches scripts to disable Windows Defender and other security features
-rem # Launch in SAFE MODE
+
+rem # Recommended to launch in SAFE MODE
+
+PAUSE
 
 cd "%~dp0"
 
