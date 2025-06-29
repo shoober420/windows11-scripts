@@ -819,6 +819,7 @@ DisableVSS.bat / EnableVSS.bat
 - foss-lover34
 - brusk9060
 - dersk111y
+- V3nilla
 - https://github.com/AlchemyTweaks
 - https://github.com/TairikuOokami
 - https://github.com/ionuttbara
