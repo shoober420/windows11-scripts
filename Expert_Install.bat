@@ -67,7 +67,7 @@ goto :eof
 :amddaldram
 echo User chose Enable AMDGPU: DalDramClockChangeLatencyNs tweak
 
-call RemoveWindowsTerminal.bat
+call EnableAMDGPU_DalDramClockChangeLatencyNs.bat
 
 goto :end
 
