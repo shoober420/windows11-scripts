@@ -111,13 +111,10 @@ cd "%~dp0"
 call RemoveRemoteDesktopConnection.bat
 cd "%~dp0"
 
-rem # TO AVOID TERMINAL CLOSING, LAUNCH IN SEPERATE WINDOW
-start cmd /k RemoveWindowsApps.bat
-PAUSE
+call RemoveWindowsApps.bat
 cd "%~dp0"
 
-start cmd /k RemoveWindowsFeatures.bat
-PAUSE
+call RemoveWindowsFeatures.bat
 cd "%~dp0"
 
 call EnableSerializeTimerExpiration.bat
