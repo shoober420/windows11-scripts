@@ -8,6 +8,8 @@ rem # "Get-WindowsOptionalFeature -Online" shows installed features
 
 rem # Possible AUTO-REBOOT if ran without admin privileges
 
+rem # EnableMaintenanceServices and EnableTLS1.2.bat reuqired if DisableServices*.bat and DisableSSL+LegacyTLS.bat was executed
+
 rem # REBOOT RECOMMENDED
 
 PAUSE
