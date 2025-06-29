@@ -13,6 +13,8 @@ rem # !!! WARNING !!!
 
 rem # Launch EnableTLS1.2.bat when running Windows Update, DISM, and Discord
 
+rem # DTLS = Datagram Transport Layer Security: for low latency
+
 PAUSE
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0\Client" /v "Enabled" /t REG_DWORD /d "0" /f
