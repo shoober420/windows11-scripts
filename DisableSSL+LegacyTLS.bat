@@ -4,11 +4,14 @@ rem # Disable legacy DTLS1.0, DTLS1.1, and DTLS1.2
 rem # Force Enable TLS1.3 and DTLS1.3
 
 rem # !!! WARNING !!!
-rem # Breaks Windows Update and DISM
-rem # Windows Update and DISM require TLS1.2
+
+rem # Breaks Windows Update, DISM, and Discord
+
+rem # Windows Update, DISM, and Discord require TLS1.2
+
 rem # !!! WARNING !!!
 
-rem # Launch EnableTLS1.2.bat when running Windows Update
+rem # Launch EnableTLS1.2.bat when running Windows Update, DISM, and Discord
 
 PAUSE
 
