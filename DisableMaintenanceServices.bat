@@ -59,4 +59,10 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\Dhcp" /v "Start" /t REG_DWORD /d
 
 bcdedit /set dhcp Off
 
+call DisableWindowsUpdate.bat
+
+call DisableStore.bat
+
+call DisableUI.bat
+
 PAUSE
