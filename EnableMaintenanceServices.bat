@@ -2,6 +2,7 @@ rem # Enables maintenance services for adding and removing windows features and 
 
 rem # Required for Battle.net installer
 rem # Required for Epic Games Launcher installer
+rem # Required for Minecraft Installer
 
 rem # "Get-WindowsOptionalFeature -Online" shows enabled features
 
