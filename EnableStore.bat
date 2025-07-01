@@ -1,5 +1,7 @@
 rem # Enable Microsoft Store App
 
+rem # Required for Minecraft
+
 reg add "HKLM\Software\Policies\Microsoft\PushToInstall" /v "DisablePushToInstall" /t REG_DWORD /d "0" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\NcbService" /v "Start" /t REG_DWORD /d "2" /f
