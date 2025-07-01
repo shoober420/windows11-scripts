@@ -50,6 +50,51 @@ cd "%~dp0"
 @echo off
 
 echo.
+echo 1. Install Microsoft Store
+echo 2. Remove Microsoft Store (BREAKS MINECRAFT)
+echo 3. SKIP
+echo C. Cancel
+echo.
+choice /c 1234C /m "Choose an option :"
+
+if 4 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 3 EQU %ERRORLEVEL% (
+   call :skippert
+) else if 2 EQU %ERRORLEVEL% (
+   call :ustore
+) else if 1 EQU %ERRORLEVEL% (
+   call :istore
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:istore
+echo User chose Install Microsoft Store
+
+call InstallStore.bat
+
+goto :end
+
+:ustore
+echo User chose Remove Microsoft Store
+
+call RemoveStore.bat
+
+goto :end
+
+:skippert
+echo User chose SKIP
+
+goto :end
+
+:end
+
+
+
+echo.
 echo 1. Enable AMDGPU: DalDramClockChangeLatencyNs tweak
 echo 2. SKIP
 echo C. Cancel
