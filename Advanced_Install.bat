@@ -653,6 +653,41 @@ goto :end
 :end
 
 echo.
+echo 1. Enable Microsoft Store
+echo 2. Disable Microsoft Store
+echo C. Cancel
+echo.
+choice /c 123C /m "Choose an option :"
+
+if 3 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 2 EQU %ERRORLEVEL% (
+   call :dstore
+) else if 1 EQU %ERRORLEVEL% (
+   call :estore
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:estore
+echo User chose Enable Microsoft Store
+
+call EnableStore.bat
+
+goto :end
+
+:dstore
+echo User chose Disable Microsoft Store
+
+call DisableStore.bat
+
+goto :end
+
+:end
+
+echo.
 echo 1. Vim
 echo 2. Notepad++
 echo 3. SKIP
