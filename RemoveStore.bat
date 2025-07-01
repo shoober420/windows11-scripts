@@ -12,4 +12,6 @@ powershell -command "Get-AppxPackage -AllUsers *Microsoft.WindowsStore* | Remove
 
 powershell -command "Get-AppxPackage -AllUsers *Microsoft.StorePurchaseApp* | Remove-AppxPackage"
 
+winget uninstall 9WZDNCRFJBMP
+
 PAUSE
