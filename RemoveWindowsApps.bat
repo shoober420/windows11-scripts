@@ -226,7 +226,7 @@ powershell -command "Get-AppxPackage -AllUsers *Microsoft.Whiteboard* | Remove-A
 
 powershell -command "Get-AppxPackage -AllUsers *Microsoft.Windows.Photos* | Remove-AppxPackage"
 
-powershell -command "Get-AppxPackage -AllUsers *Microsoft.WindowsStore* | Remove-AppxPackage"
+rem powershell -command "Get-AppxPackage -AllUsers *Microsoft.WindowsStore* | Remove-AppxPackage"
 
 powershell -command "Get-AppxPackage -AllUsers *Microsoft.RemoteDesktop* | Remove-AppxPackage"
 
@@ -354,7 +354,7 @@ powershell -command "Get-AppxPackage -AllUsers *Microsoft.WidgetsPlatformRuntime
 
 powershell -command "Get-AppxPackage -AllUsers *RivetNetworks.KillerControlCenter* | Remove-AppxPackage"
 
-powershell -command "Get-AppxPackage -AllUsers *Microsoft.StorePurchaseApp* | Remove-AppxPackage"
+rem powershell -command "Get-AppxPackage -AllUsers *Microsoft.StorePurchaseApp* | Remove-AppxPackage"
 
 powershell -command "Get-AppxPackage -AllUsers *Microsoft.StartExperiencesApp* | Remove-AppxPackage"
 
