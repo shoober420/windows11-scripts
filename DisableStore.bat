@@ -1,5 +1,13 @@
 rem # Disable Microsoft Store App
 
+rem # !!! WARNING !!!
+
+rem # BREAKS MINECRAFT
+
+rem # !!! WARNING !!!
+
+PAUSE
+
 net stop NcbService
 net stop camsvc
 net stop UdkUserSvc
