@@ -88,4 +88,10 @@ net start sppsvc
 net start Dhcp
 net start seclogon
 
+call EnableWindowsUpdate.bat
+
+call EnableStore.bat
+
+call EnableUI.bat
+
 PAUSE
