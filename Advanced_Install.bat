@@ -654,7 +654,7 @@ goto :end
 
 echo.
 echo 1. Enable Microsoft Store
-echo 2. Disable Microsoft Store
+echo 2. Disable Microsoft Store (BREAKS MINECRAFT)
 echo C. Cancel
 echo.
 choice /c 123C /m "Choose an option :"
@@ -679,7 +679,7 @@ call EnableStore.bat
 goto :end
 
 :dstore
-echo User chose Disable Microsoft Store
+echo User chose Disable Microsoft Store (BREAKS MINECRAFT)
 
 call DisableStore.bat
 
