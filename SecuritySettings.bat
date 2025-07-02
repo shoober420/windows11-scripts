@@ -9,7 +9,7 @@ rem # !!! WARNING !!!
 rem # NOT COMPATIBLE WITH THESE ANTICHEATS:
 
 rem # FACEIT
-rem # VANGUARD (Valorant)
+rem # VANGUARD (Valorant / League of Legends)
 
 rem # !!! WARNING !!!
 
