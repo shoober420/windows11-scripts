@@ -178,6 +178,8 @@ cd "%~dp0"
 call RefreshRate.bat
 cd "%~dp0"
 
+
+
 @echo off
 
 echo.
@@ -215,6 +217,8 @@ goto :end
 
 :end
 
+
+
 echo.
 echo 1. BLUETOOTH ENABLED
 echo 2. BLUETOOTH DISABLED
@@ -250,6 +254,8 @@ goto :end
 
 :end
 
+
+
 echo.
 echo 1. TPM + BitLocker ENABLED
 echo 2. TPM + BitLocker DISABLED
@@ -284,6 +290,8 @@ call Decrypt+OSCompression.bat
 goto :end
 
 :end
+
+
 
 echo.
 echo 1. Static IP Connection
@@ -321,6 +329,8 @@ goto :end
 
 :end
 
+
+
 echo.
 echo 1. NVIDIA GPU
 echo 2. AMD GPU
@@ -356,6 +366,8 @@ goto :end
 
 :end
 
+
+
 echo.
 echo 1. CPU Mitigations ENABLED
 echo 2. CPU Mitigations DISABLED
@@ -390,6 +402,8 @@ call EnableCPUMitigations.bat
 goto :end
 
 :end
+
+
 
 echo.
 echo 1. TouchPad ENABLED
@@ -428,6 +442,8 @@ goto :end
 
 cd "%~dp0"
 
+
+
 ECHO R | powershell.exe ./DisableNetBIOS.ps1
 cd "%~dp0"
 
@@ -443,6 +459,8 @@ cd "%~dp0"
 ECHO R | powershell.exe ./DisablePowerManagement.ps1
 
 cd "%~dp0"
+
+
 
 echo.
 echo 1. Windows Services ENABLED
@@ -479,6 +497,8 @@ goto :end
 
 cd "%~dp0"
 
+
+
 echo.
 echo 1. Keep Firewall Rules
 echo 2. Remove Firewall Rules
@@ -513,6 +533,8 @@ goto :end
 :end
 
 cd "%~dp0"
+
+
 
 echo.
 echo 1. Enable Windows 95 Theme
@@ -549,6 +571,8 @@ goto :end
 
 cd "%~dp0"
 
+
+
 echo.
 echo 1. Enable Solid Color Background
 echo 2. Keep Current Wallpaper
@@ -583,6 +607,8 @@ goto :end
 :end
 
 cd "%~dp0"
+
+
 
 echo.
 echo 1. Enable Windows 95 Vaporwave Accent Colors
@@ -619,6 +645,8 @@ goto :end
 
 cd "%~dp0"
 
+
+
 echo.
 echo 1. Force 96 Monitor DPI (Better mouse movement) (MAY CAUSE BLURRY TEXT IN CERTAIN APPS)
 echo 2. Keep Current Monitor DPI
@@ -651,6 +679,8 @@ call DisablePerProcessSystemDPI.bat
 goto :end
 
 :end
+
+
 
 echo.
 echo 1. Enable Microsoft Store
@@ -686,6 +716,53 @@ call DisableStore.bat
 goto :end
 
 :end
+
+
+
+echo.
+echo 1. Install Microsoft Store
+echo 2. Remove Microsoft Store (BREAKS MINECRAFT)
+echo 3. SKIP
+echo C. Cancel
+echo.
+choice /c 1234C /m "Choose an option :"
+
+if 4 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 3 EQU %ERRORLEVEL% (
+   call :skippert
+) else if 2 EQU %ERRORLEVEL% (
+   call :ustore
+) else if 1 EQU %ERRORLEVEL% (
+   call :istore
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:istore
+echo User chose Install Microsoft Store
+
+call InstallStore.bat
+
+goto :end
+
+:ustore
+echo User chose Remove Microsoft Store
+
+call RemoveStore.bat
+
+goto :end
+
+:skippert
+echo User chose SKIP
+
+goto :end
+
+:end
+
+
 
 echo.
 echo 1. Vim
