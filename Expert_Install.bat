@@ -95,6 +95,43 @@ goto :end
 
 
 echo.
+echo 1. Enable NULL service
+echo 2. Disable NULL service (breaks Discord and Android Debug Bridge) 
+echo C. Cancel
+echo.
+choice /c 12C /m "Choose an option :"
+
+if 3 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 2 EQU %ERRORLEVEL% (
+   call :dnull
+) else if 1 EQU %ERRORLEVEL% (
+   call :enull
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:enull
+echo User chose Enable NULL service
+
+call EnableNull.bat
+
+goto :end
+
+:dnull
+echo User chose Disable NULL service (breaks Discord and Android Debug Bridge)
+
+call DisableNull.bat
+
+goto :end
+
+:end
+
+
+
+echo.
 echo 1. Enable AMDGPU: DalDramClockChangeLatencyNs tweak
 echo 2. SKIP
 echo C. Cancel
