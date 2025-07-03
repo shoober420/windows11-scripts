@@ -62,6 +62,55 @@ rem # Black (RGB: 0 0 0 / BGR: 0 0 0) = 0x00000000 / 0x00000000
 rem # Win95 BSoD (RGB: 0 0 168 / BGR: 168 0 0) = 0xff0000a8 / 0xffa80000
 rem # Microsoft Blue (RGB: 0 162 237 / BGR: 237 162 0) = 0xff00a2ed / 0xffeda200
 
+
+
+@echo off
+
+echo.
+echo Light or Dark Theme
+echo.
+echo 1. Dark Theme
+echo 2. Light Theme
+echo C. Cancel
+echo.
+choice /c 12C /m "Choose an option :"
+
+if 3 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 2 EQU %ERRORLEVEL% (
+   call :light
+) else if 1 EQU %ERRORLEVEL% (
+   call :dark
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:light
+echo User chose Light Theme
+
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AppsUseLightTheme" /t REG_DWORD /d "1" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "SystemUsesLightTheme" /t REG_DWORD /d "1" /f
+rem reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "ColorPrevalence" /t REG_DWORD /d "0" /f
+
+rem reg add "HKCU\Control Panel\Colors" /v "Window" /t REG_SZ /d "242 242 242" /f
+rem reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Window" /t REG_DWORD /d "" /f
+rem reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Window" /t REG_DWORD /d "" /f
+
+goto :end
+
+:dark
+echo User chose Dark Theme
+
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AppsUseLightTheme" /t REG_DWORD /d "0" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "SystemUsesLightTheme" /t REG_DWORD /d "0" /f
+rem reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "ColorPrevalence" /t REG_DWORD /d "1" /f
+
+goto :end
+
+:end
+
 rem # Remove High Contrast Themes (to restore run "sfc /scannow")
 takeown /s %computername% /u %username% /f "C:\Windows\Resources\Ease of Access Themes\hc1.theme"
 takeown /s %computername% /u %username% /f "C:\Windows\Resources\Ease of Access Themes\hc2.theme"
@@ -293,53 +342,6 @@ reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\History\Colors
 
 
 @echo off
-
-@echo off
-
-echo.
-echo Light or Dark Theme
-echo.
-echo 1. Dark Theme
-echo 2. Light Theme
-echo C. Cancel
-echo.
-choice /c 12C /m "Choose an option :"
-
-if 3 EQU %ERRORLEVEL% (
-   echo User chose to cancel.
-) else if 2 EQU %ERRORLEVEL% (
-   call :light
-) else if 1 EQU %ERRORLEVEL% (
-   call :dark
-) else if 0 EQU %ERRORLEVEL% (
-   echo User bailed out.
-)
-
-goto :eof
-
-:light
-echo User chose Light Theme
-
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AppsUseLightTheme" /t REG_DWORD /d "1" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "SystemUsesLightTheme" /t REG_DWORD /d "1" /f
-rem reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "ColorPrevalence" /t REG_DWORD /d "0" /f
-
-rem reg add "HKCU\Control Panel\Colors" /v "Window" /t REG_SZ /d "242 242 242" /f
-rem reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Window" /t REG_DWORD /d "" /f
-rem reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Window" /t REG_DWORD /d "" /f
-
-goto :end
-
-:dark
-echo User chose Dark Theme
-
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AppsUseLightTheme" /t REG_DWORD /d "0" /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "SystemUsesLightTheme" /t REG_DWORD /d "0" /f
-rem reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "ColorPrevalence" /t REG_DWORD /d "1" /f
-
-goto :end
-
-:end
 
 echo.
 echo Title Bar Color
