@@ -824,6 +824,7 @@ LaunchStore.bat
 - brusk9060
 - dersk111y
 - V3nilla
+- https://github.com/Batleman
 - https://github.com/AlchemyTweaks
 - https://github.com/TairikuOokami
 - https://github.com/ionuttbara
