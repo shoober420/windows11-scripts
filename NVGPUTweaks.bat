@@ -10,7 +10,7 @@ rem # Monitors and resets graphics cards that aren't responding quickly enough
 
 rem # https://github.com/Batleman
 rem # https://github.com/shoober420/windows11-scripts/issues/6
-rem # Digital Display Compression / Display Stream Compression (DSC)
+rem # Digital Screen Compression / Display Stream Compression (DSC)
 rem # Black screen will occur if used with DSC monitors and "EnableTiledDisplay" is disabled (0)
 
 rem # RECOMMENDED TO DISABLE ONBOARD INTEGRATED GPU IN BIOS AND DEVICE MANAGER AND USE DEDICATED GPU ONLY
