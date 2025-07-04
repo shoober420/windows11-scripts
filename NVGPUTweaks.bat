@@ -426,4 +426,6 @@ REG ADD "HKEY_CURRENT_USER\Software\NVIDIA Corporation\Global\NVTweak" /v "Gesta
 rem # Use NVIDIA Old Sharpening Filter
 reg add "HKLM\SYSTEM\CurrentControlSet\services\nvlddmkm\FTS" /v "EnableGR535" /t REG_DWORD /d 0 /f
 
+call NV_DSCTweak.bat
+
 PAUSE
