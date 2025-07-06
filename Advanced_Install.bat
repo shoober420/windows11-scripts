@@ -220,6 +220,51 @@ goto :end
 
 
 echo.
+echo 1. Disable Security Settings (BREAKS CERTAIN ANTICHEATS)
+echo 2. Enable Security Settings
+echo 3. SKIP
+echo C. Cancel
+echo.
+choice /c 123C /m "Choose an option :"
+
+if 4 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 3 EQU %ERRORLEVEL% (
+   call :skipsterzz
+) else if 2 EQU %ERRORLEVEL% (
+   call :secon
+) else if 1 EQU %ERRORLEVEL% (
+   call :secoff
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:secoff
+echo User chose Disable Security Settings (BREAKS CERTAIN ANTICHEATS)
+
+call SecuritySettings.bat
+
+goto :end
+
+:secon
+echo User chose Disable Security Settings (ANTICHEAT SUPPORT)
+
+call SecuritySettings_AntiCheat.bat
+
+goto :end
+
+:skipsterzz
+echo User chose SKIP
+
+goto :end
+
+:end
+
+
+
+echo.
 echo 1. BLUETOOTH ENABLED
 echo 2. BLUETOOTH DISABLED
 echo C. Cancel
