@@ -66,9 +66,6 @@ cd "%~dp0"
 call InternetSettings.bat
 cd "%~dp0"
 
-call SecuritySettings.bat
-cd "%~dp0"
-
 call MouseAccelFix.bat
 cd "%~dp0"
 
@@ -221,7 +218,7 @@ goto :end
 
 echo.
 echo 1. Disable Security Settings (BREAKS CERTAIN ANTICHEATS)
-echo 2. Enable Security Settings
+echo 2. Disable Security Settings (ANTICHEAT SUPPORT)
 echo 3. SKIP
 echo C. Cancel
 echo.
