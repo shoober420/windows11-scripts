@@ -229,7 +229,7 @@ if 4 EQU %ERRORLEVEL% (
 ) else if 3 EQU %ERRORLEVEL% (
    call :skipsterzz
 ) else if 2 EQU %ERRORLEVEL% (
-   call :secon
+   call :secac
 ) else if 1 EQU %ERRORLEVEL% (
    call :secoff
 ) else if 0 EQU %ERRORLEVEL% (
@@ -245,7 +245,7 @@ call SecuritySettings.bat
 
 goto :end
 
-:secon
+:secac
 echo User chose Disable Security Settings (ANTICHEAT SUPPORT)
 
 call SecuritySettings_AntiCheat.bat
