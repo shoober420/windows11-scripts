@@ -86,39 +86,4 @@ goto :end
 
 :end
 
-
-
-echo.
-echo 1. Enable AMDGPU: DalDramClockChangeLatencyNs tweak
-echo 2. SKIP
-echo C. Cancel
-echo.
-choice /c 12C /m "Choose an option :"
-
-if 3 EQU %ERRORLEVEL% (
-   echo User chose to cancel.
-) else if 2 EQU %ERRORLEVEL% (
-   call :skipsters
-) else if 1 EQU %ERRORLEVEL% (
-   call :amddaldram
-) else if 0 EQU %ERRORLEVEL% (
-   echo User bailed out.
-)
-
-goto :eof
-
-:amddaldram
-echo User chose Enable AMDGPU: DalDramClockChangeLatencyNs tweak
-
-call EnableAMDGPU_DalDramClockChangeLatencyNs.bat
-
-goto :end
-
-:skipsters
-echo User chose SKIP
-
-goto :end
-
-:end
-
 PAUSE
