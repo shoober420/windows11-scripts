@@ -687,9 +687,9 @@ DisableSSDPDiscovery.bat
 
 DisableNVIDIAContainer.bat
 
-DisableServicesInternet.bat
+DisableServicesInternet.bat / EnableServicesInternet.bat
 
-DisableServicesWindows.bat
+DisableServicesWindows.bat / EnableServicesWindows.bat
 
 DisableServicesIntel.bat
 
@@ -802,8 +802,6 @@ InstallVim.bat
 DisableNull.bat / EnableNull.bat (required for Discord and Android Debug Bridge: ADB)
 
 TCP_AutoTuning.bat
-
-EnableServices.reg (turn on default services)
 
 DeleteWindowsOLD.bat (removes Windows.old directory)
 
