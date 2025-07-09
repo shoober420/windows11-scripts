@@ -30,6 +30,85 @@ cd "%USERPROFILE%\Downloads\windows11-scripts"
 ECHO R | powershell.exe ./SetACL.bat
 cd "%USERPROFILE%\Downloads"
 
+
+
+net stop AJRouter
+net stop ALG
+net stop Dfsc
+net stop dmwappushservice
+net stop dmwappushsvc
+net stop EapHost
+net stop edgeupdate
+net stop edgeupdatem
+net stop fdPHost
+net stop FDResPub
+net stop icssvc
+net stop IKEEXT
+net stop iphlpsvc
+net stop IpxlatCfgSvc
+net stop KtmRm
+net stop LanmanServer
+net stop LanmanWorkstation
+net stop lfsvc
+net stop lltdio
+net stop lltdsvc
+net stop lmhosts
+net stop MicrosoftEdgeElevationService
+net stop MSDTC
+net stop MsLldp
+net stop NcaSvc
+net stop NcbService
+net stop NcdAutoSetup
+net stop NdisCap
+net stop Ndu
+net stop NetBIOS
+net stop NetBT
+net stop Netlogon
+net stop NlaSvc
+net stop p2pimsvc
+net stop p2psvc
+net stop P9Rdr
+net stop P9RdrService
+net stop PNRPAutoReg
+net stop PNRPsvc
+net stop Psched
+net stop RasAcd
+net stop RasAuto
+net stop Rasl2tp
+net stop RasMan
+net stop RasPppoe
+net stop RasSstp
+net stop rdpbus
+net stop RmSvc
+net stop rspndr
+net stop SessionEnv
+net stop SharedAccess
+net stop smphost
+net stop SmsRouter
+net stop SNMPTrap
+net stop SSDPSRV
+net stop ssh-agent
+net stop SstpSvc
+net stop TapiSrv
+net stop Tcpip6
+net stop tcpipreg
+net stop TermService
+net stop TrkWks
+net stop UmRdpService
+net stop upnphost
+net stop vwififlt
+net stop wanarp
+net stop wanarpv4
+net stop wanarpv6
+net stop Wcmsvc
+net stop wcncsvc
+net stop WebClient
+net stop WFDSConMgrSvc
+net stop WinRM
+net stop WwanSvc
+
+
+
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\AJRouter" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\ALG" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Dfsc" /v "Start" /t REG_DWORD /d "4" /f
