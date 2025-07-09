@@ -360,7 +360,20 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\WpnUserService" /v "Start" /t RE
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\WSAIFabricSvc" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\WSearch" /v "Start" /t REG_DWORD /d "4" /f
 
+
+
 rem # Virtualization services
+
+net stop HvHost
+net stop vmickvpexchange
+net stop vmicguestinterface
+net stop vmicshutdown
+net stop vmicheartbeat
+net stop vmicvmsession
+net stop vmicrdv
+net stop vmictimesync
+net stop vmicvss
+net stop wcifs
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\HvHost" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\vmickvpexchange" /v "Start" /t REG_DWORD /d "4" /f
@@ -375,6 +388,13 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\wcifs" /v "Start" /t REG_DWORD /
 
 rem # Killer NIC services
 
+net stop "Killer Network Service"
+net stop KAPSService
+net stop "Killer Analytics Service"
+net stop KNDBWM
+net stop KillerSmartphoneSleepService
+net stop "Killer Provider Data Helper Service"
+
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Killer Network Service" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\KAPSService" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Killer Analytics Service" /v "Start" /t REG_DWORD /d "4" /f
@@ -383,6 +403,17 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\KillerSmartphoneSleepService" /v
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Killer Provider Data Helper Service" /v "Start" /t REG_DWORD /d "4" /f
 
 rem # ASUS bloat services
+
+net stop ArmouryCrateControlInterface
+net stop AsusAppService
+net stop ASUSLinkNear
+net stop ASUSLinkRemote
+net stop ASUSOptimization
+net stop ASUSSoftwareManager
+net stop ASUSSwitch
+net stop ASUSSystemAnalysis
+net stop ASUSSystemDiagnosis
+net stop asus
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\ArmouryCrateControlInterface" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\AsusAppService" /v "Start" /t REG_DWORD /d "4" /f
@@ -396,6 +427,8 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\ASUSSystemDiagnosis" /v "Start" 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\asus" /v "Start" /t REG_DWORD /d "4" /f
 
 rem # Disable CCleaner Performance Optimizer Service
+
+net stop CCleanerPerformanceOptimizerService
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\CCleanerPerformanceOptimizerService" /v "Start" /t REG_DWORD /d "4" /f
 
 PAUSE
