@@ -140,9 +140,6 @@ call DWM_ExclusiveModeFramerateAveragingPeriodMs.bat
 cd "%~dp0"
 
 call DWM_Tweaks.bat
-cd "%~dp0"
-
-call DisableServicesInternet.bat
 
 cd "%~dp0"
 
@@ -505,14 +502,64 @@ cd "%~dp0"
 
 
 echo.
-echo 1. Windows Services ENABLED
-echo 2. Windows Services DISABLED
+echo 1. Internet Services ENABLED
+echo 2. Internet Services DISABLED (BREAKS VPN)
+echo 3. SKIP
 echo C. Cancel
 echo.
-choice /c 12C /m "Choose an option :"
+choice /c 123C /m "Choose an option :"
 
-if 3 EQU %ERRORLEVEL% (
+if 4 EQU %ERRORLEVEL% (
    echo User chose to cancel.
+) else if 3 EQU %ERRORLEVEL% (
+   call :skipplez
+) else if 2 EQU %ERRORLEVEL% (
+   call :innernetoff
+) else if 1 EQU %ERRORLEVEL% (
+   call :innerneton
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:innerneton
+echo User chose Internet Services ENABLED
+
+call EnableServicesInternet.bat
+
+goto :end
+
+:innernetoff
+echo User chose Internet Services DISABLED (BREAKS VPN)
+
+call DisableServicesInternet.bat
+
+goto :end
+
+:skipplez
+echo User chose SKIP
+
+goto :end
+
+:end
+
+cd "%~dp0"
+
+
+
+echo.
+echo 1. Windows Services ENABLED
+echo 2. Windows Services DISABLED (MAY BREAK SOME APPS)
+echo 3. SKIP
+echo C. Cancel
+echo.
+choice /c 123C /m "Choose an option :"
+
+if 4 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 3 EQU %ERRORLEVEL% (
+   call :skipples
 ) else if 2 EQU %ERRORLEVEL% (
    call :SVCOFF
 ) else if 1 EQU %ERRORLEVEL% (
@@ -526,12 +573,19 @@ goto :eof
 :SVCON
 echo User chose Windows Services ENABLED
 
+call EnableServicesWindows.bat
+
 goto :end
 
 :SVCOFF
-echo User chose Windows Services DISABLED
+echo User chose Windows Services DISABLED (MAY BREAK SOME APPS)
 
 call DisableServicesWindows.bat
+
+goto :end
+
+:skipples
+echo User chose SKIP
 
 goto :end
 
