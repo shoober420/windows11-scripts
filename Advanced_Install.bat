@@ -633,6 +633,49 @@ cd "%~dp0"
 
 
 echo.
+echo 1. Keep StartUp Apps
+echo 2. Remove StartUp Apps
+echo 3. SKIP
+echo C. Cancel
+echo.
+choice /c 123C /m "Choose an option :"
+
+if 4 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 3 EQU %ERRORLEVEL% (
+   call :skipplerzzzzz
+) else if 2 EQU %ERRORLEVEL% (
+   call :restartups
+) else if 1 EQU %ERRORLEVEL% (
+   call :keepstart
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:keepstart
+echo User chose Keep StartUp Apps
+
+goto :end
+
+:restartups
+echo User chose Remove StartUp Apps
+
+call RemoveStartUpApps.bat
+
+goto :end
+
+:skipplerzzzzz
+echo User chose Keep StartUp Apps
+
+goto :end
+
+:end
+
+
+
+echo.
 echo 1. Enable Windows 95 Theme
 echo 2. Keep Current Theme
 echo C. Cancel
