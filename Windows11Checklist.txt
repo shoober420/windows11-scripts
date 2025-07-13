@@ -102,6 +102,8 @@ Delete Microsoft Cloud backups:
  - Login to Microsoft page (https://account.microsoft.com)
  - Devices > Cloud synced settings > Clear stored settings > Clear
 
+DONT USE NoMoreDWM.exe, TOO RISKY! ONLY USE DWM SCRIPTS!
+
 If Windows doesnt recognize a USB stick, format it with Rufus
 
 TLS1.2 required for Windows Update and DISM
