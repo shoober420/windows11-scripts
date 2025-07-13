@@ -3,6 +3,8 @@ rem # Desktop Window Wanager (DWM) Tweaks
 rem # jdallmann
 rem # Kizzimo
 
+rem # https://github.com/AlchemyTweaks/Verified-Tweaks/blob/main/DWM/DWMAdjustablesd-jdallmann.bat
+rem # https://github.com/AlchemyTweaks/Verified-Tweaks/blob/main/DWM/DWMImmediateRender-Kizzimo.bat
 rem # https://sites.google.com/site/tweakradje/windows/windows-tweaking
 rem # https://forums.blurbusters.com/viewtopic.php?f=10&t=14501
 
