@@ -3,7 +3,14 @@ rem # Desktop Window Wanager (DWM) Tweaks
 rem # jdallmann
 rem # Kizzimo
 
+rem # https://sites.google.com/site/tweakradje/windows/windows-tweaking
+rem # https://forums.blurbusters.com/viewtopic.php?f=10&t=14501
+
+rem # Disable Draw List Caching for multiple windows
+rem # tweakradje = 1
+rem # blurbusters = 0
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableDrawListCaching" /t REG_DWORD /d "1" /f
+
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableHologramCompositor" /t REG_DWORD /d "1" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisallowNonDrawListRendering" /t REG_DWORD /d "1" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnableCpuClipping" /t REG_DWORD /d "1" /f
