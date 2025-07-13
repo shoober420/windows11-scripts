@@ -103,6 +103,7 @@ Delete Microsoft Cloud backups:
  - Devices > Cloud synced settings > Clear stored settings > Clear
 
 DONT USE NoMoreDWM.exe, TOO RISKY! ONLY USE DWM SCRIPTS!
+ - https://github.com/TK50P/NoMoreDWM
 
 If Windows doesnt recognize a USB stick, format it with Rufus
 
