@@ -76,7 +76,7 @@ net stop DevicePickerUserSvc
 net stop DevicesFlowUserSvc
 net stop DevQueryBroker
 net stop diagnosticshub.standardcollector.service
-net stop diagsvc
+rem net stop diagsvc
 net stop DispBrokerDesktopSvc
 net stop DisplayEnhancementService
 net stop DmEnrollmentSvc
