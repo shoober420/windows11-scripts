@@ -502,6 +502,88 @@ cd "%~dp0"
 
 
 echo.
+echo 1. Enable Microsoft Store
+echo 2. Disable Microsoft Store (BREAKS MINECRAFT)
+echo C. Cancel
+echo.
+choice /c 123C /m "Choose an option :"
+
+if 3 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 2 EQU %ERRORLEVEL% (
+   call :dstore
+) else if 1 EQU %ERRORLEVEL% (
+   call :estore
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:estore
+echo User chose Enable Microsoft Store
+
+call EnableStore.bat
+
+goto :end
+
+:dstore
+echo User chose Disable Microsoft Store (BREAKS MINECRAFT)
+
+call DisableStore.bat
+
+goto :end
+
+:end
+
+
+
+echo.
+echo 1. Install Microsoft Store
+echo 2. Remove Microsoft Store (BREAKS MINECRAFT)
+echo 3. SKIP
+echo C. Cancel
+echo.
+choice /c 1234C /m "Choose an option :"
+
+if 4 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 3 EQU %ERRORLEVEL% (
+   call :skippert
+) else if 2 EQU %ERRORLEVEL% (
+   call :ustore
+) else if 1 EQU %ERRORLEVEL% (
+   call :istore
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:istore
+echo User chose Install Microsoft Store
+
+call InstallStore.bat
+
+goto :end
+
+:ustore
+echo User chose Remove Microsoft Store
+
+call RemoveStore.bat
+
+goto :end
+
+:skippert
+echo User chose SKIP
+
+goto :end
+
+:end
+
+
+
+echo.
 echo 1. Internet Services ENABLED
 echo 2. Internet Services DISABLED (BREAKS VPN)
 echo 3. SKIP
@@ -821,85 +903,7 @@ goto :end
 
 
 
-echo.
-echo 1. Enable Microsoft Store
-echo 2. Disable Microsoft Store (BREAKS MINECRAFT)
-echo C. Cancel
-echo.
-choice /c 123C /m "Choose an option :"
 
-if 3 EQU %ERRORLEVEL% (
-   echo User chose to cancel.
-) else if 2 EQU %ERRORLEVEL% (
-   call :dstore
-) else if 1 EQU %ERRORLEVEL% (
-   call :estore
-) else if 0 EQU %ERRORLEVEL% (
-   echo User bailed out.
-)
-
-goto :eof
-
-:estore
-echo User chose Enable Microsoft Store
-
-call EnableStore.bat
-
-goto :end
-
-:dstore
-echo User chose Disable Microsoft Store (BREAKS MINECRAFT)
-
-call DisableStore.bat
-
-goto :end
-
-:end
-
-
-
-echo.
-echo 1. Install Microsoft Store
-echo 2. Remove Microsoft Store (BREAKS MINECRAFT)
-echo 3. SKIP
-echo C. Cancel
-echo.
-choice /c 1234C /m "Choose an option :"
-
-if 4 EQU %ERRORLEVEL% (
-   echo User chose to cancel.
-) else if 3 EQU %ERRORLEVEL% (
-   call :skippert
-) else if 2 EQU %ERRORLEVEL% (
-   call :ustore
-) else if 1 EQU %ERRORLEVEL% (
-   call :istore
-) else if 0 EQU %ERRORLEVEL% (
-   echo User bailed out.
-)
-
-goto :eof
-
-:istore
-echo User chose Install Microsoft Store
-
-call InstallStore.bat
-
-goto :end
-
-:ustore
-echo User chose Remove Microsoft Store
-
-call RemoveStore.bat
-
-goto :end
-
-:skippert
-echo User chose SKIP
-
-goto :end
-
-:end
 
 
 
