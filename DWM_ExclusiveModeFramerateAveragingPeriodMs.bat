@@ -6,6 +6,8 @@ rem # !!! WARNING !!!
 
 rem # May cause game freezing if value too low
 
+rem # low values (100 / 0x64) decrease fps for lower input latency, high values (1000 / 0x3e8) increase fps for higher input latency
+
 rem # Can be set lower when using SetTimerResolution -5000 (0.5ms)
 
 rem # !!! WARNING !!!
