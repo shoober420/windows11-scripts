@@ -10,7 +10,7 @@ rem # https://github.com/valleyofdoom/TimerResolution
 PAUSE
 
 cd %USERPROFILE%\Downloads\windows11-scripts-main
-call SetTimerResolution.bat
+rem call SetTimerResolution.bat
 
 cd %USERPROFILE%\Downloads\windows11-scripts-main
 call StartGraphicsPerfSvc.bat
@@ -33,8 +33,8 @@ call DisableAppX.bat
 cd %USERPROFILE%\Downloads\windows11-scripts-main
 call DisableWindowsConnectionManager.bat
 
-rem cd %USERPROFILE%\Downloads\windows11-scripts-main
-rem call DWM_ExclusiveModeFramerateAveragingPeriodMs.bat
+cd %USERPROFILE%\Downloads\windows11-scripts-main
+call DWM_ExclusiveModeFramerateAveragingPeriodMs.bat
 
 cd %USERPROFILE%\Downloads\windows11-scripts-main
 call DisableWMI.bat
