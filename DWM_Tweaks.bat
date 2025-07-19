@@ -8,6 +8,12 @@ rem # https://github.com/AlchemyTweaks/Verified-Tweaks/blob/main/DWM/DWMImmediat
 rem # https://sites.google.com/site/tweakradje/windows/windows-tweaking
 rem # https://forums.blurbusters.com/viewtopic.php?f=10&t=14501
 
+rem # Enable Independent Flip
+rem # Optimization technique for games that support "flip model" swapchains
+rem # Bypasses some DWM composition process, resulting in lower latency and better performance
+rem # BREAKS LOSSLESS SCALING PROGRAM WHEN DISABLED (1)
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableIndependentFlip" /t REG_DWORD /d "0" /f
+
 rem # Disable Draw List Caching for multiple windows
 rem # Kizzimo = 1
 rem # tweakradje / blurbusters = 0
@@ -133,7 +139,6 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "OverlayTestMode" /t REG_DWORD 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableDeviceBitmapsForMultiAdapter" /t REG_DWORD /d "1" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableDynamicShutdownUI" /t REG_DWORD /d "1" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "LogExpressionPerfStats" /t REG_DWORD /d "0" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableIndependentFlip" /t REG_DWORD /d "1" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "MouseWheelScrollingMode" /t REG_DWORD /d "1" /f
 
 rem # Disable DWM Input
