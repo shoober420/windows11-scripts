@@ -171,10 +171,10 @@ rem # Too low of a value can cause game freezing
 rem # Can be set lower when using SetTimerResolution -5000 (0.5ms)
 
 rem # Default (Hex / Decimal): 0x3e8 = 1000
-rem # 0x2ee = 750
-rem # 0x1f4 = 500
-rem # 0xfa = 250
-rem # 0x64 = 100
+rem # 0x2ee = 750 (FAST SYSTEMS ONLY)
+rem # 0x1f4 = 500 (VERY FAST SYSTEMS ONLY)
+rem # 0xfa = 250 (VERY VERY FAST SYSTEMS ONLY)
+rem # 0x64 = 100 (ULTRA FAST SYSTEMS ONLY)
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm\ExtendedComposition" /v "ExclusiveModeFramerateAveragingPeriodMs" /t REG_DWORD /d "0x3e8" /f
 
 PAUSE
