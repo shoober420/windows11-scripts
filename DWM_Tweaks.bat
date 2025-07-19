@@ -10,9 +10,14 @@ rem # https://forums.blurbusters.com/viewtopic.php?f=10&t=14501
 
 rem # Enable Independent Flip
 rem # Optimization technique for games that support "flip model" swapchains
-rem # Bypasses some DWM composition process, resulting in lower latency and better performance
+rem # Bypass some DWM composition, resulting in lower latency and better performance
 rem # BREAKS LOSSLESS SCALING PROGRAM WHEN DISABLED (1)
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableIndependentFlip" /t REG_DWORD /d "0" /f
+
+rem # Advanced Direct Flip
+rem # Bypass some DWM composition, resulting in lower latency and better performance
+rem # Kizzimo = 1
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableAdvancedDirectFlip" /t REG_DWORD /d "0" /f
 
 rem # Disable Draw List Caching for multiple windows
 rem # Kizzimo = 1
@@ -78,8 +83,6 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "AnimationAttributionEnabled" /
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "AnimationAttributionHashingEnabled" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "AnimationsShiftKey" /t REG_DWORD /d "0" /f
 
-rem # Kizzimo = 1
-reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableAdvancedDirectFlip" /t REG_DWORD /d "1" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnableCommonSuperSets" /t REG_DWORD /d "1" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnableDesktopOverlays" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnableEffectCaching" /t REG_DWORD /d "1" /f
