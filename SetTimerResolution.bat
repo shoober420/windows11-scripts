@@ -9,6 +9,6 @@ rem # --resolution 10000 = 1.0ms
 PAUSE
 
 cd "%USERPROFILE%\Downloads"
-start SetTimerResolution.exe --resolution 5000 --no-console
+start SetTimerResolution.exe --resolution 10000 --no-console
 
 PAUSE
