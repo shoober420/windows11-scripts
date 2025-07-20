@@ -28,10 +28,10 @@ rem # jdallmann = 1
 rem # tweakradje = 0
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisallowNonDrawListRendering" /t REG_DWORD /d "0" /f
 
-rem # Disable Draw List Caching
+rem # Enable Draw List Caching
 rem # Kizzimo = 1
 rem # tweakradje / blurbusters = 0
-reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableDrawListCaching" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableDrawListCaching" /t REG_DWORD /d "0" /f
 
 rem # Used for VR
 rem # tweakradje = 1
@@ -66,7 +66,7 @@ rem # WDDM 2.6
 rem # Super Wet Ink, allowing the creation of textures in formats and modes the IHVs doesn't natively support, resolving them as a resource projection to a format the hardware/drivers natively support, allowing internal drivers optimizations
 rem # jdallmann = 1
 rem # tweakradje = 0
-reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "SuperWetEnabled" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "SuperWetEnabled" /t REG_DWORD /d "1" /f
 
 rem # tweakradje = 1
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "ImageProcessing8bit" /t REG_DWORD /d "0" /f
@@ -110,7 +110,7 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnableCommonSuperSets" /t REG_
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnableDesktopOverlays" /t REG_DWORD /d "0" /f
 
 rem # Kizzimo = 1
-reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnableEffectCaching" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnableEffectCaching" /t REG_DWORD /d "1" /f
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnableFrontBufferRenderChecks" /t REG_DWORD /d "0" /f
 
