@@ -22,11 +22,11 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableAdvancedDirectFlip" /t 
 rem # Kizzimo = 0
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "MaxD3DFeatureLevel" /t REG_DWORD /d "1" /f
 
-rem # Enable Non Draw List Rendering
+rem # Disable Non Draw List Rendering
 rem # Draw List Rendering applies visual effects to windows
 rem # jdallmann = 1
 rem # tweakradje = 0
-reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisallowNonDrawListRendering" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisallowNonDrawListRendering" /t REG_DWORD /d "1" /f
 
 rem # Enable Draw List Caching
 rem # Kizzimo = 1
@@ -60,7 +60,7 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnableShadow" /t REG_DWORD /d 
 rem # WARP (Windows Advanced Rasterization Platform)
 rem # Software rendering if hardware acceleration isn't available
 rem # Kizzimo / tweakradje = 1
-reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "UseHWDrawListEntriesOnWARP" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "UseHWDrawListEntriesOnWARP" /t REG_DWORD /d "1" /f
 
 rem # WDDM 2.6
 rem # Super Wet Ink, allowing the creation of textures in formats and modes the IHVs doesn't natively support, resolving them as a resource projection to a format the hardware/drivers natively support, allowing internal drivers optimizations
@@ -94,7 +94,7 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "FlattenVirtualSurfaceEffectInp
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "InkGPUAccelOverrideVendorWhitelist" /t REG_DWORD /d "1" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "InteractionOutputPredictionDisabled" /t REG_DWORD /d "1" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "MPCInputRouterWaitForDebugger" /t REG_DWORD /d "0" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "OneCoreNoDWMRawGameController" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "OneCoreNoDWMRawGameController" /t REG_DWORD /d "1" /f
 
 rem # jdallmann / Kizzimo = 1
 rem # tweakradje = 0
