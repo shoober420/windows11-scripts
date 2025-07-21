@@ -75,7 +75,6 @@ rem # 1f4?
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "TelemetryFramesSequenceMaximumPeriodMilliseconds" /t REG_DWORD /d "0" /f
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "ForceDirectDrawSync" /t REG_DWORD /d "0" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "MaxQueuedPresentBuffers" /t REG_DWORD /d "0" /f
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DDisplayTestMode" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DebugFailFast" /t REG_DWORD /d "0" /f
@@ -298,6 +297,65 @@ goto :end
 echo User chose FrameLatency: 3 (SLOW COMPUTER) (VERY SMOOTH)
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "FrameLatency" /t REG_DWORD /d "3" /f
+
+goto :end
+
+:end
+
+
+
+echo.
+echo Max Queued Present Buffers
+echo.
+echo 1. MaxQueuedPresentBuffers: 0 (ULTRA FAST SYSTEM ONLY)
+echo 2. MaxQueuedPresentBuffers: 1
+echo 3. MaxQueuedPresentBuffers: 2
+echo 4. MaxQueuedPresentBuffers: 3 (VERY SMOOTH)
+echo C. Cancel
+echo.
+choice /c 1234C /m "Choose an option :"
+
+if 5 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 4 EQU %ERRORLEVEL% (
+   call :buff3
+) else if 3 EQU %ERRORLEVEL% (
+   call :buff2
+) else if 2 EQU %ERRORLEVEL% (
+   call :buff1
+) else if 1 EQU %ERRORLEVEL% (
+   call :buff0
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:buff0
+echo User chose MaxQueuedPresentBuffers: 0 (ULTRA FAST SYSTEM ONLY)
+
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "MaxQueuedPresentBuffers" /t REG_DWORD /d "0" /f
+
+goto :end
+
+:buff1
+echo User chose MaxQueuedPresentBuffers: 1
+
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "MaxQueuedPresentBuffers" /t REG_DWORD /d "1" /f
+
+goto :end
+
+:buff2
+echo User chose MaxQueuedPresentBuffers: 2
+
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "MaxQueuedPresentBuffers" /t REG_DWORD /d "2" /f
+
+goto :end
+
+:buff3
+echo User chose MaxQueuedPresentBuffers: 3
+
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "MaxQueuedPresentBuffers" /t REG_DWORD /d "3" /f
 
 goto :end
 
