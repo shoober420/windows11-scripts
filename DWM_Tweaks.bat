@@ -202,8 +202,8 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm\ExtendedComposition" /v "ExclusiveM
 echo.
 echo DWM Composition
 echo.
-echo 1. DWM Composition ON
-echo 2. DWM Composition OFF
+echo 1. DWM Composition ON (VERY SMOOTH)
+echo 2. DWM Composition OFF (LOWER LATENCY)
 echo C. Cancel
 echo.
 choice /c 12C /m "Choose an option :"
@@ -221,7 +221,7 @@ if 3 EQU %ERRORLEVEL% (
 goto :eof
 
 :compon
-echo User chose DWM Composition ON
+echo User chose DWM Composition ON (VERY SMOOTH)
 
 rem # Enable DWM Composition
 rem # CompositionPolicy: 1 = DWM OFF / 0 = DWM ON
@@ -237,7 +237,7 @@ reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DWM" /v "CompositionPolicy" /t
 goto :end
 
 :compoff
-echo User chose DWM Composition OFF
+echo User chose DWM Composition OFF (LOWER LATENCY)
 
 rem # Disable DWM Composition
 rem # CompositionPolicy: 1 = DWM OFF / 0 = DWM ON
