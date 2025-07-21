@@ -75,7 +75,6 @@ rem # 1f4?
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "TelemetryFramesSequenceMaximumPeriodMilliseconds" /t REG_DWORD /d "0" /f
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "ForceDirectDrawSync" /t REG_DWORD /d "0" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "FrameLatency" /t REG_DWORD /d "1" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "MaxQueuedPresentBuffers" /t REG_DWORD /d "0" /f
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DDisplayTestMode" /t REG_DWORD /d "0" /f
@@ -200,10 +199,51 @@ rem # Too low of a value can cause game freezing
 rem # Can be set lower when using SetTimerResolution -5000 (0.5ms)
 
 rem # Default (Hex / Decimal): 0x3e8 = 1000
-rem # 0x2ee = 750 (FAST SYSTEMS ONLY)
-rem # 0x1f4 = 500 (VERY FAST SYSTEMS ONLY)
-rem # 0xfa = 250 (VERY VERY FAST SYSTEMS ONLY)
-rem # 0x64 = 100 (ULTRA FAST SYSTEMS ONLY)
+rem # 0x2ee = 750 (FAST SYSTEM ONLY)
+rem # 0x1f4 = 500 (VERY FAST SYSTEM ONLY)
+rem # 0xfa = 250 (VERY VERY FAST SYSTEM ONLY)
+rem # 0x64 = 100 (ULTRA FAST SYSTEM ONLY)
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm\ExtendedComposition" /v "ExclusiveModeFramerateAveragingPeriodMs" /t REG_DWORD /d "0x3e8" /f
+
+
+
+@echo off
+
+echo.
+echo Max Frame Latency
+echo.
+echo 1. MaxFrameLatency: 1 (ULTRA FAST SYSTEM ONLY)
+echo 2. MaxFrameLatency: 2
+echo C. Cancel
+echo.
+choice /c 12C /m "Choose an option :"
+
+if 3 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 2 EQU %ERRORLEVEL% (
+   call :latency2
+) else if 1 EQU %ERRORLEVEL% (
+   call :latency1
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:latency1
+echo User chose MaxFrameLatency: 1 (ULTRA FAST SYSTEM ONLY)
+
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "FrameLatency" /t REG_DWORD /d "1" /f
+
+goto :end
+
+:latency2
+echo User chose MaxFrameLatency: 2
+
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "FrameLatency" /t REG_DWORD /d "2" /f
+
+goto :end
+
+:end
 
 PAUSE
