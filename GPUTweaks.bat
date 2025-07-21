@@ -42,6 +42,8 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "PlatformSupp
 
 rem # Enable Hardware Accelerated GPU Scheduling (HAGS)
 rem # GPU to handle some of its own scheduling tasks, potentially reducing CPU overhead and latency
+rem # Required for DLSS Frame Generation
+rem # 2 = HAGS ON / 1 = HAGS OFF
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "HwSchMode" /t REG_DWORD /d "2" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "HwSchedMode" /t REG_DWORD /d "2" /f
 
