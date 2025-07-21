@@ -210,10 +210,10 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm\ExtendedComposition" /v "ExclusiveM
 @echo off
 
 echo.
-echo Max Frame Latency
+echo Frame Latency
 echo.
-echo 1. MaxFrameLatency: 1 (ULTRA FAST SYSTEM ONLY)
-echo 2. MaxFrameLatency: 2
+echo 1. FrameLatency: 1 (ULTRA FAST SYSTEM ONLY)
+echo 2. FrameLatency: 2
 echo C. Cancel
 echo.
 choice /c 12C /m "Choose an option :"
@@ -231,14 +231,14 @@ if 3 EQU %ERRORLEVEL% (
 goto :eof
 
 :latency1
-echo User chose MaxFrameLatency: 1 (ULTRA FAST SYSTEM ONLY)
+echo User chose FrameLatency: 1 (ULTRA FAST SYSTEM ONLY)
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "FrameLatency" /t REG_DWORD /d "1" /f
 
 goto :end
 
 :latency2
-echo User chose MaxFrameLatency: 2
+echo User chose FrameLatency: 2
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "FrameLatency" /t REG_DWORD /d "2" /f
 
