@@ -139,17 +139,6 @@ reg add "HKCU\Software\Microsoft\Windows\DWM" /v "Blur" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DWM" /v "EnableAeroPeek" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DWM" /v "Blur" /t REG_DWORD /d "0" /f
 
-rem # Disable DWM Composition
-rem # CompositionPolicy: 1 = DWM OFF / 0 = DWM ON
-reg add "HKLM\Software\Microsoft\Windows\DWM" /v "Composition" /t REG_DWORD /d "0" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm\ExtendedComposition" /v "Composition" /t REG_DWORD /d "0" /f
-reg add "HKCU\Software\Microsoft\Windows\DWM" /v "Composition" /t REG_DWORD /d "0" /f
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DWM" /v "Composition" /t REG_DWORD /d "0" /f
-reg add "HKLM\Software\Microsoft\Windows\DWM" /v "CompositionPolicy" /t REG_DWORD /d "1" /f
-reg add "HKCU\Software\Microsoft\Windows\DWM" /v "CompositionPolicy" /t REG_DWORD /d "1" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm\ExtendedComposition" /v "CompositionPolicy" /t REG_DWORD /d "1" /f
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DWM" /v "CompositionPolicy" /t REG_DWORD /d "1" /f
-
 reg add "HKLM\Software\Microsoft\Windows\DWM" /v "DWMWA_TRANSITIONS_FORCEDISABLED" /t REG_DWORD /d "1" /f
 reg add "HKLM\Software\Microsoft\Windows\DWM" /v "DisableAccentGradient" /t REG_DWORD /d "1" /f
 reg add "HKLM\Software\Microsoft\Windows\DWM" /v "DisallowAnimations" /t REG_DWORD /d "1" /f
@@ -208,6 +197,64 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm\ExtendedComposition" /v "ExclusiveM
 
 
 @echo off
+
+
+echo.
+echo DWM Composition
+echo.
+echo 1. DWM Composition ON
+echo 2. DWM Composition OFF
+echo C. Cancel
+echo.
+choice /c 12C /m "Choose an option :"
+
+if 3 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 2 EQU %ERRORLEVEL% (
+   call :compoff
+) else if 1 EQU %ERRORLEVEL% (
+   call :compon
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:compon
+echo User chose DWM Composition ON
+
+rem # Enable DWM Composition
+rem # CompositionPolicy: 1 = DWM OFF / 0 = DWM ON
+reg add "HKLM\Software\Microsoft\Windows\DWM" /v "Composition" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm\ExtendedComposition" /v "Composition" /t REG_DWORD /d "1" /f
+reg add "HKCU\Software\Microsoft\Windows\DWM" /v "Composition" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DWM" /v "Composition" /t REG_DWORD /d "1" /f
+reg add "HKLM\Software\Microsoft\Windows\DWM" /v "CompositionPolicy" /t REG_DWORD /d "0" /f
+reg add "HKCU\Software\Microsoft\Windows\DWM" /v "CompositionPolicy" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm\ExtendedComposition" /v "CompositionPolicy" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DWM" /v "CompositionPolicy" /t REG_DWORD /d "0" /f
+
+goto :end
+
+:compoff
+echo User chose DWM Composition OFF
+
+rem # Disable DWM Composition
+rem # CompositionPolicy: 1 = DWM OFF / 0 = DWM ON
+reg add "HKLM\Software\Microsoft\Windows\DWM" /v "Composition" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm\ExtendedComposition" /v "Composition" /t REG_DWORD /d "0" /f
+reg add "HKCU\Software\Microsoft\Windows\DWM" /v "Composition" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DWM" /v "Composition" /t REG_DWORD /d "0" /f
+reg add "HKLM\Software\Microsoft\Windows\DWM" /v "CompositionPolicy" /t REG_DWORD /d "1" /f
+reg add "HKCU\Software\Microsoft\Windows\DWM" /v "CompositionPolicy" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm\ExtendedComposition" /v "CompositionPolicy" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DWM" /v "CompositionPolicy" /t REG_DWORD /d "1" /f
+
+goto :end
+
+:end
+
+
 
 echo.
 echo Frame Latency
