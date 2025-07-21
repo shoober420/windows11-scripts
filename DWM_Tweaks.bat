@@ -62,7 +62,7 @@ rem # Software rendering if hardware acceleration isn't available
 rem # Kizzimo / tweakradje = 1
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "UseHWDrawListEntriesOnWARP" /t REG_DWORD /d "1" /f
 
-rem # WDDM 2.6
+rem # WDDM 2.6 (Windows Display Driver Model)
 rem # Super Wet Ink, allowing the creation of textures in formats and modes the IHVs doesn't natively support, resolving them as a resource projection to a format the hardware/drivers natively support, allowing internal drivers optimizations
 rem # jdallmann = 1
 rem # tweakradje = 0
