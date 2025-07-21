@@ -214,12 +214,15 @@ echo Frame Latency
 echo.
 echo 1. FrameLatency: 1 (ULTRA FAST SYSTEM ONLY)
 echo 2. FrameLatency: 2
+echo 3. FrameLatency: 3 (SLOW COMPUTER) (VERY SMOOTH)
 echo C. Cancel
 echo.
-choice /c 12C /m "Choose an option :"
+choice /c 123C /m "Choose an option :"
 
-if 3 EQU %ERRORLEVEL% (
+if 4 EQU %ERRORLEVEL% (
    echo User chose to cancel.
+) else if 3 EQU %ERRORLEVEL% (
+   call :latency3
 ) else if 2 EQU %ERRORLEVEL% (
    call :latency2
 ) else if 1 EQU %ERRORLEVEL% (
@@ -244,6 +247,14 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "FrameLatency" /t REG_DWORD /d 
 
 goto :end
 
+:latency3
+echo User chose FrameLatency: 3 (SLOW COMPUTER) (VERY SMOOTH)
+
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "FrameLatency" /t REG_DWORD /d "3" /f
+
+goto :end
+
 :end
 
 PAUSE
+
