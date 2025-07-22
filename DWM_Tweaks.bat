@@ -22,12 +22,12 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableAdvancedDirectFlip" /t 
 rem # Kizzimo = 0
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "MaxD3DFeatureLevel" /t REG_DWORD /d "1" /f
 
-rem # Enable Non Draw List Rendering
-rem # Uses Immediate mode instead of Retained mode
-rem # Draw List Rendering applies visual effects to windows
+rem # Disable Non Draw List Rendering
+rem # Non Draw List rendering = Immediate mode
+rem # Draw List Rendering = Retained mode
 rem # jdallmann = 1
 rem # tweakradje = 0
-reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisallowNonDrawListRendering" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisallowNonDrawListRendering" /t REG_DWORD /d "1" /f
 
 rem # Disable Draw List Caching
 rem # Kizzimo = 1
@@ -61,7 +61,7 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnableShadow" /t REG_DWORD /d 
 rem # WARP (Windows Advanced Rasterization Platform)
 rem # Software rendering if hardware acceleration isn't available
 rem # Kizzimo / tweakradje = 1
-reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "UseHWDrawListEntriesOnWARP" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "UseHWDrawListEntriesOnWARP" /t REG_DWORD /d "1" /f
 
 rem # https://learn.microsoft.com/en-us/windows-hardware/drivers/display/what-s-new-for-prior-wddm-2-x-versions#wddm-26
 rem # https://commercial.screenbeam.com/support/super-wet-ink-touch-latency-on-new-intel-gpu-drivers-causes-system-freeze
