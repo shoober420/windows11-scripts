@@ -44,7 +44,7 @@ call DisableWMI.bat
 echo.
 echo GraphicsPerfSvc
 echo.
-echo 1. GraphicsPerfSvc: ON (REQUIRED FOR HAGS AND DLSS)
+echo 1. GraphicsPerfSvc: ON (REQUIRED FOR GPU SCHEDULING AND DLSS)
 echo 2. GraphicsPerfSvc: OFF
 echo C. Cancel
 echo.
@@ -63,7 +63,7 @@ if 3 EQU %ERRORLEVEL% (
 goto :eof
 
 :gfxon
-echo User chose GraphicsPerfSvc: ON (REQUIRED FOR HAGS AND DLSS)
+echo User chose GraphicsPerfSvc: ON (REQUIRED FOR GPU SCHEDULING AND DLSS)
 
 cd %USERPROFILE%\Downloads\windows11-scripts-main
 call StartGraphicsPerfSvc.bat
@@ -72,6 +72,9 @@ goto :end
 
 :gfxoff
 echo User chose GraphicsPerfSvc: OFF
+
+cd %USERPROFILE%\Downloads\windows11-scripts-main
+call DisableGraphicsPerfSvc.bat
 
 goto :end
 
