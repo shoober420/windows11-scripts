@@ -23,6 +23,7 @@ rem # Kizzimo = 0
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "MaxD3DFeatureLevel" /t REG_DWORD /d "1" /f
 
 rem # Disable Non Draw List Rendering
+rem # Draw List Rendering MIGHT be required for GPU features on windows like IndependentFlip and DirectFlip
 rem # Non Draw List rendering = Immediate mode
 rem # Draw List Rendering = Retained mode
 rem # jdallmann = 1
