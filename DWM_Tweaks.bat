@@ -23,6 +23,7 @@ rem # Kizzimo = 0
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "MaxD3DFeatureLevel" /t REG_DWORD /d "1" /f
 
 rem # Enable Non Draw List Rendering
+rem # Uses Immediate mode instead of Retained mode
 rem # Draw List Rendering applies visual effects to windows
 rem # jdallmann = 1
 rem # tweakradje = 0
