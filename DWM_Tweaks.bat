@@ -7,6 +7,7 @@ rem # https://github.com/AlchemyTweaks/Verified-Tweaks/blob/main/DWM/DWMAdjustab
 rem # https://github.com/AlchemyTweaks/Verified-Tweaks/blob/main/DWM/DWMImmediateRender-Kizzimo.bat
 rem # https://sites.google.com/site/tweakradje/windows/windows-tweaking
 rem # https://forums.blurbusters.com/viewtopic.php?f=10&t=14501
+rem # https://djdallmann.github.io/GamingPCSetup/CONTENT/RESEARCH/FINDINGS/registrykeys_dwm.txt
 
 rem # Enable Independent Flip
 rem # Optimization technique for games that support "flip model" swapchains
@@ -29,6 +30,7 @@ rem # Draw List Rendering = Retained mode
 rem # jdallmann = 1
 rem # tweakradje = 0
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisallowNonDrawListRendering" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\WOW6432Node\Microsoft\WINDOWS\DWM" /v "DisallowNonDrawListRendering" /t REG_DWORD /d "1" /f
 
 rem # Disable Draw List Caching
 rem # Kizzimo = 1
@@ -82,7 +84,10 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "TelemetryFramesReportPeriodMil
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "ForceDirectDrawSync" /t REG_DWORD /d "0" /f
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DDisplayTestMode" /t REG_DWORD /d "0" /f
+
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DebugFailFast" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\WOW6432Node\Microsoft\WINDOWS\DWM" /v "DebugFailFast" /t REG_DWORD /d "0" /f
+
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableDeviceBitmaps" /t REG_DWORD /d "1" /f
 
 rem # Enable Locking Memory
