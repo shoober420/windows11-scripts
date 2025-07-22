@@ -367,7 +367,7 @@ PowerPlanUltra.bat
 
 DisableThemes.bat / EnableThemes.bat
 
-DisableGraphicsPerfSvc.bat / EnableGraphicsPerfSvc.bat
+DisableGraphicsPerfSvc.bat / StartGraphicsPerfSvc.bat
 
 RemoveWindowsFeatures.bat (Windows Update services required for DISM)
 
