@@ -22,16 +22,16 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableAdvancedDirectFlip" /t 
 rem # Kizzimo = 0
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "MaxD3DFeatureLevel" /t REG_DWORD /d "1" /f
 
-rem # Disable Non Draw List Rendering
+rem # Enable Non Draw List Rendering
 rem # Draw List Rendering applies visual effects to windows
 rem # jdallmann = 1
 rem # tweakradje = 0
-reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisallowNonDrawListRendering" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisallowNonDrawListRendering" /t REG_DWORD /d "0" /f
 
-rem # Enable Draw List Caching
+rem # Disable Draw List Caching
 rem # Kizzimo = 1
 rem # tweakradje / blurbusters = 0
-reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableDrawListCaching" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableDrawListCaching" /t REG_DWORD /d "1" /f
 
 rem # Used for VR
 rem # tweakradje = 1
