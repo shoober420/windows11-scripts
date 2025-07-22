@@ -55,8 +55,13 @@ bcdedit /set halbreakpoint No
 bcdedit /set bootmenupolicy Legacy
 bcdedit /set graphicsmodedisabled No
 
-for /f "tokens=2 delims=^=" %%f in ('wmic cpu get NumberOfCores /value ^| find "="') do set Cores=%%f
+rem # Remove numproc bcdedit entry so system uses max cores
 
-bcdedit /set numproc %Cores%
+bcdedit /deletevalue numproc
+
+
+for /f "tokens=2 delims=^=" %%f in ('wmic cpu get NumberOfCores /value ^| find"="') do set Cores=%%f
+
+rem bcdedit /set numproc %Cores%
 
 PAUSE
