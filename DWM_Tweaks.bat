@@ -61,7 +61,7 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnableShadow" /t REG_DWORD /d 
 rem # WARP (Windows Advanced Rasterization Platform)
 rem # Software rendering if hardware acceleration isn't available
 rem # Kizzimo / tweakradje = 1
-reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "UseHWDrawListEntriesOnWARP" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "UseHWDrawListEntriesOnWARP" /t REG_DWORD /d "0" /f
 
 rem # https://learn.microsoft.com/en-us/windows-hardware/drivers/display/what-s-new-for-prior-wddm-2-x-versions#wddm-26
 rem # https://commercial.screenbeam.com/support/super-wet-ink-touch-latency-on-new-intel-gpu-drivers-causes-system-freeze
