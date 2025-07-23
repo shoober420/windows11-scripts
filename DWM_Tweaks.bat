@@ -320,7 +320,7 @@ echo.
 echo Max Queued Present Buffers
 echo.
 echo 1. MaxQueuedPresentBuffers: 0 (ULTRA FAST SYSTEM ONLY)
-echo 2. MaxQueuedPresentBuffers: 1 (RECOMMENDED) (MOST USED TWEAKED SETTING)
+echo 2. MaxQueuedPresentBuffers: 1 (RECOMMENDED) (MOST USED TWEAKED VALUE)
 echo 3. MaxQueuedPresentBuffers: 2
 echo 4. MaxQueuedPresentBuffers: 3 (VERY SMOOTH)
 echo C. Cancel
@@ -351,7 +351,7 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "MaxQueuedPresentBuffers" /t RE
 goto :end
 
 :buff1
-echo User chose MaxQueuedPresentBuffers: 1 (RECOMMENDED) (MOST USED TWEAKED SETTING)
+echo User chose MaxQueuedPresentBuffers: 1 (RECOMMENDED) (MOST USED TWEAKED VALUE)
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "MaxQueuedPresentBuffers" /t REG_DWORD /d "1" /f
 
