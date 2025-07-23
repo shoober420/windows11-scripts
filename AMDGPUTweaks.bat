@@ -40,10 +40,10 @@ for /f %%i in ('wmic path Win32_VideoController get PNPDeviceID^| findstr /L "PC
         for /f "tokens=3" %%a in ('reg query "HKLM\SYSTEM\ControlSet001\Enum\%%i" /v "Driver"') do (
                 for /f %%i in ('echo %%a ^| findstr "{"') do (
 
-rem # Enable DMA Copy
+rem # Disable DMA Copy
 rem # Direct Memory Access (DMA) engines for data transfers between system memory and the GPU, or within the GPU itself
-rem # Uses GPU instead of CPU for DMA
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "DisableDMACopy" /t REG_DWORD /d "0" /f
+rem # Uses GPU instead of CPU for DMA (similar to HAGS)
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "DisableDMACopy" /t REG_DWORD /d "1" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "DisableBlockWrite" /t REG_DWORD /d "0" /f
 
