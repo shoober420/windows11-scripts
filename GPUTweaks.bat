@@ -365,8 +365,8 @@ rem reg add "HKLM\SOFTWARE\Intel\GMM" /v "DedicatedSegmentSize" /t REG_DWORD /d 
 echo.
 echo Hardware Accelerated GPU Scheduling (HAGS)
 echo.
-echo 1. HAGS ENABLED (REQUIRED FOR DLSS)
-echo 2. HAGS DISABLED
+echo 1. HAGS ENABLED (REQUIRED FOR DLSS) (HELPS SOME GAMES)
+echo 2. HAGS DISABLED (RECOMMENDED)
 echo C. Cancel
 echo.
 choice /c 12C /m "Choose an option :"
@@ -384,7 +384,7 @@ if 3 EQU %ERRORLEVEL% (
 goto :eof
 
 :hagson
-echo User chose HAGS ENABLED (REQUIRED FOR DLSS)
+echo User chose HAGS ENABLED (REQUIRED FOR DLSS) (HELPS SOME GAMES)
 
 rem # Enable Hardware Accelerated GPU Scheduling (HAGS)
 rem # GPU to handle some of its own scheduling tasks, potentially reducing CPU overhead and latency
@@ -396,7 +396,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "HwSchedMode"
 goto :end
 
 :hagsoff
-echo User chose HAGS DISABLED
+echo User chose HAGS DISABLED (RECOMMENDED)
 
 rem # Disable Hardware Accelerated GPU Scheduling (HAGS)
 rem # GPU to handle some of its own scheduling tasks, potentially reducing CPU overhead and latency
