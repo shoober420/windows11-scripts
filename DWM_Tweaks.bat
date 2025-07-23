@@ -35,11 +35,11 @@ reg add "HKLM\SOFTWARE\WOW6432Node\Microsoft\WINDOWS\DWM" /v "DisallowNonDrawLis
 rem # Disable Draw List Caching
 rem # Kizzimo / blurbusters = 1
 rem # tweakradje = 0
-reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableDrawListCaching" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableDrawListCaching" /t REG_DWORD /d "0" /f
 
 rem # Disable DWM Effects Caching
 rem # Kizzimo / blurbusters = 1
-reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnableEffectCaching" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnableEffectCaching" /t REG_DWORD /d "1" /f
 
 rem # Used for VR
 rem # jdallmann / tweakradje = 1
