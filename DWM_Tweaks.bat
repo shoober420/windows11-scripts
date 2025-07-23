@@ -75,6 +75,7 @@ rem # https://commercial.screenbeam.com/support/super-wet-ink-touch-latency-on-n
 rem # jdallmann = 1
 rem # tweakradje = 0
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "SuperWetEnabled" /t REG_DWORD /d "0" /f
+
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "SuperWetExtensionTimeMicroseconds" /t REG_DWORD /d "0" /f
 
 rem # tweakradje = 1
