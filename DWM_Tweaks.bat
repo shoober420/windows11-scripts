@@ -133,8 +133,9 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnableFrontBufferRenderChecks"
 
 rem # Disable MegaRects
 rem # Identifies rectangular areas (rects) that need to be updated and only redraws those
-rem # Kizzimo = 1
+rem # Kizzimo / blurbusters = 1
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnableMegaRects" /t REG_DWORD /d "0" /f
+
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "MegaRectSize" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "MegaRectSearchCount" /t REG_DWORD /d "0" /f
 
