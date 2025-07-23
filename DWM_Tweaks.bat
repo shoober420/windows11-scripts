@@ -71,6 +71,7 @@ rem # https://commercial.screenbeam.com/support/super-wet-ink-touch-latency-on-n
 rem # jdallmann = 1
 rem # tweakradje = 0
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "SuperWetEnabled" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "SuperWetExtensionTimeMicroseconds" /t REG_DWORD /d "0" /f
 
 rem # tweakradje = 1
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "ImageProcessing8bit" /t REG_DWORD /d "0" /f
@@ -79,7 +80,8 @@ rem # 1f4?
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "TelemetryFramesSequenceMaximumPeriodMilliseconds" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "TelemetryFramesSequenceIdleIntervalMilliseconds" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "TelemetryFramesReportPeriodMilliseconds" /t REG_DWORD /d "0" /f
-
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "RecurringWatchdogTelemetryTimeoutMilliseconds" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "InitialWatchdogTelemetryTimeoutMilliseconds" /t REG_DWORD /d "0" /f
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "ForceDirectDrawSync" /t REG_DWORD /d "0" /f
 
@@ -87,6 +89,8 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DDisplayTestMode" /t REG_DWORD
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DebugFailFast" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\WOW6432Node\Microsoft\WINDOWS\DWM" /v "DebugFailFast" /t REG_DWORD /d "0" /f
+
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "MarshalAllDebugInfo" /t REG_DWORD /d "0" /f
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableDeviceBitmaps" /t REG_DWORD /d "1" /f
 
@@ -103,6 +107,7 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "InkGPUAccelOverrideVendorWhite
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "InteractionOutputPredictionDisabled" /t REG_DWORD /d "1" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "MPCInputRouterWaitForDebugger" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "OneCoreNoDWMRawGameController" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "BackdropBlurCachingThrottleMs" /t REG_DWORD /d "0" /f
 
 rem # jdallmann / Kizzimo = 1
 rem # tweakradje = 0
@@ -128,16 +133,22 @@ rem # Disable MegaRects
 rem # Identifies rectangular areas (rects) that need to be updated and only redraws those
 rem # Kizzimo = 1
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnableMegaRects" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "MegaRectSize" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "MegaRectSearchCount" /t REG_DWORD /d "0" /f
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnablePrimitiveReordering" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnableResizeOptimization" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "OptimizeForDirtyExpressions" /t REG_DWORD /d "1" /f
 
 rem # High Color = 16bit color
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "HighColor" /t REG_DWORD /d "0" /f
 
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "OverlayQualifyInterval" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "OverlayQualifyCount" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "OverlayDisqualifyInterval" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "OverlayDisqualifyCount" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "ParallelModePolicy" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "ParallelModeLeaveAfterThresholdMS" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "ResampleModeOverride" /t REG_DWORD /d "1" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "RenderThreadWatchdogTimeoutMilliseconds" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "ResizeTimeoutGdi" /t REG_DWORD /d "0" /f
@@ -175,6 +186,7 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableDeviceBitmapsForMultiAd
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableDynamicShutdownUI" /t REG_DWORD /d "1" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "LogExpressionPerfStats" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "MouseWheelScrollingMode" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "MousewheelAnimationDurationMs" /t REG_DWORD /d "0" /f
 
 rem # Disable DWM Input
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Windows" /v "DwmInputUsesIoCompletionPort" /t REG_DWORD /d "0" /f
@@ -183,6 +195,8 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Windows" /v "EnableDw
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DWM" /v "DWMWA_TRANSITIONS_FORCEDISABLED" /t REG_DWORD /d "1" /f
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DWM" /v "DisallowFlip3d" /t REG_DWORD /d "1" /f
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DWM" /v "DisallowColorizationColorChanges" /t REG_DWORD /d "1" /f
+
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "ChildWindowDpiIsolation" /t REG_DWORD /d "0" /f
 
 
 
@@ -436,6 +450,45 @@ goto :end
 echo User chose ExclusiveModeFramerateAveragingPeriodMs: 0x3e8 = 1000 (VERY SMOOTH) (DEFAULT)
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm\ExtendedComposition" /v "ExclusiveModeFramerateAveragingPeriodMs" /t REG_DWORD /d "0x3e8" /f
+
+goto :end
+
+:end
+
+
+
+echo.
+echo DWM DPI Scaling
+echo.
+echo 1. UseDPIScaling: 0 (MORE ACCURATE MOUSE MOVEMENT) (BLURRY FONTS)
+echo 2. UseDPIScaling: 1 
+echo C. Cancel
+echo.
+choice /c 12C /m "Choose an option :"
+
+if 3 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 2 EQU %ERRORLEVEL% (
+   call :dpi1
+) else if 1 EQU %ERRORLEVEL% (
+   call :dpi0
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:dpi0
+echo User chose UseDPIScaling: 0 (MORE ACCURATE MOUSE MOVEMENT) (BLURRY FONTS)
+
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "UseDPIScaling" /t REG_DWORD /d "0" /f
+
+goto :end
+
+:dpi1
+echo User chose UseDPIScaling: 1
+
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "UseDPIScaling" /t REG_DWORD /d "1" /f
 
 goto :end
 
