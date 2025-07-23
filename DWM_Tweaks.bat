@@ -38,7 +38,7 @@ rem # tweakradje = 0
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableDrawListCaching" /t REG_DWORD /d "1" /f
 
 rem # Used for VR
-rem # tweakradje = 1
+rem # jdallmann / tweakradje = 1
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableHologramCompositor" /t REG_DWORD /d "1" /f
 
 rem # Disable CPU Clipping
@@ -92,6 +92,7 @@ reg add "HKLM\SOFTWARE\WOW6432Node\Microsoft\WINDOWS\DWM" /v "DebugFailFast" /t 
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "MarshalAllDebugInfo" /t REG_DWORD /d "0" /f
 
+rem # jdallmann = 1
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableDeviceBitmaps" /t REG_DWORD /d "1" /f
 
 rem # Enable Locking Memory
@@ -114,6 +115,7 @@ rem # tweakradje = 0
 rem # Used for visual effects
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "ResampleInLinearSpace" /t REG_DWORD /d "0" /f
 
+rem # jdallmann = 1
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "SDRBoostPercentOverride" /t REG_DWORD /d "0" /f
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "AnimationAttributionEnabled" /t REG_DWORD /d "0" /f
