@@ -357,6 +357,14 @@ reg add "HKLM\SOFTWARE\Wow6432Node\Microsoft\Direct3D\Drivers" /v "EnumSeparateM
 reg add "HKLM\SOFTWARE\Microsoft\DirectDraw" /v "ForceNoSysLock" /t Reg_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Wow6432Node\Microsoft\DirectDraw" /v "ForceNoSysLock" /t Reg_DWORD /d "0" /f
 
+reg add "HKLM\SOFTWARE\Microsoft\DirectDraw" /v "DisableInactivate" /t Reg_DWORD /d "1" /f
+reg add "HKCU\SOFTWARE\Microsoft\DirectDraw" /v "DisableInactivate" /t Reg_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\WOW6432Node\Microsoft\DirectDraw" /v "DisableInactivate" /t Reg_DWORD /d "1" /f
+
+reg add "HKLM\SOFTWARE\Microsoft\DirectDraw" /v "DisableNoSysLock" /t Reg_DWORD /d "1" /f
+reg add "HKCU\SOFTWARE\Microsoft\DirectDraw" /v "DisableNoSysLock" /t Reg_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\WOW6432Node\Microsoft\DirectDraw" /v "DisableNoSysLock" /t Reg_DWORD /d "1" /f
+
 rem # Intel iGPU Dedicated Segment Size
 rem reg add "HKLM\SOFTWARE\Intel\GMM" /v "DedicatedSegmentSize" /t REG_DWORD /d "512" /f
 
