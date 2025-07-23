@@ -827,7 +827,7 @@ RemoveStartUpApps.bat
 - dersk111y
 - V3nilla
 - ja2forever
-- https://www.mdgx.com/
+- https://www.mdgx.com
 - https://github.com/Batleman
 - https://github.com/AlchemyTweaks
 - https://github.com/TairikuOokami
