@@ -12,6 +12,8 @@ rem # foss-lover34
 rem # brusk9060
 rem # dersk111y
 rem # V3nilla
+rem # ja2forever
+rem # https://www.mdgx.com
 rem # https://github.com/Batleman
 rem # https://github.com/AlchemyTweaks
 rem # https://github.com/TairikuOokami
@@ -23,6 +25,7 @@ rem # https://github.com/rahilpathan
 rem # https://github.com/ChrisTitusTech
 rem # https://github.com/raspi
 rem # https://github.com/simeononsecurity
+rem # https://github.com/alufena
 rem # https://sites.google.com/site/tweakradje/windows/windows-tweaking
 rem # https://admx.help
 rem # https://github.com/ancel1x/Ancels-Performance-Batch
