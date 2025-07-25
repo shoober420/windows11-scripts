@@ -3608,7 +3608,11 @@ reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\EOSNotify" /v "Discontin
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Wdf" /v "WdfGlobalLogsDisabled" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Wdf" /v "WdfGlobalSleepStudyDisabled" /t REG_DWORD /d "1" /f
 
+reg add "HKLM\System\CurrentControlSet\Control\Session Manager" /v "AlpcMessageLog" /t REG_DWORD /d "0" /f
+reg add "HKLM\System\CurrentControlSet\Control\Session Manager" /v "DisablePagingExecutive" /t REG_DWORD /d "1" /f
 
+rem # Enable Segment Heap
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Segment Heap" /v "Enabled" /t REG_DWORD /d "1" /f
 
 rem # Enables Cloudflare DNS
 netsh interface ip set dns Wi-Fi static 1.1.1.1
