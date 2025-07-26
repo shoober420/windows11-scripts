@@ -41,6 +41,32 @@ cd "%USERPROFILE%\Downloads"
 
 
 
+@echo off
+
+echo.
+echo Stop Running Services
+echo.
+echo 1. Stop Running Services
+echo 2. SKIP (RECOMMENDED DURING TWEAK INSTALLATION)
+echo C. Cancel
+echo.
+choice /c 12C /m "Choose an option :"
+
+if 3 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 2 EQU %ERRORLEVEL% (
+   call :scip
+) else if 1 EQU %ERRORLEVEL% (
+   call :stopsvc
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:stopsvc
+echo User chose Stop Running Services
+
 net stop AarSvc
 net stop AppIDSvc
 net stop AppReadiness
