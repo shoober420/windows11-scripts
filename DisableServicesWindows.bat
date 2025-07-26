@@ -224,6 +224,15 @@ net stop WpnUserService
 net stop WSAIFabricSvc
 net stop WSearch
 
+goto :end
+
+:scip
+echo User chose SKIP (RECOMMENDED DURING TWEAK INSTALLATION)
+
+goto :end
+
+:end
+
 
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\AarSvc" /v "Start" /t REG_DWORD /d "4" /f
