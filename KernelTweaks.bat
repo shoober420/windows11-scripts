@@ -40,13 +40,13 @@ rem # 256 causes kernel error at boot
 rem # AlchemyTweaks = 128
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "MaximumSharedReadyQueueSize" /t REG_DWORD /d "128" /f
 
-rem # blurbusters = 36
+rem # AlchemyTweaks = 50 / blurbusters = 36
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "PriorityControl" /t REG_DWORD /d "32" /f
 
-rem # blurbusters = 20
+rem # AlchemyTweaks / blurbusters = 20
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "QuantumLength" /t REG_DWORD /d "14" /f
 
-rem # blurbusters = 15
+rem # AlchemyTweaks / blurbusters = 15
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "TimeIncrement" /t REG_DWORD /d "0x0000000f" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "DisableOverlappedExecution" /t REG_DWORD /d "0" /f
