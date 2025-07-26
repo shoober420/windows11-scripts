@@ -40,7 +40,7 @@ rem # 256 causes kernel error at boot
 rem # AlchemyTweaks = 128
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "MaximumSharedReadyQueueSize" /t REG_DWORD /d "128" /f
 
-rem # AlchemyTweaks = 50 / blurbusters = 36
+rem # AlchemyTweaks = 50 / blurbusters = 54
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "PriorityControl" /t REG_DWORD /d "32" /f
 
 rem # AlchemyTweaks / blurbusters = 20
