@@ -20,6 +20,8 @@ bcdedit /deletevalue useplatformtick
 rem # Disable Power Saving Feature
 bcdedit /set disabledynamictick yes
 
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "DisableDynamicTick" /t REG_DWORD /d "1" /f
+
 rem # TSC Sync Policy
 bcdedit /set tscsyncpolicy enhanced
 
