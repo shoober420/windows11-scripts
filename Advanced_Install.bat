@@ -506,7 +506,7 @@ echo 1. Enable Microsoft Store
 echo 2. Disable Microsoft Store (BREAKS MINECRAFT)
 echo C. Cancel
 echo.
-choice /c 123C /m "Choose an option :"
+choice /c 12C /m "Choose an option :"
 
 if 3 EQU %ERRORLEVEL% (
    echo User chose to cancel.
