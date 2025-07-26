@@ -369,9 +369,11 @@ attrib +r +s +h %USERPROFILE%\Searches /S /D
 rem # Hide Desktop Icons
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "HideIcons" /t REG_DWORD /d "0" /f
 
+rem # Show smaller taskbar buttons
+rem # 2 = When taskbar is full / 1 = Never / 0 = Always
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "IconSizePreference" /t REG_DWORD /d "1" /f
 
 
-@echo off
 
 @echo off
 
