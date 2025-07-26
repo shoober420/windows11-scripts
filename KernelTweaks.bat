@@ -39,10 +39,16 @@ rem # 0 and 1 lower FPS
 rem # 256 causes kernel error at boot
 reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel\MaximumSharedReadyQueueSize" /f
 
+rem # blurbusters = 36
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "PriorityControl" /t REG_DWORD /d "32" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "DisableOverlappedExecution" /t REG_DWORD /d "0" /f
+
+rem # blurbusters = 20
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "QuantumLength" /t REG_DWORD /d "14" /f
+
+rem # blurbusters = 15
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "TimeIncrement" /t REG_DWORD /d "0x0000000f" /f
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "DisableOverlappedExecution" /t REG_DWORD /d "0" /f
 
 rem # Disable Intel Transactional Synchronization Extensions
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "DisableTsx" /t Reg_DWORD /d "1" /f
