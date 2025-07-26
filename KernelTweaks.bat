@@ -38,6 +38,7 @@ rem # Default value is 0, meaning the system uses its own heuristics to determin
 rem # 0 and 1 lower FPS
 rem # 256 causes kernel error at boot
 rem # AlchemyTweaks = 128
+rem # MIGHT CAUSE UNBOOTABLE MACHINE ONCE MANUALLY TWEAKED
 reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel\MaximumSharedReadyQueueSize" /f
 rem reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "MaximumSharedReadyQueueSize" /t REG_DWORD /d "128" /f
 
