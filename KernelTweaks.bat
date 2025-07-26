@@ -37,7 +37,8 @@ rem # Limits the amount of memory that can be used to store pages that are ready
 rem # Default value is 0, meaning the system uses its own heuristics to determine the optimal size for the ready queue
 rem # 0 and 1 lower FPS
 rem # 256 causes kernel error at boot
-reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel\MaximumSharedReadyQueueSize" /f
+rem # AlchemyTweaks = 128
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "MaximumSharedReadyQueueSize" /t REG_DWORD /d "128" /f
 
 rem # blurbusters = 36
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "PriorityControl" /t REG_DWORD /d "32" /f
