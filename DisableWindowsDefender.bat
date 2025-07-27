@@ -133,6 +133,13 @@ taskkill /im AggregatorHost.exe /f
 rem del "C:\Windows\System32\AggregatorHost.exe" /s /f /q
 ren "C:\Windows\System32\AggregatorHost.exe" "AggregatorHost.exe.bak"
 
+rem # Disable Cross Device Resume (to restore run "sfc /scannow")
+takeown /s %computername% /u %username% /f "C:\Windows\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\CrossDeviceResume.exe"
+icacls "C:\Windows\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\CrossDeviceResume.exe" /grant:r %username%:F
+taskkill /im CrossDeviceResume.exe /f
+rem del "C:\Windows\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\CrossDeviceResume.exe" /s /f /q
+ren "C:\Windows\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\CrossDeviceResume.exe.bak"
+
 rem https://www.elevenforum.com/t/turn-on-or-off-tamper-protection-for-microsoft-defender-antivirus-in-windows-11.3973
 reg add "HKLM\Software\Microsoft\Windows Defender\Features" /v "TamperProtection" /t REG_DWORD /d "0" /f
 
