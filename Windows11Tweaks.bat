@@ -3617,6 +3617,20 @@ reg add "HKLM\System\CurrentControlSet\Control\Session Manager" /v "DisablePagin
 rem # Enable Segment Heap
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Segment Heap" /v "Enabled" /t REG_DWORD /d "1" /f
 
+rem # Disable Prefetch Delay
+reg add "HKLM\System\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters" /v "FIPrefetchDelayMs" /t REG_DWORD /d "0" /f
+
+rem # Enable Critical System Processes Boost
+reg add "HKLM\SYSTEM\CurrentControlSet\Control" /v "CriticalSystemProcessesBoost" /t REG_DWORD /d "1" /f
+
+rem # Disable Portable Operating System
+reg add "reg add "HKLM\SYSTEM\CurrentControlSet\Control" /v "PortableOperatingSystem" /t REG_DWORD /d "0" /f
+
+rem # Disable Delayed Auto Start
+reg add "reg add "HKLM\SYSTEM\CurrentControlSet\Control" /v "DelayedAutoStart" /t REG_DWORD /d "0" /f
+
+
+
 rem # Enables Cloudflare DNS
 netsh interface ip set dns Wi-Fi static 1.1.1.1
 netsh interface ip set dns Ethernet static 1.1.1.1
