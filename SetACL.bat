@@ -206,4 +206,19 @@ SetACL.exe -on "C:\WINDOWS\Fonts" -ot file -actn ace -ace "n:Administrators;p:fu
 SetACL.exe -on "C:\Windows.old" -ot file -actn setowner -ownr "n:Administrators"
 SetACL.exe -on "C:\Windows.old" -ot file -actn ace -ace "n:Administrators;p:full"
 
+SetACL.exe -on "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows Defender\Features" -ot reg -actn setowner -ownr "n:Administrators"
+SetACL.exe -on "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows Defender\Features" -ot reg -actn ace -ace "n:Administrators;p:full"
+
+SetACL.exe -on "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows Defender" -ot reg -actn setowner -ownr "n:Administrators"
+SetACL.exe -on "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows Defender" -ot reg -actn ace -ace "n:Administrators;p:full"
+
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Security Health\Platform" -ot reg -actn setowner -ownr "n:Administrators"
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Security Health\Platform" -ot reg -actn ace -ace "n:Administrators;p:full"
+
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Security Health" -ot reg -actn setowner -ownr "n:Administrators"
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Security Health" -ot reg -actn ace -ace "n:Administrators;p:full"
+
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Real-Time Protection" -ot reg -actn setowner -ownr "n:Administrators"
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Real-Time Protection" -ot reg -actn ace -ace "n:Administrators;p:full"
+
 PAUSE
