@@ -46,7 +46,7 @@ cd "%USERPROFILE%\Downloads"
 echo.
 echo Stop Running Services
 echo.
-echo 1. Stop Running Services
+echo 1. Stop Running WINDOWS Services
 echo 2. SKIP (RECOMMENDED DURING TWEAK INSTALLATION)
 echo C. Cancel
 echo.
@@ -65,7 +65,7 @@ if 3 EQU %ERRORLEVEL% (
 goto :eof
 
 :stopsvc
-echo User chose Stop Running Services
+echo User chose Stop Running WINDOWS Services
 
 net stop AarSvc
 net stop AppIDSvc
