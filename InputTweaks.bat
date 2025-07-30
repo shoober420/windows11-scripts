@@ -54,4 +54,7 @@ reg add "HKLM\SOFTWARE\Microsoft\Input\Settings\ControllerProcessor\CursorMagnet
 
 reg add "HKCU\Control Panel\Mouse" /v "ActiveWindowTracking" /t REG_DWORD /d "0" /f
 
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\mouclass\Parameter" /v "MouseTransmitTimeout" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\mouclass\Parameter" /v "KeyboardTransmitTimeout" /t REG_DWORD /d "0" /f
+
 PAUSE
