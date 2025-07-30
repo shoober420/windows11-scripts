@@ -120,3 +120,5 @@ ECHO R | powershell.exe ./DNS.ps1
 cd "%~dp0"
 
 PAUSE
+
+rem # SETUP CUSTOM RESOLUTION UTILITY
