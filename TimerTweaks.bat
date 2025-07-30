@@ -22,6 +22,8 @@ bcdedit /set disabledynamictick yes
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "DisableDynamicTick" /t REG_DWORD /d "1" /f
 
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "DISABLE_DYNAMIC_TICK" /t REG_SZ /d "1" /f
+
 rem # TSC Sync Policy
 bcdedit /set tscsyncpolicy enhanced
 
