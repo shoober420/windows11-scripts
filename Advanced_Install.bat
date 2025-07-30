@@ -1022,6 +1022,8 @@ goto :end
 
 
 
+rem # SETUP CUSTOM RESOLUTION UTILITY
+
 rem # Launch GPU option scripts to finish installation (NVProfileInspector required for NVIDIA)
 
 rem # NVIDIAPerformanceProfile.nip / NVIDIAHighQualityProfileOGL.nip / NVIDIAHighQualityProfileD3D.nip
