@@ -19,4 +19,6 @@ rem # Disable more FSO, removes Color Management
 rem # 0 = Enable FSO / 1 = Disable FSO
 reg add "HKCU\System\GameConfigStore" /v "GameDVR_DXGIHonorFSEWindowsCompatible" /t REG_DWORD /d "1" /f
 
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "DisableFullScreenOptimizations" /t REG_DWORD /d "1" /f
+
 PAUSE
