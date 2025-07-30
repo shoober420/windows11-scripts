@@ -20,21 +20,27 @@ rem # EasyAntiCheat
 
 PAUSE
 
-rem # Disable Kernel security features
+rem # Disable Exception Chain Validation
 rem # Causes stuttering in games
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "DisableExceptionChainValidation" /t REG_DWORD /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "KernelSEHOPEnabled" /t REG_DWORD /d "0" /f
 
-rem # Disable Address Space Layout Randomization (ASLR)
+rem # Disable Structured Exception Handling Overwrite Protection (SEHOP)
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "KernelSEHOPEnabled" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "KernelSEHOPByHandle" /t REG_DWORD /d "0" /f
+
+rem # Disable Address Space Layout Randomization (ASLR) / Virtual Address Space Randomization (VASR)
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "EnableVirtualAddressSpaceRandomization" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "MoveImages" /t REG_DWORD /d "0" /f
 
-rem # Disable Control Flow Guard
+rem # Disable Control Flow Guard (CFG)
 ECHO Yes | reg add "HKLM\SYSTEM\ControlSet001\Control\Session Manager\Memory Management" /v "EnableCfg" /t REG_DWORD /d "0"
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "DisableControlFlowFlowGuardXgf" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "DisableControlFlowGuardExportSuppression" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "DisableControlFlowGuardXfg" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "EnableControlFlowLowGuardExportSuppression" /t REG_DWORD /d "0" /f
 
-rem # Disable DEP
+rem # Disable Data Execution Prevention (DEP)
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Internet Explorer\Main" /v "DEPOff" /t REG_DWORD /d "1" /f
-
-rem # Disable DEP
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Explorer" /v "NoDataExecutionPrevention" /t REG_DWORD /d "1" /f
 
 rem # Turn off heap termination on corruption
@@ -47,12 +53,12 @@ rem # Disable Security features
 rem # Causes stuttering in games
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager" /v "ProtectionMode" /t REG_DWORD /d "0" /f
 
-rem # Disable WFP (Windows File Protection)
+rem # Disable Windows File Protection (WFP)
 rem # https://www.securityspace.com/smysecure/catid.html?id=1.3.6.1.4.1.25623.1.0.10449
 rem # 0 = WFP On / 1 = Disable WFP / 2 = Disable WFP for the next system restart only / 0xFFFFFF9D = Disable WFP
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v "SFCDisable" /t REG_DWORD /d "0xffffff9d" /f
 
-rem # Turn off Data Execution Prevention for HTML Help Executible
+rem # Disable HTML Help Data Execution Prevention (HHDEP)
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "DisableHHDEP" /t REG_DWORD /d "1" /f
 
 rem # Enable svchost.exe mitigation options
@@ -63,13 +69,6 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager" /v "ProtectionMo
 
 rem # 0 cripples FPS
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager" /v "ObjectSecurityMode" /t REG_DWORD /d "1" /f
-
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "EnableVirtualAddressSpaceRandomization" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "DisableControlFlowFlowGuardXgf" /t REG_DWORD /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "DisableControlFlowGuardExportSuppression" /t REG_DWORD /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "DisableControlFlowGuardXfg" /t REG_DWORD /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "EnableControlFlowLowGuardExportSuppression" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "KernelSEHOPByHandle" /t REG_DWORD /d "0" /f
 
 
 
