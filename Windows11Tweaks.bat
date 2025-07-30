@@ -3632,6 +3632,16 @@ reg add "reg add "HKLM\SYSTEM\CurrentControlSet\Control" /v "PortableOperatingSy
 rem # Disable Delayed Auto Start
 reg add "reg add "HKLM\SYSTEM\CurrentControlSet\Control" /v "DelayedAutoStart" /t REG_DWORD /d "0" /f
 
+rem # Disable Application Background Task Diagnostic Log
+powershell Disable-AppBackgroundTaskDiagnosticLog
+
+rem # File System Tweaks
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\FileSystem" /v "DisableLastAccess" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\FileSystem" /v "MaximumTunnelEntries" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\FileSystem" /v "MaximumTunnelEntryAgeInSeconds" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\FileSystem" /v "NtfsAllowExtendedCharacterIn8dot3Name" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\FileSystem" /v "NtfsDisableVolsnapHints" /t REG_DWORD /d "0" /f
+
 
 
 rem # Enables Cloudflare DNS
