@@ -87,3 +87,5 @@ goto :end
 :end
 
 PAUSE
+
+rem # SETUP CUSTOM RESOLUTION UTILITY
