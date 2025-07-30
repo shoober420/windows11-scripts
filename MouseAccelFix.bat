@@ -42,6 +42,4 @@ reg add "HKU\.DEFAULT\Control Panel\Mouse" /f /v "MouseSensitivity" /t REG_SZ /d
 
 reg add "HKCU\Control Panel\Mouse" /v RawInput /t REG_SZ /d 1 /f
 
-reg add "HKCU\Control Panel\Mouse" /v ActiveWindowTracking /t REG_DWORD /d 0 /f
-
 PAUSE
