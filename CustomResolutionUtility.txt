@@ -19,4 +19,6 @@ Back porch:
 
 
 
+Lower resolutions dont allow for lower values
+
 When "Out of frequency range" or "No signal" occurs on reboot, go into SAFE MODE (F11 during reboot then F8) and revert back to "CVT-RB2 standard" template and lowest value possible without glitching
