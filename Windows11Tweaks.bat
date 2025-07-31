@@ -3644,9 +3644,11 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\FileSystem" /v "NtfsDisableVolsna
 
 
 
-rem # Enables Cloudflare DNS
-netsh interface ip set dns Wi-Fi static 1.1.1.1
-netsh interface ip set dns Ethernet static 1.1.1.1
+rem # Enable Cloudflare DNS
+rem # Disable DNS UDP Fallback
+rem # V3nilla: https://github.com/shoober420/windows11-scripts/issues/11
+netsh interface ip set dns Wi-Fi static 1.1.1.1 autoupgrade=yes udpfallback=no
+netsh interface ip set dns Ethernet static 1.1.1.1 autoupgrade=yes udpfallback=no
 
 rem # Enable DNS over HTTPS (DoH)
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters" /v "EnableAutoDoh" /t REG_DWORD /d "2" /f
