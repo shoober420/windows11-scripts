@@ -6,7 +6,7 @@ Use "CVT-RB2 standard" as template
 
 Front porch:
  - Horizontal: 1 pixels
- - Vertical: 1 lines (2+ for non-gaming monitor)
+ - Vertical: 1 lines (4+ for non-gaming monitor)
 
 Sync width:
  - Horizontal: CVT-RB2 Default
