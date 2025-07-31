@@ -1,4 +1,7 @@
-# Set DNS servers to Cloudflare 1.1.1.1 and use encrypted DoH
+# Set DNS servers to Cloudflare 1.1.1.1
+# Enable DNS over HTTPS (DoH)
+# Disable DNS UDP Fallback
+# V3nilla: https://github.com/shoober420/windows11-scripts/issues/11
 
 $i = Get-NetAdapter -Physical
 $i | Get-DnsClientServerAddress -AddressFamily IPv4 | Set-DnsClientServerAddress -ServerAddresses '1.1.1.1', '1.0.0.1' -AllowFallbackToUdp $False -AutoUpgrade $True
