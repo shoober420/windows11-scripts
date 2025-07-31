@@ -18,6 +18,7 @@ Back porch:
  - Vertical: 1 lines (6 DEFAULT for non-gaming monitor)
 
 
+Screen will wobble and shake when values are too low, or not work at all (Frequency out of range / No signal)
 
 Screen tearing will be more noticeable when using lower values for "Front porch" and "Back porch" using low refresh rates
 
