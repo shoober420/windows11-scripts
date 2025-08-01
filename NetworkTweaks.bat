@@ -202,32 +202,41 @@ rem # Disable Power Management options
 reg add "%%n" /v "PnPCapabilities" /t REG_DWORD /d "0x00000118" /f
 )
 
-rem 3 - Require DoH / 2 - Allow DoH / 1 - Prohibit DoH
-reg add "HKLM\Software\Policies\Microsoft\Windows NT\DNSClient" /v "DoHPolicy" /t REG_DWORD /d "3" /f
-
 rem # MSI mode support for NIC
 for /f %%i in ('wmic path Win32_NetworkAdapter get PNPDeviceID ^| findstr /l "PCI\VEN_"') do (
 	reg add "HKLM\SYSTEM\CurrentControlSet\Enum\%%i\Device Parameters\Interrupt Management\MessageSignaledInterruptProperties" /v "MSISupported" /t REG_DWORD /d "1" /f
 	reg add "HKLM\SYSTEM\CurrentControlSet\Enum\%%i\Device Parameters\Interrupt Management\Affinity Policy" /v "DevicePriority" /t REG_DWORD /d "0" /f
 )
 
-rem # Launch DNS.ps1 for optimal DNS settings
+
+
+rem # Launch DNS.bat and DNS.ps1 for optimal DNS settings
+cd "%~dp0"
+call DNS.bat
 cd "%~dp0"
 ECHO R | powershell.exe ./DNS.ps1
 cd "%USERPROFILE%\Downloads"
 
 cd "%USERPROFILE%\Downloads\windows11-scripts-main"
+call DNS.bat
+cd "%USERPROFILE%\Downloads\windows11-scripts-main"
 ECHO R | powershell.exe ./DNS.ps1
 cd "%USERPROFILE%\Downloads"
 
+cd "%USERPROFILE%\Downloads\windows11-scripts-main\windows11-scripts-main"
+call DNS.bat
 cd "%USERPROFILE%\Downloads\windows11-scripts-main\windows11-scripts-main"
 ECHO R | powershell.exe ./DNS.ps1
 cd "%USERPROFILE%\Downloads"
 
 cd "%USERPROFILE%\Downloads\windows11-scripts\windows11-scripts"
+call DNS.bat
+cd "%USERPROFILE%\Downloads\windows11-scripts\windows11-scripts"
 ECHO R | powershell.exe ./DNS.ps1
 cd "%USERPROFILE%\Downloads"
 
+cd "%USERPROFILE%\Downloads\windows11-scripts"
+call DNS.bat
 cd "%USERPROFILE%\Downloads\windows11-scripts"
 ECHO R | powershell.exe ./DNS.ps1
 cd "%USERPROFILE%\Downloads"
