@@ -22,7 +22,7 @@ rem # Get-NetAdapterBinding -Name "*" -AllBindings -IncludeHidden
 
 rem # software firewall is bloat, use router firewall
 
-rem # RECOMMENDED TO RUN DNS.ps1 FOR OPTIMAL DNS SETTINGS
+rem # RECOMMENDED TO RUN DNS.bat and DNS.ps1 FOR OPTIMAL DNS SETTINGS
 
 PAUSE
 
@@ -363,6 +363,6 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\NDIS\Parameters" /v "DisableWDIW
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\NDIS\Parameters" /v "DisableReenumerationTimeoutBugcheck" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\NDIS\Parameters" /v "EnableNicAutoPowerSaverInSleepStudy" /t REG_DWORD /d "0" /f
 
-rem # RECOMMENDED TO RUN DNS.ps1 FOR OPTIMAL DNS SETTINGS
+rem # RECOMMENDED TO RUN DNS.bat and DNS.ps1 FOR OPTIMAL DNS SETTINGS
 
 PAUSE
