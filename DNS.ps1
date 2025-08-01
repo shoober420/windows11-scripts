@@ -1,6 +1,7 @@
 # Set DNS servers to Cloudflare 1.1.1.1
 # Enable DNS over HTTPS (DoH)
 # Disable DNS UDP Fallback
+# Disable Auto-Upgrade (Dynamic DNS / DDNS)
 # V3nilla: https://github.com/shoober420/windows11-scripts/issues/11
 
 $i = Get-NetAdapter -Physical
