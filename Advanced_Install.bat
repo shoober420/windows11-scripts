@@ -7,6 +7,12 @@ rem # https://www.elevenforum.com/members/csmc.38355
 rem # jdallmann
 rem # Kizzimo
 rem # foss-lover34
+rem # brusk9060
+rem # dersk111y
+rem # V3nilla
+rem # ja2forever
+rem # https://www.mdgx.com
+rem # https://github.com/Batleman
 rem # https://github.com/AlchemyTweaks
 rem # https://github.com/TairikuOokami
 rem # https://github.com/ionuttbara
@@ -17,6 +23,7 @@ rem # https://github.com/rahilpathan
 rem # https://github.com/ChrisTitusTech
 rem # https://github.com/raspi
 rem # https://github.com/simeononsecurity
+rem # https://github.com/alufena
 rem # https://sites.google.com/site/tweakradje/windows/windows-tweaking
 rem # https://admx.help
 rem # https://github.com/ancel1x/Ancels-Performance-Batch
@@ -24,6 +31,10 @@ rem # https://github.com/Batlez/Batlez-Tweaks
 rem # https://sites.google.com/view/melodystweaks/basictweaks
 rem # https://github.com/sherifmagdy32/gaming_os_tweaker
 rem # https://github.com/HakanFly/Windows-Tweaks
+rem # http://bbs.c3.wuyou.net/forum.php?mod=viewthread&tid=437913
+rem # https://github.com/CrackedStuffEZ
+
+
 
 cd "%~dp0"
 
