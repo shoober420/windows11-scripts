@@ -1,4 +1,4 @@
-rem # DNS Batch Script
+rem # DNS Tweaks
 
 rem # DNS Cache Service tweaks
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters" /v "NegativeCacheTime" /t REG_DWORD /d "0" /f
