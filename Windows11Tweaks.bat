@@ -48,7 +48,7 @@ rem # Running EnableWindowsUpdate.bat is required to download Windows updates af
 
 rem # Removes and disables Microsoft Edge
 
-rem # Run DNS.ps1 for optimal DNS settings
+rem # Run DNS.bat and DNS.ps1 for optimal DNS settings
 
 rem # REBOOT RECOMMENDED
 
@@ -1432,12 +1432,6 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\DriverSearching" /v "Sea
 rem # Disable Game Bar
 reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\default\ApplicationManagement\AllowGameDVR" /v "value" /t REG_DWORD /d "0" /f
 
-rem # DNS Cache Service tweaks
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters" /v "NegativeCacheTime" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters" /v "NegativeSOACacheTime" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters" /v "NetFailureCacheTime" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters" /v "MaximumUdpPacketSize" /t REG_DWORD /d "0x000004c5" /f
-
 rem # Remove Remote Computer
 reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\RemoteComputer" /f
 
@@ -1582,19 +1576,6 @@ reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\BITS" /v "EnablePeercaching" /
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\BITS" /v "DisablePeerCachingClient" /t REG_DWORD /d "1" /f
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\BITS" /v "DisablePeerCachingServer" /t REG_DWORD /d "1" /f
 
-rem # Disable DNS dynamic update
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient" /v "RegistrationEnabled" /t REG_DWORD /d "0" /f
-
-rem # Prefer link local responses over DNS when received over a network with higher precedence
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient" /v "PreferLocalOverLowerBindingDNS" /t REG_DWORD /d "1" /f
-
-rem # Turn off smart protocol reordering
-rem # DNS client should prefer responses from link local name resolution protocols on non-domain networks over DNS responses when issuing queries for flat names
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient" /v "DisableSmartProtocolReordering" /t REG_DWORD /d "1" /f
-
-rem # DNS Cache - Temporary DNS storage on a device that contains DNS records of already visited domain names
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters" /v "ServiceDllUnloadOnStop" /t REG_DWORD /d "1" /f
-
 rem # Disable BranchCache
 rem # Disable faster access to files and data in branch office environments
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp" /v "DisableBranchCache" /t REG_DWORD /d "1" /f
@@ -1647,9 +1628,6 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" /v "A
 
 rem # Disable WinHttp Tracing
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp\Tracing" /v "Enabled" /t REG_DWORD /d "0" /f
-
-rem # Enable DNS Query Matching
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters" /v "QueryIpMatching" /t REG_DWORD /d "1" /f
 
 rem # Disable Find My Device
 reg add "HKLM\SOFTWARE\Policies\Microsoft\FindMyDevice" /v "LocationSyncEnabled" /t REG_DWORD /d "0" /f
@@ -1924,25 +1902,6 @@ reg add "HKLM\Software\Policies\Microsoft\Windows\LLTD" /v "EnableRspndr" /t REG
 
 rem 1 - Turn off Microsoft Peer-to-Peer Networking Services
 reg add "HKLM\Software\Policies\Microsoft\Windows\Peernet" /v "Disabled" /t REG_DWORD /d "1" /f
-
-rem Disable Discovery of Designated Resolvers (DDR), a mechanism for DNS clients to use DNS records to discover a resolver's encrypted DNS configuration
-reg add "HKLM\Software\Policies\Microsoft\Windows NT\DNSClient" /v "EnableDdr" /t REG_DWORD /d "0" /f
-
-rem 3 - Require DoH / 2 - Allow DoH / 1 - Prohibit DoH
-reg add "HKLM\Software\Policies\Microsoft\Windows NT\DNSClient" /v "DoHPolicy" /t REG_DWORD /d "3" /f
-
-rem # Disable IDN (internationalized domain name)
-reg add "HKLM\Software\Policies\Microsoft\Windows NT\DNSClient" /v "DisableIdnEncoding" /t REG_DWORD /d "1" /f
-reg add "HKLM\Software\Policies\Microsoft\Windows NT\DNSClient" /v "EnableIdnMapping" /t REG_DWORD /d "0" /f
-
-rem # Disable smart multi-homed name resolution
-rem # https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd197552(v=ws.10)
-reg add "HKLM\Software\Policies\Microsoft\Windows NT\DNSClient" /v "DisableSmartNameResolution" /t REG_DWORD /d "1" /f
-reg add "HKLM\System\CurrentControlSet\Services\Dnscache\Parameters" /v "DisableParallelAandAAAA" /t REG_DWORD /d "1" /f
-
-rem # Disable Multicast/mDNS repeater / https://f20.be/blog/mdns
-reg add "HKLM\System\CurrentControlSet\Services\Dnscache\Parameters" /v "EnableMDNS" /t REG_DWORD /d "0" /f
-reg add "HKLM\Software\Policies\Microsoft\Windows NT\DNSClient" /v "EnableMulticast" /t REG_DWORD /d "0" /f
 
 rem # Disable Remote Deskop settings
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Remote Assistance" /v "fAllowToGetHelp" /t REG_DWORD /d "0" /f
@@ -3712,41 +3671,38 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProf
 
 
 
-rem # Enable Cloudflare DNS
-rem # Disable DNS UDP Fallback
-rem # Disable Auto-Upgrade (Dynamic DNS / DDNS)
-rem # V3nilla: https://github.com/shoober420/windows11-scripts/issues/11
-netsh interface ip set dns Wi-Fi static 1.1.1.1
-netsh interface ip set dns Ethernet static 1.1.1.1
-netsh dns add encryption server=1.1.1.1 https://cloudflare-dns.com/dns-query autoupgrade=no udpfallback=no
-
-rem # Enable DNS over HTTPS (DoH)
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters" /v "EnableAutoDoh" /t REG_DWORD /d "2" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters" /v "EnableDoh" /t REG_DWORD /d "2" /f
-rem netsh dns set global doh=force
-
-rem # Launch DNS.ps1 for optimal DNS settings
+rem # Launch DNS.bat and DNS.ps1 for optimal DNS settings
+cd "%~dp0"
+call DNS.bat
 cd "%~dp0"
 ECHO R | powershell.exe ./DNS.ps1
 cd "%USERPROFILE%\Downloads"
 
 cd "%USERPROFILE%\Downloads\windows11-scripts-main"
+call DNS.bat
+cd "%USERPROFILE%\Downloads\windows11-scripts-main"
 ECHO R | powershell.exe ./DNS.ps1
 cd "%USERPROFILE%\Downloads"
 
+cd "%USERPROFILE%\Downloads\windows11-scripts-main\windows11-scripts-main"
+call DNS.bat
 cd "%USERPROFILE%\Downloads\windows11-scripts-main\windows11-scripts-main"
 ECHO R | powershell.exe ./DNS.ps1
 cd "%USERPROFILE%\Downloads"
 
 cd "%USERPROFILE%\Downloads\windows11-scripts\windows11-scripts"
+call DNS.bat
+cd "%USERPROFILE%\Downloads\windows11-scripts\windows11-scripts"
 ECHO R | powershell.exe ./DNS.ps1
 cd "%USERPROFILE%\Downloads"
 
 cd "%USERPROFILE%\Downloads\windows11-scripts"
+call DNS.bat
+cd "%USERPROFILE%\Downloads\windows11-scripts"
 ECHO R | powershell.exe ./DNS.ps1
 cd "%USERPROFILE%\Downloads"
 
-rem # Run DNS.ps1 for optimal DNS settings
+rem # Run DNS.bat and DNS.ps1 for optimal DNS settings
 
 rem # REBOOT RECOMMENDED
 
