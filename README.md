@@ -597,7 +597,7 @@ BlockRazerSynapse.bat (prevents Razer Synapse auto install rubber ducky attack)
 
 InputTweaks.bat (script settings need tweaked to match users computer hardware)
 
-DNS.ps1 (required to run after launching Windows11Tweaks.bat)
+DNS.bat / DNS.ps1 (required to run after launching Windows11Tweaks.bat and NetworkTweaks.bat)
 
 NICProperties.bat
 
