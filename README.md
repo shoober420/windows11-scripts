@@ -703,7 +703,7 @@ DisableHDR.bat / EnableHDR.bat
 
 DisableIntegratedGPU.ps1
 
-DisableFullscreenOptimizations.bat
+DisableFullscreenOptimizations.bat / EnableFullscreenOptimizations.bat
 
 DisableNetBIOS.ps1
 
