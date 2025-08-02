@@ -12,7 +12,8 @@ rem # https://djdallmann.github.io/GamingPCSetup/CONTENT/RESEARCH/FINDINGS/regis
 rem # Enable Independent Flip
 rem # Optimization technique for games that support "flip model" swapchains
 rem # Bypass some DWM composition, resulting in lower latency and better performance
-rem # BREAKS LOSSLESS SCALING PROGRAM WHEN DISABLED (1)
+rem # LIMITS FPS TO REFRESH RATE IN SOME GAMES WHEN SET TO 1 (Marvel Rivals)
+rem # BREAKS LOSSLESS SCALING PROGRAM WHEN SET TO 1
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableIndependentFlip" /t REG_DWORD /d "0" /f
 
 rem # Enable Advanced Direct Flip
