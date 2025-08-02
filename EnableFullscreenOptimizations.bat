@@ -15,8 +15,10 @@ reg add "HKCU\System\GameConfigStore" /v "GameDVR_DSEBehaviorMode" /t REG_DWORD 
 rem # Honor User adjusted DSE value
 reg add "HKCU\System\GameConfigStore" /v "GameDVR_HonorUserDSEBehaviorMode" /t REG_DWORD /d "0" /f
 
-rem # Disable more FSO, removes Color Management
-rem # 0 = Enable FSO / 1 = Disable FSO
+rem # Disable more FSO features
+rem # Disable Color Management
+rem # Disable GameDVR recording
+rem # 0 = Enable More FSO Features / 1 = Disable FSO Features
 reg add "HKCU\System\GameConfigStore" /v "GameDVR_DXGIHonorFSEWindowsCompatible" /t REG_DWORD /d "0" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "DisableFullScreenOptimizations" /t REG_DWORD /d "0" /f
