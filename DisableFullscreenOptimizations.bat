@@ -5,6 +5,7 @@ rem # https://learn.microsoft.com/en-us/answers/questions/3741077/fullscreen-opt
 rem # https://en.ittrip.xyz/windows10/registry-tweaks-gamedvr#google_vignette
 
 rem # Fullscreen Exclusive (FSE)
+rem # Enhanced Fullscreen Exclusive (EFSE)
 rem # Desktop Screen Experience (DSE)
 
 rem # 0 = FSO: ON / FSE: OFF
@@ -14,6 +15,12 @@ reg add "HKCU\System\GameConfigStore" /v "GameDVR_FSEBehaviorMode" /t REG_DWORD 
 
 rem # Honor User adjusted FSE value
 reg add "HKCU\System\GameConfigStore" /v "GameDVR_HonorUserFSEBehaviorMode" /t REG_DWORD /d "1" /f
+
+rem # Disable Enhanced Fullscreen Exclusive (EFSE)
+rem # 0 = Disable EFSE
+rem # 0x01 = Enable ONLY EFSE
+rem # 0x03 = Enable EFSE + Flip Model Swap Chains
+reg add "HKCU\System\GameConfigStore" /v "GameDVR_EFSEFeatureFlags" /t REG_DWORD /d "0" /f
 
 rem # Disable GameDVR Overlay
 rem # ON = 0 / OFF = 2
