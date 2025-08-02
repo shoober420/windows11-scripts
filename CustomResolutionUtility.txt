@@ -6,7 +6,7 @@ Use "CVT-RB2 standard" as template
 
 Front porch:
  - Horizontal: 1 pixels
- - Vertical: 1 lines (CVT-RB2 DEFAULT for non-gaming monitor)
+ - Vertical: 1 lines (4+ for non-gaming monitor)
 
 Sync width:
  - Horizontal: CVT-RB2 Default
@@ -15,7 +15,7 @@ Sync width:
 Back porch:
  + MORE SENSITIVE THAN FRONT PORCH, REQUIRES GAMING MONITOR FOR LOW VALUES
  - Horizontal: 1 pixels (25+ non-gaming monitor)
- - Vertical: 1 lines (CVT-RB2 DEFAULT for non-gaming monitor)
+ - Vertical: 1 lines (CVT-RB2 DEFAULT "6" for non-gaming monitor)
 
 
 Screen will wobble and shake when values are too low, or not work at all (Frequency out of range / No signal)
