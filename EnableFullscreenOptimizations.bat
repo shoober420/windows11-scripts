@@ -52,5 +52,6 @@ rem # "Hardware: Legacy Flip" used when FSO is DISABLED
 rem # Enable Multiplane Overlay (MPO)
 reg delete "HKLM\SYSTEM" /v "OverlayTestMode" /f
 reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "OverlayTestMode" /f
+reg delete "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "OverlayTestMode" /f
 
 PAUSE
