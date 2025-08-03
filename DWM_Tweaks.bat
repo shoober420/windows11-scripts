@@ -211,6 +211,7 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "ChildWindowDpiIsolation" /t RE
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "DWM_MAXIMUM_BUFFER_AGE" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "DWM_TRIPLE_BUFFER" /t REG_SZ /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "DWM_BUFFER_COUNT" /t REG_DWORD /d "1" /f
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\DWM\Schedule" /v "FrameDisplayBaseNegOffsetNS" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\DWM\Schedule" /v "FrameDisplayResDivValue" /t REG_DWORD /d "0" /f
