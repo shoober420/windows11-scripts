@@ -65,9 +65,6 @@ cd "%~dp0"
 call PowerPlanUltra.bat
 cd "%~dp0"
 
-call DisableFullscreenOptimizations.bat
-cd "%~dp0"
-
 call ThreadQuantum.bat
 cd "%~dp0"
 
@@ -80,6 +77,59 @@ cd "%~dp0"
 call NetworkTweaks.bat
 
 cd "%~dp0"
+
+
+
+@echo off
+
+echo.
+echo Fullscreen Optimizations (FSO)
+echo.
+echo 1. Enable FSO
+echo 2. Disable FSO
+echo 3. SKIP
+echo C. Cancel
+echo.
+choice /c 123C /m "Choose an option :"
+
+if 4 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 3 EQU %ERRORLEVEL% (
+   call :sccipp
+) else if 2 EQU %ERRORLEVEL% (
+   call :fsooff
+) else if 1 EQU %ERRORLEVEL% (
+   call :fsoon
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:fsoon
+echo User chose Enable FSO
+
+call EnableFullscreenOptimizations.bat
+cd "%~dp0"
+
+goto :end
+
+:fsooff
+echo User chose Disable FSO
+
+call DisableFullscreenOptimizations.bat
+cd "%~dp0"
+
+goto :end
+
+:sccipp
+echo User chose SKIP
+
+goto :end
+
+:end
+
+
 
 echo.
 echo 1. Vim
