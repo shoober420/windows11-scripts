@@ -3669,6 +3669,23 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProf
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Window Manager" /v "BackgroundPriority" /t REG_DWORD /d "5" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Window Manager" /v "Priority When Yielded" /t REG_DWORD /d "5" /f
 
+rem # Power Tweaks
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power" /v "PdcLockWatchdog" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power" /v "PdcLockWatchdogTimeout" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power" /v "PdcLockStatsTelemetryPeriod" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power" /v "PdcCriticalTransitionTimeout" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power" /v "PdcCsEntryAction" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power" /v "PdcWcmTransitionTimeout" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power" /v "PdcCriticalActivatorTimeout" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power" /v "PdcActivatorClientResponseTimeout" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power" /v "PdcActivatorClientPolicyNotificationDebounce" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power" /v "PdcCriticalActivatorAction" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power" /v "PdcEnforceSystemIdleTimeoutOnConsoleLock" /t REG_DWORD /d "0" /f
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Wdf01000\Parameters" /v "WdfDefaultIdleInWorkingState" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Wdf01000\Parameters" /v "WdfDirectedPowerTransitionEnable" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Wdf01000\Parameters" /v "IdleInWorkingState" /t REG_DWORD /d "1" /f
+
 
 
 rem # Launch DNS.bat and DNS.ps1 for optimal DNS settings
@@ -3707,3 +3724,4 @@ rem # Run DNS.bat and DNS.ps1 for optimal DNS settings
 rem # REBOOT RECOMMENDED
 
 PAUSE
+
