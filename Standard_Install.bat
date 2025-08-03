@@ -133,6 +133,8 @@ cd "%~dp0"
 
 @echo off
 
+
+
 echo.
 echo 1. NVIDIA GPU
 echo 2. AMD GPU
@@ -171,47 +173,10 @@ goto :end
 
 
 echo.
-echo 1. HDR ENABLED
-echo 2. HDR DISABLED
-echo C. Cancel
-echo.
-choice /c 12C /m "Choose an option :"
-
-if 3 EQU %ERRORLEVEL% (
-   echo User chose to cancel.
-) else if 2 EQU %ERRORLEVEL% (
-   call :HDROFF
-) else if 1 EQU %ERRORLEVEL% (
-   call :HDRON
-) else if 0 EQU %ERRORLEVEL% (
-   echo User bailed out.
-)
-
-goto :eof
-
-:HDRON
-echo User chose HDR ENABLED
-
-call EnableHDR.bat
-
-goto :end
-
-:HDROFF
-echo User chose HDR DISABLED
-
-call DisableHDR.bat
-
-goto :end
-
-:end
-
-
-
-echo.
 echo Fullscreen Optimizations (FSO)
 echo.
-echo 1. Enable FSO
-echo 2. Disable FSO
+echo 1. Enable FSO (HDR ON)
+echo 2. Disable FSO (HDR OFF)
 echo 3. SKIP
 echo C. Cancel
 echo.
@@ -232,17 +197,19 @@ if 4 EQU %ERRORLEVEL% (
 goto :eof
 
 :fsoon
-echo User chose Enable FSO
+echo User chose Enable FSO (HDR ON)
 
 call EnableFullscreenOptimizations.bat
+call EnableHDR.bat
 cd "%~dp0"
 
 goto :end
 
 :fsooff
-echo User chose Disable FSO
+echo User chose Disable FSO (HDR OFF)
 
 call DisableFullscreenOptimizations.bat
+call DisableHDR.bat
 cd "%~dp0"
 
 goto :end
