@@ -40,4 +40,8 @@ reg add "HKCU\System\GameConfigStore" /v "GameDVR_HonorUserDSEBehaviorMode" /t R
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "DisableFullScreenOptimizations" /t REG_DWORD /d "0" /f
 
+rem # Enable Multiplane Overlay (MPO)
+reg delete "HKLM\SYSTEM" /v "OverlayTestMode" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "OverlayTestMode" /f
+
 PAUSE
