@@ -9,6 +9,7 @@ rem # https://wiki.special-k.info/Presentation_Model
 rem # Fullscreen Exclusive (FSE)
 rem # Enhanced Fullscreen Exclusive (EFSE)
 rem # Desktop Screen Experience (DSE)
+rem # Multiplane Overlay (MPO)
 
 rem # 0 = FSO: ON / FSE: ON
 rem # 2 = FSO: OFF / FSE: ON
