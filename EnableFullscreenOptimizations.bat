@@ -4,6 +4,8 @@ rem # https://learn.microsoft.com/en-us/answers/questions/3741077/fullscreen-opt
 
 rem # https://en.ittrip.xyz/windows10/registry-tweaks-gamedvr#google_vignette
 
+rem # https://wiki.special-k.info/Presentation_Model
+
 rem # Fullscreen Exclusive (FSE)
 rem # Enhanced Fullscreen Exclusive (EFSE)
 rem # Desktop Screen Experience (DSE)
