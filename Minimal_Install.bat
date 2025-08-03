@@ -82,11 +82,13 @@ cd "%~dp0"
 
 @echo off
 
+
+
 echo.
 echo Fullscreen Optimizations (FSO)
 echo.
-echo 1. Enable FSO
-echo 2. Disable FSO
+echo 1. Enable FSO (HDR ON)
+echo 2. Disable FSO (HDR OFF)
 echo 3. SKIP
 echo C. Cancel
 echo.
@@ -107,17 +109,19 @@ if 4 EQU %ERRORLEVEL% (
 goto :eof
 
 :fsoon
-echo User chose Enable FSO
+echo User chose Enable FSO (HDR ON)
 
 call EnableFullscreenOptimizations.bat
+call EnableHDR.bat
 cd "%~dp0"
 
 goto :end
 
 :fsooff
-echo User chose Disable FSO
+echo User chose Disable FSO (HDR OFF)
 
 call DisableFullscreenOptimizations.bat
+call DisableHDR.bat
 cd "%~dp0"
 
 goto :end
