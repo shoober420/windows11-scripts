@@ -10,7 +10,7 @@ rem # Fullscreen Exclusive (FSE)
 rem # Enhanced Fullscreen Exclusive (EFSE)
 rem # Desktop Screen Experience (DSE)
 
-rem # 0 = FSO: ON / FSE: OFF
+rem # 0 = FSO: ON / FSE: ON
 rem # 2 = FSO: OFF / FSE: ON
 reg add "HKCU\System\GameConfigStore" /v "GameDVR_FSEBehavior" /t REG_DWORD /d "2" /f
 reg add "HKCU\System\GameConfigStore" /v "GameDVR_FSEBehaviorMode" /t REG_DWORD /d "2" /f
