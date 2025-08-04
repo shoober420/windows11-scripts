@@ -542,4 +542,43 @@ goto :end
 
 :end
 
+
+
+echo.
+echo GPU Preemption
+echo.
+echo 1. Disable GPU Preemption
+echo 2. Enable GPU Preemption
+echo C. Cancel
+echo.
+choice /c 12C /m "Choose an option :"
+
+if 3 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 2 EQU %ERRORLEVEL% (
+   call :yespre
+) else if 1 EQU %ERRORLEVEL% (
+   call :nopre
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:nopre
+echo User chose Disable GPU Preemption
+
+call DisableGPUPreemption.bat
+
+goto :end
+
+:yespre
+echo User chose Enable GPU Preemption
+
+call EnableGPUPreemption.bat
+
+goto :end
+
+:end
+
 PAUSE
