@@ -114,8 +114,6 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "DisableKmRender" /
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "DisableKmRenderBoost" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "DisableOverclockedPstates" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "DisablePowerGating" /t REG_DWORD /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "DisablePreemption" /t REG_DWORD /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "DisablePreemptionOnS3S4" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "DisableSamuClockGating" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "DisableSysClockGating" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "DisableUVDPowerGating" /t REG_DWORD /d "1" /f
@@ -141,7 +139,6 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "EnableSCGMidBuffer
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "EnableUlps" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "EnableVCNPreemption" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "FlTransitionLatency" /t REG_DWORD /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "GPUPreemptionLevel" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_EnableComputePreemption" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_EnableGfxMidCmdPreemption" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_EnablePreemptionLogging" /t REG_DWORD /d "0" /f
@@ -208,9 +205,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\PowerSettings" /v "Perf
 rem # NVIDIA service tweaks
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "NVFBCEnable" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\services\nvlddmkm" /v "DisableWriteCombining" /t REG_DWORD /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "DisablePreemption" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "ComputePreemption" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "DisablePreemptionOnS3S4" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "EnableCEPreemption" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "RmGpsPsEnablePerCpuCoreDpc" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "PreferSystemMemoryContiguous" /t REG_DWORD /d "1" /f
@@ -291,8 +286,6 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "DisableKmRender" /
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "DisableKmRenderBoost" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "DisableOverclockedPstates" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "DisablePowerGating" /t REG_DWORD /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "DisablePreemption" /t REG_DWORD /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "DisablePreemptionOnS3S4" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "DisableSamuClockGating" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "DisableSysClockGating" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "DisableUVDPowerGating" /t REG_DWORD /d "1" /f
@@ -318,7 +311,6 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "EnableSCGMidBuffer
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "EnableUlps" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "EnableVCNPreemption" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "FlTransitionLatency" /t REG_DWORD /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "GPUPreemptionLevel" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "KMD_EnableComputePreemption" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "KMD_EnableGfxMidCmdPreemption" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "KMD_EnablePreemptionLogging" /t REG_DWORD /d "0" /f
