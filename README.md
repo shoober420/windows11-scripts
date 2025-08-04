@@ -254,6 +254,10 @@ Install Intel Chipset INF Utility
 
 RESTART
 
+Download Bleachbit
+ - https://www.bleachbit.org/download/windows
+ - REQUIRES WMI
+
 Install and open CCleaner (optional)
  - Download (https://www.ccleaner.com/)
  - Launch CCleaner
