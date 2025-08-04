@@ -481,6 +481,43 @@ goto :end
 
 
 echo.
+echo 1. Enable Thread DPC
+echo 2. Disable Thread DPC
+echo C. Cancel
+echo.
+choice /c 12C /m "Choose an option :"
+
+if 3 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 2 EQU %ERRORLEVEL% (
+   call :threadoff
+) else if 1 EQU %ERRORLEVEL% (
+   call :threadon
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:threadon
+echo User chose Enable Thread DPC
+
+call EnableThreadDpcEnable.bat
+
+goto :end
+
+:threadoff
+echo User chose Disable Thread DPC
+
+call DisableThreadDpcEnable.bat
+
+goto :end
+
+:end
+
+
+
+echo.
 echo 1. TouchPad ENABLED
 echo 2. TouchPad DISABLED
 echo C. Cancel
