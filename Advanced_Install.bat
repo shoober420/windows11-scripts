@@ -499,14 +499,14 @@ goto :eof
 :threadon
 echo User chose Enable Thread DPC
 
-call EnableThreadDpcEnable.bat
+call EnableThreadDPC.bat
 
 goto :end
 
 :threadoff
 echo User chose Disable Thread DPC
 
-call DisableThreadDpcEnable.bat
+call DisableThreadDPC.bat
 
 goto :end
 
