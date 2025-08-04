@@ -1314,10 +1314,6 @@ rem # Disable Game Mode
 reg add "HKCU\Software\Microsoft\GameBar" /v "AllowAutoGameMode" /t REG_DWORD /d "0" /f
 reg add "HKCU\Software\Microsoft\GameBar" /v "AutoGameModeEnabled" /t REG_DWORD /d "0" /f
 
-rem # Turn On or Off Hardware Accelerated GPU Scheduling
-rem # 1 = Off / 2 = On
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "HwSchMode" /t REG_DWORD /d "2" /f
-
 rem # Disable Physical Camera LED
 reg add "HKLM\SOFTWARE\Microsoft\OEM\Device\Capture" /v "NoPhysicalCameraLED" /t REG_DWORD /d "0" /f
 
@@ -2886,7 +2882,7 @@ reg add "HKLM\SOFTWARE\Microsoft\TouchPrediction" /v "UseHWTimeStamp" /t REG_DWO
 rem # Disable Grey MSI Ads
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "GreyMSIAds" /t REG_DWORD /d "0" /f
 
-rem # System tweaks
+rem # Disable Phone Linking
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "EnableMmx" /t REG_DWORD /d "0" /f
 
 rem # Disable Enhanced Storage Device Security
@@ -3700,6 +3696,7 @@ rem # Run DNS.bat and DNS.ps1 for optimal DNS settings
 rem # REBOOT RECOMMENDED
 
 PAUSE
+
 
 
 
