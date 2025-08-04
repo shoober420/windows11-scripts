@@ -125,9 +125,6 @@ cd "%~dp0"
 call EnableSerializeTimerExpiration.bat
 cd "%~dp0"
 
-call DisableThreadDpcEnable.bat
-cd "%~dp0"
-
 regedit.exe "%~dp0\MaxPendingInterrupts.reg"
 cd "%~dp0"
 
