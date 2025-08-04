@@ -11,6 +11,9 @@ rem # https://djdallmann.github.io/GamingPCSetup/CONTENT/RESEARCH/FINDINGS/regis
 
 rem # https://youtu.be/JUXEr5QsaCc?si
 
+rem # Check Flip Mode with PresentMon
+rem # https://github.com/GameTechDev/PresentMon
+
 rem # Enable Independent Flip
 rem # Optimization technique for games that support "flip model" swapchains
 rem # Bypass some DWM composition, resulting in lower latency and better performance
