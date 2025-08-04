@@ -127,7 +127,7 @@ https://youtu.be/YNqtGV2IZqc?si=1cAnEc_uCMp0Yho6
  - RemoveWindowsApps.bat
  - RemoveWindowsFeatures.bat
  - EnableSerializeTimerExpiration.bat
- - DisableThreadDpcEnable.bat
+ - DisableThreadDPC.bat
  - MaxPendingInterrupts.reg
  - ResourceSets.reg
  - Base+OverTargetPriorities.reg
@@ -751,7 +751,7 @@ DWM_Tweaks.bat
 
 DisableSerializeTimerExpiration.bat / EnableSerializeTimerExpiration.bat
 
-DisableThreadDpcEnable.bat / EnableThreadDpcEnable.bat
+DisableThreadDPC.bat / EnableThreadDPC.bat
 
 DisableDistributeTimers.bat / EnableDistributeTimers.bat
 
