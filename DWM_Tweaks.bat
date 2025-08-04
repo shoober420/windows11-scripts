@@ -9,6 +9,8 @@ rem # https://sites.google.com/site/tweakradje/windows/windows-tweaking
 rem # https://forums.blurbusters.com/viewtopic.php?f=10&t=14501
 rem # https://djdallmann.github.io/GamingPCSetup/CONTENT/RESEARCH/FINDINGS/registrykeys_dwm.txt
 
+rem # https://youtu.be/JUXEr5QsaCc?si
+
 rem # Enable Independent Flip
 rem # Optimization technique for games that support "flip model" swapchains
 rem # Bypass some DWM composition, resulting in lower latency and better performance
