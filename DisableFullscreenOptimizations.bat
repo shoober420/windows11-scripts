@@ -4,6 +4,11 @@ rem # https://learn.microsoft.com/en-us/answers/questions/3741077/fullscreen-opt
 
 rem # https://en.ittrip.xyz/windows10/registry-tweaks-gamedvr#google_vignette
 
+rem # https://youtu.be/JUXEr5QsaCc?si
+
+rem # Check Flip Mode with PresentMon
+rem # https://github.com/GameTechDev/PresentMon
+
 rem # https://wiki.special-k.info/Presentation_Model
 
 rem # Fullscreen Exclusive (FSE)
