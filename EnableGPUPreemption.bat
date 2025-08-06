@@ -1,5 +1,7 @@
 rem # Enable preemption requests from the GPU scheduler
 
+rem # REQUIRED FOR GPU SCHEDULING
+
 rem # https://www.youtube.com/watch?v=B-3JgtuurhQ
 
 PAUSE
