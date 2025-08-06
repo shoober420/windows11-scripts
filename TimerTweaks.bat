@@ -17,12 +17,16 @@ rem # Disable RTC (Real Time Clock)
 rem # Lowers FPS when enabled
 bcdedit /deletevalue useplatformtick
 
-rem # Disable Power Saving Feature
+rem # Disable Dynamic Tick (power saving feature)
 bcdedit /set disabledynamictick yes
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "DisableDynamicTick" /t REG_DWORD /d "1" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "DISABLE_DYNAMIC_TICK" /t REG_SZ /d "1" /f
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "MaxDynamicTickDuration" /t REG_DWORD /d "0x3e8" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "MinDynamicTickDuration" /t REG_DWORD /d "0x3e8" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "MaxDynamicTickDurationSize" /t REG_DWORD /d "0xffffffff" /f
 
 rem # TSC Sync Policy
 bcdedit /set tscsyncpolicy enhanced
