@@ -4,6 +4,10 @@ rem # https://sites.google.com/view/melodystweaks/misconceptions-about-timers-hp
 
 rem # https://www.xbitlabs.com/hpet-settings/
 
+rem # https://www.tenforums.com/performance-maintenance/146774-cacheawarescheduling-what-how-does-windows-benefit.html
+
+rem # https://forums.blurbusters.com/viewtopic.php?t=13323
+
 rem # Leave HPET enabled in BIOS
 
 rem # Timer Resolution Tweak
