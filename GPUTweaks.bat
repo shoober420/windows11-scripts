@@ -487,7 +487,7 @@ rem reg add "HKLM\SOFTWARE\Intel\GMM" /v "DedicatedSegmentSize" /t REG_DWORD /d 
 echo.
 echo Hardware Accelerated GPU Scheduling (HAGS)
 echo.
-echo 1. HAGS ENABLED (REQUIRED FOR DLSS) (HELPS SOME GAMES)
+echo 1. HAGS ENABLED (REQUIRED FOR DLSS AND GPU PREEMPTION)
 echo 2. HAGS DISABLED (RECOMMENDED)
 echo C. Cancel
 echo.
@@ -506,7 +506,7 @@ if 3 EQU %ERRORLEVEL% (
 goto :eof
 
 :hagson
-echo User chose HAGS ENABLED (REQUIRED FOR DLSS) (HELPS SOME GAMES)
+echo User chose HAGS ENABLED (REQUIRED FOR DLSS AND GPU PREEMPTION)
 
 rem # Enable Hardware Accelerated GPU Scheduling (HAGS)
 rem # GPU to handle some of its own scheduling tasks, potentially reducing CPU overhead and latency
@@ -539,7 +539,7 @@ echo.
 echo GPU Preemption
 echo.
 echo 1. Disable GPU Preemption
-echo 2. Enable GPU Preemption
+echo 2. Enable GPU Preemption (REQUIRED FOR GPU SCHEDULING)
 echo C. Cancel
 echo.
 choice /c 12C /m "Choose an option :"
@@ -564,7 +564,7 @@ call DisableGPUPreemption.bat
 goto :end
 
 :yespre
-echo User chose Enable GPU Preemption
+echo User chose Enable GPU Preemption (REQUIRED FOR GPU SCHEDULING)
 
 call EnableGPUPreemption.bat
 
