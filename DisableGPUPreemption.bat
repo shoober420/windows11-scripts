@@ -4,6 +4,8 @@ rem # !!! WARNING !!!
 
 rem # INCREASES LATENCY
 
+rem # BREAKS GPU SCHEDULING
+
 rem # !!! WARNING !!!
 
 rem # https://www.youtube.com/watch?v=B-3JgtuurhQ
