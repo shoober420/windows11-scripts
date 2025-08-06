@@ -657,8 +657,6 @@ RemoveXGpuEjectDialog.bat
 
 RemovePrintDialog.bat
 
-CPUTweaksOLD.bat (TESTING ONLY)
-
 DeviceManager.bat
 
 DisableHighPrecisionEventTimer.bat
