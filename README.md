@@ -759,7 +759,7 @@ DisableThreadDPC.bat / EnableThreadDPC.bat
 
 DisableDistributeTimers.bat / EnableDistributeTimers.bat
 
-DisableGPUPreemption.bat / EnableGPUPreemption.bat
+DisableGPUPreemption.bat / EnableGPUPreemption.bat (HAGS REQUIRES GPU PREEMPTION)
 
 ResourceSets.reg
 
