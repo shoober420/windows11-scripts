@@ -515,6 +515,43 @@ goto :end
 
 
 echo.
+echo 1. ENABLE KERNEL DPC TWEAKS
+echo 2. DISABLE KERNEL DPC TWEAKS
+echo C. Cancel
+echo.
+choice /c 12C /m "Choose an option :"
+
+if 3 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 2 EQU %ERRORLEVEL% (
+   call :kdpcoff
+) else if 1 EQU %ERRORLEVEL% (
+   call :kdpcon
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:kdpcon
+echo User chose ENABLE KERNEL DPC TWEAKS
+
+call EnableKernelDPCTweaks.bat
+
+goto :end
+
+:kdpcoff
+echo User chose DISABLE KERNEL DPC TWEAKS
+
+call DisableKernelDPCTweaks.bat
+
+goto :end
+
+:end
+
+
+
+echo.
 echo 1. TouchPad ENABLED
 echo 2. TouchPad DISABLED
 echo C. Cancel
