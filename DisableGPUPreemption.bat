@@ -12,6 +12,20 @@ rem # https://www.youtube.com/watch?v=B-3JgtuurhQ
 
 PAUSE
 
+rem # Enable and start WMI
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD /d "2" /f
+sc config winmgmt start= auto
+net start winmgmt
+
+rem # https://www.elevenforum.com/members/garlin.5387/
+rem # https://www.elevenforum.com/t/gpu-tweaks-batch-script.30134/post-521530
+if not exist C:\Windows\System32\wbem\WMIC.exe (
+    echo Installing WMIC...
+    DISM /Online /Add-Capability /CapabilityName:WMIC~~~~
+    echo Done.
+)
+
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "EnablePreemption" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Power" /v "EnablePreemption" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "EnablePreemption" /t REG_DWORD /d "0" /f
