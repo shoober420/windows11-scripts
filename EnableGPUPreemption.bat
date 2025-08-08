@@ -6,6 +6,36 @@ rem # https://www.youtube.com/watch?v=B-3JgtuurhQ
 
 PAUSE
 
+
+
+@echo off
+
+
+
+echo.
+echo Enable GPU Preemption
+echo.
+echo 1. Force Enable GPU Preemption
+echo 2. DEFAULTS
+echo C. Cancel
+echo.
+choice /c 12C /m "Choose an option :"
+
+if 3 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 2 EQU %ERRORLEVEL% (
+   call :defaultz
+) else if 1 EQU %ERRORLEVEL% (
+   call :forcepre
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:forcepre
+echo User chose Force Enable GPU Preemption
+
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "EnablePreemption" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Power" /v "EnablePreemption" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "EnablePreemption" /t REG_DWORD /d "1" /f
@@ -88,9 +118,92 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "PerfAnalyzeMidBuff
 )
 )
 
+:defaultz
+echo User chose DEFAULTS
 
 
-@echo off
+
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "EnablePreemption" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Power" /v "EnablePreemption" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "EnablePreemption" /f
+
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "GPUPreemptionLevel" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Power" /v "GPUPreemptionLevel" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "GPUPreemptionLevel" /f
+
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "DisablePreemption" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Power" /v "DisablePreemption" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "DisablePreemption" /f
+
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "DisablePreemptionOnS3S4" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Power" /v "DisablePreemptionOnS3S4" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "DisablePreemptionOnS3S4" /f
+
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "ComputePreemption" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Power" /v "ComputePreemption" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "ComputePreemption" /f
+
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "DisableCudaContextPreemption" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Power" /v "DisableCudaContextPreemption" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "DisableCudaContextPreemption" /f
+
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "EnableAsyncMidBufferPreemption" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Power" /v "EnableAsyncMidBufferPreemption" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "EnableAsyncMidBufferPreemption" /f
+
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "EnableCEPreemption" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Power" /v "EnableCEPreemption" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "EnableCEPreemption" /f
+
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "EnableMidBufferPreemption" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Power" /v "EnableMidBufferPreemption" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "EnableMidBufferPreemption" /f
+
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "EnableMidBufferPreemptionForHighTdrTimeout" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Power" /v "EnableMidBufferPreemptionForHighTdrTimeout" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "EnableMidBufferPreemptionForHighTdrTimeout" /f
+
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "EnableMidGfxPreemption" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Power" /v "EnableMidGfxPreemption" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "EnableMidGfxPreemption" /f
+
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "EnableMidGfxPreemptionVGPU" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Power" /v "EnableMidGfxPreemptionVGPU" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "EnableMidGfxPreemptionVGPU" /f
+
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "EnableSCGMidBufferPreemption" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Power" /v "EnableSCGMidBufferPreemption" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "EnableSCGMidBufferPreemption" /f
+
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "PerfAnalyzeMidBufferPreemption" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Power" /v "PerfAnalyzeMidBufferPreemption" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "PerfAnalyzeMidBufferPreemption" /f
+
+
+
+
+for /f %%i in ('wmic path Win32_VideoController get PNPDeviceID^| findstr /L "PCI\VEN_"') do (
+for /f "tokens=3" %%a in ('reg query "HKLM\SYSTEM\ControlSet001\Enum\%%i" /v "Driver"') do (
+for /f %%i in ('echo %%a ^| findstr "{"') do (
+
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "EnablePreemption" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "DisablePreemption" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "DisablePreemptionOnS3S4" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "GPUPreemptionLevel" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "ComputePreemption" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "DisableCudaContextPreemption" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "EnableAsyncMidBufferPreemption" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "EnableCEPreemption" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "EnableMidBufferPreemption" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "EnableMidBufferPreemptionForHighTdrTimeout" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "EnableMidGfxPreemption" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "EnableMidGfxPreemptionVGPU" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "EnableSCGMidBufferPreemption" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "PerfAnalyzeMidBufferPreemption" /f
+
+)
+)
+)
 
 
 
@@ -116,7 +229,7 @@ if 3 EQU %ERRORLEVEL% (
 goto :eof
 
 :nvpre
-echo User chose DISABLE NVIDIA GPU PREEMPTION
+echo User chose ENABLE NVIDIA GPU PREEMPTION
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "EnablePreemption" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "DisablePreemption" /t REG_DWORD /d "0" /f
