@@ -33,9 +33,6 @@ call DisableWindowsConnectionManager.bat
 cd %USERPROFILE%\Downloads\windows11-scripts-main
 call DWM_ExclusiveModeFramerateAveragingPeriodMs.bat
 
-cd %USERPROFILE%\Downloads\windows11-scripts-main
-call DisableWMI.bat
-
 
 
 @echo off
@@ -142,6 +139,9 @@ echo User chose SKIP
 goto :end
 
 :end
+
+cd %USERPROFILE%\Downloads\windows11-scripts-main
+call DisableWMI.bat
 
 
 
