@@ -118,10 +118,10 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "PerfAnalyzeMidBuff
 )
 )
 
+goto :end
+
 :defaultz
 echo User chose DEFAULTS
-
-
 
 reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "EnablePreemption" /f
 reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Power" /v "EnablePreemption" /f
@@ -205,21 +205,28 @@ reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "PerfAnalyzeMidB
 )
 )
 
+goto :end
+
+:end
+
 
 
 echo.
 echo NVIDIA GPU PREEMPTION
 echo.
 echo 1. DISABLE NVIDIA GPU PREEMPTION
-echo 2. SKIP
+echo 2. DEFAULTS
+echo 3. SKIP
 echo C. Cancel
 echo.
-choice /c 12C /m "Choose an option :"
+choice /c 123C /m "Choose an option :"
 
-if 3 EQU %ERRORLEVEL% (
+if 4 EQU %ERRORLEVEL% (
    echo User chose to cancel.
-) else if 2 EQU %ERRORLEVEL% (
+) else if 3 EQU %ERRORLEVEL% (
    call :scippplez
+) else if 2 EQU %ERRORLEVEL% (
+   call :defaultzz
 ) else if 1 EQU %ERRORLEVEL% (
    call :nvpre
 ) else if 0 EQU %ERRORLEVEL% (
@@ -245,6 +252,26 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "EnableMidGfxPreemp
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "EnableMidGfxPreemptionVGPU" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "EnableSCGMidBufferPreemption" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "PerfAnalyzeMidBufferPreemption" /t REG_DWORD /d "1" /f
+
+goto :end
+
+:defaultzz
+echo User chose DEFAULTZ
+
+reg delete "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "EnablePreemption" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "DisablePreemption" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "DisablePreemptionOnS3S4" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "GPUPreemptionLevel" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "ComputePreemption" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "DisableCudaContextPreemption" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "EnableAsyncMidBufferPreemption" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "EnableCEPreemption" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "EnableMidBufferPreemption" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "EnableMidBufferPreemptionForHighTdrTimeout" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "EnableMidGfxPreemption" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "EnableMidGfxPreemptionVGPU" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "EnableSCGMidBufferPreemption" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "PerfAnalyzeMidBufferPreemption" /f
 
 goto :end
 
