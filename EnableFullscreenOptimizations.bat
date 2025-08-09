@@ -59,4 +59,57 @@ reg delete "HKLM\SYSTEM" /v "OverlayTestMode" /f
 reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "OverlayTestMode" /f
 reg delete "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "OverlayTestMode" /f
 
+
+
+@echo off
+
+
+
+echo.
+echo HDR (High Dynamic Range)
+echo.
+echo 1. HDR ON (AutoHDR=1 / SwapEffectUpgrade=1)
+echo 2. HDR OFF (AutoHDR=0 / SwapEffectUpgrade=1)
+echo 3. SKIP
+echo C. Cancel
+echo.
+choice /c 123C /m "Choose an option :"
+
+if 4 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 3 EQU %ERRORLEVEL% (
+   call :sccipp
+) else if 2 EQU %ERRORLEVEL% (
+   call :hdrofff
+) else if 1 EQU %ERRORLEVEL% (
+   call :fsoon
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:fsoon
+echo User chose HDR ON (AutoHDR=1 / SwapEffectUpgrade=1)
+
+call EnableHDR.bat
+cd "%~dp0"
+
+goto :end
+
+:hdrofff
+echo User chose HDR OFF (AutoHDR=0 / SwapEffectUpgrade=1)
+
+call EnableSwapEffectUpgrade.bat
+cd "%~dp0"
+
+goto :end
+
+:sccipp
+echo User chose SKIP
+
+goto :end
+
+:end
+
 PAUSE
