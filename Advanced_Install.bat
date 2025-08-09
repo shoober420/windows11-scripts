@@ -418,6 +418,51 @@ goto :end
 
 
 echo.
+echo 1. Enable System Profile Tweaks
+echo 2. Disable System Profile Tweaks
+echo 3. SKIP
+echo C. Cancel
+echo.
+choice /c 123C /m "Choose an option :"
+
+if 4 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 3 EQU %ERRORLEVEL% (
+   call :skipsterzzss
+) else if 2 EQU %ERRORLEVEL% (
+   call :sysprooff
+) else if 1 EQU %ERRORLEVEL% (
+   call :sysproon
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:sysproon
+echo User chose Enable System Profile Tweaks
+
+call EnableSystemProfile.bat
+
+goto :end
+
+:sysprooff
+echo User chose Disable System Profile Tweaks
+
+call DisableSystemProfile.bat
+
+goto :end
+
+:skipsterzzss
+echo User chose SKIP
+
+goto :end
+
+:end
+
+
+
+echo.
 echo Fullscreen Optimizations (FSO)
 echo.
 echo 1. Enable FSO
