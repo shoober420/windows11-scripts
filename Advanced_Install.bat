@@ -417,22 +417,19 @@ goto :end
 echo.
 echo Fullscreen Optimizations (FSO)
 echo.
-echo 1. Enable FSO (HDR ON)
-echo 2. Enable FSO (HDR OFF)
+echo 1. Enable FSO
 echo 3. Disable FSO (HDR OFF)
 echo 4. SKIP
 echo C. Cancel
 echo.
 choice /c 1234C /m "Choose an option :"
 
-if 5 EQU %ERRORLEVEL% (
+if 4 EQU %ERRORLEVEL% (
    echo User chose to cancel.
-) else if 4 EQU %ERRORLEVEL% (
-   call :sccipp
 ) else if 3 EQU %ERRORLEVEL% (
-   call :fsooff
+   call :sccipp
 ) else if 2 EQU %ERRORLEVEL% (
-   call :hdrofff
+   call :fsooff
 ) else if 1 EQU %ERRORLEVEL% (
    call :fsoon
 ) else if 0 EQU %ERRORLEVEL% (
@@ -442,19 +439,9 @@ if 5 EQU %ERRORLEVEL% (
 goto :eof
 
 :fsoon
-echo User chose Enable FSO (HDR ON)
+echo User chose Enable FSO
 
 call EnableFullscreenOptimizations.bat
-call EnableHDR.bat
-cd "%~dp0"
-
-goto :end
-
-:hdrofff
-echo User chose Enable FSO (HDR OFF)
-
-call EnableFullscreenOptimizations.bat
-call EnableSwapEffectUpgrade.bat
 cd "%~dp0"
 
 goto :end
@@ -463,7 +450,6 @@ goto :end
 echo User chose Disable FSO (HDR OFF)
 
 call DisableFullscreenOptimizations.bat
-call DisableHDR.bat
 cd "%~dp0"
 
 goto :end
