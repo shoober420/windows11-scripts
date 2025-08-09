@@ -137,7 +137,7 @@ cd "%~dp0"
 call BCDEDIT_Tweaks.bat
 cd "%~dp0"
 
-call SetTimerResolution.bat
+rem call SetTimerResolution.bat
 cd "%~dp0"
 
 call DWM_ExclusiveModeFramerateAveragingPeriodMs.bat
