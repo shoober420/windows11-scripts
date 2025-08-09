@@ -506,7 +506,7 @@ if 3 EQU %ERRORLEVEL% (
 goto :eof
 
 :hagson
-echo User chose HAGS ENABLED (REQUIRED FOR DLSS AND GPU PREEMPTION)
+echo User chose HAGS + GPU PREEMPTION ENABLED (REQUIRED FOR DLSS)
 
 rem # Enable Hardware Accelerated GPU Scheduling (HAGS)
 rem # GPU to handle some of its own scheduling tasks, potentially reducing CPU overhead and latency
@@ -522,7 +522,7 @@ call EnableGPUPreemption.bat
 goto :end
 
 :hagsoff
-echo User chose HAGS DISABLED (RECOMMENDED)
+echo User chose HAGS + GPU PREEMPTION DISABLED
 
 rem # Disable Hardware Accelerated GPU Scheduling (HAGS)
 rem # GPU to handle some of its own scheduling tasks, potentially reducing CPU overhead and latency
