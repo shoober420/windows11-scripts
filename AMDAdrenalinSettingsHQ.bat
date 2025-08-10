@@ -269,8 +269,10 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "VSyncControl_D
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "VSyncControl_NA" /t REG_SZ /d "0" /f
 
 rem # Truform Tessellation (LEGACY: DISABLE)
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "TruformMode" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "TruformMode_DEF" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "TruformMode_NA" /t REG_SZ /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "TruformMode" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "TruformMode_DEF" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "TruformMode_NA" /t REG_SZ /d "0" /f
 
