@@ -117,15 +117,18 @@ echo.
 echo NVIDIA GPU PREEMPTION
 echo.
 echo 1. DISABLE NVIDIA GPU PREEMPTION
-echo 2. SKIP
+echo 2. DISABLE RADEON GPU PREEMPTION
+echo 3. SKIP
 echo C. Cancel
 echo.
 choice /c 12C /m "Choose an option :"
 
-if 3 EQU %ERRORLEVEL% (
+if 4 EQU %ERRORLEVEL% (
    echo User chose to cancel.
-) else if 2 EQU %ERRORLEVEL% (
+) else if 3 EQU %ERRORLEVEL% (
    call :scippplez
+) else if 2 EQU %ERRORLEVEL% (
+   call :amdpre
 ) else if 1 EQU %ERRORLEVEL% (
    call :nvpre
 ) else if 0 EQU %ERRORLEVEL% (
@@ -151,6 +154,17 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "EnableMidGfxPreemp
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "EnableMidGfxPreemptionVGPU" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "EnableSCGMidBufferPreemption" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "PerfAnalyzeMidBufferPreemption" /t REG_DWORD /d "0" /f
+
+goto :end
+
+:amdpre
+echo User chose DISABLE RADEON GPU PREEMPTION
+
+for /f %%i in ('wmic path Win32_VideoController get PNPDeviceID^| findstr /L "PCI\VEN_"') do (
+        for /f "tokens=3" %%a in ('reg query "HKLM\SYSTEM\ControlSet001\Enum\%%i" /v "Driver"') do (
+                for /f %%i in ('echo %%a ^| findstr "{"') do (
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_EnableComputePreemption" /t REG_DWORD /d "0" /f
 
 goto :end
 
