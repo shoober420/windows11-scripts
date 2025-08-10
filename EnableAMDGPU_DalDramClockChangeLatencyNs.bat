@@ -27,6 +27,7 @@ for /f %%i in ('wmic path Win32_VideoController get PNPDeviceID^| findstr /L "PC
                 for /f %%i in ('echo %%a ^| findstr "{"') do (
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "DalDramClockChangeLatencyNs" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "DalDramClockChangeLatencyNs" /t REG_DWORD /d "1" /f
 
                    )
                 )
