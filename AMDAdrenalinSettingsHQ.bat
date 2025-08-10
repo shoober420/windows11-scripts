@@ -143,8 +143,11 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "AAAMethod_DEF"
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "AAAMethod_NA" /t REG_SZ /d "0" /f
 
 rem # Anisotropic Filtering: 0 = Off / 2x / 4x / 8x / 16x
+rem # 3000 = App controlled / 3200 = 2x / 3400 = 4x / 3800 = 8x / 3136 = 16x
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "AnisoDegree" /t REG_BINARY /d "3136" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "AnisoDegree_DEF" /t REG_SZ /d "16" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "AnisoDegree_NA" /t REG_SZ /d "16" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "AnisoDegree" /t REG_BINARY /d "3136" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "AnisoDegree_DEF" /t REG_SZ /d "16" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "AnisoDegree_NA" /t REG_SZ /d "16" /f
 
