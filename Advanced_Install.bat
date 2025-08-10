@@ -1050,15 +1050,18 @@ goto :end
 
 echo.
 echo 1. Enable AMDGPU: DalDramClockChangeLatencyNs tweak (MAY CAUSE BLACK SCREEN AND FLICKERING)
-echo 2. SKIP
+echo 2. Disable AMDGPU: DalDramClockChangeLatencyNs tweak
+echo 3. SKIP
 echo C. Cancel
 echo.
-choice /c 12C /m "Choose an option :"
+choice /c 123C /m "Choose an option :"
 
-if 3 EQU %ERRORLEVEL% (
+if 4 EQU %ERRORLEVEL% (
    echo User chose to cancel.
-) else if 2 EQU %ERRORLEVEL% (
+) else if 3 EQU %ERRORLEVEL% (
    call :skipsters
+) else if 2 EQU %ERRORLEVEL% (
+   call :damddaldram
 ) else if 1 EQU %ERRORLEVEL% (
    call :amddaldram
 ) else if 0 EQU %ERRORLEVEL% (
@@ -1071,6 +1074,13 @@ goto :eof
 echo User chose Enable AMDGPU: DalDramClockChangeLatencyNs tweak (MAY CAUSE BLACK SCREEN AND FLICKERING)
 
 call EnableAMDGPU_DalDramClockChangeLatencyNs.bat
+
+goto :end
+
+:damddaldram
+echo User chose Disable AMDGPU: DalDramClockChangeLatencyNs tweak
+
+call DisableAMDGPU_DalDramClockChangeLatencyNs.bat
 
 goto :end
 
