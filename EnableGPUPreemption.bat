@@ -228,19 +228,22 @@ goto :end
 echo.
 echo NVIDIA GPU PREEMPTION
 echo.
-echo 1. DISABLE NVIDIA GPU PREEMPTION
-echo 2. DEFAULTS
-echo 3. SKIP
+echo 1. ENABLE NVIDIA GPU PREEMPTION
+echo 2. ENABLE RADEON GPU PREEMPTION
+echo 3. DEFAULTS
+echo 4. SKIP
 echo C. Cancel
 echo.
 choice /c 123C /m "Choose an option :"
 
-if 4 EQU %ERRORLEVEL% (
+if 5 EQU %ERRORLEVEL% (
    echo User chose to cancel.
-) else if 3 EQU %ERRORLEVEL% (
+) else if 4 EQU %ERRORLEVEL% (
    call :scippplez
-) else if 2 EQU %ERRORLEVEL% (
+) else if 3 EQU %ERRORLEVEL% (
    call :defaultzz
+) else if 2 EQU %ERRORLEVEL% (
+   call :amdpre
 ) else if 1 EQU %ERRORLEVEL% (
    call :nvpre
 ) else if 0 EQU %ERRORLEVEL% (
@@ -269,6 +272,17 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "PerfAnalyzeMidBuff
 
 goto :end
 
+:amdpre
+echo User chose ENABLE RADEON GPU PREEMPTION
+
+for /f %%i in ('wmic path Win32_VideoController get PNPDeviceID^| findstr /L "PCI\VEN_"') do (
+        for /f "tokens=3" %%a in ('reg query "HKLM\SYSTEM\ControlSet001\Enum\%%i" /v "Driver"') do (
+                for /f %%i in ('echo %%a ^| findstr "{"') do (
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_EnableComputePreemption" /t REG_DWORD /d "1" /f
+
+goto :end
+
 :defaultzz
 echo User chose DEFAULTZ
 
@@ -286,6 +300,12 @@ reg delete "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "EnableMidGfxPre
 reg delete "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "EnableMidGfxPreemptionVGPU" /f
 reg delete "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "EnableSCGMidBufferPreemption" /f
 reg delete "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "PerfAnalyzeMidBufferPreemption" /f
+
+for /f %%i in ('wmic path Win32_VideoController get PNPDeviceID^| findstr /L "PCI\VEN_"') do (
+        for /f "tokens=3" %%a in ('reg query "HKLM\SYSTEM\ControlSet001\Enum\%%i" /v "Driver"') do (
+                for /f %%i in ('echo %%a ^| findstr "{"') do (
+
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_EnableComputePreemption" /f
 
 goto :end
 
