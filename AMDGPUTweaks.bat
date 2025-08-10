@@ -284,7 +284,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "PowerSaverAutoEnab
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "PowerSaverAutoEnable_DEF" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "PowerSaverAutoEnable_NA" /t REG_DWORD /d "0" /f
 
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD\DXC" "AllowDelag" /t REG_SZ /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD\DXC" /v "AllowDelag" /t REG_SZ /d "0" /f
 
 reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD\DXVA" /v "LRTCEnable" /t REG_BINARY /d "30000000" /f
 reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD\DXVA" /v "3to2Pulldown" /t REG_BINARY /d "30000000" /f
