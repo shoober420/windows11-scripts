@@ -258,11 +258,11 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "TextureOpt_DEF
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "TextureOpt_NA" /t REG_SZ /d "0" /f
 
 rem # Texture Level of Detail
-rem # 3 = High Performance / 2 = Performance / 1 = Quality / 0 = High Quality / (-1 = Very High Quality ???)
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "TextureLod_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "TextureLod_NA" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "TextureLod_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "TextureLod_NA" /t REG_SZ /d "0" /f
+rem # 3 = High Performance / 2 = Performance / 1 = Quality / 0 = High Quality / -1 = Very High Quality
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "TextureLod_DEF" /t REG_SZ /d "-1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "TextureLod_NA" /t REG_SZ /d "-1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "TextureLod_DEF" /t REG_SZ /d "-1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "TextureLod_NA" /t REG_SZ /d "-1" /f
 
 rem # 0 = Always Off / 1 = Default Off / 2 = Default On / 3 = Always On
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "VSyncControl" /t REG_BINARY /d "3000" /f
