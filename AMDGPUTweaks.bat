@@ -44,8 +44,10 @@ rem # Disable DMA Copy
 rem # Direct Memory Access (DMA) engines for data transfers between system memory and the GPU, or within the GPU itself
 rem # Uses GPU instead of CPU for DMA (similar to HAGS)
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "DisableDMACopy" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "DisableDMACopy" /t REG_DWORD /d "1" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "DisableBlockWrite" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "DisableBlockWrite" /t REG_DWORD /d "0" /f
 
 rem # Pre-rendered Frames=FlipQueueSize (DX9) | Main3D and Main3D_DEF (DX10+) / 3100=1 3200=2 3300=3300 (DEFAULT)
 rem # 3000=0 will use the default 3 value
