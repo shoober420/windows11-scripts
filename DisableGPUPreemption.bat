@@ -151,7 +151,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_PreemptionLeve
 
 
 echo.
-echo NVIDIA GPU PREEMPTION
+echo.
 echo.
 echo 1. DISABLE NVIDIA GPU PREEMPTION
 echo 2. DISABLE RADEON GPU PREEMPTION
