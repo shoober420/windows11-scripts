@@ -244,6 +244,11 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "EnableVCNPreem
 
 
 
+)
+)
+)
+
+
 goto :end
 
 :scippplez
