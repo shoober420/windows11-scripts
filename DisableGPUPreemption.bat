@@ -191,6 +191,9 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_EnableSDMAPree
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_PreemptionLevelLimit" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "KMD_PreemptionLevelLimit" /t REG_DWORD /d "0" /f
 
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_EnableSDMAPreemption" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "KMD_EnableSDMAPreemption" /t REG_DWORD /d "0" /f
+
 goto :end
 
 :scippplez
