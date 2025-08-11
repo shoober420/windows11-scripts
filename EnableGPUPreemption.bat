@@ -298,7 +298,7 @@ goto :end
 
 
 echo.
-echo NVIDIA GPU PREEMPTION
+echo.
 echo.
 echo 1. ENABLE NVIDIA GPU PREEMPTION
 echo 2. ENABLE RADEON GPU PREEMPTION
