@@ -90,6 +90,26 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "EnableVCNPre
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Power" /v "EnableVCNPreemption" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "EnableVCNPreemption" /t REG_DWORD /d "0" /f
 
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "KMD_EnableComputePreemption" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Power" /v "KMD_EnableComputePreemption" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "KMD_EnableComputePreemption" /t REG_DWORD /d "0" /f
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "KMD_EnableGfxMidCmdPreemption" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Power" /v "KMD_EnableGfxMidCmdPreemption" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "KMD_EnableGfxMidCmdPreemption" /t REG_DWORD /d "0" /f
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "KMD_EnablePreemptionLogging" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Power" /v "KMD_EnablePreemptionLogging" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "KMD_EnablePreemptionLogging" /t REG_DWORD /d "0" /f
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "KMD_EnableSDMAPreemption" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Power" /v "KMD_EnableSDMAPreemption" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "KMD_EnableSDMAPreemption" /t REG_DWORD /d "0" /f
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "KMD_PreemptionLevelLimit" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Power" /v "KMD_PreemptionLevelLimit" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "KMD_PreemptionLevelLimit" /t REG_DWORD /d "0" /f
+
 
 
 for /f %%i in ('wmic path Win32_VideoController get PNPDeviceID^| findstr /L "PCI\VEN_"') do (
@@ -112,6 +132,13 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "EnableMidGfxPreemp
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "EnableSCGMidBufferPreemption" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "PerfAnalyzeMidBufferPreemption" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "EnableVCNPreemption" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_EnableComputePreemption" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_EnableGfxMidCmdPreemption" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_EnablePreemptionLogging" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_EnableSDMAPreemption" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_PreemptionLevelLimit" /t REG_DWORD /d "0" /f
+
+
 
 )
 )
@@ -166,6 +193,13 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "EnableMidGfxPreemp
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "EnableSCGMidBufferPreemption" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "PerfAnalyzeMidBufferPreemption" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "EnableVCNPreemption" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "KMD_EnableComputePreemption" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "KMD_EnableGfxMidCmdPreemption" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "KMD_EnablePreemptionLogging" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "KMD_EnableSDMAPreemption" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "KMD_PreemptionLevelLimit" /t REG_DWORD /d "0" /f
+
+
 
 goto :end
 
