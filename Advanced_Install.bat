@@ -177,6 +177,9 @@ cd "%~dp0"
 call RefreshRate.bat
 cd "%~dp0"
 
+call EnableSystemProfile.bat
+cd "%~dp0"
+
 call GPU_Scheduling.bat
 cd "%~dp0"
 
