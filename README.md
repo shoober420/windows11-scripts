@@ -833,6 +833,8 @@ RemoveDirectPlay.bat
 
 DisableSystemProfile.bat / EnableSystemProfile.bat
 
+DisableAMD_FrameRateTargetControl.bat / EnableAMD_FrameRateTargetControl.bat
+
 # Credits
 - https://www.elevenforum.com/members/garlin.5387
 - https://www.elevenforum.com/members/csmc.38355
