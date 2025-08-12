@@ -4,7 +4,7 @@ rem # !!! WARNING !!!
 
 rem # DalDramClockChangeLatencyNs tweak can cause screen flickering
 
-rem # NOT RECOMMENDED FOR 60HZ OR LOW REFRESH RATE MONITORS, FEELS CHOPPY
+rem # VSYNC ENABLED INCREASES CHANCES OF FLICKERING
 
 rem # Run DisableAMD_DalDramClockChangeLatencyNs.bat to fix
 
