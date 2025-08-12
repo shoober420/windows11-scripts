@@ -1,5 +1,7 @@
 rem # Disable AMD Frame Rate Target Control (FRTC)
 
+rem # !!! REBOOT REQUIRED !!!
+
 rem # Enable and start WMI
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD /d "2" /f
