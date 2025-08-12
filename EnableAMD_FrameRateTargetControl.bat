@@ -25,4 +25,6 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "KMD_MaxFrameRa
 )
 )
 
+rem # !!! REBOOT REQUIRED !!!
+
 PAUSE
