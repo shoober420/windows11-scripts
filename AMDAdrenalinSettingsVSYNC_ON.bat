@@ -1,5 +1,7 @@
 rem # AMD Adrenalin VSYNC Enabled
 
+rem # SET MONITOR REFRESH RATE TO 60Hz TO FIX BUGGY GAMES
+
 rem # Enable and start WMI
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD /d "2" /f
