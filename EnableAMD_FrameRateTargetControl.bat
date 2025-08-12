@@ -15,6 +15,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "KMD_FRTEnabled
 
 rem # FPS in Hexidecimal
 rem # 999FPS = 0x3E7
+rem # 120FPS = 0x78
 rem # 100FPS = 0x64
 rem # 60FPS = 0x3C
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_MaxFrameRateRequested" /t REG_DWORD /d "0x3C" /f
