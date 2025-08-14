@@ -303,8 +303,10 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "TextureOpt_NA"
 
 rem # Texture Level of Detail
 rem # 3 = High Performance / 2 = Performance / 1 = Quality / 0 = High Quality / -1 = Very High Quality
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "TextureLod" /t REG_BINARY /d "2d003100" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "TextureLod_DEF" /t REG_SZ /d "-1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "TextureLod_NA" /t REG_SZ /d "-1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "TextureLod" /t REG_BINARY /d "2d003100" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "TextureLod_DEF" /t REG_SZ /d "-1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "TextureLod_NA" /t REG_SZ /d "-1" /f
 
