@@ -40,6 +40,9 @@ Windows Registry Editor Version 5.00
 "GI_NA"="0"
 "KMD_RadeonBoostEnabled"=dword:00000000
 "KMD_RadeonUpscalingEnabled"=dword:00000000
+"MLF"=hex:30,00
+"MLF_DEF"="0"
+"MLF_NA"="0"
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0000\UMD]
 "AdvancedMetrics_DEF"="false"
