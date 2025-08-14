@@ -7,7 +7,7 @@ Windows Registry Editor Version 5.00
 "VSyncControl"=hex:30,00
 "VSyncControl_DEF"="0"
 "VSyncControl_NA"="0"
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{your_video_controller_class_guid}\UMD]
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0000\UMD]
 "VSyncControl"=hex:30,00
 "VSyncControl_DEF"="0"
 "VSyncControl_NA"="0"
@@ -16,7 +16,7 @@ Windows Registry Editor Version 5.00
 "VSyncControl"=hex:30,00
 "VSyncControl_DEF"="0"
 "VSyncControl_NA"="0"
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{your_video_controller_class_guid}\UMD]
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0001\UMD]
 "VSyncControl"=hex:30,00
 "VSyncControl_DEF"="0"
 "VSyncControl_NA"="0"
