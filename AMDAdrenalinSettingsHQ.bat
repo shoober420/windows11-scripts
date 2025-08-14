@@ -130,6 +130,20 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "TFQ" /t REG_BI
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "TFQ_DEF" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "TFQ_NA" /t REG_SZ /d "0" /f
 
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "AnistotropyOptimise" /t REG_BINARY /d "3000" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "AnistotropyOptimise_DEF" /t REG_SZ /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "AnistotropyOptimise_NA" /t REG_SZ /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "AnistotropyOptimise" /t REG_BINARY /d "3000" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "AnistotropyOptimise_DEF" /t REG_SZ /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "AnistotropyOptimise_NA" /t REG_SZ /d "0" /f
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "TrilinearOptimise" /t REG_BINARY /d "3000" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "TrilinearOptimise_DEF" /t REG_SZ /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "TrilinearOptimise_NA" /t REG_SZ /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "TrilinearOptimise" /t REG_BINARY /d "3000" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "TrilinearOptimise_DEF" /t REG_SZ /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "TrilinearOptimise_NA" /t REG_SZ /d "0" /f
+
 rem # Multi-GPU rendering mode
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "MVPU" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "MVPU_DEF" /t REG_SZ /d "0" /f
