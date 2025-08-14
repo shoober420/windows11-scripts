@@ -43,9 +43,9 @@ Windows Registry Editor Version 5.00
 "MLF"=hex:30,00
 "MLF_DEF"="0"
 "MLF_NA"="0"
-"TFQ"=hex:32,00
-"TFQ_DEF"="2"
-"TFQ_NA"="2"
+"TFQ"=hex:30,00
+"TFQ_DEF"="0"
+"TFQ_NA"="0"
 "MVPU"=hex:30,00
 "MVPU_DEF"="0"
 "MVPU_NA"="0"
