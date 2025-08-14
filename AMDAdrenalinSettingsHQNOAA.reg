@@ -85,7 +85,7 @@ Windows Registry Editor Version 5.00
 "Tessellation_OPTION"=hex:32,00
 "Tessellation_OPTION_DEF"="2"
 "Tessellation_OPTION_NA"="2"
-"Tessellation"=hex:30,00
+"Tessellation"=hex:31,20,32,20,34,20,36,20,38,20,31,36,20,33,32,20,36,34,20,31,32,38,00
 "Tessellation_DEF"="128"
 "Tessellation_NA"="128"
 "TextureOpt"=hex:30,00
@@ -185,7 +185,7 @@ Windows Registry Editor Version 5.00
 "Tessellation_OPTION"=hex:32,00
 "Tessellation_OPTION_DEF"="2"
 "Tessellation_OPTION_NA"="2"
-"Tessellation"=hex:30,00
+"Tessellation"=hex:31,20,32,20,34,20,36,20,38,20,31,36,20,33,32,20,36,34,20,31,32,38,00
 "Tessellation_DEF"="128"
 "Tessellation_NA"="128"
 "TextureOpt"=hex:30,00
@@ -285,7 +285,7 @@ Windows Registry Editor Version 5.00
 "Tessellation_OPTION"=hex:32,00
 "Tessellation_OPTION_DEF"="2"
 "Tessellation_OPTION_NA"="2"
-"Tessellation"=hex:30,00
+"Tessellation"=hex:31,20,32,20,34,20,36,20,38,20,31,36,20,33,32,20,36,34,20,31,32,38,00
 "Tessellation_DEF"="128"
 "Tessellation_NA"="128"
 "TextureOpt"=hex:30,00
@@ -385,7 +385,7 @@ Windows Registry Editor Version 5.00
 "Tessellation_OPTION"=hex:32,00
 "Tessellation_OPTION_DEF"="2"
 "Tessellation_OPTION_NA"="2"
-"Tessellation"=hex:30,00
+"Tessellation"=hex:31,20,32,20,34,20,36,20,38,20,31,36,20,33,32,20,36,34,20,31,32,38,00
 "Tessellation_DEF"="128"
 "Tessellation_NA"="128"
 "TextureOpt"=hex:30,00
