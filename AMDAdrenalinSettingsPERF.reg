@@ -35,9 +35,9 @@ Windows Registry Editor Version 5.00
 "EQAA"=hex:30,00
 "EQAA_DEF"="0"
 "EQAA_NA"="0"
-"GI"=hex:30,00
-"GI_DEF"="0"
-"GI_NA"="0"
+"GI"=hex:31,00
+"GI_DEF"="1"
+"GI_NA"="1"
 "KMD_RadeonBoostEnabled"=dword:00000000
 "KMD_RadeonUpscalingEnabled"=dword:00000000
 "MLF"=hex:30,00
