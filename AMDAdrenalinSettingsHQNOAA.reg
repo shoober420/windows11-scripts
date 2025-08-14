@@ -98,6 +98,7 @@ Windows Registry Editor Version 5.00
 "TextureOpt"=hex:30,00
 "TextureOpt_DEF"="0"
 "TextureOpt_NA"="0"
+"TextureLod"=hex:2d,00,31,00
 "TextureLod_DEF"="-1"
 "TextureLod_NA"="-1"
 "TruformMode"=hex:30,00
@@ -205,6 +206,7 @@ Windows Registry Editor Version 5.00
 "TextureOpt"=hex:30,00
 "TextureOpt_DEF"="0"
 "TextureOpt_NA"="0"
+"TextureLod"=hex:2d,00,31,00
 "TextureLod_DEF"="-1"
 "TextureLod_NA"="-1"
 "TruformMode"=hex:30,00
@@ -312,6 +314,7 @@ Windows Registry Editor Version 5.00
 "TextureOpt"=hex:30,00
 "TextureOpt_DEF"="0"
 "TextureOpt_NA"="0"
+"TextureLod"=hex:2d,00,31,00
 "TextureLod_DEF"="-1"
 "TextureLod_NA"="-1"
 "TruformMode"=hex:30,00
@@ -419,6 +422,7 @@ Windows Registry Editor Version 5.00
 "TextureOpt"=hex:30,00
 "TextureOpt_DEF"="0"
 "TextureOpt_NA"="0"
+"TextureLod"=hex:2d,00,31,00
 "TextureLod_DEF"="-1"
 "TextureLod_NA"="-1"
 "TruformMode"=hex:30,00
