@@ -46,7 +46,8 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "ASTT" /t REG_B
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "ASTT_DEF" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "ASTT_NA" /t REG_SZ /d "0" /f
 
-rem # AA extra options
+rem # Anti-Aliasing Filter (AAF)
+rem # 0 = Box / 1 = Narrow / 2 = Wide / 3 = Edge
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "AAF" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "AAF_DEF" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "AAF_NA" /t REG_SZ /d "0" /f
