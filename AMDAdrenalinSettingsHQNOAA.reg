@@ -29,6 +29,7 @@ Windows Registry Editor Version 5.00
 "FSAAPerfMode"=dword:00000000
 "FSAAPerfMode_DEF"="0"
 "FSAAPerfMode_NA"="0"
+"AutoColorDepthReduction"=hex:30,00
 "AutoColorDepthReduction_DEF"=dword:00000000
 "AutoColorDepthReduction_NA"=dword:00000000
 "EQAA"=hex:30,00
