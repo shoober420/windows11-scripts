@@ -33,6 +33,9 @@ call DisableWindowsConnectionManager.bat
 cd %USERPROFILE%\Downloads\windows11-scripts-main
 call DWM_ExclusiveModeFramerateAveragingPeriodMs.bat
 
+cd %USERPROFILE%\Downloads\windows11-scripts-main
+call DisableUI.bat
+
 
 
 @echo off
