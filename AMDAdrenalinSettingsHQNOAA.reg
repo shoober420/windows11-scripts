@@ -6,7 +6,7 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\AMD\CN]
 "WizardProfile"="PROFILE_CUSTOM"
 
- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0000]
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0000]
 "AdvancedMetrics_DEF"="false"
 "AdvancedMetrics_NA"="false"
 "AreaAniso"=hex:30,00
@@ -28,15 +28,15 @@ Windows Registry Editor Version 5.00
 "ASD_NA"="0"
 "FSAAPerfMode"=dword:00000000
 "FSAAPerfMode_DEF"="0"
-"FSAAPerfMode_NA"="0" "AutoColorDepthReduction_DEF"=dword:00000000
-"AutoColorDepthReduction_NA"=dword:00000000
+"FSAAPerfMode_NA"="0" "AutoColorDepthReduction_DEF"=dword:00000000"AutoColorDepthReduction_NA"=dword:00000000
 "EQAA"=hex:30,00
 "EQAA_DEF"="0"
 "EQAA_NA"="0"
 "GI"=hex:30,00
 "GI_DEF"="0"
 "GI_NA"="0"
- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0000\UMD]
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0000\UMD]
 "AdvancedMetrics_DEF"="false"
 "AdvancedMetrics_NA"="false"
 "AreaAniso"=hex:30,00
@@ -58,8 +58,67 @@ Windows Registry Editor Version 5.00
 "ASD_NA"="0"
 "FSAAPerfMode"=dword:00000000
 "FSAAPerfMode_DEF"="0"
-"FSAAPerfMode_NA"="0" "AutoColorDepthReduction_DEF"=dword:00000000
-"AutoColorDepthReduction_NA"=dword:00000000
+"FSAAPerfMode_NA"="0" "AutoColorDepthReduction_DEF"=dword:00000000"AutoColorDepthReduction_NA"=dword:00000000
+"EQAA"=hex:30,00
+"EQAA_DEF"="0"
+"EQAA_NA"="0"
+"GI"=hex:30,00
+"GI_DEF"="0"
+"GI_NA"="0"
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0001]
+"AdvancedMetrics_DEF"="false"
+"AdvancedMetrics_NA"="false"
+"AreaAniso"=hex:30,00
+"AreaAniso_DEF"="0"
+"AreaAniso_NA"="0"
+"ASTT"=hex:30,00
+"ASTT_DEF"="0"
+"ASTT_NA"="0"
+"AAF"=hex:30,00
+"AAF_DEF"="0"
+"AAF_NA"="0"
+"ATMS_DEF"="-1"
+"ATMS_NA"="-1"
+"ASE"=hex:30,00
+"ASE_DEF"="0"
+"ASE_NA"="0"
+"ASD"=hex:30,00
+"ASD_DEF"="0"
+"ASD_NA"="0"
+"FSAAPerfMode"=dword:00000000
+"FSAAPerfMode_DEF"="0"
+"FSAAPerfMode_NA"="0" "AutoColorDepthReduction_DEF"=dword:00000000"AutoColorDepthReduction_NA"=dword:00000000
+"EQAA"=hex:30,00
+"EQAA_DEF"="0"
+"EQAA_NA"="0"
+"GI"=hex:30,00
+"GI_DEF"="0"
+"GI_NA"="0"
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0001\UMD]
+"AdvancedMetrics_DEF"="false"
+"AdvancedMetrics_NA"="false"
+"AreaAniso"=hex:30,00
+"AreaAniso_DEF"="0"
+"AreaAniso_NA"="0"
+"ASTT"=hex:30,00
+"ASTT_DEF"="0"
+"ASTT_NA"="0"
+"AAF"=hex:30,00
+"AAF_DEF"="0"
+"AAF_NA"="0"
+"ATMS_DEF"="-1"
+"ATMS_NA"="-1"
+"ASE"=hex:30,00
+"ASE_DEF"="0"
+"ASE_NA"="0"
+"ASD"=hex:30,00
+"ASD_DEF"="0"
+"ASD_NA"="0"
+"FSAAPerfMode"=dword:00000000
+"FSAAPerfMode_DEF"="0"
+"FSAAPerfMode_NA"="0" "AutoColorDepthReduction_DEF"=dword:00000000"AutoColorDepthReduction_NA"=dword:00000000
 "EQAA"=hex:30,00
 "EQAA_DEF"="0"
 "EQAA_NA"="0"
