@@ -15,9 +15,9 @@ Windows Registry Editor Version 5.00
 "ASTT"=hex:31,00
 "ASTT_DEF"="1"
 "ASTT_NA"="1"
-"AAF"=hex:31,00
-"AAF_DEF"="1"
-"AAF_NA"="1"
+"AAF"=hex:30,00
+"AAF_DEF"="0"
+"AAF_NA"="0"
 "ATMS_DEF"="-1"
 "ATMS_NA"="-1"
 "ASE"=hex:31,00
