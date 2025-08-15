@@ -354,6 +354,16 @@ rem reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "ZFormats" 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "ZFormats_DEF" /t REG_SZ /d "15" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "ZFormats_NA" /t REG_SZ /d "15" /f
 
+rem # LOD Adjustment (Level of Detail)
+rem # Range: -6 / 11
+rem # -6 = HQ / 11 = PERF
+rem reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "LodAdj" /t REG_SZ /d "-6" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "LodAdj_DEF" /t REG_SZ /d "-6" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "LodAdj_NA" /t REG_SZ /d "-6" /f
+rem reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "LodAdj" /t REG_SZ /d "-6" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "LodAdj_DEF" /t REG_SZ /d "-6" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "LodAdj_NA" /t REG_SZ /d "-6" /f
+
 
 
 )
