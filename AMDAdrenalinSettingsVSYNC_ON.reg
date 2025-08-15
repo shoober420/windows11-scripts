@@ -6,19 +6,19 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0000]
 "VSyncControl"=hex:34,00
 "VSyncControl_DEF"="4"
-"VSyncControl_NA"="4"
+"VSyncControl_NA"="0"
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0000\UMD]
 "VSyncControl"=hex:34,00
 "VSyncControl_DEF"="4"
-"VSyncControl_NA"="4"
+"VSyncControl_NA"="0"
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0001]
 "VSyncControl"=hex:34,00
 "VSyncControl_DEF"="4"
-"VSyncControl_NA"="4"
+"VSyncControl_NA"="0"
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0001\UMD]
 "VSyncControl"=hex:34,00
 "VSyncControl_DEF"="4"
-"VSyncControl_NA"="4"
+"VSyncControl_NA"="0"
