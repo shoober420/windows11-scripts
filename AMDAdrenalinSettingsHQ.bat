@@ -281,13 +281,13 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "Tessellation_O
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "Tessellation_OPTION_DEF" /t REG_SZ /d "2" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "Tessellation_OPTION_NA" /t REG_SZ /d "2" /f
 
-rem # 1 = Off / 2 / 4 / 6 / 8 / 16 / 32 / 64 / 128
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "Tessellation" /t REG_BINARY /d "3120322034203620382031362033322036342031323800" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "Tessellation_SET" /t REG_BINARY /d "3120322034203620382031362033322036342031323800" /f
+rem # 1 = Off / 2 / 4 / 6 / 8 / 16 / 32 / 64 (NO 128)
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "Tessellation" /t REG_BINARY /d "0x36003400" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "Tessellation_SET" /t REG_BINARY /d "0x36003400" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "Tessellation_DEF" /t REG_SZ /d "128" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "Tessellation_NA" /t REG_SZ /d "128" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "Tessellation" /t REG_BINARY /d "3120322034203620382031362033322036342031323800" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "Tessellation_SET" /t REG_BINARY /d "3120322034203620382031362033322036342031323800" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "Tessellation" /t REG_BINARY /d "0x36003400" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "Tessellation_SET" /t REG_BINARY /d "0x36003400" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "Tessellation_DEF" /t REG_SZ /d "128" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "Tessellation_NA" /t REG_SZ /d "128" /f
 
