@@ -46,10 +46,10 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "AreaAniso_NA" 
 rem # Adaptive Sampled Transparent Textures AA
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "ASTT" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "ASTT_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "ASTT_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "ASTT_NA" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "ASTT" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "ASTT_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "ASTT_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "ASTT_NA" /t REG_SZ /d "0" /f
 
 rem # Anti-Aliasing Filter (AAF)
 rem # 0 = Box / 1 = Narrow / 2 = Wide / 3 = Edge
@@ -72,42 +72,42 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "ATMS_NA" /t RE
 rem # Super Sampling on Adaptive Anti Aliasing
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "ASE" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "ASE_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "ASE_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "ASE_NA" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "ASE" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "ASE_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "ASE_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "ASE_NA" /t REG_SZ /d "0" /f
 
 rem # Super Sampling
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "ASD" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "ASD_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "ASD_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "ASD_NA" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "ASD" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "ASD_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "ASD_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "ASD_NA" /t REG_SZ /d "0" /f
 
 rem # Disable FSAA
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "FSAAPerfMode" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "FSAAPerfMode_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "FSAAPerfMode_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "FSAAPerfMode_NA" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "FSAAPerfMode" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "FSAAPerfMode_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "FSAAPerfMode_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "FSAAPerfMode_NA" /t REG_SZ /d "0" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "AutoColorDepthReduction" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "AutoColorDepthReduction_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "AutoColorDepthReduction_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "AutoColorDepthReduction_NA" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "AutoColorDepthReduction" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "AutoColorDepthReduction_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "AutoColorDepthReduction_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "AutoColorDepthReduction_NA" /t REG_SZ /d "0" /f
 
 rem # Enhanced Quality Mode for AA
 rem # 3000 = OFF / 3100 = ON
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "EQAA" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "EQAA_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "EQAA_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "EQAA_NA" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "EQAA" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "EQAA_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "EQAA_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "EQAA_NA" /t REG_SZ /d "0" /f
 
 rem # Geometry Instancing (INCREASE PERFORMANCE)
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "GI" /t REG_BINARY /d "3100" /f
@@ -125,10 +125,10 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "KMD_RadeonUpsc
 rem # Morphological AA
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "MLF" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "MLF_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "MLF_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "MLF_NA" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "MLF" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "MLF_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "MLF_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "MLF_NA" /t REG_SZ /d "0" /f
 
 rem # Texture Filtering Quality
 rem # 3000 / 0 = High | 3200 / 2 = Performance
@@ -141,39 +141,39 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "TFQ_NA" /t REG
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "AnistotropyOptimise" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "AnistotropyOptimise_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "AnistotropyOptimise_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "AnistotropyOptimise_NA" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "AnistotropyOptimise" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "AnistotropyOptimise_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "AnistotropyOptimise_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "AnistotropyOptimise_NA" /t REG_SZ /d "0" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "TrilinearOptimise" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "TrilinearOptimise_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "TrilinearOptimise_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "TrilinearOptimise_NA" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "TrilinearOptimise" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "TrilinearOptimise_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "TrilinearOptimise_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "TrilinearOptimise_NA" /t REG_SZ /d "0" /f
 
 rem # Multi-GPU rendering mode
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "MVPU" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "MVPU_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "MVPU_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "MVPU_NA" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "MVPU" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "MVPU_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "MVPU_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "MVPU_NA" /t REG_SZ /d "0" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "AdaptiveAAMethod" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "AdaptiveAAMethod_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "AdaptiveAAMethod_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "AdaptiveAAMethod_NA" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "AdaptiveAAMethod" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "AdaptiveAAMethod_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "AdaptiveAAMethod_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "AdaptiveAAMethod_NA" /t REG_SZ /d "0" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "AAAMethod" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "AAAMethod_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "AAAMethod_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "AAAMethod_NA" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "AAAMethod" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "AAAMethod_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "AAAMethod_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "AAAMethod_NA" /t REG_SZ /d "0" /f
 
 rem # Anisotropic Filtering: 0 = Off / 2x / 4x / 8x / 16x
 rem # 3000 = App controlled / 3200 = 2x / 3400 = 4x / 3800 = 8x / 3136 = 16x
@@ -209,76 +209,76 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "ForceZBufferDe
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "AntiAlias" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "AntiAlias_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "AntiAlias_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "AntiAlias_NA" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "AntiAlias" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "AntiAlias_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "AntiAlias_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "AntiAlias_NA" /t REG_SZ /d "0" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "AntiAliasSamples" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "AntiAliasSamples_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "AntiAliasSamples_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "AntiAliasSamples_NA" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "AntiAliasSamples" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "AntiAliasSamples_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "AntiAliasSamples_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "AntiAliasSamples_NA" /t REG_SZ /d "0" /f
 
 rem # Disable TAA (Temporal Anti-Aliasing)
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "TemporalAAMultiplier" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "TemporalAAMultiplier" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "TemporalAAMultiplier_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "TemporalAAMultiplier_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "TemporalAAMultiplier_NA" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "TemporalAAMultiplier_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "TemporalAAMultiplier_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "TemporalAAMultiplier_NA" /t REG_SZ /d "0" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdag" /v "TemporalAAMultiplier" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdag" /v "TemporalAAMultiplier_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdag" /v "TemporalAAMultiplier_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdag" /v "TemporalAAMultiplier_NA" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdap" /v "TemporalAAMultiplier" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdap" /v "TemporalAAMultiplier_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdap" /v "TemporalAAMultiplier_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdap" /v "TemporalAAMultiplier_NA" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmpfd" /v "TemporalAAMultiplier" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmpfd" /v "TemporalAAMultiplier_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmpfd" /v "TemporalAAMultiplier_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmpfd" /v "TemporalAAMultiplier_NA" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdwddmg" /v "TemporalAAMultiplier" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdwddmg" /v "TemporalAAMultiplier_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdwddmg" /v "TemporalAAMultiplier_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdwddmg" /v "TemporalAAMultiplier_NA" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdgpuv" /v "TemporalAAMultiplier" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdgpuv" /v "TemporalAAMultiplier_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdgpuv" /v "TemporalAAMultiplier_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdgpuv" /v "TemporalAAMultiplier_NA" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\atikmdag" /v "TemporalAAMultiplier" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\atikmdag" /v "TemporalAAMultiplier_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\atikmdag" /v "TemporalAAMultiplier_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\atikmdag" /v "TemporalAAMultiplier_NA" /t REG_SZ /d "0" /f
 
 rem # Catalyst AI
 rem # 3000 = OFF / 3100 = ON / 3200 = EXPERIMENTAL
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "CatalystAI" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "CatalystAI_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "CatalystAI_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "CatalystAI_NA" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "CatalystAI" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "CatalystAI_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "CatalystAI_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "CatalystAI_NA" /t REG_SZ /d "0" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "EnableTripleBuffering" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "EnableTripleBuffering_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "EnableTripleBuffering_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "EnableTripleBuffering_NA" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "EnableTripleBuffering" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "EnableTripleBuffering_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "EnableTripleBuffering_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "EnableTripleBuffering_NA" /t REG_SZ /d "0" /f
 
 rem # Experimental buffering tweak
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "GLPBMode" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "GLPBMode_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "GLPBMode_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "GLPBMode_NA" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "GLPBMode" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "GLPBMode_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "GLPBMode_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "GLPBMode_NA" /t REG_SZ /d "0" /f
 
 rem # Surface Format Optimizations
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "SurfaceFormatReplacements" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "SurfaceFormatReplacements_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "SurfaceFormatReplacements_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "SurfaceFormatReplacements_NA" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "SurfaceFormatReplacements" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "SurfaceFormatReplacements_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "SurfaceFormatReplacements_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "SurfaceFormatReplacements_NA" /t REG_SZ /d "0" /f
 
 rem # 0 = AMD Optimized / 1 = Default On / 2 = Always On
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "Tessellation_OPTION" /t REG_SZ /d "3200" /f
@@ -301,10 +301,10 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "Tessellation_N
 rem # Texture Optimizations
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "TextureOpt" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "TextureOpt_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "TextureOpt_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "TextureOpt_NA" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "TextureOpt" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "TextureOpt_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "TextureOpt_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "TextureOpt_NA" /t REG_SZ /d "0" /f
 
 rem # Texture Level of Detail
 rem # 3 = High Performance / 2 = Performance / 1 = Quality / 0 = High Quality / -1 = Very High Quality
@@ -318,10 +318,10 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "TextureLod_NA"
 rem # Truform Tessellation (LEGACY: DISABLE)
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "TruformMode" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "TruformMode_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "TruformMode_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "TruformMode_NA" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "TruformMode" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "TruformMode_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "TruformMode_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "TruformMode_NA" /t REG_SZ /d "0" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "ExportBumpMappedTex" /t REG_BINARY /d "3100" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "ExportBumpMappedTex_DEF" /t REG_SZ /d "1" /f
@@ -333,10 +333,10 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "ExportBumpMapp
 rem # Compressed Textures
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "ExportCompressedTex" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "ExportCompressedTex_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "ExportCompressedTex_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "ExportCompressedTex_NA" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "ExportCompressedTex" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "ExportCompressedTex_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "ExportCompressedTex_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "ExportCompressedTex_NA" /t REG_SZ /d "0" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "HighQualityAF" /t REG_BINARY /d "3100" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "HighQualityAF_DEF" /t REG_SZ /d "1" /f
