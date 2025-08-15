@@ -63,4 +63,38 @@ rem # Disable optimizations for windowed games
 
 call DisableHDR.bat
 
+
+
+@echo off
+
+
+
+echo.
+echo
+echo.
+echo 1. Enable AMD SwapEffect (DXGI_SWAP_EFFECT_FLIP_DISCARD)
+echo 2. SKIP
+echo C. Cancel
+echo.
+choice /c 12C /m "Choose an option :"
+
+if 3 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 2 EQU %ERRORLEVEL% (
+   call :sccippl
+) else if 1 EQU %ERRORLEVEL% (
+   call :amdswap
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:amdswap
+echo User chose Enable AMD SwapEffect (DXGI_SWAP_EFFECT_FLIP_DISCARD)
+
+goto :end
+
+:end
+
 PAUSE
