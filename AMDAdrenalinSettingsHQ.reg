@@ -127,7 +127,7 @@ Windows Registry Editor Version 5.00
 "LodAdj_NA"="0"
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0000\UMD]
-AdvancedMetrics_DEF"="false"
+"AdvancedMetrics_DEF"="false"
 "AdvancedMetrics_NA"="true"
 "AreaAniso"=hex:31,00
 "AreaAniso_DEF"="1"
@@ -367,7 +367,7 @@ AdvancedMetrics_DEF"="false"
 "LodAdj_NA"="0"
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0001\UMD]
-AdvancedMetrics_DEF"="false"
+"AdvancedMetrics_DEF"="false"
 "AdvancedMetrics_NA"="true"
 "AreaAniso"=hex:31,00
 "AreaAniso_DEF"="1"
