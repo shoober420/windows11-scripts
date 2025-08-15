@@ -122,6 +122,9 @@ Windows Registry Editor Version 5.00
 "HighQualityAF_NA"="1"
 "ZFormats_DEF"="15"
 "ZFormats_NA"="15"
+"LodAdj"="-6"
+"LodAdj_DEF"="-6"
+"LodAdj_NA"="-6"
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0000\UMD]
 "AdvancedMetrics_DEF"="false"
@@ -239,6 +242,9 @@ Windows Registry Editor Version 5.00
 "HighQualityAF_NA"="1"
 "ZFormats_DEF"="15"
 "ZFormats_NA"="15"
+"LodAdj"="-6"
+"LodAdj_DEF"="-6"
+"LodAdj_NA"="-6"
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0001]
 "AdvancedMetrics_DEF"="false"
@@ -356,6 +362,9 @@ Windows Registry Editor Version 5.00
 "HighQualityAF_NA"="1"
 "ZFormats_DEF"="15"
 "ZFormats_NA"="15"
+"LodAdj"="-6"
+"LodAdj_DEF"="-6"
+"LodAdj_NA"="-6"
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0001\UMD]
 "AdvancedMetrics_DEF"="false"
@@ -473,3 +482,6 @@ Windows Registry Editor Version 5.00
 "HighQualityAF_NA"="1"
 "ZFormats_DEF"="15"
 "ZFormats_NA"="15"
+"LodAdj"="-6"
+"LodAdj_DEF"="-6"
+"LodAdj_NA"="-6"
