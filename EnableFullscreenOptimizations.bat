@@ -112,4 +112,68 @@ goto :end
 
 :end
 
+
+
+echo.
+echo
+echo.
+echo 1. Enable AMD SwapEffect (DXGI_SWAP_EFFECT_FLIP_DISCARD)
+echo 2. SKIP
+echo C. Cancel
+echo.
+choice /c 12C /m "Choose an option :"
+
+if 3 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 2 EQU %ERRORLEVEL% (
+   call :sccippl
+) else if 1 EQU %ERRORLEVEL% (
+   call :amdswap
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:amdswap
+echo User chose Enable AMD SwapEffect (DXGI_SWAP_EFFECT_FLIP_DISCARD)
+
+for /f %%i in ('wmic path Win32_VideoController get PNPDeviceID^| findstr /L "PCI\VEN_"') do (
+        for /f "tokens=3" %%a in ('reg query "HKLM\SYSTEM\ControlSet001\Enum\%%i" /v "Driver"') do (
+                for /f %%i in ('echo %%a ^| findstr "{"') do (
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "Swapeffect" /t REG_BINARY /d "3100" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "Swapeffect_DEF" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "Swapeffect_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "Swapeffect" /t REG_BINARY /d "3100" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "Swapeffect_DEF" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "Swapeffect_NA" /t REG_SZ /d "1" /f
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "Swapeffect_D3D" /t REG_BINARY /d "3100" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "Swapeffect_D3D_DEF" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "Swapeffect_D3D_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "Swapeffect_D3D" /t REG_BINARY /d "3100" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "Swapeffect_D3D_DEF" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "Swapeffect_D3D_NA" /t REG_SZ /d "1" /f
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "Swapeffect_OGL" /t REG_BINARY /d "3100" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "Swapeffect_OGL_DEF" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "Swapeffect_OGL_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "Swapeffect_OGL" /t REG_BINARY /d "3100" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "Swapeffect_OGL_DEF" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "Swapeffect_OGL_NA" /t REG_SZ /d "1" /f
+
+)
+)
+)
+
+goto :end
+
+:sccippl
+echo User chose SKIP
+
+goto :end
+
+:end
+
 PAUSE
