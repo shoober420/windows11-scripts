@@ -72,7 +72,7 @@ call DisableHDR.bat
 echo.
 echo
 echo.
-echo 1. Enable AMD SwapEffect (DXGI_SWAP_EFFECT_FLIP_DISCARD)
+echo 1. Disable AMD SwapEffect (DXGI_SWAP_EFFECT_FLIP_DISCARD)
 echo 2. SKIP
 echo C. Cancel
 echo.
@@ -91,7 +91,13 @@ if 3 EQU %ERRORLEVEL% (
 goto :eof
 
 :amdswap
-echo User chose Enable AMD SwapEffect (DXGI_SWAP_EFFECT_FLIP_DISCARD)
+echo User chose Disable AMD SwapEffect (DXGI_SWAP_EFFECT_FLIP_DISCARD)
+
+for /f %%i in ('wmic path Win32_VideoController get PNPDeviceID^| findstr /L "PCI\VEN_"') do (
+        for /f "tokens=3" %%a in ('reg query "HKLM\SYSTEM\ControlSet001\Enum\%%i" /v "Driver"') do (
+                for /f %%i in ('echo %%a ^| findstr "{"') do (
+
+
 
 goto :end
 
