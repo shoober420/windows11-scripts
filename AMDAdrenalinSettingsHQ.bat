@@ -284,12 +284,12 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "Tessellation_O
 rem # 1 = Off / 2 / 4 / 6 / 8 / 16 / 32 / 64 (NO 128)
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "Tessellation" /t REG_BINARY /d "0x36003400" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "Tessellation_SET" /t REG_BINARY /d "0x36003400" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "Tessellation_DEF" /t REG_SZ /d "128" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "Tessellation_NA" /t REG_SZ /d "128" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "Tessellation_DEF" /t REG_SZ /d "64" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "Tessellation_NA" /t REG_SZ /d "64" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "Tessellation" /t REG_BINARY /d "0x36003400" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "Tessellation_SET" /t REG_BINARY /d "0x36003400" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "Tessellation_DEF" /t REG_SZ /d "128" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "Tessellation_NA" /t REG_SZ /d "128" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "Tessellation_DEF" /t REG_SZ /d "64" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "Tessellation_NA" /t REG_SZ /d "64" /f
 
 rem # Texture Optimizations
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "TextureOpt" /t REG_BINARY /d "3000" /f
