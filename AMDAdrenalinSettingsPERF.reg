@@ -119,6 +119,8 @@ Windows Registry Editor Version 5.00
 "HighQualityAF"=hex:30,00
 "HighQualityAF_DEF"="0"
 "HighQualityAF_NA"="0"
+"ZFormats_DEF"="15"
+"ZFormats_NA"="15"
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0000\UMD]
 "AdvancedMetrics_DEF"="false"
@@ -233,6 +235,8 @@ Windows Registry Editor Version 5.00
 "HighQualityAF"=hex:30,00
 "HighQualityAF_DEF"="0"
 "HighQualityAF_NA"="0"
+"ZFormats_DEF"="15"
+"ZFormats_NA"="15"
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0001]
 "AdvancedMetrics_DEF"="false"
@@ -347,6 +351,8 @@ Windows Registry Editor Version 5.00
 "HighQualityAF"=hex:30,00
 "HighQualityAF_DEF"="0"
 "HighQualityAF_NA"="0"
+"ZFormats_DEF"="15"
+"ZFormats_NA"="15"
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0001\UMD]
 "AdvancedMetrics_DEF"="false"
@@ -461,3 +467,5 @@ Windows Registry Editor Version 5.00
 "HighQualityAF"=hex:30,00
 "HighQualityAF_DEF"="0"
 "HighQualityAF_NA"="0"
+"ZFormats_DEF"="15"
+"ZFormats_NA"="15"
