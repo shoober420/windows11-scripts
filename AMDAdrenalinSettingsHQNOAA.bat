@@ -340,6 +340,18 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "HighQualityAF"
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "HighQualityAF_DEF" /t REG_SZ /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "HighQualityAF_NA" /t REG_SZ /d "1" /f
 
+rem # ZFormats
+rem # 3 = 16/24 Z-buffer
+rem # 7 = 16/24 Z-buffer + 8 bits stencil
+rem # 11 = 16/24/32 Z-buffer
+rem # 15 = 16/24/32 Z-buffer + 8 bits stencil
+rem reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "ZFormats" /t REG_BINARY /d "3100" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "ZFormats_DEF" /t REG_SZ /d "15" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "ZFormats_NA" /t REG_SZ /d "15" /f
+rem reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "ZFormats" /t REG_BINARY /d "3100" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "ZFormats_DEF" /t REG_SZ /d "15" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "ZFormats_NA" /t REG_SZ /d "15" /f
+
 
 
 )
