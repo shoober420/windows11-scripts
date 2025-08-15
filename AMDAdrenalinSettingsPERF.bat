@@ -3,6 +3,9 @@ rem # PERFORMANCE
 
 rem # Last key may vary from 0000 to 0001 if dual NVIDIA/AMD machine is used
 
+rem # _NA = Not Available
+rem # 0 = Available / 1 = Not Available
+
 rem # https://forums.guru3d.com/threads/radeonmod-tweak-utility.403389/page-12
 
 rem # REBOOT REQUIRED
