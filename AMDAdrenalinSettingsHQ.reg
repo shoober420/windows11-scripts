@@ -20,7 +20,7 @@ Windows Registry Editor Version 5.00
 "AAF_NA"="0"
 "ATMS"=hex:2d,00,31,00
 "ATMS_DEF"="-1"
-"ATMS_NA"="1"
+"ATMS_NA"="0"
 "ASE"=hex:31,00
 "ASE_DEF"="1"
 "ASE_NA"="0"
