@@ -835,6 +835,8 @@ DisableSystemProfile.bat / EnableSystemProfile.bat
 
 AMD_FrameRateTargetControl.bat
 
+Install.NETDesktopRuntime.bat / Remove.NETDesktopRuntime.bat
+
 # Credits
 - https://www.elevenforum.com/members/garlin.5387
 - https://www.elevenforum.com/members/csmc.38355
