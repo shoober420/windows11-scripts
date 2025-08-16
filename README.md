@@ -829,7 +829,7 @@ DisableKernelDPCTweaks.bat / EnableKernelDPCTweaks.bat
 
 GPU_Scheduling.bat
 
-RemoveDirectPlay.bat
+InstallDirectPlay.bat / RemoveDirectPlay.bat
 
 DisableSystemProfile.bat / EnableSystemProfile.bat
 
