@@ -64,10 +64,10 @@ rem # Adaptive AA
 rem # -1 = Off / 0 = Smooth / 1 = Smoother / 2 = Smoothest / 3 = Smooth (sharp)
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "ATMS" /t REG_BINARY /d "2d003100" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "ATMS_DEF" /t REG_SZ /d "-1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "ATMS_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "ATMS_NA" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "ATMS" /t REG_BINARY /d "2d003100" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "ATMS_DEF" /t REG_SZ /d "-1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "ATMS_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "ATMS_NA" /t REG_SZ /d "0" /f
 
 rem # Super Sampling on Adaptive Anti Aliasing
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "ASE" /t REG_BINARY /d "3000" /f
@@ -110,11 +110,11 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "EQAA_DEF" /t R
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "EQAA_NA" /t REG_SZ /d "0" /f
 
 rem # Geometry Instancing (INCREASE PERFORMANCE)
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "GI" /t REG_BINARY /d "3100" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "GI_DEF" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "GI" /t REG_BINARY /d "3000" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "GI_DEF" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "GI_NA" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "GI" /t REG_BINARY /d "3100" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "GI_DEF" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "GI" /t REG_BINARY /d "3000" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "GI_DEF" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "GI_NA" /t REG_SZ /d "0" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_RadeonBoostEnabled" /t REG_DWORD /d "0" /f
