@@ -35,7 +35,7 @@ if 3 EQU %ERRORLEVEL% (
 
 goto :eof
 
-:frrcon
+:frtcon
 echo User chose FRTC ON
 
 for /f %%i in ('wmic path Win32_VideoController get PNPDeviceID^| findstr /L "PCI\VEN_"') do (
@@ -51,7 +51,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "KMD_FRTEnabled
 
 goto :end
 
-:frrcoff
+:frtcoff
 echo User chose FRTC OFF
 
 for /f %%i in ('wmic path Win32_VideoController get PNPDeviceID^| findstr /L "PCI\VEN_"') do (
