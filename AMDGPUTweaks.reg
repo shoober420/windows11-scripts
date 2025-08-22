@@ -3,7 +3,7 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Winmgmt]
 "Start"=dword:00000002
 
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\<AMD_GPU_DEVICE_ID>]
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0000]
 "DisableDMACopy"=dword:00000001
 "DisableBlockWrite"=dword:00000000
 "FlipQueueSize"=hex:31,00
@@ -115,17 +115,17 @@ Windows Registry Editor Version 5.00
 "CameraShakeMotionDetect_NA"="0"
 "powermanagement_delag_component_def"="false"
 
-[-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\<AMD_GPU_DEVICE_ID>\UMD]
+[-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0000\UMD]
 "KMD_EnableHWCursor"=-
 
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\<AMD_GPU_DEVICE_ID>\UMD\DXX]
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0000\UMD\DXX]
 "CpuAffinityOptimization"="1"
 
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\<AMD_GPU_DEVICE_ID>\UMD\DXC]
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0000\UMD\DXC]
 "CpuAffinityOptimization"="1"
 
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\<AMD_GPU_DEVICE_ID>\OpenGL\Private]
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0000\OpenGL\Private]
 "CpuAffinityOptimization"=dword:00000001
 
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\<AMD_GPU_DEVICE_ID>]
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0000]
 "KMD_EnableHWCursor"=-
