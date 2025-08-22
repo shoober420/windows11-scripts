@@ -468,12 +468,12 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "KMD_EVENT_LOG"
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "PP_DisableULPS" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_FullScreenPowerManagement" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "FS_PWR_MGMT" /t REG_SZ /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "FS_PWR_MGMT" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "FS_PWR_MGMT_DEF" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "FS_PWR_MGMT_NA" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "PP_DisableULPS" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "KMD_FullScreenPowerManagement" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "FS_PWR_MGMT" /t REG_SZ /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "FS_PWR_MGMT" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "FS_PWR_MGMT_DEF" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "FS_PWR_MGMT_NA" /t REG_SZ /d "0" /f
 
