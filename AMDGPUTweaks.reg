@@ -528,9 +528,9 @@ Windows Registry Editor Version 5.00
 "FlipQueueSize_SET"=hex:31,00
 "FlipQueueSize_DEF"="1"
 "FlipQueueSize_NA"="0"
-"Main3D"=hex:31,00
-"Main3D_SET"=hex:31,00
-"Main3D_DEF"="1"
+"Main3D"=hex:30,00
+;"Main3D_SET"=hex:30,00
+"Main3D_DEF"="0"
 "Main3D_NA"="0"
 "ShaderCache"=hex:32,00
 "ShaderCache_DEF"="2"
