@@ -58,18 +58,18 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "FlipQueueSize"
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "FlipQueueSize_SET" /t REG_BINARY /d "3100" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "FlipQueueSize_SET" /t REG_BINARY /d "3100" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "FlipQueueSize_DEF" /t REG_SZ /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "FlipQueueSize_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "FlipQueueSize_NA" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "FlipQueueSize_DEF" /t REG_SZ /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "FlipQueueSize_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "FlipQueueSize_NA" /t REG_SZ /d "0" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "Main3D" /t REG_BINARY /d "3100" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "Main3D" /t REG_BINARY /d "3100" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "Main3D_SET" /t REG_BINARY /d "3100" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "Main3D_SET" /t REG_BINARY /d "3100" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "Main3D_DEF" /t REG_SZ /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "Main3D_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "Main3D_NA" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "Main3D_DEF" /t REG_SZ /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "Main3D_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "Main3D_NA" /t REG_SZ /d "0" /f
 
 rem # Shader Cache / 3000=OFF 3100=OPTIMIZED 3200=ALWAYS ON
 
@@ -83,9 +83,9 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "ShaderCache_NA
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "AntiStuttering" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "AntiStuttering" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "AntiStuttering_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "AntiStuttering_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "AntiStuttering_NA" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "AntiStuttering_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "AntiStuttering_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "AntiStuttering_NA" /t REG_SZ /d "0" /f
 
 rem # AMD GPU tweaks
 
@@ -265,10 +265,10 @@ rem reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "KMD_Enable
 rem # Disable Radeon Upscaling
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "RADEON_UPSCALING" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "RADEON_UPSCALING_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "RADEON_UPSCALING_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "RADEON_UPSCALING_NA" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "RADEON_UPSCALING" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "RADEON_UPSCALING_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "RADEON_UPSCALING_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "RADEON_UPSCALING_NA" /t REG_SZ /d "0" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_RadeonUpscalingEnabled" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_RadeonUpscalingSupport" /t REG_DWORD /d "0" /f
@@ -277,10 +277,10 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "KMD_RadeonUpsc
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "DynamicContrast" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "DynamicContrast_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "DynamicContrast_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "DynamicContrast_NA" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "DynamicContrast" /t REG_BINARY /d "3000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "DynamicContrast_DEF" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "DynamicContrast_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "DynamicContrast_NA" /t REG_SZ /d "0" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "hotkeys_ui_component_na" /t REG_SZ /d "true" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "hotkeys_ui_component_def" /t REG_SZ /d "false" /f
