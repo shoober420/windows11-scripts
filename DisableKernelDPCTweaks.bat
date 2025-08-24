@@ -30,4 +30,6 @@ reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "Dp
 reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "DpcWatchdogProfileCumulativeDpcThreshold" /f
 reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "DpcWatchdogProfileSingleDpcThreshold" /f
 
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "DpcDuration" /f
+
 PAUSE
