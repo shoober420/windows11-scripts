@@ -155,9 +155,13 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "Pendi
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "RealTimeIsCritical" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "SeLpacEnablwatsonReporting" /t REG_DWORD /d "0" /f
 
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "AdditionalClockTicksInProcessor" /t REG_DWORD /d "99999999" /f
-
 PAUSE
+
+
+
+rem # FREEZES SYSTEM, NEEDS RESEARCH
+rem reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "AdditionalClockTicksInProcessor" /f
+rem reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "AdditionalClockTicksInProcessor" /t REG_DWORD /d "99999999" /f
 
 
 
