@@ -184,6 +184,10 @@ reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "EnablePre
 reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Power" /v "EnablePreemption" /f
 reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "EnablePreemption" /f
 
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "ForcePreemptionAware" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Power" /v "ForcePreemptionAware" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "ForcePreemptionAware" /f
+
 reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "GPUPreemptionLevel" /f
 reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Power" /v "GPUPreemptionLevel" /f
 reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "GPUPreemptionLevel" /f
@@ -271,6 +275,7 @@ for /f "tokens=3" %%a in ('reg query "HKLM\SYSTEM\ControlSet001\Enum\%%i" /v "Dr
 for /f %%i in ('echo %%a ^| findstr "{"') do (
 
 reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "EnablePreemption" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "ForcePreemptionAware" /f
 reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "DisablePreemption" /f
 reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "DisablePreemptionOnS3S4" /f
 reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "GPUPreemptionLevel" /f
@@ -337,6 +342,7 @@ goto :eof
 echo User chose ENABLE NVIDIA GPU PREEMPTION
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "EnablePreemption" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "ForcePreemptionAware" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "DisablePreemption" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "DisablePreemptionOnS3S4" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "GPUPreemptionLevel" /t REG_DWORD /d "1" /f
@@ -383,6 +389,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_PreemptionLeve
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "KMD_PreemptionLevelLimit" /t REG_DWORD /d "1" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "EnablePreemption" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "ForcePreemptionAware" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "DisablePreemption" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "DisablePreemptionOnS3S4" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "GPUPreemptionLevel" /t REG_DWORD /d "1" /f
@@ -413,6 +420,7 @@ goto :end
 echo User chose DEFAULTZ
 
 reg delete "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "EnablePreemption" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "ForcePreemptionAware" /f
 reg delete "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "DisablePreemption" /f
 reg delete "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "DisablePreemptionOnS3S4" /f
 reg delete "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm" /v "GPUPreemptionLevel" /f
@@ -456,6 +464,7 @@ reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_PreemptionL
 reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "KMD_PreemptionLevelLimit" /f
 
 reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "EnablePreemption" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "ForcePreemptionAware" /f
 reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "DisablePreemption" /f
 reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "DisablePreemptionOnS3S4" /f
 reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "GPUPreemptionLevel" /f
