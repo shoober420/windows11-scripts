@@ -223,6 +223,12 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\DWM\Schedule" /v "FrameDisplayResDivVal
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "m_bufferCount" /t REG_DWORD /d "1" /f
 
+reg add "HKLM\SOFTWARE\Microsoft\Windows\DWM\Schedule" /v "LingerInterval" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\DWM\Schedule" /v "LicenseInterval" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\DWM\Schedule" /v "DisableSpecificPopups" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\DWM\Schedule" /v "DisableExpirationPopups" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\DWM\Schedule" /v "HideBalloonNotification" /t REG_DWORD /d "1" /f
+
 
 
 rem # https://sites.google.com/site/tweakradje/windows/windows-tweaking
