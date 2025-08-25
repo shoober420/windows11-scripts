@@ -853,4 +853,47 @@ goto :eof
 :compon
 echo User chose RADEON DWM Composition ON (VERY SMOOTH)
 
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdag" /v "DisableDWM" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdap" /v "DisableDWM" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmpfd" /v "DisableDWM" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdwddmg" /v "DisableDWM" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdgpuv" /v "DisableDWM" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\atikmdag" /v "DisableDWM" /t REG_DWORD /d "0" /f
+
+for /f %%i in ('wmic path Win32_VideoController get PNPDeviceID^| findstr /L "PCI\VEN_"') do (
+        for /f "tokens=3" %%a in ('reg query "HKLM\SYSTEM\ControlSet001\Enum\%%i" /v "Driver"') do (
+                for /f %%i in ('echo %%a ^| findstr "{"') do (
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "DisableDWM" /t REG_SZ /d "0" /f
+
+)
+)
+)
+
+goto :end
+
+:compoff
+echo User chose RADEON DWM Composition OFF (LOWER LATENCY)
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdag" /v "DisableDWM" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdap" /v "DisableDWM" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmpfd" /v "DisableDWM" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdwddmg" /v "DisableDWM" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdgpuv" /v "DisableDWM" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\atikmdag" /v "DisableDWM" /t REG_DWORD /d "1" /f
+
+for /f %%i in ('wmic path Win32_VideoController get PNPDeviceID^| findstr /L "PCI\VEN_"') do (
+        for /f "tokens=3" %%a in ('reg query "HKLM\SYSTEM\ControlSet001\Enum\%%i" /v "Driver"') do (
+                for /f %%i in ('echo %%a ^| findstr "{"') do (
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "DisableDWM" /t REG_SZ /d "1" /f
+
+)
+)
+)
+
+goto :end
+
+:end
+
 PAUSE
