@@ -823,4 +823,34 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\atikmdag\Device1\OpenGL\Private"
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\atikmdag\Device2\OpenGL\Private" /v "CpuAffinityOptimization" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\atikmdag\Device3\OpenGL\Private" /v "CpuAffinityOptimization" /t REG_DWORD /d "1" /f
 
+
+
+@echo off
+
+
+
+echo.
+echo RADEON DWM Composition
+echo.
+echo 1. RADEON DWM Composition ON (VERY SMOOTH)
+echo 2. RADEON DWM Composition OFF (LOWER LATENCY)
+echo C. Cancel
+echo.
+choice /c 12C /m "Choose an option :"
+
+if 3 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 2 EQU %ERRORLEVEL% (
+   call :compoff
+) else if 1 EQU %ERRORLEVEL% (
+   call :compon
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:compon
+echo User chose RADEON DWM Composition ON (VERY SMOOTH)
+
 PAUSE
