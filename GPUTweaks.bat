@@ -500,7 +500,7 @@ rem reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v
 
 setx DXGL_FRAME_LATENCY_WAITABLE_OBJECT "1" /M
 setx DXGI_ALLOW_TEARING "1" /M
-setx DXGI_SWAPCHAIN_FLUSH "0" /M
+setx DXGI_SWAPCHAIN_FLUSH "1" /M
 setx GPU_MAX_ALLOC_PERCENT "100" /M
 setx GPU_SINGLE_ALLOC_PERCENT "100" /M
 setx MOUSE_RAW_INPUT "1" /M
