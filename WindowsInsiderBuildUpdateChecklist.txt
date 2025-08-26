@@ -241,6 +241,9 @@ Download Microsoft Visual C++ Redistributables
 Download Chromium
  - https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/
 
+Download Firefox Nightly
+ - https://ftp.mozilla.org/pub/firefox/nightly
+
 Download Chrome Canary
  - InstallChromeCanary.bat
 
