@@ -499,6 +499,7 @@ rem reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v
 rem reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "HwQueuedRenderPacketGroupLimitPerNode" /t REG_DWORD /d "1" /f
 
 setx DXGL_FRAME_LATENCY_WAITABLE_OBJECT "1" /M
+setx DXGI_FRAME_LATENCY_WAITABLE_OBJECT "1" /M
 setx DXGI_ALLOW_TEARING "1" /M
 setx DXGI_SWAPCHAIN_FLUSH "1" /M
 setx GPU_MAX_ALLOC_PERCENT "100" /M
