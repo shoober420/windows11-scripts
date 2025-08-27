@@ -247,12 +247,12 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\atikmdag" /v "TemporalAAMultipli
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\atikmdag" /v "TemporalAAMultiplier_NA" /t REG_SZ /d "0" /f
 
 rem # Catalyst AI
-rem # 3000 = OFF / 3100 = ON / 3200 = EXPERIMENTAL
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "CatalystAI" /t REG_BINARY /d "3000" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "CatalystAI_DEF" /t REG_SZ /d "0" /f
+rem # 3000 = OFF (HQ) / 3100 = STANDARD / 3200 = ADVANCED (PERF)
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "CatalystAI" /t REG_BINARY /d "3200" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "CatalystAI_DEF" /t REG_SZ /d "2" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "CatalystAI_NA" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "CatalystAI" /t REG_BINARY /d "3000" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "CatalystAI_DEF" /t REG_SZ /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "CatalystAI" /t REG_BINARY /d "3200" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "CatalystAI_DEF" /t REG_SZ /d "2" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "CatalystAI_NA" /t REG_SZ /d "0" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "EnableTripleBuffering" /t REG_BINARY /d "3000" /f
