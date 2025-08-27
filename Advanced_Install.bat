@@ -384,8 +384,8 @@ goto :end
 
 
 echo.
-echo 1. CPU Mitigations ENABLED
-echo 2. CPU Mitigations DISABLED
+echo 1. CPU Mitigations ENABLED (RECOMMENDED)
+echo 2. CPU Mitigations DISABLED (NOT RECOMMENDED)
 echo C. Cancel
 echo.
 choice /c 12C /m "Choose an option :"
@@ -403,14 +403,14 @@ if 3 EQU %ERRORLEVEL% (
 goto :eof
 
 :CPUOFF
-echo User chose CPU Mitigations DISABLED
+echo User chose CPU Mitigations DISABLED (NOT RECOMMENDED)
 
 call DisableCPUMitigations.bat
 
 goto :end
 
 :CPUON
-echo User chose CPU Mitigations ENABLED
+echo User chose CPU Mitigations ENABLED (RECOMMENDED)
 
 call EnableCPUMitigations.bat
 
