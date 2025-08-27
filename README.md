@@ -746,7 +746,7 @@ MaxPendingInterrupts.reg
 
 EnableKernelMitigationOptions.reg
 
-DisableCPUMitigations.bat / EnableCPUMitigations.bat (GAMING PCS ONLY)
+CPU_Mitigations.bat
 
 DisableScheduledTasks.bat
 
