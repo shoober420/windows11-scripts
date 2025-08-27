@@ -83,8 +83,8 @@ Windows Registry Editor Version 5.00
 "TemporalAAMultiplier"=hex:30,00
 "TemporalAAMultiplier_DEF"="0"
 "TemporalAAMultiplier_NA"="0"
-"CatalystAI"=hex:32,00
-"CatalystAI_DEF"="2"
+"CatalystAI"=hex:31,00
+"CatalystAI_DEF"="1"
 "CatalystAI_NA"="0"
 "EnableTripleBuffering"=hex:30,00
 "EnableTripleBuffering_DEF"="0"
@@ -203,8 +203,8 @@ Windows Registry Editor Version 5.00
 "TemporalAAMultiplier"=hex:30,00
 "TemporalAAMultiplier_DEF"="0"
 "TemporalAAMultiplier_NA"="0"
-"CatalystAI"=hex:32,00
-"CatalystAI_DEF"="2"
+"CatalystAI"=hex:31,00
+"CatalystAI_DEF"="1"
 "CatalystAI_NA"="0"
 "EnableTripleBuffering"=hex:30,00
 "EnableTripleBuffering_DEF"="0"
@@ -323,8 +323,8 @@ Windows Registry Editor Version 5.00
 "TemporalAAMultiplier"=hex:30,00
 "TemporalAAMultiplier_DEF"="0"
 "TemporalAAMultiplier_NA"="0"
-"CatalystAI"=hex:32,00
-"CatalystAI_DEF"="2"
+"CatalystAI"=hex:31,00
+"CatalystAI_DEF"="1"
 "CatalystAI_NA"="0"
 "EnableTripleBuffering"=hex:30,00
 "EnableTripleBuffering_DEF"="0"
@@ -443,8 +443,8 @@ Windows Registry Editor Version 5.00
 "TemporalAAMultiplier"=hex:30,00
 "TemporalAAMultiplier_DEF"="0"
 "TemporalAAMultiplier_NA"="0"
-"CatalystAI"=hex:32,00
-"CatalystAI_DEF"="2"
+"CatalystAI"=hex:31,00
+"CatalystAI_DEF"="1"
 "CatalystAI_NA"="0"
 "EnableTripleBuffering"=hex:30,00
 "EnableTripleBuffering_DEF"="0"
@@ -563,8 +563,8 @@ Windows Registry Editor Version 5.00
 "TemporalAAMultiplier"=hex:30,00
 "TemporalAAMultiplier_DEF"="0"
 "TemporalAAMultiplier_NA"="0"
-"CatalystAI"=hex:32,00
-"CatalystAI_DEF"="2"
+"CatalystAI"=hex:31,00
+"CatalystAI_DEF"="1"
 "CatalystAI_NA"="0"
 "EnableTripleBuffering"=hex:30,00
 "EnableTripleBuffering_DEF"="0"
@@ -683,8 +683,8 @@ Windows Registry Editor Version 5.00
 "TemporalAAMultiplier"=hex:30,00
 "TemporalAAMultiplier_DEF"="0"
 "TemporalAAMultiplier_NA"="0"
-"CatalystAI"=hex:32,00
-"CatalystAI_DEF"="2"
+"CatalystAI"=hex:31,00
+"CatalystAI_DEF"="1"
 "CatalystAI_NA"="0"
 "EnableTripleBuffering"=hex:30,00
 "EnableTripleBuffering_DEF"="0"
