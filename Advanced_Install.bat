@@ -183,6 +183,9 @@ cd "%~dp0"
 call GPU_Scheduling.bat
 cd "%~dp0"
 
+call CPU_Mitigations.bat
+cd "%~dp0"
+
 
 
 @echo off
@@ -376,43 +379,6 @@ goto :end
 echo User chose NVIDIA GPU
 
 call NVGPUTweaks.bat
-
-goto :end
-
-:end
-
-
-
-echo.
-echo 1. CPU Mitigations ENABLED (RECOMMENDED)
-echo 2. CPU Mitigations DISABLED (NOT RECOMMENDED)
-echo C. Cancel
-echo.
-choice /c 12C /m "Choose an option :"
-
-if 3 EQU %ERRORLEVEL% (
-   echo User chose to cancel.
-) else if 2 EQU %ERRORLEVEL% (
-   call :CPUOFF
-) else if 1 EQU %ERRORLEVEL% (
-   call :CPUON
-) else if 0 EQU %ERRORLEVEL% (
-   echo User bailed out.
-)
-
-goto :eof
-
-:CPUOFF
-echo User chose CPU Mitigations DISABLED (NOT RECOMMENDED)
-
-call DisableCPUMitigations.bat
-
-goto :end
-
-:CPUON
-echo User chose CPU Mitigations ENABLED (RECOMMENDED)
-
-call EnableCPUMitigations.bat
 
 goto :end
 
