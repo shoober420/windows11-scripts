@@ -340,6 +340,83 @@ goto :end
 
 
 echo.
+echo RADEON DWM Composition
+echo.
+echo 1. RADEON DWM Composition ON (VERY SMOOTH)
+echo 2. RADEON DWM Composition OFF (LOWER LATENCY)
+echo 3. SKIP
+echo C. Cancel
+echo.
+choice /c 123C /m "Choose an option :"
+
+if 4 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 3 EQU %ERRORLEVEL% (
+   call :radskip
+) else if 2 EQU %ERRORLEVEL% (
+   call :compoff
+) else if 1 EQU %ERRORLEVEL% (
+   call :compon
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:compon
+echo User chose RADEON DWM Composition ON (VERY SMOOTH)
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdag" /v "DisableDWM" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdap" /v "DisableDWM" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmpfd" /v "DisableDWM" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdwddmg" /v "DisableDWM" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdgpuv" /v "DisableDWM" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\atikmdag" /v "DisableDWM" /t REG_DWORD /d "0" /f
+
+for /f %%i in ('wmic path Win32_VideoController get PNPDeviceID^| findstr /L "PCI\VEN_"') do (
+        for /f "tokens=3" %%a in ('reg query "HKLM\SYSTEM\ControlSet001\Enum\%%i" /v "Driver"') do (
+                for /f %%i in ('echo %%a ^| findstr "{"') do (
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "DisableDWM" /t REG_SZ /d "0" /f
+
+)
+)
+)
+
+goto :end
+
+:compoff
+echo User chose RADEON DWM Composition OFF (LOWER LATENCY)
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdag" /v "DisableDWM" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdap" /v "DisableDWM" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmpfd" /v "DisableDWM" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdwddmg" /v "DisableDWM" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdgpuv" /v "DisableDWM" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\atikmdag" /v "DisableDWM" /t REG_DWORD /d "1" /f
+
+for /f %%i in ('wmic path Win32_VideoController get PNPDeviceID^| findstr /L "PCI\VEN_"') do (
+        for /f "tokens=3" %%a in ('reg query "HKLM\SYSTEM\ControlSet001\Enum\%%i" /v "Driver"') do (
+                for /f %%i in ('echo %%a ^| findstr "{"') do (
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "DisableDWM" /t REG_SZ /d "1" /f
+
+)
+)
+)
+
+goto :end
+
+:radskip
+echo User chose SKIP
+
+goto :end
+
+:end
+
+
+
+echo.
 echo Frame Latency
 echo.
 echo 1. FrameLatency: 1 (ULTRA FAST SYSTEM ONLY)
