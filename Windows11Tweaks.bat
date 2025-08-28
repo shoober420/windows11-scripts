@@ -3512,10 +3512,10 @@ rem # Enable Critical System Processes Boost
 reg add "HKLM\SYSTEM\CurrentControlSet\Control" /v "CriticalSystemProcessesBoost" /t REG_DWORD /d "1" /f
 
 rem # Disable Portable Operating System
-reg add "reg add "HKLM\SYSTEM\CurrentControlSet\Control" /v "PortableOperatingSystem" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control" /v "PortableOperatingSystem" /t REG_DWORD /d "0" /f
 
 rem # Disable Delayed Auto Start
-reg add "reg add "HKLM\SYSTEM\CurrentControlSet\Control" /v "DelayedAutoStart" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control" /v "DelayedAutoStart" /t REG_DWORD /d "0" /f
 
 rem # Disable Application Background Task Diagnostic Log
 powershell Disable-AppBackgroundTaskDiagnosticLog
@@ -3582,6 +3582,7 @@ rem # Run DNS.bat and DNS.ps1 for optimal DNS settings
 rem # REBOOT RECOMMENDED
 
 PAUSE
+
 
 
 
