@@ -3,6 +3,8 @@ rem # Desktop Window Wanager (DWM) Tweaks
 rem # jdallmann
 rem # Kizzimo
 
+rem # The theory here, is that we dont want DWM.exe taking up GPU resources and becoming another video game running in the background, hence disabling Effects Caching and Back Buffer (Double Buffering)
+
 rem # https://github.com/AlchemyTweaks/Verified-Tweaks/blob/main/DWM/DWMAdjustablesd-jdallmann.bat
 rem # https://github.com/AlchemyTweaks/Verified-Tweaks/blob/main/DWM/DWMImmediateRender-Kizzimo.bat
 rem # https://sites.google.com/site/tweakradje/windows/windows-tweaking
@@ -13,8 +15,6 @@ rem # https://youtu.be/JUXEr5QsaCc?si
 
 rem # Check Flip Mode with PresentMon
 rem # https://github.com/GameTechDev/PresentMon
-
-rem # https://wiki.special-k.info/Presentation_Model
 
 rem # Enable Independent Flip
 rem # Optimization technique for games that support "flip model" swapchains
@@ -33,22 +33,21 @@ rem reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "MaxD3DFeatureLevel" /t REG
 rem reg delete "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "MaxD3DFeatureLevel" /f
 
 rem # Disable Non Draw List Rendering
-rem # Draw List Rendering MIGHT be required for GPU features on windows like IndependentFlip and DirectFlip
-rem # Non Draw List rendering = Immediate mode
-rem # Draw List Rendering = Retained mode
+rem # Non Draw List rendering = Immediate mode (LEGACY)
+rem # Draw List Rendering = Retained mode (MODERN)
 rem # jdallmann = 1
 rem # tweakradje = 0
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisallowNonDrawListRendering" /t REG_DWORD /d "1" /f
 reg add "HKLM\SOFTWARE\WOW6432Node\Microsoft\WINDOWS\DWM" /v "DisallowNonDrawListRendering" /t REG_DWORD /d "1" /f
 
-rem # Disable Draw List Caching
+rem # Enable Draw List Caching
 rem # Kizzimo / blurbusters = 1
 rem # tweakradje = 0
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableDrawListCaching" /t REG_DWORD /d "0" /f
 
 rem # Disable DWM Effects Caching
 rem # Kizzimo / blurbusters = 1
-reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnableEffectCaching" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnableEffectCaching" /t REG_DWORD /d "0" /f
 
 rem # Used for VR
 rem # jdallmann / tweakradje = 1
@@ -60,11 +59,11 @@ rem # Kizzimo / jdallmann = 1
 rem # tweakradje = 0
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnableCpuClipping" /t REG_DWORD /d "0" /f
 
-rem # Disable Backbuffer
-rem # Offscreen buffers (backbuffers) are drawn and then composited to the screen
-rem # This process is crucial for visual effects like transparency and animations.
+rem # Enable Back Buffer (Double Buffering)
+rem # Offscreen buffer (back buffer) is drawn and then composited to the screen (front buffer)
+rem # This process is crucial for visual effects like transparency and animations
 rem # tweakradje = 1
-reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnableDrawToBackbuffer" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnableDrawToBackbuffer" /t REG_DWORD /d "0" /f
 
 rem # tweakradje = 1
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnableImageProcessing" /t REG_DWORD /d "0" /f
@@ -112,7 +111,7 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableDeviceBitmaps" /t REG_D
 rem # Enable Locking Memory
 rem # Memory Locking guarantees that a process's memory remains readily accessible, preventing delays caused by paging
 rem # jdallmann = 1
-reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableLockingMemory" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableLockingMemory" /t REG_DWORD /d "1" /f
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableProjectedShadowsRendering" /t REG_DWORD /d "1" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableProjectedShadows" /t REG_DWORD /d "1" /f
