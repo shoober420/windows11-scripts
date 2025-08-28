@@ -8,9 +8,9 @@ rem # 0 (DEFAULT) = Enable CVE-2017-5715 (Spectre Variant 2) and CVE-2017-5754 (
 
 rem # 3 = Disable CVE-2017-5715 (Spectre Variant 2) and CVE-2017-5754 (Meltdown) Mitigations
 
-rem # FULL MITIGATION PROTECTION / HYPER-THREADING ON: FeatureSettingsOverride DWORD 72
+rem # FULL MITIGATION PROTECTION / HYPER-THREADING ON: FeatureSettingsOverride = DWORD 72
 
-rem # FULL MITIGATION PROTECTION / HYPER-THREADING OFF: FeatureSettingsOverride DWORD 8264
+rem # FULL MITIGATION PROTECTION / HYPER-THREADING OFF: FeatureSettingsOverride = DWORD 8264
 
 rem # FeatureSettingsOverrideMask MUST BE 3 TO FORCE USER SETTINGS
 
@@ -23,10 +23,10 @@ rem # FeatureSettingsOverrideMask MUST BE 3 TO FORCE USER SETTINGS
 echo.
 echo CPU Mitigation Options
 echo.
-echo 1. Enable CVE-2017-5715 (Spectre Variant 2) and CVE-2017-5754 (Meltdown) Mitigations / 0 (DEFAULT) (RECOMMENDED)
+echo 1. Enable CVE-2017-5715 (Spectre Variant 2) and CVE-2017-5754 (Meltdown) Mitigations / (RECOMMENDED: DEFAULT)
 echo 2. Enable Full Mitigation Protection (Hyper-Threading ON) (NOT RECOMMENDED: BIG FPS DROP)
 echo 3. Enable Full Mitigation Protection (Hyper-Threading OFF) (NOT RECOMMENDED: BIG FPS DROP)
-echo 4. Disable CPU Mitigations (NOT RECOMMENDED: SECURITY RISK)
+echo 4. Disable CPU Mitigations (SECURITY RISK: GAMING PC ONLY)
 echo C. Cancel
 echo.
 choice /c 1234C /m "Choose an option :"
@@ -48,7 +48,7 @@ if 5 EQU %ERRORLEVEL% (
 goto :eof
 
 :cpu0
-echo User chose Enable CVE-2017-5715 (Spectre Variant 2) and CVE-2017-5754 (Meltdown) Mitigations / 0 (DEFAULT) (RECOMMENDED)
+echo User chose Enable CVE-2017-5715 (Spectre Variant 2) and CVE-2017-5754 (Meltdown) Mitigations / (RECOMMENDED: DEFAULT)
 
 reg add "HKLM\System\CurrentControlSet\Control\Session Manager\Memory Management" /v "FeatureSettingsOverride" /t REG_DWORD /d "0" /f
 reg add "HKLM\System\CurrentControlSet\Control\Session Manager\Memory Management" /v "FeatureSettingsOverrideMask" /t REG_DWORD /d "3" /f
@@ -75,7 +75,7 @@ rem reg add "HKLM\System\CurrentControlSet\Control\Session Manager\Memory Manage
 goto :end
 
 :cpud
-echo User chose Disable CPU Mitigations (NOT RECOMMENDED: SECURITY RISK)
+echo User chose Disable CPU Mitigations (SECURITY RISK: GAMING PC ONLY)
 
 reg add "HKLM\System\CurrentControlSet\Control\Session Manager\Memory Management" /v "FeatureSettingsOverride" /t REG_DWORD /d "3" /f
 reg add "HKLM\System\CurrentControlSet\Control\Session Manager\Memory Management" /v "FeatureSettingsOverrideMask" /t REG_DWORD /d "3" /f
