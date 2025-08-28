@@ -22,6 +22,16 @@ net start winmgmt
 
 
 
+rem # https://www.elevenforum.com/members/garlin.5387/
+rem # https://www.elevenforum.com/t/gpu-tweaks-batch-script.30134/post-521530
+if not exist C:\Windows\System32\wbem\WMIC.exe (
+    echo Installing WMIC...
+    DISM /Online /Add-Capability /CapabilityName:WMIC~~~~
+    echo Done.
+)
+
+
+
 reg add "HKCU\Software\AMD\CN" /v "WizardProfile" /t REG_SZ /d "PROFILE_CUSTOM" /f
 
 for /f %%i in ('wmic path Win32_VideoController get PNPDeviceID^| findstr /L "PCI\VEN_"') do (
