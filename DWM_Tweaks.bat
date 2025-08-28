@@ -59,7 +59,7 @@ rem # Kizzimo / jdallmann = 1
 rem # tweakradje = 0
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnableCpuClipping" /t REG_DWORD /d "0" /f
 
-rem # Enable Back Buffer (Double Buffering)
+rem # Disable DWM Back Buffer (Double Buffering)
 rem # Offscreen buffer (back buffer) is drawn and then composited to the screen (front buffer)
 rem # This process is crucial for visual effects like transparency and animations
 rem # tweakradje = 1
