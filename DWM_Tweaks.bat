@@ -3,8 +3,6 @@ rem # Desktop Window Wanager (DWM) Tweaks
 rem # jdallmann
 rem # Kizzimo
 
-rem # The theory here, is that we dont want DWM.exe taking up GPU resources and becoming another video game running in the background, hence disabling Effects Caching and Back Buffer (Double Buffering)
-
 rem # https://github.com/AlchemyTweaks/Verified-Tweaks/blob/main/DWM/DWMAdjustablesd-jdallmann.bat
 rem # https://github.com/AlchemyTweaks/Verified-Tweaks/blob/main/DWM/DWMImmediateRender-Kizzimo.bat
 rem # https://sites.google.com/site/tweakradje/windows/windows-tweaking
@@ -49,7 +47,7 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableDrawListCaching" /t REG
 
 rem # Disable DWM Effects Caching
 rem # Kizzimo / blurbusters = 1
-reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnableEffectCaching" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnableEffectCaching" /t REG_DWORD /d "1" /f
 
 rem # Used for VR
 rem # jdallmann / tweakradje = 1
@@ -65,7 +63,7 @@ rem # Disable DWM Back Buffer (Double Buffering)
 rem # Offscreen buffer (back buffer) is drawn and then composited to the screen (front buffer)
 rem # This process is crucial for visual effects like transparency and animations
 rem # tweakradje = 1
-reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnableDrawToBackbuffer" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnableDrawToBackbuffer" /t REG_DWORD /d "1" /f
 
 rem # tweakradje = 1
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnableImageProcessing" /t REG_DWORD /d "0" /f
