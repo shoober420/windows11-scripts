@@ -16,6 +16,18 @@ rem # Enhanced Fullscreen Exclusive (EFSE)
 rem # Desktop Screen Experience (DSE)
 rem # Multiplane Overlay (MPO)
 
+
+
+rem # https://www.elevenforum.com/members/garlin.5387/
+rem # https://www.elevenforum.com/t/gpu-tweaks-batch-script.30134/post-521530
+if not exist C:\Windows\System32\wbem\WMIC.exe (
+    echo Installing WMIC...
+    DISM /Online /Add-Capability /CapabilityName:WMIC~~~~
+    echo Done.
+)
+
+
+
 rem # 0 = FSO: ON / FSE: ON
 rem # 2 = FSO: OFF / FSE: ON
 reg add "HKCU\System\GameConfigStore" /v "GameDVR_FSEBehavior" /t REG_DWORD /d "2" /f
