@@ -1,6 +1,10 @@
 # AMD Radeon Display Color Enhancement 
 # Vivid Gaming
 
+# Increases brightness, gives competitive advantage for dark corners
+
+# Alters original look of games, NOT RECOMMENDED for retro games specifcally
+
 # https://www.elevenforum.com/members/garlin.5387/
 # https://www.elevenforum.com/t/query-monitor-edid.33440/
 # https://www.elevenforum.com/t/powershell-variable-multiple-output-choice.33844/
