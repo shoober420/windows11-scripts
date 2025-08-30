@@ -142,7 +142,7 @@ Windows Registry Editor Version 5.00
 "WhiteBalanceCorrection"=hex:30,00,00,00
 "Fleshtone_ENABLE"=hex:30,00,00,00
 "Fleshtone"=hex:35,00,30,00,00,00
-"ColorVibrance_ENABLE"=hex:31,00,00,00
+"ColorVibrance_ENABLE"=hex:30,00,00,00
 "ColorVibrance"=hex:34,00,30,00,00,00
 "Detail_ENABLE"=hex:30,00,00,00
 "Detail"=hex:31,00,30,00,00,00
@@ -305,7 +305,7 @@ Windows Registry Editor Version 5.00
 "WhiteBalanceCorrection"=hex:30,00,00,00
 "Fleshtone_ENABLE"=hex:30,00,00,00
 "Fleshtone"=hex:35,00,30,00,00,00
-"ColorVibrance_ENABLE"=hex:31,00,00,00
+"ColorVibrance_ENABLE"=hex:30,00,00,00
 "ColorVibrance"=hex:34,00,30,00,00,00
 "Detail_ENABLE"=hex:30,00,00,00
 "Detail"=hex:31,00,30,00,00,00
@@ -347,7 +347,7 @@ Windows Registry Editor Version 5.00
 "WhiteBalanceCorrection"=hex:30,00,00,00
 "Fleshtone_ENABLE"=hex:30,00,00,00
 "Fleshtone"=hex:35,00,30,00,00,00
-"ColorVibrance_ENABLE"=hex:31,00,00,00
+"ColorVibrance_ENABLE"=hex:30,00,00,00
 "ColorVibrance"=hex:34,00,30,00,00,00
 "Detail_ENABLE"=hex:30,00,00,00
 "Detail"=hex:31,00,30,00,00,00
@@ -497,7 +497,7 @@ Windows Registry Editor Version 5.00
 "WhiteBalanceCorrection"=hex:30,00,00,00
 "Fleshtone_ENABLE"=hex:30,00,00,00
 "Fleshtone"=hex:35,00,30,00,00,00
-"ColorVibrance_ENABLE"=hex:31,00,00,00
+"ColorVibrance_ENABLE"=hex:30,00,00,00
 "ColorVibrance"=hex:34,00,30,00,00,00
 "Detail_ENABLE"=hex:30,00,00,00
 "Detail"=hex:31,00,30,00,00,00
@@ -660,7 +660,7 @@ Windows Registry Editor Version 5.00
 "WhiteBalanceCorrection"=hex:30,00,00,00
 "Fleshtone_ENABLE"=hex:30,00,00,00
 "Fleshtone"=hex:35,00,30,00,00,00
-"ColorVibrance_ENABLE"=hex:31,00,00,00
+"ColorVibrance_ENABLE"=hex:30,00,00,00
 "ColorVibrance"=hex:34,00,30,00,00,00
 "Detail_ENABLE"=hex:30,00,00,00
 "Detail"=hex:31,00,30,00,00,00
@@ -702,7 +702,7 @@ Windows Registry Editor Version 5.00
 "WhiteBalanceCorrection"=hex:30,00,00,00
 "Fleshtone_ENABLE"=hex:30,00,00,00
 "Fleshtone"=hex:35,00,30,00,00,00
-"ColorVibrance_ENABLE"=hex:31,00,00,00
+"ColorVibrance_ENABLE"=hex:30,00,00,00
 "ColorVibrance"=hex:34,00,30,00,00,00
 "Detail_ENABLE"=hex:30,00,00,00
 "Detail"=hex:31,00,30,00,00,00
@@ -852,7 +852,7 @@ Windows Registry Editor Version 5.00
 "WhiteBalanceCorrection"=hex:30,00,00,00
 "Fleshtone_ENABLE"=hex:30,00,00,00
 "Fleshtone"=hex:35,00,30,00,00,00
-"ColorVibrance_ENABLE"=hex:31,00,00,00
+"ColorVibrance_ENABLE"=hex:30,00,00,00
 "ColorVibrance"=hex:34,00,30,00,00,00
 "Detail_ENABLE"=hex:30,00,00,00
 "Detail"=hex:31,00,30,00,00,00
@@ -1015,7 +1015,7 @@ Windows Registry Editor Version 5.00
 "WhiteBalanceCorrection"=hex:30,00,00,00
 "Fleshtone_ENABLE"=hex:30,00,00,00
 "Fleshtone"=hex:35,00,30,00,00,00
-"ColorVibrance_ENABLE"=hex:31,00,00,00
+"ColorVibrance_ENABLE"=hex:30,00,00,00
 "ColorVibrance"=hex:34,00,30,00,00,00
 "Detail_ENABLE"=hex:30,00,00,00
 "Detail"=hex:31,00,30,00,00,00
@@ -1057,7 +1057,7 @@ Windows Registry Editor Version 5.00
 "WhiteBalanceCorrection"=hex:30,00,00,00
 "Fleshtone_ENABLE"=hex:30,00,00,00
 "Fleshtone"=hex:35,00,30,00,00,00
-"ColorVibrance_ENABLE"=hex:31,00,00,00
+"ColorVibrance_ENABLE"=hex:30,00,00,00
 "ColorVibrance"=hex:34,00,30,00,00,00
 "Detail_ENABLE"=hex:30,00,00,00
 "Detail"=hex:31,00,30,00,00,00
