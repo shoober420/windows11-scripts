@@ -388,7 +388,7 @@ reg add "HKLM\System\CurrentControlSet\Control\Class\%%i" /v "DynamicContrast_EN
 reg add "HKLM\System\CurrentControlSet\Control\Class\%%i" /v "WhiteBalanceCorrection" /t REG_BINARY /d "30000000" /f
 reg add "HKLM\System\CurrentControlSet\Control\Class\%%i" /v "Fleshtone_ENABLE" /t REG_BINARY /d "30000000" /f
 reg add "HKLM\System\CurrentControlSet\Control\Class\%%i" /v "Fleshtone" /t REG_BINARY /d "350030000000" /f
-reg add "HKLM\System\CurrentControlSet\Control\Class\%%i" /v "ColorVibrance_ENABLE" /t REG_BINARY /d "31000000" /f
+reg add "HKLM\System\CurrentControlSet\Control\Class\%%i" /v "ColorVibrance_ENABLE" /t REG_BINARY /d "30000000" /f
 reg add "HKLM\System\CurrentControlSet\Control\Class\%%i" /v "ColorVibrance" /t REG_BINARY /d "340030000000" /f
 reg add "HKLM\System\CurrentControlSet\Control\Class\%%i" /v "Detail_ENABLE" /t REG_BINARY /d "30000000" /f
 reg add "HKLM\System\CurrentControlSet\Control\Class\%%i" /v "Detail" /t REG_BINARY /d "310030000000" /f
@@ -416,7 +416,7 @@ reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD" /v "DynamicContras
 reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD" /v "WhiteBalanceCorrection" /t REG_BINARY /d "30000000" /f
 reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD" /v "Fleshtone_ENABLE" /t REG_BINARY /d "30000000" /f
 reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD" /v "Fleshtone" /t REG_BINARY /d "350030000000" /f
-reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD" /v "ColorVibrance_ENABLE" /t REG_BINARY /d "31000000" /f
+reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD" /v "ColorVibrance_ENABLE" /t REG_BINARY /d "30000000" /f
 reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD" /v "ColorVibrance" /t REG_BINARY /d "340030000000" /f
 reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD" /v "Detail_ENABLE" /t REG_BINARY /d "30000000" /f
 reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD" /v "Detail" /t REG_BINARY /d "310030000000" /f
@@ -444,7 +444,7 @@ reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD\DXVA" /v "DynamicCo
 reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD\DXVA" /v "WhiteBalanceCorrection" /t REG_BINARY /d "30000000" /f
 reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD\DXVA" /v "Fleshtone_ENABLE" /t REG_BINARY /d "30000000" /f
 reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD\DXVA" /v "Fleshtone" /t REG_BINARY /d "350030000000" /f
-reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD\DXVA" /v "ColorVibrance_ENABLE" /t REG_BINARY /d "31000000" /f
+reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD\DXVA" /v "ColorVibrance_ENABLE" /t REG_BINARY /d "30000000" /f
 reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD\DXVA" /v "ColorVibrance" /t REG_BINARY /d "340030000000" /f
 reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD\DXVA" /v "Detail_ENABLE" /t REG_BINARY /d "30000000" /f
 reg add "HKLM\System\CurrentControlSet\Control\Class\%%i\UMD\DXVA" /v "Detail" /t REG_BINARY /d "310030000000" /f
