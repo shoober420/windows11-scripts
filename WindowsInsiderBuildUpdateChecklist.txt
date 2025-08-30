@@ -244,6 +244,9 @@ Download Chromium
 Download Firefox Nightly
  - https://ftp.mozilla.org/pub/firefox/nightly/
 
+Download Vim
+ - https://vim.org/download.php
+
 Download Chrome Canary
  - InstallChromeCanary.bat
 
