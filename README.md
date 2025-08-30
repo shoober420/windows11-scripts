@@ -245,6 +245,9 @@ Download Firefox Nightly
 Download Chrome Canary
  - InstallChromeCanary.bat
 
+Download Vim
+ - https://vim.org/download.php
+
 Update Winget programs
  - WingetUpdateApps.bat
 
