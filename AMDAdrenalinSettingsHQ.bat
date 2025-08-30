@@ -83,7 +83,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "ASE_DEF" /t REG_SZ
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "ASE_NA" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "ASE" /t REG_BINARY /d "3100" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "ASE_DEF" /t REG_SZ /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "ASE_NA" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "ASE_NA" /t REG_SZ /d "0" /f
 
 rem # Super Sampling
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "ASD" /t REG_BINARY /d "3100" /f
