@@ -61,7 +61,7 @@ rem # 0x3f / 00111111 = Enable EFSE + Flip Model + Scaling + Color Space + HDR m
 rem # 0x3b / 00111011 = Enable EFSE + Flip Model + Color Space + HDR metadata + Overlay (FPS DROP)
 rem # 0x1b / 00011011 = Enable EFSE + Flip Model + Color Space + HDR metadata
 
-reg add "HKCU\System\GameConfigStore" /v "GameDVR_EFSEFeatureFlags" /t REG_DWORD /d "0x3b" /f
+reg add "HKCU\System\GameConfigStore" /v "GameDVR_EFSEFeatureFlags" /t REG_DWORD /d "0x1b" /f
 
 
 
