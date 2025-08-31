@@ -9,6 +9,8 @@ rem # https://youtu.be/JUXEr5QsaCc?si
 rem # DirectX 12 Ultimate (12_2) requires GeForce RTX 20/30 or newer and Radeon RX 6000 or newer
 
 rem # Check MPO support using DXDiag > "Save All Information" and looking in DxDiag.txt file
+rem # MPO MaxPlanes should be 1+ if MPO is enabled
+rem # MPO Caps, MPO Stretch, MPO Media Hints, MPO Formats, PanelFitter Caps, and PanelFitter Stretch will say "Not Supported" if MPO is disabled
 
 rem # Check Flip Mode with PresentMon
 rem # https://github.com/GameTechDev/PresentMon
