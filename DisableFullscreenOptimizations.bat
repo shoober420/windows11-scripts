@@ -47,11 +47,11 @@ reg add "HKCU\System\GameConfigStore" /v "GameDVR_HonorUserFSEBehaviorMode" /t R
 rem # Enable Enhanced Fullscreen Exclusive (EFSE)
 
 rem # Bit 0: Enables/disables EFSE mode entirely
-rem # Bit 1: Controls DXGI flip model swap chains in EFSE (lower latency when enabled)
-rem # Bit 2: Toggles DXGI swap chain scaling (DISABLE)
-rem # Bit 3: Switches DXGI swap chain color space (required for HDR)
-rem # Bit 4: Enables/disables HDR metadata support for EFSE (required for HDR)
-rem # Bit 5: Manages overlay support in EFSE (FPS DROP WHEN ENABLED)
+rem # Bit 1: Toggles DXGI swap chain flip model support (lower latency when enabled)
+rem # Bit 2: Toggles DXGI swap chain scaling support (DISABLE)
+rem # Bit 3: Toggles DXGI swap chain color space support (required for HDR)
+rem # Bit 4: Toggles DXGI swap chain HDR metadata support (required for HDR)
+rem # Bit 5: Toggles overlay support (FPS DROP WHEN ENABLED)
 
 rem # 0 = Disable EFSE
 rem # 0x01 / 00000001 = Enable ONLY EFSE
