@@ -42,10 +42,14 @@ reg add "HKCU\System\GameConfigStore" /v "GameDVR_FSEBehaviorMode" /t REG_DWORD 
 rem # Honor User adjusted FSE value
 reg add "HKCU\System\GameConfigStore" /v "GameDVR_HonorUserFSEBehaviorMode" /t REG_DWORD /d "1" /f
 
-rem # Disable Enhanced Fullscreen Exclusive (EFSE)
+rem # Enable Enhanced Fullscreen Exclusive (EFSE)
 rem # 0 = Disable EFSE
-rem # 0x01 = Enable ONLY EFSE
-rem # 0x03 = Enable EFSE + Flip Model Swap Chains
+rem # 0x01 / 00000001 = Enable ONLY EFSE
+rem # 0x03 / 00000011 = Enable EFSE + Flip Model
+rem # 0x07 / 00000111 = Enable EFSE + Flip Model + Scaling
+rem # 0xf / 00001111 = Enable EFSE + Flip Model + Scaling + Color Space
+rem # 0x1f / 00011111 = Enable EFSE + Flip Model + Scaling + Color Space + HDR metadata
+rem # 0x3f / 00011111 = Enable EFSE + Flip Model + Scaling + Color Space + HDR metadata + Overlay
 reg add "HKCU\System\GameConfigStore" /v "GameDVR_EFSEFeatureFlags" /t REG_DWORD /d "0" /f
 
 rem # Disable more FSO features
