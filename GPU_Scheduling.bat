@@ -1,5 +1,12 @@
 rem # GPU Scheduling script
 
+rem # Check GPU Scheduling (HAGS) support using DXDiag > "Save All Information" and looking in DxDiag.txt file
+
+rem # Hardware Scheduling: DriverSupportState:AlwaysOff Enabled:False when HAGS DISABLED
+rem # Block List: DISABLE_HWSCH when HAGS DISABLED
+
+
+
 @echo off
 
 
