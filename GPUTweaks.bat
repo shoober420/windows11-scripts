@@ -503,7 +503,6 @@ rem reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v
 
 setx DXGL_FRAME_LATENCY_WAITABLE_OBJECT "1" /M
 setx DXGI_FRAME_LATENCY_WAITABLE_OBJECT "1" /M
-setx DXGI_ALLOW_TEARING "1" /M
 setx DXGI_SWAPCHAIN_FLUSH "1" /M
 setx GPU_MAX_ALLOC_PERCENT "100" /M
 setx GPU_SINGLE_ALLOC_PERCENT "100" /M
@@ -514,6 +513,11 @@ setx DX12_FORCE_WARP "0" /M
 setx GPU_SYNC_OBJECTS "1" /M
 setx GPU_MAX_HEAP_SIZE "100" /M
 setx GPU_FORCE_64BIT_PTR "0" /M
+
+rem # Allow Tearing 1 breaks Hardware Composed: Independent Flip when VSync is OFF
+setx DXGI_ALLOW_TEARING "0" /M
+setx DXGI_PRESENT_ALLOW_TEARING "0" /M
+setx DXGI_SWAP_CHAIN_FLAG_ALLOW_TEARING "0" /M
 
 
 
