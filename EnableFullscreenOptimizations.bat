@@ -42,27 +42,6 @@ reg add "HKCU\System\GameConfigStore" /v "GameDVR_FSEBehaviorMode" /t REG_DWORD 
 rem # Honor User adjusted FSE value
 reg add "HKCU\System\GameConfigStore" /v "GameDVR_HonorUserFSEBehaviorMode" /t REG_DWORD /d "1" /f
 
-rem # Enable Enhanced Fullscreen Exclusive (EFSE)
-
-rem # Bit 0: Toggles EFSE mode support (1 = ENABLED / 0 = DISABLED)
-rem # Bit 1: Toggles DXGI swap chain flip model support (lower latency when enabled)
-rem # Bit 2: Toggles DXGI swap chain scaling support (DISABLE)
-rem # Bit 3: Toggles DXGI swap chain color space support (required for HDR)
-rem # Bit 4: Toggles DXGI swap chain HDR metadata support (required for HDR)
-rem # Bit 5: Toggles DXGI swap chain overlay support (FPS DROP WHEN ENABLED)
-
-rem # 0 / 00000000 = Disable EFSE
-rem # 0x01 / 00000001 = Enable ONLY EFSE
-rem # 0x03 / 00000011 = Enable EFSE + Flip Model
-rem # 0x07 / 00000111 = Enable EFSE + Flip Model + Scaling
-rem # 0xf / 00001111 = Enable EFSE + Flip Model + Scaling + Color Space
-rem # 0x1f / 00011111 = Enable EFSE + Flip Model + Scaling + Color Space + HDR metadata
-rem # 0x3f / 00111111 = Enable EFSE + Flip Model + Scaling + Color Space + HDR metadata + Overlay (FPS DROP)
-rem # 0x3b / 00111011 = Enable EFSE + Flip Model + Color Space + HDR metadata + Overlay (FPS DROP)
-rem # 0x1b / 00011011 = Enable EFSE + Flip Model + Color Space + HDR metadata
-
-reg add "HKCU\System\GameConfigStore" /v "GameDVR_EFSEFeatureFlags" /t REG_DWORD /d "0x1b" /f
-
 
 
 rem # Enable more FSO features
@@ -127,6 +106,31 @@ goto :eof
 :fsoon
 echo User chose HDR ON (AutoHDR=1 / SwapEffectUpgrade=1)
 
+
+
+rem # Enable Enhanced Fullscreen Exclusive (EFSE)
+
+rem # Bit 0: Toggles EFSE mode support (1 = ENABLED / 0 = DISABLED)
+rem # Bit 1: Toggles DXGI swap chain flip model support (lower latency when enabled)
+rem # Bit 2: Toggles DXGI swap chain scaling support (DISABLE)
+rem # Bit 3: Toggles DXGI swap chain color space support (required for HDR)
+rem # Bit 4: Toggles DXGI swap chain HDR metadata support (required for HDR)
+rem # Bit 5: Toggles DXGI swap chain overlay support (FPS DROP WHEN ENABLED)
+
+rem # 0 / 00000000 = Disable EFSE
+rem # 0x01 / 00000001 = Enable ONLY EFSE
+rem # 0x03 / 00000011 = Enable EFSE + Flip Model
+rem # 0x07 / 00000111 = Enable EFSE + Flip Model + Scaling
+rem # 0xf / 00001111 = Enable EFSE + Flip Model + Scaling + Color Space
+rem # 0x1f / 00011111 = Enable EFSE + Flip Model + Scaling + Color Space + HDR metadata
+rem # 0x3f / 00111111 = Enable EFSE + Flip Model + Scaling + Color Space + HDR metadata + Overlay (FPS DROP)
+rem # 0x3b / 00111011 = Enable EFSE + Flip Model + Color Space + HDR metadata + Overlay (FPS DROP)
+rem # 0x1b / 00011011 = Enable EFSE + Flip Model + Color Space + HDR metadata
+
+reg add "HKCU\System\GameConfigStore" /v "GameDVR_EFSEFeatureFlags" /t REG_DWORD /d "0x1b" /f
+
+
+
 call EnableHDR.bat
 cd "%~dp0"
 
@@ -134,6 +138,31 @@ goto :end
 
 :hdrofff
 echo User chose HDR OFF (AutoHDR=0 / SwapEffectUpgrade=1)
+
+
+
+rem # Enable Enhanced Fullscreen Exclusive (EFSE)
+
+rem # Bit 0: Toggles EFSE mode support (1 = ENABLED / 0 = DISABLED)
+rem # Bit 1: Toggles DXGI swap chain flip model support (lower latency when enabled)
+rem # Bit 2: Toggles DXGI swap chain scaling support (DISABLE)
+rem # Bit 3: Toggles DXGI swap chain color space support (required for HDR)
+rem # Bit 4: Toggles DXGI swap chain HDR metadata support (required for HDR)
+rem # Bit 5: Toggles DXGI swap chain overlay support (FPS DROP WHEN ENABLED)
+
+rem # 0 / 00000000 = Disable EFSE
+rem # 0x01 / 00000001 = Enable ONLY EFSE
+rem # 0x03 / 00000011 = Enable EFSE + Flip Model
+rem # 0x07 / 00000111 = Enable EFSE + Flip Model + Scaling
+rem # 0xf / 00001111 = Enable EFSE + Flip Model + Scaling + Color Space
+rem # 0x1f / 00011111 = Enable EFSE + Flip Model + Scaling + Color Space + HDR metadata
+rem # 0x3f / 00111111 = Enable EFSE + Flip Model + Scaling + Color Space + HDR metadata + Overlay (FPS DROP)
+rem # 0x3b / 00111011 = Enable EFSE + Flip Model + Color Space + HDR metadata + Overlay (FPS DROP)
+rem # 0x1b / 00011011 = Enable EFSE + Flip Model + Color Space + HDR metadata
+
+reg add "HKCU\System\GameConfigStore" /v "GameDVR_EFSEFeatureFlags" /t REG_DWORD /d "0x03" /f
+
+
 
 call EnableSwapEffectUpgrade.bat
 cd "%~dp0"
