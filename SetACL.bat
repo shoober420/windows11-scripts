@@ -221,7 +221,6 @@ SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Security Health" -
 SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Real-Time Protection" -ot reg -actn setowner -ownr "n:Administrators"
 SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Real-Time Protection" -ot reg -actn ace -ace "n:Administrators;p:full"
 
-
 # garlin
 # https://www.elevenforum.com/t/recursively-take-ownership-of-reg-key-trees-in-powershell.39417/post-637373
 SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Render" -ot reg -rec yes -actn setowner -ownr "n:Administrators"
