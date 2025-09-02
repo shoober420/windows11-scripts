@@ -221,4 +221,7 @@ SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Security Health" -
 SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Real-Time Protection" -ot reg -actn setowner -ownr "n:Administrators"
 SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Real-Time Protection" -ot reg -actn ace -ace "n:Administrators;p:full"
 
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Render" -ot reg -rec yes -actn setowner -ownr "n:Administrators"
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Render" -ot reg -rec yes -actn ace -ace "n:Administrators;p:full"
+
 PAUSE
