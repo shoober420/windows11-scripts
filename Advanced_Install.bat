@@ -186,6 +186,9 @@ cd "%~dp0"
 call CPU_Mitigations.bat
 cd "%~dp0"
 
+call DisableSoundEnhancements.ps1
+cd "%~dp0"
+
 
 
 @echo off
