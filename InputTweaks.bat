@@ -72,4 +72,6 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\mouclass\Parameters" /v "MouseTr
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\kbdclass\Parameters" /v "KeyboardTransmitTimeout" /t REG_DWORD /d "0" /f
 
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\mouclass\Parameters" /v "LayeredLatency" /t REG_DWORD /d "0" /f
+
 PAUSE
