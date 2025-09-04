@@ -4,10 +4,6 @@ rem # !!!WARNING!!!
 
 PAUSE
 
-rem # DataQueueSize
-rem # Mouse and keyboard buffer sizes
-rem # Values too low cause mouse glitches/skipping and unregistered keyboard presses
-rem # Mouse and keyboard values under 16 (0x00000016) require very good hardware
 rem # https://www.clickspeedtester.com/keyboard-latency-test/
 
 PAUSE
@@ -73,15 +69,18 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\mouclass\Parameters" /v "MouseTr
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\kbdclass\Parameters" /v "LayeredLatency" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\mouclass\Parameters" /v "LayeredLatency" /t REG_DWORD /d "0" /f
 
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\kbdclass\Parameters" /v "KeyboardReportBufferCount" /t REG_DWORD /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\mouclass\Parameters" /v "MouseReportBufferCount" /t REG_DWORD /d "1" /f
-
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\kbdclass\Parameters" /v "KeyboardDataQueueSize" /t REG_DWORD /d "0x00000010" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\mouclass\Parameters" /v "MouseDataQueueSize" /t REG_DWORD /d "0x00000010" /f
-
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\kbdclass\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x0000001f" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\mouclass\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x0000001f" /f
 
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\kbdclass\Parameters" /v "KeyboardReportBufferCount" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\mouclass\Parameters" /v "MouseReportBufferCount" /t REG_DWORD /d "0" /f
 
+rem # DataQueueSize
+rem # Mouse and keyboard buffer sizes
+rem # Values too low cause mouse glitches/skipping and unregistered keyboard presses
+rem # Mouse and keyboard values under 16 (0x00000016) require very good hardware
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\kbdclass\Parameters" /v "KeyboardDataQueueSize" /t REG_DWORD /d "0x00000000" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\mouclass\Parameters" /v "MouseDataQueueSize" /t REG_DWORD /d "0x00000000" /f
 
 PAUSE
