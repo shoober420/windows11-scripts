@@ -121,9 +121,13 @@ rem # https://support.arcserve.com/s/article/Tuning-Guide-for-StorageCraft-Softw
 rem # https://sites.google.com/site/tweakradje/windows/windows-tweaking
 rem # https://github.com/mirror/reactos/blob/master/reactos/ntoskrnl/mm/ARM3/mminit.c
 
+rem # PAGE FILE SHOULD BE DISABLED
+rem # ALL PAGEDPOOL VALUES SHOULD BE 0
 rem # Max Page Pool Size / 1GB Non Paged Pool Size
-reg add "HKLM\SYSTEM\ControlSet001\Control\Session Manager\Memory Management" /v "NonPagedPoolSize" /t REG_DWORD /d "0x400" /f
-reg add "HKLM\SYSTEM\ControlSet001\Control\Session Manager\Memory Management" /v "PagedPoolSize" /t REG_DWORD /d "0xffffffff" /f
+reg add "HKLM\SYSTEM\ControlSet001\Control\Session Manager\Memory Management" /v "NonPagedPoolQuota" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\ControlSet001\Control\Session Manager\Memory Management" /v "NonPagedPoolSize" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\ControlSet001\Control\Session Manager\Memory Management" /v "PagedPoolQuota" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\ControlSet001\Control\Session Manager\Memory Management" /v "PagedPoolSize" /t REG_DWORD /d "0" /f
 
 reg add "HKLM\SYSTEM\ControlSet001\Control\Session Manager\Memory Management" /v "DynamicMemory" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\ControlSet001\Control\Session Manager\Memory Management" /v "EnforceWriteProtection" /t REG_DWORD /d "0" /f
