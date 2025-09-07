@@ -32,4 +32,9 @@ reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "Dp
 
 reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "DpcDuration" /f
 
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "DpcLastCount" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "DpcTimeCount" /f
+
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "ForceDpcDmaCoalesce" /f
+
 PAUSE
