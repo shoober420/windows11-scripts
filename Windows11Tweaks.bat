@@ -3541,6 +3541,13 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\Wdf01000\Parameters" /v "WdfDefa
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Wdf01000\Parameters" /v "WdfDirectedPowerTransitionEnable" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Wdf01000\Parameters" /v "IdleInWorkingState" /t REG_DWORD /d "1" /f
 
+rem # Enable DLL Hijacking Protection
+rem # https://www.tenable.com/plugins/nessus/48763
+rem # 0xffffffff = FULL DLL HIJACKING PROTECTION
+reg add "HKLM\System\CurrentControlSet\Control\Session Manager" /v "CWDIllegalInDllSearch" /t REG_DWORD /d "0xffffffff" /f
+
+reg add "HKLM\System\CurrentControlSet\Control\Session Manager" /v "ImageExecutionOptions" /t REG_DWORD /d "0" /f
+
 
 
 rem # Launch DNS.bat and DNS.ps1 for optimal DNS settings
@@ -3579,6 +3586,7 @@ rem # Run DNS.bat and DNS.ps1 for optimal DNS settings
 rem # REBOOT RECOMMENDED
 
 PAUSE
+
 
 
 
