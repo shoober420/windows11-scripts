@@ -32,4 +32,10 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "DpcWa
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "DpcDuration" /t REG_DWORD /d "1" /f
 
+rem # alfena = 0x000003e8
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "DpcLastCount" /t REG_DWORD /d "0x000003e8" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "DpcTimeCount" /t REG_DWORD /d "0x000003e8" /f
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "ForceDpcDmaCoalesce" /t REG_DWORD /d "0" /f
+
 PAUSE
