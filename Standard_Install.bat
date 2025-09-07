@@ -62,9 +62,6 @@ cd "%~dp0"
 call USBTweaks.bat
 cd "%~dp0"
 
-call AboveNormalPriority.bat
-cd "%~dp0"
-
 call InputTweaks.bat
 cd "%~dp0"
 
@@ -132,6 +129,51 @@ cd "%~dp0"
 
 
 @echo off
+
+
+
+echo.
+echo 1. Above Normal Priority (RECOMMENDED)
+echo 2. High Priority
+echo 3. SKIP
+echo C. Cancel
+echo.
+choice /c 123C /m "Choose an option :"
+
+if 4 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 3 EQU %ERRORLEVEL% (
+   call :scccipsterzzz
+) else if 2 EQU %ERRORLEVEL% (
+   call :highp
+) else if 1 EQU %ERRORLEVEL% (
+   call :aboven
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:aboven
+echo User chose Above Normal Priority (RECOMMENDED)
+
+call AboveNormalPriority.bat
+
+goto :end
+
+:highp
+echo User chose High Priority
+
+call HighPriority.bat
+
+goto :end
+
+:scccipsterzzz
+echo User chose SKIP
+
+goto :end
+
+:end
 
 
 
