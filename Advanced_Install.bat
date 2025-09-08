@@ -193,6 +193,96 @@ cd "%~dp0"
 
 
 echo.
+echo 1. Enable Prefetcher (RECOMMENDED)
+echo 2. Disable Prefetcher
+echo 3. SKIP
+echo C. Cancel
+echo.
+choice /c 123C /m "Choose an option :"
+
+if 4 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 3 EQU %ERRORLEVEL% (
+   call :scccipsterrzzz
+) else if 2 EQU %ERRORLEVEL% (
+   call :pd
+) else if 1 EQU %ERRORLEVEL% (
+   call :pe
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:pe
+echo User chose Enable Prefetcher (RECOMMENDED)
+
+call EnablePrefetcher.bat
+
+goto :end
+
+:pd
+echo User chose Disable Prefetcher
+
+call DisablePrefetcher.bat
+
+goto :end
+
+:scccipsterrzzz
+echo User chose SKIP
+
+goto :end
+
+:end
+
+
+
+echo.
+echo 1. Enable SuperFetch
+echo 2. Disable SuperFetch
+echo 3. SKIP
+echo C. Cancel
+echo.
+choice /c 123C /m "Choose an option :"
+
+if 4 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 3 EQU %ERRORLEVEL% (
+   call :scccipsteerrzzz
+) else if 2 EQU %ERRORLEVEL% (
+   call :sd
+) else if 1 EQU %ERRORLEVEL% (
+   call :se
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:pe
+echo User chose Enable SuperFetch
+
+call EnableSysMain.bat
+
+goto :end
+
+:pd
+echo User chose Disable SuperFetch
+
+call DisableSysMain.bat
+
+goto :end
+
+:scccipsteerrzzz
+echo User chose SKIP
+
+goto :end
+
+:end
+
+
+
+echo.
 echo 1. Above Normal Priority (RECOMMENDED)
 echo 2. High Priority
 echo 3. SKIP
