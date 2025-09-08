@@ -196,6 +196,11 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "SeLpa
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "TimerInterruptDelay" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "TSCDeadline" /t REG_DWORD /d "1" /f
 
+rem # Kernel DMA Protection
+rem # 1 = OFF / 0 = ON
+reg add "HKLM\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows\Kernel DMA Protection" /v "DeviceEnumerationPolicy" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Kernel DMA Protection" /v "DeviceEnumerationPolicy" /t REG_DWORD /d "1" /f
+
 
 
 PAUSE
