@@ -563,6 +563,10 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "
 setx DXGI_SWAP_CHAIN_FLAG_ALLOW_TEARING "1" /M
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "DXGI_SWAP_CHAIN_FLAG_ALLOW_TEARING" /t REG_SZ /d "1" /f
 
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "CHROME_HEADLESS" /t REG_SZ /d "1" /f
+
+reg add "HKLM\SOFTWARE\Microsoft\DirectX" /v "DisableHWOverlay" /t REG_DWORD /d "1" /f
+
 
 
 rem # Intel iGPU Dedicated Segment Size
