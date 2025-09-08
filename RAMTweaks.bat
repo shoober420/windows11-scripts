@@ -123,7 +123,7 @@ rem # https://github.com/mirror/reactos/blob/master/reactos/ntoskrnl/mm/ARM3/mmi
 
 rem # Page Table Entries amount
 rem # 0 = System Default / Auto-Tuned
-rem # alfena = 0x0000c000
+rem # alufena = 0x0000c000
 rem # 0xffffffff = Maximize system pages
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "SystemPages" /t REG_DWORD /d "0" /f
 
@@ -132,11 +132,11 @@ reg add "HKLM\SYSTEM\ControlSet001\Control\Session Manager\Memory Management" /v
 reg add "HKLM\SYSTEM\ControlSet001\Control\Session Manager\Memory Management" /v "PagedPoolQuota" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\ControlSet001\Control\Session Manager\Memory Management" /v "PagedPoolSize" /t REG_DWORD /d "0" /f
 
-rem # alfena = 40
+rem # alufena = 40
 reg add "HKLM\SYSTEM\ControlSet001\Control\Session Manager\Memory Management" /v "PoolUsageMaximum" /t REG_DWORD /d "40" /f
 
 rem # USED FOR REMOTE DESKTOP SESSIONS
-rem # alfena = 40 / 30
+rem # alufena = 40 / 30
 reg add "HKLM\SYSTEM\ControlSet001\Control\Session Manager\Memory Management" /v "SessionPoolSize" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\ControlSet001\Control\Session Manager\Memory Management" /v "SessionViewSize" /t REG_DWORD /d "0" /f
 
