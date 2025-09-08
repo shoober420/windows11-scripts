@@ -182,4 +182,19 @@ reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "CopyFileBufferedSy
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\I/O System" /v "DisableDiskCounters" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\I/O System" /v "RequireDeviceAccessCheck" /t REG_DWORD /d "0" /f
 
+rem # Offloaded Data Transfer (ODX)
+rem # 0 = ODX ENABLED / 1 = ODX DISABLED
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\FileSystem" /v "FilterSupportedFeaturesMode" /t REG_DWORD /d "0" /f
+
+rem # Enable NTFS Log File Upgrade
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\FileSystem" /v "NtfsDisableLfsDowngrade" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\FileSystem" /v "NtfsDisableLfsUpgrade" /t REG_DWORD /d "0" /f
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\FileSystem" /v "NtfsQuotaNotifyRate" /t REG_DWORD /d "0xffffffff" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\FileSystem" /v "ScrubMode" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\FileSystem" /v "SymlinkLocalToLocalEvaluation" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\FileSystem" /v "SymlinkLocalToRemoteEvaluation" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\FileSystem" /v "SymlinkRemoteToLocalEvaluation" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\FileSystem" /v "SymlinkRemoteToRemoteEvaluation" /t REG_DWORD /d "0" /f
+
 PAUSE
