@@ -1,5 +1,5 @@
 rem # Installs Notepad++
 
-winget install notepad++
+winget install --id=Notepad++.Notepad++ -e
 
 PAUSE
