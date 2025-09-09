@@ -1148,10 +1148,6 @@ goto :end
 
 
 
-
-
-
-
 echo.
 echo 1. Enable AMDGPU: DalDramClockChangeLatencyNs tweak (MAY CAUSE BLACK SCREEN AND FLICKERING)
 echo 2. Disable AMDGPU: DalDramClockChangeLatencyNs tweak
