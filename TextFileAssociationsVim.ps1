@@ -1,4 +1,4 @@
-# Remove Default File Associations and assign notepad++ as default text editor
+# Remove Default File Associations and assign Vim as default text editor
 
 # https://github.com/timabell
 # https://gist.github.com/timabell/bc90e0808ec1cda173ca09225a16e194
