@@ -1200,15 +1200,18 @@ goto :end
 echo.
 echo 1. Vim
 echo 2. Notepad++
-echo 3. SKIP
+echo 3. Classic Notepad
+echo 4. SKIP
 echo C. Cancel
 echo.
 choice /c 123C /m "Choose an option :"
 
-if 4 EQU %ERRORLEVEL% (
+if 5 EQU %ERRORLEVEL% (
    echo User chose to cancel.
-) else if 3 EQU %ERRORLEVEL% (
+) else if 4 EQU %ERRORLEVEL% (
    call :skippy
+) else if 3 EQU %ERRORLEVEL% (
+   call :cnote
 ) else if 2 EQU %ERRORLEVEL% (
    call :note
 ) else if 1 EQU %ERRORLEVEL% (
@@ -1237,6 +1240,14 @@ call InstallNotepad++.bat
 cd "%~dp0"
 
 ECHO R | powershell.exe ./TextFileAssociationsNotepad++.ps1
+cd "%~dp0"
+
+:cnote
+echo User chose Classic Notepad
+
+cd "%~dp0"
+
+ECHO R | powershell.exe ./TextFileAssociationsClassicNotepad.ps1
 cd "%~dp0"
 
 :skippy
