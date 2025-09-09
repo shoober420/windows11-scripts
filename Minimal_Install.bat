@@ -166,7 +166,7 @@ cd "%~dp0"
 
 goto :end
 
-:vim
+:note
 echo User chose Notepad++
 
 call InstallNotepad++.bat
