@@ -1204,7 +1204,7 @@ echo 3. Classic Notepad
 echo 4. SKIP
 echo C. Cancel
 echo.
-choice /c 123C /m "Choose an option :"
+choice /c 1234C /m "Choose an option :"
 
 if 5 EQU %ERRORLEVEL% (
    echo User chose to cancel.
@@ -1242,6 +1242,8 @@ cd "%~dp0"
 ECHO R | powershell.exe ./TextFileAssociationsNotepad++.ps1
 cd "%~dp0"
 
+goto :end
+
 :cnote
 echo User chose Classic Notepad
 
@@ -1249,6 +1251,8 @@ cd "%~dp0"
 
 ECHO R | powershell.exe ./TextFileAssociationsClassicNotepad.ps1
 cd "%~dp0"
+
+goto :end
 
 :skippy
 echo User chose SKIP
