@@ -289,15 +289,21 @@ goto :eof
 echo User chose Vim
 
 call InstallVim.bat
+cd "%~dp0"
+
+ECHO R | powershell.exe ./TextFileAssociationsVim.ps1
+cd "%~dp0"
 
 goto :end
 
-:vim
+:note
 echo User chose Notepad++
 
 call InstallNotepad++.bat
+cd "%~dp0"
 
-goto :end
+ECHO R | powershell.exe ./TextFileAssociationsNotepad++.ps1
+cd "%~dp0"
 
 :skippy
 echo User chose SKIP
