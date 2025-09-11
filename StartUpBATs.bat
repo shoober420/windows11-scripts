@@ -143,9 +143,56 @@ goto :end
 
 :end
 
+
+
+echo.
+echo 1. Enable Microphone
+echo 2. Disable Microphone
+echo 3. SKIP
+echo C. Cancel
+echo.
+choice /c 123C /m "Choose an option :"
+
+if 4 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 3 EQU %ERRORLEVEL% (
+   call :scypppz
+) else if 2 EQU %ERRORLEVEL% (
+   call :micoff
+) else if 1 EQU %ERRORLEVEL% (
+   call :micon
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:micon
+echo User chose Enable Microphone
+
+cd %USERPROFILE%\Downloads\windows11-scripts-main
+call EnableMicrophone.bat
+
+goto :end
+
+:micoff
+echo User chose Disable Microphone
+
+cd %USERPROFILE%\Downloads\windows11-scripts-main
+call DisableMicrophone.bat
+
+goto :end
+
+:scypppz
+echo User chose SKIP
+
+goto :end
+
+:end
+
+
+
 cd %USERPROFILE%\Downloads\windows11-scripts-main
 call DisableWMI.bat
-
-
 
 PAUSE
