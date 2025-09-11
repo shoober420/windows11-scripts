@@ -8,9 +8,9 @@ Remove-Item -Path "HKCU:Software\Microsoft\Windows\CurrentVersion\Explorer\FileE
 $exts=@(
         "cfg",
         "ini",
-	       "log",
+        "log",
         "ltx",
-	       "txt")
+        "txt")
 echo "## setting up file associations"
 foreach ($ext in $exts){
 	$extfile=$ext+"file"
