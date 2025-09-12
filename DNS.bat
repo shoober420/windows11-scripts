@@ -48,9 +48,18 @@ rem # Enable Cloudflare DNS
 rem # Disable DNS UDP Fallback
 rem # Disable Auto-Upgrade (Dynamic DNS / DDNS)
 rem # V3nilla: https://github.com/shoober420/windows11-scripts/issues/11
-netsh interface ip set dns Wi-Fi static 1.1.1.1
-netsh interface ip set dns Ethernet static 1.1.1.1
-netsh dns add encryption server=1.1.1.1 https://cloudflare-dns.com/dns-query autoupgrade=no udpfallback=no
+
+rem # Enable Cloudflare DNS with malware blocking and DOH
+rem # Set primary DNS for Wi-Fi and Ethernet interfaces
+netsh interface ip set dns Wi-Fi static 1.1.1.2
+netsh interface ip set dns Ethernet static 1.1.1.2
+netsh dns add encryption server=1.1.1.2 dohtemplate=https://security.cloudflare-dns.com/dns-query autoupgrade=no udpfallback=no
+
+rem # Add secondary DNS for Wi-Fi and Ethernet interfaces 
+netsh interface ip add dns Wi-Fi 1.0.0.2 index=2
+netsh interface ip add dns Ethernet 1.0.0.2 index=2
+netsh dns add encryption server=1.0.0.2 dohtemplate=https://security.cloudflare-dns.com/dns-query autoupgrade=no udpfallback=no
+
 
 rem # Enable DNS over HTTPS (DoH)
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters" /v "EnableAutoDoh" /t REG_DWORD /d "2" /f
