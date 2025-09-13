@@ -88,8 +88,8 @@ echo.
 echo Fullscreen Optimizations (FSO)
 echo.
 echo 1. Enable FSO
-echo 3. Disable FSO (HDR OFF)
-echo 4. SKIP
+echo 2. Disable FSO (HDR OFF)
+echo 3. SKIP
 echo C. Cancel
 echo.
 choice /c 1234C /m "Choose an option :"
