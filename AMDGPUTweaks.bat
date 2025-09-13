@@ -307,10 +307,6 @@ rem # Image Sharpening
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_USUEnable" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "KMD_USUEnable" /t REG_DWORD /d "0" /f
 
-rem # Radeon Boost
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_RadeonBoostEnabled" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "KMD_RadeonBoostEnabled" /t REG_DWORD /d "0" /f
-
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "OverclockEnabled_DEF" /t REG_SZ /d "True" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "OverclockEnabled_NA" /t REG_SZ /d "False" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "OverclockEnabled_DEF" /t REG_SZ /d "True" /f
