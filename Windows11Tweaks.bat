@@ -2971,9 +2971,6 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\EventLog\Application" /v "AutoBa
 
 reg add "HKLM\SYSTEM\CurrentControlSet\services\Netlogon\Parameters" /v "TryNextClosestSite" /t REG_DWORD /d "0" /f
 
-rem # Disable DiagTrack Listener
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\Diagtrack-Listener\{FBDC4594-A4A9-5F04-AF86-7BD18A7938B9}" /v "Start" /t REG_DWORD /d "0" /f
-
 rem # Disable Remote Desktop UDP
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services\Client" /v "fClientDisableUDP" /t REG_DWORD /d "1" /f
 
@@ -3570,6 +3567,7 @@ rem # Run DNS.bat and DNS.ps1 for optimal DNS settings
 rem # REBOOT RECOMMENDED
 
 PAUSE
+
 
 
 
