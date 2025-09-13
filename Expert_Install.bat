@@ -83,6 +83,11 @@ cd "%~dp0"
 call DisableServicesAMD.bat
 cd "%~dp0"
 
+call Windows11Tweaks.bat
+cd "%~dp0"
+
+
+
 @echo off
 
 
