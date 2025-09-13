@@ -183,7 +183,7 @@ cd "%~dp0"
 call CPU_Mitigations.bat
 cd "%~dp0"
 
-call DisableSoundEnhancements.ps1
+ECHO R | powershell.exe ./DisableSoundEnhancements.ps1
 cd "%~dp0"
 
 
@@ -248,7 +248,7 @@ choice /c 123C /m "Choose an option :"
 if 4 EQU %ERRORLEVEL% (
    echo User chose to cancel.
 ) else if 3 EQU %ERRORLEVEL% (
-   call :scccipsteerrzzz
+   call :scccipsteerrzzzzz
 ) else if 2 EQU %ERRORLEVEL% (
    call :sd
 ) else if 1 EQU %ERRORLEVEL% (
@@ -259,21 +259,21 @@ if 4 EQU %ERRORLEVEL% (
 
 goto :eof
 
-:pe
+:se
 echo User chose Enable SuperFetch
 
 call EnableSysMain.bat
 
 goto :end
 
-:pd
+:sd
 echo User chose Disable SuperFetch
 
 call DisableSysMain.bat
 
 goto :end
 
-:scccipsteerrzzz
+:scccipsteerrzzzzz
 echo User chose SKIP
 
 goto :end
