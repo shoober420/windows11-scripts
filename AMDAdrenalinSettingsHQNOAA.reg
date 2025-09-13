@@ -39,8 +39,8 @@ Windows Registry Editor Version 5.00
 "GI"=hex:30,00
 "GI_DEF"="0"
 "GI_NA"="0"
-"KMD_RadeonBoostEnabled"=dword:00000000
-"KMD_RadeonUpscalingEnabled"=dword:00000000
+;"KMD_RadeonBoostEnabled"=dword:00000000
+;"KMD_RadeonUpscalingEnabled"=dword:00000000
 "MLF"=hex:30,00
 "MLF_DEF"="0"
 "MLF_NA"="0"
@@ -159,8 +159,8 @@ Windows Registry Editor Version 5.00
 "GI"=hex:30,00
 "GI_DEF"="0"
 "GI_NA"="0"
-"KMD_RadeonBoostEnabled"=dword:00000000
-"KMD_RadeonUpscalingEnabled"=dword:00000000
+;"KMD_RadeonBoostEnabled"=dword:00000000
+;"KMD_RadeonUpscalingEnabled"=dword:00000000
 "MLF"=hex:30,00
 "MLF_DEF"="0"
 "MLF_NA"="0"
@@ -279,8 +279,8 @@ Windows Registry Editor Version 5.00
 "GI"=hex:30,00
 "GI_DEF"="0"
 "GI_NA"="0"
-"KMD_RadeonBoostEnabled"=dword:00000000
-"KMD_RadeonUpscalingEnabled"=dword:00000000
+;"KMD_RadeonBoostEnabled"=dword:00000000
+;"KMD_RadeonUpscalingEnabled"=dword:00000000
 "MLF"=hex:30,00
 "MLF_DEF"="0"
 "MLF_NA"="0"
@@ -399,8 +399,8 @@ Windows Registry Editor Version 5.00
 "GI"=hex:30,00
 "GI_DEF"="0"
 "GI_NA"="0"
-"KMD_RadeonBoostEnabled"=dword:00000000
-"KMD_RadeonUpscalingEnabled"=dword:00000000
+;"KMD_RadeonBoostEnabled"=dword:00000000
+;"KMD_RadeonUpscalingEnabled"=dword:00000000
 "MLF"=hex:30,00
 "MLF_DEF"="0"
 "MLF_NA"="0"
@@ -519,8 +519,8 @@ Windows Registry Editor Version 5.00
 "GI"=hex:30,00
 "GI_DEF"="0"
 "GI_NA"="0"
-"KMD_RadeonBoostEnabled"=dword:00000000
-"KMD_RadeonUpscalingEnabled"=dword:00000000
+;"KMD_RadeonBoostEnabled"=dword:00000000
+;"KMD_RadeonUpscalingEnabled"=dword:00000000
 "MLF"=hex:30,00
 "MLF_DEF"="0"
 "MLF_NA"="0"
@@ -639,8 +639,8 @@ Windows Registry Editor Version 5.00
 "GI"=hex:30,00
 "GI_DEF"="0"
 "GI_NA"="0"
-"KMD_RadeonBoostEnabled"=dword:00000000
-"KMD_RadeonUpscalingEnabled"=dword:00000000
+;"KMD_RadeonBoostEnabled"=dword:00000000
+;"KMD_RadeonUpscalingEnabled"=dword:00000000
 "MLF"=hex:30,00
 "MLF_DEF"="0"
 "MLF_NA"="0"
