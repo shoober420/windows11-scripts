@@ -645,16 +645,10 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\atikmdag" /v "StutterMode" /t RE
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdag" /v "RADEON_UPSCALING" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdag" /v "RADEON_UPSCALING_NA" /t REG_SZ /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdag" /v "KMD_RadeonUpscalingEnabled" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdag" /v "KMD_RadeonUpscalingSupport" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdap" /v "RADEON_UPSCALING" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdap" /v "RADEON_UPSCALING_NA" /t REG_SZ /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdap" /v "KMD_RadeonUpscalingEnabled" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdap" /v "KMD_RadeonUpscalingSupport" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmpfd" /v "RADEON_UPSCALING" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmpfd" /v "RADEON_UPSCALING_NA" /t REG_SZ /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmpfd" /v "KMD_RadeonUpscalingEnabled" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmpfd" /v "KMD_RadeonUpscalingSupport" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdwddmg" /v "RADEON_UPSCALING" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdwddmg" /v "RADEON_UPSCALING_NA" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdwddmg" /v "KMD_RadeonUpscalingEnabled" /t REG_DWORD /d "0" /f
