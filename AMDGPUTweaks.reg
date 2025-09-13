@@ -96,7 +96,6 @@ Windows Registry Editor Version 5.00
 "RADEON_UPSCALING"="0"
 "RADEON_UPSCALING_DEF"="0"
 "RADEON_UPSCALING_NA"="0"
-"KMD_RadeonUpscalingSupport"=dword:00000000
 "DynamicContrast"=hex:30,00
 "DynamicContrast_DEF"="0"
 "DynamicContrast_NA"="0"
@@ -257,7 +256,6 @@ Windows Registry Editor Version 5.00
 "RADEON_UPSCALING"="0"
 "RADEON_UPSCALING_DEF"="0"
 "RADEON_UPSCALING_NA"="0"
-"KMD_RadeonUpscalingSupport"=dword:00000000
 "DynamicContrast"=hex:30,00
 "DynamicContrast_DEF"="0"
 "DynamicContrast_NA"="0"
@@ -447,7 +445,6 @@ Windows Registry Editor Version 5.00
 "RADEON_UPSCALING"="0"
 "RADEON_UPSCALING_DEF"="0"
 "RADEON_UPSCALING_NA"="0"
-"KMD_RadeonUpscalingSupport"=dword:00000000
 "DynamicContrast"=hex:30,00
 "DynamicContrast_DEF"="0"
 "DynamicContrast_NA"="0"
@@ -608,7 +605,6 @@ Windows Registry Editor Version 5.00
 "RADEON_UPSCALING"="0"
 "RADEON_UPSCALING_DEF"="0"
 "RADEON_UPSCALING_NA"="0"
-"KMD_RadeonUpscalingSupport"=dword:00000000
 "DynamicContrast"=hex:30,00
 "DynamicContrast_DEF"="0"
 "DynamicContrast_NA"="0"
@@ -798,7 +794,6 @@ Windows Registry Editor Version 5.00
 "RADEON_UPSCALING"="0"
 "RADEON_UPSCALING_DEF"="0"
 "RADEON_UPSCALING_NA"="0"
-"KMD_RadeonUpscalingSupport"=dword:00000000
 "DynamicContrast"=hex:30,00
 "DynamicContrast_DEF"="0"
 "DynamicContrast_NA"="0"
@@ -959,7 +954,6 @@ Windows Registry Editor Version 5.00
 "RADEON_UPSCALING"="0"
 "RADEON_UPSCALING_DEF"="0"
 "RADEON_UPSCALING_NA"="0"
-"KMD_RadeonUpscalingSupport"=dword:00000000
 "DynamicContrast"=hex:30,00
 "DynamicContrast_DEF"="0"
 "DynamicContrast_NA"="0"
