@@ -56,7 +56,8 @@ cd "%~dp0"
 call DisableWindowsSecurityCenter.bat
 cd "%~dp0"
 
-call DisableEventTraceSessions.bat
+rem # BORKS WMIC
+rem call DisableEventTraceSessions.bat
 cd "%~dp0"
 
 call DisableSAM.bat
