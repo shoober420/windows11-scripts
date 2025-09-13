@@ -71,4 +71,13 @@ ECHO Yes | reg delete "HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\NetC
 ECHO Yes | reg delete "HKLM\SYSTEM\ControlSet001\Control\WMI\Autologger\RadioMgr"
 ECHO Yes | reg delete "HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\RadioMgr"
 
+rem https://docs.microsoft.com/en-us/windows/win32/etw/configuring-and-starting-an-autologger-session
+rem DiagLog is required by Diagnostic Policy Service (Troubleshooting)
+rem EventLog-System/EventLog-Application are required by Windows Events Log Service
+rem perfmon
+reg add "HKLM\System\CurrentControlSet\Control\WMI\Autologger\AutoLogger-Diagtrack-Listener" /v "Start" /t REG_DWORD /d "0" /f
+reg add "HKLM\System\CurrentControlSet\Control\WMI\Autologger\DiagLog" /v "Start" /t REG_DWORD /d "0" /f
+reg add "HKLM\System\CurrentControlSet\Control\WMI\Autologger\Diagtrack-Listener" /v "Start" /t REG_DWORD /d "0" /f
+reg add "HKLM\System\CurrentControlSet\Control\WMI\Autologger\WiFiSession" /v "Start" /t REG_DWORD /d "0" /f
+
 PAUSE
