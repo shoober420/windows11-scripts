@@ -652,15 +652,12 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmpfd" /v "RADEON_UPSCALING_N
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdwddmg" /v "RADEON_UPSCALING" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdwddmg" /v "RADEON_UPSCALING_NA" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdwddmg" /v "KMD_RadeonUpscalingEnabled" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdwddmg" /v "KMD_RadeonUpscalingSupport" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdgpuv" /v "RADEON_UPSCALING" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdgpuv" /v "RADEON_UPSCALING_NA" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdgpuv" /v "KMD_RadeonUpscalingEnabled" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdgpuv" /v "KMD_RadeonUpscalingSupport" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\atikmdag" /v "RADEON_UPSCALING" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\atikmdag" /v "RADEON_UPSCALING_NA" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\atikmdag" /v "KMD_RadeonUpscalingEnabled" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\atikmdag" /v "KMD_RadeonUpscalingSupport" /t REG_DWORD /d "0" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdag" /v "DisableAspmL0s" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\amdkmdag" /v "DisableAspmL1" /t REG_DWORD /d "1" /f
