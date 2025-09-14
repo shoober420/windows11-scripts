@@ -84,7 +84,8 @@ cd "%~dp0"
 call DisableServicesAMD.bat
 cd "%~dp0"
 
-call Windows11Tweaks.bat
+rem # BORKS MACHINE WHEN RUN IN SAFE MODE
+rem call Windows11Tweaks.bat
 cd "%~dp0"
 
 
