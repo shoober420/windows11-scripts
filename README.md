@@ -343,7 +343,7 @@ Steve Gibson ShieldsUp! firewall test
 
 Windows11Checklist.txt (information on tweaks)
 
-Windows11Tweaks.bat (Disables Telemetry required for Windows Insider Updates, run EnableWindowsUpdate.bat to fix) (Removes and disables Microsoft Edge) (recommended to run in SAFE MODE)
+Windows11Tweaks.bat (Disables Telemetry required for Windows Insider Updates, run EnableWindowsUpdate.bat to fix) (Removes and disables Microsoft Edge)
 
 DisableWindowsUpdate.bat / EnableWindowsUpdate.bat (required for DISM)
 
