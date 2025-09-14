@@ -40,7 +40,7 @@ rem # Launches scripts to disable Windows Defender and other security features
 
 rem # Recommended to launch in SAFE MODE
 
-rem # MUST RUN StartUpBATs.bat AFTER RUNNING SCRIPT
+rem # MUST RUN StartUpBATs.bat AFTER RUNNING SCRIPT TO FIX LAGGY STARTMENU AFTER REBOOT
 
 PAUSE
 
