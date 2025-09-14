@@ -24,6 +24,12 @@ rem # Multiplane Overlay (MPO)
 
 
 
+rem # Enable and start WMI
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD /d "2" /f
+sc config winmgmt start= auto
+net start winmgmt
+
 rem # https://www.elevenforum.com/members/garlin.5387/
 rem # https://www.elevenforum.com/t/gpu-tweaks-batch-script.30134/post-521530
 if not exist C:\Windows\System32\wbem\WMIC.exe (
