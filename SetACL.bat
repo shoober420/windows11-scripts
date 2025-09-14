@@ -97,6 +97,12 @@ SetACL.exe -on "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Diagnostics\
 SetACL.exe -on "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Diagnostics\Performance\DisableDiagnosticTracing" -ot reg -actn setowner -ownr "n:Administrators"
 SetACL.exe -on "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Diagnostics\Performance\DisableDiagnosticTracing" -ot reg -actn ace -ace "n:Administrators;p:full"
 
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Diagnostics\Performance\BootCKCLSettings" -ot reg -actn setowner -ownr "n:Administrators"
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Diagnostics\Performance\BootCKCLSettings" -ot reg -actn ace -ace "n:Administrators;p:full"
+
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Diagnostics\Performance\ShutdownCKCLSettings" -ot reg -actn setowner -ownr "n:Administrators"
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Diagnostics\Performance\ShutdownCKCLSettings" -ot reg -actn ace -ace "n:Administrators;p:full"
+
 SetACL.exe -on "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Diagnostics\Performance\BootCKCLSettings\Start" -ot reg -actn setowner -ownr "n:Administrators"
 SetACL.exe -on "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Diagnostics\Performance\BootCKCLSettings\Start" -ot reg -actn ace -ace "n:Administrators;p:full"
 
