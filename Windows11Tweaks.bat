@@ -48,6 +48,13 @@ rem # Run DNS.bat and DNS.ps1 for optimal DNS settings
 
 rem # REBOOT RECOMMENDED
 
+rem # !!! WARNING !!!
+
+rem # DONT RUN IN SAFE
+rem # BORKS MACHINE
+
+rem # !!! WARNING !!!
+
 PAUSE
 
 rem # Enable and start WMI
@@ -3528,6 +3535,7 @@ rem # Run DNS.bat and DNS.ps1 for optimal DNS settings
 rem # REBOOT RECOMMENDED
 
 PAUSE
+
 
 
 
