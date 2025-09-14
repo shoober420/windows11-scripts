@@ -38,10 +38,6 @@ rem # https://github.com/CrackedStuffEZ
 
 rem # -----------------------------------------------------------------------------------------
 
-rem # Recommended to run this batch script in SAFE MODE
-
-rem # SAFE MODE required for certain admin privileges tweaks
-
 rem # Disables Telemetry required for Windows Update to function on Windows Insider builds
 
 rem # Running EnableWindowsUpdate.bat is required to download Windows updates after running this batch script
@@ -3532,6 +3528,7 @@ rem # Run DNS.bat and DNS.ps1 for optimal DNS settings
 rem # REBOOT RECOMMENDED
 
 PAUSE
+
 
 
 
