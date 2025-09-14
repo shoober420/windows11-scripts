@@ -40,6 +40,8 @@ rem # Launches scripts to disable Windows Defender and other security features
 
 rem # Recommended to launch in SAFE MODE
 
+rem # MUST RUN StartUpBATs.bat AFTER RUNNING SCRIPT
+
 PAUSE
 
 cd "%~dp0"
@@ -203,3 +205,7 @@ rem # Launch GPU option scripts to finish installation (NVProfileInspector requi
 rem # NVIDIAPerformanceProfile.nip / NVIDIAHighQualityProfileOGL.nip / NVIDIAHighQualityProfileD3D.nip
 
 rem # AMDAdrenalinSettingsPERF.bat / AMDAdrenalinSettingsHQ.bat
+
+rem # Recommended to launch in SAFE MODE
+
+rem # MUST RUN StartUpBATs.bat AFTER RUNNING SCRIPT TO FIX LAGGY STARTMENU AFTER REBOOT
