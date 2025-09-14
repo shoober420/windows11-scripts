@@ -79,6 +79,9 @@ SetACL.exe -on "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\WMI\Autologg
 SetACL.exe -on "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\TaskbarDa" -ot reg -actn setowner -ownr "n:Administrators"
 SetACL.exe -on "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\TaskbarDa" -ot reg -actn ace -ace "n:Administrators;p:full"
 
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Gaming.GameBar.PresenceServer.Internal.PresenceWriter" -ot reg -actn setowner -ownr "n:Administrators"
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Gaming.GameBar.PresenceServer.Internal.PresenceWriter" -ot reg -actn ace -ace "n:Administrators;p:full"
+
 SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Gaming.GameBar.PresenceServer.Internal.PresenceWriter\ActivationType" -ot reg -actn setowner -ownr "n:Administrators"
 SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Gaming.GameBar.PresenceServer.Internal.PresenceWriter\ActivationType" -ot reg -actn ace -ace "n:Administrators;p:full"
 
@@ -88,15 +91,20 @@ SetACL.exe -on "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\WMI\AutoLogg
 SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Security Health\Platform\Registered" -ot reg -actn setowner -ownr "n:Administrators"
 SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Security Health\Platform\Registered" -ot reg -actn ace -ace "n:Administrators;p:full"
 
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Diagnostics\Performance" -ot reg -actn setowner -ownr "n:Administrators"
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Diagnostics\Performance" -ot reg -actn ace -ace "n:Administrators;p:full"
+
 SetACL.exe -on "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Diagnostics\Performance\DisableDiagnosticTracing" -ot reg -actn setowner -ownr "n:Administrators"
 SetACL.exe -on "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Diagnostics\Performance\DisableDiagnosticTracing" -ot reg -actn ace -ace "n:Administrators;p:full"
-
 
 SetACL.exe -on "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Diagnostics\Performance\BootCKCLSettings\Start" -ot reg -actn setowner -ownr "n:Administrators"
 SetACL.exe -on "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Diagnostics\Performance\BootCKCLSettings\Start" -ot reg -actn ace -ace "n:Administrators;p:full"
 
 SetACL.exe -on "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Diagnostics\Performance\ShutdownCKCLSettings\Start" -ot reg -actn setowner -ownr "n:Administrators"
 SetACL.exe -on "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Diagnostics\Performance\ShutdownCKCLSettings\Start" -ot reg -actn ace -ace "n:Administrators;p:full"
+
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\BackgroundModel\BackgroundAudioPolicy" -ot reg -actn setowner -ownr "n:Administrators"
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\BackgroundModel\BackgroundAudioPolicy" -ot reg -actn ace -ace "n:Administrators;p:full"
 
 SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\BackgroundModel\BackgroundAudioPolicy\AllowHeadlessExecution" -ot reg -actn setowner -ownr "n:Administrators"
 SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\BackgroundModel\BackgroundAudioPolicy\AllowHeadlessExecution" -ot reg -actn ace -ace "n:Administrators;p:full"
@@ -122,6 +130,9 @@ SetACL.exe -on "HKEY_CURRENT_USER\CLSID\{679f85cb-0220-4080-b29b-5540cc05aab6}\S
 SetACL.exe -on "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Feeds\ShellFeedsTaskbarViewMode" -ot reg -actn setowner -ownr "n:Administrators"
 SetACL.exe -on "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Feeds\ShellFeedsTaskbarViewMode" -ot reg -actn ace -ace "n:Administrators;p:full"
 
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Communications\" -ot reg -actn setowner -ownr "n:Administrators"
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Communications\" -ot reg -actn ace -ace "n:Administrators;p:full"
+
 SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Communications\ConfigureChatAutoInstall" -ot reg -actn setowner -ownr "n:Administrators"
 SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Communications\ConfigureChatAutoInstall" -ot reg -actn ace -ace "n:Administrators;p:full"
 
@@ -130,6 +141,9 @@ SetACL.exe -on "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\WMI\Autologg
 
 SetACL.exe -on "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\WMI\Autologger\DefenderAuditLogger" -ot reg -actn setowner -ownr "n:Administrators"
 SetACL.exe -on "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\WMI\Autologger\DefenderAuditLogger" -ot reg -actn ace -ace "n:Administrators;p:full"
+
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\Policies\Settings" -ot reg -actn setowner -ownr "n:Administrators"
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\Policies\Settings" -ot reg -actn ace -ace "n:Administrators;p:full"
 
 SetACL.exe -on "HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\Policies\Settings\DisableSendGenericDriverNotFoundToWER" -ot reg -actn setowner -ownr "n:Administrators"
 SetACL.exe -on "HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\Policies\Settings\DisableSendGenericDriverNotFoundToWER" -ot reg -actn ace -ace "n:Administrators;p:full"
@@ -225,5 +239,53 @@ SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Real-Time
 # https://www.elevenforum.com/t/recursively-take-ownership-of-reg-key-trees-in-powershell.39417/post-637373
 SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Render" -ot reg -rec yes -actn setowner -ownr "n:Administrators"
 SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Render" -ot reg -rec yes -actn ace -ace "n:Administrators;p:full"
+
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Assistance\Client\1.0\Settings" -ot reg -actn setowner -ownr "n:Administrators"
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Assistance\Client\1.0\Settings" -ot reg -actn ace -ace "n:Administrators;p:full"
+
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Assistance\Client\1.0\Settings\GlobalOnlineAssist" -ot reg -actn setowner -ownr "n:Administrators"
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Assistance\Client\1.0\Settings\GlobalOnlineAssist" -ot reg -actn ace -ace "n:Administrators;p:full"
+
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Gaming.UI.GameBar" -ot reg -actn setowner -ownr "n:Administrators"
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Gaming.UI.GameBar" -ot reg -actn ace -ace "n:Administrators;p:full"
+
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Gaming.UI.GameBar\ActivationType" -ot reg -actn setowner -ownr "n:Administrators"
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Gaming.UI.GameBar\ActivationType" -ot reg -actn ace -ace "n:Administrators;p:full"
+
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Gaming.UI.GameChatOverlay" -ot reg -actn setowner -ownr "n:Administrators"
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Gaming.UI.GameChatOverlay" -ot reg -actn ace -ace "n:Administrators;p:full"
+
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Gaming.UI.GameChatOverlay\ActivationType" -ot reg -actn setowner -ownr "n:Administrators"
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Gaming.UI.GameChatOverlay\ActivationType" -ot reg -actn ace -ace "n:Administrators;p:full"
+
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Gaming.UI.GameChatOverlayMessageSource" -ot reg -actn setowner -ownr "n:Administrators"
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Gaming.UI.GameChatOverlayMessageSource" -ot reg -actn ace -ace "n:Administrators;p:full"
+
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Gaming.UI.GameChatOverlayMessageSource\ActivationType" -ot reg -actn setowner -ownr "n:Administrators"
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Gaming.UI.GameChatOverlayMessageSource\ActivationType" -ot reg -actn ace -ace "n:Administrators;p:full"
+
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsRuntime\ActivatableClassId" -ot reg -actn setowner -ownr "n:Administrators"
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsRuntime\ActivatableClassId" -ot reg -actn ace -ace "n:Administrators;p:full"
+
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\DelayedApps" -ot reg -actn setowner -ownr "n:Administrators"
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\DelayedApps" -ot reg -actn ace -ace "n:Administrators;p:full"
+
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\DelayedApps\Delay_Sec" -ot reg -actn setowner -ownr "n:Administrators"
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\DelayedApps\Delay_Sec" -ot reg -actn ace -ace "n:Administrators;p:full"
+
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\WMI\Autologger" -ot reg -actn setowner -ownr "n:Administrators"
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\WMI\Autologger" -ot reg -actn ace -ace "n:Administrators;p:full"
+
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ResourceTimers" -ot reg -actn setowner -ownr "n:Administrators"
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ResourceTimers" -ot reg -actn ace -ace "n:Administrators;p:full"
+
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ResourceTimers\EnableResourceAwareTimers" -ot reg -actn setowner -ownr "n:Administrators"
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ResourceTimers\EnableResourceAwareTimers" -ot reg -actn ace -ace "n:Administrators;p:full"
+
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\Windows.delete" -ot reg -actn setowner -ownr "n:Administrators"
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\Windows.delete" -ot reg -actn ace -ace "n:Administrators;p:full"
+
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\Windows.delete\SkipCloudDownload" -ot reg -actn setowner -ownr "n:Administrators"
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\Windows.delete\SkipCloudDownload" -ot reg -actn ace -ace "n:Administrators;p:full"
 
 PAUSE
