@@ -30,6 +30,12 @@ echo %MTU%
 netsh interface ipv4 set subinterface "Wi-Fi" mtu=%MTU% store=persistent
 netsh interface ipv4 set subinterface "Ethernet" mtu=%MTU% store=persistent
 
+netsh interface ipv4 set subinterface "Wi-Fi" minmtu=%MTU% store=persistent
+netsh interface ipv4 set subinterface "Ethernet" minmtu=%MTU% store=persistent
+
+netsh interface ipv4 set subinterface "Wi-Fi" maxmtu=%MTU% store=persistent
+netsh interface ipv4 set subinterface "Ethernet" maxmtu=%MTU% store=persistent
+
 rem # FastSendDatagramThreshold / FastCopyReceiveThreshold should match MTU value in decimal, not hexadecimal (usually 1472)
 rem # https://docs.oracle.com/cd/E13924_01/coh.340/e13818/perftune.htm
 rem # As opposed to NVIDIA saying to use a value of 64K, which is meant for jumbo packet enabled configurations
