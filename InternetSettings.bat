@@ -189,7 +189,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "TcpInitial
 netsh int isatap set state disable
 netsh int tcp set global ecn=disabled
 netsh int tcp set global dca=enabled
-netsh int tcp set global netdma=enabled 
+netsh int tcp set global netdma=disabled
 
 rem # enable BBR2 Congestion Control Provider
 rem # Get-NetTCPSetting | Select SettingName, CongestionProvider
