@@ -47,7 +47,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "Prior
 rem # AlchemyTweaks / alufena / blurbusters = 0x00000014 (20)
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "QuantumLength" /t REG_DWORD /d "0x00000014" /f
 
-rem # AlchemyTweaks / blurbusters = 0x0000000f (15)
+rem # AlchemyTweaks / alufena / blurbusters = 0x0000000f (15)
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "TimeIncrement" /t REG_DWORD /d "0x0000000f" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "DisableOverlappedExecution" /t REG_DWORD /d "0" /f
@@ -85,7 +85,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\PriorityControl" /v "ThreadAffini
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\PriorityControl" /v "ThreadCycleTimeOptimization" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\PriorityControl" /v "TimeCriticalThreads" /t REG_DWORD /d "1" /f
 
-rem # AlchemyTweaks / alufena / blurbusters = 32 / 65536
+rem # AlchemyTweaks / alufena / blurbusters = 0x00000020 (32) / 65536
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "BufferSize" /t REG_DWORD /d "32" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "IoEnqueueIrp" /t REG_DWORD /d "32" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "IoQueueWorkItem" /t REG_DWORD /d "32" /f
