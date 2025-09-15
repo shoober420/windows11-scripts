@@ -123,7 +123,7 @@ reg add "HKLM\SYSTEM\ControlSet001\Control\Processor" /v "CpuIdleScrubValueDefau
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "DISABLE_HYPER_THREADING" /t REG_SZ /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "L3_CACHE_POLICY" /t REG_SZ /d "Aggressive" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "MKL_DYNAMIC" /t REG_SZ /d "FALSE" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "NUMA_AWARENESS" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "NUMA_AWARENESS" /t REG_SZ /d "Enabled" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "OMP_PLACES" /t REG_SZ /d "threads" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "OMP_PROC_BIND" /t REG_SZ /d "spread" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "POWERSHELL_TELEMETRY_OPTOUT" /t REG_SZ /d "1" /f
