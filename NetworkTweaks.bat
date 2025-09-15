@@ -110,11 +110,11 @@ rem # https://www.elevenforum.com/members/garlin.5387/
 rem # https://www.elevenforum.com/t/find-nic-class-guid-in-batch-script-using-wmic-or-anything-else.30083/
 
 for /f "delims=" %%n in ('wmic nic where "GUID is not null" get guid ^| findstr /v GUID') do (
-   reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\%%n" /v TCPNoDelay /t REG_DWORD /d 1 /f
-   reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\%%n" /v TcpNoDelay /t REG_DWORD /d 1 /f
-   reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\%%n" /v TcpDelAckTicks /t REG_DWORD /d 1 /f
-   reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\%%n" /v TcpAckFrequency /t REG_DWORD /d 1 /f
-   reg add "HKLM\SYSTEM\CurrentControlSet\Services\NetBT\Parameters\Interfaces\Tcpip_%%n" /v NetbiosOptions /t REG_DWORD /d 2 /f
+   reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\%%n" /v "TCPNoDelay" /t REG_DWORD /d "1" /f
+   reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\%%n" /v "TcpNoDelay" /t REG_DWORD /d "1" /f
+   reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\%%n" /v "TcpDelAckTicks" /t REG_DWORD /d "0" /f
+   reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\%%n" /v "TcpAckFrequency" /t REG_DWORD /d "1" /f
+   reg add "HKLM\SYSTEM\CurrentControlSet\Services\NetBT\Parameters\Interfaces\Tcpip_%%n" /v "NetbiosOptions" /t REG_DWORD /d "2" /f
 )
 
 rem # find value for 000X at HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\"Class Guid"\<NIC ID>\DriverDesc key
