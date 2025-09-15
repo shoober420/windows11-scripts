@@ -120,6 +120,24 @@ reg add "HKLM\SYSTEM\ControlSet001\Control\Processor" /v "CpuIdleScrubValueDefau
 reg add "HKLM\SYSTEM\ControlSet001\Control\Processor" /v "CpuIdleScrubValueDefaultAuto" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\ControlSet001\Control\Processor" /v "CpuIdleScrubValueDefaultManual" /t REG_DWORD /d "0" /f
 
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "DISABLE_HYPER_THREADING" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "L3_CACHE_POLICY" /t REG_SZ /d "Aggressive" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "MKL_DYNAMIC" /t REG_SZ /d "FALSE" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "NUMA_AWARENESS" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "OMP_PLACES" /t REG_SZ /d "threads" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "OMP_PROC_BIND" /t REG_SZ /d "spread" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "POWERSHELL_TELEMETRY_OPTOUT" /t REG_SZ /d "1" /f
+
+
+
+for /f "tokens=2 delims=^=" %%t in ('wmic cpu get NumberOfLogicalProcessors /value ^| find "="') do set Threads=%%t
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "BLIS_NUM_THREADS" /t REG_SZ /d "%Threads%" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "MKL_NUM_THREADS" /t REG_SZ /d "%Threads%" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "OMP_NUM_THREADS" /t REG_SZ /d "%Threads%" /f
+
+
+
 PAUSE
 
 
