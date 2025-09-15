@@ -42,7 +42,7 @@ reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "Ma
 rem reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "MaximumSharedReadyQueueSize" /t REG_DWORD /d "128" /f
 
 rem # AlchemyTweaks = 0x00000032 (50) / alufena = 0x00000028 (40) / blurbusters = 0x00000036 (54)
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "PriorityControl" /t REG_DWORD /d "0x00000032" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "PriorityControl" /t REG_DWORD /d "0x00000028" /f
 
 rem # AlchemyTweaks / alufena / blurbusters = 0x00000014 (20)
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "QuantumLength" /t REG_DWORD /d "0x00000014" /f
