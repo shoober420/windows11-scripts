@@ -41,13 +41,13 @@ rem # BEST TO LEAVE ALONE AND LET WINDOWS DECIDE
 reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "MaximumSharedReadyQueueSize" /f
 rem reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "MaximumSharedReadyQueueSize" /t REG_DWORD /d "128" /f
 
-rem # AlchemyTweaks = 50 / blurbusters = 54
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "PriorityControl" /t REG_DWORD /d "32" /f
+rem # AlchemyTweaks = 0x00000032 (50) / alufena = 0x00000028 (40) / blurbusters = 0x00000036 (54)
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "PriorityControl" /t REG_DWORD /d "0x00000032" /f
 
-rem # AlchemyTweaks / blurbusters = 20
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "QuantumLength" /t REG_DWORD /d "14" /f
+rem # AlchemyTweaks / alufena / blurbusters = 0x00000014 (20)
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "QuantumLength" /t REG_DWORD /d "0x00000014" /f
 
-rem # AlchemyTweaks / blurbusters = 15
+rem # AlchemyTweaks / blurbusters = 0x0000000f (15)
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "TimeIncrement" /t REG_DWORD /d "0x0000000f" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "DisableOverlappedExecution" /t REG_DWORD /d "0" /f
@@ -105,6 +105,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "Heter
 
 
 rem # Cache Aware Scheduling
+rem # alufena = 1
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "CacheAwareScheduling" /t REG_DWORD /d "7" /f
 
 rem # Debug Poll Interval
@@ -113,8 +114,11 @@ reg add "HKLM\SYSTEM\ControlSet001\Control\Session Manager\kernel" /v "DebugPoll
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "DebugPollInterval" /t REG_DWORD /d "0x3e8" /f
 
 rem # Setting Service Priorities & Boost
-rem # Ancels / fidelity / Chinese = 18
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\I/O System" /v "PassiveIntRealTimeWorkerPriority" /t REG_DWORD /d "18" /f
+rem # alufena = 0
+rem # Ancels / fidelity / Chinese = 0x00000012 (18)
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\I/O System" /v "PassiveIntRealTimeWorkerPriority" /t REG_DWORD /d "0" /f
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\I/O System" /v "PassiveIntRealTimeWorkerCount" /t REG_DWORD /d "0" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\KernelVelocity" /v "DisableFGBoostDecay" /t REG_DWORD /d "1" /f
 
