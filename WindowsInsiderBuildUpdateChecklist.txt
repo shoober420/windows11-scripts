@@ -207,6 +207,8 @@ Update Video Drivers
 
 - Intel 7th-10th Gen Processor Video Drivers: https://www.intel.com/content/www/us/en/download/776137/intel-7th-10th-gen-processor-graphics-windows.html
 
+- Windows Insider Canary Blog: https://blogs.windows.com/windows-insider/
+
 RESTART
 
  - RemoveWindowsApps.bat
