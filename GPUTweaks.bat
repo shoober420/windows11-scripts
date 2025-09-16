@@ -612,6 +612,9 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "NVIDIA_MULTI_DISPLAY_POWER_SAVER" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "NVIDIA_SINGLE_DISP_MEM_OPTIMIZATION" /t REG_SZ /d "1" /f
 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile" /v "AlwaysUseDirectFlip" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile" /v "AllowTearing" /t REG_DWORD /d "1" /f
+
 
 
 rem # Intel iGPU Dedicated Segment Size
