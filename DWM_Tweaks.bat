@@ -261,7 +261,8 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "IdleTimeout" /t REG_DWORD /d "
 rem # https://sites.google.com/site/tweakradje/windows/windows-tweaking
 
 rem # Default 0x2d (45)
-reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm\ExtendedComposition" /v "ExclusiveModeFramerateThresholdPercent" /t REG_DWORD /d "0x0" /f
+rem # alufena = 1
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm\ExtendedComposition" /v "ExclusiveModeFramerateThresholdPercent" /t REG_DWORD /d "1" /f
 
 
 
