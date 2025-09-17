@@ -21,8 +21,6 @@ rem # Allow more I/O to queue in the storage subsystem
 
 rem # Value is determined by RAM size NOT thread or core count
 
-rem # DISABLES CORE PARKING
-
 PAUSE
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Executive" /v "AdditionalCriticalWorkerThreads" /t REG_DWORD /d "64" /f
@@ -30,12 +28,6 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Executive" /v "Ad
 rem # Delayed Worker Threads
 rem # Threads in this queue have a lower priority and therefore a higher latency because they must compete with other processing for CPU time
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Executive" /v "AdditionalDelayedWorkerThreads" /t REG_DWORD /d "0" /f
-
-rem # Disable Core Parking
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power" /v "CoreParkingDisabled" /t REG_DWORD /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "ForceParkingRequested" /t REG_DWORD /d "0" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "DISABLE_CPU_PARKING" /t REG_SZ /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power" /v "DisableCoreParking" /t REG_DWORD /d "1" /f
 
 
 
@@ -133,6 +125,62 @@ reg add "HKLM\System\CurrentControlSet\Control\Session Manager\Executive" /v "Ma
 reg add "HKLM\System\CurrentControlSet\Control\Session Manager\Executive" /v "PriorityQuantumMatrix" /t REG_DWORD /d "0" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power" /v "DisableDynamicProcessorBoost" /t REG_DWORD /d "1" /f
+
+
+
+@echo off
+
+
+echo.
+echo 1. CPU Parking DISABLED
+echo 2. CPU Parking ENABLED
+echo 3. SKIP
+echo C. Cancel
+echo.
+choice /c 123C /m "Choose an option :"
+
+ if 4 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+ ) else if 3 EQU %ERRORLEVEL% (
+   call :zkipeh
+ ) else if 2 EQU %ERRORLEVEL% (
+   call :cpupon
+ ) else if 1 EQU %ERRORLEVEL% (
+   call :cpupoff
+ ) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:cpupoff
+echo User chose CPU Parking DISABLED
+
+rem # Disable Core Parking
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power" /v "CoreParkingDisabled" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "ForceParkingRequested" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "DISABLE_CPU_PARKING" /t REG_SZ /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power" /v "DisableCoreParking" /t REG_DWORD /d "1" /f
+
+goto :end
+
+:cpupon
+echo User chose CPU Parking ENABLED
+
+rem # Enable Core Parking
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power" /v "CoreParkingDisabled" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "ForceParkingRequested" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "DISABLE_CPU_PARKING" /t REG_SZ /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power" /v "DisableCoreParking" /t REG_DWORD /d "0" /f
+
+goto :end
+
+:zkipeh
+echo User chose SKIP
+
+goto :end
+
+:end
 
 
 
