@@ -124,7 +124,7 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "MarshalAllDebugInfo" /t REG_DW
 rem # Kizzimo / jdallmann = 1
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableDeviceBitmaps" /t REG_DWORD /d "1" /f
 
-rem # Enable Locking Memory
+rem # Disable Locking Memory
 rem # Memory Locking guarantees that a process's memory remains readily accessible, preventing delays caused by paging
 rem # jdallmann = 1
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableLockingMemory" /t REG_DWORD /d "1" /f
@@ -182,8 +182,9 @@ rem reg delete "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "ParallelModePolicy" /f
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "ParallelModeLeaveAfterThresholdMS" /t REG_DWORD /d "0" /f
 
+rem # alufena = 0
 rem # Kizzimo / blurbusters = 1
-reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "ResampleModeOverride" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "ResampleModeOverride" /t REG_DWORD /d "0" /f
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "RenderThreadWatchdogTimeoutMilliseconds" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "ResizeTimeoutGdi" /t REG_DWORD /d "0" /f
