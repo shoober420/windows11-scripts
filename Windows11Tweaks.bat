@@ -3522,6 +3522,14 @@ reg add "HKLM\Software\Policies\Microsoft\Windows NT\Reliability" /v "ShutdownRe
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Reliability Analysis\WMI" /v "WMIEnable" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v "ProcessorThrottleLogInterval" /t REG_DWORD /d "0" /f
 
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\pci\Parameters" /v "EnableIdlePowerManagement" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\pci\Parameters" /v "EnableAsyncPowerManagement" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\pci\Parameters" /v "EnableNativePowerManagement" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\pci\Parameters" /v "EnableASPM" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\pci\Parameters" /v "PnpAsyncNewDevice" /t REG_DWORD /d "1" /f
+
+
+
 
 
 rem # Launch DNS.bat and DNS.ps1 for optimal DNS settings
@@ -3560,6 +3568,7 @@ rem # Run DNS.bat and DNS.ps1 for optimal DNS settings
 rem # REBOOT RECOMMENDED
 
 PAUSE
+
 
 
 
