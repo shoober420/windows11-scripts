@@ -80,6 +80,8 @@ for /L %%V in (0,1,32) do (
 
 
 
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\USB" /v "DisableSelectiveSuspend" /t REG_DWORD /d "1" /f
+
 rem # USB I/O Queue Work Item Tweaks
 rem # alufena = 0x0000000a
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\xusb22\Parameters" /v "IoQueueWorkItem" /t REG_DWORD /d "0x0000000a" /f
