@@ -238,8 +238,8 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "DWM_BUFFER_C
 rem # kizzimo = 0x99999999
 reg add "HKLM\SOFTWARE\Microsoft\Windows\DWM\Schedule" /v "FrameDisplayBaseNegOffsetNS" /t REG_DWORD /d "0" /f
 
-rem # kizzimo = 1
-reg add "HKLM\SOFTWARE\Microsoft\Windows\DWM\Schedule" /v "FrameDisplayResDivValue" /t REG_DWORD /d "0" /f
+rem # kizzimo / alufena = 1
+reg add "HKLM\SOFTWARE\Microsoft\Windows\DWM\Schedule" /v "FrameDisplayResDivValue" /t REG_DWORD /d "1" /f
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "m_bufferCount" /t REG_DWORD /d "1" /f
 
