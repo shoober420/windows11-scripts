@@ -92,7 +92,7 @@ echo.
 echo DataQueueSize
 echo Mouse and keyboard buffer sizes
 echo.
-echo 1. 0x00000016
+echo 1. 0x00000016 (RECOMMENDED)
 echo 2. 0x00000012
 echo 3. 0x00000008
 echo 4. 0x00000004
@@ -129,7 +129,7 @@ if 9 EQU %ERRORLEVEL% (
 goto :eof
 
 :q16
-echo User chose 0x00000016
+echo User chose 0x00000016 (RECOMMENDED)
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\kbdclass\Parameters" /v "KeyboardDataQueueSize" /t REG_DWORD /d "0x00000016" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\mouclass\Parameters" /v "MouseDataQueueSize" /t REG_DWORD /d "0x00000016" /f
