@@ -97,7 +97,7 @@ echo 2. 0x00000012
 echo 3. 0x00000008
 echo 4. 0x00000004
 echo 5. 0x00000002
-echo 6. 0x00000001
+echo 6. 0x00000001 (VERY FAST COMPUTER)
 echo 7. DEFAULT
 echo 8. SKIP
 echo C. Cancel
@@ -169,7 +169,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\mouclass\Parameters" /v "MouseDa
 goto :end
 
 :q1
-echo User chose 0x00000001
+echo User chose 0x00000001 (VERY FAST COMPUTER)
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\kbdclass\Parameters" /v "KeyboardDataQueueSize" /t REG_DWORD /d "0x00000001" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\mouclass\Parameters" /v "MouseDataQueueSize" /t REG_DWORD /d "0x00000001" /f
