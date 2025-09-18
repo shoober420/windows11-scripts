@@ -24,29 +24,55 @@ rem # Sets SvcHostSplitThresholdInKB, IoPageLockLimit, CacheUnmapBehindLengthInM
 @echo off
 
 echo.
-echo 1. 8GB RAM
-echo 2. 16GB RAM
-echo 3. 32GB RAM
-echo 4. 64GB RAM
+echo 1. 4GB RAM
+echo 2. 8GB RAM
+echo 3. 16GB RAM
+echo 4. 32GB RAM
+echo 5. 48GB RAM
+echo 6. 64GB RAM
+echo 7. SKIP
 echo C. Cancel
 echo.
-choice /c 1234C /m "Choose an option :"
+choice /c 12345678C /m "Choose an option :"
 
-if 5 EQU %ERRORLEVEL% (
+if 8 EQU %ERRORLEVEL% (
    echo User chose to cancel.
-) else if 4 EQU %ERRORLEVEL% (
+) else if 7 EQU %ERRORLEVEL% (
+   call :zcyb
+) else if 6 EQU %ERRORLEVEL% (
    call :64gb
-) else if 3 EQU %ERRORLEVEL% (
+) else if 5 EQU %ERRORLEVEL% (
+   call :48gb
+) else if 4 EQU %ERRORLEVEL% (
    call :32gb
-) else if 2 EQU %ERRORLEVEL% (
+) else if 3 EQU %ERRORLEVEL% (
    call :16gb
-) else if 1 EQU %ERRORLEVEL% (
+) else if 2 EQU %ERRORLEVEL% (
    call :8gb
+) else if 1 EQU %ERRORLEVEL% (
+   call :4gb
 ) else if 0 EQU %ERRORLEVEL% (
    echo User bailed out.
 )
 
 goto :eof
+
+:4gb
+echo User chose 4GB RAM
+
+rem wmic computersystem where name="%computername%" set AutomaticManagedPagefile=False
+rem wmic pagefileset where name="C:\\pagefile.sys" set InitialSize=8192,MaximumSize=8192
+
+reg add "HKLM\SYSTEM\ControlSet001\Control" /v "SvcHostSplitThresholdInKB" /t REG_DWORD /d "400000" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control" /v "SvcHostSplitThresholdInKB" /t REG_DWORD /d "400000" /f
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "IoPageLockLimit" /t REG_DWORD /d "0x00100000" /f
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "CacheUnmapBehindLengthInMB" /t REG_DWORD /d "0x00000100" /f
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "ModifiedWriteMaximum" /t REG_DWORD /d "0x00000020" /f
+
+goto :end
 
 :8gb
 echo User chose 8GB RAM
@@ -62,6 +88,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "CacheUnmapBehindLengthInMB" /t REG_DWORD /d "0x00000200" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "ModifiedWriteMaximum" /t REG_DWORD /d "0x00000040" /f
+
 goto :end
 
 :16gb
@@ -78,6 +105,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "CacheUnmapBehindLengthInMB" /t REG_DWORD /d "0x00000400" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "ModifiedWriteMaximum" /t REG_DWORD /d "0x00000080" /f
+
 goto :end
 
 :32gb
@@ -94,6 +122,24 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "CacheUnmapBehindLengthInMB" /t REG_DWORD /d "0x00000800" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "ModifiedWriteMaximum" /t REG_DWORD /d "0x00000160" /f
+
+goto :end
+
+:48gb
+echo User chose 48GB RAM
+
+rem wmic computersystem where name="%computername%" set AutomaticManagedPagefile=False
+rem wmic pagefileset where name="C:\\pagefile.sys" set InitialSize=8192,MaximumSize=8192
+
+reg add "HKLM\SYSTEM\ControlSet001\Control" /v "SvcHostSplitThresholdInKB" /t REG_DWORD /d "3000000" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control" /v "SvcHostSplitThresholdInKB" /t REG_DWORD /d "3000000" /f
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "IoPageLockLimit" /t REG_DWORD /d "0x00900000" /f
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "CacheUnmapBehindLengthInMB" /t REG_DWORD /d "0x00001200" /f
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "ModifiedWriteMaximum" /t REG_DWORD /d "0x00000240" /f
+
 goto :end
 
 :64gb
@@ -105,14 +151,17 @@ rem wmic pagefileset where name="C:\\pagefile.sys" set InitialSize=65536,Maximum
 reg add "HKLM\SYSTEM\ControlSet001\Control" /v "SvcHostSplitThresholdInKB" /t REG_DWORD /d "4000000" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control" /v "SvcHostSplitThresholdInKB" /t REG_DWORD /d "4000000" /f
 
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "IoPageLockLimit" /t REG_DWORD /d "0x010000000" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "IoPageLockLimit" /t REG_DWORD /d "0x01000000" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "CacheUnmapBehindLengthInMB" /t REG_DWORD /d "0x00001600" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "ModifiedWriteMaximum" /t REG_DWORD /d "0x00000320" /f
+
 goto :end
 
 :end
+
+
 
 rem # https://msfn.org/board/topic/25684-registry-myths-1-iopagelocklimit/
 rem # https://www.reddit.com/r/techsupport/comments/s92o06/paged_pool_and_non_paged_pool_is_very_high/
