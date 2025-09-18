@@ -21,6 +21,13 @@ rem # Allow more I/O to queue in the storage subsystem
 
 rem # Value is determined by RAM size NOT thread or core count
 
+rem # powercfg requires WMI
+rem # Enable and start WMI
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD /d "2" /f
+sc config winmgmt start= auto
+net start winmgmt
+
 PAUSE
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Executive" /v "AdditionalCriticalWorkerThreads" /t REG_DWORD /d "64" /f
