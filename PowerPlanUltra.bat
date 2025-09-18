@@ -38,6 +38,7 @@ powercfg -setacvalueindex scheme_current SUB_DISK fc95af4d-40e7-4b6d-835a-56d131
 
 rem # Dont restrict core boost
 powercfg -setacvalueindex scheme_current sub_processor PERFEPP 0
+powercfg -setacvalueindex scheme_current sub_processor PERFEPP1 0
 
 rem # Enable Turbo Boost (2 = Aggressive)
 powercfg -setacvalueindex scheme_current sub_processor PERFBOOSTMODE 2
