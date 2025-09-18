@@ -32,7 +32,9 @@ net start winmgmt
 
 PAUSE
 
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Executive" /v "AdditionalCriticalWorkerThreads" /t REG_DWORD /d "64" /f
+rem # LET WINDOWS DECIDE
+rem reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Executive" /v "AdditionalCriticalWorkerThreads" /f
+rem reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Executive" /v "AdditionalCriticalWorkerThreads" /t REG_DWORD /d "64" /f
 
 rem # Delayed Worker Threads
 rem # Threads in this queue have a lower priority and therefore a higher latency because they must compete with other processing for CPU time
