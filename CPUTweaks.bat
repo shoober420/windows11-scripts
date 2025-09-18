@@ -21,6 +21,8 @@ rem # Allow more I/O to queue in the storage subsystem
 
 rem # Value is determined by RAM size NOT thread or core count
 
+rem # Check CPU Frequency: Task Manager > Performance > CPU > Speed
+
 rem # powercfg requires WMI
 rem # Enable and start WMI
 
