@@ -76,15 +76,121 @@ rem # Values too low cause mouse glitches/skipping and unregistered keyboard pre
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\kbdclass\Parameters" /v "KeyboardReportBufferCount" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\mouclass\Parameters" /v "MouseReportBufferCount" /t REG_DWORD /d "1" /f
 
+setx MOUSE_RAW_INPUT "1" /M
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "MOUSE_RAW_INPUT" /t REG_SZ /d "1" /f
+
 rem # DataQueueSize
 rem # Mouse and keyboard buffer sizes
 rem # Values too low cause mouse glitches/skipping and unregistered keyboard presses
 rem # Values under 16 (0x00000016) require very good hardware
 
+@echo off
+
+
+
+echo.
+echo DataQueueSize
+echo Mouse and keyboard buffer sizes
+echo.
+echo 1. 0x00000016
+echo 2. 0x00000012
+echo 3. 0x00000008
+echo 4. 0x00000004
+echo 5. 0x00000002
+echo 6. 0x00000001
+echo 7. DEFAULT
+echo 8. SKIP
+echo C. Cancel
+echo.
+choice /c 12345678C /m "Choose an option :"
+
+if 9 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 8 EQU %ERRORLEVEL% (
+   call :zzkiiipheh
+) else if 7 EQU %ERRORLEVEL% (
+   call :qd
+) else if 6 EQU %ERRORLEVEL% (
+   call :q1
+) else if 5 EQU %ERRORLEVEL% (
+   call :q2
+) else if 4 EQU %ERRORLEVEL% (
+   call :q4
+) else if 3 EQU %ERRORLEVEL% (
+   call :q8
+) else if 2 EQU %ERRORLEVEL% (
+   call :q12
+) else if 1 EQU %ERRORLEVEL% (
+   call :q16
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:q16
+echo User chose 0x00000016
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\kbdclass\Parameters" /v "KeyboardDataQueueSize" /t REG_DWORD /d "0x00000016" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\mouclass\Parameters" /v "MouseDataQueueSize" /t REG_DWORD /d "0x00000016" /f
+
+goto :end
+
+:q12
+echo User chose 0x00000012
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\kbdclass\Parameters" /v "KeyboardDataQueueSize" /t REG_DWORD /d "0x00000012" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\mouclass\Parameters" /v "MouseDataQueueSize" /t REG_DWORD /d "0x00000012" /f
+
+goto :end
+
+:q8
+echo User chose 0x00000008
+
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\kbdclass\Parameters" /v "KeyboardDataQueueSize" /t REG_DWORD /d "0x00000008" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\mouclass\Parameters" /v "MouseDataQueueSize" /t REG_DWORD /d "0x00000008" /f
 
-setx MOUSE_RAW_INPUT "1" /M
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "MOUSE_RAW_INPUT" /t REG_SZ /d "1" /f
+goto :end
+
+:q4
+echo User chose 0x00000004
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\kbdclass\Parameters" /v "KeyboardDataQueueSize" /t REG_DWORD /d "0x00000004" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\mouclass\Parameters" /v "MouseDataQueueSize" /t REG_DWORD /d "0x00000004" /f
+
+goto :end
+
+:q2
+echo User chose 0x00000002
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\kbdclass\Parameters" /v "KeyboardDataQueueSize" /t REG_DWORD /d "0x00000002" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\mouclass\Parameters" /v "MouseDataQueueSize" /t REG_DWORD /d "0x00000002" /f
+
+goto :end
+
+:q1
+echo User chose 0x00000001
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\kbdclass\Parameters" /v "KeyboardDataQueueSize" /t REG_DWORD /d "0x00000001" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\mouclass\Parameters" /v "MouseDataQueueSize" /t REG_DWORD /d "0x00000001" /f
+
+goto :end
+
+:qd
+echo User chose DEFAULT
+
+reg delete "HKLM\SYSTEM\CurrentControlSet\Services\kbdclass\Parameters" /v "KeyboardDataQueueSize" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Services\mouclass\Parameters" /v "MouseDataQueueSize" /f
+
+goto :end
+
+:zzkiiipheh
+echo User chose SKIP
+
+goto :end
+
+:end
+
+
 
 PAUSE
