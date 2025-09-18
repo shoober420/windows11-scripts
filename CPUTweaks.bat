@@ -23,6 +23,8 @@ rem # Value is determined by RAM size NOT thread or core count
 
 rem # Check CPU Frequency: Task Manager > Performance > CPU > Speed
 
+rem # Check Core Parking: Resource Monitor > CPU > Right column see if CPU * has (Parked) next to it
+
 rem # powercfg requires WMI
 rem # Enable and start WMI
 
@@ -138,8 +140,8 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power" /v "DisableDynamicProcesso
 
 
 echo.
-echo 1. CPU Parking DISABLED
-echo 2. CPU Parking ENABLED
+echo 1. Core Parking DISABLED
+echo 2. Core Parking ENABLED
 echo 3. SKIP
 echo C. Cancel
 echo.
@@ -160,7 +162,7 @@ choice /c 123C /m "Choose an option :"
 goto :eof
 
 :cpupoff
-echo User chose CPU Parking DISABLED
+echo User chose Core Parking DISABLED
 
 rem # Disable Core Parking
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power" /v "CoreParkingDisabled" /t REG_DWORD /d "1" /f
@@ -175,7 +177,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power" /v "Class2InitialUnparkCou
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\Policy\Settings\Processor" /v "CpLatencyHintUnpark" /t REG_DWORD /d "100" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\Policy\Settings\Processor" /v "CpLatencyHintUnpark1" /t REG_DWORD /d "100" /f
 
-rem # Disable CPU Parking (fixes stuttering)
+rem # Disable Core Parking (fixes stuttering)
 reg add "HKLM\SYSTEM\ControlSet001\Control\Power\PowerSettings\54533251-82be-4824-96c1-47b60b740d00\0cc5b647-c1df-4637-891a-dec35c318583" /v "ValueMax" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\54533251-82be-4824-96c1-47b60b740d00\0cc5b647-c1df-4637-891a-dec35c318583" /v "ValueMax" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\ControlSet001\Control\Power\PowerSettings\54533251-82be-4824-96c1-47b60b740d00\0cc5b647-c1df-4637-891a-dec35c318583" /v "ValueMin" /t REG_DWORD /d "0" /f
@@ -192,7 +194,7 @@ powercfg /SETACVALUEINDEX SCHEME_CURRENT 54533251-82be-4824-96c1-47b60b740d00 0c
 goto :end
 
 :cpupon
-echo User chose CPU Parking ENABLED
+echo User chose Core Parking ENABLED
 
 rem # Enable Core Parking
 
@@ -207,7 +209,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power" /v "Class2InitialUnparkCou
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\Policy\Settings\Processor" /v "CpLatencyHintUnpark" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\Policy\Settings\Processor" /v "CpLatencyHintUnpark1" /t REG_DWORD /d "0" /f
 
-rem # Enable CPU Parking
+rem # Enable Core Parking
 reg add "HKLM\SYSTEM\ControlSet001\Control\Power\PowerSettings\54533251-82be-4824-96c1-47b60b740d00\0cc5b647-c1df-4637-891a-dec35c318583" /v "ValueMax" /t REG_DWORD /d "100" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\54533251-82be-4824-96c1-47b60b740d00\0cc5b647-c1df-4637-891a-dec35c318583" /v "ValueMax" /t REG_DWORD /d "100" /f
 reg add "HKLM\SYSTEM\ControlSet001\Control\Power\PowerSettings\54533251-82be-4824-96c1-47b60b740d00\0cc5b647-c1df-4637-891a-dec35c318583" /v "ValueMin" /t REG_DWORD /d "100" /f
