@@ -38,7 +38,10 @@ powercfg -setacvalueindex scheme_current SUB_DISK fc95af4d-40e7-4b6d-835a-56d131
 
 rem # Dont restrict core boost
 powercfg -setacvalueindex scheme_current sub_processor PERFEPP 0
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\Policy\Settings\Processor" /v "PerfEnergyPreference" /t REG_DWORD /d "0" /f
+
 powercfg -setacvalueindex scheme_current sub_processor PERFEPP1 0
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\Policy\Settings\Processor" /v "PerfEnergyPreference1" /t REG_DWORD /d "0" /f
 
 rem # Enable Turbo Boost (2 = Aggressive)
 powercfg -setacvalueindex scheme_current sub_processor PERFBOOSTMODE 2
