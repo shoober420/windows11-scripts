@@ -8,7 +8,12 @@ rem # Using Ultimate Performance plan causes CPU Utilization to be at 100% perce
 
 rem # powercfg /setactive *GUID*
 
-rem # DISABLES CORE PARKING
+rem # Enable and start WMI
+rem # Required by powercfg
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD /d "2" /f
+sc config winmgmt start= auto
+net start winmgmt
 
 PAUSE
 
