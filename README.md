@@ -850,6 +850,8 @@ TextFileAssociationsClassicNotepad.ps1 / TextFileAssociationsNotepad++.ps1 / Tex
 
 AMDGPU_Boost_Upscaling.bat
 
+LaunchResourceMonitor.bat
+
 # Credits
 - https://www.elevenforum.com/members/garlin.5387
 - https://www.elevenforum.com/members/csmc.38355
