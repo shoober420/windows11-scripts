@@ -13,6 +13,8 @@ rem # rem # https://notes.ponderworthy.com/additional-critical-worker-threads-in
 
 rem # https://github.com/CrackedStuffEZ
 
+rem # WinRE "Refresh your PC" will not remove tweaked Ultimate Performance power plan, you must load another power plan and delete the tweaked Ultimate Performance power plan to restore default power plan settings
+
 rem # AdditionalCriticalWorkerThreads value increases the number of critical worker threads created for a specified work queue
 
 rem # By increasing the value of this one, you can get more additional worker threads which will allow for more queued I/O in the storage subsystem
