@@ -12,6 +12,8 @@ rem # TESTING ONLY
 
 rem # !!! WARNING !!!
 
+rem # WinRE "Refresh your PC" will not remove tweaked Ultimate Performance power plan, you must load another power plan and delete the tweaked Ultimate Performance power plan to restore default power plan settings
+
 PAUSE
 
 rem # Reserve battery level
