@@ -4,6 +4,8 @@ rem # Use "powercfg /l" to show all power config plans
 
 rem # Use "powercfg -delete" to remove old and unused power config plans
 
+rem # Use "powercfg -queryprofile" to list active power plan settings
+
 rem # WinRE "Refresh your PC" will not remove tweaked Ultimate Performance power plan, you must load another power plan and delete the tweaked Ultimate Performance power plan to restore default power plan settings
 
 rem # Using Ultimate Performance plan causes CPU Utilization to be at 100% percent at all times, this is normal
