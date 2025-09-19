@@ -42,7 +42,7 @@ if not exist C:\Windows\System32\wbem\WMIC.exe (
 
 rem # 0 = FSO: ON / FSE: ON
 rem # 2 = FSO: OFF / FSE: ON
-reg add "HKCU\System\GameConfigStore" /v "GameDVR_FSEBehavior" /t REG_DWORD /d "2" /f
+rem reg add "HKCU\System\GameConfigStore" /v "GameDVR_FSEBehavior" /t REG_DWORD /d "2" /f
 reg add "HKCU\System\GameConfigStore" /v "GameDVR_FSEBehaviorMode" /t REG_DWORD /d "2" /f
 
 rem # Honor User adjusted FSE value
