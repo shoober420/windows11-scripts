@@ -12,7 +12,10 @@ rem # 4.2GHZ = 4200MHZ
 
 PAUSE
 
-powercfg -setacvalueindex SCHEME_CURRENT 54533251-82be-4824-96c1-47b60b740d00 75b0ae3f-bce0-45a7-8c89-c9611c25e100 4200
+echo "Enter CPU Max Turbo Speed in MHz"
+set /p MHz=""
+
+powercfg -setacvalueindex SCHEME_CURRENT 54533251-82be-4824-96c1-47b60b740d00 75b0ae3f-bce0-45a7-8c89-c9611c25e100 %MHz%
 
 PAUSE
 
