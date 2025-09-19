@@ -15,10 +15,16 @@ PAUSE
 echo "Enter CPU Max Turbo Speed in MHz"
 set /p MHz=""
 
-rem # Maximum processor frequency (PROCFREQMAX)
+rem # Maximum processor frequency
+
+powercfg -setacvalueindex scheme_current SUB_PROCESSOR PROCFREQMAX %MHz%
+
 powercfg -setacvalueindex SCHEME_CURRENT 54533251-82be-4824-96c1-47b60b740d00 75b0ae3f-bce0-45a7-8c89-c9611c25e100 %MHz%
 
-rem # Maximum processor frequency for Processor Power Efficiency Class 1 (PROCFREQMAX1)
+rem # Maximum processor frequency for Processor Power Efficiency Class 1
+
+powercfg -setacvalueindex scheme_current SUB_PROCESSOR PROCFREQMAX1 %MHz%
+
 powercfg -setacvalueindex SCHEME_CURRENT 54533251-82be-4824-96c1-47b60b740d00 75b0ae3f-bce0-45a7-8c89-c9611c25e101 %MHz%
 
 
