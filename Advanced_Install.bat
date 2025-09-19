@@ -183,9 +183,6 @@ cd "%~dp0"
 call CPU_Mitigations.bat
 cd "%~dp0"
 
-ECHO R | powershell.exe ./DisableSoundEnhancements.ps1
-cd "%~dp0"
-
 
 
 @echo off
@@ -742,6 +739,7 @@ cd "%~dp0"
 
 ECHO R | powershell.exe ./DisablePowerManagement.ps1
 
+ECHO R | powershell.exe ./DisableSoundEnhancements.ps1
 cd "%~dp0"
 
 
