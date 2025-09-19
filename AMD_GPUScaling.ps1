@@ -1,5 +1,9 @@
 # AMD Radeon GPU Scaling
 
+# GPU Scaling increases latency and reduces performance
+
+# GPU SCALING MIGHT RESTRICT HIGH REFRESH RATES
+
 Write-Output "!!! REBOOT REQUIRED !!!"
 
 $Monitor_List = @(
