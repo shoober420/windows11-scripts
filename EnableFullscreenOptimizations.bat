@@ -38,13 +38,14 @@ rem # Enhanced Fullscreen Exclusive (EFSE)
 rem # Desktop Screen Experience (DSE) = scenario where you're not strictly in a fullscreen game but may still be capturing or recording
 rem # Multiplane Overlay (MPO)
 
-rem # 0 = FSO: ON / FSE: ON
-rem # 2 = FSO: OFF / FSE: ON
+rem # Enable FSO and EFSE
+rem # 0 = FSO/EFSE: ON / FSE: ON
+rem # 2 = FSO/EFSE: OFF / FSE: ON
 reg add "HKCU\System\GameConfigStore" /v "GameDVR_FSEBehavior" /t REG_DWORD /d "0" /f
 
 rem # 0 = Applies GameDVR_FSEBehavior to games marked as "High Impact"
 rem # 1 = Applies GameDVR_FSEBehavior to all fullscreen games
-rem # 2 = DISABLE
+rem # 2 = DISABLE FSO/EFSE
 reg add "HKCU\System\GameConfigStore" /v "GameDVR_FSEBehaviorMode" /t REG_DWORD /d "1" /f
 
 rem # Honor User adjusted FSE value
