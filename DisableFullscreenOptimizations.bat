@@ -1,4 +1,4 @@
-rem # Disable Fullscreen Optimizations (FSO)
+rem # Disable FullScreen Optimizations (FSO)
 
 rem # https://learn.microsoft.com/en-us/answers/questions/3741077/fullscreen-optimizations-windows-registry
 
@@ -17,10 +17,10 @@ rem # https://github.com/GameTechDev/PresentMon
 
 rem # https://wiki.special-k.info/Presentation_Model
 
-rem # Fullscreen Exclusive (FSE)
-rem # Enhanced Fullscreen Exclusive (EFSE)
+rem # FullScreen Exclusive (FSE)
+rem # Enhanced FullScreen Exclusive (EFSE)
 rem # Desktop Screen Experience (DSE) = scenario where you're not strictly in a fullscreen game but may still be capturing or recording
-rem # Multiplane Overlay (MPO)
+rem # MultiPlane Overlay (MPO)
 
 
 
@@ -40,10 +40,12 @@ if not exist C:\Windows\System32\wbem\WMIC.exe (
 
 
 rem # Disable FSO and EFSE
+rem # FullScreen Exclusive Behavior
 rem # 0 = FSO/EFSE: ON / FSE: ON
 rem # 2 = FSO/EFSE: OFF / FSE: ON
 reg add "HKCU\System\GameConfigStore" /v "GameDVR_FSEBehavior" /t REG_DWORD /d "2" /f
 
+rem # FullScreen Exclusive Behavior Mode
 rem # 0 = Applies GameDVR_FSEBehavior to games marked as "High Impact"
 rem # 1 = Applies GameDVR_FSEBehavior to all fullscreen games
 rem # 2 = DISABLE FSO/EFSE
@@ -54,7 +56,7 @@ reg add "HKCU\System\GameConfigStore" /v "GameDVR_HonorUserFSEBehaviorMode" /t R
 
 
 
-rem # Disable Enhanced Fullscreen Exclusive (EFSE)
+rem # Disable Enhanced FullScreen Exclusive (EFSE)
 
 rem # Bit 0: Toggles EFSE mode support (1 = ENABLED / 0 = DISABLED)
 rem # Bit 1: Toggles DXGI swap chain flip model support (lower latency when enabled)
