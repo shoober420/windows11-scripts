@@ -46,7 +46,7 @@ reg add "HKCU\System\GameConfigStore" /v "GameDVR_FSEBehavior" /t REG_DWORD /d "
 
 rem # 0 = Applies GameDVR_FSEBehavior to games marked as "High Impact"
 rem # 1 = Applies GameDVR_FSEBehavior to all fullscreen games
-rem # 2 = DISABLE
+rem # 2 = DISABLE FSO/EFSE
 reg add "HKCU\System\GameConfigStore" /v "GameDVR_FSEBehaviorMode" /t REG_DWORD /d "2" /f
 
 rem # Honor User adjusted FSE value
