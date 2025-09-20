@@ -35,7 +35,7 @@ if not exist C:\Windows\System32\wbem\WMIC.exe (
 
 rem # Fullscreen Exclusive (FSE)
 rem # Enhanced Fullscreen Exclusive (EFSE)
-rem # Desktop Screen Experience (DSE)
+rem # Desktop Screen Experience (DSE) = scenario where you're not strictly in a fullscreen game but may still be capturing or recording
 rem # Multiplane Overlay (MPO)
 
 rem # 0 = FSO: ON / FSE: ON
