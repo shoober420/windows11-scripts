@@ -66,7 +66,7 @@ rem # "Hardware Composed: Independent Flip" = rendering buffer is directly scann
 
 rem # "Hardware: Legacy Flip" used when FSO is DISABLED
 
-rem # Enable Multiplane Overlay (MPO)
+rem # Enable MultiPlane Overlay (MPO)
 reg delete "HKLM\SYSTEM" /v "OverlayTestMode" /f
 reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "OverlayTestMode" /f
 reg delete "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "OverlayTestMode" /f
@@ -233,7 +233,7 @@ echo User chose HDR ON (AutoHDR=1 / SwapEffectUpgrade=1)
 
 
 
-rem # Enable Enhanced Fullscreen Exclusive (EFSE)
+rem # Enable Enhanced FullScreen Exclusive (EFSE)
 
 rem # Bit 0: Toggles EFSE mode support (1 = ENABLED / 0 = DISABLED)
 rem # Bit 1: Toggles DXGI swap chain flip model support (lower latency when enabled)
@@ -266,7 +266,7 @@ echo User chose HDR OFF (AutoHDR=0 / SwapEffectUpgrade=1)
 
 
 
-rem # Enable Enhanced Fullscreen Exclusive (EFSE)
+rem # Enable Enhanced FullScreen Exclusive (EFSE)
 
 rem # Bit 0: Toggles EFSE mode support (1 = ENABLED / 0 = DISABLED)
 rem # Bit 1: Toggles DXGI swap chain flip model support (lower latency when enabled)
