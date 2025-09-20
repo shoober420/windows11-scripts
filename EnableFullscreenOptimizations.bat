@@ -51,15 +51,6 @@ reg add "HKCU\System\GameConfigStore" /v "GameDVR_FSEBehaviorMode" /t REG_DWORD 
 rem # Honor User adjusted FSE value
 reg add "HKCU\System\GameConfigStore" /v "GameDVR_HonorUserFSEBehaviorMode" /t REG_DWORD /d "1" /f
 
-
-
-rem # Enable Extra FSO features
-rem # Enable Color Management
-rem # Enable GameDVR recording in true FSE
-rem # 0 = Enable Extra FSO Features
-rem # 1 = Disable Extra FSO Features
-reg add "HKCU\System\GameConfigStore" /v "GameDVR_DXGIHonorFSEWindowsCompatible" /t REG_DWORD /d "0" /f
-
 reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "DisableFullScreenOptimizations" /f
 reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "FORCE_DISABLE_FULL_SCREEN_OPTIMIZATIONS" /f
 rem reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "DisableFullScreenOptimizations" /t REG_DWORD /d "0" /f
@@ -81,6 +72,64 @@ reg delete "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "OverlayTestMode" /f
 
 
 @echo off
+
+
+
+echo.
+echo GameDVR_DXGIHonorFSEWindowsCompatible (Extra FSO Features)
+echo Color Management and GameDVR recording in true FSE
+echo.
+echo 1. Enable Extra FSO Features
+echo 2. Disable Extra FSO Features
+echo 3. SKIP
+echo C. Cancel
+echo.
+choice /c 123C /m "Choose an option :"
+
+if 4 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 3 EQU %ERRORLEVEL% (
+   call :szzccipp
+) else if 2 EQU %ERRORLEVEL% (
+   call :exfsooff
+) else if 1 EQU %ERRORLEVEL% (
+   call :exfsoon
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:exfsoon
+echo User chose Enable Extra FSO Features
+
+rem # Enable Extra FSO features
+rem # Enable Color Management
+rem # Enable GameDVR recording in true FSE
+rem # 0 = Enable Extra FSO Features
+rem # 1 = Disable Extra FSO Features
+reg add "HKCU\System\GameConfigStore" /v "GameDVR_DXGIHonorFSEWindowsCompatible" /t REG_DWORD /d "0" /f
+
+goto :end
+
+:exfsooff
+echo User chose Disable Extra FSO Features
+
+rem # Disable Extra FSO features
+rem # Disable Color Management
+rem # Disable GameDVR recording in true FSE
+rem # 0 = Enable Extra FSO Features
+rem # 1 = Disable Extra FSO Features
+reg add "HKCU\System\GameConfigStore" /v "GameDVR_DXGIHonorFSEWindowsCompatible" /t REG_DWORD /d "1" /f
+
+goto :end
+
+:szzccipp
+echo User chose SKIP
+
+goto :end
+
+:end
 
 
 
