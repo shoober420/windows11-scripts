@@ -60,7 +60,8 @@ reg add "HKCU\System\GameConfigStore" /v "GameDVR_DXGIHonorFSEWindowsCompatible"
 
 rem # Enable GameDVR Overlay
 rem # GameDVR uses system resources for recording and broadcasting while in DSE
-rem # ON = 0 / OFF = 2
+rem # ON = 0 / Unrestricted resource usage for capturing
+rem # OFF = 2 / Limits resource usage for capturing
 reg add "HKCU\System\GameConfigStore" /v "GameDVR_DSEBehavior" /t REG_DWORD /d "0" /f
 
 rem reg add "HKCU\System\GameConfigStore" /v "GameDVR_DSEBehaviorMode" /t REG_DWORD /d "1" /f
