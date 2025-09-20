@@ -51,7 +51,7 @@ rem reg delete "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "MaxD3DFeatureLevel" /f
 rem # Disable Non Draw List Rendering
 rem # Non Draw List rendering = Immediate mode (LEGACY)
 rem # Draw List Rendering = Retained mode (MODERN)
-rem # jdallmann = 1
+rem # jdallmann / alufena = 1
 rem # tweakradje = 0
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisallowNonDrawListRendering" /t REG_DWORD /d "1" /f
 reg add "HKLM\SOFTWARE\WOW6432Node\Microsoft\WINDOWS\DWM" /v "DisallowNonDrawListRendering" /t REG_DWORD /d "1" /f
