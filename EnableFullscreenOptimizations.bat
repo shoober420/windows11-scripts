@@ -136,8 +136,8 @@ goto :end
 echo.
 echo GameDVR_DSEBehavior (Desktop Screen Experience Behavior)
 echo.
-echo 1. DSE ON = 0 / Unrestricted resource usage for capturing
-echo 2. DSE OFF = 2 / Limits resource usage for capturing
+echo 1. DSE ON: Unrestricted resource usage for capturing
+echo 2. DSE OFF: Limits resource usage for capturing
 echo 3. SKIP
 echo C. Cancel
 echo.
@@ -158,7 +158,7 @@ if 4 EQU %ERRORLEVEL% (
 goto :eof
 
 :dseon
-echo User chose DSE ON = 0 / Unrestricted resource usage for capturing
+echo User chose DSE ON: Unrestricted resource usage for capturing
 
 rem # Controls resource usage for Desktop Screen Experience (DSE)
 rem # GameDVR uses system resources for recording and broadcasting while in DSE
@@ -174,7 +174,7 @@ rem reg add "HKCU\System\GameConfigStore" /v "GameDVR_HonorUserDSEBehaviorMode" 
 goto :end
 
 :dseoff
-echo User chose DSE OFF = 2 / Limits resource usage for capturing
+echo User chose DSE OFF: Limits resource usage for capturing
 
 rem # Controls resource usage for Desktop Screen Experience (DSE)
 rem # GameDVR uses system resources for recording and broadcasting while in DSE
