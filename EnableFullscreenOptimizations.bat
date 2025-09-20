@@ -57,7 +57,7 @@ rem # Enable Extra FSO features
 rem # Enable Color Management
 rem # Enable GameDVR recording in true FSE
 rem # 0 = Enable Extra FSO Features
-rem # 1 = Disable FSO Features
+rem # 1 = Disable Extra FSO Features
 reg add "HKCU\System\GameConfigStore" /v "GameDVR_DXGIHonorFSEWindowsCompatible" /t REG_DWORD /d "0" /f
 
 
