@@ -56,14 +56,15 @@ rem # tweakradje = 0
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisallowNonDrawListRendering" /t REG_DWORD /d "1" /f
 reg add "HKLM\SOFTWARE\WOW6432Node\Microsoft\WINDOWS\DWM" /v "DisallowNonDrawListRendering" /t REG_DWORD /d "1" /f
 
-rem # Enable Draw List Caching
-rem # Kizzimo / blurbusters = 1
+rem # Disable Draw List Caching
+rem # Kizzimo / alufena / blurbusters = 1
 rem # tweakradje = 0
-reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableDrawListCaching" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableDrawListCaching" /t REG_DWORD /d "1" /f
 
 rem # Disable DWM Effects Caching
+rem # alufena = 0
 rem # Kizzimo / blurbusters = 1
-reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnableEffectCaching" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnableEffectCaching" /t REG_DWORD /d "0" /f
 
 rem # Used for VR
 rem # jdallmann / tweakradje = 1
@@ -71,9 +72,9 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableHologramCompositor" /t 
 
 rem # Disable CPU Clipping
 rem # Process is intentionally limited in its CPU usage to prevent it from consuming excessive resources
-rem # Kizzimo / jdallmann = 1
+rem # Kizzimo / jdallmann / alufena = 1
 rem # tweakradje = 0
-reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnableCpuClipping" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnableCpuClipping" /t REG_DWORD /d "1" /f
 
 rem # Disable DWM Back Buffer (Double Buffering)
 rem # Offscreen buffer (back buffer) is drawn and then composited to the screen (front buffer)
@@ -81,8 +82,10 @@ rem # This process is crucial for visual effects like transparency and animation
 rem # tweakradje = 1
 rem # alufena = 0
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnableDrawToBackbuffer" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\Dwm" /v "EnableDrawToBackbuffer" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm\Scene" /v "EnableDrawToBackbuffer" /t REG_DWORD /d "0" /f
 
+rem # alufena = 0
 rem # tweakradje = 1
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnableImageProcessing" /t REG_DWORD /d "0" /f
 
@@ -94,6 +97,7 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnableShadow" /t REG_DWORD /d 
 rem # WARP (Windows Advanced Rasterization Platform)
 rem # Software rendering if hardware acceleration isn't available
 rem # Kizzimo / tweakradje / blurbusters = 1
+rem # alufena = 0
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "UseHWDrawListEntriesOnWARP" /t REG_DWORD /d "1" /f
 
 rem # https://learn.microsoft.com/en-us/windows-hardware/drivers/display/what-s-new-for-prior-wddm-2-x-versions#wddm-26
@@ -104,6 +108,7 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "SuperWetEnabled" /t REG_DWORD 
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "SuperWetExtensionTimeMicroseconds" /t REG_DWORD /d "0" /f
 
+rem # alufena = 0
 rem # tweakradje = 1
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "ImageProcessing8bit" /t REG_DWORD /d "0" /f
 
@@ -123,12 +128,12 @@ reg add "HKLM\SOFTWARE\WOW6432Node\Microsoft\WINDOWS\DWM" /v "DebugFailFast" /t 
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "MarshalAllDebugInfo" /t REG_DWORD /d "0" /f
 
-rem # Kizzimo / jdallmann = 1
+rem # Kizzimo / jdallmann / alufena = 1
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableDeviceBitmaps" /t REG_DWORD /d "1" /f
 
 rem # Disable Locking Memory
 rem # Memory Locking guarantees that a process's memory remains readily accessible, preventing delays caused by paging
-rem # jdallmann = 1
+rem # jdallmann / alufena = 1
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableLockingMemory" /t REG_DWORD /d "1" /f
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableProjectedShadowsRendering" /t REG_DWORD /d "1" /f
@@ -142,7 +147,7 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "OneCoreNoDWMRawGameController"
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "BackdropBlurCachingThrottleMs" /t REG_DWORD /d "0" /f
 
 rem # jdallmann / Kizzimo = 1
-rem # tweakradje = 0
+rem # tweakradje / alufena = 0
 rem # Used for visual effects
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "ResampleInLinearSpace" /t REG_DWORD /d "0" /f
 
@@ -156,11 +161,13 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "AnimationsShiftKey" /t REG_DWO
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnableCommonSuperSets" /t REG_DWORD /d "1" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnableDesktopOverlays" /t REG_DWORD /d "0" /f
 
+rem # alufena = 0
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnableFrontBufferRenderChecks" /t REG_DWORD /d "0" /f
 
 rem # Disable MegaRects
 rem # Identifies rectangular areas (rects) that need to be updated and only redraws those
 rem # Kizzimo / blurbusters = 1
+rem # alufena = 0
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnableMegaRects" /t REG_DWORD /d "0" /f
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "MegaRectSize" /t REG_DWORD /d "0" /f
@@ -179,6 +186,7 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "OverlayDisqualifyInterval" /t 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "OverlayDisqualifyCount" /t REG_DWORD /d "0" /f
 
 rem # Kizzimo / blurbusters = 1
+rem # alufena = 0
 rem reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "ParallelModePolicy" /t REG_DWORD /d "1" /f
 rem reg delete "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "ParallelModePolicy" /f
 
@@ -238,6 +246,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "DWM_TRIPLE_BUFFER" /t REG_SZ /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "DWM_BUFFER_COUNT" /t REG_DWORD /d "1" /f
 
+rem # alufena = 0
 rem # kizzimo = 0x99999999
 reg add "HKLM\SOFTWARE\Microsoft\Windows\DWM\Schedule" /v "FrameDisplayBaseNegOffsetNS" /t REG_DWORD /d "0" /f
 
@@ -272,15 +281,15 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\DWM\Schedule" /v "IgnoreNodeLocked" /t 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\DWM\Schedule" /v "IgnoreSP" /t REG_DWORD /d "1" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\DWM\Schedule" /v "WindowedGsyncGeforceFlag" /t REG_DWORD /d "0" /f
 
-reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisallowComposition" /t REG_DWORD /d "0" /f
-
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "BufferAgingTimeout" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "CpuClipAASinkEnableIntermediates" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "CpuClipAASinkEnableOcclusion" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "CpuClipAASinkEnableRender" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "CpuClipFlatteningTolerance" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableDComp" /t REG_DWORD /d "1" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableHardwareComposition" /t REG_DWORD /d "1" /f
+
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableHardwareComposition" /t REG_DWORD /d "0" /f
+
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DiscardSurfaceOnMinimize" /t REG_DWORD /d "1" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnableAcrylicBlur" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "AlwaysOffscreenComposition" /t REG_DWORD /d "0" /f
@@ -292,8 +301,11 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "MaxQueuedFrames" /t REG_DWORD 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "RetryFrameOnDrop" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "ShowDirtyRegions" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "UseCopyOnPresent" /t REG_DWORD /d "1" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "UseLegacyDisplayFrameBuffer" /t REG_DWORD /d "1" /f
+
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "UseLegacyDisplayFrameBuffer" /t REG_DWORD /d "0" /f
+
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "UseMachineCheck" /t REG_DWORD /d "0" /f
+
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "UseStaticComposition" /t REG_DWORD /d "1" /f
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\DWM\ExtendedComposition" /v "EnableColorSeparation" /t REG_DWORD /d "0" /f
@@ -348,6 +360,8 @@ reg add "HKCU\Software\Microsoft\Windows\DWM" /v "CompositionPolicy" /t REG_DWOR
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm\ExtendedComposition" /v "CompositionPolicy" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DWM" /v "CompositionPolicy" /t REG_DWORD /d "0" /f
 
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisallowComposition" /t REG_DWORD /d "0" /f
+
 reg add "HKLM\Software\Microsoft\Windows\DWM" /v "DisableDWM" /t REG_DWORD /d "0" /f
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "DisableDWM" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm\ExtendedComposition" /v "DisableDWM" /t REG_DWORD /d "0" /f
@@ -378,6 +392,8 @@ reg add "HKLM\Software\Microsoft\Windows\DWM" /v "CompositionPolicy" /t REG_DWOR
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "CompositionPolicy" /t REG_DWORD /d "1" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm\ExtendedComposition" /v "CompositionPolicy" /t REG_DWORD /d "1" /f
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DWM" /v "CompositionPolicy" /t REG_DWORD /d "1" /f
+
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisallowComposition" /t REG_DWORD /d "1" /f
 
 reg add "HKLM\Software\Microsoft\Windows\DWM" /v "DisableDWM" /t REG_DWORD /d "1" /f
 reg add "HKCU\Software\Microsoft\Windows\DWM" /v "DisableDWM" /t REG_DWORD /d "1" /f
