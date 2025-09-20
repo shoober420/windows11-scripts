@@ -78,11 +78,11 @@ reg delete "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "OverlayTestMode" /f
 
 
 echo.
-echo GameDVR_DXGIHonorFSEWindowsCompatible (Extra FSO Features)
+echo GameDVR_DXGIHonorFSEWindowsCompatible (FSO and Extra FSO Features)
 echo Color Management and GameDVR recording in true FSE
 echo.
-echo 1. Enable Extra FSO Features (DECREASES FPS)
-echo 2. Disable Extra FSO Features
+echo 1. Enable FSO and Extra FSO Features (DECREASES FPS)
+echo 2. Disable FSO and Extra FSO Features
 echo 3. SKIP
 echo C. Cancel
 echo.
@@ -103,26 +103,28 @@ if 4 EQU %ERRORLEVEL% (
 goto :eof
 
 :exfsoon
-echo User chose Enable Extra FSO Features (DECREASES FPS)
+echo User chose Enable FSO and Extra FSO Features (DECREASES FPS)
 
+rem # Enable FSO
 rem # Enable Extra FSO features
 rem # Enable Color Management
 rem # Enable GameDVR recording in true FSE
 rem # DECREASES FPS
-rem # 0 = Enable Extra FSO Features
-rem # 1 = Disable Extra FSO Features
+rem # 0 = Enable FSO and Extra FSO Features
+rem # 1 = Disable FSO and Extra FSO Features 
 reg add "HKCU\System\GameConfigStore" /v "GameDVR_DXGIHonorFSEWindowsCompatible" /t REG_DWORD /d "0" /f
 
 goto :end
 
 :exfsooff
-echo User chose Disable Extra FSO Features
+echo User chose Disable FSO and Extra FSO Features
 
+rem # Disable FSO
 rem # Disable Extra FSO features
 rem # Disable Color Management
 rem # Disable GameDVR recording in true FSE
-rem # 0 = Enable Extra FSO Features
-rem # 1 = Disable Extra FSO Features
+rem # 0 = Enable FSO and Extra FSO Features
+rem # 1 = Disable FSO and Extra FSO Features
 reg add "HKCU\System\GameConfigStore" /v "GameDVR_DXGIHonorFSEWindowsCompatible" /t REG_DWORD /d "1" /f
 
 goto :end
