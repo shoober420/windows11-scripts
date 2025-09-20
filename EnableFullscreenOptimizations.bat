@@ -68,7 +68,7 @@ reg add "HKCU\System\GameConfigStore" /v "GameDVR_DSEBehavior" /t REG_DWORD /d "
 rem reg add "HKCU\System\GameConfigStore" /v "GameDVR_DSEBehaviorMode" /t REG_DWORD /d "1" /f
 
 rem # Honor User adjusted DSE value
-reg add "HKCU\System\GameConfigStore" /v "GameDVR_HonorUserDSEBehaviorMode" /t REG_DWORD /d "1" /f
+rem reg add "HKCU\System\GameConfigStore" /v "GameDVR_HonorUserDSEBehaviorMode" /t REG_DWORD /d "1" /f
 
 reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "DisableFullScreenOptimizations" /f
 reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "FORCE_DISABLE_FULL_SCREEN_OPTIMIZATIONS" /f
