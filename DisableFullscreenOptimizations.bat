@@ -39,9 +39,9 @@ if not exist C:\Windows\System32\wbem\WMIC.exe (
 )
 
 
-
-rem # 0 = FSO: ON / FSE: ON
-rem # 2 = FSO: OFF / FSE: ON
+rem # Disable FSO and EFSE
+rem # 0 = FSO/EFSE: ON / FSE: ON
+rem # 2 = FSO/EFSE: OFF / FSE: ON
 reg add "HKCU\System\GameConfigStore" /v "GameDVR_FSEBehavior" /t REG_DWORD /d "2" /f
 
 rem # 0 = Applies GameDVR_FSEBehavior to games marked as "High Impact"
