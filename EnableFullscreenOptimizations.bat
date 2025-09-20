@@ -60,19 +60,6 @@ rem # 0 = Enable Extra FSO Features
 rem # 1 = Disable Extra FSO Features
 reg add "HKCU\System\GameConfigStore" /v "GameDVR_DXGIHonorFSEWindowsCompatible" /t REG_DWORD /d "0" /f
 
-
-
-rem # Controls resource usage for Desktop Screen Experience (DSE)
-rem # GameDVR uses system resources for recording and broadcasting while in DSE
-rem # ON = 0 / Unrestricted resource usage for capturing
-rem # OFF = 2 / Limits resource usage for capturing
-reg add "HKCU\System\GameConfigStore" /v "GameDVR_DSEBehavior" /t REG_DWORD /d "0" /f
-
-rem reg add "HKCU\System\GameConfigStore" /v "GameDVR_DSEBehaviorMode" /t REG_DWORD /d "1" /f
-
-rem # Honor User adjusted DSE value
-rem reg add "HKCU\System\GameConfigStore" /v "GameDVR_HonorUserDSEBehaviorMode" /t REG_DWORD /d "1" /f
-
 reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "DisableFullScreenOptimizations" /f
 reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "FORCE_DISABLE_FULL_SCREEN_OPTIMIZATIONS" /f
 rem reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "DisableFullScreenOptimizations" /t REG_DWORD /d "0" /f
@@ -94,6 +81,75 @@ reg delete "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "OverlayTestMode" /f
 
 
 @echo off
+
+
+
+echo.
+echo GameDVR_DSEBehavior (Desktop Screen Experience Behavior)
+echo.
+echo 1. DSE ON = 0 / Unrestricted resource usage for capturing
+echo 2. DSE OFF = 2 / Limits resource usage for capturing
+echo 3. SKIP
+echo C. Cancel
+echo.
+choice /c 123C /m "Choose an option :"
+
+if 4 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 3 EQU %ERRORLEVEL% (
+   call :szccipp
+) else if 2 EQU %ERRORLEVEL% (
+   call :dseoff
+) else if 1 EQU %ERRORLEVEL% (
+   call :dseon
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:dseon
+echo User chose DSE ON = 0 / Unrestricted resource usage for capturing
+
+rem # Controls resource usage for Desktop Screen Experience (DSE)
+rem # GameDVR uses system resources for recording and broadcasting while in DSE
+rem # DSE ON = 0 / Unrestricted resource usage for capturing
+rem # DSE OFF = 2 / Limits resource usage for capturing
+reg add "HKCU\System\GameConfigStore" /v "GameDVR_DSEBehavior" /t REG_DWORD /d "0" /f
+
+rem reg add "HKCU\System\GameConfigStore" /v "GameDVR_DSEBehaviorMode" /t REG_DWORD /d "1" /f
+
+rem # Honor User adjusted DSE value
+rem reg add "HKCU\System\GameConfigStore" /v "GameDVR_HonorUserDSEBehaviorMode" /t REG_DWORD /d "1" /f
+
+goto :end
+
+:dseoff
+echo User chose DSE OFF = 2 / Limits resource usage for capturing
+
+rem # Controls resource usage for Desktop Screen Experience (DSE)
+rem # GameDVR uses system resources for recording and broadcasting while in DSE
+rem # DSE ON = 0 / Unrestricted resource usage for capturing
+rem # DSE OFF = 2 / Limits resource usage for capturing
+reg add "HKCU\System\GameConfigStore" /v "GameDVR_DSEBehavior" /t REG_DWORD /d "2" /f
+
+rem reg add "HKCU\System\GameConfigStore" /v "GameDVR_DSEBehaviorMode" /t REG_DWORD /d "2" /f
+
+rem # Honor User adjusted DSE value
+rem reg add "HKCU\System\GameConfigStore" /v "GameDVR_HonorUserDSEBehaviorMode" /t REG_DWORD /d "1" /f
+
+goto :end
+
+:szccipp
+echo User chose SKIP
+
+goto :end
+
+:end
+
+
+
+
 
 
 
