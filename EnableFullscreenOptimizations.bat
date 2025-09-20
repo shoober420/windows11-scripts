@@ -81,8 +81,9 @@ echo.
 echo GameDVR_DXGIHonorFSEWindowsCompatible (Extra FSO Features)
 echo Color Management and GameDVR recording in true FSE
 echo MIGHT BE NEEDED FOR MPO
+echo DECREASES FPS
 echo.
-echo 1. Enable Extra FSO Features (RECOMMENDED)
+echo 1. Enable Extra FSO Features (RECOMMENDED) (DECREASES FPS)
 echo 2. Disable Extra FSO Features
 echo 3. SKIP
 echo C. Cancel
@@ -104,12 +105,13 @@ if 4 EQU %ERRORLEVEL% (
 goto :eof
 
 :exfsoon
-echo User chose Enable Extra FSO Features (RECOMMENDED)
+echo User chose Enable Extra FSO Features (RECOMMENDED) (DECREASES FPS)
 
 rem # Enable Extra FSO features
 rem # Enable Color Management
 rem # Enable GameDVR recording in true FSE
 rem # MIGHT BE NEEDED FOR MPO
+rem # DECREASES FPS
 rem # 0 = Enable Extra FSO Features
 rem # 1 = Disable Extra FSO Features
 reg add "HKCU\System\GameConfigStore" /v "GameDVR_DXGIHonorFSEWindowsCompatible" /t REG_DWORD /d "0" /f
