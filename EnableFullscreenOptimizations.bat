@@ -63,7 +63,7 @@ rem # GameDVR uses system resources for recording and broadcasting while in DSE
 rem # ON = 0 / OFF = 2
 reg add "HKCU\System\GameConfigStore" /v "GameDVR_DSEBehavior" /t REG_DWORD /d "0" /f
 
-rem reg add "HKCU\System\GameConfigStore" /v "GameDVR_DSEBehaviorMode" /t REG_DWORD /d "0" /f
+rem reg add "HKCU\System\GameConfigStore" /v "GameDVR_DSEBehaviorMode" /t REG_DWORD /d "1" /f
 
 rem # Honor User adjusted DSE value
 reg add "HKCU\System\GameConfigStore" /v "GameDVR_HonorUserDSEBehaviorMode" /t REG_DWORD /d "1" /f
