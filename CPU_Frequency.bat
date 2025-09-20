@@ -12,8 +12,7 @@ rem # 4.2GHZ = 4200MHZ
 
 PAUSE
 
-echo "Enter CPU Max Turbo Speed in MHz"
-set /p MHz=""
+set /p MHz=""Enter CPU Max Turbo Speed in MHz: "
 
 rem # Maximum processor frequency
 
