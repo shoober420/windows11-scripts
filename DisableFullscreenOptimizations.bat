@@ -19,7 +19,7 @@ rem # https://wiki.special-k.info/Presentation_Model
 
 rem # Fullscreen Exclusive (FSE)
 rem # Enhanced Fullscreen Exclusive (EFSE)
-rem # Desktop Screen Experience (DSE) = scenario where you're not strictly in a fullscreen game but mat still be capturing or recording
+rem # Desktop Screen Experience (DSE) = scenario where you're not strictly in a fullscreen game but may still be capturing or recording
 rem # Multiplane Overlay (MPO)
 
 
