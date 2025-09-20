@@ -1,4 +1,4 @@
-rem # Enable Fullscreen Optimizations (FSO)
+rem # Enable FullScreen Optimizations (FSO)
 
 rem # https://learn.microsoft.com/en-us/answers/questions/3741077/fullscreen-optimizations-windows-registry?forum=windows-all&referrer=answers
 
@@ -33,16 +33,18 @@ if not exist C:\Windows\System32\wbem\WMIC.exe (
 
 
 
-rem # Fullscreen Exclusive (FSE)
-rem # Enhanced Fullscreen Exclusive (EFSE)
+rem # FullScreen Exclusive (FSE)
+rem # Enhanced FullScreen Exclusive (EFSE)
 rem # Desktop Screen Experience (DSE) = scenario where you're not strictly in a fullscreen game but may still be capturing or recording
-rem # Multiplane Overlay (MPO)
+rem # MultiPlane Overlay (MPO)
 
 rem # Enable FSO and EFSE
+rem # FullScreen Exclusive Behavior
 rem # 0 = FSO/EFSE: ON / FSE: ON
 rem # 2 = FSO/EFSE: OFF / FSE: ON
 reg add "HKCU\System\GameConfigStore" /v "GameDVR_FSEBehavior" /t REG_DWORD /d "0" /f
 
+rem # FullScreen Exclusive Behavior Mode
 rem # 0 = Applies GameDVR_FSEBehavior to games marked as "High Impact"
 rem # 1 = Applies GameDVR_FSEBehavior to all fullscreen games
 rem # 2 = DISABLE FSO/EFSE
