@@ -77,10 +77,11 @@ reg add "HKCU\System\GameConfigStore" /v "GameDVR_EFSEFeatureFlags" /t REG_DWORD
 
 
 
-rem # Disable more FSO features
+rem # Disable Extra FSO features
 rem # Disable Color Management
-rem # Disable GameDVR recording
-rem # 0 = Enable More FSO Features / 1 = Disable FSO Features
+rem # Disable GameDVR recording in true FSE
+rem # 0 = Enable Extra FSO Features
+rem # 1 = Disable Extra FSO Features
 reg add "HKCU\System\GameConfigStore" /v "GameDVR_DXGIHonorFSEWindowsCompatible" /t REG_DWORD /d "1" /f
 
 rem # Controls resource usage for Desktop Screen Experience (DSE)
