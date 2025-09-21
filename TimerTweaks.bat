@@ -35,4 +35,38 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "MaxDy
 rem # TSC Sync Policy
 bcdedit /set tscsyncpolicy enhanced
 
+
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\TimeBroker" /v "DisableDynamicTick" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\TimeBroker" /v "DisableDynamicTickOnSpecificCores" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\TimeBroker" /v "DisableSleepIdle" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\TimeBroker" /v "EnableClockSteering" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\TimeBroker" /v "EnableHighResolutionTaskScheduling" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\TimeBroker" /v "EnableHighResolutionTimers" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\TimeBroker" /v "ForceClockSync" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\TimeBroker" /v "ForceHighestPrecision" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\TimeBroker" /v "ForceUseHardwareTimer" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\TimeBroker" /v "MinTimerResolution" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\TimeBroker" /v "ReduceIdleTime" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\TimeBroker" /v "TimerFrequencyBoost" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\TimeBroker" /v "TimerResolution" /t REG_DWORD /d "1" /f
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Schedule" /v "BackgroundTaskOptimization" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Schedule" /v "DisableBackgroundTaskPriorityBoost" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Schedule" /v "DisableBackgroundTasksDuringGaming" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Schedule" /v "DisableIdleTaskScheduling" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Schedule" /v "DisableTaskMigration" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Schedule" /v "EnableExclusiveTaskScheduling" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Schedule" /v "EnableHighResolutionTaskScheduling" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Schedule" /v "EnableRealTimeScheduling" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Schedule" /v "ForceRealTimePriority" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Schedule" /v "PreventTaskThrottling" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Schedule" /v "RealtimeTaskOptimization" /t REG_DWORD /d "1" /f
+
+rem # alufena = 1
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Schedule" /v "SchedulerQuantumSize" /t REG_DWORD /d "1" /f
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Schedule" /v "TaskSchedulerPriorityBoost" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Schedule" /v "UseProcessorGroups" /t REG_DWORD /d "1" /f
+
 PAUSE
