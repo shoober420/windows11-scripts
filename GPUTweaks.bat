@@ -512,6 +512,7 @@ rem # DECREASES PERFORAMNCE DRASTICALLY WHEN ENABLED (1)
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "ForceFlipTrueImmediateMode" /t REG_DWORD /d "0" /f
 
 rem # FREEZES SYSTEM WHEN ENABLED (1)
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "EnableDirectSubmission" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "EnableDirectSubmission" /t REG_DWORD /d "0" /f
 
 rem # DECREASES FPS WHEN SET TO 1
