@@ -24,4 +24,8 @@ F4 (Enable Safe Mode)
 
 METHOD 2:
 
-Power on and power off the computer 3 times at boot  
+Power on and power off the computer 3 times at boot
+
+METHOD 3:
+
+Spam F8 at power on
