@@ -736,9 +736,10 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "InternalDiag
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "InternalDiagnosticsBufferSize" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "InvestigationDebugParameter" /t REG_DWORD /d "0" /f
 
-rem # 
+rem # IOMMU-based GPU isolation
+rem # Input-Output Memory Management Unit (IOMMU)
 rem # alufena = 0
-rem reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "IoMmuFlags" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "IoMmuFlags" /t REG_DWORD /d "0" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "IsInternalRelease" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "LimitNumberOfVfs" /t REG_DWORD /d "0" /f
