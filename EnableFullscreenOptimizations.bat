@@ -74,6 +74,8 @@ reg delete "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "OverlayTestMode" /f
 rem # 1 = LOWER FPS
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "EnableMultiPlaneOverlay3DDIs" /t REG_DWORD /d "1" /f
 
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\DXGKrnl" /v "EnableMultiPlaneOverlay" /t REG_DWORD /d "1" /f
+
 rem # 1 = ENABLES VSYNC
 rem # FORCES HARDWARE COMPOSITED INDEPENDENT FLIP
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "ForceFlipTrueImmediateMode" /t REG_DWORD /d "0" /f
