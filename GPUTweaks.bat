@@ -775,6 +775,25 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "VirtualGpuOn
 rem # WDDM2+ Memory Management
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "WDDM2LockManagement" /t REG_DWORD /d "1" /f
 
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\DXGKrnl" /v "EnableFlipEx" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\DXGKrnl" /v "EnableFramePacing" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\DXGKrnl" /v "EnableHDASurfaces" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\DXGKrnl" /v "EnableIndependentFlip" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\DXGKrnl" /v "EnableSoftwarePaging" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\DXGKrnl" /v "EnableTiledResources" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\DXGKrnl" /v "EnableVariableRefresh" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\DXGKrnl" /v "ReduceStalls" /t REG_DWORD /d "1" /f
+
+reg add "HKLM\System\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "CarryOverUsedQuantum" /t REG_DWORD /d "0" /f
+reg add "HKLM\System\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "CountFlipTowardHwLimit" /t REG_DWORD /d "0" /f
+reg add "HKLM\System\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "CountPresentTowardHwLimit" /t REG_DWORD /d "0" /f
+reg add "HKLM\System\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "EnableFrameBufferCompression" /t REG_DWORD /d "0" /f
+reg add "HKLM\System\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "EnableGpuBoost" /t REG_DWORD /d "1" /f
+reg add "HKLM\System\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "HistoryLogSize" /t REG_DWORD /d "0" /f
+reg add "HKLM\System\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "HwQueuePacketCap" /t REG_DWORD /d "0" /f
+reg add "HKLM\System\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "PerSourceCustomDuration" /t REG_DWORD /d "0" /f
+reg add "HKLM\System\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "PfnCpuOverride" /t REG_DWORD /d "0" /f
+
 
 
 rem # Intel iGPU Dedicated Segment Size
