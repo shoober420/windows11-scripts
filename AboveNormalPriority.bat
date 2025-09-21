@@ -237,14 +237,29 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\kbdclass\Parameters" /v "ThreadP
 rem # alufena = 0
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\stornvme\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x0000000f" /f
 
-rem # alufena = 0x0000001f (31)
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\NDIS\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x0000000f" /f
+rem # alufena = 0x00000000
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\AFD\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x0000000f" /f
 
 rem # alufena = 0x0000000f (15)
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x0000000f" /f
 
 rem # alufena = 0x0000000f (15)
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\mouhid\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x0000000f" /f
+
+rem # alufena = 0x0000000f (15)
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\mouhid\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x0000000f" /f
+
+rem # alufena = 0x0000000f (15)
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\kbdhid\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x0000000f" /f
+
+rem # alufena = 0x0000000f (15)
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\HidUsb\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x0000000f" /f
+
+rem # alufena = 0x0000001f (31)
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\USBHUB3\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x0000000f" /f
+
+rem # alufena = 0x00000000
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\storahci\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x0000000f" /f
 
 
 
