@@ -686,6 +686,7 @@ rem # alufena = 1
 rem # 1 CAUSES BLACK SCREEN AT SIGN IN
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "DisableGdiContextGpuVa" /t REG_DWORD /d "0" /f
 
+rem # alufena = 1
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "DisableMonitoredFenceGpuVa" /t REG_DWORD /d "1" /f
 
 rem # alufena = 1
@@ -709,8 +710,6 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "EnableHMDTes
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "EnableIntegratedPanelAcmByault" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "EnableIntegratedPanelAcmByDefault" /t REG_DWORD /d "0" /f
 
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "EnableMultiPlaneOverlay3DDIs" /t REG_DWORD /d "0" /f
-
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "EnableOfferReclaimOnDriver" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "EnablePanelFitterSupport" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "EnableTimedCalls" /t REG_DWORD /d "0" /f
@@ -724,8 +723,10 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "ForceEnableD
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "ForceExplicitResidencyNotification" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "ForceInitPagingProcessVaSpace" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "ForceReplicateGdiContent" /t REG_DWORD /d "0" /f
+
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "ForceSecondaryIFlipSupport" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "ForceSecondaryMPOSupport" /t REG_DWORD /d "0" /f
+
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "ForceSurpriseRemovalSupport" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "ForceToMapGpuVa" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "ForceUsb4MonitorSupport" /t REG_DWORD /d "0" /f
@@ -747,9 +748,8 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "PreventFulls
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "RapidHPDThresholdCount" /t REG_DWORD /d "0" /f
 
 rem # alufena = 1
-rem # 1 = LOWER FPS
 rem reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "SmallQuantumMode" /f
-rem reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "SmallQuantumMode" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "SmallQuantumMode" /t REG_DWORD /d "1" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "SupportMultipleIntegratedDisplays" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "TreatUsb4MonitorAsNormal" /t REG_DWORD /d "0" /f
