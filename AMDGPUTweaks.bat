@@ -944,6 +944,37 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "RMAERRHandling" /t
 
 
 
+@echo off
+
+
+
+echo.
+echo ReBAR (Resizable BAR)
+echo.
+echo 1. ReBAR ON
+echo 2. ReBAR OFF
+echo 3. SKIP
+echo C. Cancel
+echo.
+choice /c 123C /m "Choose an option :"
+
+if 4 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 3 EQU %ERRORLEVEL% (
+   call :zzzcep
+) else if 2 EQU %ERRORLEVEL% (
+   call :rebaroff
+) else if 1 EQU %ERRORLEVEL% (
+   call :rebaron
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:rebaron
+echo User chose ReBAR ON
+
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_EnableReBarForLegacyASIC" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_RebarControlMode" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_RebarControlSupport" /t REG_DWORD /d "1" /f
@@ -951,5 +982,27 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_RebarControlSu
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "KMD_EnableReBarForLegacyASIC" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "KMD_RebarControlMode" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "KMD_RebarControlSupport" /t REG_DWORD /d "1" /f
+
+goto :end
+
+:rebaroff
+echo User chose ReBAR OFF
+
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_EnableReBarForLegacyASIC" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_RebarControlMode" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_RebarControlSupport" /f
+
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "KMD_EnableReBarForLegacyASIC" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "KMD_RebarControlMode" /f
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "KMD_RebarControlSupport" /f
+
+goto :end
+
+:zzzcep
+echo User chose SKIP
+
+goto :end
+
+:end
 
 PAUSE
