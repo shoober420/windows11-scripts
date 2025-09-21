@@ -975,6 +975,10 @@ goto :eof
 :rebaron
 echo User chose ReBAR ON
 
+for /f %%i in ('wmic path Win32_VideoController get PNPDeviceID^| findstr /L "PCI\VEN_"') do (
+        for /f "tokens=3" %%a in ('reg query "HKLM\SYSTEM\ControlSet001\Enum\%%i" /v "Driver"') do (
+                for /f %%i in ('echo %%a ^| findstr "{"') do (
+
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_EnableReBarForLegacyASIC" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_RebarControlMode" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_RebarControlSupport" /t REG_DWORD /d "1" /f
@@ -983,10 +987,18 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "KMD_EnableReBa
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "KMD_RebarControlMode" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "KMD_RebarControlSupport" /t REG_DWORD /d "1" /f
 
+)
+)
+)
+
 goto :end
 
 :rebaroff
 echo User chose ReBAR OFF
+
+for /f %%i in ('wmic path Win32_VideoController get PNPDeviceID^| findstr /L "PCI\VEN_"') do (
+        for /f "tokens=3" %%a in ('reg query "HKLM\SYSTEM\ControlSet001\Enum\%%i" /v "Driver"') do (
+                for /f %%i in ('echo %%a ^| findstr "{"') do (
 
 reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_EnableReBarForLegacyASIC" /f
 reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_RebarControlMode" /f
@@ -995,6 +1007,10 @@ reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "KMD_RebarContro
 reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "KMD_EnableReBarForLegacyASIC" /f
 reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "KMD_RebarControlMode" /f
 reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i\UMD" /v "KMD_RebarControlSupport" /f
+
+)
+)
+)
 
 goto :end
 
