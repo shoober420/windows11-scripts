@@ -288,6 +288,7 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "CpuClipAASinkEnableRender" /t 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "CpuClipFlatteningTolerance" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableDComp" /t REG_DWORD /d "1" /f
 
+rem # alufena = 1
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DisableHardwareComposition" /t REG_DWORD /d "0" /f
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "DiscardSurfaceOnMinimize" /t REG_DWORD /d "1" /f
@@ -295,13 +296,16 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnableAcrylicBlur" /t REG_DWOR
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "AlwaysOffscreenComposition" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnableBackdropBrush" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "EnableDDisplayScanoutCaching" /t REG_DWORD /d "1" /f
+
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "ForceDisableFrameBuffering" /t REG_DWORD /d "1" /f
+
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "ForceGdiComposition" /t REG_DWORD /d "1" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "MaxQueuedFrames" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "RetryFrameOnDrop" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "ShowDirtyRegions" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "UseCopyOnPresent" /t REG_DWORD /d "1" /f
 
+rem # alufena = 1
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "UseLegacyDisplayFrameBuffer" /t REG_DWORD /d "0" /f
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "UseMachineCheck" /t REG_DWORD /d "0" /f
