@@ -114,6 +114,7 @@ reg add "HKLM\SYSTEM" /v "OverlayTestMode" /t REG_DWORD /d "5" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "OverlayTestMode" /t REG_DWORD /d "5" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "OverlayTestMode" /t REG_DWORD /d "5" /f
 
+rem # 1 = LOWER FPS
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "EnableMultiPlaneOverlay3DDIs" /t REG_DWORD /d "0" /f
 
 rem # Disable optimizations for windowed games
