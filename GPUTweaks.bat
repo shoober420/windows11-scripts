@@ -553,9 +553,6 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "
 setx GPU_SINGLE_ALLOC_PERCENT "100" /M
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "GPU_SINGLE_ALLOC_PERCENT" /t REG_SZ /d "100" /f
 
-setx KEYBOARD_FAST_INIT "1" /M
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "KEYBOARD_FAST_INIT" /t REG_SZ /d "1" /f
-
 setx DX12_AGGRESSIVE_PIPELINE "1" /M
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "DX12_AGGRESSIVE_PIPELINE" /t REG_SZ /d "1" /f
 
