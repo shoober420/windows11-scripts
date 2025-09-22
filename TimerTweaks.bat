@@ -69,4 +69,6 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\Schedule" /v "SchedulerQuantumSi
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Schedule" /v "TaskSchedulerPriorityBoost" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Schedule" /v "UseProcessorGroups" /t REG_DWORD /d "1" /f
 
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ResourceTimers" /v "EnableResourceAwareTimers" /t REG_DWORD /d "0" /f
+
 PAUSE
