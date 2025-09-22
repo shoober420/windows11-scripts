@@ -67,3 +67,5 @@ echo User chose SKIP
 goto :end
 
 :end
+
+PAUSE
