@@ -42,4 +42,9 @@ reg add "HKU\.DEFAULT\Control Panel\Mouse" /f /v "MouseSensitivity" /t REG_SZ /d
 
 reg add "HKCU\Control Panel\Mouse" /v RawInput /t REG_SZ /d 1 /f
 
+reg add "HKCU\Control Panel\Mouse" /v "MouseAccel" /t REG_SZ /d "0" /f
+reg add "HKCU\Control Panel\Mouse" /v "MouseAccel_Max" /t REG_SZ /d "0" /f
+reg add "HKCU\Control Panel\Mouse" /v "MouseAccel_Scale" /t REG_SZ /d "0" /f
+reg add "HKCU\Control Panel\Mouse" /v "SnapToDefaultButton" /t REG_SZ /d "0" /f
+
 PAUSE
