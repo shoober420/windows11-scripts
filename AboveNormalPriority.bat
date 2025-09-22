@@ -258,6 +258,8 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\HidUsb\Parameters" /v "ThreadPri
 rem # alufena = 0x0000001f (31)
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\USBHUB3\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x0000000f" /f
 
+rem # SATA Driver / AHCI Driver
+rem # Used for SSD and spinny drives
 rem # alufena = 0x00000000
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\storahci\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x0000000f" /f
 
