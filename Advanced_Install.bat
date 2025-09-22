@@ -183,6 +183,9 @@ cd "%~dp0"
 call CPU_Mitigations.bat
 cd "%~dp0"
 
+call StorAHCI.bat
+cd "%~dp0"
+
 
 
 @echo off
