@@ -76,6 +76,9 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\mouclass\Parameters" /v "MouseRe
 setx MOUSE_RAW_INPUT "1" /M
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "MOUSE_RAW_INPUT" /t REG_SZ /d "1" /f
 
+setx KEYBOARD_FAST_INIT "1" /M
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "KEYBOARD_FAST_INIT" /t REG_SZ /d "1" /f
+
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\mouhid\Parameters" /v "LayeredLatency" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\mouhid\Parameters" /v "UseOnlyMice" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\mouhid\Parameters" /v "WorkNicely" /t REG_DWORD /d "1" /f
