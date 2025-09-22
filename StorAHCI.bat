@@ -43,6 +43,9 @@ echo User chose StorAHCI ON
 rem # SATA Driver / AHCI Driver
 rem # Used for SSD and spinny drives
 
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\storahci" /v "Start" /t REG_DWORD /d "0" /f
+
+net start storahci
 
 goto :end
 
@@ -52,6 +55,9 @@ echo User chose StorAHCI OFF
 rem # SATA Driver / AHCI Driver
 rem # Used for SSD and spinny drives
 
+net stop storahci
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\storahci" /v "Start" /t REG_DWORD /d "2" /f
 
 goto :end
 
