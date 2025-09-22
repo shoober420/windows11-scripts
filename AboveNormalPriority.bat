@@ -234,11 +234,13 @@ rem # alufena = 0x0000001f (31)
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\mouclass\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x0000000f" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\kbdclass\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x0000000f" /f
 
+rem # NVMe Driver
 rem # alufena = 0
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\stornvme\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x0000000f" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\stornvme\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x00000000" /f
 
+rem # Ancillary Function Driver (AFD)
 rem # alufena = 0x00000000
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\AFD\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x0000000f" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\AFD\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x00000000" /f
 
 rem # alufena = 0x0000000f (15)
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x0000000f" /f
@@ -258,10 +260,63 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\HidUsb\Parameters" /v "ThreadPri
 rem # alufena = 0x0000001f (31)
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\USBHUB3\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x0000000f" /f
 
+
+
+@echo off
+
+
+
+echo.
+echo StorAHCI Service
+echo SSD and Spinny Drives
+echo.
+echo 1. StorAHCI Low Priority
+echo 2. StorAHCI Above Normal Priority
+echo 3. SKIP
+echo C. Cancel
+echo.
+choice /c 123C /m "Choose an option :"
+
+if 4 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 3 EQU %ERRORLEVEL% (
+   call :sscciippp
+) else if 2 EQU %ERRORLEVEL% (
+   call :ahcioff
+) else if 1 EQU %ERRORLEVEL% (
+   call :ahcion
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:ahcion
+echo User chose StorAHCI Above Normal Priority
+
 rem # SATA Driver / AHCI Driver
 rem # Used for SSD and spinny drives
 rem # alufena = 0x00000000
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\storahci\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x0000000f" /f
+
+goto :end
+
+:ahcioff
+echo User chose StorAHCI Low Priority
+
+rem # SATA Driver / AHCI Driver
+rem # Used for SSD and spinny drives
+rem # alufena = 0x00000000
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\storahci\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x00000000" /f
+
+goto :end
+
+:sscciippp
+echo User chose SKIP
+
+goto :end
+
+:end
 
 
 
