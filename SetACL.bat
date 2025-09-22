@@ -294,4 +294,19 @@ SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Exp
 SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\Windows.delete\SkipCloudDownload" -ot reg -actn setowner -ownr "n:Administrators"
 SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\Windows.delete\SkipCloudDownload" -ot reg -actn ace -ace "n:Administrators;p:full"
 
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\AppID\SppComApi.dll" -ot reg -actn setowner -ownr "n:Administrators"
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\AppID\SppComApi.dll" -ot reg -actn ace -ace "n:Administrators;p:full"
+
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Search\Gather\Windows\SystemIndex" -ot reg -actn setowner -ownr "n:Administrators"
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Search\Gather\Windows\SystemIndex" -ot reg -actn ace -ace "n:Administrators;p:full"
+
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing" -ot reg -actn setowner -ownr "n:Administrators"
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing" -ot reg -actn ace -ace "n:Administrators;p:full"
+
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\AppID\slui.exe" -ot reg -actn setowner -ownr "n:Administrators"
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\AppID\slui.exe" -ot reg -actn ace -ace "n:Administrators;p:full"
+
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Search\Gathering Manager" -ot reg -actn setowner -ownr "n:Administrators"
+SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Search\Gathering Manager" -ot reg -actn ace -ace "n:Administrators;p:full"
+
 PAUSE
