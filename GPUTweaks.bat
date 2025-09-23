@@ -802,6 +802,8 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\PnP\Pci" /v "PCIPrefetchEnable" /
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\PnP\Pci" /v "UseMPSCap" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\PnP\Pci" /v "InterruptSteeringDisabled" /t REG_DWORD /d "1" /f
 
+reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\default\System\DisableDirectXDatabaseUpdate" /v "value" /t REG_DWORD /d "0" /f
+
 
 
 rem # Intel iGPU Dedicated Segment Size
