@@ -88,6 +88,45 @@ reg add "HKLM\SOFTWARE\Microsoft\Input" /v "EnableRawInputHighPriority" /t REG_D
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Keyboard" /v "ClearInputBufferOnFocusChange" /t REG_DWORD /d "0" /f
 
+rem # alufena = 0
+rem # NON-USB MICE
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\mouclass" /v "PollingInterval" /t REG_DWORD /d "0" /f
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\HidUsb\Parameters" /v "CustomUsbHidPollingRate" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\HidUsb\Parameters" /v "DeviceIdleEnabled" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\HidUsb\Parameters" /v "DeviceSelectiveSuspended" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\HidUsb\Parameters" /v "DisableDebouncing" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\HidUsb\Parameters" /v "DisableIdleTimer" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\HidUsb\Parameters" /v "DisableRemoteWake" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\HidUsb\Parameters" /v "DisableSelectiveSuspend" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\HidUsb\Parameters" /v "DisableWakeFromSuspend" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\HidUsb\Parameters" /v "EnhancedPowerManagementEnabled" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\HidUsb\Parameters" /v "ForceLowestInputLatency" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\HidUsb\Parameters" /v "ForceLowLatencyMode" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\HidUsb\Parameters" /v "IdleEnabled" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\HidUsb\Parameters" /v "IdleTimeout" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\HidUsb\Parameters" /v "InterruptCoalescingEnabled" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\HidUsb\Parameters" /v "InterruptLatencyOptimization" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\HidUsb\Parameters" /v "LowLatencyMode" /t REG_DWORD /d "1" /f
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\HidUsb\Parameters" /v "SelectiveSuspendEnabled" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\HidUsb\Parameters" /v "UseUsbHidPollingRate" /t REG_DWORD /d "1" /f
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\i8042prt\Parameters" /v "DisableInputBuffering" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\i8042prt\Parameters" /v "ForceImmediateInputProcessing" /t REG_DWORD /d "1" /f
+
+rem # alufena = 0
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\i8042prt\Parameters" /v "Headless" /t REG_DWORD /d "0" /f
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\i8042prt\Parameters" /v "IncreaseKeyboardPollingRate" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\i8042prt\Parameters" /v "OverrideKeyboardType" /t REG_DWORD /d "1" /f
+
+rem # alufena = 1
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\i8042prt\Parameters" /v "PollingIterations" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\i8042prt\Parameters" /v "PollStatusIterations" /t REG_DWORD /d "1" /f
+
+
+
 rem # DataQueueSize
 rem # Mouse and keyboard buffer sizes
 rem # Values too low cause mouse glitches/skipping and unregistered keyboard presses
@@ -201,5 +240,56 @@ goto :end
 :end
 
 
+
+echo.
+echo USB Polling Rate
+echo.
+echo 1. 500Hz
+echo 2. 1000Hz
+echo 3. SKIP
+echo C. Cancel
+echo.
+choice /c 1234C /m "Choose an option :"
+
+if 4 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 3 EQU %ERRORLEVEL% (
+   call :naw
+) else if 2 EQU %ERRORLEVEL% (
+   call :1000
+) else if 1 EQU %ERRORLEVEL% (
+   call :500
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:500
+echo User chose 500Hz
+
+rem # 500MHz = 0x000001f4 (500)
+rem # 1000MHz = 0x000003e8 (1000)
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\HidUsb\Parameters" /v "PollingRate" /t REG_DWORD /d "0x000001f4" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\HidUsb\Parameters" /v "PollingRateOverride" /t REG_DWORD /d "0x000001f4" /f
+
+goto :end
+
+:500
+echo User chose 1000Hz
+
+rem # 500MHz = 0x000001f4 (500)
+rem # 1000MHz = 0x000003e8 (1000)
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\HidUsb\Parameters" /v "PollingRate" /t REG_DWORD /d "0x000003e8" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\HidUsb\Parameters" /v "PollingRateOverride" /t REG_DWORD /d "0x000003e8" /f
+
+goto :end
+
+:naw
+echo User chose SKIP
+
+goto :end
+
+:end
 
 PAUSE
