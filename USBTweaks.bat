@@ -107,6 +107,12 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\usbflags" /v "IgnoreHWSerNum" /t 
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\StorPort" /v "LogControlEnable" /t REG_QWORD /d "0" /f
 
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\HidUsb" /v "IdleEnabled" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\USB" /v "DisablePowerDown" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\USB" /v "DisableSelectiveSuspend" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\USB" /v "EnIdleEndpointSupport" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\ControlSet001\Services\USBHUB3\Parameters\Device" /v "InterruptThreshold" /t REG_DWORD /d "1" /f
+
 
 
 rem # USB I/O Queue Work Item Tweaks
