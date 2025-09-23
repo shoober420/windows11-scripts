@@ -71,4 +71,6 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\Schedule" /v "UseProcessorGroups
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ResourceTimers" /v "EnableResourceAwareTimers" /t REG_DWORD /d "0" /f
 
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\QoS" /v "TimerResolution" /t REG_DWORD /d "1" /f
+
 PAUSE
