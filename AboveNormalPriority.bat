@@ -248,7 +248,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "ThreadPrio
 rem # alufena = 0x0000000f (15)
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\mouhid\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x0000000f" /f
 
-rem # alufena = 0x0000000f (15)
+rem # alufena = 0x0000001f (31)
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\NDIS\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x0000000f" /f
 
 rem # alufena = 0x0000000f (15)
