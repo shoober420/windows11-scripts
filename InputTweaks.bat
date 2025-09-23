@@ -275,7 +275,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\HidUsb\Parameters" /v "PollingRa
 
 goto :end
 
-:500
+:1000
 echo User chose 1000Hz
 
 rem # 500MHz = 0x000001f4 (500)
