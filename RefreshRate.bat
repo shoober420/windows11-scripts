@@ -48,6 +48,9 @@ echo User chose 60Hz
 reg add "HKLM\SOFTWARE\Microsoft\DirectDraw" /v "ForceRefreshRate" /t REG_DWORD /d "60" /f
 reg add "HKLM\SOFTWARE\WOW6432Node\Microsoft\DirectDraw" /v "ForceRefreshRate" /t REG_DWORD /d "60" /f
 
+reg add "HKCU\Control Panel\Desktop" /v "PreferredRefreshRate" /t REG_SZ /d "60" /f
+
+
 goto :end
 
 :75
@@ -55,6 +58,8 @@ echo User chose 75Hz
 
 reg add "HKLM\SOFTWARE\Microsoft\DirectDraw" /v "ForceRefreshRate" /t REG_DWORD /d "75" /f
 reg add "HKLM\SOFTWARE\WOW6432Node\Microsoft\DirectDraw" /v "ForceRefreshRate" /t REG_DWORD /d "75" /f
+
+reg add "HKCU\Control Panel\Desktop" /v "PreferredRefreshRate" /t REG_SZ /d "75" /f
 
 goto :end
 
@@ -64,6 +69,8 @@ echo User chose 100Hz
 reg add "HKLM\SOFTWARE\Microsoft\DirectDraw" /v "ForceRefreshRate" /t REG_DWORD /d "100" /f
 reg add "HKLM\SOFTWARE\WOW6432Node\Microsoft\DirectDraw" /v "ForceRefreshRate" /t REG_DWORD /d "100" /f
 
+reg add "HKCU\Control Panel\Desktop" /v "PreferredRefreshRate" /t REG_SZ /d "100" /f
+
 goto :end
 
 :120
@@ -71,6 +78,8 @@ echo User chose 120Hz
 
 reg add "HKLM\SOFTWARE\Microsoft\DirectDraw" /v "ForceRefreshRate" /t REG_DWORD /d "120" /f
 reg add "HKLM\SOFTWARE\WOW6432Node\Microsoft\DirectDraw" /v "ForceRefreshRate" /t REG_DWORD /d "120" /f
+
+reg add "HKCU\Control Panel\Desktop" /v "PreferredRefreshRate" /t REG_SZ /d "120" /f
 
 goto :end
 
@@ -80,6 +89,8 @@ echo User chose 144Hz
 reg add "HKLM\SOFTWARE\Microsoft\DirectDraw" /v "ForceRefreshRate" /t REG_DWORD /d "144" /f
 reg add "HKLM\SOFTWARE\WOW6432Node\Microsoft\DirectDraw" /v "ForceRefreshRate" /t REG_DWORD /d "144" /f
 
+reg add "HKCU\Control Panel\Desktop" /v "PreferredRefreshRate" /t REG_SZ /d "144" /f
+
 goto :end
 
 :240
@@ -87,6 +98,8 @@ echo User chose 240Hz
 
 reg add "HKLM\SOFTWARE\Microsoft\DirectDraw" /v "ForceRefreshRate" /t REG_DWORD /d "240" /f
 reg add "HKLM\SOFTWARE\WOW6432Node\Microsoft\DirectDraw" /v "ForceRefreshRate" /t REG_DWORD /d "240" /f
+
+reg add "HKCU\Control Panel\Desktop" /v "PreferredRefreshRate" /t REG_SZ /d "240" /f
 
 goto :end
 
@@ -96,6 +109,8 @@ echo User chose 360Hz
 reg add "HKLM\SOFTWARE\Microsoft\DirectDraw" /v "ForceRefreshRate" /t REG_DWORD /d "360" /f
 reg add "HKLM\SOFTWARE\WOW6432Node\Microsoft\DirectDraw" /v "ForceRefreshRate" /t REG_DWORD /d "360" /f
 
+reg add "HKCU\Control Panel\Desktop" /v "PreferredRefreshRate" /t REG_SZ /d "360" /f
+
 goto :end
 
 :500
@@ -104,6 +119,8 @@ echo User chose 500Hz
 reg add "HKLM\SOFTWARE\Microsoft\DirectDraw" /v "ForceRefreshRate" /t REG_DWORD /d "500" /f
 reg add "HKLM\SOFTWARE\WOW6432Node\Microsoft\DirectDraw" /v "ForceRefreshRate" /t REG_DWORD /d "500" /f
 
+reg add "HKCU\Control Panel\Desktop" /v "PreferredRefreshRate" /t REG_SZ /d "500" /f
+
 goto :end
 
 :1000
@@ -111,6 +128,8 @@ echo User chose 1000Hz
 
 reg add "HKLM\SOFTWARE\Microsoft\DirectDraw" /v "ForceRefreshRate" /t REG_DWORD /d "1000" /f
 reg add "HKLM\SOFTWARE\WOW6432Node\Microsoft\DirectDraw" /v "ForceRefreshRate" /t REG_DWORD /d "1000" /f
+
+reg add "HKCU\Control Panel\Desktop" /v "PreferredRefreshRate" /t REG_SZ /d "1000" /f
 
 goto :end
 
