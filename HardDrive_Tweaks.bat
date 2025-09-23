@@ -209,4 +209,6 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\storahci\Parameters\Device" /v "
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\storahci\Parameters\Device" /v "IdleTimeoutInMS" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\storahci\Parameters\Device" /v "SingleIO" /t REG_DWORD /d "1" /f
 
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\StorageDevicePolicies" /v "WriteCache" /t REG_DWORD /d "1" /f
+
 PAUSE
