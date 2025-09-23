@@ -350,12 +350,13 @@ rem # https://docs.oracle.com/en/middleware/fusion-middleware/coherence/12.2.1.4
 rem # https://community.rti.com/static/documentation/perftest/2.2/optimizing.html
 rem # https://docs.nvidia.com/networking/display/winof2v241/performance+tuning
 rem # https://steamcommunity.com/sharedfiles/filedetails/?id=476760198
-rem # 0xx5c0 = 1472
-rem # 0x5dc = 1500
-rem # 0x10000 = 65535
+rem # 0x000005c0 = (1472)
+rem # 0x000005dc = (1500)
+rem # 0x00010000 = (65535)
 
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\AFD\Parameters" /v "FastSendDatagramThreshold" /t REG_DWORD /d "0x10000" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\AFD\Parameters" /v "FastCopyReceiveThreshold" /t REG_DWORD /d "0x10000" /f
+rem # alufena = 0x00010000 (65535)
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\AFD\Parameters" /v "FastSendDatagramThreshold" /t REG_DWORD /d "0x00010000" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\AFD\Parameters" /v "FastCopyReceiveThreshold" /t REG_DWORD /d "0x00010000" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\AFD\Parameters" /v "BufferMultiplier" /t REG_DWORD /d "400" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\AFD\Parameters" /v "KeepAliveInterval" /t REG_DWORD /d "1" /f
