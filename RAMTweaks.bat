@@ -185,8 +185,9 @@ rem # alufena = 0x00000040 (64)
 reg add "HKLM\SYSTEM\ControlSet001\Control\Session Manager\Memory Management" /v "PoolUsageMaximum" /t REG_DWORD /d "0x00000040" /f
 
 rem # USED FOR REMOTE DESKTOP SESSIONS
-rem # alufena = 40 / 30
+rem # alufena = 0x00000040 (64)
 reg add "HKLM\SYSTEM\ControlSet001\Control\Session Manager\Memory Management" /v "SessionPoolSize" /t REG_DWORD /d "0" /f
+rem # alufena = 0x00000030 (48)
 reg add "HKLM\SYSTEM\ControlSet001\Control\Session Manager\Memory Management" /v "SessionViewSize" /t REG_DWORD /d "0" /f
 
 reg add "HKLM\SYSTEM\ControlSet001\Control\Session Manager\Memory Management" /v "DynamicMemory" /t REG_DWORD /d "1" /f
