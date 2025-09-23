@@ -35,7 +35,14 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "MaxDy
 rem # TSC Sync Policy
 bcdedit /set tscsyncpolicy enhanced
 
+rem # Packet Scheduler Timer Resolution
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Psched" /v "TimerResolution" /t REG_DWORD /d "1" /f
 
+rem # Packet Scheduler - Limit outstanding packets
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Psched" /v "MaxOutstandingSends" /t REG_DWORD /d "0" /f
+
+rem # Packet Scheduler - Limit reservable bandwidth
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Psched" /v "NonBestEffortLimit" /t REG_DWORD /d "0" /f
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\TimeBroker" /v "DisableDynamicTick" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\TimeBroker" /v "DisableDynamicTickOnSpecificCores" /t REG_DWORD /d "1" /f
