@@ -316,6 +316,8 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\DWM\ExtendedComposition" /v "EnableColo
 reg add "HKLM\SOFTWARE\Microsoft\Windows\DWM\ExtendedComposition" /v "ForwardOnlyOnly" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\DWM\ExtendedComposition" /v "SydneyDownsampleFilterKernelSize" /t REG_DWORD /d "0" /f
 
+reg add "HKCU\Control Panel\Desktop" /v "DWMFrameInterval" /t REG_DWORD /d "0" /f
+
 
 
 rem # https://sites.google.com/site/tweakradje/windows/windows-tweaking
