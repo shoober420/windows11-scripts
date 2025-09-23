@@ -373,6 +373,11 @@ rem # Show smaller taskbar buttons
 rem # 2 = When taskbar is full / 1 = Never / 0 = Always
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "IconSizePreference" /t REG_DWORD /d "1" /f
 
+reg add "HKCU\Control Panel\Desktop" /v "MaxAnimate" /t REG_SZ /d "0" /f
+reg add "HKCU\Control Panel\Desktop" /v "PaddedBorderWidth" /t REG_SZ /d "0" /f
+reg add "HKCU\Control Panel\Desktop" /v "MinAnimate" /t REG_SZ /d "0" /f
+reg add "HKCU\Control Panel\Desktop" /v "BorderWidth" /t REG_SZ /d "0" /f
+
 
 
 @echo off
