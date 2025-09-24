@@ -3669,7 +3669,7 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\A9\SnapshotCapture" /v "
 
 rem # 0 = LOWER FPS
 rem # alufena = 0
-rem # IF WHOLE SYSTEMGUARD REG STRING IS DELETED, FPS LOWERS
+rem # FPS LOWERS UNLESS WHOLE SYSTEMGUARD REG STRING IS DELETED
 rem reg delete "HKLM\SYSTEM\CurrentControlSet\Control\DeviceGuard\Scenarios\SystemGuard" /v "Enabled" /f
 rem reg add "HKLM\SYSTEM\CurrentControlSet\Control\DeviceGuard\Scenarios\SystemGuard" /v "Enabled" /t REG_DWORD /d "0" /f
 
@@ -3738,6 +3738,7 @@ rem # Run DNS.bat and DNS.ps1 for optimal DNS settings
 rem # REBOOT RECOMMENDED
 
 PAUSE
+
 
 
 
