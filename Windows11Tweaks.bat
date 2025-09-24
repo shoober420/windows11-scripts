@@ -3665,6 +3665,8 @@ reg add "HKLM\Software\Microsoft\Windows\Shell\Copilot" /v "CopilotDisabledReaso
 reg add "HKLM\Software\Microsoft\Windows\Shell\Copilot" /v "IsCopilotAvailable" /t REG_DWORD /d "0" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\A9\SnapshotCapture" /v "IsFilteringTelemetryEnabled" /t REG_DWORD /d "0" /f
 
+rem # alufena = 0
+rem reg delete "HKLM\SYSTEM\CurrentControlSet\Control\DeviceGuard\Scenarios\SystemGuard" /v "Enabled" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\DeviceGuard\Scenarios\SystemGuard" /v "Enabled" /t REG_DWORD /d "0" /f
 
 rem # 1 = DISABLED
@@ -3679,6 +3681,8 @@ reg add "HKCU\Control Panel\Desktop" /v "DelayLockInterval" /t REG_DWORD /d "0xf
 reg add "HKCU\Control Panel\Desktop" /v "ScreenSaveTimeOut" /t REG_SZ /d "0" /f
 
 rem # alufena = 1
+rem reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion" /v "PreferExternalManifest" /f
+rem reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\SideBySide" /v "PreferExternalManifest" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion" /v "PreferExternalManifest" /t REG_DWORD /d "1" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\SideBySide" /v "PreferExternalManifest" /t REG_DWORD /d "1" /f
 
@@ -3730,6 +3734,7 @@ rem # Run DNS.bat and DNS.ps1 for optimal DNS settings
 rem # REBOOT RECOMMENDED
 
 PAUSE
+
 
 
 
