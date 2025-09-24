@@ -3653,6 +3653,7 @@ reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\default\System\DisableOneDriveFil
 
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\SettingSync\WindowsSettingHandlers" /v "A9HomeContentEnabled" /t REG_DWORD /d "0" /f
 
+rem # Mobile Device Management (MDM)
 rem # LOWER FPS
 rem # alufena = 1 / 0
 rem # IF WHOLE MDM REG STRING IS DELETED, FPS LOWERS
@@ -3737,6 +3738,7 @@ rem # Run DNS.bat and DNS.ps1 for optimal DNS settings
 rem # REBOOT RECOMMENDED
 
 PAUSE
+
 
 
 
