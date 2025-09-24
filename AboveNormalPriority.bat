@@ -270,30 +270,40 @@ reg add "HKLM\System\CurrentControlSet\Services\Tcpip6\Parameters" /v "ThreadPri
 rem # alufena = 0x0000001f (31)
 reg add "HKLM\System\CurrentControlSet\Services\USBXHCI\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x0000000f" /f
 
+rem # alufena = 0x0000000f
 reg add "HKLM\System\CurrentControlSet\Services\usbhub\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x0000000f" /f
 
+rem # alufena = 0x00000000
 reg add "HKLM\System\CurrentControlSet\Services\Ntfs\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x00000000" /f
 
+rem # alufena = 0x00000000
 reg add "HKLM\System\CurrentControlSet\Services\iaStorAVC\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x00000000" /f
 
+rem # alufena = 0x00000000
 reg add "HKLM\System\CurrentControlSet\Services\iaStorAC\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x00000000" /f
 
-rem # alufena = 0
+rem # alufena = 0x00000000
 reg add "HKLM\System\CurrentControlSet\Services\disk\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x00000000" /f
 
-rem # alufena = 0
+rem # alufena = 0x00000000
 reg add "HKLM\System\CurrentControlSet\Services\Audiosrv\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x00000000" /f
 
+rem # alufena = 0x0000000f
 reg add "HKLM\System\CurrentControlSet\Services\usbuhci\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x0000000f" /f
 
+rem # alufena = 0x0000000f
 reg add "HKLM\System\CurrentControlSet\Services\usbohci\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x0000000f" /f
 
+rem # alufena = 0x0000000f
 reg add "HKLM\System\CurrentControlSet\Services\usbehci\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x0000000f" /f
 
+rem # alufena = 0x0000000f
 reg add "HKLM\System\CurrentControlSet\Services\usbccgp\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x0000000f" /f
 
+rem # alufena = 0x0000000f
 reg add "HKLM\System\CurrentControlSet\Services\monitor\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x0000000f" /f
 
+rem # alufena = 0x0000000f
 reg add "HKLM\System\CurrentControlSet\Services\HDAudBus\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x0000000f" /f
 
 PAUSE
