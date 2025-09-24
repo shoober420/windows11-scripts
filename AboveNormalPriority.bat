@@ -235,7 +235,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\mouclass\Parameters" /v "ThreadP
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\kbdclass\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x0000000f" /f
 
 rem # NVMe Driver
-rem # alufena = 0
+rem # alufena = 0x00000000
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\stornvme\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x00000000" /f
 
 rem # Ancillary Function Driver (AFD)
@@ -265,6 +265,7 @@ rem # Used for SSD and spinny drives
 rem # alufena = 0x00000000
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\storahci\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x00000000" /f
 
+rem # alufena = 0x00000000
 reg add "HKLM\System\CurrentControlSet\Services\Tcpip6\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x00000000" /f
 
 rem # alufena = 0x0000001f (31)
