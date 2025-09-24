@@ -778,7 +778,10 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\DXGKrnl" /v "EnableHDASurfaces" 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\DXGKrnl" /v "EnableIndependentFlip" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\DXGKrnl" /v "EnableSoftwarePaging" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\DXGKrnl" /v "EnableTiledResources" /t REG_DWORD /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\DXGKrnl" /v "EnableVariableRefresh" /t REG_DWORD /d "0" /f
+
+rem # alufena = DELETED
+reg delete "HKLM\SYSTEM\CurrentControlSet\Services\DXGKrnl" /v "EnableVariableRefresh" /f
+
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\DXGKrnl" /v "ReduceStalls" /t REG_DWORD /d "1" /f
 
 reg add "HKLM\System\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "CarryOverUsedQuantum" /t REG_DWORD /d "0" /f
