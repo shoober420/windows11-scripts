@@ -3655,6 +3655,7 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\SettingSync\WindowsSetti
 
 rem # LOWER FPS
 rem # alufena = 1 / 0
+rem # IF WHOLE MDM REG STRING IS DELETED, FPS LOWERS
 rem reg delete "HKLM\SOFTWARE\Policies\Microsoft\Windows\CurrentVersion\MDM" /v "DisableRegistration" /f
 rem reg delete "HKLM\SOFTWARE\Policies\Microsoft\Windows\CurrentVersion\MDM" /v "AutoEnrollMDM" /f
 rem reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\CurrentVersion\MDM" /v "DisableRegistration" /t REG_DWORD /d "1" /f
@@ -3736,6 +3737,7 @@ rem # Run DNS.bat and DNS.ps1 for optimal DNS settings
 rem # REBOOT RECOMMENDED
 
 PAUSE
+
 
 
 
