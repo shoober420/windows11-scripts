@@ -826,12 +826,6 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "PCIEPowerControl_8
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "PciLatencyTimerControl" /t REG_DWORD /d "0x00000020" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "PreferSystemMemoryContiguous" /t REG_DWORD /d "1" /f
 
-rem # alufena = 1
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "RM572548" /t REG_DWORD /d "1" /f
-
-rem # alufena = 5
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "RM2779240" /t REG_DWORD /d "5" /f
-
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "RMAllowECCPageRetirementSLI" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "RMAsrWakeup" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "RMAssertOnEccErrors" /t REG_DWORD /d "0" /f
@@ -930,11 +924,9 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "EnableVoltageOptim
 rem # alufena = 1
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "RMDisableIntrIllegalCompstatAccess" /t REG_DWORD /d "1" /f
 
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "RM2644249" /t REG_DWORD /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "RmWar1760398" /t REG_DWORD /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "RmCeElcgWar1895530" /t REG_DWORD /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "RMBug2519005War" /t REG_DWORD /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "RMEnableMSCGConfig" /t REG_DWORD /d "1" /f
+rem # alufena = 1
+rem reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "RMEnableMSCGConfig" /t REG_DWORD /d "1" /f
+
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "RmSec2EnableApm" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "RMCBAllocVPR" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "RmDisableFanDiag" /t REG_DWORD /d "1" /f
@@ -943,8 +935,24 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "RmGpsPreferIntrins
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "DISABLE_DSC" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "RMAERRForceDisable" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "RMDisableRCOnDBE" /t REG_DWORD /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "RM1441072" /t REG_DWORD /d "1" /f
+
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "RMAERRHandling" /t REG_DWORD /d "0" /f
+
+
+
+rem # alufena = 1
+rem reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "RM572548" /t REG_DWORD /d "1" /f
+
+rem # alufena = 5
+rem reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "RM2779240" /t REG_DWORD /d "5" /f
+
+rem # alufena = 1
+rem reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "RM2644249" /t REG_DWORD /d "1" /f
+rem reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "RmWar1760398" /t REG_DWORD /d "1" /f
+rem reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "RmCeElcgWar1895530" /t REG_DWORD /d "1" /f
+rem reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "RMBug2519005War" /t REG_DWORD /d "1" /f
+
+rem reg add "HKLM\SYSTEM\CurrentControlSet\Control\Class\%%i" /v "RM1441072" /t REG_DWORD /d "1" /f
 
 
 
