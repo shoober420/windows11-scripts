@@ -288,8 +288,7 @@ reg add "HKLM\System\CurrentControlSet\Services\usbhub\Parameters" /v "ThreadPri
 rem # alufena = 0x00000000
 reg add "HKLM\System\CurrentControlSet\Services\Ntfs\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x00000000" /f
 
-rem # Intel Rapid Storage Technology
-rem # Alternative SATA Driver
+rem # Intel Rapid Storage Technology Driver (SATA)
 rem # alufena = 0x00000000
 reg add "HKLM\System\CurrentControlSet\Services\iaStorAVC\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x00000000" /f
 rem # alufena = 0x00000000
