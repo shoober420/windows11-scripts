@@ -294,6 +294,7 @@ reg add "HKLM\System\CurrentControlSet\Services\iaStorAVC\Parameters" /v "Thread
 rem # alufena = 0x00000000
 reg add "HKLM\System\CurrentControlSet\Services\iaStorAC\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x00000000" /f
 
+rem # SATA Driver
 rem # alufena = 0x00000000
 reg add "HKLM\System\CurrentControlSet\Services\disk\Parameters" /v "ThreadPriority" /t REG_DWORD /d "0x00000000" /f
 
