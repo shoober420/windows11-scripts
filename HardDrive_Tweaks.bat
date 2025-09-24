@@ -228,15 +228,11 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\storahci\Parameters\Device" /v "
 
 
 
-rem # 1 = LOWER FPS
 rem # alufena = 1
-rem reg delete "HKLM\SYSTEM\CurrentControlSet\Control\StorageDevicePolicies" /v "WriteCache" /f
-rem reg add "HKLM\SYSTEM\CurrentControlSet\Control\StorageDevicePolicies" /v "WriteCache" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\StorageDevicePolicies" /v "WriteCache" /t REG_DWORD /d "1" /f
 
-rem # 0 = LOWER FPS
 rem # alufena = 0
-rem reg delete "HKLM\SYSTEM\CurrentControlSet\Control\StorageDevicePolicies" /v "WriteProtect" /f
-rem reg add "HKLM\SYSTEM\CurrentControlSet\Control\StorageDevicePolicies" /v "WriteProtect" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\StorageDevicePolicies" /v "WriteProtect" /t REG_DWORD /d "0" /f
 
 
 PAUSE
