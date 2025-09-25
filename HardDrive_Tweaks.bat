@@ -227,13 +227,10 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\storahci\Parameters\Device" /v "
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\disk\Parameters" /v "EnableHighPerformanceMode" /t REG_DWORD /d "1" /f
 
-
-
-rem # LOWERS FPS
 rem # alufena = 1
-rem reg add "HKLM\SYSTEM\CurrentControlSet\Control\StorageDevicePolicies" /v "WriteCache" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\StorageDevicePolicies" /v "WriteCache" /t REG_DWORD /d "1" /f
 rem # alufena = 0
-rem reg add "HKLM\SYSTEM\CurrentControlSet\Control\StorageDevicePolicies" /v "WriteProtect" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\StorageDevicePolicies" /v "WriteProtect" /t REG_DWORD /d "0" /f
 
 
 
