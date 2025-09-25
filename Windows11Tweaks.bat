@@ -3521,21 +3521,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\pci\Parameters" /v "PnpAsyncNewD
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows Search" /v "EnableFindMyFiles" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\WSearch" /v "DelayedAutoStart" /t REG_DWORD /d "0" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows Search\Gathering Manager" /v "DisableBackOff" /t REG_DWORD /d "1" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows Search\Gathering Manager" /v "DisableBackOffOnCPU" /t REG_DWORD /d "1" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows Search\Gathering Manager" /v "DisableBackOffOnIO" /t REG_DWORD /d "1" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows Search\Gathering Manager" /v "DisableBackOffOnUser" /t REG_DWORD /d "1" /f
-reg add "HKLM\SOFTWARE\Classes\AppID\slui.exe" /v "NoGenTicket" /t REG_DWORD /d "1" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing" /v "DisableRemovePayload" /t REG_DWORD /d "0" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing" /v "DisableWerReporting" /t REG_DWORD /d "1" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing" /v "EnableDpxLog" /t REG_DWORD /d "0" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing" /v "EnableLog" /t REG_DWORD /d "0" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing" /v "LCUReoffer" /t REG_DWORD /d "0" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing" /v "ResetManifestCache" /t REG_DWORD /d "1" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows Search\Gather\Windows\SystemIndex" /v "DisableRecovery" /t REG_DWORD /d "1" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows Search\Gather\Windows\SystemIndex" /v "DisableRobotsExclusion" /t REG_DWORD /d "1" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows Search\Gather\Windows\SystemIndex" /v "RespectPowerModes" /t REG_DWORD /d "1" /f
-reg add "HKLM\SOFTWARE\Classes\AppID\SppComApi.dll" /v "NoGenTicket" /t REG_DWORD /d "1" /f
+
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Serialize" /v "WaitForIdleState" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Serialize" /v "StartupDelayInMSec" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Serialize" /v "WaitForIdleState" /t REG_DWORD /d "0" /f
@@ -3656,7 +3642,6 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\SettingSync\WindowsSetti
 rem # Mobile Device Management (MDM)
 rem # LOWER FPS
 rem # alufena = 1 / 0
-rem # IF WHOLE MDM REG STRING IS DELETED, FPS LOWERS
 rem reg delete "HKLM\SOFTWARE\Policies\Microsoft\Windows\CurrentVersion\MDM" /v "DisableRegistration" /f
 rem reg delete "HKLM\SOFTWARE\Policies\Microsoft\Windows\CurrentVersion\MDM" /v "AutoEnrollMDM" /f
 rem reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\CurrentVersion\MDM" /v "DisableRegistration" /t REG_DWORD /d "1" /f
@@ -3704,6 +3689,23 @@ reg add "HKCU\Control Panel\Desktop" /v "ScreenSaverIsSecure" /t REG_DWORD /d "1
 
 
 
+reg add "HKLM\SOFTWARE\Microsoft\Windows Search\Gathering Manager" /v "DisableBackOff" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows Search\Gathering Manager" /v "DisableBackOffOnCPU" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows Search\Gathering Manager" /v "DisableBackOffOnIO" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows Search\Gathering Manager" /v "DisableBackOffOnUser" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Classes\AppID\slui.exe" /v "NoGenTicket" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing" /v "DisableRemovePayload" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing" /v "DisableWerReporting" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing" /v "EnableDpxLog" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing" /v "EnableLog" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing" /v "LCUReoffer" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing" /v "ResetManifestCache" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows Search\Gather\Windows\SystemIndex" /v "DisableRecovery" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows Search\Gather\Windows\SystemIndex" /v "DisableRobotsExclusion" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows Search\Gather\Windows\SystemIndex" /v "RespectPowerModes" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Classes\AppID\SppComApi.dll" /v "NoGenTicket" /t REG_DWORD /d "1" /f
+
+
 
 rem # Launch DNS.bat and DNS.ps1 for optimal DNS settings
 cd "%~dp0"
@@ -3741,6 +3743,7 @@ rem # Run DNS.bat and DNS.ps1 for optimal DNS settings
 rem # REBOOT RECOMMENDED
 
 PAUSE
+
 
 
 
