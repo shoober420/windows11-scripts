@@ -3541,8 +3541,13 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\ACPI\Parameters" /v "ForceCPUInt
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\ACPI\Parameters" /v "NotifyOsShutdownCritical" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\ACPI\Parameters" /v "NotifyOsShutdownEnabled" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\ACPI\Parameters" /v "PnpAsyncNewDevices" /t REG_DWORD /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\ACPI\Parameters" /v "ProcDevAsyncStart" /t REG_DWORD /d "1" /f
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\ACPI\Parameters" /v "StorageSupportedFeatures" /t REG_DWORD /d "1" /f
+
+rem # 1 = LOWER FPS
+rem # alufena = 1
+rem reg add "HKLM\SYSTEM\CurrentControlSet\Services\ACPI\Parameters" /v "ProcDevAsyncStart" /t REG_DWORD /d "1" /f
+
+rem reg add "HKLM\SYSTEM\CurrentControlSet\Services\ACPI\Parameters" /v "StorageSupportedFeatures" /t REG_DWORD /d "1" /f
+
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\ACPI\Parameters" /v "StrictS4CheckSupport" /t REG_DWORD /d "0" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\ACPI\Parameters" /v "UseFlexibleOscHandoff" /t REG_DWORD /d "1" /f
 
@@ -3743,6 +3748,7 @@ rem # Run DNS.bat and DNS.ps1 for optimal DNS settings
 rem # REBOOT RECOMMENDED
 
 PAUSE
+
 
 
 
