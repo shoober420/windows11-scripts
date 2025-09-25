@@ -3699,6 +3699,10 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer" /v "ShowRecomm
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\InfoBarsDisabled" /v "LocationNotIndexed" /t REG_DWORD /d "1" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\InfoBarsDisabled" /v "ServerMSSNotInstalled" /t REG_DWORD /d "1" /f
 
+reg add "HKCU\Control Panel\Desktop" /v "ScreenSaveActive" /t REG_DWORD /d "0" /f
+reg add "HKCU\Control Panel\Desktop" /v "ScreenSaverIsSecure" /t REG_DWORD /d "1" /f
+
+
 
 
 rem # Launch DNS.bat and DNS.ps1 for optimal DNS settings
@@ -3737,6 +3741,7 @@ rem # Run DNS.bat and DNS.ps1 for optimal DNS settings
 rem # REBOOT RECOMMENDED
 
 PAUSE
+
 
 
 
