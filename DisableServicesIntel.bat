@@ -1,5 +1,19 @@
 rem # Disable Intel Bloat services
 
+net stop cplspcon
+net stop cphs
+net stop igccservice
+net stop igfxCUIService2.0.0.0
+net stop LMS
+net stop RstMwService
+net stop Intel(R) TPM Provisioning Service"
+net stop jhi_service
+net stop SystemUsageReportSvc_QUEENCREEK
+net stop "Intel(R) SUR QC SAM"
+net stop ESRV_SVC_QUEENCREEK
+net stop USER_ESRV_SVC_QUEENCREEK
+net stop esifsvc
+
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\cplspcon" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\cphs" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\igccservice" /v "Start" /t REG_DWORD /d "4" /f
