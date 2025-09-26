@@ -3840,6 +3840,18 @@ reg add "HKLM\SOFTWARE\Policies\Microsoft\SearchCompanion" /v "DisableContentFil
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WTDS\Components" /v "ServiceEnabled" /t REG_DWORD /d "0" /f
 reg add "HKLM\SOFTWARE\Microsoft\OneDrive" /v "PreventNetworkTrafficPreUserSignIn" /t REG_DWORD /d "1" /f
 
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Search" /v "ImmersiveSearch" /t REG_DWORD /d "0" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Search" /v "VoiceShortcut" /t REG_DWORD /d "0" /f
+reg add "HKLM\System\CurrentControlSet\Control\Network" /v "NewNetworkWindowOff" /t REG_DWORD /d "1" /f
+reg add "HKCU\Software\Microsoft\Narrator\NoRoam" /v "BrailleEnabled" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" /v "AsyncRunOnce" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" /v "DisableAppInstallsOnFirstLogon" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" /v "SmartScreenEnabled" /t REG_SZ /d "Off" /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Personalization" /v "NoChangingLockScreen" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\JavaSoft" /v "SPONSORS" /t REG_SZ /d "DISABLE" /f
+reg add "HKLM\SOFTWARE\WOW6432Node\JavaSoft" /v "SPONSORS" /t REG_SZ /d "DISABLE" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\StartPage" /v "OpenAtLogon" /t REG_DWORD /d "0" /f
+
 
 
 rem # Launch DNS.bat and DNS.ps1 for optimal DNS settings
@@ -3878,4 +3890,5 @@ rem # Run DNS.bat and DNS.ps1 for optimal DNS settings
 rem # REBOOT RECOMMENDED
 
 PAUSE
+
 
