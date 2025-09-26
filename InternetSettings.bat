@@ -411,6 +411,13 @@ reg add "HKLM\System\CurrentControlSet\Services\Tcpip\Parameters\Tcp1323Opts" /v
 reg add "HKLM\System\CurrentControlSet\Services\AFD\Parameters" /v "BufferAlignment" /t REG_DWORD /d "1" /f
 reg add "HKLM\System\CurrentControlSet\Services\AFD\Parameters" /v "IgnoreOrderlyRelease" /t REG_DWORD /d "1" /f
 
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\RasMan\Parameters\Config\VpnCostedNetworkSettings" /v "NoCostedNetwork" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\CurrentVersion\Internet Settings" /v "EnableSSL3Fallback" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\CurrentVersion\Internet Settings" /v "PreventIgnoreCertErrors" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\TCPIP\v6Transition" /v "Disabled" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\TCPIP\v6Transition" /v "Teredo_State" /t REG_SZ /d "Disabled" /f
+reg add "HKLM\System\CurrentControlSet\Services\NetBT\Parameters\Interfaces" /v "NetBIOSOptions" /t REG_DWORD /d "2" /f
+
 
 
 rem # RECOMMENDED TO RUN DNS.bat and DNS.ps1 FOR OPTIMAL DNS SETTINGS
