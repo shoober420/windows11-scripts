@@ -131,6 +131,10 @@ rem # alufena = 1
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\i8042prt\Parameters" /v "PollingIterations" /t REG_DWORD /d "1" /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\i8042prt\Parameters" /v "PollStatusIterations" /t REG_DWORD /d "1" /f
 
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\mouhid" /v "EnableInputSuppression" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\mouhid" /v "LowLatencyPath" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\mouhid" /v "MaximumPortsServiced" /t REG_DWORD /d "0" /f
+
 
 
 rem # DataQueueSize
