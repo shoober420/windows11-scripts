@@ -809,6 +809,19 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\PnP\Pci" /v "InterruptSteeringDis
 rem # alufena = 1
 reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\default\System\DisableDirectXDatabaseUpdate" /v "value" /t REG_DWORD /d "0" /f
 
+reg add "HKCU\SOFTWARE\Microsoft\DirectDraw" /v "EnableWARP" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Wow6432Node\Microsoft\DirectDraw" /v "EnableWARP" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\Direct3D" /v "AsyncFlip" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\Direct3D" /v "DisablePresentationInterval" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\Direct3D" /v "EnableFramePacing" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\Direct3D" /v "EnableWARP" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\Direct3D" /v "ForceWARP" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\Direct3D" /v "RenderAheadLimit" /t REG_DWORD /d "1" /f
+reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Direct3D" /v "EnableWARP" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\Direct3D\Drivers" /v "EnableWARP" /t REG_DWORD /d "1" /f
+reg add "HKCU\SOFTWARE\Microsoft\Direct3D\Drivers" /v "EnableWARP" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Wow6432Node\Microsoft\Direct3D\Drivers" /v "EnableWARP" /t REG_DWORD /d "1" /f
+
 
 
 rem # Intel iGPU Dedicated Segment Size
