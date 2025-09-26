@@ -3681,10 +3681,43 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer" /v "ShowRecomm
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\InfoBarsDisabled" /v "LocationNotIndexed" /t REG_DWORD /d "1" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\InfoBarsDisabled" /v "ServerMSSNotInstalled" /t REG_DWORD /d "1" /f
 
-reg add "HKCU\Control Panel\Desktop" /v "ScreenSaveActive" /t REG_DWORD /d "0" /f
-reg add "HKCU\Control Panel\Desktop" /v "ScreenSaverIsSecure" /t REG_DWORD /d "1" /f
+reg add "HKCU\Control Panel\Desktop" /v "ScreenSaveActive" /t REG_SZ /d "0" /f
+reg add "HKCU\Control Panel\Desktop" /v "ScreenSaverIsSecure" /t REG_SZ /d "1" /f
 
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\PnP" /v "PollBootPartitionTimeout" /t REG_DWORD /d "1" /f
+reg add "HKLM\System\CurrentControlSet\Services\VxD\BIOS" /v "AGPConcur" /t REG_DWORD /d "1" /f
+reg add "HKLM\System\CurrentControlSet\Services\VxD\BIOS" /v "PCIConcur" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\SettingSync" /v "EnableQuotaFailureDialog" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Policies" /v "FsEnableDevDrive" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Policies" /v "FltmgrDevDriveAllowAntivirusFilter" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\ScPnP" /v "EnableScPnP" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows\ScPnP" /v "EnableScPnP" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v "DisableAutomaticRestartSignOn" /t REG_DWORD /d "1" /f
 
+rem # alufena = 1
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v "EnableDMACompliance" /t REG_DWORD /d "1" /f
+
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v "ForceShutdownWhenLoggedOn" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v "HideFastUserSwitching" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v "HideUnsupportedHardwareNotifications" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v "MSAOptional" /t REG_DWORD /d "1" /f
+
+rem # 0 = Allow users to add accounts / 1 = Blocks users from adding accounts / 3 = Blocks users from adding accounts and signing into accounts
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v "NoConnectedUser" /t REG_DWORD /d "3" /f
+
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v "RunStartupScriptSync" /t REG_DWORD /d "0" /f
+
+rem # Disable Smart Card Login
+rem # 0 = DISABLE LOGIN / 1 = ENABLE LOGIN
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v "scforceoption" /t REG_DWORD /d "0" /f
+
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v "shutdownwithoutlogon" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v "undockwithoutlogon" /t REG_DWORD /d "1" /f
+
+rem # Disable Administrator Protection for Admin Approval Mode
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v "TypeOfAdminApprovalMode" /t REG_DWORD /d "1" /f
+
+reg add "HKLM\SOFTWARE\Policies\Microsoft\AppV\Client\Publishing" /v "EnablePublishingRefreshUI" /t REG_DWORD /d "0" /f
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows Search\Gathering Manager" /v "DisableBackOff" /t REG_DWORD /d "1" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows Search\Gathering Manager" /v "DisableBackOffOnCPU" /t REG_DWORD /d "1" /f
@@ -3740,18 +3773,3 @@ rem # Run DNS.bat and DNS.ps1 for optimal DNS settings
 rem # REBOOT RECOMMENDED
 
 PAUSE
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
