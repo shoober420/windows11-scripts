@@ -90,6 +90,9 @@ rem # BORKS MACHINE WHEN RUN IN SAFE MODE
 rem call Windows11Tweaks.bat
 cd "%~dp0"
 
+call NoConnectedUser.bat
+cd "%~dp0"
+
 
 
 @echo off
