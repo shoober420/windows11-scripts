@@ -862,6 +862,12 @@ SystemApps.bat
 
 ClassicTheme.bat
 
+LaunchTaskManager.bat
+
+ShutDown.bat
+
+Reboot.bat
+
 # Credits
 - https://www.elevenforum.com/members/garlin.5387
 - https://www.elevenforum.com/members/csmc.38355
