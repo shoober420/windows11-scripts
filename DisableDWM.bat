@@ -35,10 +35,14 @@ call ClassicTheme.bat
 
 
 
+@echo off
+
+
+
 echo.
 echo Shell Infrastructure Host (sihost.exe)
 echo.
-echo 1. Disable Shell Infrastructure Host (sihost.exe)
+echo 1. Disable Shell Infrastructure Host (sihost.exe) (SLOW SYSTEM)
 echo 2. Enable Shell Infrastructure Host (sihost.exe)
 echo 3. SKIP
 echo C. Cancel
@@ -60,7 +64,7 @@ if 4 EQU %ERRORLEVEL% (
 goto :eof
 
 :sioff
-echo User chose Disable Shell Infrastructure Host (sihost.exe)
+echo User chose Disable Shell Infrastructure Host (sihost.exe) (SLOW SYSTEM)
 
 cd "%~dp0"
 call DisableShellInfrastructureHost.bat
