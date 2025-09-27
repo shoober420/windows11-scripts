@@ -33,6 +33,13 @@ icacls "C:\Windows\SystemApps" /grant:r %username%:F
 rem del "C:\Windows\SystemApps" /s /f /q
 ren "C:\Windows\SystemAppsbak" "SystemApps"
 
+rem # Enable Resources
+rem # Enable Modern Theme
+takeown /s %computername% /u %username% /f "C:\Windows\Resources"
+icacls "C:\Windows\Resources" /grant:r %username%:F
+rem del "C:\Windows\Resources" /s /f /q
+ren "C:\Windows\Resourcesbak" "Resources"
+
 cd "%~dp0"
 
 call EnableShellInfrastructureHost.bat
