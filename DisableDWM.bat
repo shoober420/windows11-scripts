@@ -66,7 +66,7 @@ rem # Disable UWP apps
 takeown /s %computername% /u %username% /f "C:\Windows\SystemApps"
 icacls "C:\Windows\SystemApps" /grant:r %username%:F
 rem del "C:\Windows\SystemApps" /s /f /q
-ren "C:\Windows\SystemAppsbak" "SystemApps"
+ren "C:\Windows\SystemApps" "SystemAppsbak"
 
 goto :end
 
