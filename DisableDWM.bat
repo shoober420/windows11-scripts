@@ -29,6 +29,12 @@ rem taskkill /im DWMInit.dll /f
 rem del "C:\Windows\System32\DWMInit.dll" /s /f /q
 ren "C:\Windows\System32\DWMInit.dll" "DWMInit.dll.bak"
 
+rem # Disable UWP apps
+takeown /s %computername% /u %username% /f "C:\Windows\SystemApps"
+icacls "C:\Windows\SystemApps" /grant:r %username%:F
+rem del "C:\Windows\SystemApps" /s /f /q
+ren "C:\Windows\SystemApps" "SystemAppsbak"
+
 cd "%~dp0"
 
 call DisableShellInfrastructureHost.bat
