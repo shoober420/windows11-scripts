@@ -29,6 +29,34 @@ rem taskkill /im DWMInit.dll /f
 rem del "C:\Windows\System32\DWMInit.dll" /s /f /q
 ren "C:\Windows\System32\DWMInit.dll" "DWMInit.dll.bak"
 
+@echo off
+
+
+
+echo.
+echo UWP Apps (SystemApps)
+echo.
+echo 1. Disable UWP Apps
+echo 2. Enable UWP Apps
+echo C. Cancel
+echo.
+choice /c 123C /m "Choose an option :"
+
+if 3 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 2 EQU %ERRORLEVEL% (
+   call :frtcoff
+) else if 1 EQU %ERRORLEVEL% (
+   call :fr
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:frtcon
+echo User chose FRTC ON
+
 rem # Disable UWP apps
 takeown /s %computername% /u %username% /f "C:\Windows\SystemApps"
 icacls "C:\Windows\SystemApps" /grant:r %username%:F
