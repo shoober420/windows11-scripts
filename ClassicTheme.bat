@@ -1,5 +1,6 @@
 rem # Classic Theme (Resources folder)
 
+@echo off
 
 echo.
 echo Classic Theme (Resources folder)
