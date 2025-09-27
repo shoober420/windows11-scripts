@@ -1,6 +1,6 @@
 rem # Enable DWM
 
-rem # Disabling Shell Infrastructure Host (sigost.exe) makes system much slower
+rem # Disabling Shell Infrastructure Host (sihost.exe) makes system much slower
 
 rem # Restore dwm.exe (to restore run "sfc /scannow")
 takeown /s %computername% /u %username% /f "C:\Windows\System32\dwm.exe"
