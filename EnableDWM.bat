@@ -27,6 +27,12 @@ rem taskkill /im DWMInit.dll /f
 rem del "C:\Windows\System32\DWMInit.dll" /s /f /q
 ren "C:\Windows\System32\DWMInit.dll.bak" "DWMInit.dll"
 
+rem # Enable UWP apps
+takeown /s %computername% /u %username% /f "C:\Windows\SystemApps"
+icacls "C:\Windows\SystemApps" /grant:r %username%:F
+rem del "C:\Windows\SystemApps" /s /f /q
+ren "C:\Windows\SystemApps.bak" "SystemApps"
+
 cd "%~dp0"
 
 call EnableShellInfrastructureHost.bat
