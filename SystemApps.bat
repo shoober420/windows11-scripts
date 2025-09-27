@@ -1,10 +1,6 @@
 rem # SystemApps (UWP apps)
 
-
-
 @echo off
-
-
 
 echo.
 echo UWP Apps (SystemApps)
