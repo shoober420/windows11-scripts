@@ -35,6 +35,13 @@ icacls "C:\Windows\SystemApps" /grant:r %username%:F
 rem del "C:\Windows\SystemApps" /s /f /q
 ren "C:\Windows\SystemApps" "SystemAppsbak"
 
+rem # Disable Resources
+rem # Enable Classic Theme
+takeown /s %computername% /u %username% /f "C:\Windows\Resources"
+icacls "C:\Windows\Resources" /grant:r %username%:F
+rem del "C:\Windows\Resources" /s /f /q
+ren "C:\Windows\Resources" "Resourcesbak"
+
 cd "%~dp0"
 
 call DisableShellInfrastructureHost.bat
