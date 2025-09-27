@@ -856,6 +856,12 @@ AMD_GPUScaling.ps1
 
 NoConnectedUser.bat
 
+DisableDWM.bat / EnableDWM.bat
+
+SystemApps.bat
+
+ClassicTheme.bat
+
 # Credits
 - https://www.elevenforum.com/members/garlin.5387
 - https://www.elevenforum.com/members/csmc.38355
